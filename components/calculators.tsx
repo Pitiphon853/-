@@ -12,7 +12,7 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   // Health & Diet
   if (activeCalc === "bmi") return <BMICalculator lang={lang} setCalc={setCalc} />;
   if (activeCalc === "sleep") return <SleepCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "tdee") return <TDEECalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "tdee") return <TDEECalculator lang={lang} />;
   if (activeCalc === "water-intake") return <HealthWaterCalculator lang={lang} />;
   if (activeCalc === "food-random") return <FoodRandomizer lang={lang} />;
 
