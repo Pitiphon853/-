@@ -1,0 +1,48 @@
+"use client";
+
+import { Lang } from "./dictionary";
+import { BMICalculator, SleepCalculator, TDEECalculator, WaterCalculator as HealthWaterCalculator, FoodRandomizer } from "./calcs/HealthCalcs";
+import { ChildHeightCalculator } from "./calcs/FamilyCalcs";
+import { DiscountCalculator, CarLoanCalculator, MortgageCalculator } from "./calcs/FinanceCalcs";
+import { VatCalculator, MarginCalculator } from "./calcs/BusinessCalcs";
+import { BTUCalculator, ElectricCalculator, WaterCalculator as UtilityWaterCalculator, BaseNCalculator, GPACalculator } from "./calcs/UtilityCalcs";
+import { RandomizerCalculator, WordCounter, AgeCalculator } from "./calcs/GeneralCalcs";
+
+export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string, lang: Lang, setCalc: (id: string) => void }) {
+  // Health & Diet
+  if (activeCalc === "bmi") return <BMICalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "sleep") return <SleepCalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "tdee") return <TDEECalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "water-intake") return <HealthWaterCalculator lang={lang} />;
+  if (activeCalc === "food-random") return <FoodRandomizer lang={lang} />;
+
+  // Family
+  if (activeCalc === "child-height") return <ChildHeightCalculator lang={lang} />;
+
+  // Finance
+  if (activeCalc === "discount") return <DiscountCalculator lang={lang} />;
+  if (activeCalc === "car-loan") return <CarLoanCalculator lang={lang} />;
+  if (activeCalc === "mortgage") return <MortgageCalculator lang={lang} />;
+
+  // Business
+  if (activeCalc === "vat") return <VatCalculator lang={lang} />;
+  if (activeCalc === "margin") return <MarginCalculator lang={lang} />;
+
+  // Utility
+  if (activeCalc === "btu") return <BTUCalculator lang={lang} />;
+  if (activeCalc === "electric") return <ElectricCalculator lang={lang} />;
+  if (activeCalc === "water-bill") return <UtilityWaterCalculator lang={lang} />;
+  if (activeCalc === "basen") return <BaseNCalculator lang={lang} />;
+  if (activeCalc === "gpa") return <GPACalculator lang={lang} />;
+
+  // General
+  if (activeCalc === "randomizer") return <RandomizerCalculator lang={lang} />;
+  if (activeCalc === "word-counter") return <WordCounter lang={lang} />;
+  if (activeCalc === "age") return <AgeCalculator lang={lang} />;
+
+  return (
+    <div className="text-center p-12 text-gray-500">
+      {lang === "TH" ? "กรุณาเลือกเครื่องมือคำนวณจากเมนูด้านซ้าย" : "Please select a calculator from the menu"}
+    </div>
+  );
+}

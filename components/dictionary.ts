@@ -1,0 +1,40 @@
+export type Lang = 'TH' | 'EN';
+
+export const dict = {
+  TH: {
+    appName: "คำนวณ.com",
+    subtitle: "The Ultimate Calculator Hub",
+    home: "หน้าหลัก",
+    contact: "ติดต่อเรา",
+    heroTitle1: "รวมทุก",
+    heroTitleHighlight: "การคำนวณ",
+    heroTitle2: "ไว้ในที่เดียว",
+    searchPlaceholder: "ค้นหาเครื่องมือคำนวณ (เช่น ค่าไฟ, แอร์, เกรด...)",
+    all: "ทั้งหมด",
+    finance: "การเงิน",
+    health: "สุขภาพ",
+    utility: "บ้านและสาธารณูปโภค",
+    education: "การศึกษา",
+    back: "กลับไปหน้าหลัก",
+    calculate: "คำนวณ",
+    result: "ผลลัพธ์",
+  },
+  EN: {
+    appName: "Kamnuan.com",
+    subtitle: "The Ultimate Calculator Hub",
+    home: "Home",
+    contact: "Contact",
+    heroTitle1: "All",
+    heroTitleHighlight: "Calculations",
+    heroTitle2: "in One Place",
+    searchPlaceholder: "Search calculators (e.g. Tax, BMI, GPA...)",
+    all: "All",
+    finance: "Finance",
+    health: "Health",
+    utility: "Utility",
+    education: "Education",
+    back: "Back to Home",
+    calculate: "Calculate",
+    result: "Result",
+  }
+};
