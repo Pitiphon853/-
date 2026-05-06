@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
 import { ShareButtons } from "../ShareButtons";
 import { AdPlaceholder } from "../AdPlaceholder";
-import { useLocalState, inputClass, labelClass, FAQ, FAQItem } from "./shared";
+import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem } from "./shared";
 
 // 1. Ovulation
 export function OvulationCalculator({ lang }: { lang: Lang }) {
@@ -46,12 +46,12 @@ export function OvulationCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
-      <FAQ title={lang === "TH" ? "การตกไข่ (FAQ)" : "Ovulation FAQ"}>
+      <SEOFAQ title={lang === "TH" ? "การตกไข่ (FAQ)" : "Ovulation FAQ"}>
         <FAQItem 
           q={lang === "TH" ? "ไข่ตกนับอย่างไร?" : "How is it calculated?"}
           a={lang === "TH" ? "โดยทั่วไปไข่จะตกก่อนวันประจำเดือนรอบถัดไปประมาณ 14 วัน ดังนั้นถ้ารอบเดือนคือ 28 วัน ไข่จะตกในวันที่ 14 นับจากวันแรกที่มีประจำเดือน" : "Ovulation typically occurs 14 days before the next period starts."}
         />
-      </FAQ>
+      </SEOFAQ>
     </div>
   );
 }
@@ -88,12 +88,12 @@ export function DueDateCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
-      <FAQ title={lang === "TH" ? "กำหนดคลอด (FAQ)" : "Due Date FAQ"}>
+      <SEOFAQ title={lang === "TH" ? "กำหนดคลอด (FAQ)" : "Due Date FAQ"}>
         <FAQItem 
           q={lang === "TH" ? "สูตรคำนวณกำหนดคลอดคืออะไร?" : "What is the formula?"}
           a={lang === "TH" ? "ใช้กฎของ Naegele คือ การนำวันแรกของการมีประจำเดือนครั้งสุดท้าย บวกไปอีก 280 วัน (40 สัปดาห์) ซึ่งเป็นอายุครรภ์เฉลี่ย" : "It adds 280 days (40 weeks) to the first day of your last period."}
         />
-      </FAQ>
+      </SEOFAQ>
     </div>
   );
 }
@@ -153,12 +153,12 @@ export function ChildHeightCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
-      <FAQ title={lang === "TH" ? "ส่วนสูงลูก (FAQ)" : "Child Height FAQ"}>
+      <SEOFAQ title={lang === "TH" ? "ส่วนสูงลูก (FAQ)" : "Child Height FAQ"}>
         <FAQItem 
           q={lang === "TH" ? "สูตรความสูงเป้าหมายคืออะไร?" : "What is the Target Height formula?"}
           a={lang === "TH" ? "เป็นสูตรทางการแพทย์ที่เรียกว่า Mid-parental height โดยคำนวณจากพันธุกรรมของพ่อแม่ บวกลบ 13 ซม. ตามเพศ แล้วหารสอง ความสูงจริงอาจขึ้นอยู่กับโภชนาการและการนอนหลับด้วย" : "Mid-parental height formula based on genetics."}
         />
-      </FAQ>
+      </SEOFAQ>
     </div>
   );
 }

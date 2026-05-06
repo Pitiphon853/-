@@ -3,10 +3,11 @@
 import { Lang } from "./dictionary";
 import { BMICalculator, SleepCalculator, TDEECalculator, WaterCalculator as HealthWaterCalculator, FoodRandomizer } from "./calcs/HealthCalcs";
 import { ChildHeightCalculator } from "./calcs/FamilyCalcs";
-import { DiscountCalculator, CarLoanCalculator, MortgageCalculator } from "./calcs/FinanceCalcs";
+import { DiscountCalculator, CarLoanCalculator, MortgageCalculator, CompoundInterest, BillSplitter, CurrencyConverter } from "./calcs/FinanceCalcs";
 import { VatCalculator, MarginCalculator } from "./calcs/BusinessCalcs";
-import { BTUCalculator, ElectricCalculator, WaterCalculator as UtilityWaterCalculator, BaseNCalculator, GPACalculator } from "./calcs/UtilityCalcs";
+import { BTUCalculator, ElectricCalculator, WaterCalculator as UtilityWaterCalculator, BaseNCalculator, GPACalculator, FuelCostCalculator } from "./calcs/UtilityCalcs";
 import { RandomizerCalculator, WordCounter, AgeCalculator } from "./calcs/GeneralCalcs";
+import { CookingUnitConverter, TileAreaCalculator } from "./calcs/ConversionCalcs";
 
 export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string, lang: Lang, setCalc: (id: string) => void }) {
   // Health & Diet
@@ -23,6 +24,9 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "discount") return <DiscountCalculator lang={lang} />;
   if (activeCalc === "car-loan") return <CarLoanCalculator lang={lang} />;
   if (activeCalc === "mortgage") return <MortgageCalculator lang={lang} />;
+  if (activeCalc === "compound-interest") return <CompoundInterest lang={lang} />;
+  if (activeCalc === "bill-splitter") return <BillSplitter lang={lang} />;
+  if (activeCalc === "currency-converter") return <CurrencyConverter lang={lang} />;
 
   // Business
   if (activeCalc === "vat") return <VatCalculator lang={lang} />;
@@ -34,6 +38,9 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "water-bill") return <UtilityWaterCalculator lang={lang} />;
   if (activeCalc === "basen") return <BaseNCalculator lang={lang} />;
   if (activeCalc === "gpa") return <GPACalculator lang={lang} />;
+  if (activeCalc === "fuel-cost") return <FuelCostCalculator lang={lang} />;
+  if (activeCalc === "cooking-unit") return <CookingUnitConverter lang={lang} />;
+  if (activeCalc === "tile-area") return <TileAreaCalculator lang={lang} />;
 
   // General
   if (activeCalc === "randomizer") return <RandomizerCalculator lang={lang} />;

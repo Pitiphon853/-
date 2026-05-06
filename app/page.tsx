@@ -50,6 +50,9 @@ export default function CalculatorHub() {
     { id: "discount", name: lang==="TH"?"ส่วนลด":"Discount", desc: lang==="TH"?"เปอร์เซ็นต์ส่วนลด":"Discount Percentage", category: "Finance", icon: Coins },
     { id: "car-loan", name: lang==="TH"?"ผ่อนรถยนต์":"Car Loan", desc: lang==="TH"?"ค่างวดรถ":"Auto Loan Calculator", category: "Finance", icon: Car },
     { id: "mortgage", name: lang==="TH"?"เงินกู้/บ้าน":"Mortgage", desc: lang==="TH"?"ยอดผ่อนรายเดือน":"Loan Calculator", category: "Finance", icon: Coins },
+    { id: "compound-interest", name: lang==="TH"?"ดอกเบี้ยทบต้น":"Compound Interest", desc: lang==="TH"?"ผลตอบแทนลงทุน":"Investment Growth", category: "Finance", icon: Coins },
+    { id: "bill-splitter", name: lang==="TH"?"หารค่าอาหาร":"Bill Splitter", desc: lang==="TH"?"แยกจ่าย + SC/VAT":"Split Bill + SC/VAT", category: "Finance", icon: Receipt },
+    { id: "currency-converter", name: lang==="TH"?"แปลงสกุลเงิน":"Currency Converter", desc: lang==="TH"?"เรทเงินสดล่าสุด":"Live Exchange Rates", category: "Finance", icon: Coins },
 
     // Business (Green/Gold)
     { id: "vat", name: lang==="TH"?"คำนวณ VAT":"VAT Calculator", desc: lang==="TH"?"ถอด/เพิ่ม VAT":"Value Added Tax", category: "Business", icon: Receipt },
@@ -57,10 +60,13 @@ export default function CalculatorHub() {
 
     // Utility & Education (Blue)
     { id: "gpa", name: lang==="TH"?"จำลองเกรดเบื้องต้น":"GPA Simulator", desc: lang==="TH"?"จำลองเกรด (GPA)":"GPA Estimator", category: "Utility", icon: BookOpen },
-    { id: "baseN", name: lang==="TH"?"แปลงเลขฐาน":"Base N", desc: lang==="TH"?"ฐาน 2-16":"Number Base Converter", category: "Utility", icon: Calculator },
+    { id: "basen", name: lang==="TH"?"แปลงเลขฐาน":"Base Converter", desc: lang==="TH"?"ฐาน 2–36 ครบทุกฐาน":"Base 2–36, Step-by-Step", category: "Utility", icon: Calculator },
     { id: "btu", name: lang==="TH"?"คำนวณ BTU":"AC BTU", desc: lang==="TH"?"ขนาดแอร์บ้าน":"Air Conditioner BTU", category: "Utility", icon: Home },
     { id: "electric", name: lang==="TH"?"ค่าไฟ":"Electricity", desc: lang==="TH"?"คำนวณค่าไฟฟ้า":"Electricity Bill", category: "Utility", icon: Zap },
     { id: "water-bill", name: lang==="TH"?"ค่าน้ำ":"Water Bill", desc: lang==="TH"?"ค่าน้ำประปา":"Water Usage Bill", category: "Utility", icon: Home },
+    { id: "fuel-cost", name: lang==="TH"?"ค่าน้ำมันรถ":"Fuel Cost", desc: lang==="TH"?"คำนวณค่าน้ำมันเดินทาง":"Trip Fuel Estimate", category: "Utility", icon: Car },
+    { id: "cooking-unit", name: lang==="TH"?"แปลงหน่วยทำอาหาร":"Cooking Units", desc: lang==="TH"?"ถ้วยตวง ↔ กรัม":"Cups to Grams", category: "Utility", icon: Utensils },
+    { id: "tile-area", name: lang==="TH"?"กระเบื้องปูพื้น":"Tile Area", desc: lang==="TH"?"คำนวณเผื่อกันพลาด":"Floor Tile Estimate", category: "Utility", icon: Home },
 
     // General (Purple)
     { id: "randomizer", name: lang==="TH"?"สุ่มเลข/สุ่มชื่อ":"Randomizer", desc: lang==="TH"?"จับฉลาก":"Number/Name Picker", category: "General", icon: Hash },

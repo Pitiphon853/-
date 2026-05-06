@@ -27,23 +27,37 @@ export function useLocalState<T>(key: string, initialValue: T): [T, (val: T) => 
 export const inputClass = "w-full px-4 py-3 bg-gray-100 dark:bg-white/5 border border-gray-300 dark:border-white/20 rounded text-gray-900 dark:text-white outline-none focus:ring-2 focus:border-transparent transition-all";
 export const labelClass = "block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2";
 
-// FAQ Component for SEO
-export function FAQ({ title, children }: { title: string, children: React.ReactNode }) {
+// SEO & FAQ Component
+export function SEOFAQ({ title, children }: { title: string, children: React.ReactNode }) {
   return (
-    <div className="mt-8 pt-6 border-t border-gray-200 dark:border-white/10 text-sm text-gray-600 dark:text-gray-400">
-      <h3 className="font-bold text-gray-800 dark:text-gray-200 mb-3 text-base">{title}</h3>
-      <div className="space-y-4">
+    <div className="mt-12 pt-8 border-t border-gray-200 dark:border-white/10 text-sm text-gray-700 dark:text-gray-300 text-left">
+      <h3 className="font-black text-xl text-gray-900 dark:text-white mb-6 text-center">{title}</h3>
+      <div className="space-y-6">
         {children}
       </div>
     </div>
   );
 }
 
-export function FAQItem({ q, a }: { q: string, a: string }) {
+export function FAQItem({ q, a, isStep }: { q: string, a: React.ReactNode | string, isStep?: boolean }) {
   return (
-    <div>
-      <h4 className="font-bold text-gray-700 dark:text-gray-300">{q}</h4>
-      <p className="mt-1 leading-relaxed">{a}</p>
+    <div className={isStep ? "bg-gray-50 dark:bg-white/5 p-4 rounded-xl border border-gray-200 dark:border-white/10" : ""}>
+      <h4 className={`font-bold text-gray-900 dark:text-white ${isStep ? "mb-2 text-deep-teal dark:text-soft-mint" : "mb-1"}`}>{q}</h4>
+      <div className="leading-relaxed text-gray-600 dark:text-gray-400">{a}</div>
+    </div>
+  );
+}
+
+export function CalculationSteps({ title, steps }: { title: string, steps: React.ReactNode }) {
+  return (
+    <div className="mt-8 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-500/30 p-5 rounded-xl text-left">
+      <h4 className="font-bold text-blue-800 dark:text-blue-300 mb-3 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        {title}
+      </h4>
+      <div className="text-sm text-blue-900 dark:text-blue-200 space-y-2">
+        {steps}
+      </div>
     </div>
   );
 }

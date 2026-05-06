@@ -6,7 +6,7 @@ import { Lang } from "../dictionary";
 import { Gauge } from "../Gauge";
 import { ShareButtons } from "../ShareButtons";
 import { AdPlaceholder } from "../AdPlaceholder";
-import { useLocalState, inputClass, labelClass, FAQ, FAQItem, ExportResult, RelatedCalcs } from "./shared";
+import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem, ExportResult, RelatedCalcs } from "./shared";
 
 // 1. BMI (Moved from old file)
 export function BMICalculator({ lang, setCalc }: { lang: Lang, setCalc: (id: string) => void }) {
@@ -89,7 +89,7 @@ export function BMICalculator({ lang, setCalc }: { lang: Lang, setCalc: (id: str
 
       <AdPlaceholder type="in-article" />
 
-      <FAQ title={lang === "TH" ? "คำถามที่พบบ่อย (FAQ)" : "FAQ"}>
+      <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (FAQ)" : "FAQ"}>
         <FAQItem 
           q={lang === "TH" ? "BMI เท่าไหร่ถึงจะอ้วน?" : "What BMI is considered obese?"}
           a={lang === "TH" ? "สำหรับคนเอเชีย หากค่า BMI เกิน 25 ขึ้นไป จะถือว่าอยู่ในเกณฑ์อ้วน และหากเกิน 30 จะอยู่ในเกณฑ์อ้วนมากและเสี่ยงต่อโรค" : "For Asians, a BMI of 25 or higher is considered obese."}
@@ -98,7 +98,7 @@ export function BMICalculator({ lang, setCalc }: { lang: Lang, setCalc: (id: str
           q={lang === "TH" ? "ทำไม BMI ถึงไม่แม่นยำกับบางคน?" : "Why is BMI not always accurate?"}
           a={lang === "TH" ? "BMI ไม่ได้แยกแยะระหว่างไขมันและกล้ามเนื้อ ผู้ที่ออกกำลังกายจนมีกล้ามเนื้อมาก อาจมีค่า BMI สูงแต่ไม่ได้แปลว่าอ้วน แนะนำให้ใช้ร่วมกับการวัดเปอร์เซ็นต์ไขมัน หรือ TDEE" : "BMI doesn't differentiate between fat and muscle. Bodybuilders might have a high BMI but low body fat."}
         />
-      </FAQ>
+      </SEOFAQ>
     </div>
   );
 }
@@ -156,12 +156,12 @@ export function SleepCalculator({ lang, setCalc }: { lang: Lang, setCalc: (id: s
         ]} 
       />
       <AdPlaceholder type="in-article" />
-      <FAQ title={lang === "TH" ? "การนอนหลับที่ดี (FAQ)" : "Sleep FAQ"}>
+      <SEOFAQ title={lang === "TH" ? "การนอนหลับที่ดี (FAQ)" : "Sleep FAQ"}>
         <FAQItem 
           q={lang === "TH" ? "ทำไมต้องตื่นตามวงจรการนอน?" : "Why wake up at the end of a cycle?"}
           a={lang === "TH" ? "วงจรการนอนหลับของมนุษย์ใช้เวลาประมาณ 90 นาทีต่อรอบ การตื่นตอนจบวงจรจะทำให้รู้สึกสดชื่น ไม่งัวเงีย ดีกว่าการตื่นกลางวงจรแม้จะนอนนานกว่าก็ตาม" : "A sleep cycle is about 90 mins. Waking up at the end of a cycle leaves you feeling refreshed."}
         />
-      </FAQ>
+      </SEOFAQ>
     </div>
   );
 }
@@ -248,12 +248,12 @@ export function TDEECalculator({ lang }: { lang: Lang }) {
       )}
 
       <AdPlaceholder type="in-article" />
-      <FAQ title={lang === "TH" ? "TDEE และ BMR (FAQ)" : "TDEE FAQ"}>
+      <SEOFAQ title={lang === "TH" ? "TDEE และ BMR (FAQ)" : "TDEE FAQ"}>
         <FAQItem 
           q={lang === "TH" ? "TDEE คืออะไร ต่างจาก BMR อย่างไร?" : "What is the difference between TDEE and BMR?"}
           a={lang === "TH" ? "BMR คือพลังงานพื้นฐานที่ร่างกายใช้ตอนพักผ่อน (หายใจ, เต้นของหัวใจ) ส่วน TDEE คือพลังงานทั้งหมดรวมกับการเดิน วิ่ง และทำกิจกรรม หากต้องการลดน้ำหนักต้องกินให้น้อยกว่า TDEE แต่ไม่น้อยกว่า BMR" : "BMR is resting calories. TDEE includes all daily activities."}
         />
-      </FAQ>
+      </SEOFAQ>
     </div>
   );
 }
@@ -286,12 +286,12 @@ export function WaterCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
-      <FAQ title={lang === "TH" ? "การดื่มน้ำ (FAQ)" : "Water FAQ"}>
+      <SEOFAQ title={lang === "TH" ? "การดื่มน้ำ (FAQ)" : "Water FAQ"}>
         <FAQItem 
           q={lang === "TH" ? "ทำไมสูตรนี้ถึงใช้คูณด้วย 33?" : "Why multiply by 33?"}
           a={lang === "TH" ? "สูตรมาตรฐานทางการแพทย์แนะนำให้ร่างกายได้รับน้ำประมาณ 30-33 มิลลิลิตรต่อน้ำหนักตัว 1 กิโลกรัม เพื่อรักษาสมดุลของระบบขับถ่ายและผิวพรรณ" : "Medical standard suggests 30-33ml per kg of body weight."}
         />
-      </FAQ>
+      </SEOFAQ>
     </div>
   );
 }
@@ -345,12 +345,12 @@ export function FoodRandomizer({ lang }: { lang: Lang }) {
           {result.cal > 0 && <div className="text-gray-500 dark:text-gray-400">{result.cal} kcal</div>}
         </motion.div>
       )}
-      <FAQ title={lang === "TH" ? "แคลอรี่อาหาร (FAQ)" : "Food FAQ"}>
+      <SEOFAQ title={lang === "TH" ? "แคลอรี่อาหาร (FAQ)" : "Food FAQ"}>
         <FAQItem 
           q={lang === "TH" ? "ข้อมูลแคลอรี่มาจากไหน?" : "Where is the calorie data from?"}
           a={lang === "TH" ? "เป็นค่าเฉลี่ยโดยประมาณจากตารางแคลอรี่อาหารไทยกรมอนามัย แคลอรี่จริงอาจขึ้นอยู่กับปริมาณน้ำมันและเครื่องปรุงที่ร้านใช้" : "Estimated from standard Thai food calorie tables."}
         />
-      </FAQ>
+      </SEOFAQ>
     </div>
   );
 }

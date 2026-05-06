@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
 import { AdPlaceholder } from "../AdPlaceholder";
-import { useLocalState, inputClass, labelClass, FAQ, FAQItem, ExportResult } from "./shared";
+import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem, ExportResult } from "./shared";
 
 // 1. VAT
 export function VatCalculator({ lang }: { lang: Lang }) {
@@ -74,12 +74,12 @@ export function VatCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
-      <FAQ title={lang === "TH" ? "ภาษีมูลค่าเพิ่ม (FAQ)" : "VAT FAQ"}>
+      <SEOFAQ title={lang === "TH" ? "ภาษีมูลค่าเพิ่ม (FAQ)" : "VAT FAQ"}>
         <FAQItem 
           q={lang === "TH" ? "ถอด VAT คิดยังไง?" : "How to exclude VAT?"}
           a={lang === "TH" ? "ใช้สูตร: ยอดรวม ÷ (1 + อัตราVAT/100) จะได้ยอดก่อน VAT แล้วนำยอดรวมมาลบยอดก่อน VAT ก็จะได้เป็นค่า VAT ครับ" : "Total / (1 + Rate/100) = Net amount."}
         />
-      </FAQ>
+      </SEOFAQ>
     </div>
   );
 }
@@ -131,12 +131,12 @@ export function MarginCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
-      <FAQ title={lang === "TH" ? "Margin vs Markup (FAQ)" : "Margin FAQ"}>
+      <SEOFAQ title={lang === "TH" ? "Margin vs Markup (FAQ)" : "Margin FAQ"}>
         <FAQItem 
           q={lang === "TH" ? "Margin ต่างจาก Markup อย่างไร?" : "Margin vs Markup?"}
           a={lang === "TH" ? "Margin คือสัดส่วนกำไรเทียบกับราคาขาย ส่วน Markup คือกำไรเทียบกับต้นทุน การตั้งราคาในธุรกิจค้าปลีกนิยมใช้ Margin มากกว่า เพื่อไม่ให้ขาดทุนเวลาจัดโปรโมชั่นลดราคา" : "Margin is profit based on sell price, Markup is based on cost."}
         />
-      </FAQ>
+      </SEOFAQ>
     </div>
   );
 }
