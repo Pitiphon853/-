@@ -68,6 +68,23 @@ export default function CalculatorHub() {
     { id: "cooking-unit", name: lang==="TH"?"แปลงหน่วยทำอาหาร":"Cooking Units", desc: lang==="TH"?"ถ้วยตวง ↔ กรัม":"Cups to Grams", category: "Utility", icon: Utensils },
     { id: "tile-area", name: lang==="TH"?"กระเบื้องปูพื้น":"Tile Area", desc: lang==="TH"?"คำนวณเผื่อกันพลาด":"Floor Tile Estimate", category: "Utility", icon: Home },
 
+    // Agriculture (Green)
+    { id: "ferm-time", name: lang==="TH"?"เวลาหมักดอง":"Fermentation Time", desc: lang==="TH"?"อุณหภูมิ x เวลา":"Temp x Time", category: "Agriculture", icon: Zap },
+    { id: "food-energy", name: lang==="TH"?"พลังงานอาหาร":"Food Energy", desc: lang==="TH"?"Joule ↔ kcal":"Joule ↔ kcal", category: "Agriculture", icon: Zap },
+    { id: "fertilizer", name: lang==="TH"?"ปุ๋ยต่อไร่":"Fertilizer", desc: lang==="TH"?"NPK ตามชนิดพืช":"Fertilizer per Rai", category: "Agriculture", icon: Home },
+    { id: "irrigation", name: lang==="TH"?"น้ำชลประทาน":"Irrigation", desc: lang==="TH"?"ปริมาณน้ำต่อไร่":"Water per Rai", category: "Agriculture", icon: Home },
+    { id: "yield", name: lang==="TH"?"ผลผลิตต่อไร่":"Crop Yield", desc: lang==="TH"?"กำไรเกษตรกร":"Yield per Rai", category: "Agriculture", icon: Coins },
+
+    // Construction (Amber)
+    { id: "house-paint", name: lang==="TH"?"สีทาบ้าน":"House Paint", desc: lang==="TH"?"พื้นที่ผนัง → ลิตร":"Wall Area → Liters", category: "Construction", icon: Home },
+    { id: "cement", name: lang==="TH"?"ปูนซีเมนต์":"Cement", desc: lang==="TH"?"ปริมาณปูนตามพื้นที่":"Cement Volume", category: "Construction", icon: Home },
+    { id: "wallpaper", name: lang==="TH"?"วอลเปเปอร์":"Wallpaper", desc: lang==="TH"?"ม้วนที่ต้องการ":"Rolls Needed", category: "Construction", icon: Home },
+    { id: "roof-area", name: lang==="TH"?"พื้นที่หลังคา":"Roof Area", desc: lang==="TH"?"ทรงต่างๆ":"Roof Shapes", category: "Construction", icon: Home },
+    { id: "water-tank", name: lang==="TH"?"ถังน้ำ":"Water Tank", desc: lang==="TH"?"ขนาดถังที่เหมาะสม":"Tank Size", category: "Construction", icon: Home },
+    { id: "pool-vol", name: lang==="TH"?"สระว่ายน้ำ":"Pool Volume", desc: lang==="TH"?"ปริมาตรน้ำ/คลอรีน":"Water Volume", category: "Construction", icon: Home },
+    { id: "insulation", name: lang==="TH"?"ฉนวนกันความร้อน":"Insulation", desc: lang==="TH"?"R-value ที่ต้องการ":"R-Value Needed", category: "Construction", icon: Home },
+    { id: "reno-cost", name: lang==="TH"?"ค่าใช้จ่ายรีโนเวท":"Renovation Cost", desc: lang==="TH"?"ประเมินงบก่อสร้าง":"Estimated Budget", category: "Construction", icon: Coins },
+
     // General (Purple)
     { id: "randomizer", name: lang==="TH"?"สุ่มเลข/สุ่มชื่อ":"Randomizer", desc: lang==="TH"?"จับฉลาก":"Number/Name Picker", category: "General", icon: Hash },
     { id: "word-counter", name: lang==="TH"?"นับจำนวนคำ":"Word Counter", desc: lang==="TH"?"นับคำ/ตัวอักษร":"Words & Chars", category: "General", icon: BookOpen },
@@ -89,7 +106,9 @@ export default function CalculatorHub() {
       case "Health":
       case "Family": return "pink";
       case "Finance":
-      case "Business": return "green";
+      case "Business":
+      case "Agriculture": return "green";
+      case "Construction": return "amber";
       case "General": return "purple";
       default: return "blue";
     }
@@ -99,7 +118,8 @@ export default function CalculatorHub() {
     pink: "text-pink-500 border-pink-500 hover:border-pink-500 focus:ring-pink-500 group-hover:text-pink-500 shadow-[4px_4px_0px_0px_rgba(236,72,153,1)]",
     green: "text-green-500 border-green-500 hover:border-green-500 focus:ring-green-500 group-hover:text-green-500 shadow-[4px_4px_0px_0px_rgba(34,197,94,1)]",
     blue: "text-blue-500 border-blue-500 hover:border-blue-500 focus:ring-blue-500 group-hover:text-blue-500 shadow-[4px_4px_0px_0px_rgba(59,130,246,1)]",
-    purple: "text-purple-500 border-purple-500 hover:border-purple-500 focus:ring-purple-500 group-hover:text-purple-500 shadow-[4px_4px_0px_0px_rgba(168,85,247,1)]"
+    purple: "text-purple-500 border-purple-500 hover:border-purple-500 focus:ring-purple-500 group-hover:text-purple-500 shadow-[4px_4px_0px_0px_rgba(168,85,247,1)]",
+    amber: "text-amber-500 border-amber-500 hover:border-amber-500 focus:ring-amber-500 group-hover:text-amber-500 shadow-[4px_4px_0px_0px_rgba(245,158,11,1)]"
   };
 
   const getActiveCalcColor = () => {
@@ -176,6 +196,8 @@ export default function CalculatorHub() {
                     { id: "Family", label: lang==="TH"?"ครอบครัว":"Family", color: "pink" },
                     { id: "Finance", label: t.finance, color: "green" },
                     { id: "Business", label: lang==="TH"?"ธุรกิจ/แม่ค้า":"Business", color: "green" },
+                    { id: "Agriculture", label: lang==="TH"?"เกษตร":"Agriculture", color: "green" },
+                    { id: "Construction", label: lang==="TH"?"ก่อสร้าง":"Construction", color: "amber" },
                     { id: "Utility", label: t.utility, color: "blue" },
                     { id: "General", label: lang==="TH"?"ทั่วไป":"General", color: "purple" }
                   ].map((cat) => (
@@ -217,21 +239,24 @@ export default function CalculatorHub() {
                           pink: "hover:border-pink-500 hover:shadow-[4px_4px_0px_0px_#ec4899]",
                           green: "hover:border-green-500 hover:shadow-[4px_4px_0px_0px_#22c55e]",
                           blue: "hover:border-blue-500 hover:shadow-[4px_4px_0px_0px_#3b82f6]",
-                          purple: "hover:border-purple-500 hover:shadow-[4px_4px_0px_0px_#a855f7]"
+                          purple: "hover:border-purple-500 hover:shadow-[4px_4px_0px_0px_#a855f7]",
+                          amber: "hover:border-amber-500 hover:shadow-[4px_4px_0px_0px_#f59e0b]"
                         };
 
                         const textHoverClasses = {
                           pink: "group-hover:text-pink-500",
                           green: "group-hover:text-green-500",
                           blue: "group-hover:text-blue-500",
-                          purple: "group-hover:text-purple-500"
+                          purple: "group-hover:text-purple-500",
+                          amber: "group-hover:text-amber-500"
                         };
 
                         const bgGlowClasses = {
                           pink: "bg-pink-500/5 group-hover:bg-pink-500/20",
                           green: "bg-green-500/5 group-hover:bg-green-500/20",
                           blue: "bg-blue-500/5 group-hover:bg-blue-500/20",
-                          purple: "bg-purple-500/5 group-hover:bg-purple-500/20"
+                          purple: "bg-purple-500/5 group-hover:bg-purple-500/20",
+                          amber: "bg-amber-500/5 group-hover:bg-amber-500/20"
                         };
                         
                         return (

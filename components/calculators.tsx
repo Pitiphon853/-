@@ -8,6 +8,8 @@ import { VatCalculator, MarginCalculator } from "./calcs/BusinessCalcs";
 import { BTUCalculator, ElectricCalculator, WaterCalculator as UtilityWaterCalculator, BaseNCalculator, GPACalculator, FuelCostCalculator } from "./calcs/UtilityCalcs";
 import { RandomizerCalculator, WordCounter, AgeCalculator } from "./calcs/GeneralCalcs";
 import { CookingUnitConverter, TileAreaCalculator } from "./calcs/ConversionCalcs";
+import { FermentationTimeCalculator, FoodEnergyCalculator, FertilizerCalculator, IrrigationCalculator, YieldCalculator } from "./calcs/AgricultureCalcs";
+import { HousePaintCalculator, CementCalculator, WallpaperCalculator, RoofAreaCalculator, WaterTankCalculator, PoolVolumeCalculator, InsulationCalculator, RenovationCostCalculator } from "./calcs/ConstructionCalcs";
 
 export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string, lang: Lang, setCalc: (id: string) => void }) {
   // Health & Diet
@@ -41,6 +43,23 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "fuel-cost") return <FuelCostCalculator lang={lang} />;
   if (activeCalc === "cooking-unit") return <CookingUnitConverter lang={lang} />;
   if (activeCalc === "tile-area") return <TileAreaCalculator lang={lang} />;
+
+  // Agriculture
+  if (activeCalc === "ferm-time") return <FermentationTimeCalculator lang={lang} />;
+  if (activeCalc === "food-energy") return <FoodEnergyCalculator lang={lang} />;
+  if (activeCalc === "fertilizer") return <FertilizerCalculator lang={lang} />;
+  if (activeCalc === "irrigation") return <IrrigationCalculator lang={lang} />;
+  if (activeCalc === "yield") return <YieldCalculator lang={lang} />;
+
+  // Construction
+  if (activeCalc === "house-paint") return <HousePaintCalculator lang={lang} />;
+  if (activeCalc === "cement") return <CementCalculator lang={lang} />;
+  if (activeCalc === "wallpaper") return <WallpaperCalculator lang={lang} />;
+  if (activeCalc === "roof-area") return <RoofAreaCalculator lang={lang} />;
+  if (activeCalc === "water-tank") return <WaterTankCalculator lang={lang} />;
+  if (activeCalc === "pool-vol") return <PoolVolumeCalculator lang={lang} />;
+  if (activeCalc === "insulation") return <InsulationCalculator lang={lang} />;
+  if (activeCalc === "reno-cost") return <RenovationCostCalculator lang={lang} />;
 
   // General
   if (activeCalc === "randomizer") return <RandomizerCalculator lang={lang} />;
