@@ -53,10 +53,27 @@ export default function CalculatorHub() {
     { id: "compound-interest", name: lang==="TH"?"ดอกเบี้ยทบต้น":"Compound Interest", desc: lang==="TH"?"ผลตอบแทนลงทุน":"Investment Growth", category: "Finance", icon: Coins },
     { id: "bill-splitter", name: lang==="TH"?"หารค่าอาหาร":"Bill Splitter", desc: lang==="TH"?"แยกจ่าย + SC/VAT":"Split Bill + SC/VAT", category: "Finance", icon: Receipt },
     { id: "currency-converter", name: lang==="TH"?"แปลงสกุลเงิน":"Currency Converter", desc: lang==="TH"?"เรทเงินสดล่าสุด":"Live Exchange Rates", category: "Finance", icon: Coins },
+    { id: "savings-goal", name: lang==="TH"?"เป้าหมายการออม":"Savings Goal", desc: lang==="TH"?"ต้องเก็บเดือนละเท่าไหร่":"Monthly Savings", category: "Finance", icon: Coins },
+    { id: "inflation", name: lang==="TH"?"เงินเฟ้อ":"Inflation", desc: lang==="TH"?"มูลค่าเงินในอนาคต":"Future Money Value", category: "Finance", icon: Coins },
+    { id: "salary-hourly", name: lang==="TH"?"เงินเดือน ↔ รายชั่วโมง":"Salary to Hourly", desc: lang==="TH"?"ค่าแรงรายชั่วโมง":"Hourly Rate", category: "Finance", icon: Calculator },
+    { id: "net-worth", name: lang==="TH"?"ความมั่งคั่งสุทธิ":"Net Worth", desc: lang==="TH"?"ทรัพย์สินหักหนี้สิน":"Assets - Liabilities", category: "Finance", icon: Coins },
+    { id: "debt-payoff", name: lang==="TH"?"วางแผนปลดหนี้":"Debt Payoff", desc: lang==="TH"?"จ่ายโปะแบบไหนดี":"Snowball/Avalanche", category: "Finance", icon: Coins },
+    { id: "retirement", name: lang==="TH"?"เกษียณอายุ":"Retirement", desc: lang==="TH"?"ต้องมีเงินเท่าไหร่":"Needed for Retirement", category: "Finance", icon: Coins },
+    { id: "stock-profit", name: lang==="TH"?"กำไรหุ้น/คริปโต":"Stock Profit", desc: lang==="TH"?"จุดคุ้มทุน/กำไรสุทธิ":"Trading Profit", category: "Finance", icon: Coins },
+    { id: "roi", name: lang==="TH"?"ผลตอบแทน ROI":"ROI", desc: lang==="TH"?"ความคุ้มค่าการลงทุน":"Return on Investment", category: "Finance", icon: Calculator },
 
     // Business (Green/Gold)
     { id: "vat", name: lang==="TH"?"คำนวณ VAT":"VAT Calculator", desc: lang==="TH"?"ถอด/เพิ่ม VAT":"Value Added Tax", category: "Business", icon: Receipt },
     { id: "margin", name: lang==="TH"?"คำนวณราคาขาย":"Margin", desc: lang==="TH"?"ตั้งราคาจากต้นทุน":"Profit Margin", category: "Business", icon: Calculator },
+    { id: "break-even", name: lang==="TH"?"จุดคุ้มทุน":"Break-even", desc: lang==="TH"?"ต้องขายกี่ชิ้น":"Units to Break-even", category: "Business", icon: Calculator },
+    { id: "markup", name: lang==="TH"?"ตั้งราคาจากต้นทุน":"Markup Pricing", desc: lang==="TH"?"ราคาขายแนะนำ":"Suggested Price", category: "Business", icon: Calculator },
+    { id: "depreciation", name: lang==="TH"?"ค่าเสื่อมราคา":"Depreciation", desc: lang==="TH"?"ตัดจ่ายรายปี":"Straight-line", category: "Business", icon: Calculator },
+    { id: "payroll", name: lang==="TH"?"คำนวณเงินเดือนพนักงาน":"Payroll", desc: lang==="TH"?"หักประกันสังคม/ภาษี":"Net Salary", category: "Business", icon: Calculator },
+    { id: "cogs", name: lang==="TH"?"ต้นทุนขาย (COGS)":"COGS", desc: lang==="TH"?"ต้นทุนสินค้าที่ขาย":"Cost of Goods Sold", category: "Business", icon: Calculator },
+    { id: "ltv", name: lang==="TH"?"มูลค่าลูกค้าตลอดชีพ":"Customer LTV", desc: lang==="TH"?"Customer Lifetime Value":"Customer Lifetime Value", category: "Business", icon: Calculator },
+    { id: "cac", name: lang==="TH"?"ต้นทุนได้ลูกค้าใหม่":"CAC", desc: lang==="TH"?"Customer Acquisition":"Acquisition Cost", category: "Business", icon: Coins },
+    { id: "conversion-rate", name: lang==="TH"?"อัตราการเปลี่ยนเป็นยอดขาย":"Conversion Rate", desc: lang==="TH"?"% คนซื้อ":"Sales Conversion", category: "Business", icon: Calculator },
+    { id: "inventory-turnover", name: lang==="TH"?"รอบหมุนเวียนสินค้า":"Inventory Turnover", desc: lang==="TH"?"ขายของออกเร็วแค่ไหน":"Turnover Ratio", category: "Business", icon: Calculator },
 
     // Utility & Education (Blue)
     { id: "gpa", name: lang==="TH"?"จำลองเกรดเบื้องต้น":"GPA Simulator", desc: lang==="TH"?"จำลองเกรด (GPA)":"GPA Estimator", category: "Utility", icon: BookOpen },

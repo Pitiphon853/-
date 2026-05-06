@@ -12,6 +12,8 @@ import { FermentationTimeCalculator, FoodEnergyCalculator, FertilizerCalculator,
 import { HousePaintCalculator, CementCalculator, WallpaperCalculator, RoofAreaCalculator, WaterTankCalculator, PoolVolumeCalculator, InsulationCalculator, RenovationCostCalculator } from "./calcs/ConstructionCalcs";
 import { BandwidthCalculator, ServerCostCalculator, ImageSizeCalculator, IPSubnetCalculator, VideoBitrateCalculator, BatteryLifeCalculator, HashRateCalculator } from "./calcs/TechnologyCalcs";
 import { DigitalUnitConverter, AngleConverter, ColorConverter, TemperatureConverter, SpeedConverter, AreaUnitConverter, WeightUnitConverter, RomanNumeralConverter, AreaShapeCalculator, VolumeShapeCalculator, WorkingDaysCalculator } from "./calcs/ConversionCalcs2";
+import { SavingsGoalCalculator, InflationCalculator, SalaryToHourlyCalculator, NetWorthCalculator, DebtPayoffCalculator, RetirementCalculator, StockProfitCalculator, ROICalculator } from "./calcs/FinanceCalcs2";
+import { BreakEvenCalculator, MarkupCalculator, DepreciationCalculator, PayrollCalculator, COGSCalculator, LTVCalculator, CACCalculator, ConversionRateCalculator, InventoryTurnoverCalculator } from "./calcs/BusinessCalcs2";
 
 export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string, lang: Lang, setCalc: (id: string) => void }) {
   // Health & Diet
@@ -35,6 +37,26 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   // Business
   if (activeCalc === "vat") return <VatCalculator lang={lang} />;
   if (activeCalc === "margin") return <MarginCalculator lang={lang} />;
+  
+  // Phase 3: Finance & Business
+  if (activeCalc === "savings-goal") return <SavingsGoalCalculator lang={lang} />;
+  if (activeCalc === "inflation") return <InflationCalculator lang={lang} />;
+  if (activeCalc === "salary-hourly") return <SalaryToHourlyCalculator lang={lang} />;
+  if (activeCalc === "net-worth") return <NetWorthCalculator lang={lang} />;
+  if (activeCalc === "debt-payoff") return <DebtPayoffCalculator lang={lang} />;
+  if (activeCalc === "retirement") return <RetirementCalculator lang={lang} />;
+  if (activeCalc === "stock-profit") return <StockProfitCalculator lang={lang} />;
+  if (activeCalc === "roi") return <ROICalculator lang={lang} />;
+  
+  if (activeCalc === "break-even") return <BreakEvenCalculator lang={lang} />;
+  if (activeCalc === "markup") return <MarkupCalculator lang={lang} />;
+  if (activeCalc === "depreciation") return <DepreciationCalculator lang={lang} />;
+  if (activeCalc === "payroll") return <PayrollCalculator lang={lang} />;
+  if (activeCalc === "cogs") return <COGSCalculator lang={lang} />;
+  if (activeCalc === "ltv") return <LTVCalculator lang={lang} />;
+  if (activeCalc === "cac") return <CACCalculator lang={lang} />;
+  if (activeCalc === "conversion-rate") return <ConversionRateCalculator lang={lang} />;
+  if (activeCalc === "inventory-turnover") return <InventoryTurnoverCalculator lang={lang} />;
 
   // Utility
   if (activeCalc === "btu") return <BTUCalculator lang={lang} />;
