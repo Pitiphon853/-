@@ -266,7 +266,7 @@ export function CompoundInterest({ lang }: { lang: Lang }) {
                 <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
                 <XAxis dataKey="year" fontSize={12} tickMargin={10} />
                 <YAxis width={60} tickFormatter={(value) => value > 1000000 ? (value/1000000).toFixed(1)+'M' : value > 1000 ? (value/1000).toFixed(0)+'k' : value} fontSize={12} />
-                <RechartsTooltip formatter={(value: number) => value.toLocaleString()} />
+                <RechartsTooltip formatter={(value) => typeof value === "number" ? value.toLocaleString() : String(value)} />
                 <Line type="monotone" dataKey="balance" name={lang==="TH"?"ยอดรวม":"Balance"} stroke="#22c55e" strokeWidth={3} dot={false} />
                 <Line type="monotone" dataKey="invested" name={lang==="TH"?"เงินต้น":"Principal"} stroke="#94a3b8" strokeWidth={2} dot={false} strokeDasharray="5 5" />
               </LineChart>
