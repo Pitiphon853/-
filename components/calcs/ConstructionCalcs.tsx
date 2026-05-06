@@ -30,6 +30,15 @@ export function HousePaintCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ก่อสร้าง)" : "Construction FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้เป็นการประเมินวัสดุเบื้องต้นเท่านั้น โครงสร้างจริงอาจมีความคลาดเคลื่อน กรุณาปรึกษาวิศวกรหรือผู้รับเหมามืออาชีพก่อนตัดสินใจสั่งซื้อหรือก่อสร้าง" : "This calculation is a rough estimate for materials. Actual requirements may vary. Please consult a professional engineer or contractor before purchasing or building."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -58,6 +67,15 @@ export function CementCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ก่อสร้าง)" : "Construction FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้เป็นการประเมินวัสดุเบื้องต้นเท่านั้น โครงสร้างจริงอาจมีความคลาดเคลื่อน กรุณาปรึกษาวิศวกรหรือผู้รับเหมามืออาชีพก่อนตัดสินใจสั่งซื้อหรือก่อสร้าง" : "This calculation is a rough estimate for materials. Actual requirements may vary. Please consult a professional engineer or contractor before purchasing or building."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -85,6 +103,15 @@ export function WallpaperCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ก่อสร้าง)" : "Construction FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้เป็นการประเมินวัสดุเบื้องต้นเท่านั้น โครงสร้างจริงอาจมีความคลาดเคลื่อน กรุณาปรึกษาวิศวกรหรือผู้รับเหมามืออาชีพก่อนตัดสินใจสั่งซื้อหรือก่อสร้าง" : "This calculation is a rough estimate for materials. Actual requirements may vary. Please consult a professional engineer or contractor before purchasing or building."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -111,6 +138,15 @@ export function RoofAreaCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ก่อสร้าง)" : "Construction FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้เป็นการประเมินวัสดุเบื้องต้นเท่านั้น โครงสร้างจริงอาจมีความคลาดเคลื่อน กรุณาปรึกษาวิศวกรหรือผู้รับเหมามืออาชีพก่อนตัดสินใจสั่งซื้อหรือก่อสร้าง" : "This calculation is a rough estimate for materials. Actual requirements may vary. Please consult a professional engineer or contractor before purchasing or building."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -137,6 +173,15 @@ export function WaterTankCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ก่อสร้าง)" : "Construction FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้เป็นการประเมินวัสดุเบื้องต้นเท่านั้น โครงสร้างจริงอาจมีความคลาดเคลื่อน กรุณาปรึกษาวิศวกรหรือผู้รับเหมามืออาชีพก่อนตัดสินใจสั่งซื้อหรือก่อสร้าง" : "This calculation is a rough estimate for materials. Actual requirements may vary. Please consult a professional engineer or contractor before purchasing or building."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -167,6 +212,15 @@ export function PoolVolumeCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ก่อสร้าง)" : "Construction FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้เป็นการประเมินวัสดุเบื้องต้นเท่านั้น โครงสร้างจริงอาจมีความคลาดเคลื่อน กรุณาปรึกษาวิศวกรหรือผู้รับเหมามืออาชีพก่อนตัดสินใจสั่งซื้อหรือก่อสร้าง" : "This calculation is a rough estimate for materials. Actual requirements may vary. Please consult a professional engineer or contractor before purchasing or building."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -192,6 +246,15 @@ export function InsulationCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ก่อสร้าง)" : "Construction FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้เป็นการประเมินวัสดุเบื้องต้นเท่านั้น โครงสร้างจริงอาจมีความคลาดเคลื่อน กรุณาปรึกษาวิศวกรหรือผู้รับเหมามืออาชีพก่อนตัดสินใจสั่งซื้อหรือก่อสร้าง" : "This calculation is a rough estimate for materials. Actual requirements may vary. Please consult a professional engineer or contractor before purchasing or building."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -228,6 +291,15 @@ export function RenovationCostCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ก่อสร้าง)" : "Construction FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้เป็นการประเมินวัสดุเบื้องต้นเท่านั้น โครงสร้างจริงอาจมีความคลาดเคลื่อน กรุณาปรึกษาวิศวกรหรือผู้รับเหมามืออาชีพก่อนตัดสินใจสั่งซื้อหรือก่อสร้าง" : "This calculation is a rough estimate for materials. Actual requirements may vary. Please consult a professional engineer or contractor before purchasing or building."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }

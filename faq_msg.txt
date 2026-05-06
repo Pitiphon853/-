@@ -1,0 +1,4 @@
+feat: Add FAQs and Disclaimers to all 60+ new calculators
+
+- Injected `<SEOFAQ>` into all new calculators.
+- Added professional disclaimers (Medical, Engineering, Financial, Agricultural) based on category.

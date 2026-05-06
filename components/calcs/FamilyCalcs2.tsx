@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
-import { useLocalState, inputClass, labelClass } from "./shared";
+import { useLocalState, inputClass, labelClass , SEOFAQ, FAQItem } from "./shared";
 
 // 1. Pregnancy Due Date
 export function PregnancyDueCalculator({ lang }: { lang: Lang }) {
@@ -29,6 +29,15 @@ export function PregnancyDueCalculator({ lang }: { lang: Lang }) {
           <div className="text-3xl font-black text-pink-600 mt-2">{due}</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ครอบครัว)" : "Family FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลลัพธ์นี้ใช้เพื่อการประเมินเบื้องต้นและเพื่อการศึกษาเท่านั้น ไม่สามารถใช้แทนคำแนะนำทางการแพทย์ได้ กรุณาปรึกษาแพทย์ผู้เชี่ยวชาญเพื่อการวินิจฉัยที่แม่นยำ" : "This result is for estimation and educational purposes only. It does not replace professional medical advice. Please consult a doctor for an accurate diagnosis."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -59,6 +68,15 @@ export function OvulationCalculator({ lang }: { lang: Lang }) {
           <div className="text-3xl font-black text-pink-600 mt-2">{ovu}</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ครอบครัว)" : "Family FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลลัพธ์นี้ใช้เพื่อการประเมินเบื้องต้นและเพื่อการศึกษาเท่านั้น ไม่สามารถใช้แทนคำแนะนำทางการแพทย์ได้ กรุณาปรึกษาแพทย์ผู้เชี่ยวชาญเพื่อการวินิจฉัยที่แม่นยำ" : "This result is for estimation and educational purposes only. It does not replace professional medical advice. Please consult a doctor for an accurate diagnosis."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -115,6 +133,15 @@ export function BloodTypePredictor({ lang }: { lang: Lang }) {
           <div className="text-4xl font-black text-pink-600 mt-2">{res}</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ครอบครัว)" : "Family FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลลัพธ์นี้ใช้เพื่อการประเมินเบื้องต้นและเพื่อการศึกษาเท่านั้น ไม่สามารถใช้แทนคำแนะนำทางการแพทย์ได้ กรุณาปรึกษาแพทย์ผู้เชี่ยวชาญเพื่อการวินิจฉัยที่แม่นยำ" : "This result is for estimation and educational purposes only. It does not replace professional medical advice. Please consult a doctor for an accurate diagnosis."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -154,6 +181,15 @@ export function ZodiacCalculator({ lang }: { lang: Lang }) {
           <div className="text-4xl font-black text-pink-600 mt-2">{zod}</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ครอบครัว)" : "Family FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลลัพธ์นี้ใช้เพื่อการประเมินเบื้องต้นและเพื่อการศึกษาเท่านั้น ไม่สามารถใช้แทนคำแนะนำทางการแพทย์ได้ กรุณาปรึกษาแพทย์ผู้เชี่ยวชาญเพื่อการวินิจฉัยที่แม่นยำ" : "This result is for estimation and educational purposes only. It does not replace professional medical advice. Please consult a doctor for an accurate diagnosis."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -193,6 +229,15 @@ export function PetAgeCalculator({ lang }: { lang: Lang }) {
           <div className="text-4xl font-black text-pink-600 mt-2">{hum} {lang==="TH"?"ปี":"Years"}</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ครอบครัว)" : "Family FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลลัพธ์นี้ใช้เพื่อการประเมินเบื้องต้นและเพื่อการศึกษาเท่านั้น ไม่สามารถใช้แทนคำแนะนำทางการแพทย์ได้ กรุณาปรึกษาแพทย์ผู้เชี่ยวชาญเพื่อการวินิจฉัยที่แม่นยำ" : "This result is for estimation and educational purposes only. It does not replace professional medical advice. Please consult a doctor for an accurate diagnosis."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }

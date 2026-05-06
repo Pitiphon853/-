@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
-import { useLocalState, inputClass, labelClass } from "./shared";
+import { useLocalState, inputClass, labelClass , SEOFAQ, FAQItem } from "./shared";
 
 // 1. Digital Unit
 export function DigitalUnitConverter({ lang }: { lang: Lang }) {
@@ -38,6 +38,15 @@ export function DigitalUnitConverter({ lang }: { lang: Lang }) {
           <div className="bg-purple-50 p-4 rounded-xl text-center"><p>TB</p><p className="font-bold">{(bytes/1099511627776).toLocaleString(undefined, {maximumFractionDigits:2})}</p></div>
         </div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -67,6 +76,15 @@ export function AngleConverter({ lang }: { lang: Lang }) {
           <div className="bg-purple-50 p-4 rounded-xl text-center"><p>Radians</p><p className="font-bold">{rad.toFixed(4)}</p></div>
         </div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -81,6 +99,15 @@ export function ColorConverter({ lang }: { lang: Lang }) {
       <div className="mt-6 flex flex-col items-center gap-4">
         <input type="color" value={hex} onChange={e=>setHex(e.target.value)} className="w-32 h-32 cursor-pointer" />
         <input type="text" value={hex} onChange={e=>setHex(e.target.value)} className={inputClass + " text-center uppercase"} />
+      </div>
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
+          />
+        </SEOFAQ>
       </div>
     </div>
   );
@@ -115,6 +142,15 @@ export function TemperatureConverter({ lang }: { lang: Lang }) {
           <div className="bg-purple-50 p-2 rounded-xl text-center"><p>K</p><p className="font-bold">{(c+273.15).toFixed(2)}</p></div>
         </div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -148,6 +184,15 @@ export function SpeedConverter({ lang }: { lang: Lang }) {
           <div className="bg-purple-50 p-2 rounded-xl text-center"><p>knot</p><p className="font-bold">{(kmh/1.852).toFixed(2)}</p></div>
         </div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -181,6 +226,15 @@ export function AreaUnitConverter({ lang }: { lang: Lang }) {
           <div className="bg-purple-50 p-2 rounded-xl text-center"><p>Acre</p><p className="font-bold">{(sqm/4046.86).toFixed(4)}</p></div>
         </div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -214,6 +268,15 @@ export function WeightUnitConverter({ lang }: { lang: Lang }) {
           <div className="bg-purple-50 p-2 rounded-xl text-center"><p>oz</p><p className="font-bold">{(kg/0.0283495).toFixed(2)}</p></div>
         </div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -237,6 +300,15 @@ export function RomanNumeralConverter({ lang }: { lang: Lang }) {
           <div className="text-4xl font-black text-purple-600">I, V, X... (Mockup)</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }

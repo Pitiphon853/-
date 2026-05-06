@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
-import { useLocalState, inputClass, labelClass } from "./shared";
+import { useLocalState, inputClass, labelClass , SEOFAQ, FAQItem } from "./shared";
 
 // 1. Time Zone
 export function TimeZoneConverter({ lang }: { lang: Lang }) {
@@ -36,6 +36,15 @@ export function TravelBudgetCalculator({ lang }: { lang: Lang }) {
           <div className="text-4xl font-black text-blue-600">{total.toLocaleString()}</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ท่องเที่ยว)" : "Travel FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการเบื้องต้น ค่าใช้จ่ายและเวลาเดินทางจริงอาจเปลี่ยนแปลงตามสถานการณ์จริง" : "This calculation is a rough estimate. Actual travel expenses and time may vary depending on real-world conditions."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -60,6 +69,15 @@ export function FlightTimeCalculator({ lang }: { lang: Lang }) {
           <div className="text-4xl font-black text-blue-600">{hours.toFixed(1)} {lang==="TH"?"ชั่วโมง":"Hours"}</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ท่องเที่ยว)" : "Travel FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการเบื้องต้น ค่าใช้จ่ายและเวลาเดินทางจริงอาจเปลี่ยนแปลงตามสถานการณ์จริง" : "This calculation is a rough estimate. Actual travel expenses and time may vary depending on real-world conditions."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -95,6 +113,15 @@ export function RoadTripCostCalculator({ lang }: { lang: Lang }) {
           <div className="text-4xl font-black text-blue-600">{cost.toLocaleString(undefined,{maximumFractionDigits:2})}</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ท่องเที่ยว)" : "Travel FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการเบื้องต้น ค่าใช้จ่ายและเวลาเดินทางจริงอาจเปลี่ยนแปลงตามสถานการณ์จริง" : "This calculation is a rough estimate. Actual travel expenses and time may vary depending on real-world conditions."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }

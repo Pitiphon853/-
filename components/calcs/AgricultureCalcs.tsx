@@ -86,6 +86,15 @@ export function FoodEnergyCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เกษตรกรรม)" : "Agriculture FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ปริมาณที่แนะนำเป็นการคำนวณจากสูตรมาตรฐาน สภาพดินและพืชแต่ละชนิดอาจต้องการการดูแลที่ต่างกัน กรุณาปรึกษานักวิชาการเกษตรเพื่อคำแนะนำที่เฉพาะเจาะจง" : "Recommended amounts are based on standard formulas. Actual soil and crop needs may vary. Please consult an agricultural expert for specific advice."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -109,6 +118,15 @@ export function FertilizerCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เกษตรกรรม)" : "Agriculture FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ปริมาณที่แนะนำเป็นการคำนวณจากสูตรมาตรฐาน สภาพดินและพืชแต่ละชนิดอาจต้องการการดูแลที่ต่างกัน กรุณาปรึกษานักวิชาการเกษตรเพื่อคำแนะนำที่เฉพาะเจาะจง" : "Recommended amounts are based on standard formulas. Actual soil and crop needs may vary. Please consult an agricultural expert for specific advice."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -135,6 +153,15 @@ export function IrrigationCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เกษตรกรรม)" : "Agriculture FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ปริมาณที่แนะนำเป็นการคำนวณจากสูตรมาตรฐาน สภาพดินและพืชแต่ละชนิดอาจต้องการการดูแลที่ต่างกัน กรุณาปรึกษานักวิชาการเกษตรเพื่อคำแนะนำที่เฉพาะเจาะจง" : "Recommended amounts are based on standard formulas. Actual soil and crop needs may vary. Please consult an agricultural expert for specific advice."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -164,6 +191,15 @@ export function YieldCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เกษตรกรรม)" : "Agriculture FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ปริมาณที่แนะนำเป็นการคำนวณจากสูตรมาตรฐาน สภาพดินและพืชแต่ละชนิดอาจต้องการการดูแลที่ต่างกัน กรุณาปรึกษานักวิชาการเกษตรเพื่อคำแนะนำที่เฉพาะเจาะจง" : "Recommended amounts are based on standard formulas. Actual soil and crop needs may vary. Please consult an agricultural expert for specific advice."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }

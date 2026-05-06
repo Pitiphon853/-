@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
-import { useLocalState, inputClass, labelClass } from "./shared";
+import { useLocalState, inputClass, labelClass , SEOFAQ, FAQItem } from "./shared";
 
 // 1. Savings Goal
 export function SavingsGoalCalculator({ lang }: { lang: Lang }) {
@@ -25,6 +25,15 @@ export function SavingsGoalCalculator({ lang }: { lang: Lang }) {
           <div className="text-4xl font-black text-green-600">{Math.ceil(months)} {lang==="TH"?"เดือน":"Months"}</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (การเงิน)" : "Finance FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -54,6 +63,15 @@ export function InflationCalculator({ lang }: { lang: Lang }) {
           <div className="text-4xl font-black text-green-600">{future.toLocaleString(undefined,{maximumFractionDigits:2})}</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (การเงิน)" : "Finance FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -78,6 +96,15 @@ export function SalaryToHourlyCalculator({ lang }: { lang: Lang }) {
           <div className="text-4xl font-black text-green-600">{hourly.toLocaleString(undefined,{maximumFractionDigits:2})}</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (การเงิน)" : "Finance FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -102,6 +129,15 @@ export function NetWorthCalculator({ lang }: { lang: Lang }) {
           <div className={`text-4xl font-black ${nw >= 0 ? "text-green-600" : "text-red-500"}`}>{nw.toLocaleString()}</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (การเงิน)" : "Finance FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -140,6 +176,15 @@ export function StockProfitCalculator({ lang }: { lang: Lang }) {
           <div className={`text-4xl font-black ${profit >= 0 ? "text-green-600" : "text-red-500"}`}>{profit.toLocaleString()}</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (การเงิน)" : "Finance FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -164,6 +209,15 @@ export function ROICalculator({ lang }: { lang: Lang }) {
           <div className={`text-4xl font-black ${roi >= 0 ? "text-green-600" : "text-red-500"}`}>{roi.toFixed(2)}%</div>
         </motion.div>
       )}
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (การเงิน)" : "Finance FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }

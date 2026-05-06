@@ -1,3 +1,0 @@
-feat: Add Phase 4 - Family & Travel Calculators (10) and finalize App
-
-Complete integration of all 60+ new calculators across Agriculture, Construction, Technology, General, Finance, Business, Family, and Travel. Build verified.

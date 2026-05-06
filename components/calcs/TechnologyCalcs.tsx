@@ -31,6 +31,15 @@ export function BandwidthCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เทคโนโลยี)" : "Technology FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลลัพธ์นี้เป็นเพียงการประมาณการเบื้องต้น ปัจจัยแวดล้อมเช่นประสิทธิภาพของอุปกรณ์อาจส่งผลต่อผลลัพธ์จริง" : "This result is a basic estimation. Environmental factors such as device efficiency may affect actual results."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -56,6 +65,15 @@ export function ServerCostCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เทคโนโลยี)" : "Technology FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลลัพธ์นี้เป็นเพียงการประมาณการเบื้องต้น ปัจจัยแวดล้อมเช่นประสิทธิภาพของอุปกรณ์อาจส่งผลต่อผลลัพธ์จริง" : "This result is a basic estimation. Environmental factors such as device efficiency may affect actual results."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -93,6 +111,15 @@ export function ImageSizeCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เทคโนโลยี)" : "Technology FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลลัพธ์นี้เป็นเพียงการประมาณการเบื้องต้น ปัจจัยแวดล้อมเช่นประสิทธิภาพของอุปกรณ์อาจส่งผลต่อผลลัพธ์จริง" : "This result is a basic estimation. Environmental factors such as device efficiency may affect actual results."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -117,6 +144,15 @@ export function IPSubnetCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เทคโนโลยี)" : "Technology FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลลัพธ์นี้เป็นเพียงการประมาณการเบื้องต้น ปัจจัยแวดล้อมเช่นประสิทธิภาพของอุปกรณ์อาจส่งผลต่อผลลัพธ์จริง" : "This result is a basic estimation. Environmental factors such as device efficiency may affect actual results."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -143,6 +179,15 @@ export function VideoBitrateCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เทคโนโลยี)" : "Technology FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลลัพธ์นี้เป็นเพียงการประมาณการเบื้องต้น ปัจจัยแวดล้อมเช่นประสิทธิภาพของอุปกรณ์อาจส่งผลต่อผลลัพธ์จริง" : "This result is a basic estimation. Environmental factors such as device efficiency may affect actual results."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -169,6 +214,15 @@ export function BatteryLifeCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เทคโนโลยี)" : "Technology FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลลัพธ์นี้เป็นเพียงการประมาณการเบื้องต้น ปัจจัยแวดล้อมเช่นประสิทธิภาพของอุปกรณ์อาจส่งผลต่อผลลัพธ์จริง" : "This result is a basic estimation. Environmental factors such as device efficiency may affect actual results."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -197,6 +251,15 @@ export function HashRateCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+    
+      <div className="mt-8">
+        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เทคโนโลยี)" : "Technology FAQ"}>
+          <FAQItem 
+            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
+            a={lang === "TH" ? "ผลลัพธ์นี้เป็นเพียงการประมาณการเบื้องต้น ปัจจัยแวดล้อมเช่นประสิทธิภาพของอุปกรณ์อาจส่งผลต่อผลลัพธ์จริง" : "This result is a basic estimation. Environmental factors such as device efficiency may affect actual results."} 
+          />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
