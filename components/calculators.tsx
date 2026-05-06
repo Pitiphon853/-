@@ -14,6 +14,8 @@ import { BandwidthCalculator, ServerCostCalculator, ImageSizeCalculator, IPSubne
 import { DigitalUnitConverter, AngleConverter, ColorConverter, TemperatureConverter, SpeedConverter, AreaUnitConverter, WeightUnitConverter, RomanNumeralConverter, AreaShapeCalculator, VolumeShapeCalculator, WorkingDaysCalculator } from "./calcs/ConversionCalcs2";
 import { SavingsGoalCalculator, InflationCalculator, SalaryToHourlyCalculator, NetWorthCalculator, DebtPayoffCalculator, RetirementCalculator, StockProfitCalculator, ROICalculator } from "./calcs/FinanceCalcs2";
 import { BreakEvenCalculator, MarkupCalculator, DepreciationCalculator, PayrollCalculator, COGSCalculator, LTVCalculator, CACCalculator, ConversionRateCalculator, InventoryTurnoverCalculator } from "./calcs/BusinessCalcs2";
+import { PregnancyDueCalculator, OvulationCalculator, BloodTypePredictor, ZodiacCalculator, PetAgeCalculator } from "./calcs/FamilyCalcs2";
+import { TimeZoneConverter, TravelBudgetCalculator, FlightTimeCalculator, PackingListGenerator, RoadTripCostCalculator } from "./calcs/TravelCalcs";
 
 export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string, lang: Lang, setCalc: (id: string) => void }) {
   // Health & Diet
@@ -25,6 +27,19 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
 
   // Family
   if (activeCalc === "child-height") return <ChildHeightCalculator lang={lang} />;
+  
+  // Phase 4: Family & Travel
+  if (activeCalc === "pregnancy-due") return <PregnancyDueCalculator lang={lang} />;
+  if (activeCalc === "ovulation") return <OvulationCalculator lang={lang} />;
+  if (activeCalc === "blood-type") return <BloodTypePredictor lang={lang} />;
+  if (activeCalc === "zodiac") return <ZodiacCalculator lang={lang} />;
+  if (activeCalc === "pet-age") return <PetAgeCalculator lang={lang} />;
+  
+  if (activeCalc === "time-zone") return <TimeZoneConverter lang={lang} />;
+  if (activeCalc === "travel-budget") return <TravelBudgetCalculator lang={lang} />;
+  if (activeCalc === "flight-time") return <FlightTimeCalculator lang={lang} />;
+  if (activeCalc === "packing-list") return <PackingListGenerator lang={lang} />;
+  if (activeCalc === "road-trip") return <RoadTripCostCalculator lang={lang} />;
 
   // Finance
   if (activeCalc === "discount") return <DiscountCalculator lang={lang} />;

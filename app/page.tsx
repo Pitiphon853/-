@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Calculator, Heart, Home, BookOpen, Coins, Zap, Car, ArrowLeft, Star, Mail, Moon, Sun, Baby, Utensils, Briefcase, Hash, Lightbulb, Receipt } from "lucide-react";
+import { Search, Calculator, Heart, Home, BookOpen, Coins, Zap, Car, ArrowLeft, Star, Mail, Moon, Sun, Baby, Utensils, Briefcase, Hash, Lightbulb, Receipt, Plane } from "lucide-react";
 import { dict, Lang } from "../components/dictionary";
 import { Calculators } from "../components/calculators";
 import { useTheme } from "../components/ThemeProvider";
 import { AdPlaceholder } from "../components/AdPlaceholder";
 import { DonateButton } from "../components/DonateButton";
 
-type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Utility" | "General";
+type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Agriculture" | "Construction" | "Technology" | "Travel" | "Utility" | "General";
 
 export default function CalculatorHub() {
   const [lang, setLang] = useState<Lang>("TH");
@@ -45,6 +45,18 @@ export default function CalculatorHub() {
     
     // Family (Pink)
     { id: "child-height", name: lang==="TH"?"ส่วนสูงลูก":"Child Height", desc: lang==="TH"?"ทำนายส่วนสูง":"Height Predictor", category: "Family", icon: Baby },
+    { id: "pregnancy-due", name: lang==="TH"?"กำหนดคลอด":"Due Date", desc: lang==="TH"?"ทำนายกำหนดคลอด":"Pregnancy Due Date", category: "Family", icon: Baby },
+    { id: "ovulation", name: lang==="TH"?"วันตกไข่":"Ovulation", desc: lang==="TH"?"คำนวณวันไข่ตก":"Fertility Window", category: "Family", icon: Heart },
+    { id: "blood-type", name: lang==="TH"?"ทำนายกรุ๊ปเลือด":"Blood Type", desc: lang==="TH"?"กรุ๊ปเลือดลูก":"Child Blood Predictor", category: "Family", icon: Heart },
+    { id: "zodiac", name: lang==="TH"?"ราศีเกิด":"Zodiac", desc: lang==="TH"?"คำนวณราศี":"Star Sign", category: "Family", icon: BookOpen },
+    { id: "pet-age", name: lang==="TH"?"อายุสัตว์เลี้ยง":"Pet Age", desc: lang==="TH"?"เทียบอายุคน":"Human Years", category: "Family", icon: BookOpen },
+
+    // Travel (Cyan)
+    { id: "time-zone", name: lang==="TH"?"แปลงเวลาโลก":"Time Zone", desc: lang==="TH"?"เทียบเวลาประเทศต่างๆ":"Global Time", category: "Travel", icon: BookOpen },
+    { id: "travel-budget", name: lang==="TH"?"งบท่องเที่ยว":"Travel Budget", desc: lang==="TH"?"คำนวณค่าใช้จ่ายทริป":"Trip Expenses", category: "Travel", icon: Coins },
+    { id: "flight-time", name: lang==="TH"?"เวลาบิน":"Flight Time", desc: lang==="TH"?"เวลาเดินทางเครื่องบิน":"Plane Travel Time", category: "Travel", icon: Plane },
+    { id: "packing-list", name: lang==="TH"?"จัดกระเป๋าเดินทาง":"Packing List", desc: lang==="TH"?"เช็กลิสต์จัดกระเป๋า":"Luggage Checklist", category: "Travel", icon: BookOpen },
+    { id: "road-trip", name: lang==="TH"?"ค่าน้ำมัน Road Trip":"Road Trip", desc: lang==="TH"?"ค่าแก๊ส/ทางด่วน":"Fuel & Tolls", category: "Travel", icon: Car },
 
     // Finance (Green/Gold)
     { id: "discount", name: lang==="TH"?"ส่วนลด":"Discount", desc: lang==="TH"?"เปอร์เซ็นต์ส่วนลด":"Discount Percentage", category: "Finance", icon: Coins },
@@ -147,6 +159,7 @@ export default function CalculatorHub() {
       case "Agriculture": return "green";
       case "Construction": return "amber";
       case "Technology": return "orange";
+      case "Travel": return "cyan";
       case "General": return "purple";
       default: return "blue";
     }
@@ -158,7 +171,8 @@ export default function CalculatorHub() {
     blue: "text-blue-500 border-blue-500 hover:border-blue-500 focus:ring-blue-500 group-hover:text-blue-500 shadow-[4px_4px_0px_0px_rgba(59,130,246,1)]",
     purple: "text-purple-500 border-purple-500 hover:border-purple-500 focus:ring-purple-500 group-hover:text-purple-500 shadow-[4px_4px_0px_0px_rgba(168,85,247,1)]",
     amber: "text-amber-500 border-amber-500 hover:border-amber-500 focus:ring-amber-500 group-hover:text-amber-500 shadow-[4px_4px_0px_0px_rgba(245,158,11,1)]",
-    orange: "text-orange-500 border-orange-500 hover:border-orange-500 focus:ring-orange-500 group-hover:text-orange-500 shadow-[4px_4px_0px_0px_rgba(249,115,22,1)]"
+    orange: "text-orange-500 border-orange-500 hover:border-orange-500 focus:ring-orange-500 group-hover:text-orange-500 shadow-[4px_4px_0px_0px_rgba(249,115,22,1)]",
+    cyan: "text-cyan-500 border-cyan-500 hover:border-cyan-500 focus:ring-cyan-500 group-hover:text-cyan-500 shadow-[4px_4px_0px_0px_rgba(6,182,212,1)]"
   };
 
   const getActiveCalcColor = () => {
@@ -238,6 +252,7 @@ export default function CalculatorHub() {
                     { id: "Agriculture", label: lang==="TH"?"เกษตร":"Agriculture", color: "green" },
                     { id: "Construction", label: lang==="TH"?"ก่อสร้าง":"Construction", color: "amber" },
                     { id: "Technology", label: lang==="TH"?"เทคโนโลยี":"Technology", color: "orange" },
+                    { id: "Travel", label: lang==="TH"?"ท่องเที่ยว":"Travel", color: "cyan" },
                     { id: "Utility", label: t.utility, color: "blue" },
                     { id: "General", label: lang==="TH"?"ทั่วไป":"General", color: "purple" }
                   ].map((cat) => (
@@ -281,7 +296,8 @@ export default function CalculatorHub() {
                           blue: "hover:border-blue-500 hover:shadow-[4px_4px_0px_0px_#3b82f6]",
                           purple: "hover:border-purple-500 hover:shadow-[4px_4px_0px_0px_#a855f7]",
                           amber: "hover:border-amber-500 hover:shadow-[4px_4px_0px_0px_#f59e0b]",
-                          orange: "hover:border-orange-500 hover:shadow-[4px_4px_0px_0px_#f97316]"
+                          orange: "hover:border-orange-500 hover:shadow-[4px_4px_0px_0px_#f97316]",
+                          cyan: "hover:border-cyan-500 hover:shadow-[4px_4px_0px_0px_#06b6d4]"
                         };
 
                         const textHoverClasses = {
@@ -290,7 +306,8 @@ export default function CalculatorHub() {
                           blue: "group-hover:text-blue-500",
                           purple: "group-hover:text-purple-500",
                           amber: "group-hover:text-amber-500",
-                          orange: "group-hover:text-orange-500"
+                          orange: "group-hover:text-orange-500",
+                          cyan: "group-hover:text-cyan-500"
                         };
 
                         const bgGlowClasses = {
@@ -299,7 +316,8 @@ export default function CalculatorHub() {
                           blue: "bg-blue-500/5 group-hover:bg-blue-500/20",
                           purple: "bg-purple-500/5 group-hover:bg-purple-500/20",
                           amber: "bg-amber-500/5 group-hover:bg-amber-500/20",
-                          orange: "bg-orange-500/5 group-hover:bg-orange-500/20"
+                          orange: "bg-orange-500/5 group-hover:bg-orange-500/20",
+                          cyan: "bg-cyan-500/5 group-hover:bg-cyan-500/20"
                         };
                         
                         return (
