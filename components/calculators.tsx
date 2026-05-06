@@ -10,6 +10,8 @@ import { RandomizerCalculator, WordCounter, AgeCalculator } from "./calcs/Genera
 import { CookingUnitConverter, TileAreaCalculator } from "./calcs/ConversionCalcs";
 import { FermentationTimeCalculator, FoodEnergyCalculator, FertilizerCalculator, IrrigationCalculator, YieldCalculator } from "./calcs/AgricultureCalcs";
 import { HousePaintCalculator, CementCalculator, WallpaperCalculator, RoofAreaCalculator, WaterTankCalculator, PoolVolumeCalculator, InsulationCalculator, RenovationCostCalculator } from "./calcs/ConstructionCalcs";
+import { BandwidthCalculator, ServerCostCalculator, ImageSizeCalculator, IPSubnetCalculator, VideoBitrateCalculator, BatteryLifeCalculator, HashRateCalculator } from "./calcs/TechnologyCalcs";
+import { DigitalUnitConverter, AngleConverter, ColorConverter, TemperatureConverter, SpeedConverter, AreaUnitConverter, WeightUnitConverter, RomanNumeralConverter, AreaShapeCalculator, VolumeShapeCalculator, WorkingDaysCalculator } from "./calcs/ConversionCalcs2";
 
 export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string, lang: Lang, setCalc: (id: string) => void }) {
   // Health & Diet
@@ -65,6 +67,29 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "randomizer") return <RandomizerCalculator lang={lang} />;
   if (activeCalc === "word-counter") return <WordCounter lang={lang} />;
   if (activeCalc === "age") return <AgeCalculator lang={lang} />;
+  
+  // Phase 2: Technology
+  if (activeCalc === "bandwidth") return <BandwidthCalculator lang={lang} />;
+  if (activeCalc === "server-cost") return <ServerCostCalculator lang={lang} />;
+  if (activeCalc === "image-size") return <ImageSizeCalculator lang={lang} />;
+  if (activeCalc === "ip-subnet") return <IPSubnetCalculator lang={lang} />;
+  if (activeCalc === "video-bitrate") return <VideoBitrateCalculator lang={lang} />;
+  if (activeCalc === "battery-life") return <BatteryLifeCalculator lang={lang} />;
+  if (activeCalc === "hash-rate") return <HashRateCalculator lang={lang} />;
+
+  // Phase 2: General/Conversion2
+  if (activeCalc === "digital-unit") return <DigitalUnitConverter lang={lang} />;
+  if (activeCalc === "angle") return <AngleConverter lang={lang} />;
+  if (activeCalc === "color") return <ColorConverter lang={lang} />;
+  if (activeCalc === "temperature") return <TemperatureConverter lang={lang} />;
+  if (activeCalc === "speed") return <SpeedConverter lang={lang} />;
+  if (activeCalc === "area-unit") return <AreaUnitConverter lang={lang} />;
+  if (activeCalc === "weight-unit") return <WeightUnitConverter lang={lang} />;
+  if (activeCalc === "roman") return <RomanNumeralConverter lang={lang} />;
+  if (activeCalc === "area-shape") return <AreaShapeCalculator lang={lang} />;
+  if (activeCalc === "volume-shape") return <VolumeShapeCalculator lang={lang} />;
+  if (activeCalc === "working-days") return <WorkingDaysCalculator lang={lang} />;
+
 
   return (
     <div className="text-center p-12 text-gray-500">

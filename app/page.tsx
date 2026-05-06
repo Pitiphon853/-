@@ -85,7 +85,27 @@ export default function CalculatorHub() {
     { id: "insulation", name: lang==="TH"?"ฉนวนกันความร้อน":"Insulation", desc: lang==="TH"?"R-value ที่ต้องการ":"R-Value Needed", category: "Construction", icon: Home },
     { id: "reno-cost", name: lang==="TH"?"ค่าใช้จ่ายรีโนเวท":"Renovation Cost", desc: lang==="TH"?"ประเมินงบก่อสร้าง":"Estimated Budget", category: "Construction", icon: Coins },
 
+    // Technology (Orange)
+    { id: "bandwidth", name: lang==="TH"?"คำนวณ Bandwidth":"Bandwidth", desc: lang==="TH"?"เวลาดาวน์โหลดไฟล์":"Download Time", category: "Technology", icon: Zap },
+    { id: "server-cost", name: lang==="TH"?"คำนวณ Server Cost":"Server Cost", desc: lang==="TH"?"EC2/VM ต่อเดือน":"Monthly Cost", category: "Technology", icon: Calculator },
+    { id: "image-size", name: lang==="TH"?"ขนาดรูปภาพ":"Image Size", desc: lang==="TH"?"Resolution x bit depth":"Resolution Size", category: "Technology", icon: Hash },
+    { id: "ip-subnet", name: lang==="TH"?"คำนวณ IP Subnet":"IP Subnet", desc: lang==="TH"?"CIDR/subnet mask":"CIDR Network", category: "Technology", icon: Hash },
+    { id: "video-bitrate", name: lang==="TH"?"FPS/Bitrate วิดีโอ":"Video Bitrate", desc: lang==="TH"?"คุณภาพ VS ขนาดไฟล์":"Video Size", category: "Technology", icon: Hash },
+    { id: "battery-life", name: lang==="TH"?"คำนวณ Battery Life":"Battery Life", desc: lang==="TH"?"mAh ÷ การใช้งาน":"mAh Usage", category: "Technology", icon: Zap },
+    { id: "hash-rate", name: lang==="TH"?"คำนวณ Hash Rate":"Hash Rate", desc: lang==="TH"?"เหมืองคริปโต":"Crypto Mining", category: "Technology", icon: Coins },
+
     // General (Purple)
+    { id: "digital-unit", name: lang==="TH"?"แปลงหน่วยดิจิทัล":"Digital Unit", desc: lang==="TH"?"MB ↔ GB ↔ TB":"MB ↔ GB ↔ TB", category: "General", icon: Hash },
+    { id: "angle", name: lang==="TH"?"คำนวณมุมและองศา":"Angle Converter", desc: lang==="TH"?"° ↔ radian":"° ↔ radian", category: "General", icon: Hash },
+    { id: "color", name: lang==="TH"?"แปลงสีเฮกซ์/RGB":"Color Converter", desc: lang==="TH"?"HEX ↔ RGB ↔ HSL":"HEX ↔ RGB ↔ HSL", category: "General", icon: Hash },
+    { id: "temperature", name: lang==="TH"?"แปลงหน่วยอุณหภูมิ":"Temperature", desc: lang==="TH"?"°C ↔ °F ↔ K":"°C ↔ °F ↔ K", category: "General", icon: Hash },
+    { id: "speed", name: lang==="TH"?"แปลงหน่วยความเร็ว":"Speed Converter", desc: lang==="TH"?"km/h ↔ mph ↔ knot":"km/h ↔ mph", category: "General", icon: Hash },
+    { id: "area-unit", name: lang==="TH"?"แปลงหน่วยพื้นที่":"Area Converter", desc: lang==="TH"?"ตร.ม. ↔ ไร่ ↔ acre":"sqm ↔ rai ↔ acre", category: "General", icon: Home },
+    { id: "weight-unit", name: lang==="TH"?"แปลงหน่วยน้ำหนัก":"Weight Converter", desc: lang==="TH"?"กก. ↔ ปอนด์ ↔ ออนซ์":"kg ↔ lb ↔ oz", category: "General", icon: Hash },
+    { id: "roman", name: lang==="TH"?"ตัวแปลงเลขโรมัน":"Roman Numeral", desc: lang==="TH"?"Roman ↔ อารบิก":"Roman ↔ Arabic", category: "General", icon: BookOpen },
+    { id: "area-shape", name: lang==="TH"?"คำนวณพื้นที่รูปทรง":"Shape Area", desc: lang==="TH"?"วงกลม สามเหลี่ยม":"Circle, Triangle", category: "General", icon: Hash },
+    { id: "volume-shape", name: lang==="TH"?"คำนวณปริมาตรภาชนะ":"Shape Volume", desc: lang==="TH"?"กล่อง กระบอก ทรงกลม":"Box, Cylinder", category: "General", icon: Hash },
+    { id: "working-days", name: lang==="TH"?"คำนวณวันทำงาน":"Working Days", desc: lang==="TH"?"หักวันหยุดนักขัตฤกษ์":"Minus Holidays", category: "General", icon: Calculator },
     { id: "randomizer", name: lang==="TH"?"สุ่มเลข/สุ่มชื่อ":"Randomizer", desc: lang==="TH"?"จับฉลาก":"Number/Name Picker", category: "General", icon: Hash },
     { id: "word-counter", name: lang==="TH"?"นับจำนวนคำ":"Word Counter", desc: lang==="TH"?"นับคำ/ตัวอักษร":"Words & Chars", category: "General", icon: BookOpen },
     { id: "age", name: lang==="TH"?"คำนวณอายุ":"Age Calculator", desc: lang==="TH"?"อายุละเอียด":"Exact Age", category: "General", icon: Calculator },
@@ -109,6 +129,7 @@ export default function CalculatorHub() {
       case "Business":
       case "Agriculture": return "green";
       case "Construction": return "amber";
+      case "Technology": return "orange";
       case "General": return "purple";
       default: return "blue";
     }
@@ -119,7 +140,8 @@ export default function CalculatorHub() {
     green: "text-green-500 border-green-500 hover:border-green-500 focus:ring-green-500 group-hover:text-green-500 shadow-[4px_4px_0px_0px_rgba(34,197,94,1)]",
     blue: "text-blue-500 border-blue-500 hover:border-blue-500 focus:ring-blue-500 group-hover:text-blue-500 shadow-[4px_4px_0px_0px_rgba(59,130,246,1)]",
     purple: "text-purple-500 border-purple-500 hover:border-purple-500 focus:ring-purple-500 group-hover:text-purple-500 shadow-[4px_4px_0px_0px_rgba(168,85,247,1)]",
-    amber: "text-amber-500 border-amber-500 hover:border-amber-500 focus:ring-amber-500 group-hover:text-amber-500 shadow-[4px_4px_0px_0px_rgba(245,158,11,1)]"
+    amber: "text-amber-500 border-amber-500 hover:border-amber-500 focus:ring-amber-500 group-hover:text-amber-500 shadow-[4px_4px_0px_0px_rgba(245,158,11,1)]",
+    orange: "text-orange-500 border-orange-500 hover:border-orange-500 focus:ring-orange-500 group-hover:text-orange-500 shadow-[4px_4px_0px_0px_rgba(249,115,22,1)]"
   };
 
   const getActiveCalcColor = () => {
@@ -198,6 +220,7 @@ export default function CalculatorHub() {
                     { id: "Business", label: lang==="TH"?"ธุรกิจ/แม่ค้า":"Business", color: "green" },
                     { id: "Agriculture", label: lang==="TH"?"เกษตร":"Agriculture", color: "green" },
                     { id: "Construction", label: lang==="TH"?"ก่อสร้าง":"Construction", color: "amber" },
+                    { id: "Technology", label: lang==="TH"?"เทคโนโลยี":"Technology", color: "orange" },
                     { id: "Utility", label: t.utility, color: "blue" },
                     { id: "General", label: lang==="TH"?"ทั่วไป":"General", color: "purple" }
                   ].map((cat) => (
@@ -240,7 +263,8 @@ export default function CalculatorHub() {
                           green: "hover:border-green-500 hover:shadow-[4px_4px_0px_0px_#22c55e]",
                           blue: "hover:border-blue-500 hover:shadow-[4px_4px_0px_0px_#3b82f6]",
                           purple: "hover:border-purple-500 hover:shadow-[4px_4px_0px_0px_#a855f7]",
-                          amber: "hover:border-amber-500 hover:shadow-[4px_4px_0px_0px_#f59e0b]"
+                          amber: "hover:border-amber-500 hover:shadow-[4px_4px_0px_0px_#f59e0b]",
+                          orange: "hover:border-orange-500 hover:shadow-[4px_4px_0px_0px_#f97316]"
                         };
 
                         const textHoverClasses = {
@@ -248,7 +272,8 @@ export default function CalculatorHub() {
                           green: "group-hover:text-green-500",
                           blue: "group-hover:text-blue-500",
                           purple: "group-hover:text-purple-500",
-                          amber: "group-hover:text-amber-500"
+                          amber: "group-hover:text-amber-500",
+                          orange: "group-hover:text-orange-500"
                         };
 
                         const bgGlowClasses = {
@@ -256,7 +281,8 @@ export default function CalculatorHub() {
                           green: "bg-green-500/5 group-hover:bg-green-500/20",
                           blue: "bg-blue-500/5 group-hover:bg-blue-500/20",
                           purple: "bg-purple-500/5 group-hover:bg-purple-500/20",
-                          amber: "bg-amber-500/5 group-hover:bg-amber-500/20"
+                          amber: "bg-amber-500/5 group-hover:bg-amber-500/20",
+                          orange: "bg-orange-500/5 group-hover:bg-orange-500/20"
                         };
                         
                         return (
