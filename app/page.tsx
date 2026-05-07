@@ -42,7 +42,18 @@ export default function CalculatorHub() {
     { id: "tdee", name: lang==="TH"?"คำนวณ TDEE":"TDEE Calculator", desc: lang==="TH"?"พลังงานที่ใช้ต่อวัน":"Daily Energy", category: "Health", icon: Zap },
     { id: "water-intake", name: lang==="TH"?"ปริมาณน้ำดื่ม":"Water Intake", desc: lang==="TH"?"ดื่มน้ำวันละกี่ลิตร":"Daily Water", category: "Health", icon: Heart },
     { id: "food-random", name: lang==="TH"?"สุ่มเมนูอาหาร":"Food Randomizer", desc: lang==="TH"?"สุ่มตามแคลอรี่":"By Calorie Limit", category: "Health", icon: Utensils },
-    
+    { id: "exercise-calories", name: lang==="TH"?"แคลอรี่ออกกำลังกาย":"Exercise Calories", desc: lang==="TH"?"เผาผลาญจากการออกกำลัง":"Calories Burned", category: "Health", icon: Zap },
+    { id: "protein-daily", name: lang==="TH"?"โปรตีนที่ควรได้รับ":"Daily Protein", desc: lang==="TH"?"ตามเป้าหมาย/น้ำหนัก":"Protein Needs", category: "Health", icon: Utensils },
+    { id: "body-fat", name: lang==="TH"?"เปอร์เซ็นต์ไขมัน":"Body Fat %", desc: lang==="TH"?"US Navy Method":"Body Fat %", category: "Health", icon: Heart },
+    { id: "whr", name: lang==="TH"?"เอวต่อสะโพก":"WHR", desc: lang==="TH"?"ประเมินความเสี่ยงโรค":"Waist-Hip Ratio", category: "Health", icon: Heart },
+    { id: "heart-rate-zone", name: lang==="TH"?"โซนหัวใจ":"Heart Rate Zones", desc: lang==="TH"?"อัตราการเต้นเป้าหมาย":"Target HR Zones", category: "Health", icon: Heart },
+    { id: "macro", name: lang==="TH"?"สัดส่วนสารอาหาร":"Macro Split", desc: lang==="TH"?"คาร์บ/โปรตีน/ไขมัน":"Carb/Protein/Fat", category: "Health", icon: Utensils },
+    { id: "blood-sugar", name: lang==="TH"?"ค่าน้ำตาลในเลือด":"Blood Sugar", desc: lang==="TH"?"แปลงหน่วย mg ↔ mmol":"mg/dL ↔ mmol/L", category: "Health", icon: Heart },
+    { id: "ibw", name: lang==="TH"?"น้ำหนักอุดมคติ":"Ideal Body Weight", desc: lang==="TH"?"IBW (Devine, etc.)":"IBW Formulas", category: "Health", icon: Heart },
+    { id: "steps-converter", name: lang==="TH"?"แปลงก้าวเดิน":"Steps Converter", desc: lang==="TH"?"ก้าว ↔ ระยะทาง ↔ แคล":"Steps to Distance", category: "Health", icon: Heart },
+    { id: "1rm", name: lang==="TH"?"คำนวณ 1RM":"1RM Calculator", desc: lang==="TH"?"น้ำหนักยกสูงสุด":"One Rep Max", category: "Health", icon: Zap },
+    { id: "pace", name: lang==="TH"?"Pace วิ่ง":"Pace Calculator", desc: lang==="TH"?"คำนวณความเร็ววิ่ง":"Running Pace", category: "Health", icon: Zap },
+
     // Family (Pink)
     { id: "child-height", name: lang==="TH"?"ส่วนสูงลูก":"Child Height", desc: lang==="TH"?"ทำนายส่วนสูง":"Height Predictor", category: "Family", icon: Baby },
     { id: "pregnancy-due", name: lang==="TH"?"กำหนดคลอด":"Due Date", desc: lang==="TH"?"ทำนายกำหนดคลอด":"Pregnancy Due Date", category: "Family", icon: Baby },
@@ -50,6 +61,9 @@ export default function CalculatorHub() {
     { id: "blood-type", name: lang==="TH"?"ทำนายกรุ๊ปเลือด":"Blood Type", desc: lang==="TH"?"กรุ๊ปเลือดลูก":"Child Blood Predictor", category: "Family", icon: Heart },
     { id: "zodiac", name: lang==="TH"?"ราศีเกิด":"Zodiac", desc: lang==="TH"?"คำนวณราศี":"Star Sign", category: "Family", icon: BookOpen },
     { id: "pet-age", name: lang==="TH"?"อายุสัตว์เลี้ยง":"Pet Age", desc: lang==="TH"?"เทียบอายุคน":"Human Years", category: "Family", icon: BookOpen },
+    { id: "fetal-weight", name: lang==="TH"?"น้ำหนักทารกในครรภ์":"Fetal Weight", desc: lang==="TH"?"ตามอายุครรภ์ (สัปดาห์)":"WHO Fetal Dev", category: "Family", icon: Baby },
+    { id: "child-cost", name: lang==="TH"?"ค่าเลี้ยงลูก":"Child Raising Cost", desc: lang==="TH"?"ประมาณการต่อปี":"Yearly Cost", category: "Family", icon: Coins },
+    { id: "child-milestone", name: lang==="TH"?"พัฒนาการเด็ก":"Child Milestones", desc: lang==="TH"?"ตามช่วงอายุเดือน":"Development Check", category: "Family", icon: Baby },
 
     // Travel (Cyan)
     { id: "time-zone", name: lang==="TH"?"แปลงเวลาโลก":"Time Zone", desc: lang==="TH"?"เทียบเวลาประเทศต่างๆ":"Global Time", category: "Travel", icon: BookOpen },
@@ -57,6 +71,7 @@ export default function CalculatorHub() {
     { id: "flight-time", name: lang==="TH"?"เวลาบิน":"Flight Time", desc: lang==="TH"?"เวลาเดินทางเครื่องบิน":"Plane Travel Time", category: "Travel", icon: Plane },
     { id: "packing-list", name: lang==="TH"?"จัดกระเป๋าเดินทาง":"Packing List", desc: lang==="TH"?"เช็กลิสต์จัดกระเป๋า":"Luggage Checklist", category: "Travel", icon: BookOpen },
     { id: "road-trip", name: lang==="TH"?"ค่าน้ำมัน Road Trip":"Road Trip", desc: lang==="TH"?"ค่าแก๊ส/ทางด่วน":"Fuel & Tolls", category: "Travel", icon: Car },
+    { id: "baggage-weight", name: lang==="TH"?"เช็คน้ำหนักกระเป๋า":"Baggage Weight", desc: lang==="TH"?"เทียบลิมิตสายการบิน":"Baggage Fee Checker", category: "Travel", icon: Plane },
 
     // Finance (Green/Gold)
     { id: "discount", name: lang==="TH"?"ส่วนลด":"Discount", desc: lang==="TH"?"เปอร์เซ็นต์ส่วนลด":"Discount Percentage", category: "Finance", icon: Coins },
@@ -73,6 +88,10 @@ export default function CalculatorHub() {
     { id: "retirement", name: lang==="TH"?"เกษียณอายุ":"Retirement", desc: lang==="TH"?"ต้องมีเงินเท่าไหร่":"Needed for Retirement", category: "Finance", icon: Coins },
     { id: "stock-profit", name: lang==="TH"?"กำไรหุ้น/คริปโต":"Stock Profit", desc: lang==="TH"?"จุดคุ้มทุน/กำไรสุทธิ":"Trading Profit", category: "Finance", icon: Coins },
     { id: "roi", name: lang==="TH"?"ผลตอบแทน ROI":"ROI", desc: lang==="TH"?"ความคุ้มค่าการลงทุน":"Return on Investment", category: "Finance", icon: Calculator },
+    { id: "dca", name: lang==="TH"?"DCA หุ้น/กองทุน":"DCA Calculator", desc: lang==="TH"?"ลงทุนรายเดือนสม่ำเสมอ":"Dollar Cost Average", category: "Finance", icon: Coins },
+    { id: "stock-fee", name: lang==="TH"?"ค่าธรรมเนียมหุ้น":"Stock Trading Fee", desc: lang==="TH"?"คอมมิชชั่น + VAT":"Commission Fee", category: "Finance", icon: Receipt },
+    { id: "net-salary", name: lang==="TH"?"เงินเดือนสุทธิ":"Net Salary", desc: lang==="TH"?"หักประกันสังคม/ภาษี":"Take-home Pay", category: "Finance", icon: Coins },
+    { id: "expense-tracker", name: lang==="TH"?"จัดสรรเงิน 50/30/20":"Budget 50/30/20", desc: lang==="TH"?"แบ่งเงินออมและใช้จ่าย":"Rule Budgeting", category: "Finance", icon: Coins },
 
     // Business (Green/Gold)
     { id: "vat", name: lang==="TH"?"คำนวณ VAT":"VAT Calculator", desc: lang==="TH"?"ถอด/เพิ่ม VAT":"Value Added Tax", category: "Business", icon: Receipt },
@@ -86,6 +105,11 @@ export default function CalculatorHub() {
     { id: "cac", name: lang==="TH"?"ต้นทุนได้ลูกค้าใหม่":"CAC", desc: lang==="TH"?"Customer Acquisition":"Acquisition Cost", category: "Business", icon: Coins },
     { id: "conversion-rate", name: lang==="TH"?"อัตราการเปลี่ยนเป็นยอดขาย":"Conversion Rate", desc: lang==="TH"?"% คนซื้อ":"Sales Conversion", category: "Business", icon: Calculator },
     { id: "inventory-turnover", name: lang==="TH"?"รอบหมุนเวียนสินค้า":"Inventory Turnover", desc: lang==="TH"?"ขายของออกเร็วแค่ไหน":"Turnover Ratio", category: "Business", icon: Calculator },
+    { id: "financial-ratio", name: lang==="TH"?"อัตราส่วนการเงิน":"Financial Ratios", desc: lang==="TH"?"วิเคราะห์สภาพธุรกิจ":"Business Health", category: "Business", icon: Calculator },
+    { id: "marketplace-fee", name: lang==="TH"?"ค่าธรรมเนียมขายของ":"Marketplace Fee", desc: lang==="TH"?"Shopee/Lazada/TikTok":"Platform Fees", category: "Business", icon: Receipt },
+    { id: "safety-stock", name: lang==="TH"?"จุดสั่งซื้อ/สต็อกสำรอง":"Safety Stock", desc: lang==="TH"?"Reorder Point":"Inventory Control", category: "Business", icon: Calculator },
+    { id: "shipping-cost", name: lang==="TH"?"เปรียบเทียบค่าส่ง":"Shipping Cost", desc: lang==="TH"?"Kerry, J&T, Flash, ปณ.":"Courier Rates", category: "Business", icon: Car },
+    { id: "return-rate", name: lang==="TH"?"ผลกระทบตีกลับ":"Return Rate Impact", desc: lang==="TH"?"กำไรที่หายจากของตีกลับ":"Lost Profit Return", category: "Business", icon: Receipt },
 
     // Utility & Education (Blue)
     { id: "gpa", name: lang==="TH"?"จำลองเกรดเบื้องต้น":"GPA Simulator", desc: lang==="TH"?"จำลองเกรด (GPA)":"GPA Estimator", category: "Utility", icon: BookOpen },
@@ -96,6 +120,10 @@ export default function CalculatorHub() {
     { id: "fuel-cost", name: lang==="TH"?"ค่าน้ำมันรถ":"Fuel Cost", desc: lang==="TH"?"คำนวณค่าน้ำมันเดินทาง":"Trip Fuel Estimate", category: "Utility", icon: Car },
     { id: "cooking-unit", name: lang==="TH"?"แปลงหน่วยทำอาหาร":"Cooking Units", desc: lang==="TH"?"ถ้วยตวง ↔ กรัม":"Cups to Grams", category: "Utility", icon: Utensils },
     { id: "tile-area", name: lang==="TH"?"กระเบื้องปูพื้น":"Tile Area", desc: lang==="TH"?"คำนวณเผื่อกันพลาด":"Floor Tile Estimate", category: "Utility", icon: Home },
+    { id: "grade-converter", name: lang==="TH"?"แปลงเกรดต่างประเทศ":"Grade Converter", desc: lang==="TH"?"TH ↔ US ↔ UK":"Intl Grade", category: "Utility", icon: BookOpen },
+    { id: "target-gpa", name: lang==="TH"?"เป้าหมาย GPA":"Target GPA", desc: lang==="TH"?"เกรดที่ต้องทำเพิ่ม":"Required GPA", category: "Utility", icon: BookOpen },
+    { id: "percentile", name: lang==="TH"?"Percentile/Z-Score":"Percentile Calculator", desc: lang==="TH"?"เทียบค่าเฉลี่ย":"Normal Distribution", category: "Utility", icon: Hash },
+    { id: "reading-time", name: lang==="TH"?"เวลาอ่านหนังสือ":"Reading Time", desc: lang==="TH"?"คำนวณวันจบเล่ม":"Books Finishing Time", category: "Utility", icon: BookOpen },
 
     // Agriculture (Green)
     { id: "ferm-time", name: lang==="TH"?"เวลาหมักดอง":"Fermentation Time", desc: lang==="TH"?"อุณหภูมิ x เวลา":"Temp x Time", category: "Agriculture", icon: Zap },
@@ -138,6 +166,7 @@ export default function CalculatorHub() {
     { id: "randomizer", name: lang==="TH"?"สุ่มเลข/สุ่มชื่อ":"Randomizer", desc: lang==="TH"?"จับฉลาก":"Number/Name Picker", category: "General", icon: Hash },
     { id: "word-counter", name: lang==="TH"?"นับจำนวนคำ":"Word Counter", desc: lang==="TH"?"นับคำ/ตัวอักษร":"Words & Chars", category: "General", icon: BookOpen },
     { id: "age", name: lang==="TH"?"คำนวณอายุ":"Age Calculator", desc: lang==="TH"?"อายุละเอียด":"Exact Age", category: "General", icon: Calculator },
+    { id: "pantone", name: lang==="TH"?"แปลงสี Pantone":"Pantone Converter", desc: lang==="TH"?"HEX เป็น Pantone (Approx)":"Approx Pantone", category: "General", icon: Hash },
   ];
 
   const filteredCalcs = getCalcs().filter(c => {

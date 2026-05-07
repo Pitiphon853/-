@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
 import { useLocalState, inputClass, labelClass , SEOFAQ, FAQItem } from "./shared";
@@ -122,6 +122,74 @@ export function RoadTripCostCalculator({ lang }: { lang: Lang }) {
           />
         </SEOFAQ>
       </div>
+    </div>
+  );
+}
+
+// 6. น้ำหนักกระเป๋าเกินหรือไม่ (Baggage Weight Checker)
+export function BaggageWeightChecker({ lang }: { lang: Lang }) {
+  const [weight, setWeight] = useLocalState("bag_w", "20");
+  const [airline, setAirline] = useLocalState("bag_air", "airasia_carryon");
+  const [result, setResult] = useState<any>(null);
+
+  const limits: any = {
+    "airasia_carryon": { name: "AirAsia (Carry-on)", limit: 7, fee: 500, feeUnit: lang==="TH"?"บาท/kg":"THB/kg" },
+    "airasia_check": { name: "AirAsia (Checked-in)", limit: 15, fee: 400, feeUnit: lang==="TH"?"บาท/kg":"THB/kg" },
+    "thai_dom": { name: "Thai Airways (Domestic Economy)", limit: 20, fee: 100, feeUnit: lang==="TH"?"บาท/kg":"THB/kg" },
+    "thai_intl": { name: "Thai Airways (Intl Economy)", limit: 30, fee: 1500, feeUnit: lang==="TH"?"บาท/kg (โดยประมาณ)":"THB/kg (approx)" },
+    "lion_carryon": { name: "Thai Lion Air (Carry-on)", limit: 7, fee: 400, feeUnit: lang==="TH"?"บาท/kg":"THB/kg" },
+    "lion_check": { name: "Thai Lion Air (Checked-in)", limit: 10, fee: 350, feeUnit: lang==="TH"?"บาท/kg":"THB/kg" }
+  };
+
+  const calculate = (e: React.FormEvent) => {
+    e.preventDefault();
+    const w = parseFloat(weight);
+    if (w > 0 && limits[airline]) {
+      const limit = limits[airline].limit;
+      const feeRate = limits[airline].fee;
+      
+      let excess = w - limit;
+      if (excess <= 0) {
+        setResult({ excess: 0, cost: 0, msg: lang==="TH"?"ผ่านฉลุย! ไม่เกินกำหนด":"Safe! Under the limit." });
+      } else {
+        setResult({ excess: excess.toFixed(1), cost: Math.ceil(excess) * feeRate, msg: lang==="TH"?"เกินกำหนด! ต้องจ่ายเพิ่ม":"Overweight! Extra charge applies." });
+      }
+    }
+  };
+
+  return (
+    <div>
+      <h2 className="text-3xl font-black mb-2 text-cyan-600">{lang === "TH" ? "เช็คน้ำหนักกระเป๋า" : "Baggage Weight Checker"}</h2>
+      <form onSubmit={calculate} className="space-y-4 mt-6">
+        <div>
+          <label className={labelClass}>{lang === "TH" ? "สายการบิน/ประเภท" : "Airline / Type"}</label>
+          <select value={airline} onChange={e=>setAirline(e.target.value)} className={`${inputClass} focus:ring-cyan-400`}>
+             {Object.keys(limits).map(k => (
+                <option key={k} value={k}>{limits[k].name} ({limits[k].limit} kg)</option>
+             ))}
+          </select>
+        </div>
+        <div>
+          <label className={labelClass}>{lang === "TH" ? "น้ำหนักกระเป๋าจริง (kg)" : "Actual Baggage Weight (kg)"}</label>
+          <input type="number" step="0.1" value={weight} onChange={e=>setWeight(e.target.value)} required className={`${inputClass} focus:ring-cyan-400`} />
+        </div>
+        <button type="submit" className="w-full py-4 bg-cyan-500 font-bold text-white rounded hover:bg-cyan-600">{lang==="TH"?"ตรวจสอบ":"Check Baggage"}</button>
+      </form>
+
+      {result && (
+        <motion.div initial={{opacity:0}} animate={{opacity:1}} className={`mt-8 p-6 rounded-xl text-center border ${result.excess > 0 ? 'bg-red-50 border-red-200' : 'bg-green-50 border-green-200'}`}>
+          <div className="text-xl font-bold mb-2">{result.msg}</div>
+          {result.excess > 0 ? (
+             <>
+               <div className="text-gray-600 dark:text-gray-500 text-sm mb-1">{lang==="TH"?"น้ำหนักส่วนเกิน":"Excess Weight"}: <span className="font-bold text-red-600">{result.excess} kg</span></div>
+               <div className="text-gray-600 dark:text-gray-500 text-sm mb-2">{lang==="TH"?"ค่าปรับโดยประมาณ":"Estimated Fee"}: <span className="font-bold text-red-600">฿{result.cost.toLocaleString()}</span></div>
+               <p className="text-xs text-gray-500">*{lang==="TH"?"ค่าปรับขึ้นอยู่กับเส้นทาง โปรดตรวจสอบกับสายการบินอีกครั้ง":"Fees vary by route. Please check with airline."}</p>
+             </>
+          ) : (
+             <div className="text-4xl text-green-500">✅</div>
+          )}
+        </motion.div>
+      )}
     </div>
   );
 }
