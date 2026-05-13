@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
 import { useLocalState, inputClass, labelClass , SEOFAQ, FAQItem } from "./shared";
+import { AdPlaceholder } from "../AdPlaceholder";
 
 // 1. Pregnancy Due Date
 export function PregnancyDueCalculator({ lang }: { lang: Lang }) {
@@ -290,6 +291,11 @@ export function FetalWeightCalculator({ lang }: { lang: Lang }) {
            <div className="p-4 bg-white rounded-lg border border-pink-100 text-pink-700 font-bold">{result.dev}</div>
         </motion.div>
       )}
+      <AdPlaceholder type="in-article" />
+      <SEOFAQ title={lang==="TH"?"FAQ — พัฒนาการทารก":"Fetal Development FAQ"}>
+        <FAQItem q={lang==="TH"?"ทารกเริ่มดิ้นเมื่อไหร่?":"When does baby start moving?"} a={lang==="TH"?"ทารกเริ่มดิ้นดั้งเดิมประมาณสัปดาห์ที่ 16-20 (ครั้งแรกอาจรู้สึกเหมือนผีเสื้อบิน) สัปดาห์ที่ 28+ ควรนับการดิ้นได้อย่างน้อย 10 ครั้งใน 2 ชั่วโมง หากน้อยกว่านี้เป็นเวลานานติดต่ออพ. | อ้างอิง: WHO (2016). WHO recommendations on antenatal care.":"Fetal movement typically starts weeks 16-20 (first-timers may feel it like flutters). After week 28, count at least 10 movements in 2 hours. Less than that, contact your doctor. Source: WHO (2016) Antenatal Care Guidelines."} />
+        <FAQItem q={lang==="TH"?"น้ำหนักทารกที่น้อยเกินไปหรือมากเกินไปอันตรายไหม?":"Is fetal weight too high/low dangerous?"} a={lang==="TH"?"ทารกน้ำหนักน้อยเกินไป (< เปอร์เซ็นไทล์ที่ 10) = SGA อาจสัมพันธ์กับรกสุติประกำหรือรกแตกเรียว ส่วนน้ำหนักมากเกินไป (> เปอร์เซ็นไทล์ที่ 90) = LGA อาจต้องผ่าตัดคลอด ควรตรวจอัลตราซาวน์ด์สม่ำเสมอ | อ้างอิง: ACOG (2021). Fetal Growth Restriction. Practice Bulletin.":"Too small (<10th percentile) = SGA, may indicate growth restriction or preterm risk. Too large (>90th percentile) = LGA, may need C-section. Regular ultrasound monitoring is essential. Source: ACOG (2021) Practice Bulletin."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -359,6 +365,10 @@ export function ChildCostCalculator({ lang }: { lang: Lang }) {
            </div>
         </motion.div>
       )}
+      <AdPlaceholder type="in-article" />
+      <SEOFAQ title={lang==="TH"?"FAQ — ค่าใช้จ่ายเลี้ยงลูก":"Child Cost FAQ"}>
+        <FAQItem q={lang==="TH"?"ค่าใช้จ่ายเลี้ยงลูกในไทยตลอดชีวิตสูงแค่ไหน?":"How much does raising a child cost in Thailand?"} a={lang==="TH"?"จากการศึกษาของมูลนิธิแนวหน้าคอนซูเมอร์ (2023) ค่าใช้จ่ายตั้งแต่เกิดจนอายุ 18 ปี อยู่ระหว่าง 2-10 ล้านบาท ค่าใช้จ่ายสูงสุดคือการศึกษา (40%) รองลงมาคืออาหาร (30%) | อ้างอิง: มูลนิธิแนวหน้าคอนซูเมอร์ไทย (2023).":"Per Thai Consumer Foundation (2023), raising a child birth to 18 costs 2-10 million baht depending on education level. Education accounts for 40%, food 30% of costs. Source: Thai Consumer Foundation (2023)."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -406,6 +416,10 @@ export function ChildMilestoneCalculator({ lang }: { lang: Lang }) {
            </ul>
         </motion.div>
       )}
+      <AdPlaceholder type="in-article" />
+      <SEOFAQ title={lang==="TH"?"FAQ — พัฒนาการเด็ก":"Child Milestones FAQ"}>
+        <FAQItem q={lang==="TH"?"ถ้าลูกพัฒนาการช้าควรทำอย่างไร?":"What if my child is behind on milestones?"} a={lang==="TH"?"พัฒนาการเด็กแต่ละคนไม่เท่ากัน ช้า 1-2 เดือนอาจเป็นเรื่องปกติ หากช้ากว่า 2 เดือนในหลายด้าน ควรปรึกษาแพทย์เด็ก เครื่องมือนี้ใช้เป็นเพียงแนวทางเบื้องต้นเท่านั้น | อ้างอิง: CDC (2023). Developmental Milestones.":"Every child develops at their own pace. Being 1-2 months behind is often normal. If more than 2 months behind in multiple areas, consult a pediatrician. This is a reference guide only. Source: CDC (2023) Developmental Milestones."} />
+      </SEOFAQ>
     </div>
   );
 }

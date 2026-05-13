@@ -78,10 +78,22 @@ export function ExerciseCaloriesCalculator({ lang, setCalc }: { lang: Lang, setC
       <AdPlaceholder type="in-article" />
       <RelatedCalcs lang={lang} setCalc={setCalc} links={[ {id:"tdee", name: lang==="TH"?"คำนวณ TDEE":"TDEE Calculator"}, {id:"food-random", name: lang==="TH"?"สุ่มอาหารแคลอรี่ต่ำ":"Low Cal Meal"} ]} />
       
-      <SEOFAQ title={lang === "TH" ? "การเผาผลาญแคลอรี่ (FAQ)" : "Calories Burned FAQ"}>
-        <FAQItem 
-          q={lang === "TH" ? "ค่า MET คืออะไร?" : "What is MET?"}
-          a={lang === "TH" ? "MET (Metabolic Equivalent of Task) คือหน่วยวัดอัตราการใช้พลังงานของร่างกายขณะทำกิจกรรมต่างๆ โดยอ้างอิงกับน้ำหนักตัวและเวลา" : "MET stands for Metabolic Equivalent of Task, a physiological measure expressing the energy cost of physical activities."}
+      <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย — แคลอรี่จากออกกำลังกาย" : "Exercise Calories FAQ"}>
+        <FAQItem
+          q={lang === "TH" ? "ค่า MET คืออะไร และใช้คำนวณยังไง?" : "What is MET and how is it used?"}
+          a={lang === "TH" ? "MET (Metabolic Equivalent of Task) คือหน่วยวัดความเข้มข้นของกิจกรรมทางกาย โดย 1 MET = พลังงานที่ใช้ขณะนั่งพัก (≈3.5 mL O₂/kg/min) สูตรคือ kcal = MET × น้ำหนัก(kg) × เวลา(ชม.) เช่น วิ่ง MET=9.8 น้ำหนัก 70 kg 30 นาที = 9.8×70×0.5 = 343 kcal | แหล่งอ้างอิง: Ainsworth BE, et al. (2011). Compendium of Physical Activities. Medicine & Science in Sports & Exercise." : "MET (Metabolic Equivalent of Task) measures exercise intensity relative to rest. Formula: kcal = MET × weight(kg) × time(hrs). Example: Running (MET=9.8) for 30 min at 70kg = 9.8×70×0.5 = 343 kcal. Source: Ainsworth et al. (2011) Compendium of Physical Activities."}
+        />
+        <FAQItem
+          q={lang === "TH" ? "กิจกรรมไหนเผาผลาญแคลอรี่ได้มากที่สุด?" : "Which activity burns the most calories?"}
+          a={lang === "TH" ? "กิจกรรมที่เผาผลาญมากที่สุดคือ กระโดดเชือก (MET≈10-12), วิ่งเร็ว (MET≈11-16), และว่ายน้ำแบบเร็ว (MET≈10) สำหรับคนน้ำหนัก 70 kg วิ่งเร็ว 1 ชม. อาจเผาผลาญได้ถึง 700-900 kcal | แหล่งอ้างอิง: Harvard Health Publishing (2021). Calories burned in 30 minutes for people of three different weights." : "High-intensity activities burn the most: jump rope (MET≈10-12), fast running (MET≈11-16), swimming fast (MET≈10). A 70kg person running fast for 1 hour can burn 700-900 kcal. Source: Harvard Health Publishing (2021)."}
+        />
+        <FAQItem
+          q={lang === "TH" ? "ออกกำลังกาย 30 นาที เผาผลาญพอไหม?" : "Is 30 minutes of exercise enough?"}
+          a={lang === "TH" ? "WHO แนะนำให้ออกกำลังกายระดับปานกลาง (เช่น เดินเร็ว) อย่างน้อย 150 นาที/สัปดาห์ หรือออกกำลังหนัก 75 นาที/สัปดาห์ การออก 30 นาทีต่อวัน 5 วันต่อสัปดาห์ถือว่าเพียงพอ | แหล่งอ้างอิง: WHO (2020). Physical Activity Guidelines." : "WHO recommends at least 150 min/week of moderate activity or 75 min/week of vigorous activity. 30 minutes/day, 5 days a week meets this guideline. Source: WHO (2020) Physical Activity Guidelines."}
+        />
+        <FAQItem
+          q={lang === "TH" ? "ทำไมแอปนับก้าวกับเครื่องคำนวณนี้ได้ค่าต่างกัน?" : "Why does my fitness tracker show different results?"}
+          a={lang === "TH" ? "แอปและอุปกรณ์สวมใส่ใช้เซ็นเซอร์ตรวจจับการเคลื่อนไหวจริง ซึ่งแม่นยำกว่าการคำนวณจาก MET ล้วนๆ เครื่องคำนวณนี้ใช้ค่าเฉลี่ยจากสูตร MET มาตรฐาน ซึ่งอาจมีความคลาดเคลื่อนได้ ±15-20% ขึ้นกับสรีระแต่ละคน" : "Fitness trackers use real-time sensors which are more accurate than pure MET formulas. This calculator uses standard MET averages with ±15-20% variation possible depending on individual physiology."}
         />
       </SEOFAQ>
     </div>
@@ -157,6 +169,20 @@ export function ProteinCalculator({ lang, setCalc }: { lang: Lang, setCalc: (id:
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+      <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย — โปรตีนต่อวัน" : "Daily Protein FAQ"}>
+        <FAQItem
+          q={lang === "TH" ? "ควรกินโปรตีนเท่าไหร่ต่อวัน?" : "How much protein should I eat per day?"}
+          a={lang === "TH" ? "สำหรับคนทั่วไปที่ไม่ออกกำลังกาย WHO แนะนำ 0.8 g/kg/วัน สำหรับคนออกกำลังกาย 1.2-1.6 g/kg/วัน และสำหรับนักเพาะกาย/นักกีฬา 1.6-2.2 g/kg/วัน เช่น น้ำหนัก 70 kg ออกกำลังกายปานกลาง = 84-112 g/วัน | แหล่งอ้างอิง: Morton RW, et al. (2018). A systematic review, meta-analysis and meta-regression of protein supplementation. British Journal of Sports Medicine." : "For sedentary adults: 0.8 g/kg/day (WHO). For active people: 1.2-1.6 g/kg/day. For athletes: 1.6-2.2 g/kg/day. Example: 70kg, moderately active = 84-112g/day. Source: Morton et al. (2018) British Journal of Sports Medicine."}
+        />
+        <FAQItem
+          q={lang === "TH" ? "กินโปรตีนมากเกินไปเป็นอันตรายไหม?" : "Is too much protein harmful?"}
+          a={lang === "TH" ? "สำหรับคนที่ไตปกติ การบริโภคโปรตีนสูง 2-3 g/kg/วัน ไม่พบหลักฐานชัดเจนว่าเป็นอันตราย แต่ต้องดื่มน้ำเพิ่มขึ้น อย่างไรก็ตาม ผู้ที่มีโรคไตควรปรึกษาแพทย์ก่อนเสมอ | แหล่งอ้างอิง: Antonio J, et al. (2016). A High Protein Diet Has No Harmful Effects. Journal of Nutrition and Metabolism." : "For people with healthy kidneys, 2-3g/kg/day shows no harmful effects, though increased hydration is needed. Those with kidney disease should consult a doctor first. Source: Antonio et al. (2016) Journal of Nutrition and Metabolism."}
+        />
+        <FAQItem
+          q={lang === "TH" ? "อาหารที่มีโปรตีนสูงมีอะไรบ้าง?" : "What foods are high in protein?"}
+          a={lang === "TH" ? "แหล่งโปรตีนชั้นดี: อกไก่ (31g/100g), ปลาทูน่า (30g/100g), ไข่ขาว (11g/100g), เต้าหู้แข็ง (17g/100g), ถั่วดำ (9g/100g), กรีกโยเกิร์ต (10g/100g) สำหรับมังสวิรัติ ควรรวมแหล่งโปรตีนหลายชนิดเพื่อให้ครบกรดอะมิโนจำเป็น | แหล่งอ้างอิง: USDA FoodData Central Database." : "High-protein foods: Chicken breast (31g/100g), Tuna (30g/100g), Egg whites (11g/100g), Firm tofu (17g/100g), Greek yogurt (10g/100g). Vegetarians should combine sources for complete amino acids. Source: USDA FoodData Central."}
+        />
+      </SEOFAQ>
     </div>
   );
 }
@@ -252,6 +278,21 @@ export function BodyFatCalculator({ lang }: { lang: Lang }) {
           <div className="mt-2 text-xl font-bold text-gray-700 dark:text-gray-200">{result.status}</div>
         </motion.div>
       )}
+      <AdPlaceholder type="in-article" />
+      <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย — Body Fat %" : "Body Fat % FAQ"}>
+        <FAQItem
+          q={lang === "TH" ? "เปอร์เซ็นต์ไขมันในร่างกายที่ดีคือเท่าไหร่?" : "What is a healthy body fat percentage?"}
+          a={lang === "TH" ? "สำหรับผู้ชาย: นักกีฬา 6-13%, ฟิต 14-17%, ปกติ 18-24%, อ้วน >25% | สำหรับผู้หญิง: นักกีฬา 16-20%, ฟิต 21-24%, ปกติ 25-31%, อ้วน >32% ผู้หญิงมีค่าสูงกว่าผู้ชายตามธรรมชาติเนื่องจากไขมันที่จำเป็นสำหรับระบบฮอร์โมน | แหล่งอ้างอิง: American Council on Exercise (ACE) Body Fat Classification." : "Men: Athlete 6-13%, Fitness 14-17%, Average 18-24%, Obese >25%. Women: Athlete 16-20%, Fitness 21-24%, Average 25-31%, Obese >32%. Women naturally have higher body fat for hormonal function. Source: American Council on Exercise (ACE)."}
+        />
+        <FAQItem
+          q={lang === "TH" ? "US Navy Method วัดไขมันแม่นยำแค่ไหน?" : "How accurate is the US Navy Method?"}
+          a={lang === "TH" ? "US Navy Method มีความแม่นยำ ±3-4% เมื่อเทียบกับ DEXA Scan ซึ่งถือเป็น Gold Standard วิธีนี้ใช้การวัดเส้นรอบวงร่างกายแทนการวัดไขมันโดยตรง จึงสะดวกและไม่ต้องใช้อุปกรณ์พิเศษ | แหล่งอ้างอิง: Hodgdon JA, Beckett MB. (1984). Prediction of percent body fat for US Navy men. Naval Health Research Center." : "The US Navy Method has ±3-4% accuracy compared to DEXA scan (the gold standard). It uses circumference measurements as a proxy for body fat, making it convenient without special equipment. Source: Hodgdon & Beckett (1984), Naval Health Research Center."}
+        />
+        <FAQItem
+          q={lang === "TH" ? "ไขมันในร่างกายต่างจาก BMI อย่างไร?" : "How is body fat different from BMI?"}
+          a={lang === "TH" ? "BMI คำนวณจากน้ำหนักและส่วนสูงเท่านั้น จึงไม่แยกแยะกล้ามเนื้อและไขมัน คนที่มีกล้ามเนื้อมากอาจมี BMI สูงแต่ % ไขมันต่ำ (เช่น นักยกน้ำหนัก) ในทางกลับกัน คนที่ BMI ปกติอาจมี % ไขมันสูงได้ (Skinny Fat) การวัด % ไขมันจึงแม่นยำกว่าในการประเมินสุขภาพ | แหล่งอ้างอิง: Romero-Corral A, et al. (2008). Accuracy of BMI to diagnose obesity. International Journal of Obesity." : "BMI only uses height and weight, not distinguishing muscle from fat. A muscular athlete may have high BMI but low body fat (Skinny Fat phenomenon). Body fat % is more accurate for health assessment. Source: Romero-Corral et al. (2008) International Journal of Obesity."}
+        />
+      </SEOFAQ>
     </div>
   );
 }
@@ -314,6 +355,17 @@ export function WHRCalculator({ lang }: { lang: Lang }) {
           <div className="mt-2 text-xl font-bold text-gray-700 dark:text-gray-200">{lang==="TH"?"ระดับความเสี่ยงโรคอ้วนลงพุง:":"Health Risk:"} <span className={result.risk.includes('สูง') || result.risk.includes('High') ? 'text-red-500' : 'text-green-500'}>{result.risk}</span></div>
         </motion.div>
       )}
+      <AdPlaceholder type="in-article" />
+      <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย — อัตราส่วนเอวต่อสะโพก" : "WHR FAQ"}>
+        <FAQItem
+          q={lang === "TH" ? "ค่า WHR ที่ดีคือเท่าไหร่?" : "What is a healthy WHR?"}
+          a={lang === "TH" ? "WHO กำหนดค่าเสี่ยงสูงคือ WHR > 0.90 สำหรับชาย และ > 0.85 สำหรับหญิง ค่าที่ดีคือต่ำกว่า 0.80 สำหรับหญิง และต่ำกว่า 0.90 สำหรับชาย การมีไขมันสะสมที่หน้าท้องเพิ่มความเสี่ยงต่อโรคหัวใจและเบาหวานชนิดที่ 2 | แหล่งอ้างอิง: WHO (2008). Waist Circumference and Waist-Hip Ratio: Report of a WHO Expert Consultation." : "WHO defines high risk as WHR >0.90 for men and >0.85 for women. Abdominal fat accumulation increases risk of heart disease and type 2 diabetes. Source: WHO (2008) Expert Consultation Report."}
+        />
+        <FAQItem
+          q={lang === "TH" ? "WHR ต่างจากรอบเอวอย่างเดียวอย่างไร?" : "How is WHR different from waist circumference alone?"}
+          a={lang === "TH" ? "การวัดรอบเอวเพียงอย่างเดียว (เกณฑ์เสี่ยง: ชาย > 90cm, หญิง > 80cm สำหรับเอเชีย) บอกปริมาณไขมันท้องสัมบูรณ์ ส่วน WHR บอกสัดส่วนการกระจายไขมันในร่างกาย การใช้ทั้ง 2 ค่าร่วมกันให้ภาพรวมที่สมบูรณ์กว่า | แหล่งอ้างอิง: International Diabetes Federation (2006). The IDF consensus worldwide definition of the metabolic syndrome." : "Waist circumference alone measures absolute abdominal fat (risk: men >90cm, women >80cm for Asians), while WHR shows fat distribution ratio. Using both together gives a more complete health picture. Source: IDF (2006) Metabolic Syndrome Consensus."}
+        />
+      </SEOFAQ>
     </div>
   );
 }
@@ -385,11 +437,20 @@ export function HeartRateZoneCalculator({ lang }: { lang: Lang }) {
           </div>
         </motion.div>
       )}
+      <AdPlaceholder type="in-article" />
+      <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย — โซนอัตราหัวใจ" : "Heart Rate Zones FAQ"}>
+        <FAQItem
+          q={lang === "TH" ? "โซนไหนที่ดีที่สุดสำหรับเผาผลาญไขมัน?" : "Which zone is best for fat burning?"}
+          a={lang === "TH" ? "Zone 2 (60-70% Max HR) ถือว่าเป็นโซนเผาผลาญไขมันที่ดีที่สุด ร่างกายใช้ไขมันเป็นแหล่งพลังงานหลักมากที่สุด (60-65%) ในโซนนี้ สามารถออกได้นานโดยไม่เหนื่อย เหมาะสำหรับเดินเร็ว/จักรยาน | แหล่งอ้างอิง: Karvonen M, Kentala E, Mustala O. (1957). The effects of training on heart rate. Annales Medicinae Experimentalis." : "Zone 2 (60-70% Max HR) is optimal for fat burning — the body uses fat as the primary fuel source (60-65%) in this zone. You can sustain it for long periods without exhaustion. Great for walking/cycling. Source: Karvonen et al. (1957)."}
+        />
+        <FAQItem
+          q={lang === "TH" ? "สูตร 220 – อายุ แม่นยำแค่ไหน?" : "How accurate is the 220-age formula?"}
+          a={lang === "TH" ? "สูตร 220 – อายุ เป็นการประมาณค่าโดยกว้าง มีความคลาดเคลื่อน ±10-12 bpm เนื่องจากความแตกต่างระหว่างบุคคล สูตรที่แม่นยำกว่าคือ Tanaka (2001): MaxHR = 208 – (0.7 × อายุ) แต่สำหรับการออกกำลังกายทั่วไป 220 – อายุ ยังเป็นที่นิยมใช้มากที่สุด | แหล่งอ้างอิง: Tanaka H, Monahan KD, Seals DR. (2001). Age-predicted maximal heart rate revisited. JACC." : "The 220-age formula is a rough estimate with ±10-12 bpm variation between individuals. The more accurate Tanaka formula (2001): MaxHR = 208 – (0.7 × age). However, 220-age remains the most widely used. Source: Tanaka et al. (2001) JACC."}
+        />
+      </SEOFAQ>
     </div>
   );
 }
-
-// 6. สัดส่วน Macro (Macro split)
 export function MacroCalculator({ lang }: { lang: Lang }) {
   const [tdee, setTdee] = useLocalState("mac_tdee", "2000");
   const [goal, setGoal] = useLocalState("mac_goal", "maintenance");
@@ -448,11 +509,22 @@ export function MacroCalculator({ lang }: { lang: Lang }) {
            </div>
         </motion.div>
       )}
+      <AdPlaceholder type="in-article" />
+      <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย — Macro Split" : "Macro FAQ"}>
+        <FAQItem
+          q={lang === "TH" ? "Macro คืออะไร สำคัญแค่ไหน?" : "What are macros and why do they matter?"}
+          a={lang === "TH" ? "Macronutrients คือสารอาหาร  3 หลัก: คาร์บ (4 kcal/g) = พลังงานหลักของร่างกายและสมอง, โปรตีน (4 kcal/g) = สร้างและซ่อมแซมกล้ามเนื้อ, ไขมัน (9 kcal/g) = สร้างเซลล์และผลิตฮอร์โมน การเข้าใจสัดส่วนช่วยให้ร่างกายเริ่มดีและตรงตามเป้าหมาย | แหล่งอ้างอิง: USDA Dietary Reference Intakes (DRI) 2020." : "Macronutrients are 3 main nutrients: Carbs (4 kcal/g) = primary fuel, Protein (4 kcal/g) = muscle building, Fat (9 kcal/g) = hormones & cell structure. Understanding ratios helps achieve body composition goals more effectively. Source: USDA DRI 2020."}
+        />
+        <FAQItem
+          q={lang === "TH" ? "สัดส่วนที่ดีที่สุดสำหรับลดน้ำหนักคืออะไร?" : "What macro split is best for fat loss?"}
+          a={lang === "TH" ? "สำหรับลดไขมัน: โปรตีนสูง (30-40%) ช่วยรักษากล้ามเนื้อขณะลดแคลอรี่ คาร์บต่ำ (25-35%) ช่วยลดการสร้างน้ำตาล และไขมันปานกลาง (30%) ช่วยควบคุมความอิ่ม | แหล่งอ้างอิง: Helms ER, et al. (2014). Evidence-based recommendations for natural bodybuilding. Journal of the International Society of Sports Nutrition." : "For fat loss: High protein (30-40%) preserves muscle during caloric deficit, low carb (25-35%) reduces insulin spikes, moderate fat (30%) promotes satiety. Source: Helms et al. (2014) Journal of the International Society of Sports Nutrition."}
+        />
+      </SEOFAQ>
     </div>
   );
 }
 
-// 7. แปลงน้ำตาลในเลือด (Blood Sugar Converter)
+// 7. แปลงค่าน้ำตาลในเลือด (Blood Sugar Converter)
 export function BloodSugarConverter({ lang }: { lang: Lang }) {
   const [val, setVal] = useState("100");
   const [unit, setUnit] = useState("mg");
@@ -486,6 +558,17 @@ export function BloodSugarConverter({ lang }: { lang: Lang }) {
           <p className="mt-4 text-sm text-gray-500">{lang==="TH"?"ปกติ (งดอาหาร): 70-99 mg/dL (3.9-5.5 mmol/L)":"Normal (Fasting): 70-99 mg/dL (3.9-5.5 mmol/L)"}</p>
         </motion.div>
       )}
+      <AdPlaceholder type="in-article" />
+      <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย — น้ำตาลในเลือด" : "Blood Sugar FAQ"}>
+        <FAQItem
+          q={lang === "TH" ? "ค่าน้ำตาลในเลือดปกติคือเท่าไหร่?" : "What are normal blood sugar levels?"}
+          a={lang === "TH" ? "ค่าปกติ (งดอาหาร ≥ 8 ชม.): 70-99 mg/dL (3.9-5.5 mmol/L) | เสี่ยงเป็นเบาหวาน: 100-125 mg/dL (5.6-6.9 mmol/L) | เบาหวาน: ≥ 126 mg/dL (7.0 mmol/L) หลังอาหาร  2 ชม. ค่าปกติคือ < 140 mg/dL (7.8 mmol/L) สำหรับคนที่ไม่เป็นเบาหวาน | แหล่งอ้างอิง: American Diabetes Association (ADA) Standards of Medical Care in Diabetes 2024." : "Normal (fasting ≥8 hrs): 70-99 mg/dL (3.9-5.5 mmol/L). Pre-diabetes: 100-125 mg/dL. Diabetes: ≥126 mg/dL. 2-hour post-meal normal: <140 mg/dL. Source: American Diabetes Association Standards 2024."}
+        />
+        <FAQItem
+          q={lang === "TH" ? "mg/dL กับ mmol/L ต่างกันอย่างไร?" : "What is the difference between mg/dL and mmol/L?"}
+          a={lang === "TH" ? "mg/dL (milligrams per deciliter) สุดนิยมใช้ในสหรัฐอเมริกา, ไทย และอีกหลายประเทศ ส่วน mmol/L (millimoles per liter) นิยมใช้ในยุโรป, ออสเตรเลีย, แคนาดา สูตรแปลง: mg/dL ÷ 18 = mmol/L | แหล่งอ้างอิง: WHO (2006). Definition and Diagnosis of Diabetes Mellitus." : "mg/dL is used in USA, Thailand, and several countries. mmol/L is used in Europe, Australia, Canada. Conversion: mg/dL ÷ 18 = mmol/L. Source: WHO (2006) Definition and Diagnosis of Diabetes Mellitus."}
+        />
+      </SEOFAQ>
     </div>
   );
 }
@@ -553,6 +636,10 @@ export function IBWCalculator({ lang }: { lang: Lang }) {
            ))}
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — น้ำหนักอุดมคติ":"IBW FAQ"}>
+        <FAQItem q={lang==="TH"?"IBW คืออะไร ต่างจาก BMI อย่างไร?":"What is IBW vs BMI?"} a={lang==="TH"?"IBW (Ideal Body Weight) คือน้ำหนักเป้าหมายที่คำนวณจากส่วนสูงและเพศ ใช้ในวงการแพทย์เพื่อคำนวณขนาดยา ส่วน BMI ใช้ประเมินความเสี่ยงสุขภาพ IBW ไม่ได้หมายความว่าทุกคนต้องมีน้ำหนักเท่านี้ | อ้างอิง: Devine BJ. (1974). Gentamicin therapy. Drug Intelligence & Clinical Pharmacy.":"IBW is the target weight calculated from height/sex, used clinically for drug dosing. BMI assesses health risk. IBW is not a strict target for everyone. Source: Devine BJ. (1974)."} />
+        <FAQItem q={lang==="TH"?"สูตรไหนแม่นที่สุด?":"Which IBW formula is most accurate?"} a={lang==="TH"?"ไม่มีสูตรใดที่แม่นยำที่สุดสำหรับทุกคน Devine (1974) นิยมใช้ในการแพทย์ทั่วไป Robinson (1983) แม่นยำสำหรับคนเอเชียมากกว่า ค่าเฉลี่ยจากทุกสูตรให้ภาพรวมที่ดีที่สุด | อ้างอิง: Robinson JD, et al. (1983). Determination of ideal body weight. American Journal of Hospital Pharmacy.":"No formula is universally best. Devine (1974) is most used clinically; Robinson (1983) may be more accurate for Asians. Using the average of all formulas gives the best estimate. Source: Robinson et al. (1983)."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -613,6 +700,9 @@ export function StepsCalculator({ lang }: { lang: Lang }) {
            </div>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — ก้าวเดิน":"Steps FAQ"}>
+        <FAQItem q={lang==="TH"?"10,000 ก้าวต่อวันจริงไหมว่าดีต่อสุขภาพ?":"Is 10,000 steps/day really the target?"} a={lang==="TH"?"ตัวเลข 10,000 ก้าวมาจากแคมเปญการตลาดของญี่ปุ่นในปี 1960 ไม่ใช่งานวิจัย งานวิจัยปัจจุบันพบว่า 7,000-8,000 ก้าวต่อวันก็ลดความเสี่ยงการเสียชีวิตได้อย่างมีนัยสำคัญ | อ้างอิง: Paluch AE, et al. (2021). Steps per Day and All-Cause Mortality in Adults. JAMA Network Open.":"10,000 steps originated from a 1960s Japanese marketing campaign, not research. Studies show 7,000-8,000 steps/day significantly reduces mortality risk. Source: Paluch et al. (2021) JAMA Network Open."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -661,6 +751,10 @@ export function OneRepMaxCalculator({ lang }: { lang: Lang }) {
            <div className="text-sm text-gray-500 text-center">Epley: {result.e} kg | Lombardi: {result.l} kg</div>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — 1RM":"1RM FAQ"}>
+        <FAQItem q={lang==="TH"?"1RM คืออะไร ใช้ทำอะไร?":"What is 1RM used for?"} a={lang==="TH"?"1RM (One Repetition Maximum) คือน้ำหนักสูงสุดที่คุณยกได้ 1 ครั้ง ใช้กำหนดโปรแกรมเทรนนิ่ง เช่น ยกที่ 70% 1RM = Hypertrophy, 85%+ = Strength training | อ้างอิง: Baechle TR, Earle RW. (2008). Essentials of Strength Training and Conditioning. NSCA.":"1RM (One Repetition Maximum) is the max weight lifted once. Used to program training: 70% 1RM = Hypertrophy, 85%+ = Strength. Source: Baechle & Earle (2008) NSCA."} />
+        <FAQItem q={lang==="TH"?"ทดสอบ 1RM โดยตรงปลอดภัยไหม?":"Is testing 1RM directly safe?"} a={lang==="TH"?"การทดสอบ 1RM โดยตรงมีความเสี่ยงบาดเจ็บ โดยเฉพาะสำหรับผู้เริ่มต้น การใช้สูตรประมาณการเช่น Brzycki หรือ Epley จากน้ำหนักที่ยกได้ 3-10 ครั้ง ปลอดภัยกว่ามาก | อ้างอิง: Brzycki M. (1993). Strength testing: Predicting a one-rep max. JOPERD.":"Direct 1RM testing risks injury, especially for beginners. Using estimation formulas like Brzycki or Epley from 3-10 rep sets is much safer. Source: Brzycki (1993) JOPERD."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -714,6 +808,10 @@ export function PaceCalculator({ lang }: { lang: Lang }) {
           <div className="text-5xl font-black text-pink-600 dark:text-pink-400">{result} <span className="text-xl">/km</span></div>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — Pace วิ่ง":"Running Pace FAQ"}>
+        <FAQItem q={lang==="TH"?"Pace วิ่งที่ดีสำหรับคนทั่วไปคือเท่าไหร่?":"What is a good running pace?"} a={lang==="TH"?"สำหรับผู้เริ่มต้น pace 8-10 นาที/กม. ถือว่าดี สำหรับนักวิ่งระดับกลาง 5-7 นาที/กม. และนักวิ่งแข่งขัน 3:30-5:00 นาที/กม. มาราธอน Sub-4 ชม. ต้องการ pace ประมาณ 5:41/กม. | อ้างอิง: Daniels J. (2014). Daniels' Running Formula. Human Kinetics.":"For beginners: 8-10 min/km is good. Intermediate: 5-7 min/km. Competitive: 3:30-5:00 min/km. Sub-4 hour marathon requires ~5:41/km pace. Source: Daniels (2014) Running Formula."} />
+        <FAQItem q={lang==="TH"?"Pace กับ Speed ต่างกันอย่างไร?":"Pace vs Speed: what's the difference?"} a={lang==="TH"?"Pace = เวลาต่อระยะทาง (นาที/กม.) ใช้ในการวิ่ง Speed = ระยะทางต่อเวลา (กม./ชม.) ใช้ทั่วไปกว่า แปลงสูตร: Speed (km/h) = 60 ÷ Pace (min/km) เช่น Pace 6:00/กม. = 10 กม./ชม. | อ้างอิง: Noakes T. (2002). Lore of Running. Human Kinetics.":"Pace = time per distance (min/km) used in running. Speed = distance per time (km/h). Formula: Speed (km/h) = 60 ÷ Pace (min/km). E.g. 6:00/km = 10 km/h. Source: Noakes (2002) Lore of Running."} />
+      </SEOFAQ>
     </div>
   );
 }

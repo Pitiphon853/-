@@ -190,6 +190,11 @@ export function BaggageWeightChecker({ lang }: { lang: Lang }) {
           )}
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — น้ำหนักกระเป๋า":"Baggage Weight FAQ"}>
+        <FAQItem q={lang==="TH"?"กระเป๋า Carry-on ขึ้นเครื่องได้กี่ kg?":"How much carry-on luggage is allowed?"} a={lang==="TH"?"สายการบินราคาประหยัด (AirAsia, Lion Air) อนุญาต 7 kg / สายการบินปกติ (Thai Airways, Bangkok Airways) อนุญาต 7-10 kg ขึ้นกับชั้นที่นั่ง ควรตรวจสอบกับสายการบินก่อนเดินทางเสมอ | อ้างอิง: เว็บไซต์สายการบินอย่างเป็นทางการ.":"Budget airlines (AirAsia, Lion Air) allow 7 kg / Full-service (Thai Airways, Bangkok Airways) allow 7-10 kg depending on class. Always check airline website before travel. Source: Official airline websites."} />
+        <FAQItem q={lang==="TH"?"ถ้ากระเป๋าน้ำหนักเกิน ต้องจ่ายเท่าไร?":"How much are excess baggage fees?"} a={lang==="TH"?"ค่าปรับน้ำหนักเกินแตกต่างตามสายการบินและเส้นทาง: AirAsia 400-500 บาท/kg / Thai Airways 100-1,500 บาท/kg ตามเส้นทาง / วิธีประหยัดคือซื้อน้ำหนักล่วงหน้าทางออนไลน์ ถูกกว่าซื้อที่เคาน์เตอร์ 20-40% | อ้างอิง: AirAsia, Thai Airways Excess Baggage Policy.":"Fees vary by airline and route: AirAsia 400-500 THB/kg / Thai Airways 100-1,500 THB/kg. Book extra weight online in advance for 20-40% savings. Source: AirAsia, Thai Airways policies."} />
+        <FAQItem q={lang==="TH"?"เทคนิคลดน้ำหนักกระเป๋ามีอะไรบ้าง?":"Tips to reduce luggage weight?"} a={lang==="TH"?"1) ใช้กระเป๋าน้ำหนักเบา (ผ้า/ซอฟต์เคส) 2) สวมเสื้อผ้าหนักๆ ขึ้นเครื่อง 3) ใช้ขวดแบ่งของเหลว 4) เลือกเสื้อผ้าที่ Mix & Match ได้ 5) ชั่งน้ำหนักที่บ้านก่อนออกเดินทาง | อ้างอิง: SmarterTravel (2023) Packing Guide.":"1) Use lightweight bags 2) Wear heaviest clothes 3) Use travel-size containers 4) Pack mix & match outfits 5) Weigh at home before leaving. Source: SmarterTravel (2023) Packing Guide."} />
+      </SEOFAQ>
     </div>
   );
 }

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
-import { useLocalState, inputClass, labelClass } from "./shared";
+import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem } from "./shared";
 
 // 1. Pantone Converter (Approximate)
 export function PantoneConverter({ lang }: { lang: Lang }) {
@@ -108,6 +108,11 @@ export function PantoneConverter({ lang }: { lang: Lang }) {
            </div>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — แปลงรหัสสี":"Color Converter FAQ"}>
+        <FAQItem q={lang==="TH"?"HEX, RGB, CMYK ต่างกันอย่างไร?":"What's the difference between HEX, RGB, and CMYK?"} a={lang==="TH"?"HEX: รหัสสีแบบฐาน16 ใช้ในเว็บ / RGB: เกิดจากแสงสีแดง เขียว น้ำเงิน ใช้กับหน้าจอ / CMYK: ซียาน มาเจนต้า เหลือง ดำ ใช้ในงานพิมพ์ | อ้างอิง: Adobe Color Theory Documentation.":"HEX: Base-16 color codes for web / RGB: Red-Green-Blue for screens / CMYK: Cyan-Magenta-Yellow-Key for print. Source: Adobe Color Theory Docs."} />
+        <FAQItem q={lang==="TH"?"ทำไมสีบนหน้าจอไม่เหมือนที่พิมพ์ออกมา?":"Why do colors look different on screen vs print?"} a={lang==="TH"?"หน้าจอใช้แสง (additive color) ส่องสว่างขึ้นได้ แต่หมึกพิมพ์ใช้หมึกดูดซับแสง (subtractive) ทำให้ช่วงสี (gamut) ต่างกัน ควรใช้ Color Profile ที่ถูกต้องจึงจะตรงกันมากขึ้น | อ้างอิง: ICC Color Management Handbook.":"Screens use additive light (RGB), print uses subtractive ink (CMYK). Color gamuts differ, so a proper color profile is essential. Source: ICC Color Management Handbook."} />
+        <FAQItem q={lang==="TH"?"Pantone คืออะไร? ทำไมไม่แปลงได้ 100%?":"What is Pantone? Why can't it be 100% converted?"} a={lang==="TH"?"Pantone Matching System (PMS) คือระบบสีมาตรฐานที่ใช้หมึกเฉพาะ (spot color) ที่ไม่สามารถสร้างจาก RGB/CMYK ทั่วไปได้ 100% เพราะเป็นสีสังเคราะห์เฉพาะ (proprietary) การแปลงที่นี่เป็นการประมาณค่าที่ใกล้เคียงที่สุด | อ้างอิง: Pantone LLC Official Documentation.":"Pantone Matching System uses proprietary spot colors that can't be perfectly reproduced from RGB/CMYK. Conversions here are best-effort approximations. Source: Pantone LLC Official Documentation."} />
+      </SEOFAQ>
     </div>
   );
 }

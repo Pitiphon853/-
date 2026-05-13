@@ -74,6 +74,10 @@ export function FinancialRatioCalculator({ lang }: { lang: Lang }) {
            </div>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — อัตราส่วนการเงิน":"Financial Ratios FAQ"}>
+        <FAQItem q={lang==="TH"?"Current Ratio ที่ดีควรอยู่ที่เท่าไหร่?":"What is a healthy current ratio?"} a={lang==="TH"?"ค่าที่ดีคือ 1.5-3.0 หมายความว่าบริษัทมีสภาพคล่องดี สามารถจ่ายหนี้ระยะสั้นได้ ถ้า < 1 คืออันตรายทางเงินสด ถ้า > 3 อาจแสดงว่าจัดสินทรัพย์ไม่มีประสิทธิภาพ | อ้างอิง: Brigham EF. (2021). Financial Management: Theory & Practice. Cengage.":"Ideal range is 1.5-3.0. Below 1 = liquidity risk. Above 3 may indicate inefficient asset use. Source: Brigham (2021) Financial Management."} />
+        <FAQItem q={lang==="TH"?"ROE ที่ดีคือเท่าไหร่?":"What is a good ROE?"} a={lang==="TH"?"โดยทั่วไป ROE ที่สูงกว่า 15% ถือว่าดี Warren Buffett นิยมลงทุนในบริษัทที่มี ROE > 15% ต่อเนื่องหลายปี | อ้างอิง: Buffett W. (1987). Berkshire Hathaway Annual Shareholder Letter.":"Generally ROE above 15% is good. Warren Buffett prefers companies with consistently high ROE over many years. Source: Buffett (1987) Berkshire Letter."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -138,6 +142,11 @@ export function MarketplaceFeeCalculator({ lang }: { lang: Lang }) {
            <p className="text-xs text-gray-400 text-center">*{lang==="TH"?"เป็นเพียงการประมาณการแบบง่าย (เฉลี่ย 8-10%) ไม่รวมค่าส่ง/โปรโมชั่น":"This is a simplified estimation (approx 8-10%) excluding shipping/promos."}</p>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — ค่าธรรมเนียม Marketplace":"Marketplace Fees FAQ"}>
+        <FAQItem q={lang==="TH"?"Shopee หักค่าธรรมเนียมกี่เปอร์เซ็นต์?":"How much does Shopee charge?"} a={lang==="TH"?"Shopee เรียกเก็บรวมประมาณ 6-10% ขึ้นกับหมวดหมู่สินค้า แบ่งเป็นค่า Commission + ค่าบริการชำระเงิน ผู้ขายใหม่อาจได้ส่วนลด 60-90 วันแรก | อ้างอิง: Shopee Seller Centre (2024) Fee Policy.":"Shopee charges approximately 6-10% total depending on category, split between commission and payment processing. New sellers may get discounts for first 60-90 days. Source: Shopee Seller Centre (2024)."} />
+        <FAQItem q={lang==="TH"?"ควรเลือกแพลตฟอร์มไหนดี?":"Which marketplace platform should I choose?"} a={lang==="TH"?"ขึ้นอยู่กับกลุ่มเป้าหมาย: Shopee เหมาะกับสินค้าราคาต่ำ-กลาง / Lazada เหมาะกับสินค้าแบรนด์เนม / TikTok Shop เหมาะกับสินค้าไวรัลที่โปรโมทผ่านวิดีโอ | อ้างอิง: eCommerceIQ (2023) SEA Report.":"Depends on target: Shopee for low-mid price items / Lazada for branded products / TikTok Shop for viral products via video. Source: eCommerceIQ (2023) SEA Report."} />
+        <FAQItem q={lang==="TH"?"มีวิธีลดค่าธรรมเนียมไหม?":"How to reduce marketplace fees?"} a={lang==="TH"?"1) เข้าร่วม Preferred Seller 2) ขาย Bundle เพิ่ม AOV 3) ใช้ระบบจัดส่งของแพลตฟอร์ม 4) เข้าร่วมแคมเปญเพื่อเพิ่มยอดขาย | อ้างอิง: LazMall/Shopee Mall Guidelines.":"1) Join Preferred Seller programs 2) Sell bundles to increase AOV 3) Use platform logistics 4) Join campaigns. Source: LazMall/Shopee Mall Guidelines."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -190,6 +199,11 @@ export function SafetyStockCalculator({ lang }: { lang: Lang }) {
            </div>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — สต็อกสำรอง & จุดสั่งซื้อ":"Safety Stock FAQ"}>
+        <FAQItem q={lang==="TH"?"Safety Stock คืออะไร?":"What is Safety Stock?"} a={lang==="TH"?"Safety Stock คือจำนวนสินค้าสำรองป้องกันการขาดสต็อกเมื่อยอดขายหรือ Lead Time ผันผวนเกินคาด สำคัญเพราะสินค้าขาดสต็อก = เสียรายได้ + เสียลูกค้าระยะยาว | อ้างอิง: Silver EA, Pyke DF. (2016). Inventory and Production Management. Wiley.":"Safety Stock is buffer inventory preventing stockouts when demand or lead time exceeds expectations. Source: Silver EA, Pyke DF. (2016) Inventory and Production Management."} />
+        <FAQItem q={lang==="TH"?"Reorder Point คำนวณยังไง?":"How is Reorder Point calculated?"} a={lang==="TH"?"สูตร: Reorder Point = (ยอดขายเฉลี่ย/วัน × Lead Time เฉลี่ย) + Safety Stock เมื่อสต็อกลดลงถึงจุดนี้ ให้สั่งซื้อเพิ่มทันที | อ้างอิง: Chopra S. (2019). Supply Chain Management. Pearson.":"Formula: Reorder Point = (Avg Daily Sales × Avg Lead Time) + Safety Stock. When inventory drops to this level, place a new order immediately. Source: Chopra S. (2019)."} />
+        <FAQItem q={lang==="TH"?"ถ้าเก็บสต็อกมากเกินไปมีผลเสียอย่างไร?":"What are the downsides of excess inventory?"} a={lang==="TH"?"1) ต้นทุนจมสูง (20-30% ต่อปีของมูลค่าสต็อก) 2) เสี่ยงสินค้าเสื่อมหรือตกยุค 3) ค่าเช่าคลังเพิ่ม | อ้างอิง: Ballou RH. (2004). Business Logistics Management.":"1) High carrying cost (20-30%/year) 2) Risk of obsolescence 3) Warehouse costs increase. Source: Ballou RH. (2004) Business Logistics Management."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -229,13 +243,17 @@ export function ShippingCostCalculator({ lang }: { lang: Lang }) {
         <motion.div initial={{opacity:0}} animate={{opacity:1}} className="mt-8 space-y-2">
            <p className="text-sm text-gray-500 mb-4">{lang==="TH"?"*ราคาประมาณการเบื้องต้น (ไม่รวมพื้นที่ห่างไกล)":"*Rough estimations (excluding remote areas)"}</p>
            {result.map((r:any, i:number) => (
-             <div key={r.name} className={`flex justify-between p-4 border rounded-xl shadow-sm ${i === 0 ? 'bg-green-50 border-green-300' : 'bg-white dark:bg-white/5 border-gray-200 dark:border-white/10'}`}>
+           <div key={r.name} className={`flex justify-between p-4 border rounded-xl shadow-sm ${i === 0 ? 'bg-green-50 border-green-300' : 'bg-white dark:bg-white/5 border-gray-200 dark:border-white/10'}`}>
                 <span className="font-bold text-gray-700 dark:text-gray-300">{r.name}</span>
                 <span className="text-green-600 font-black">฿{Math.round(r.cost)}</span>
              </div>
            ))}
-        </motion.div>
+         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — ค่าส่งพัสดุ":"Shipping Cost FAQ"}>
+        <FAQItem q={lang==="TH"?"ส่งพัสดุขนส่งไหนถูกที่สุดในไทย?":"Which courier is cheapest in Thailand?"} a={lang==="TH"?"โดยทั่วไป Flash Express และ J&T Express มีราคาถูกที่สุดสำหรับพัสดุน้ำหนักเบา (< 3 kg) เริ่มต้นที่ 19-35 บาท สำหรับพัสดุหนัก Kerry Express และ EMS ให้บริการครอบคลุมกว่า | อ้างอิง: เว็บไซต์ผู้ให้บริการ 2024.":"Flash Express and J&T are cheapest for lightweight parcels (< 3kg) starting at 19-35 THB. For heavier items, Kerry Express and EMS offer better coverage. Source: Carrier websites 2024."} />
+        <FAQItem q={lang==="TH"?"น้ำหนักตามปริมาตร (Volumetric Weight) คืออะไร?":"What is Volumetric Weight?"} a={lang==="TH"?"ขนส่งคิดค่าส่งจากน้ำหนักจริง หรือน้ำหนักตามปริมาตร อันไหนมากกว่าใช้อันนั้น สูตร: (กว้าง × ยาว × สูง cm) ÷ 5,000 = น้ำหนักตามปริมาตร (kg) | อ้างอิง: IATA Dimensional Weight Standard.":"Carriers charge based on actual or volumetric weight, whichever is greater. Formula: (L × W × H cm) ÷ 5,000 = volumetric weight (kg). Source: IATA Dimensional Weight Standard."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -297,6 +315,10 @@ export function ReturnRateCalculator({ lang }: { lang: Lang }) {
            </div>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — อัตราการคืนสินค้า":"Return Rate FAQ"}>
+        <FAQItem q={lang==="TH"?"อัตราการคืนสินค้าเฉลี่ยในอีคอมเมิร์ซไทยอยู่ที่เท่าไร?":"What's the average return rate for Thai e-commerce?"} a={lang==="TH"?"ในไทยอัตราคืนสินค้าเฉลี่ย 3-8%: แฟชั่น 15-30% / อิเล็กทรอนิกส์ 5-10% / อาหาร < 3% | อ้างอิง: Bain & Company (2022) SEA E-commerce Report.":"Thai average is 3-8% by category: Fashion 15-30% / Electronics 5-10% / Food < 3%. Source: Bain & Company (2022)."} />
+        <FAQItem q={lang==="TH"?"วิธีลดอัตราการคืนสินค้า?":"How to reduce return rates?"} a={lang==="TH"?"1) ใส่รูปสินค้าจริงชัดเจน 2) ข้อมูลขนาด/สเปคละเอียด 3) Size Chart สำหรับเสื้อผ้า 4) QC ก่อนส่ง 5) แพ็คดี ช่วยลดอัตราคืนได้ถึง 50% | อ้างอิง: Narvar (2023) State of Returns Report.":"1) Clear real photos 2) Detailed specs 3) Size charts 4) Pre-shipment QC 5) Proper packaging. Reduces returns up to 50%. Source: Narvar (2023)."} />
+      </SEOFAQ>
     </div>
   );
 }

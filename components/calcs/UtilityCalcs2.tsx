@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
-import { useLocalState, inputClass, labelClass } from "./shared";
+import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem } from "./shared";
 
 // 1. Grade Converter
 export function GradeConverter({ lang }: { lang: Lang }) {
@@ -55,6 +55,10 @@ export function GradeConverter({ lang }: { lang: Lang }) {
            </div>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — แปลงเกรด":"Grade Converter FAQ"}>
+        <FAQItem q={lang==="TH"?"เกรดไทย 3.0 เทียบเท่าอะไรในระบบอเมริกา?":"What is a Thai 3.0 GPA equivalent to in the US?"} a={lang==="TH"?"เกรด 3.0 ไทยเทียบเท่า B ในระบบอเมริกา หรือ Lower Second (2:2) ในระบบอังกฤษ ถือว่าคะแนนอยู่ในระดับดี | อ้างอิง: WES (World Education Services) Grade Equivalency.":"Thai 3.0 equals B in US system or Lower Second (2:2) in UK. Considered 'good' level. Source: WES Grade Equivalency."} />
+        <FAQItem q={lang==="TH"?"สมัครเรียนต่อมหาวิทยาลัยต่างประเทศต้องใช้ GPA เท่าไร?":"What GPA is needed for international universities?"} a={lang==="TH"?"โดยทั่วไป: US Top 50 ต้องการ 3.5+ / UK Russell Group ต้องการ First-Class หรือ Upper Second / ออสเตรเลีย Group of Eight ต้องการ GPA 3.0+ แต่ละโปรแกรมอาจต่างกัน | อ้างอิง: US News, QS World Rankings.":"Generally: US Top 50 needs 3.5+ / UK Russell Group needs Upper Second / Australian Go8 needs 3.0+. Requirements vary by program. Source: US News, QS Rankings."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -109,6 +113,10 @@ export function TargetGPACalculator({ lang }: { lang: Lang }) {
            {!result.possible && <div className="text-sm text-red-500 mt-2 font-bold">{lang==="TH"?"เป็นไปไม่ได้ (เกิน 4.00)":"Impossible (over 4.0)"}</div>}
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — เป้าหมาย GPA":"Target GPA FAQ"}>
+        <FAQItem q={lang==="TH"?"ถ้าเกรดที่ต้องได้เกิน 4.00 หมายความว่าอย่างไร?":"What if the required GPA exceeds 4.00?"} a={lang==="TH"?"หมายความว่าไม่สามารถทำได้ในเทอมเดียว ต้องแบ่งเป้าหมายออกเป็นหลายเทอม หรือลงทะเบียนหน่วยกิตเพิ่มเพื่อเพิ่มเวลา | อ้างอิง: Academic Advising Best Practices.":"It means the goal is impossible in one term. Spread the target over multiple terms or register more credits to increase your time. Source: Academic Advising Best Practices."} />
+        <FAQItem q={lang==="TH"?"GPA สะสมคำนวณยังไง?":"How is cumulative GPA calculated?"} a={lang==="TH"?"สูตร: GPA สะสม = ผลรวม (Grade Point × หน่วยกิตแต่ละวิชา) ÷ หน่วยกิตรวมทั้งหมด เช่น คะแนน A (4.0) วิชา 3 หน่วยกิต = 12 + คะแนน B (3.0) วิชา 3 หน่วยกิต = 9 รวม 21/6 = 3.50 | อ้างอิง: ระเบียบการศึกษาไทย.":"Formula: CGPA = Sum(Grade Points × Credits per course) ÷ Total Credits. Example: A(4.0)×3cr = 12 + B(3.0)×3cr = 9 → 21/6 = 3.50. Source: Thai Education System."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -164,6 +172,10 @@ export function PercentileCalculator({ lang }: { lang: Lang }) {
            </div>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — Percentile และ Z-Score":"Percentile & Z-Score FAQ"}>
+        <FAQItem q={lang==="TH"?"Percentile คืออะไร? ต่างจาก Z-Score อย่างไร?":"What is Percentile? How is it different from Z-Score?"} a={lang==="TH"?"Percentile บอกว่าคุณอยู่อันดับที่เท่าไรเมื่อเทียบกับคนทั้งหมด (e.g. Percentile 85 = ทำคะแนนได้ดีกว่า 85% ของคน) ส่วน Z-Score บอกว่าคะแนนห่างจากค่าเฉลี่ยกี่ SD (Standard Deviation) | อ้างอิง: Walpole RE. (2016). Probability & Statistics for Engineers.":"Percentile tells your rank compared to all (e.g. 85th = better than 85%). Z-Score tells how many standard deviations from the mean. Source: Walpole RE. (2016) Probability & Statistics."} />
+        <FAQItem q={lang==="TH"?"ใช้ในสถานการณ์จริงแบบไหน?":"Where is this used in real life?"} a={lang==="TH"?"ใช้ในการสอบ (GAT/PAT, SAT, TOEFL), การวัดการเจริญเติบโตของเด็ก, การคัดเลือกบุคลากร (HR), การวิเคราะห์ข้อมูลทางการแพทย์และวิทยาศาสตร์ | อ้างอิง: National Center for Education Statistics.":"Used in standardized testing (GAT/PAT, SAT, TOEFL), child growth charts, HR recruitment screening, and medical/scientific research. Source: National Center for Education Statistics."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -209,6 +221,10 @@ export function ReadingTimeCalculator({ lang }: { lang: Lang }) {
            <div className="text-sm text-gray-500 mt-2">({lang==="TH"?"ใช้เวลารวม":"Total time:"} {result.totalHours} {lang==="TH"?"ชม.":"hrs"})</div>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — เวลาอ่านหนังสือ":"Reading Time FAQ"}>
+        <FAQItem q={lang==="TH"?"คนเฉลี่ยอ่านหนังสือได้เร็วแค่ไหน?":"How fast does an average person read?"} a={lang==="TH"?"คนทั่วไปอ่านได้ 200-250 คำ/นาที (ภาษาอังกฤษ) หรือประมาณ 25-35 หน้า/ชั่วโมง หนังสือวิชาการจะช้ากว่า นิยายจะเร็วกว่า | อ้างอิง: Brysbaert M. (2019). Journal of Memory and Language.":"Average reading speed is 200-250 words/min or about 25-35 pages/hour. Academic texts are slower, novels faster. Source: Brysbaert (2019)."} />
+        <FAQItem q={lang==="TH"?"วิธีเพิ่มความเร็วในการอ่านหนังสือ?":"How to read faster?"} a={lang==="TH"?"1) อ่านทุกวันสร้างนิสัย 2) หยุดอ่านย้อนกลับ 3) ใช้นิ้วหรือปากกานำสายตา 4) Skim ก่อนอ่านละเอียด 5) ใช้ Pomodoro Technique (25 นาทีอ่าน + 5 นาทีพัก) | อ้างอิง: Rayner K. (2016). Psychological Science.":"1) Read daily 2) Reduce re-reading 3) Use a pointer 4) Skim before detailed reading 5) Use Pomodoro Technique. Source: Rayner K. (2016) Psychological Science."} />
+      </SEOFAQ>
     </div>
   );
 }

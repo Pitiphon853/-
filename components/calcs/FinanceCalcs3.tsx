@@ -70,6 +70,11 @@ export function DCACalculator({ lang }: { lang: Lang }) {
            <p className="text-xs text-gray-400 text-center mt-2">*{lang==="TH"?"การลงทุนมีความเสี่ยง ผลลัพธ์นี้เป็นเพียงการจำลองทางคณิตศาสตร์เท่านั้น ไม่ใช่คำแนะนำการลงทุน":"Investments carry risk. This is a mathematical simulation, not financial advice."}</p>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — DCA (Dollar Cost Averaging)":"DCA FAQ"}>
+        <FAQItem q={lang==="TH"?"DCA คืออะไร? ดีกว่าลงทุนก้อนเดียวไหม?":"What is DCA? Is it better than lump sum?"} a={lang==="TH"?"DCA คือการลงทุนสม่ำเสมอทุกเดือนด้วยจำนวนเงินเท่ากัน ช่วยลดความเสี่ยงจากการเข้าตลาดผิดจังหวะ งานวิจัยพบว่า Lump Sum ให้ผลตอบแทนดีกว่า 2 ใน 3 ของเวลา แต่ DCA ลดความเสี่ยงด้านจิตวิทยาและความผันผวน | อ้างอิง: Vanguard (2012) Dollar-Cost Averaging vs Lump Sum Investing.":"DCA is investing a fixed amount regularly. Research shows Lump Sum outperforms 2/3 of the time, but DCA reduces psychological risk and volatility. Source: Vanguard (2012) DCA vs Lump Sum Study."} />
+        <FAQItem q={lang==="TH"?"ผลตอบแทน 8% ต่อปี สมเหตุสมผลไหม?":"Is 8% annual return realistic?"} a={lang==="TH"?"S&P 500 ให้ผลตอบแทนเฉลี่ย 10% ต่อปี (ก่อนหักเงินเฟ้อ) หรือ 7% หลังหักเงินเฟ้อ ในไทย SET Index เฉลี่ย 7-9% ต่อปี | อ้างอิง: Damodaran (NYU Stern) Historical Returns Database.":"S&P 500 averages ~10% annually (before inflation) or ~7% real. Thai SET averages 7-9%. Source: Damodaran (NYU Stern) Historical Returns."} />
+        <FAQItem q={lang==="TH"?"ควร DCA เท่าไหร่ต่อเดือน?":"How much should I DCA monthly?"} a={lang==="TH"?"กฎทั่วไปคือ 10-20% ของรายได้ต่อเดือน ตามกฎ 50/30/20 ควรจัดสรร 20% เพื่อออมและลงทุน เริ่มต้นน้อยๆ ดีกว่าไม่เริ่มเลย | อ้างอิง: Elizabeth Warren (2005). All Your Worth: The Ultimate Lifetime Money Plan.":"General rule: 10-20% of monthly income. The 50/30/20 rule suggests 20% for savings/investment. Starting small is better than not starting. Source: Warren (2005) All Your Worth."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -137,6 +142,10 @@ export function StockFeeCalculator({ lang }: { lang: Lang }) {
            </div>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — ค่าธรรมเนียมซื้อขายหุ้น":"Stock Trading Fees FAQ"}>
+        <FAQItem q={lang==="TH"?"ค่าคอมมิชชั่นซื้อขายหุ้นไทยอยู่ที่เท่าไร?":"What are typical Thai stock trading commissions?"} a={lang==="TH"?"อัตราเฉลี่ยอยู่ที่ 0.15-0.25% ของมูลค่าซื้อขาย (Internet Trading) ยังต้องเสีย VAT 7% ของค่าคอมมิชชั่นอีก โบรกเกอร์ออนไลน์ราคาถูกสุดเริ่ม 0.10% | อ้างอิง: SET (ตลาดหลักทรัพย์แห่งประเทศไทย) Commission Rates.":"Average is 0.15-0.25% of trade value (Internet Trading) plus 7% VAT on commission. Discount brokers start at 0.10%. Source: SET (Stock Exchange of Thailand) Commission Rates."} />
+        <FAQItem q={lang==="TH"?"ซื้อหุ้นขั้นต่ำกี่บาท?":"What's the minimum to start trading Thai stocks?"} a={lang==="TH"?"ขั้นต่ำคือ 100 หุ้น (1 board lot) ราคาต่ำสุดอยู่ที่ประมาณ 0.01 บาท/หุ้น แต่ในทางปฏิบัติควรมีเงิน 5,000-10,000 บาทขึ้นไป เพื่อให้ค่าธรรมเนียมไม่กินกำไร | อ้างอิง: SET Investor Education.":"Minimum is 100 shares (1 board lot). Practically, start with 5,000-10,000 THB+ so fees don't eat profits. Source: SET Investor Education."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -196,6 +205,11 @@ export function NetSalaryCalculator({ lang }: { lang: Lang }) {
            <p className="text-xs text-gray-500">*{lang==="TH"?"เป็นการประมาณการเบื้องต้น ภาษีจริงอาจต่างออกไปตามค่าลดหย่อน":"Estimation only. Actual tax depends on your deductions."}</p>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — เงินเดือนสุทธิ":"Net Salary FAQ"}>
+        <FAQItem q={lang==="TH"?"ประกันสังคมหักเท่าไร?":"How much is Social Security deduction?"} a={lang==="TH"?"ผู้ประกันตนมาตรา 33 (ลูกจ้าง) หักเงินสมทบ 5% ของเงินเดือน แต่ไม่เกิน 750 บาท/เดือน (ฐานเงินเดือนสูงสุดที่ 15,000 บาท) นายจ้างสมทบเท่ากัน | อ้างอิง: สำนักงานประกันสังคม (SSO).":"Section 33 insured (employees) pay 5% of salary, capped at 750 THB/month (based on max salary of 15,000 THB). Employer matches equally. Source: SSO Thailand."} />
+        <FAQItem q={lang==="TH"?"ภาษีเงินได้บุคคลธรรมดาคำนวณอย่างไร?":"How is Thai personal income tax calculated?"} a={lang==="TH"?"ภาษีไทยเป็นอัตราก้าวหน้า: 0-150K = 0% / 150K-300K = 5% / 300K-500K = 10% / 500K-750K = 15% / 750K-1M = 20% / 1M-2M = 25% / 2M-5M = 30% / 5M+ = 35% ก่อนคำนวณต้องหักค่าลดหย่อนก่อน | อ้างอิง: กรมสรรพากร (Revenue Department).":"Thai tax uses progressive rates: 0-150K = 0% / 150K-300K = 5% / 300K-500K = 10% / etc. up to 35%. Deductions are applied before calculation. Source: Thai Revenue Department."} />
+        <FAQItem q={lang==="TH"?"ค่าลดหย่อนอะไรบ้างที่ใช้ได้?":"What tax deductions are available?"} a={lang==="TH"?"ค่าลดหย่อนหลัก: ส่วนตัว 60,000 บาท, คู่สมรส 60,000, ลูก 30,000-60,000/คน, พ่อแม่ 30,000/คน, ประกันสังคม (ตามจริง), ประกันชีวิต สูงสุด 100,000, LTF/SSF/RMF ตามเงื่อนไข | อ้างอิง: กรมสรรพากร (2024).":"Key deductions: Personal 60,000 THB, Spouse 60,000, Child 30,000-60,000, Parents 30,000 each, SSF/RMF per conditions. Source: Revenue Department (2024)."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -248,6 +262,10 @@ export function ExpenseTrackerCalculator({ lang }: { lang: Lang }) {
            </div>
         </motion.div>
       )}
+      <SEOFAQ title={lang==="TH"?"FAQ — กฎ 50/30/20":"50/30/20 Budget FAQ"}>
+        <FAQItem q={lang==="TH"?"กฎ 50/30/20 คืออะไร? ใครคิดค้น?":"What is the 50/30/20 rule?"} a={lang==="TH"?"กฎ 50/30/20 ถูกคิดค้นโดย Elizabeth Warren และ Amelia Warren Tyagi ในหนังสือ 'All Your Worth' (2005) แบ่ง 50% สำหรับสิ่งจำเป็น 30% สิ่งที่ต้องการ 20% ออม/ลงทุน | อ้างอิง: Warren & Tyagi (2005). All Your Worth.":"Created by Elizabeth Warren and Amelia Warren Tyagi in 'All Your Worth' (2005). Split: 50% Needs, 30% Wants, 20% Savings. Source: Warren & Tyagi (2005)."} />
+        <FAQItem q={lang==="TH"?"เงินเดือน 30,000 บาท จัดสรรยังไง?":"How to budget 30,000 THB salary?"} a={lang==="TH"?"ตามกฎ 50/30/20: 15,000 บาท (ค่าบ้าน ค่ากิน ค่าเดินทาง) + 9,000 บาท (ช้อปปิ้ง ดูหนัง สังสรรค์) + 6,000 บาท (ออม ลงทุน) ถ้าค่าครองชีพสูง อาจปรับเป็น 60/20/20 | อ้างอิง: SCB EIC Economic Report (2023).":"Under 50/30/20: 15,000 (rent, food, transport) + 9,000 (entertainment) + 6,000 (savings). Adjust to 60/20/20 in high-cost areas. Source: SCB EIC (2023)."} />
+      </SEOFAQ>
     </div>
   );
 }
