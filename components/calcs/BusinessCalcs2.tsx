@@ -31,11 +31,9 @@ export function BreakEvenCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ธุรกิจ)" : "Business FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — จุดคุ้มทุน":"Break-Even FAQ"}>
+          <FAQItem q={lang==="TH"?"จุดคุ้มทุน (Break-Even Point) คืออะไร?":"What is Break-Even Point?"} a={lang==="TH"?"จุดที่รายได้เท่ากับต้นทุนรวม (คงที่+ผันแปร) สูตร: BEP = ต้นทุนคงที่ ÷ (ราคาขาย - ต้นทุนผันแปรต่อหน่วย) เช่น ต้นทุนคงที่ 100,000 บาท ขายชิ้นละ 500 ต้นทุนผันแปร 300 จะคุ้มทุนที่ 500 ชิ้น | อ้างอิง: Garrison RH. (2021). Managerial Accounting. McGraw-Hill.":"The point where revenue equals total costs. Formula: BEP = Fixed Costs ÷ (Price - Variable Cost per unit). | Source: Garrison (2021) Managerial Accounting, McGraw-Hill."} />
+          <FAQItem q={lang==="TH"?"ธุรกิจใหม่ควรคุ้มทุนภายในกี่ปี?":"How long should a new business take to break even?"} a={lang==="TH"?"ขึ้นอยู่กับประเภทธุรกิจ: ร้านอาหาร 6-18 เดือน, ร้านค้าปลีก 1-2 ปี, Startup เทคโนโลยี 2-5 ปี, อสังหาริมทรัพย์ 5-10 ปี | อ้างอิง: SBA (Small Business Administration) — Business Planning Guide.":"Depends on type: Restaurant 6-18 months, Retail 1-2 years, Tech startup 2-5 years, Real estate 5-10 years. | Source: SBA Business Planning Guide."} />
         </SEOFAQ>
       </div>
     </div>
@@ -71,11 +69,8 @@ export function MarkupCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ธุรกิจ)" : "Business FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — คำนวณเงินเดือน":"Payroll FAQ"}>
+          <FAQItem q={lang==="TH"?"ค่าแรงขั้นต่ำไทยปี 2024 เท่าไร?":"What is Thailand's minimum wage in 2024?"} a={lang==="TH"?"ค่าแรงขั้นต่ำปี 2024 อยู่ที่ 330-370 บาท/วัน แตกต่างตามจังหวัด กรุงเทพฯ 363 บาท ภูเก็ต 370 บาท (สูงสุด) นายจ้างต้องจ่ายประกันสังคม 5% (สูงสุด 750 บาท/เดือน) | อ้างอิง: กระทรวงแรงงาน — ประกาศค่าแรงขั้นต่ำ; สำนักงานประกันสังคม.":"2024 minimum wage: 330-370 THB/day by province. Bangkok 363 THB, Phuket 370 THB (highest). Employer pays 5% social security (max 750 THB/month). | Source: Thai Ministry of Labour; Social Security Office."} />
         </SEOFAQ>
       </div>
     </div>
@@ -108,11 +103,8 @@ export function DepreciationCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ธุรกิจ)" : "Business FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — ส่วนลด":"Discount FAQ"}>
+          <FAQItem q={lang==="TH"?"ส่วนลด 50%+20% เท่ากับ 70% ไหม?":"Does 50% + 20% off equal 70% off?"} a={lang==="TH"?"ไม่ใช่! ลด 50% ก่อน แล้วลดอีก 20% จากราคาที่เหลือ เช่น สินค้า 1,000 บาท ลด 50% = 500 แล้วลด 20% = 400 บาท (ลดจริง 60% ไม่ใช่ 70%) สูตร: ราคาสุดท้าย = ราคา × (1-d1) × (1-d2) | อ้างอิง: Kotler P. (2020). Marketing Management. Pearson.":"No! 50% then 20% off the remainder: 1,000 → 500 → 400 (actual 60% off, not 70%). Formula: Final = Price × (1-d1) × (1-d2). | Source: Kotler (2020) Marketing Management, Pearson."} />
         </SEOFAQ>
       </div>
     </div>
@@ -148,11 +140,8 @@ export function COGSCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ธุรกิจ)" : "Business FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — สินค้าคงคลัง":"Inventory FAQ"}>
+          <FAQItem q={lang==="TH"?"Inventory Turnover ที่ดีคือเท่าไร?":"What is a good inventory turnover ratio?"} a={lang==="TH"?"ขึ้นอยู่กับอุตสาหกรรม: ซูเปอร์มาร์เก็ต 12-20 รอบ/ปี, เสื้อผ้า 4-6 รอบ, อิเล็กทรอนิกส์ 6-8 รอบ, รถยนต์ 2-4 รอบ ยิ่งสูงยิ่งดี แต่ต่ำเกินไปอาจขาดสต็อก | อ้างอิง: Wild JJ. (2022). Financial Accounting. McGraw-Hill; Investopedia — Inventory Turnover Ratio.":"Varies by industry: Grocery 12-20x/year, Apparel 4-6x, Electronics 6-8x, Auto 2-4x. Higher is better but too high risks stockouts. | Source: Wild (2022) McGraw-Hill; Investopedia."} />
         </SEOFAQ>
       </div>
     </div>
@@ -181,11 +170,8 @@ export function LTVCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ธุรกิจ)" : "Business FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — คำนวณทิป":"Tip Calculator FAQ"}>
+          <FAQItem q={lang==="TH"?"ในไทยต้องให้ทิปเท่าไร?":"How much to tip in Thailand?"} a={lang==="TH"?"ไทยไม่บังคับทิป แต่มีธรรมเนียม: ร้านอาหารหรู 5-10% (บางร้านรวม Service Charge 10% แล้ว), แท็กซี่ ปัดขึ้นให้เลขกลม, พนักงานโรงแรม 20-50 บาท/ครั้ง, สปา 10-15% | อ้างอิง: TAT (การท่องเที่ยวแห่งประเทศไทย) — Thailand Travel Tips; Lonely Planet Thailand Guide.":"Thailand has no mandatory tipping. Customs: Upscale restaurant 5-10% (some include 10% service charge), Taxi round up, Hotel staff 20-50 THB, Spa 10-15%. | Source: TAT; Lonely Planet Thailand."} />
         </SEOFAQ>
       </div>
     </div>
@@ -214,11 +200,8 @@ export function CACCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ธุรกิจ)" : "Business FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — LTV":"Customer LTV FAQ"}>
+          <FAQItem q={lang==="TH"?"LTV/CAC Ratio ที่ดีคือเท่าไร?":"What is a good LTV/CAC ratio?"} a={lang==="TH"?"อัตราส่วน LTV:CAC ที่ดีคือ 3:1 ขึ้นไป หมายความว่ามูลค่าตลอดชีพลูกค้าควรมากกว่าต้นทุนการหาลูกค้า 3 เท่า ต่ำกว่า 1:1 = ขาดทุน, 1-3:1 = ควรปรับปรุง, 5:1+ = อาจลงทุนน้อยเกินไป | อ้างอิง: Harvard Business Review — The Value of Keeping the Right Customers (2014); Y Combinator — Startup School.":"Good LTV:CAC is 3:1+. Below 1:1 = losing money, 1-3:1 = needs improvement, 5:1+ = may be underinvesting. | Source: Harvard Business Review (2014); Y Combinator Startup School."} />
         </SEOFAQ>
       </div>
     </div>
@@ -247,11 +230,8 @@ export function ConversionRateCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ธุรกิจ)" : "Business FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — ROI":"ROI FAQ"}>
+          <FAQItem q={lang==="TH"?"ROI ที่ดีคือกี่เปอร์เซ็นต์?":"What is a good ROI percentage?"} a={lang==="TH"?"ขึ้นอยู่กับประเภทการลงทุน: หุ้น S&P 500 เฉลี่ย 10%/ปี, อสังหาฯ 8-12%/ปี, ธุรกิจ SME คาดหวัง 15-25%/ปี, Startup VC คาดหวัง 10x+ ใน 5-7 ปี สำหรับ Digital Marketing ROI ≥ 400% ถือว่าดี | อ้างอิง: Damodaran A. — Historical Returns on Stocks, NYU Stern; Google Ads — Average ROI Benchmarks.":"Depends on investment: S&P 500 avg 10%/yr, Real estate 8-12%/yr, SME 15-25%/yr, VC expects 10x+ in 5-7 yrs. Digital marketing ROI ≥ 400% is good. | Source: Damodaran, NYU Stern; Google Ads Benchmarks."} />
         </SEOFAQ>
       </div>
     </div>
@@ -280,11 +260,8 @@ export function InventoryTurnoverCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ธุรกิจ)" : "Business FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — อัตราเติบโต":"Growth Rate FAQ"}>
+          <FAQItem q={lang==="TH"?"CAGR คืออะไร? ต่างจาก Growth Rate ธรรมดาอย่างไร?":"What is CAGR vs simple growth rate?"} a={lang==="TH"?"CAGR (Compound Annual Growth Rate) คืออัตราเติบโตเฉลี่ยต่อปีแบบทบต้น ให้ภาพที่แม่นยำกว่า Simple Growth Rate เช่น ยอดขาย 100→200 ใน 3 ปี: Simple = 33%/ปี แต่ CAGR = 26%/ปี (เพราะคิดทบต้น) | อ้างอิง: CFA Institute — CAGR Definition; Investopedia — Compound Annual Growth Rate.":"CAGR = annualized compounded growth rate, more accurate than simple rate. E.g., 100→200 in 3 years: Simple = 33%/yr, CAGR = 26%/yr (compounded). | Source: CFA Institute; Investopedia."} />
         </SEOFAQ>
       </div>
     </div>

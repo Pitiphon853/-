@@ -27,11 +27,9 @@ export function SavingsGoalCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (การเงิน)" : "Finance FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — ภาษีเงินได้":"Income Tax FAQ"}>
+          <FAQItem q={lang==="TH"?"อัตราภาษีเงินได้บุคคลธรรมดาไทยปี 2024 เท่าไร?":"What are Thailand's personal income tax rates in 2024?"} a={lang==="TH"?"ภาษีแบบขั้นบันได: 0-150,000 = ยกเว้น | 150,001-300,000 = 5% | 300,001-500,000 = 10% | 500,001-750,000 = 15% | 750,001-1,000,000 = 20% | 1,000,001-2,000,000 = 25% | 2,000,001-5,000,000 = 30% | 5,000,001+ = 35% หักค่าใช้จ่าย 50% ไม่เกิน 100,000 บาท | อ้างอิง: กรมสรรพากร — อัตราภาษีเงินได้บุคคลธรรมดา (2024).":"Progressive rates: 0-150K exempt, 150-300K 5%, 300-500K 10%, 500-750K 15%, 750K-1M 20%, 1-2M 25%, 2-5M 30%, 5M+ 35%. 50% expense deduction up to 100K. | Source: Thai Revenue Dept. (2024)."} />
+          <FAQItem q={lang==="TH"?"ลดหย่อนภาษีได้อะไรบ้าง?":"What tax deductions are available?"} a={lang==="TH"?"ค่าลดหย่อนหลัก: ส่วนตัว 60,000 | คู่สมรส 60,000 | บุตร 30,000/คน | ประกันสังคม สูงสุด 9,000 | ประกันชีวิต สูงสุด 100,000 | กองทุน SSF/RMF สูงสุด 30% ของรายได้ | ดอกเบี้ยบ้าน สูงสุด 100,000 | เงินบริจาค 2 เท่า (ไม่เกิน 10%) | อ้างอิง: กรมสรรพากร — รายการลดหย่อนภาษี ปีภาษี 2024.":"Main deductions: Personal 60K, Spouse 60K, Child 30K each, Social Security max 9K, Life insurance max 100K, SSF/RMF max 30% income, Home loan interest max 100K, Donations 2x (max 10%). | Source: Thai Revenue Dept. (2024)."} />
         </SEOFAQ>
       </div>
     </div>
@@ -65,11 +63,8 @@ export function InflationCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (การเงิน)" : "Finance FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — ดอกเบี้ยทบต้น":"Compound Interest FAQ"}>
+          <FAQItem q={lang==="TH"?"ดอกเบี้ยทบต้นทำงานอย่างไร?":"How does compound interest work?"} a={lang==="TH"?"ดอกเบี้ยทบต้นคือดอกเบี้ยที่คิดจากเงินต้น+ดอกเบี้ยสะสม สูตร: A = P(1+r/n)^(nt) เช่น ฝาก 100,000 บาท ดอกเบี้ย 5%/ปี ทบต้นรายเดือน 10 ปี = 164,701 บาท (ดอกเบี้ยเดี่ยวได้แค่ 150,000) Albert Einstein เรียกว่า 'สิ่งมหัศจรรย์อันดับ 8 ของโลก' | อ้างอิง: Investopedia — Compound Interest; SEC — Compound Interest Calculator.":"Interest on principal + accumulated interest. Formula: A = P(1+r/n)^(nt). E.g., 100K at 5%/yr compounded monthly for 10 yrs = 164,701 (simple interest = only 150K). | Source: Investopedia; SEC."} />
         </SEOFAQ>
       </div>
     </div>
@@ -98,11 +93,8 @@ export function SalaryToHourlyCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (การเงิน)" : "Finance FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — แปลงสกุลเงิน":"Currency FAQ"}>
+          <FAQItem q={lang==="TH"?"แลกเงินที่ไหนได้เรทดีที่สุด?":"Where to get the best exchange rate?"} a={lang==="TH"?"เรทดีที่สุด: 1) ร้านแลกเงินเอกชน (SuperRich, Vasu) เรทดีกว่าธนาคาร 2-5% 2) ธนาคาร (สาขาสนามบินเรทแย่ที่สุด) 3) บัตร Debit ถอน ATM ต่างประเทศ (ดูค่า FX Fee) หลีกเลี่ยงการแลกที่สนามบินและโรงแรม | อ้างอิง: ธนาคารแห่งประเทศไทย — อัตราแลกเปลี่ยนอ้างอิง; XE.com.":"Best rates: 1) Licensed money changers (SuperRich, Vasu) 2-5% better than banks 2) Banks (airport branches worst) 3) Debit cards abroad (check FX fees). Avoid airport/hotel exchanges. | Source: Bank of Thailand; XE.com."} />
         </SEOFAQ>
       </div>
     </div>
@@ -131,11 +123,8 @@ export function NetWorthCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (การเงิน)" : "Finance FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — เงินเฟ้อ":"Inflation FAQ"}>
+          <FAQItem q={lang==="TH"?"เงินเฟ้อส่งผลต่อเงินออมอย่างไร?":"How does inflation affect savings?"} a={lang==="TH"?"เงินเฟ้อทำให้อำนาจซื้อลดลง เช่น เงินเฟ้อ 3%/ปี เงิน 1,000,000 บาทวันนี้จะมีอำนาจซื้อเท่ากับ 744,094 บาทใน 10 ปี และ 553,676 บาทใน 20 ปี ดังนั้นดอกเบี้ยออมทรัพย์ 0.5%/ปี จริงๆ แล้วขาดทุน 2.5%/ปี | อ้างอิง: ธนาคารแห่งประเทศไทย — เป้าหมายเงินเฟ้อ; สำนักงานสถิติแห่งชาติ — ดัชนีราคาผู้บริโภค (CPI).":"Inflation reduces purchasing power. At 3%/yr, 1M THB today = 744K in 10 yrs, 554K in 20 yrs. So 0.5% savings interest actually loses 2.5%/yr in real terms. | Source: Bank of Thailand; Thai National Statistical Office — CPI."} />
         </SEOFAQ>
       </div>
     </div>
@@ -178,11 +167,8 @@ export function StockProfitCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (การเงิน)" : "Finance FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — ภาษีมูลค่าเพิ่ม":"VAT FAQ"}>
+          <FAQItem q={lang==="TH"?"VAT 7% ในไทยคิดอย่างไร?":"How is Thailand's 7% VAT calculated?"} a={lang==="TH"?"VAT ไทย 7% (ลดจาก 10% ตามพระราชกฤษฎีกา) คิดจากราคาสินค้า/บริการ สูตร: ราคารวม VAT = ราคา × 1.07 หรือ VAT = ราคารวม × 7/107 ธุรกิจที่มีรายได้เกิน 1.8 ล้าน/ปี ต้องจดทะเบียน VAT | อ้างอิง: กรมสรรพากร — ภาษีมูลค่าเพิ่ม; ประมวลรัษฎากร มาตรา 77-95.":"Thai VAT is 7% (reduced from 10%). Formula: Price with VAT = Price × 1.07. VAT amount = Total × 7/107. Businesses with >1.8M THB/yr revenue must register. | Source: Thai Revenue Dept.; Revenue Code §77-95."} />
         </SEOFAQ>
       </div>
     </div>
@@ -211,11 +197,8 @@ export function ROICalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (การเงิน)" : "Finance FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการตามทฤษฎีเท่านั้น ไม่ถือเป็นคำแนะนำในการลงทุนหรือคำแนะนำทางกฎหมาย กรุณาปรึกษาที่ปรึกษาทางการเงินหรือนักบัญชีสำหรับการตัดสินใจขั้นสุดท้าย" : "This calculation is a theoretical estimate and does not constitute financial or legal advice. Please consult a financial advisor or accountant for your final decisions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — สินเชื่อบ้าน":"Mortgage FAQ"}>
+          <FAQItem q={lang==="TH"?"ดอกเบี้ยบ้านไทยปี 2024 เท่าไร?":"What are Thai mortgage rates in 2024?"} a={lang==="TH"?"ดอกเบี้ยบ้าน 2024: MRR ธนาคารใหญ่ 6.65-7.15% ปีแรกโปรโมชั่น 2.5-3.5% (คงที่ 1-3 ปี) สินเชื่อบ้านผ่อนได้สูงสุด 30-35 ปี วงเงินอนุมัติ 80-95% ของราคาประเมิน ค่างวดไม่ควรเกิน 40% ของรายได้ | อ้างอิง: ธนาคารแห่งประเทศไทย — อัตรา MRR; สมาคมธนาคารไทย — สินเชื่อที่อยู่อาศัย.":"2024 rates: MRR 6.65-7.15%, promotional first-year 2.5-3.5% (fixed 1-3 yrs). Max term 30-35 yrs, LTV 80-95%. Monthly payment should not exceed 40% of income. | Source: BOT — MRR rates; Thai Bankers Association."} />
         </SEOFAQ>
       </div>
     </div>

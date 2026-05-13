@@ -88,11 +88,9 @@ export function FoodEnergyCalculator({ lang }: { lang: Lang }) {
       <AdPlaceholder type="in-article" />
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เกษตรกรรม)" : "Agriculture FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ปริมาณที่แนะนำเป็นการคำนวณจากสูตรมาตรฐาน สภาพดินและพืชแต่ละชนิดอาจต้องการการดูแลที่ต่างกัน กรุณาปรึกษานักวิชาการเกษตรเพื่อคำแนะนำที่เฉพาะเจาะจง" : "Recommended amounts are based on standard formulas. Actual soil and crop needs may vary. Please consult an agricultural expert for specific advice."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — พลังงานอาหาร":"Food Energy FAQ"}>
+          <FAQItem q={lang==="TH"?"kcal กับ kJ ต่างกันอย่างไร? ใช้แบบไหนดี?":"What's the difference between kcal and kJ?"} a={lang==="TH"?"kcal (Kilocalorie) นิยมใช้ในไทย สหรัฐอเมริกา และหลายประเทศ ส่วน kJ (Kilojoule) นิยมใช้ในออสเตรเลีย ยุโรป และเป็นหน่วย SI อย่างเป็นทางการ สูตรแปลง: 1 kcal = 4.184 kJ ฉลากอาหารไทย (อย.) ต้องแสดงทั้ง 2 หน่วย | อ้างอิง: USDA National Nutrient Database; สำนักงานคณะกรรมการอาหารและยา (อย.) — ข้อกำหนดฉลากโภชนาการ.":"kcal is used in Thailand/USA, kJ (SI unit) in Australia/EU. 1 kcal = 4.184 kJ. Thai food labels (FDA) must show both. | Source: USDA; Thai FDA Labeling Requirements."} />
+          <FAQItem q={lang==="TH"?"คนเราต้องการพลังงานวันละกี่ kcal?":"How many kcal does a person need daily?"} a={lang==="TH"?"ผู้ชายเฉลี่ย 2,000-2,500 kcal/วัน ผู้หญิงเฉลี่ย 1,600-2,000 kcal/วัน ขึ้นอยู่กับอายุ น้ำหนัก ส่วนสูง และระดับกิจกรรม สำหรับคนไทย กรมอนามัยแนะนำ 2,000 kcal/วัน เป็นฐาน | อ้างอิง: กรมอนามัย กระทรวงสาธารณสุข — ปริมาณสารอาหารอ้างอิงที่ควรได้รับประจำวัน (DRI).":"Men: 2,000-2,500 kcal/day, Women: 1,600-2,000 kcal/day depending on age, weight, height, activity. Thai Dept. of Health recommends 2,000 kcal/day baseline. | Source: Thai Dept. of Health — DRI."} />
         </SEOFAQ>
       </div>
     </div>
@@ -120,11 +118,9 @@ export function FertilizerCalculator({ lang }: { lang: Lang }) {
       <AdPlaceholder type="in-article" />
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เกษตรกรรม)" : "Agriculture FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ปริมาณที่แนะนำเป็นการคำนวณจากสูตรมาตรฐาน สภาพดินและพืชแต่ละชนิดอาจต้องการการดูแลที่ต่างกัน กรุณาปรึกษานักวิชาการเกษตรเพื่อคำแนะนำที่เฉพาะเจาะจง" : "Recommended amounts are based on standard formulas. Actual soil and crop needs may vary. Please consult an agricultural expert for specific advice."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — ปุ๋ย":"Fertilizer FAQ"}>
+          <FAQItem q={lang==="TH"?"ตัวเลข N-P-K บนถุงปุ๋ยหมายความว่าอย่างไร?":"What do N-P-K numbers on fertilizer bags mean?"} a={lang==="TH"?"N = ไนโตรเจน (ช่วยใบเขียว), P = ฟอสฟอรัส (ช่วยราก/ดอก/ผล), K = โพแทสเซียม (ช่วยลำต้นแข็งแรง/ทนโรค) เช่น ปุ๋ย 16-16-16 มีธาตุอาหารละ 16% รวม 48% ส่วนที่เหลือ 52% เป็นสารเติมแต่ง | อ้างอิง: กรมวิชาการเกษตร — คู่มือการใช้ปุ๋ยเคมี; FAO — Fertilizer Use Guidelines.":"N = Nitrogen (leaf growth), P = Phosphorus (roots/flowers/fruit), K = Potassium (stem strength/disease resistance). 16-16-16 = 16% each nutrient, 52% filler. | Source: Thai Dept. of Agriculture; FAO Fertilizer Guidelines."} />
+          <FAQItem q={lang==="TH"?"ควรใส่ปุ๋ยกี่ครั้งต่อปี?":"How often should I fertilize?"} a={lang==="TH"?"ขึ้นอยู่กับชนิดพืช: ข้าว 2-3 ครั้ง/ฤดู, ผักสวนครัว ทุก 2-4 สัปดาห์, ไม้ผล 2-4 ครั้ง/ปี ควรวิเคราะห์ดินก่อนใส่ปุ๋ยเพื่อไม่ให้เปลืองและไม่ทำลายดิน | อ้างอิง: สำนักวิจัยและพัฒนาการเกษตร — คำแนะนำการใช้ปุ๋ยตามค่าวิเคราะห์ดิน.":"Depends on crop: Rice 2-3 times/season, Vegetables every 2-4 weeks, Fruit trees 2-4 times/year. Soil testing before fertilizing is recommended. | Source: Thai Agricultural Research Development."} />
         </SEOFAQ>
       </div>
     </div>
@@ -155,11 +151,9 @@ export function IrrigationCalculator({ lang }: { lang: Lang }) {
       <AdPlaceholder type="in-article" />
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เกษตรกรรม)" : "Agriculture FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ปริมาณที่แนะนำเป็นการคำนวณจากสูตรมาตรฐาน สภาพดินและพืชแต่ละชนิดอาจต้องการการดูแลที่ต่างกัน กรุณาปรึกษานักวิชาการเกษตรเพื่อคำแนะนำที่เฉพาะเจาะจง" : "Recommended amounts are based on standard formulas. Actual soil and crop needs may vary. Please consult an agricultural expert for specific advice."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — ชลประทาน":"Irrigation FAQ"}>
+          <FAQItem q={lang==="TH"?"1 ไร่ ต้องใช้น้ำกี่ลิตรต่อวัน?":"How much water does 1 rai need per day?"} a={lang==="TH"?"ขึ้นอยู่กับชนิดพืชและฤดูกาล: ข้าวนาปี 8-10 มม./วัน (12,800-16,000 ลิตร/ไร่/วัน), ผักทั่วไป 3-5 มม./วัน, ไม้ผล 5-8 มม./วัน ฤดูร้อนอาจต้องเพิ่ม 20-30% สูตร: 1 มม. น้ำ × 1,600 ตร.ม./ไร่ = 1,600 ลิตร | อ้างอิง: กรมชลประทาน — ความต้องการน้ำของพืช (Crop Water Requirement); FAO Irrigation and Drainage Paper No. 56.":"Depends on crop/season: Rice 8-10 mm/day (12,800-16,000 L/rai/day), Vegetables 3-5 mm/day, Fruit trees 5-8 mm/day. Summer +20-30%. Formula: 1mm × 1,600 m²/rai = 1,600L. | Source: Thai Royal Irrigation Dept.; FAO Paper No. 56."} />
+          <FAQItem q={lang==="TH"?"ระบบน้ำหยดประหยัดน้ำได้มากแค่ไหน?":"How much water does drip irrigation save?"} a={lang==="TH"?"ระบบน้ำหยด (Drip Irrigation) ประหยัดน้ำ 30-60% เทียบกับการปล่อยน้ำท่วมแปลง เพราะส่งน้ำตรงจุดรากพืช ลดการระเหย ข้อมูลจากอิสราเอลแสดงว่าผลผลิตเพิ่ม 20-90% เมื่อใช้ระบบน้ำหยด | อ้างอิง: ICRISAT — Drip Irrigation Technology; Netafim (Israel) — Agricultural Research Data.":"Drip irrigation saves 30-60% water vs. flood irrigation by targeting root zones. Israeli data shows 20-90% yield increase with drip systems. | Source: ICRISAT; Netafim Research Data."} />
         </SEOFAQ>
       </div>
     </div>
@@ -193,11 +187,9 @@ export function YieldCalculator({ lang }: { lang: Lang }) {
       <AdPlaceholder type="in-article" />
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (เกษตรกรรม)" : "Agriculture FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ปริมาณที่แนะนำเป็นการคำนวณจากสูตรมาตรฐาน สภาพดินและพืชแต่ละชนิดอาจต้องการการดูแลที่ต่างกัน กรุณาปรึกษานักวิชาการเกษตรเพื่อคำแนะนำที่เฉพาะเจาะจง" : "Recommended amounts are based on standard formulas. Actual soil and crop needs may vary. Please consult an agricultural expert for specific advice."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — ผลผลิตพืช":"Crop Yield FAQ"}>
+          <FAQItem q={lang==="TH"?"ผลผลิตข้าวเฉลี่ยของไทยอยู่ที่เท่าไร?":"What is Thailand's average rice yield?"} a={lang==="TH"?"ข้าวนาปีไทยเฉลี่ย 450-500 กก./ไร่ ข้าวนาปรังเฉลี่ย 700-800 กก./ไร่ เปรียบเทียบกับจีน 680 กก./ไร่ (นาปี) และเวียดนาม 600 กก./ไร่ ผลผลิตขึ้นอยู่กับพันธุ์ ปุ๋ย น้ำ และการจัดการศัตรูพืช | อ้างอิง: สำนักงานเศรษฐกิจการเกษตร (สศก.) — สถิติการเกษตรของประเทศไทย (2023); FAO FAOSTAT Rice Production.":"Thai wet-season rice averages 450-500 kg/rai, dry-season 700-800 kg/rai. Compare: China 680 kg/rai, Vietnam 600 kg/rai. Yield depends on variety, fertilizer, water, pest management. | Source: Thai Office of Agricultural Economics (2023); FAO FAOSTAT."} />
+          <FAQItem q={lang==="TH"?"วิธีเพิ่มผลผลิตต่อไร่?":"How to increase yield per rai?"} a={lang==="TH"?"1) ใช้พันธุ์ที่เหมาะสมกับพื้นที่ 2) วิเคราะห์ดินและใส่ปุ๋ยตามความต้องการ 3) จัดการน้ำอย่างมีประสิทธิภาพ (AWD method) 4) ป้องกันศัตรูพืชแบบ IPM 5) ปลูกในช่วงเวลาที่เหมาะสม งานวิจัยจาก IRRI แสดงว่าเทคนิค SRI (System of Rice Intensification) เพิ่มผลผลิตได้ 20-50% | อ้างอิง: IRRI — System of Rice Intensification (SRI); กรมวิชาการเกษตร — เทคโนโลยีการเพิ่มผลผลิต.":"1) Use suitable varieties 2) Soil-test-based fertilizing 3) Efficient water management (AWD) 4) IPM pest control 5) Optimal planting timing. IRRI research shows SRI techniques increase yield 20-50%. | Source: IRRI — SRI; Thai Dept. of Agriculture."} />
         </SEOFAQ>
       </div>
     </div>

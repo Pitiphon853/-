@@ -40,11 +40,8 @@ export function DigitalUnitConverter({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — แปลงพื้นที่":"Area Conversion FAQ"}>
+          <FAQItem q={lang==="TH"?"1 ไร่ เท่ากับกี่ตารางเมตร?":"How many sq m in 1 rai?"} a={lang==="TH"?"1 ไร่ = 1,600 ตร.ม. = 4 งาน = 400 ตร.วา ระบบที่ดินไทย: 1 งาน = 400 ตร.ม., 1 ตร.วา = 4 ตร.ม. สำหรับเปรียบเทียบ 1 เอเคอร์ = 2.53 ไร่, 1 เฮกตาร์ = 6.25 ไร่ | อ้างอิง: กรมที่ดิน — หน่วยวัดที่ดินไทย; พ.ร.บ. มาตราชั่งตวงวัด พ.ศ. 2542.":"1 rai = 1,600 sq m = 4 ngan = 400 sq wa. 1 acre = 2.53 rai, 1 hectare = 6.25 rai. | Source: Thai Dept. of Lands; Thai Weights and Measures Act."} />
         </SEOFAQ>
       </div>
     </div>
@@ -78,11 +75,8 @@ export function AngleConverter({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — แปลงปริมาตร":"Volume Conversion FAQ"}>
+          <FAQItem q={lang==="TH"?"1 แกลลอน (US) กับ 1 แกลลอน (UK) ต่างกันไหม?":"Is a US gallon different from a UK gallon?"} a={lang==="TH"?"ต่างกัน! 1 US gallon = 3.785 ลิตร แต่ 1 UK (Imperial) gallon = 4.546 ลิตร ความแตกต่างนี้สำคัญมากในสูตรอาหาร/เครื่องดื่ม และอุตสาหกรรมน้ำมัน ไทยใช้ระบบเมตริก (ลิตร) เป็นมาตรฐาน | อ้างอิง: NIST Handbook 44 — Specifications for Measuring Devices; สำนักงานมาตรวิทยาแห่งชาติ.":"Yes! 1 US gallon = 3.785L, 1 UK gallon = 4.546L. This matters in recipes and oil industry. Thailand uses metric (liters). | Source: NIST Handbook 44; Thai Metrology Institute."} />
         </SEOFAQ>
       </div>
     </div>
@@ -102,11 +96,8 @@ export function ColorConverter({ lang }: { lang: Lang }) {
       </div>
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — แปลงความเร็ว":"Speed Conversion FAQ"}>
+          <FAQItem q={lang==="TH"?"ทำไมเรือและเครื่องบินใช้หน่วย 'นอต' แทน km/h?":"Why do ships and planes use knots?"} a={lang==="TH"?"1 นอต (Knot) = 1 ไมล์ทะเล/ชม. = 1.852 km/h ใช้เพราะ 1 ไมล์ทะเล = 1 ลิปดา (minute of latitude) ทำให้คำนวณตำแหน่งบนแผนที่เดินเรือได้ง่าย มาตรฐาน ICAO กำหนดให้การบินพลเรือนใช้นอต | อ้างอิง: ICAO Annex 5 — Units of Measurement; IMO — Maritime Navigation Standards.":"1 knot = 1 nautical mile/hr = 1.852 km/h. Used because 1 nautical mile = 1 minute of latitude, simplifying navigation. ICAO mandates knots for aviation. | Source: ICAO Annex 5; IMO."} />
         </SEOFAQ>
       </div>
     </div>
@@ -144,11 +135,8 @@ export function TemperatureConverter({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — แปลงแรงดัน":"Pressure Conversion FAQ"}>
+          <FAQItem q={lang==="TH"?"PSI กับ Bar ต่างกันอย่างไร?":"What's the difference between PSI and Bar?"} a={lang==="TH"?"PSI (Pound per Square Inch) นิยมใช้ในสหรัฐฯ/อังกฤษ Bar นิยมใช้ในยุโรปและเอเชีย 1 bar = 14.5 PSI ลมยางรถยนต์ทั่วไป: 30-35 PSI = 2.0-2.4 bar หม้อแรงดัน: 1-1.5 bar = 14.5-21.7 PSI | อ้างอิง: NIST — Pressure Unit Conversions; ISO 2533 Standard Atmosphere.":"PSI used in US/UK, Bar in Europe/Asia. 1 bar = 14.5 PSI. Car tires: 30-35 PSI = 2.0-2.4 bar. Pressure cooker: 1-1.5 bar. | Source: NIST; ISO 2533."} />
         </SEOFAQ>
       </div>
     </div>
@@ -186,11 +174,8 @@ export function SpeedConverter({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — แปลงพลังงาน":"Energy Conversion FAQ"}>
+          <FAQItem q={lang==="TH"?"Watt, Joule, Calorie ต่างกันอย่างไร?":"What's the difference between Watt, Joule, Calorie?"} a={lang==="TH"?"Joule (J) = หน่วยพลังงาน SI / Calorie (cal) = พลังงานความร้อน (1 cal = 4.184 J) / Watt (W) = กำลัง = พลังงานต่อเวลา (1W = 1 J/s) / kWh = หน่วยไฟฟ้า (1 kWh = 3.6 ล้าน J) ค่าไฟไทย ~4 บาท/kWh | อ้างอิง: BIPM — SI Units; การไฟฟ้านครหลวง — อัตราค่าไฟฟ้า.":"Joule = SI energy unit / Calorie = heat (1 cal = 4.184 J) / Watt = power (1W = 1 J/s) / kWh = electrical (1 kWh = 3.6M J). Thai electricity ~4 THB/kWh. | Source: BIPM SI; MEA Thailand."} />
         </SEOFAQ>
       </div>
     </div>
@@ -228,11 +213,8 @@ export function AreaUnitConverter({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — แปลงข้อมูล":"Data Conversion FAQ"}>
+          <FAQItem q={lang==="TH"?"MB กับ MiB ต่างกันอย่างไร?":"What's the difference between MB and MiB?"} a={lang==="TH"?"MB (Megabyte) = 1,000,000 bytes (ระบบ SI) / MiB (Mebibyte) = 1,048,576 bytes (ระบบ Binary) HDD/ISP ใช้ MB (ดูเยอะกว่า) แต่ OS ใช้ MiB ทำให้ HDD 1 TB แสดงเป็น ~931 GiB ใน Windows ผลต่าง ~7% | อ้างอิง: IEC 80000-13 — Binary Prefix Standard; IEEE 1541 — Prefixes for Binary Multiples.":"MB = 1,000,000 bytes (SI). MiB = 1,048,576 bytes (binary). HDD/ISPs use MB, OS uses MiB, so 1 TB HDD shows ~931 GiB in Windows (~7% difference). | Source: IEC 80000-13; IEEE 1541."} />
         </SEOFAQ>
       </div>
     </div>
@@ -270,11 +252,8 @@ export function WeightUnitConverter({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — แปลงเชื้อเพลิง":"Fuel Conversion FAQ"}>
+          <FAQItem q={lang==="TH"?"MPG กับ L/100km แปลงกันอย่างไร?":"How to convert MPG to L/100km?"} a={lang==="TH"?"สูตร: L/100km = 235.215 ÷ MPG (US) เช่น 30 MPG = 7.84 L/100km รถไทยเฉลี่ย: Eco Car 4-5 L/100km, ซีดาน 6-8 L/100km, SUV 8-12 L/100km, กระบะ 7-10 L/100km | อ้างอิง: US EPA — Fuel Economy Guide; กรมธุรกิจพลังงาน — ข้อมูลการใช้น้ำมัน.":"Formula: L/100km = 235.215 ÷ MPG(US). 30 MPG = 7.84 L/100km. Thai averages: Eco Car 4-5, Sedan 6-8, SUV 8-12, Pickup 7-10 L/100km. | Source: US EPA; Thai Dept. of Energy Business."} />
         </SEOFAQ>
       </div>
     </div>
@@ -302,11 +281,8 @@ export function RomanNumeralConverter({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ทั่วไป)" : "General FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "การคำนวณนี้ใช้สูตรมาตรฐานสากล อาจมีการปัดเศษทศนิยมเพื่อความสะดวกในการใช้งาน" : "This calculation uses standard formulas. Rounding may occur for ease of use."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — แปลงมุม":"Angle Conversion FAQ"}>
+          <FAQItem q={lang==="TH"?"Degree, Radian, Gradian ต่างกันอย่างไร?":"What's the difference between Degree, Radian, Gradian?"} a={lang==="TH"?"Degree (°): วงกลม = 360° ใช้ทั่วไป / Radian (rad): วงกลม = 2π rad ใช้ในคณิตศาสตร์/ฟิสิกส์ / Gradian (grad): วงกลม = 400 grad ใช้ในงานสำรวจ สูตร: 1 rad = 57.296° = 63.662 grad | อ้างอิง: ISO 31-1 — Quantities and Units; Khan Academy — Trigonometry Units.":"Degree: circle = 360° / Radian: circle = 2π rad (math/physics) / Gradian: circle = 400 grad (surveying). 1 rad = 57.296° = 63.662 grad. | Source: ISO 31-1; Khan Academy."} />
         </SEOFAQ>
       </div>
     </div>

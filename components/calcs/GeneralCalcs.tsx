@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
 import { AdPlaceholder } from "../AdPlaceholder";
-import { useLocalState, inputClass, labelClass } from "./shared";
+import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem } from "./shared";
 
 // 1. Randomizer
 export function RandomizerCalculator({ lang }: { lang: Lang }) {
@@ -66,6 +66,11 @@ export function RandomizerCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+      <SEOFAQ title={lang==="TH"?"FAQ — สุ่มเลข/สุ่มชื่อ":"Randomizer FAQ"}>
+        <FAQItem q={lang==="TH"?"ระบบสุ่มนี้ยุติธรรมจริงไหม?":"Is this randomizer truly fair?"} a={lang==="TH"?"ใช่ เครื่องมือนี้ใช้ Math.random() ของ JavaScript ซึ่งเป็น Pseudo-Random Number Generator (PRNG) ที่ให้ผลลัพธ์กระจายตัวสม่ำเสมอ (Uniform Distribution) เพียงพอสำหรับการใช้งานทั่วไป เช่น จับฉลาก สุ่มคิว สุ่มรางวัล แต่ไม่เหมาะสำหรับงานด้านความปลอดภัย/การเข้ารหัส ซึ่งต้องใช้ Crypto.getRandomValues() แทน | อ้างอิง: MDN Web Docs — Math.random(), NIST SP 800-90A (Recommendation for Random Number Generation).":"Yes. This uses JavaScript's Math.random() — a PRNG with uniform distribution, sufficient for lotteries, queues, and prizes. Not suitable for cryptographic use (use Crypto.getRandomValues() instead). | Source: MDN Web Docs — Math.random(), NIST SP 800-90A."} />
+        <FAQItem q={lang==="TH"?"สุ่มแบบไม่ซ้ำได้ไหม?":"Can I randomize without repeats?"} a={lang==="TH"?"เวอร์ชันปัจจุบันเป็นการสุ่มแบบอิสระ (Independent Random) แต่ละครั้งมีโอกาสออกซ้ำได้ หากต้องการสุ่มแบบไม่ซ้ำ (Sampling Without Replacement) แนะนำให้ใส่รายชื่อทั้งหมดในโหมดสุ่มชื่อ แล้วลบชื่อที่ถูกสุ่มแล้วออก | อ้างอิง: Knuth DE. (1997). The Art of Computer Programming Vol. 2: Seminumerical Algorithms. Addison-Wesley.":"Current version uses independent random draws (may repeat). For sampling without replacement, use name mode and remove drawn names. | Source: Knuth (1997) The Art of Computer Programming Vol. 2."} />
+        <FAQItem q={lang==="TH"?"ใช้สุ่มจับฉลากหรือแจกของรางวัลได้ไหม?":"Can I use this for giveaways?"} a={lang==="TH"?"ได้ครับ เหมาะสำหรับการจับฉลาก สุ่มลำดับ สุ่มห้อง สุ่มเลือกผู้โชคดี แต่สำหรับการจับรางวัลที่มีมูลค่าสูงหรือมีข้อกำหนดทางกฎหมาย ควรใช้ระบบสุ่มที่ได้รับการรับรอง (Certified RNG) | อ้างอิง: สำนักงานคณะกรรมการคุ้มครองผู้บริโภค (สคบ.) — กฎหมายการจัดกิจกรรมชิงรางวัล.":"Yes — suitable for lotteries, room assignments, and giveaways. For high-value prizes with legal requirements, use a certified RNG. | Source: Thai Consumer Protection Board — Lottery Activity Laws."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -99,6 +104,11 @@ export function WordCounter({ lang }: { lang: Lang }) {
         </div>
       </div>
       <AdPlaceholder type="in-article" />
+      <SEOFAQ title={lang==="TH"?"FAQ — นับจำนวนคำ/ตัวอักษร":"Word Counter FAQ"}>
+        <FAQItem q={lang==="TH"?"นับคำภาษาไทยได้แม่นยำไหม?":"How accurate is Thai word counting?"} a={lang==="TH"?"เครื่องมือนี้ใช้การแยกคำโดยช่องว่าง (Whitespace Tokenization) ซึ่งแม่นยำสำหรับภาษาอังกฤษ แต่ภาษาไทยไม่ใช้ช่องว่างเป็นตัวแบ่งคำ จำนวนคำภาษาไทยจึงอาจไม่ตรง 100% สำหรับการตัดคำไทยที่แม่นยำ ควรใช้ไลบรารี เช่น PyThaiNLP หรือ deepcut | อ้างอิง: Haruechaiyasak C. et al. (2008). LexTo: Thai Lexeme Tokenizer. NECTEC.":"This tool uses whitespace tokenization — accurate for English but Thai doesn't use spaces between words. For precise Thai tokenization, use libraries like PyThaiNLP or deepcut. | Source: Haruechaiyasak et al. (2008) NECTEC."} />
+        <FAQItem q={lang==="TH"?"ใช้ตรวจจำนวนคำสำหรับงานเขียนได้ไหม?":"Can I use this for writing assignments?"} a={lang==="TH"?"ได้ครับ เหมาะสำหรับตรวจสอบจำนวนคำในบทความ รายงาน เรียงความ หรือ Social Media Caption ที่มีข้อจำกัดจำนวนคำ เช่น Twitter/X (280 ตัวอักษร), Instagram Bio (150 ตัวอักษร), Meta Description (155-160 ตัวอักษร) | อ้างอิง: Google Search Central — Meta Description Best Practices (2024).":"Yes — great for checking articles, reports, essays, or social media limits like Twitter/X (280 chars), Instagram Bio (150 chars), Meta Description (155-160 chars). | Source: Google Search Central (2024)."} />
+        <FAQItem q={lang==="TH"?"บทความ SEO ควรมีกี่คำ?":"How many words should an SEO article have?"} a={lang==="TH"?"จากการวิเคราะห์ของ Backlinko (2024) บทความที่ติดหน้าแรก Google มีค่าเฉลี่ย 1,447 คำ อย่างไรก็ตาม คุณภาพเนื้อหาสำคัญกว่าจำนวนคำ Google เน้น E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) มากกว่าความยาว | อ้างอิง: Backlinko (2024). Content Study; Google Search Quality Evaluator Guidelines.":"Backlinko (2024) analysis shows top Google results average 1,447 words. However, content quality matters more than length — Google prioritizes E-E-A-T. | Source: Backlinko (2024); Google Quality Evaluator Guidelines."} />
+      </SEOFAQ>
     </div>
   );
 }
@@ -164,6 +174,11 @@ export function AgeCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
+      <SEOFAQ title={lang==="TH"?"FAQ — คำนวณอายุ":"Age Calculator FAQ"}>
+        <FAQItem q={lang==="TH"?"การคำนวณอายุแบบนี้ใช้กฎหมายอะไรอ้างอิง?":"What legal basis does age calculation use?"} a={lang==="TH"?"ตามประมวลกฎหมายแพ่งและพาณิชย์ไทย มาตรา 16 การนับอายุให้เริ่มนับวันเกิดเป็นวันแรก เช่น เกิดวันที่ 1 ม.ค. 2000 จะครบ 20 ปีบริบูรณ์ในวันที่ 1 ม.ค. 2020 เครื่องมือนี้ใช้การคำนวณแบบปฏิทิน (Calendar Calculation) ตามมาตรฐานสากล | อ้างอิง: ประมวลกฎหมายแพ่งและพาณิชย์ มาตรา 16; ISO 8601 Date and Time Standard.":"Under Thai Civil and Commercial Code Section 16, age counts from date of birth. This tool uses calendar-based calculation per ISO 8601. | Source: Thai Civil Code §16; ISO 8601."} />
+        <FAQItem q={lang==="TH"?"ทำไมบางครั้งนับอายุได้ต่างจากที่คิด?":"Why might calculated age differ from expected?"} a={lang==="TH"?"เพราะคนมักนับปีเกิดเป็น 1 ขวบ (แบบเกาหลี/จีนดั้งเดิม) แต่สากลนับเป็น 0 ขวบ นอกจากนี้ปีอธิกสุรทิน (29 ก.พ.) ทำให้เดือนกุมภาพันธ์มี 28-29 วันไม่เท่ากัน อาจทำให้จำนวนวันต่างไปเล็กน้อย | อ้างอิง: Korean Age System — National Institute of Korean Language; Gregorian Calendar — Royal Observatory Greenwich.":"Common confusion: Korean/Chinese systems count from 1, while international standard counts from 0. Leap years (Feb 29) also affect day counts slightly. | Source: Korean Age System — National Institute of Korean Language; Gregorian Calendar — Royal Observatory Greenwich."} />
+        <FAQItem q={lang==="TH"?"อายุเท่าไรถึงทำอะไรได้ตามกฎหมายไทย?":"At what age can you do things legally in Thailand?"} a={lang==="TH"?"ตามกฎหมายไทย: 15 ปี — สมัครบัตรประชาชน | 17 ปี — ขับรถจักรยานยนต์ | 18 ปี — ขับรถยนต์, ลงคะแนนเสียงเลือกตั้ง | 20 ปี — บรรลุนิติภาวะ สามารถทำนิติกรรมได้เต็มที่ ดื่มเครื่องดื่มแอลกอฮอล์ | 25 ปี — สมัครส.ส. | อ้างอิง: พ.ร.บ. จราจรทางบก; ประมวลกฎหมายแพ่งฯ; รัฐธรรมนูญแห่งราชอาณาจักรไทย.":"Thai legal ages: 15 — National ID | 17 — Motorcycle license | 18 — Car license, voting | 20 — Legal majority, alcohol | 25 — MP candidacy | Source: Thai Traffic Act; Civil Code; Thai Constitution."} />
+      </SEOFAQ>
     </div>
   );
 }

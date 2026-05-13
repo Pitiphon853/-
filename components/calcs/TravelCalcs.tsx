@@ -38,11 +38,9 @@ export function TravelBudgetCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ท่องเที่ยว)" : "Travel FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการเบื้องต้น ค่าใช้จ่ายและเวลาเดินทางจริงอาจเปลี่ยนแปลงตามสถานการณ์จริง" : "This calculation is a rough estimate. Actual travel expenses and time may vary depending on real-world conditions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — เวลาต่างประเทศ":"Time Zone FAQ"}>
+          <FAQItem q={lang==="TH"?"ประเทศไทยใช้เวลา UTC+7 หมายความว่าอย่างไร?":"What does Thailand's UTC+7 mean?"} a={lang==="TH"?"ไทยใช้เวลามาตรฐาน UTC+7 (ICT - Indochina Time) เร็วกว่า London 7 ชม. ช้ากว่า Tokyo 2 ชม. เร็วกว่า New York 12 ชม. (EST) ไทยไม่มี Daylight Saving Time (DST) | อ้างอิง: IERS — Time Zone Database; สถาบันมาตรวิทยาแห่งชาติ — เวลามาตรฐานประเทศไทย.":"Thailand uses UTC+7 (ICT). 7 hrs ahead of London, 2 hrs behind Tokyo, 12 hrs ahead of New York (EST). Thailand has no DST. | Source: IERS Time Zone DB; Thai National Metrology Institute."} />
+          <FAQItem q={lang==="TH"?"Jet Lag คืออะไร? แก้อย่างไร?":"What is jet lag? How to fix it?"} a={lang==="TH"?"Jet Lag เกิดจากนาฬิกาชีวภาพ (Circadian Rhythm) ไม่ตรงกับเวลาท้องถิ่น ร่างกายปรับตัวได้ ~1 ชม./วัน เดินทาง 6 ชม. ใช้เวลาปรับ ~6 วัน วิธีแก้: 1) ปรับเวลานอนล่วงหน้า 2) รับแสงแดดเช้า 3) ดื่มน้ำมาก 4) หลีกเลี่ยงคาเฟอีน/แอลกอฮอล์ | อ้างอิง: Mayo Clinic — Jet Lag Disorder; NASA — Circadian Rhythm Research.":"Jet lag occurs when circadian rhythm mismatches local time. Body adjusts ~1 hr/day. Fix: 1) Pre-adjust sleep 2) Morning sunlight 3) Hydrate 4) Avoid caffeine/alcohol. | Source: Mayo Clinic; NASA Circadian Research."} />
         </SEOFAQ>
       </div>
     </div>
@@ -71,11 +69,8 @@ export function FlightTimeCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ท่องเที่ยว)" : "Travel FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการเบื้องต้น ค่าใช้จ่ายและเวลาเดินทางจริงอาจเปลี่ยนแปลงตามสถานการณ์จริง" : "This calculation is a rough estimate. Actual travel expenses and time may vary depending on real-world conditions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — งบท่องเที่ยว":"Travel Budget FAQ"}>
+          <FAQItem q={lang==="TH"?"งบเที่ยวต่างประเทศควรเตรียมเท่าไร?":"How much budget for international travel?"} a={lang==="TH"?"เอเชีย (ลาว/เวียดนาม/กัมพูชา): 1,000-2,000 บาท/วัน | ญี่ปุ่น/เกาหลี: 3,000-5,000 บาท/วัน | ยุโรป: 4,000-8,000 บาท/วัน | อเมริกา: 5,000-10,000 บาท/วัน (ไม่รวมตั๋วเครื่องบิน) ควรซื้อประกันเดินทาง 200-500 บาท/ทริป | อ้างอิง: Numbeo — Cost of Living Index; Budget Your Trip — Average Daily Travel Costs.":"SE Asia: 1-2K THB/day, Japan/Korea: 3-5K, Europe: 4-8K, America: 5-10K (ex flights). Get travel insurance 200-500 THB/trip. | Source: Numbeo; Budget Your Trip."} />
         </SEOFAQ>
       </div>
     </div>
@@ -115,11 +110,8 @@ export function RoadTripCostCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ท่องเที่ยว)" : "Travel FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลการคำนวณนี้เป็นการประมาณการเบื้องต้น ค่าใช้จ่ายและเวลาเดินทางจริงอาจเปลี่ยนแปลงตามสถานการณ์จริง" : "This calculation is a rough estimate. Actual travel expenses and time may vary depending on real-world conditions."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — ค่าเดินทางรถยนต์":"Road Trip FAQ"}>
+          <FAQItem q={lang==="TH"?"ขับรถไกลเฉลี่ยค่าใช้จ่ายเท่าไร?":"What does a road trip typically cost?"} a={lang==="TH"?"ค่าน้ำมัน: รถเก๋ง ~7 ลิตร/100กม. × 40 บาท/ลิตร = 2.8 บาท/กม. | ค่าทางด่วน กรุงเทพ-หัวหิน ~200 บาท | ค่าผ่านทาง Motor Way กรุงเทพ-โคราช ~180 บาท | ควรพัก 15-30 นาทีทุก 2 ชม. เพื่อความปลอดภัย | อ้างอิง: กรมทางหลวง — อัตราค่าผ่านทาง; กรมธุรกิจพลังงาน — ราคาน้ำมัน.":"Fuel cost: Sedan ~7L/100km × 40 THB/L = 2.8 THB/km. Toll: BKK-Hua Hin ~200 THB, BKK-Korat ~180 THB. Rest 15-30 min every 2 hrs for safety. | Source: Thai Dept. of Highways; Dept. of Energy Business."} />
         </SEOFAQ>
       </div>
     </div>

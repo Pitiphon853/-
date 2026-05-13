@@ -32,11 +32,8 @@ export function PregnancyDueCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ครอบครัว)" : "Family FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลลัพธ์นี้ใช้เพื่อการประเมินเบื้องต้นและเพื่อการศึกษาเท่านั้น ไม่สามารถใช้แทนคำแนะนำทางการแพทย์ได้ กรุณาปรึกษาแพทย์ผู้เชี่ยวชาญเพื่อการวินิจฉัยที่แม่นยำ" : "This result is for estimation and educational purposes only. It does not replace professional medical advice. Please consult a doctor for an accurate diagnosis."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — ค่าคลอดบุตร":"Childbirth Cost FAQ"}>
+          <FAQItem q={lang==="TH"?"ค่าคลอดบุตรในไทยเท่าไร?":"How much does childbirth cost in Thailand?"} a={lang==="TH"?"โรงพยาบาลรัฐ: คลอดธรรมชาติ 5,000-15,000 บาท, ผ่าคลอด 10,000-30,000 บาท / โรงพยาบาลเอกชน: คลอดธรรมชาติ 50,000-100,000 บาท, ผ่าคลอด 80,000-200,000 บาท สิทธิประกันสังคมเบิกค่าคลอดได้ 15,000 บาท | อ้างอิง: สำนักงานประกันสังคม — สิทธิกรณีคลอดบุตร; กรมบัญชีกลาง — สิทธิข้าราชการ.":"Public hospital: Natural 5-15K THB, C-section 10-30K. Private: Natural 50-100K, C-section 80-200K. Social Security covers 15K THB. | Source: Thai Social Security Office; Comptroller General's Dept."} />
         </SEOFAQ>
       </div>
     </div>
@@ -71,11 +68,8 @@ export function OvulationCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ครอบครัว)" : "Family FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลลัพธ์นี้ใช้เพื่อการประเมินเบื้องต้นและเพื่อการศึกษาเท่านั้น ไม่สามารถใช้แทนคำแนะนำทางการแพทย์ได้ กรุณาปรึกษาแพทย์ผู้เชี่ยวชาญเพื่อการวินิจฉัยที่แม่นยำ" : "This result is for estimation and educational purposes only. It does not replace professional medical advice. Please consult a doctor for an accurate diagnosis."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — ค่าเลี้ยงดูบุตร":"Child Cost FAQ"}>
+          <FAQItem q={lang==="TH"?"เลี้ยงลูก 1 คนในไทยใช้เงินเท่าไร?":"How much does it cost to raise a child in Thailand?"} a={lang==="TH"?"จาก TDRI ประมาณ 1.5-3 ล้านบาท/คน (0-18 ปี) แบ่ง: ค่าอาหาร/เสื้อผ้า 30%, ค่าเรียน 40%, ค่ารักษาพยาบาล 10%, อื่นๆ 20% โรงเรียนนานาชาติค่าเทอม 200,000-600,000 บาท/ปี | อ้างอิง: TDRI — ต้นทุนการเลี้ยงดูบุตร; สำนักงานสถิติแห่งชาติ — ค่าใช้จ่ายครัวเรือน.":"TDRI estimates 1.5-3M THB/child (0-18 yrs): Food/clothes 30%, Education 40%, Medical 10%, Other 20%. International schools cost 200-600K THB/yr tuition. | Source: TDRI; Thai National Statistics Office."} />
         </SEOFAQ>
       </div>
     </div>
@@ -136,11 +130,8 @@ export function BloodTypePredictor({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ครอบครัว)" : "Family FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลลัพธ์นี้ใช้เพื่อการประเมินเบื้องต้นและเพื่อการศึกษาเท่านั้น ไม่สามารถใช้แทนคำแนะนำทางการแพทย์ได้ กรุณาปรึกษาแพทย์ผู้เชี่ยวชาญเพื่อการวินิจฉัยที่แม่นยำ" : "This result is for estimation and educational purposes only. It does not replace professional medical advice. Please consult a doctor for an accurate diagnosis."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — เงินออมลูก":"Child Savings FAQ"}>
+          <FAQItem q={lang==="TH"?"ออมเงินให้ลูกเดือนละเท่าไรถึงพอ?":"How much should I save monthly for my child?"} a={lang==="TH"?"สำหรับค่าเรียนมหาวิทยาลัย (ปัจจุบันเฉลี่ย 400,000-800,000 บาท/4ปี คิดเงินเฟ้อ 3%): เริ่มออมตั้งแต่เกิด เดือนละ 3,000-5,000 บาท ลงทุนในกองทุนรวมผลตอบแทน 5-7%/ปี น่าจะเพียงพอ ควรเปิดบัญชีเพื่อการศึกษา (Education Fund) | อ้างอิง: ก.ล.ต. — กองทุนรวมเพื่อการศึกษา; ตลาดหลักทรัพย์แห่งประเทศไทย — การออมเพื่อลูก.":"For university (avg 400-800K THB/4yrs, 3% inflation): Start at birth, save 3-5K THB/month in mutual funds at 5-7%/yr return. Open an education fund account. | Source: Thai SEC; Stock Exchange of Thailand."} />
         </SEOFAQ>
       </div>
     </div>
@@ -184,11 +175,8 @@ export function ZodiacCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ครอบครัว)" : "Family FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลลัพธ์นี้ใช้เพื่อการประเมินเบื้องต้นและเพื่อการศึกษาเท่านั้น ไม่สามารถใช้แทนคำแนะนำทางการแพทย์ได้ กรุณาปรึกษาแพทย์ผู้เชี่ยวชาญเพื่อการวินิจฉัยที่แม่นยำ" : "This result is for estimation and educational purposes only. It does not replace professional medical advice. Please consult a doctor for an accurate diagnosis."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — วันลาคลอด":"Maternity Leave FAQ"}>
+          <FAQItem q={lang==="TH"?"สิทธิลาคลอดในไทยมีกี่วัน?":"How many maternity leave days in Thailand?"} a={lang==="TH"?"พ.ร.บ.คุ้มครองแรงงาน กำหนดให้ลาคลอดได้ 98 วัน (รวมวันฝากครรภ์) นายจ้างจ่าย 45 วัน ประกันสังคมจ่ายเพิ่ม 45 วัน (50% ของค่าจ้าง สูงสุด 15,000 บาท) ข้าราชการลาคลอดได้ 90 วัน | อ้างอิง: พ.ร.บ.คุ้มครองแรงงาน มาตรา 41; สำนักงานประกันสังคม — สิทธิกรณีคลอดบุตร.":"Thai Labour Protection Act: 98 days maternity leave (including prenatal). Employer pays 45 days, Social Security adds 45 days (50% of wage, max 15K). Gov't officers get 90 days. | Source: Labour Protection Act §41; Social Security Office."} />
         </SEOFAQ>
       </div>
     </div>
@@ -232,11 +220,8 @@ export function PetAgeCalculator({ lang }: { lang: Lang }) {
       )}
     
       <div className="mt-8">
-        <SEOFAQ title={lang === "TH" ? "คำถามที่พบบ่อย (ครอบครัว)" : "Family FAQ"}>
-          <FAQItem 
-            q={lang === "TH" ? "ผลการคำนวณนี้มีความแม่นยำแค่ไหน? ควรนำไปใช้อ้างอิงหรือไม่?" : "How accurate is this result? Should it be used as a reference?"} 
-            a={lang === "TH" ? "ผลลัพธ์นี้ใช้เพื่อการประเมินเบื้องต้นและเพื่อการศึกษาเท่านั้น ไม่สามารถใช้แทนคำแนะนำทางการแพทย์ได้ กรุณาปรึกษาแพทย์ผู้เชี่ยวชาญเพื่อการวินิจฉัยที่แม่นยำ" : "This result is for estimation and educational purposes only. It does not replace professional medical advice. Please consult a doctor for an accurate diagnosis."} 
-          />
+        <SEOFAQ title={lang==="TH"?"FAQ — เบี้ยเลี้ยงดูบุตร":"Child Support FAQ"}>
+          <FAQItem q={lang==="TH"?"ค่าเลี้ยงดูบุตรตามกฎหมายคำนวณอย่างไร?":"How is child support calculated by law?"} a={lang==="TH"?"ศาลพิจารณาจาก: 1) รายได้ของทั้งพ่อและแม่ 2) ค่าใช้จ่ายจริงของเด็ก 3) ระดับฐานะที่เด็กเคยมี 4) ค่าเล่าเรียน ค่ารักษาพยาบาล โดยทั่วไปศาลกำหนด 20-33% ของรายได้ผู้จ่าย จนเด็กอายุ 20 ปี | อ้างอิง: ประมวลกฎหมายแพ่งฯ มาตรา 1564; คำพิพากษาศาลฎีกา — แนวทางกำหนดค่าอุปการะเลี้ยงดู.":"Court considers: 1) Both parents' income 2) Child's actual expenses 3) Child's living standard 4) Education/medical costs. Typically 20-33% of payer's income until child turns 20. | Source: Thai Civil Code §1564; Supreme Court precedents."} />
         </SEOFAQ>
       </div>
     </div>
