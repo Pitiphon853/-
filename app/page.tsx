@@ -10,6 +10,14 @@ import { AdPlaceholder } from "../components/AdPlaceholder";
 import { DonateButton } from "../components/DonateButton";
 import { FinanceSEO } from "../components/seo/FinanceSEO";
 import { HealthSEO } from "../components/seo/HealthSEO";
+import { FamilySEO } from "../components/seo/FamilySEO";
+import { BusinessSEO } from "../components/seo/BusinessSEO";
+import { AgricultureSEO } from "../components/seo/AgricultureSEO";
+import { ConstructionSEO } from "../components/seo/ConstructionSEO";
+import { TechnologySEO } from "../components/seo/TechnologySEO";
+import { TravelSEO } from "../components/seo/TravelSEO";
+import { UtilitySEO } from "../components/seo/UtilitySEO";
+import { GeneralSEO } from "../components/seo/GeneralSEO";
 
 type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Agriculture" | "Construction" | "Technology" | "Travel" | "Utility" | "General";
 
@@ -398,6 +406,14 @@ export default function CalculatorHub() {
 
                 {activeCategory === "Finance" && <FinanceSEO lang={lang} />}
                 {activeCategory === "Health" && <HealthSEO lang={lang} />}
+                {activeCategory === "Family" && <FamilySEO lang={lang} />}
+                {activeCategory === "Business" && <BusinessSEO lang={lang} />}
+                {activeCategory === "Agriculture" && <AgricultureSEO lang={lang} />}
+                {activeCategory === "Construction" && <ConstructionSEO lang={lang} />}
+                {activeCategory === "Technology" && <TechnologySEO lang={lang} />}
+                {activeCategory === "Travel" && <TravelSEO lang={lang} />}
+                {activeCategory === "Utility" && <UtilitySEO lang={lang} />}
+                {activeCategory === "General" && <GeneralSEO lang={lang} />}
 
                 {/* Footer SEO Content & Disclaimer */}
                 <div className="mt-20 pt-10 border-t border-gray-200 dark:border-white/10 text-center max-w-3xl mx-auto">
