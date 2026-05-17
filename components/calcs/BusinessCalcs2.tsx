@@ -113,7 +113,68 @@ export function DepreciationCalculator({ lang }: { lang: Lang }) {
 
 // 4. Payroll
 export function PayrollCalculator({ lang }: { lang: Lang }) {
-  return <div><h2 className="text-3xl font-black mb-2 text-green-600">Payroll Calculator (WIP)</h2></div>;
+  const [gross, setGross] = useLocalState("pay_gross", "");
+  const [tax, setTax] = useLocalState("pay_tax", "0");
+  const [otherDeduct, setOther] = useLocalState("pay_oth", "0");
+  
+  const g = parseFloat(gross) || 0;
+  const t = parseFloat(tax) || 0;
+  const o = parseFloat(otherDeduct) || 0;
+  
+  let socialSecurity = 0;
+  if (g > 0) {
+    // 5% of gross, max 750
+    socialSecurity = Math.min(g * 0.05, 750);
+  }
+  
+  const net = g - socialSecurity - t - o;
+
+  return (
+    <div>
+      <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "คำนวณเงินเดือนพนักงาน (Payroll)" : "Payroll Calculator"}</h2>
+      <div className="space-y-4 mt-6">
+        <div>
+          <label className={labelClass}>{lang === "TH" ? "เงินเดือนเต็ม (Gross Salary)" : "Gross Salary"}</label>
+          <NumericInput value={gross} onChange={setGross} className={inputClass} />
+        </div>
+        <div className="p-4 bg-gray-50 dark:bg-white/5 rounded-xl border border-gray-200 dark:border-white/10 space-y-4">
+          <p className="font-bold text-gray-700 dark:text-gray-300 mb-2">{lang==="TH"?"รายการหัก":"Deductions"}</p>
+          <div className="flex justify-between items-center bg-white dark:bg-black/20 p-3 rounded-lg">
+            <span className="text-sm font-bold text-gray-600 dark:text-gray-400">{lang==="TH"?"หักประกันสังคม (5% สูงสุด 750)":"Social Security (5% max 750)"}</span>
+            <span className="text-red-500 font-bold">-฿{socialSecurity.toLocaleString()}</span>
+          </div>
+          <div>
+            <label className={labelClass}>{lang === "TH" ? "ภาษีหัก ณ ที่จ่าย (ถ้ามี)" : "Withholding Tax"}</label>
+            <NumericInput value={tax} onChange={setTax} className={inputClass} />
+          </div>
+          <div>
+            <label className={labelClass}>{lang === "TH" ? "รายการหักอื่นๆ (สาย, ลางาน ฯลฯ)" : "Other Deductions"}</label>
+            <NumericInput value={otherDeduct} onChange={setOther} className={inputClass} />
+          </div>
+        </div>
+      </div>
+      
+      {g > 0 && (
+        <motion.div initial={{opacity:0}} animate={{opacity:1}} className="mt-6 p-6 bg-green-50 rounded-xl text-center border border-green-200">
+          <p className="text-gray-500 mb-2">{lang === "TH" ? "เงินเดือนสุทธิ (Net Salary)" : "Net Salary (Take-home Pay)"}</p>
+          <div className="text-4xl font-black text-green-600 mb-2">฿{net.toLocaleString()}</div>
+        </motion.div>
+      )}
+
+      <SEOFAQ title={lang==="TH"?"FAQ — การทำเงินเดือน (Payroll)":"Payroll FAQ"}>
+        <FAQItem q={lang==="TH"?"เงินประกันสังคมหักอย่างไร?":"How is Social Security deducted?"} a={lang==="TH"?"กฎหมายไทยกำหนดให้นายจ้างหัก 5% ของเงินเดือนพนักงาน โดยคิดจากฐานเงินเดือนสูงสุดไม่เกิน 15,000 บาท ดังนั้นยอดหักสูงสุดจะอยู่ที่ 750 บาทต่อเดือน และนายจ้างต้องสมทบเพิ่มให้อีก 5% (750 บาท) ด้วย.":"Thai law requires deducting 5% of gross salary, capped at a base salary of 15,000 THB. Thus, the maximum deduction is 750 THB. Employers must match this 5% contribution."} />
+        <FAQItem q={lang==="TH"?"ฐานเงินเดือนต่ำสุดที่ต้องหักประกันสังคมคือเท่าไร?":"Minimum salary for Social Security?"} a={lang==="TH"?"ฐานเงินเดือนขั้นต่ำในการคิดประกันสังคมคือ 1,650 บาท (หัก 5% = 83 บาท) หากเงินเดือนน้อยกว่า 1,650 บาท ให้นำ 1,650 บาทมาเป็นฐานในการคำนวณ.":"The minimum base salary for Social Security calculation is 1,650 THB (5% = 83 THB). Salaries below this use 1,650 THB as the base."} />
+        <FAQItem q={lang==="TH"?"ภาษีหัก ณ ที่จ่าย (Withholding Tax) คิดอย่างไร?":"How is Withholding Tax calculated?"} a={lang==="TH"?"วิธีที่ถูกต้องคือการคำนวณ 'ภาษีเงินได้บุคคลธรรมดาตลอดทั้งปี' (เงินเดือน × 12 หักค่าใช้จ่ายและค่าลดหย่อน) แล้วนำภาษีที่ต้องเสียทั้งปีมาหาร 12 เพื่อหักในแต่ละเดือน หากเงินเดือนไม่ถึงเกณฑ์เสียภาษี ก็ไม่ต้องหัก.":"Calculate the estimated annual personal income tax (gross × 12 minus allowances), then divide the total tax by 12 to deduct monthly. If annual income is below the taxable threshold, deduct 0."} />
+        <FAQItem q={lang==="TH"?"นายจ้างต้องนำส่งประกันสังคมภายในวันไหน?":"When must employers submit Social Security?"} a={lang==="TH"?"นายจ้างต้องนำส่งเงินสมทบ (ทั้งส่วนที่หักจากลูกจ้าง และส่วนที่นายจ้างสมทบ) ให้กับสำนักงานประกันสังคม ภายในวันที่ 15 ของเดือนถัดไป หากล่าช้าจะมีค่าปรับ 2% ต่อเดือน.":"Employers must submit the contributions (both employee deduction and employer match) by the 15th of the following month. Late submissions incur a 2% monthly penalty."} />
+        <FAQItem q={lang==="TH"?"ช่วงโปรทดลองงาน (Probation) ต้องหักประกันสังคมไหม?":"Deduct Social Security during probation?"} a={lang==="TH"?"ต้องหักครับ! ตามกฎหมาย ลูกจ้างที่มีอายุ 15-60 ปีบริบูรณ์ เมื่อเริ่มทำงานตั้งแต่วันแรก ถือเป็นผู้ประกันตน ม.33 ทันที นายจ้างมีหน้าที่แจ้งขึ้นทะเบียนภายใน 30 วัน.":"Yes! By law, employees aged 15-60 are considered Section 33 insured persons from day one. Employers must register them within 30 days of starting."} />
+        <FAQItem q={lang==="TH"?"พนักงาน Part-time ต้องทำประกันสังคมไหม?":"Do part-time employees get Social Security?"} a={lang==="TH"?"หากทำงานเป็นลักษณะ 'รับจ้างทำของ' (Freelance) ไม่ต้องทำ แต่ถ้าทำงานในลักษณะ 'ลูกจ้าง' ที่นายจ้างสั่งการได้ มีวันเวลาทำงานชัดเจน ต้องขึ้นทะเบียนและหักประกันสังคมตามกฎหมาย.":"If hired as an independent contractor, no. But if hired as an employee with fixed hours and under employer control, they must be registered and deducted according to the law."} />
+        <FAQItem q={lang==="TH"?"เงินเดือนสุทธิ (Net Salary) คืออะไร?":"What is Net Salary?"} a={lang==="TH"?"เงินเดือนสุทธิ (Take-home pay) คือ เงินที่พนักงานได้รับจริงเข้าบัญชี ซึ่งคำนวณจาก เงินเดือนเต็ม (Gross Salary) ลบด้วยรายการหักต่างๆ เช่น ประกันสังคม ภาษี กองทุนสำรองเลี้ยงชีพ และการขาดลามาสาย.":"Net salary (take-home pay) is the actual amount deposited into the employee's bank account after all deductions (taxes, social security, provident fund, unpaid leave) are subtracted from the gross salary."} />
+        <FAQItem q={lang==="TH"?"OT (โอที) ต้องนำมาคิดประกันสังคมไหม?":"Is OT included in Social Security base?"} a={lang==="TH"?"ไม่ครับ ฐานค่าจ้างในการคิดประกันสังคมจะคิดเฉพาะ 'ค่าจ้างหลัก' หรือเงินเดือนประจำ ไม่รวมค่าล่วงเวลา (OT) โบนัส หรือสวัสดิการอื่นๆ.":"No. The base salary for Social Security only includes the regular fixed salary/wages, excluding Overtime (OT), bonuses, or other welfare benefits."} />
+        <FAQItem q={lang==="TH"?"พนักงานต่างด้าวต้องทำประกันสังคมไหม?":"Do foreign workers need Social Security?"} a={lang==="TH"?"ต้องทำครับ พนักงานต่างด้าวที่เข้าเมืองถูกกฎหมายและมีใบอนุญาตทำงาน (Work Permit) ต้องขึ้นทะเบียนและหักเงินสมทบเหมือนพนักงานคนไทยทุกประการ.":"Yes, legally employed foreign workers with valid Work Permits must be registered and contribute to Social Security exactly like Thai employees."} />
+        <FAQItem q={lang==="TH"?"ถ้าลาคลอด จะได้เงินเดือนไหม?":"Do you get paid during maternity leave?"} a={lang==="TH"?"พนักงานหญิงมีสิทธิลาคลอดได้ 98 วัน โดยนายจ้างจ่ายค่าจ้างให้ 45 วันแรก ส่วนอีก 45 วันสามารถเบิกจากประกันสังคม (เหมาจ่าย 50% ของเงินเดือน ฐานสูงสุด 15,000) และเบิกค่าคลอดบุตรได้อีก 15,000 บาท.":"Female employees are entitled to 98 days of maternity leave. The employer pays the first 45 days. The SSF pays the next 45 days (50% of salary, capped at 15k base) plus a 15,000 THB birth allowance."} />
+      </SEOFAQ>
+    </div>
+  );
 }
 
 // 5. COGS

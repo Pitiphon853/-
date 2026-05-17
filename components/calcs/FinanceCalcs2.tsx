@@ -133,12 +133,170 @@ export function NetWorthCalculator({ lang }: { lang: Lang }) {
 
 // 5. Debt Payoff
 export function DebtPayoffCalculator({ lang }: { lang: Lang }) {
-  return <div><h2 className="text-3xl font-black mb-2 text-green-600">Debt Payoff Calculator (WIP)</h2></div>;
+  const [debt, setDebt] = useLocalState("dp_debt", "");
+  const [interest, setInterest] = useLocalState("dp_int", "");
+  const [payment, setPayment] = useLocalState("dp_pay", "");
+  
+  let months = 0;
+  let totalInterest = 0;
+  
+  const p = parseFloat(debt);
+  const r = parseFloat(interest) / 100 / 12;
+  const m = parseFloat(payment);
+  
+  if (p > 0 && r >= 0 && m > 0) {
+    if (r === 0) {
+      months = p / m;
+    } else if (m > p * r) {
+      months = -Math.log(1 - (p * r) / m) / Math.log(1 + r);
+      totalInterest = (months * m) - p;
+    } else {
+      months = Infinity;
+    }
+  }
+
+  return (
+    <div>
+      <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "วางแผนปลดหนี้" : "Debt Payoff Calculator"}</h2>
+      <div className="space-y-4 mt-6">
+        <div>
+          <label className={labelClass}>{lang === "TH" ? "ยอดหนี้คงเหลือ" : "Total Debt Balance"}</label>
+          <NumericInput value={debt} onChange={setDebt} className={inputClass} />
+        </div>
+        <div>
+          <label className={labelClass}>{lang === "TH" ? "อัตราดอกเบี้ยต่อปี (%)" : "Annual Interest Rate (%)"}</label>
+          <input type="number" step="0.1" value={interest} onChange={e=>setInterest(e.target.value)} className={inputClass} />
+        </div>
+        <div>
+          <label className={labelClass}>{lang === "TH" ? "ยอดผ่อนต่อเดือนที่ตั้งใจ" : "Monthly Payment"}</label>
+          <NumericInput value={payment} onChange={setPayment} className={inputClass} />
+        </div>
+      </div>
+      
+      {p > 0 && m > 0 && (
+        <motion.div initial={{opacity:0}} animate={{opacity:1}} className={`mt-6 p-6 rounded-xl text-center border ${months === Infinity ? 'bg-red-50 border-red-200' : 'bg-green-50 border-green-200'}`}>
+          {months === Infinity ? (
+            <div className="text-xl font-bold text-red-600">{lang==="TH"?"ยอดผ่อนน้อยกว่าดอกเบี้ย! หนี้จะไม่ลดลง":"Payment is less than interest! Debt will never be paid off."}</div>
+          ) : (
+            <>
+              <p className="text-gray-500 mb-2">{lang === "TH" ? "ระยะเวลาปลดหนี้โดยประมาณ" : "Estimated Time to Payoff"}</p>
+              <div className="text-4xl font-black text-green-600 mb-2">
+                {Math.ceil(months)} {lang==="TH"?"เดือน":"Months"} 
+                <span className="text-lg font-normal text-gray-500 block">
+                  (~{(months/12).toFixed(1)} {lang==="TH"?"ปี":"Years"})
+                </span>
+              </div>
+              <div className="text-sm text-gray-600 mt-4">
+                {lang==="TH"?"ดอกเบี้ยรวมที่ต้องจ่าย:":"Total Interest Paid:"} <span className="font-bold">฿{Math.ceil(totalInterest).toLocaleString()}</span>
+              </div>
+            </>
+          )}
+        </motion.div>
+      )}
+
+      <SEOFAQ title={lang==="TH"?"FAQ — การวางแผนปลดหนี้":"Debt Payoff FAQ"}>
+        <FAQItem q={lang==="TH"?"ดอกเบี้ยบ้านและดอกเบี้ยบัตรเครดิตคิดเหมือนกันไหม?":"Is mortgage interest calculated the same as credit cards?"} a={lang==="TH"?"ไม่เหมือนกัน ดอกเบี้ยบัตรเครดิต/สินเชื่อบุคคลมักเป็นแบบ 'ลดต้นลดดอก' คิดเป็นรายวัน ส่วนดอกเบี้ยบ้านก็ลดต้นลดดอกแต่เรทถูกกว่ามาก (มักจะ 3-6% ต่อปีเทียบกับบัตรเครดิต 16-25% ต่อปี).":"Both are usually amortized (reducing balance), but credit card rates are much higher (16-25% p.a.) compared to mortgages (3-6% p.a.) and credit card interest is calculated daily."} />
+        <FAQItem q={lang==="TH"?"วิธีปลดหนี้แบบ Snowball คืออะไร?":"What is the Snowball debt payoff method?"} a={lang==="TH"?"Snowball Method คือการเรียงลำดับจ่ายหนี้จาก 'ก้อนที่เล็กที่สุดไปก้อนใหญ่ที่สุด' (โดยจ่ายขั้นต่ำก้อนอื่นไว้) เพื่อสร้างกำลังใจเมื่อเห็นหนี้ก้อนเล็กถูกปิดไปทีละก้อน เหมาะสำหรับคนที่ต้องการแรงจูงใจ.":"Snowball Method focuses on paying off the smallest debt balances first while paying minimums on others. It provides quick psychological wins and motivation."} />
+        <FAQItem q={lang==="TH"?"วิธีปลดหนี้แบบ Avalanche คืออะไร?":"What is the Avalanche debt payoff method?"} a={lang==="TH"?"Avalanche Method คือการเรียงลำดับจ่ายหนี้จาก 'ก้อนที่ดอกเบี้ยแพงที่สุดไปก้อนที่ถูกที่สุด' วิธีนี้จะช่วยประหยัดเงินค่าดอกเบี้ยได้มากที่สุดและปลดหนี้ได้เร็วที่สุดในทางคณิตศาสตร์.":"Avalanche Method focuses on paying off debts with the highest interest rates first. Mathematically, it saves the most money and pays off debt the fastest."} />
+        <FAQItem q={lang==="TH"?"จ่ายแค่ 'ขั้นต่ำ' บัตรเครดิต ดีหรือไม่?":"Is it okay to only pay the 'minimum' on credit cards?"} a={lang==="TH"?"ไม่ดีอย่างยิ่ง! การจ่ายขั้นต่ำจะทำให้เงินที่จ่ายไปตัดแต่ดอกเบี้ย (แถมดอกเบี้ยเดินทุกวัน) ยอดต้นลดลงช้ามาก อาจต้องใช้เวลาเป็นสิบปีในการปลดหนี้ และเสียดอกเบี้ยมหาศาล.":"Never just pay the minimum if you can help it. Most of your payment goes to interest, drastically extending your payoff timeline to years or decades while costing you a fortune."} />
+        <FAQItem q={lang==="TH"?"รีไฟแนนซ์ (Refinance) ช่วยลดหนี้ได้ไหม?":"Does refinancing help reduce debt?"} a={lang==="TH"?"ได้ การรีไฟแนนซ์คือการย้ายหนี้ไปสถาบันการเงินที่ให้ดอกเบี้ยถูกกว่า ทำให้ยอดผ่อนต่อเดือนลดลง หรือเงินไปตัดเงินต้นมากขึ้น (นิยมทำกับหนี้บ้าน หรือการรวมหนี้บัตรเครดิต).":"Yes, refinancing moves your debt to a lender with a lower interest rate. This lowers monthly payments and puts more money toward the principal. Very common for mortgages."} />
+        <FAQItem q={lang==="TH"?"หนี้เสีย (NPL) คืออะไร?":"What is an NPL (Non-Performing Loan)?"} a={lang==="TH"?"หนี้เสีย หรือ NPL คือสินเชื่อที่ค้างชำระติดต่อกันเกิน 90 วัน หรือ 3 งวด หากปล่อยให้เป็น NPL จะถูกบันทึกในเครดิตบูโร ทำให้กู้เงิน หรือทำธุรกรรมทางการเงินในอนาคตได้ยากมาก.":"An NPL is a loan that is in default or close to being in default (usually 90 days past due). It ruins your credit score and makes future borrowing extremely difficult."} />
+        <FAQItem q={lang==="TH"?"เครดิตบูโร (Credit Bureau) เก็บข้อมูลกี่ปี?":"How long does Credit Bureau keep your history?"} a={lang==="TH"?"ในประเทศไทย บริษัท ข้อมูลเครดิตแห่งชาติ จะเก็บประวัติการชำระหนี้ของคุณย้อนหลัง 36 เดือน (3 ปี) ดังนั้นหากเคยมีประวัติเสีย ต้องสร้างวินัยการจ่ายใหม่ต่อเนื่อง 3 ปี ประวัติเก่าจึงจะถูกลบ.":"In Thailand, the National Credit Bureau keeps your payment history for the past 36 months (3 years). Good behavior over 3 years will push out old negative marks."} />
+        <FAQItem q={lang==="TH"?"ถ้าจ่ายหนี้ไม่ไหวจริงๆ ควรทำอย่างไร?":"What to do if I absolutely cannot pay my debts?"} a={lang==="TH"?"อย่าหนี! ให้รีบติดต่อธนาคารหรือเจ้าหนี้ทันทีเพื่อขอ 'ประนอมหนี้' (Debt Restructuring) เช่น ขอขยายเวลาผ่อน หรือขอลดดอกเบี้ย ธนาคารส่วนใหญ่ยินดีเจรจาดีกว่าปล่อยให้เป็นหนี้เสีย.":"Do not run away! Contact your bank immediately to request 'Debt Restructuring' (e.g., lower rates, extended terms). Banks prefer negotiating over letting it become an NPL."} />
+        <FAQItem q={lang==="TH"?"ทำไมเครื่องคำนวณบอกว่า 'หนี้จะไม่ลดลง'?":"Why does the calculator say 'Debt will never be paid off'?"} a={lang==="TH"?"เพราะ 'ยอดผ่อนต่อเดือน' ที่คุณกรอก น้อยกว่า 'ดอกเบี้ยรายเดือน' ที่เพิ่มขึ้น ทำให้คุณจ่ายหนี้ไม่ทันดอกเบี้ยที่งอกออกมา ยอดหนี้จะพอกพูนขึ้นเรื่อยๆ (ติดลบ).":"Because the 'Monthly Payment' you entered is smaller than the monthly interest generated. You aren't even covering the interest, so the debt will grow infinitely."} />
+        <FAQItem q={lang==="TH"?"ควรเก็บเงินฉุกเฉินก่อน หรือ โปะหนี้ก่อน?":"Should I save an emergency fund or pay off debt first?"} a={lang==="TH"?"ควรมีเงินฉุกเฉินเบื้องต้น (เช่น 10,000-30,000 บาท หรือพอดำรงชีพ 1 เดือน) ไว้ก่อน เพื่อป้องกันการกลับไปรูดบัตรก่อหนี้เพิ่มเมื่อเกิดเหตุฉุกเฉิน จากนั้นจึงนำเงินที่เหลือไปทุ่มโปะหนี้ดอกเบี้ยสูง.":"Save a starter emergency fund first (e.g., 1-month expenses) to prevent going back into debt if an emergency hits. Then throw all remaining cash at high-interest debt."} />
+      </SEOFAQ>
+    </div>
+  );
 }
 
 // 6. Retirement
 export function RetirementCalculator({ lang }: { lang: Lang }) {
-  return <div><h2 className="text-3xl font-black mb-2 text-green-600">Retirement Calculator (WIP)</h2></div>;
+  const [currentAge, setCurrentAge] = useLocalState("rc_c_age", "");
+  const [retireAge, setRetireAge] = useLocalState("rc_r_age", "");
+  const [currentSavings, setCurrentSavings] = useLocalState("rc_sav", "");
+  const [monthlyContribution, setMonthlyContribution] = useLocalState("rc_mon", "");
+  const [expectedReturn, setExpectedReturn] = useLocalState("rc_ret", "5");
+  
+  const cAge = parseFloat(currentAge);
+  const rAge = parseFloat(retireAge);
+  const p = parseFloat(currentSavings) || 0;
+  const pmt = parseFloat(monthlyContribution) || 0;
+  const r = parseFloat(expectedReturn) / 100;
+  
+  let totalAtRetirement = 0;
+  const years = rAge - cAge;
+
+  if (cAge > 0 && rAge > cAge && !isNaN(r)) {
+    const months = years * 12;
+    const monthlyRate = r / 12;
+    
+    // Future value of current savings
+    const fvSavings = p * Math.pow(1 + monthlyRate, months);
+    
+    // Future value of monthly contributions
+    let fvContributions = 0;
+    if (monthlyRate > 0) {
+      fvContributions = pmt * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+    } else {
+      fvContributions = pmt * months;
+    }
+    
+    totalAtRetirement = fvSavings + fvContributions;
+  }
+
+  return (
+    <div>
+      <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "วางแผนเกษียณอายุ" : "Retirement Calculator"}</h2>
+      <div className="space-y-4 mt-6">
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className={labelClass}>{lang === "TH" ? "อายุปัจจุบัน" : "Current Age"}</label>
+            <input type="number" value={currentAge} onChange={e=>setCurrentAge(e.target.value)} className={inputClass} />
+          </div>
+          <div>
+            <label className={labelClass}>{lang === "TH" ? "อายุที่อยากเกษียณ" : "Retirement Age"}</label>
+            <input type="number" value={retireAge} onChange={e=>setRetireAge(e.target.value)} className={inputClass} />
+          </div>
+        </div>
+        <div>
+          <label className={labelClass}>{lang === "TH" ? "เงินเก็บที่มีอยู่แล้ว" : "Current Savings Balance"}</label>
+          <NumericInput value={currentSavings} onChange={setCurrentSavings} className={inputClass} />
+        </div>
+        <div>
+          <label className={labelClass}>{lang === "TH" ? "เงินออมเพิ่มต่อเดือน" : "Monthly Contribution"}</label>
+          <NumericInput value={monthlyContribution} onChange={setMonthlyContribution} className={inputClass} />
+        </div>
+        <div>
+          <label className={labelClass}>{lang === "TH" ? "ผลตอบแทนคาดหวังต่อปี (%)" : "Expected Annual Return (%)"}</label>
+          <input type="number" step="0.1" value={expectedReturn} onChange={e=>setExpectedReturn(e.target.value)} className={inputClass} placeholder="e.g. 5" />
+        </div>
+      </div>
+      
+      {years > 0 && totalAtRetirement > 0 && (
+        <motion.div initial={{opacity:0}} animate={{opacity:1}} className="mt-6 p-6 bg-green-50 rounded-xl text-center border border-green-200">
+          <p className="text-gray-500 mb-2">{lang === "TH" ? "เงินรวมเมื่อเกษียณ (อายุ " + rAge + " ปี)" : "Total Balance at Retirement (Age " + rAge + ")"}</p>
+          <div className="text-4xl font-black text-green-600 mb-2">฿{Math.floor(totalAtRetirement).toLocaleString()}</div>
+          <div className="text-sm text-gray-500">
+            {lang==="TH"?"ใช้เวลาออมทั้งหมด: ":"Total time saving: "} <span className="font-bold">{years}</span> {lang==="TH"?"ปี":"years"}
+          </div>
+        </motion.div>
+      )}
+
+      <SEOFAQ title={lang==="TH"?"FAQ — การวางแผนเกษียณ":"Retirement Planning FAQ"}>
+        <FAQItem q={lang==="TH"?"ต้องมีเงินเท่าไรถึงจะเกษียณได้?":"How much money do I need to retire?"} a={lang==="TH"?"กฎพื้นฐานคือ Rule of 25: ให้นำ 'ค่าใช้จ่ายรายปีที่คาดว่าจะใช้หลังเกษียณ' คูณด้วย 25 เช่น หากอยากใช้เดือนละ 30,000 บาท (ปีละ 360,000 บาท) เป้าหมายเงินเกษียณคือ 360,000 × 25 = 9,000,000 บาท.":"The rule of thumb is the 'Rule of 25'. Multiply your expected annual retirement expenses by 25. E.g., if you need 360k THB/year, your target portfolio is 360k × 25 = 9,000,000 THB."} />
+        <FAQItem q={lang==="TH"?"กฎ 4% (The 4% Rule) คืออะไร?":"What is the 4% Rule?"} a={lang==="TH"?"กฎ 4% คือแนวคิดที่ว่า หากคุณดึงเงินออกจากพอร์ตเกษียณ (ที่ลงทุนในหุ้นและตราสารหนี้) ปีละ 4% ของมูลค่าพอร์ตเริ่มต้น โดยปรับตามอัตราเงินเฟ้อทุกปี เงินก้อนนี้จะมีโอกาสสูงมากที่จะพอใช้ไปตลอด 30 ปีโดยไม่หมด.":"The 4% Rule states you can withdraw 4% of your portfolio in year one, and adjust for inflation each subsequent year, and your money is highly likely to last 30 years."} />
+        <FAQItem q={lang==="TH"?"ผลตอบแทนคาดหวัง 5-8% หาได้จากไหน?":"Where can I get 5-8% annual return?"} a={lang==="TH"?"โดยทั่วไป กองทุนรวมดัชนีหุ้น (Index Funds) เช่น S&P500 ให้ผลตอบแทนเฉลี่ยระยะยาว (10+ ปี) ประมาณ 7-10% ส่วนตราสารหนี้ให้ประมาณ 2-4% การจัดพอร์ตผสม (Asset Allocation) สามารถสร้างผลตอบแทนเฉลี่ย 5-8% ได้แบบความเสี่ยงเหมาะสม.":"Historically, broad stock index funds (like S&P 500) average 7-10% long-term. Bonds average 2-4%. A diversified portfolio can realistically target 5-8% average annualized returns."} />
+        <FAQItem q={lang==="TH"?"เงินเฟ้อมีผลต่อเงินเกษียณอย่างไร?":"How does inflation affect retirement?"} a={lang==="TH"?"เงินเฟ้อทำให้ข้าวของแพงขึ้น (ค่าเงินลดลง) หากเงินเฟ้อเฉลี่ย 3% ต่อปี เงิน 1 ล้านบาทในอีก 20 ปีข้างหน้า จะมีอำนาจซื้อเทียบเท่าเงินแค่ประมาณ 5.5 แสนบาทในวันนี้ จึงต้องนำเงินเก็บไปลงทุนให้ชนะเงินเฟ้อ.":"Inflation reduces purchasing power. At 3% inflation, 1 million today will buy about half as much in 24 years. You must invest to outpace inflation, not just leave it in a savings account."} />
+        <FAQItem q={lang==="TH"?"ควรเริ่มเก็บเงินเกษียณเมื่อไร?":"When should I start saving for retirement?"} a={lang==="TH"?"เริ่มเร็วที่สุดเท่าที่จะทำได้! พลังของ 'ดอกเบี้ยทบต้น' (Compound Interest) ทำงานได้ดีที่สุดเมื่อมี 'เวลา' การเริ่มเก็บเงินตอนอายุ 25 ปี จะใช้เงินต้นน้อยกว่าและเหนื่อยน้อยกว่าการไปเริ่มตอนอายุ 40 ปีมาก.":"As early as possible! Compound interest relies heavily on TIME. Starting at age 25 requires significantly less monthly effort than starting at age 40."} />
+        <FAQItem q={lang==="TH"?"ประกันสังคมและกองทุนสำรองเลี้ยงชีพ (Provident Fund) นับเป็นเงินเกษียณไหม?":"Do Social Security and Provident Funds count?"} a={lang==="TH"?"นับแน่นอน! กองทุนสำรองเลี้ยงชีพ (PVD) / กบข. / ประกันสังคม (กรณีรับบำนาญ) เป็นเสาหลักสำคัญของการเกษียณ ควรสมทบ PVD ให้เต็มแม็กซ์ที่บริษัทให้ (เช่น 5-15%) เพราะเป็นเงินฟรีที่นายจ้างสมทบให้.":"Absolutely! Provident Funds (PVD), Social Security pensions, and RMFs are core pillars. Always maximize employer PVD match (e.g. 5-10%)—it's free money!"} />
+        <FAQItem q={lang==="TH"?"ควรเก็บเงินเกษียณกี่เปอร์เซ็นต์ของรายได้?":"What percentage of income should I save for retirement?"} a={lang==="TH"?"ผู้เชี่ยวชาญแนะนำให้กันเงินไว้อย่างน้อย 10-15% ของรายได้ต่อเดือน (รวมเงินสมทบจากนายจ้างแล้ว) เพื่อการเกษียณโดยเฉพาะ แต่ถ้าเริ่มช้า อาจต้องเก็บเพิ่มเป็น 20-30%.":"Experts generally recommend saving 10-15% of your gross income (including employer match) strictly for retirement. If you start late, you may need to save 20-30%."} />
+        <FAQItem q={lang==="TH"?"หลังเกษียณควรลงทุนต่อไหม หรือเก็บเป็นเงินสดทั้งหมด?":"Should I keep investing after retirement or hold cash?"} a={lang==="TH"?"ไม่ควรเก็บเป็นเงินสด 100% เพราะเงินเฟ้อจะกัดกิน ควรย้ายเงินส่วนใหญ่ไปสินทรัพย์เสี่ยงต่ำ (ตราสารหนี้, เงินฝาก) และเหลือสัดส่วนหุ้น (ประมาณ 30-40%) ไว้เพื่อให้พอร์ตยังคงเติบโตชนะเงินเฟ้อ.":"Never hold 100% cash due to inflation. Shift to a conservative portfolio (mostly bonds/fixed income), but retain some stocks (e.g., 30-40%) to ensure long-term growth outpaces inflation."} />
+        <FAQItem q={lang==="TH"?"FIRE Movement คืออะไร?":"What is the FIRE movement?"} a={lang==="TH"?"FIRE (Financial Independence, Retire Early) คือกลุ่มคนที่ตั้งใจออมเงินอย่างหนัก (50-70% ของรายได้) และใช้ชีวิตแบบประหยัด เพื่อสะสมความมั่งคั่งให้ถึงเป้าหมายและเกษียณตัวเองในวัย 30-40 ปี.":"Financial Independence, Retire Early. A lifestyle movement focusing on extreme savings (50-70% of income) and frugal living to retire in your 30s or 40s instead of 60s."} />
+        <FAQItem q={lang==="TH"?"อายุเยอะแล้วยังไม่ได้เริ่มเก็บเงินเกษียณเลย ทำอย่างไรดี?":"I'm older and have no savings, what do I do?"} a={lang==="TH"?"อย่าตื่นตระหนก 1) ลดรายจ่ายฟุ่มเฟือยลงทันที 2) โฟกัสไปที่การปิดหนี้ดอกเบี้ยสูง 3) หาช่องทางเพิ่มรายได้ 4) วางแผนลดขนาดที่อยู่อาศัย (Downsize) หรือทำงานหลังเกษียณเบาๆ ไม่มีคำว่าสายเกินไป.":"Don't panic. 1) Cut expenses aggressively. 2) Eliminate high-interest debt. 3) Increase income streams. 4) Plan to downsize your home or work a part-time job during retirement. It's never too late to start."} />
+      </SEOFAQ>
+    </div>
+  );
 }
 
 // 7. Stock Profit
