@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://www.kamnuan.com/sitemap.xml',
+    sitemap: 'https://คำนวณ.com/sitemap.xml',
   };
 }
