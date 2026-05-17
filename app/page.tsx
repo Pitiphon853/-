@@ -9,6 +9,7 @@ import { useTheme } from "../components/ThemeProvider";
 import { AdPlaceholder } from "../components/AdPlaceholder";
 import { DonateButton } from "../components/DonateButton";
 import { FinanceSEO } from "../components/seo/FinanceSEO";
+import { HealthSEO } from "../components/seo/HealthSEO";
 
 type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Agriculture" | "Construction" | "Technology" | "Travel" | "Utility" | "General";
 
@@ -396,6 +397,7 @@ export default function CalculatorHub() {
                 </motion.div>
 
                 {activeCategory === "Finance" && <FinanceSEO lang={lang} />}
+                {activeCategory === "Health" && <HealthSEO lang={lang} />}
 
                 {/* Footer SEO Content & Disclaimer */}
                 <div className="mt-20 pt-10 border-t border-gray-200 dark:border-white/10 text-center max-w-3xl mx-auto">
