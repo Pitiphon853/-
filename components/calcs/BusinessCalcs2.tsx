@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
-import { useLocalState, inputClass, labelClass , SEOFAQ, FAQItem, NumericInput } from "./shared";
+import { useLocalState, inputClass, labelClass , SEOFAQ, FAQItem, NumericInput, CalculationSteps } from "./shared";
 
 // 1. Break Even
 export function BreakEvenCalculator({ lang }: { lang: Lang }) {
@@ -161,7 +161,19 @@ export function PayrollCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
 
-      <SEOFAQ title={lang==="TH"?"FAQ — การทำเงินเดือน (Payroll)":"Payroll FAQ"}>
+      <div className="mt-8">
+        <CalculationSteps 
+          steps={lang === "TH" ? [
+            "คำนวณประกันสังคม: 5% ของฐานเงินเดือน (สูงสุดไม่เกิน 750 บาท/เดือน)",
+            "รวมรายการหัก: ภาษีหัก ณ ที่จ่าย (ถ้ามี) + รายการหักอื่นๆ (สาย/ลางาน)",
+            "เงินเดือนสุทธิ (Net Salary) = เงินเดือนเต็ม (Gross) - ประกันสังคม - รวมรายการหัก"
+          ] : [
+            "Social Security: 5% of gross salary (capped at 750 THB/month)",
+            "Total Deductions: Withholding Tax + Other Deductions (late/unpaid leave)",
+            "Net Salary = Gross Salary - Social Security - Total Deductions"
+          ]}
+        />
+        <SEOFAQ title={lang==="TH"?"FAQ — การทำเงินเดือน (Payroll)":"Payroll FAQ"}>
         <FAQItem q={lang==="TH"?"เงินประกันสังคมหักอย่างไร?":"How is Social Security deducted?"} a={lang==="TH"?"กฎหมายไทยกำหนดให้นายจ้างหัก 5% ของเงินเดือนพนักงาน โดยคิดจากฐานเงินเดือนสูงสุดไม่เกิน 15,000 บาท ดังนั้นยอดหักสูงสุดจะอยู่ที่ 750 บาทต่อเดือน และนายจ้างต้องสมทบเพิ่มให้อีก 5% (750 บาท) ด้วย.":"Thai law requires deducting 5% of gross salary, capped at a base salary of 15,000 THB. Thus, the maximum deduction is 750 THB. Employers must match this 5% contribution."} />
         <FAQItem q={lang==="TH"?"ฐานเงินเดือนต่ำสุดที่ต้องหักประกันสังคมคือเท่าไร?":"Minimum salary for Social Security?"} a={lang==="TH"?"ฐานเงินเดือนขั้นต่ำในการคิดประกันสังคมคือ 1,650 บาท (หัก 5% = 83 บาท) หากเงินเดือนน้อยกว่า 1,650 บาท ให้นำ 1,650 บาทมาเป็นฐานในการคำนวณ.":"The minimum base salary for Social Security calculation is 1,650 THB (5% = 83 THB). Salaries below this use 1,650 THB as the base."} />
         <FAQItem q={lang==="TH"?"ภาษีหัก ณ ที่จ่าย (Withholding Tax) คิดอย่างไร?":"How is Withholding Tax calculated?"} a={lang==="TH"?"วิธีที่ถูกต้องคือการคำนวณ 'ภาษีเงินได้บุคคลธรรมดาตลอดทั้งปี' (เงินเดือน × 12 หักค่าใช้จ่ายและค่าลดหย่อน) แล้วนำภาษีที่ต้องเสียทั้งปีมาหาร 12 เพื่อหักในแต่ละเดือน หากเงินเดือนไม่ถึงเกณฑ์เสียภาษี ก็ไม่ต้องหัก.":"Calculate the estimated annual personal income tax (gross × 12 minus allowances), then divide the total tax by 12 to deduct monthly. If annual income is below the taxable threshold, deduct 0."} />
@@ -172,7 +184,8 @@ export function PayrollCalculator({ lang }: { lang: Lang }) {
         <FAQItem q={lang==="TH"?"OT (โอที) ต้องนำมาคิดประกันสังคมไหม?":"Is OT included in Social Security base?"} a={lang==="TH"?"ไม่ครับ ฐานค่าจ้างในการคิดประกันสังคมจะคิดเฉพาะ 'ค่าจ้างหลัก' หรือเงินเดือนประจำ ไม่รวมค่าล่วงเวลา (OT) โบนัส หรือสวัสดิการอื่นๆ.":"No. The base salary for Social Security only includes the regular fixed salary/wages, excluding Overtime (OT), bonuses, or other welfare benefits."} />
         <FAQItem q={lang==="TH"?"พนักงานต่างด้าวต้องทำประกันสังคมไหม?":"Do foreign workers need Social Security?"} a={lang==="TH"?"ต้องทำครับ พนักงานต่างด้าวที่เข้าเมืองถูกกฎหมายและมีใบอนุญาตทำงาน (Work Permit) ต้องขึ้นทะเบียนและหักเงินสมทบเหมือนพนักงานคนไทยทุกประการ.":"Yes, legally employed foreign workers with valid Work Permits must be registered and contribute to Social Security exactly like Thai employees."} />
         <FAQItem q={lang==="TH"?"ถ้าลาคลอด จะได้เงินเดือนไหม?":"Do you get paid during maternity leave?"} a={lang==="TH"?"พนักงานหญิงมีสิทธิลาคลอดได้ 98 วัน โดยนายจ้างจ่ายค่าจ้างให้ 45 วันแรก ส่วนอีก 45 วันสามารถเบิกจากประกันสังคม (เหมาจ่าย 50% ของเงินเดือน ฐานสูงสุด 15,000) และเบิกค่าคลอดบุตรได้อีก 15,000 บาท.":"Female employees are entitled to 98 days of maternity leave. The employer pays the first 45 days. The SSF pays the next 45 days (50% of salary, capped at 15k base) plus a 15,000 THB birth allowance."} />
-      </SEOFAQ>
+        </SEOFAQ>
+      </div>
     </div>
   );
 }

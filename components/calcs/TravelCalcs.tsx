@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
-import { useLocalState, inputClass, labelClass , SEOFAQ, FAQItem } from "./shared";
+import { useLocalState, inputClass, labelClass , SEOFAQ, FAQItem, CalculationSteps } from "./shared";
 
 // 1. Time Zone
 export function TimeZoneConverter({ lang }: { lang: Lang }) {
@@ -70,7 +70,21 @@ export function TimeZoneConverter({ lang }: { lang: Lang }) {
         </motion.div>
       )}
 
-      <SEOFAQ title={lang==="TH"?"FAQ — การแปลงโซนเวลา (Time Zone)":"Time Zone FAQ"}>
+      <div className="mt-8">
+        <CalculationSteps 
+          steps={lang === "TH" ? [
+            "เวลาสากลเชิงพิกัด (UTC) คือเวลามาตรฐานกลางของโลก",
+            "ประเทศไทยใช้ UTC+7 (เร็วกว่าเวลามาตรฐาน 7 ชั่วโมง)",
+            "การแปลงเวลา: เวลาประเทศปลายทาง = เวลาไทย - 7 + (โซนเวลาประเทศปลายทาง)",
+            "หมายเหตุ: บางประเทศอาจมีการปรับเวลาตามฤดูกาล (Daylight Saving Time) ซึ่งส่งผลให้โซนเวลาเปลี่ยนไปในฤดูร้อน"
+          ] : [
+            "UTC is the global time standard.",
+            "Thailand is at UTC+7 (7 hours ahead of UTC).",
+            "Target Time = Thailand Time - 7 + (Target Timezone Offset).",
+            "Note: Some countries observe Daylight Saving Time (DST), which alters their timezone offset during summer."
+          ]}
+        />
+        <SEOFAQ title={lang==="TH"?"FAQ — การแปลงโซนเวลา (Time Zone)":"Time Zone FAQ"}>
         <FAQItem q={lang==="TH"?"ประเทศไทยใช้โซนเวลาอะไร?":"What timezone does Thailand use?"} a={lang==="TH"?"ประเทศไทยใช้โซนเวลา UTC+7 หรือ Indochina Time (ICT) ซึ่งเร็วกว่าเวลาสากลเชิงพิกัด (UTC) 7 ชั่วโมง และไม่มีการปรับเวลาตามฤดูกาล (Daylight Saving Time).":"Thailand uses UTC+7 (Indochina Time), which is 7 hours ahead of Coordinated Universal Time. Thailand does not observe Daylight Saving Time (DST)."} />
         <FAQItem q={lang==="TH"?"Daylight Saving Time (DST) คืออะไร?":"What is Daylight Saving Time (DST)?"} a={lang==="TH"?"DST คือการปรับนาฬิกาให้เร็วขึ้น 1 ชั่วโมงในช่วงฤดูร้อน เพื่อให้มีแสงสว่างในตอนเย็นนานขึ้น มักใช้ในประเทศแถบยุโรปและอเมริกาตอนเหนือ/ใต้ ส่วนไทยไม่มีการใช้ระบบนี้.":"DST is the practice of advancing clocks during summer months so that evening daylight lasts longer. Common in North America and Europe. Thailand doesn't use it."} />
         <FAQItem q={lang==="TH"?"เวลาไทยต่างจากญี่ปุ่น (Tokyo) กี่ชั่วโมง?":"How many hours difference between Thailand and Japan?"} a={lang==="TH"?"เวลาประเทศญี่ปุ่น (JST) คือ UTC+9 ซึ่งเร็วกว่าประเทศไทย (UTC+7) เป็นเวลา 2 ชั่วโมงเสมอ เนื่องจากทั้งสองประเทศไม่มี DST.":"Japan Standard Time (JST) is UTC+9, which is exactly 2 hours ahead of Thailand (UTC+7) all year round since neither observes DST."} />
@@ -82,7 +96,8 @@ export function TimeZoneConverter({ lang }: { lang: Lang }) {
         <FAQItem q={lang==="TH"?"เวลาบนตั๋วเครื่องบินคือโซนเวลาไหน?":"Which timezone is printed on flight tickets?"} a={lang==="TH"?"เวลาบนตั๋วเครื่องบิน (เวลาออกเดินทางและเวลาถึง) จะแสดงเป็นเวลาท้องถิ่น (Local Time) ของสนามบินนั้นๆ เสมอ ไม่ใช่เวลาของประเทศต้นทาง.":"Flight tickets always display departure and arrival times in the local timezone of the respective airports."} />
         <FAQItem q={lang==="TH"?"วิธีลดอาการ Jet Lag ทำอย่างไร?":"How to reduce Jet Lag?"} a={lang==="TH"?"1. ปรับเวลานอนล่วงหน้าก่อนเดินทาง 2. นอนหลับพักผ่อนให้เพียงพอบนเครื่อง 3. เมื่อถึงที่หมายให้ออกไปเจอแสงแดด 4. หลีกเลี่ยงกาเฟอีนแอลกอฮอล์.":"1. Shift sleep schedule before trip 2. Sleep well on the flight 3. Get sunlight upon arrival 4. Avoid heavy caffeine/alcohol."} />
         <FAQItem q={lang==="TH"?"อาการ Jet Lag จะหายไปเมื่อไร?":"How long does Jet Lag last?"} a={lang==="TH"?"โดยทั่วไป ร่างกายมนุษย์จะสามารถปรับตัวกับโซนเวลาใหม่ได้ประมาณ 1 ชั่วโมงต่อ 1 วัน เช่น หากเดินทางต่างกัน 5 ชั่วโมง อาจต้องใช้เวลา 5 วัน.":"Typically, the body adjusts to a new timezone at a rate of 1 hour per day. A 5-hour difference might take 5 days to fully overcome."} />
-      </SEOFAQ>
+        </SEOFAQ>
+      </div>
     </div>
   );
 }
@@ -255,7 +270,21 @@ export function PackingListGenerator({ lang }: { lang: Lang }) {
 
       <button onClick={resetList} className="mt-6 text-sm text-gray-400 hover:text-red-500 underline w-full text-center">{lang==="TH"?"รีเซ็ตค่าเริ่มต้น":"Reset to Default"}</button>
 
-      <SEOFAQ title={lang==="TH"?"FAQ — การจัดกระเป๋าเดินทาง":"Packing List FAQ"}>
+      <div className="mt-8">
+        <CalculationSteps 
+          steps={lang === "TH" ? [
+            "1. คัดแยกประเภท: แบ่งสิ่งของเป็นหมวดหมู่ (เสื้อผ้า, เอกสาร, อุปกรณ์อิเล็กทรอนิกส์, ยา)",
+            "2. เทคนิคการม้วน (Rolling): ม้วนเสื้อผ้าแทนการพับ ช่วยลดรอยยับและประหยัดพื้นที่",
+            "3. กฎของเหลวขึ้นเครื่อง: ห้ามเกิน 100 ml ต่อขวด และรวมกันไม่เกิน 1,000 ml ในถุงซิปล็อคใส",
+            "4. สิ่งที่ห้ามโหลดใต้เครื่อง: พาวเวอร์แบงค์ ลิเธียมแบตเตอรี่ อุปกรณ์จุดไฟ ต้องพกติดตัวขึ้นเครื่องเท่านั้น"
+          ] : [
+            "1. Categorize: Group items by category (Clothes, Docs, Tech, Meds).",
+            "2. Rolling Method: Roll clothes instead of folding to prevent wrinkles and save space.",
+            "3. Liquid Rule (Carry-on): Max 100ml per bottle, total max 1000ml in a clear zip bag.",
+            "4. Never check-in: Power banks, lithium batteries, and lighters must go in your carry-on."
+          ]}
+        />
+        <SEOFAQ title={lang==="TH"?"FAQ — การจัดกระเป๋าเดินทาง":"Packing List FAQ"}>
         <FAQItem q={lang==="TH"?"ต้องเตรียมเอกสารสำคัญอะไรบ้าง?":"What important documents to pack?"} a={lang==="TH"?"1. พาสปอร์ต (อายุเหลือ \u003E 6 เดือน) 2. วีซ่า (ถ้ามี) 3. บัตรประชาชน 4. ตั๋วเครื่องบิน (E-ticket) 5. ใบจองโรงแรม 6. กรมธรรม์ประกันการเดินทาง 7. บัตรเครดิต/Travel Card ถ่ายรูปเอกสารทั้งหมดเก็บไว้ในมือถือและอีเมลสำรองด้วย.":"1. Passport (valid \u003E 6 months) 2. Visa 3. ID card 4. E-ticket 5. Hotel booking 6. Travel insurance 7. Credit cards. Take photos of all documents as backup."} />
         <FAQItem q={lang==="TH"?"พาวเวอร์แบงค์ขึ้นเครื่องได้ขนาดเท่าไร?":"Power bank capacity allowed on planes?"} a={lang==="TH"?"พาวเวอร์แบงค์ห้ามโหลดใต้ท้องเครื่องเด็ดขาด! ต้องถือขึ้นเครื่อง (Carry-on) เท่านั้น ความจุที่อนุญาตคือไม่เกิน 20,000 mAh ถือได้ไม่จำกัดจำนวน หาก 20,000-32,000 mAh อนุญาตไม่เกิน 2 ก้อน เกิน 32,000 mAh ห้ามนำขึ้นเด็ดขาด.":"Power banks MUST be in carry-on. Strictly no check-in. Under 20,000 mAh (100 Wh) is allowed. 20,000-32,000 mAh limited to 2 pieces. \u003E 32,000 mAh is prohibited."} />
         <FAQItem q={lang==="TH"?"ของเหลวถือขึ้นเครื่อง (Carry-on) ได้เท่าไร?":"Liquid limit for carry-on?"} a={lang==="TH"?"ของเหลว เจล สเปรย์ ทุกชนิด ต้องบรรจุในขวดละไม่เกิน 100 ml (อิงจากป้ายฉลากขวด แม้ของเหลวจะเหลือน้อยก็ตาม) รวมทั้งหมดไม่เกิน 10 ขวด (1,000 ml) และต้องใส่ในถุงซิปล็อคใส.":"Liquids, gels, aerosols must be in containers of max 100 ml each (based on bottle label, not actual content). Total max 10 bottles (1,000 ml), placed in a clear zip-lock bag."} />
@@ -266,7 +295,8 @@ export function PackingListGenerator({ lang }: { lang: Lang }) {
         <FAQItem q={lang==="TH"?"การป้องกันกระเป๋าหาย หรือถูกงัดแงะ?":"How to prevent lost or tampered luggage?"} a={lang==="TH"?"ใช้แม่กุญแจแบบ TSA Lock ติดป้ายชื่อและเบอร์โทรที่กระเป๋า ถ่ายรูปกระเป๋าด้านนอกและของด้านในไว้เป็นหลักฐาน ใส่ Airtag หรือ Smart Tracker ไว้ในกระเป๋าเพื่อติดตามตำแหน่งได้เรียลไทม์.":"Use TSA-approved locks. Attach name/phone tags. Take photos of the bag and contents. Place an Airtag or smart tracker inside for real-time tracking."} />
         <FAQItem q={lang==="TH"?"น้ำหนักกระเป๋าควรเผื่อไว้สำหรับซื้อของฝากเท่าไร?":"How much weight to leave for souvenirs?"} a={lang==="TH"?"ควรเผื่อน้ำหนักกระเป๋าขากลับไว้อย่างน้อย 20-30% ของโควต้าทั้งหมด หรือพกถุงผ้าพับได้ (Duffle bag) เผื่อไว้ หากของเยอะเกินไปสามารถโหลดเพิ่มเป็นสัมภาระชิ้นที่ 2 ได้ (ตรวจสอบกฎสายการบิน).":"Leave at least 20-30% of your weight allowance empty for souvenirs, or pack a foldable duffle bag. You can use it as a carry-on or extra checked bag."} />
         <FAQItem q={lang==="TH"?"อาหารแห้งพกไปต่างประเทศได้ไหม?":"Can I bring dried food abroad?"} a={lang==="TH"?"อาหารสำเร็จรูป บะหมี่กึ่งสำเร็จรูป หรือขนม นำไปได้ แต่ต้องระวังผลิตภัณฑ์ที่มีส่วนผสมของ เนื้อหมู เนื้อวัว นม ไข่ สด/แปรรูป ซึ่งหลายประเทศ (เช่น ญี่ปุ่น ไต้หวัน ออสเตรเลีย) ห้ามนำเข้าเด็ดขาด หากฝ่าฝืนมีโทษปรับสูงมาก.":"Processed foods are usually fine, but strictly avoid bringing fresh/processed meat (pork, beef), dairy, or eggs to countries like Japan, Taiwan, or Australia. High fines apply."} />
-      </SEOFAQ>
+        </SEOFAQ>
+      </div>
     </div>
   );
 }

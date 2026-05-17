@@ -47,9 +47,33 @@ export function FermentationTimeCalculator({ lang }: { lang: Lang }) {
         </motion.div>
       )}
       <AdPlaceholder type="in-article" />
-      <SEOFAQ title={lang === "TH" ? "การหมักดอง (FAQ)" : "Fermentation FAQ"}>
-        <FAQItem q={lang === "TH" ? "อุณหภูมิมีผลอย่างไร?" : "How does temp affect it?"} a={lang === "TH" ? "อุณหภูมิสูงขึ้น เชื้อจะทำงานเร็วขึ้น ทำให้ใช้เวลาน้อยลง" : "Higher temp speeds up the process."} />
-      </SEOFAQ>
+      <div className="mt-8">
+        <CalculationSteps 
+          steps={lang === "TH" ? [
+            "ประเมินตามกฎ Q10: อัตราปฏิกิริยาชีวเคมีจะเร็วขึ้น 2 เท่า เมื่ออุณหภูมิสูงขึ้น 10°C",
+            "ส่วนต่างอุณหภูมิ = 25°C (ค่ามาตรฐาน) - อุณหภูมิปัจจุบัน",
+            "ตัวคูณ = 2 ^ (ส่วนต่างอุณหภูมิ / 10)",
+            "ระยะเวลาที่เหมาะสม = ระยะเวลามาตรฐานที่ 25°C × ตัวคูณ"
+          ] : [
+            "Estimated by Q10 rule: Biochemical reaction rate doubles for every 10°C rise.",
+            "Temp Diff = 25°C (standard) - Current Temp",
+            "Factor = 2 ^ (Temp Diff / 10)",
+            "Estimated Time = Standard Time at 25°C × Factor"
+          ]}
+        />
+        <SEOFAQ title={lang === "TH" ? "FAQ — การหมักดอง" : "Fermentation FAQ"}>
+          <FAQItem q={lang==="TH"?"อุณหภูมิมีผลต่อการหมักดองอย่างไร?":"How does temperature affect fermentation?"} a={lang==="TH"?"อุณหภูมิคือหัวใจสำคัญของการหมัก อุณหภูมิที่สูงขึ้นจะกระตุ้นให้จุลินทรีย์ (เช่น ยีสต์ หรือแลคโตบาซิลลัส) ทำงานเร็วขึ้น ทำให้กระบวนการหมักเสร็จสิ้นไวขึ้น แต่หากร้อนเกินไป จุลินทรีย์อาจตายหรือผลิตสารที่ทำให้รสชาติเพี้ยน":"Temperature is key. Higher temperatures accelerate microbial activity (like yeast or lactobacillus), completing fermentation faster. However, if it's too hot, microbes may die or produce off-flavors."} />
+          <FAQItem q={lang==="TH"?"อุณหภูมิที่เหมาะสมที่สุดคือเท่าไร?":"What is the optimal temperature?"} a={lang==="TH"?"ขึ้นอยู่กับประเภท: คอมบูชา (Kombucha) เหมาะที่ 24-27°C, กิมจิและเซาเออร์เคราท์ 18-22°C (หมักช้าอร่อยกว่า), ขนมปังซาวร์โด (Sourdough) 24-28°C ควรหลีกเลี่ยงการวางรับแสงแดดโดยตรง":"It depends on the ferment: Kombucha thrives at 24-27°C, Kimchi and Sauerkraut at 18-22°C (slower is tastier), and Sourdough at 24-28°C. Always avoid direct sunlight."} />
+          <FAQItem q={lang==="TH"?"กฎ Q10 (Q10 Rule) คืออะไร?":"What is the Q10 Rule?"} a={lang==="TH"?"ในทางชีววิทยา กฎ Q10 ระบุว่า อัตราการเกิดปฏิกิริยาชีวเคมีจะเพิ่มขึ้นประมาณ 2 เท่า ทุกๆ อุณหภูมิที่เพิ่มขึ้น 10°C เครื่องมือนี้ใช้หลักการนี้ในการประเมินระยะเวลาคร่าวๆ เมื่ออุณหภูมิเปลี่ยนไป":"In biology, the Q10 temperature coefficient states that the rate of biochemical reactions roughly doubles for every 10°C increase in temperature. This tool uses this principle to estimate time adjustments."} />
+          <FAQItem q={lang==="TH"?"จะรู้ได้อย่างไรว่าหมักเสร็จแล้ว?":"How do I know when it's done fermenting?"} a={lang==="TH"?"การหมักเป็นทั้งวิทยาศาสตร์และศิลปะ ให้ใช้ 'การชิม' เป็นหลัก (ยกเว้นแอลกอฮอล์ที่ใช้ไฮโดรมิเตอร์) หากมีรสเปรี้ยวที่พอใจและมีฟองก๊าซ (Carbonation) เกิดขึ้น ถือว่าสำเร็จ สามารถนำเข้าตู้เย็นเพื่อหยุดการหมักได้":"Fermentation is art and science. Use your taste buds! (Except for alcohol, where you use a hydrometer). If it has the desired tartness and visible carbonation, it's done. Refrigerate to halt the process."} />
+          <FAQItem q={lang==="TH"?"ทำไมของหมักถึงเกิดเชื้อรา?":"Why did my ferment grow mold?"} a={lang==="TH"?"มักเกิดจาก 1) อุปกรณ์ไม่สะอาด 2) วัตถุดิบโผล่พ้นน้ำเกลือสัมผัสกับอากาศ 3) เกลือน้อยเกินไป หรือ 4) อุณหภูมิร้อนจัดจนเชื้อราโตไวกว่าแบคทีเรียตัวดี หากเจอราสีดำ หรือสีแปลกๆ ควรทิ้งทันที":"Usually due to: 1) Unclean equipment, 2) Ingredients floating above the brine into the air, 3) Too little salt, or 4) Too warm, allowing mold to outpace good bacteria. If you see black or fuzzy mold, discard it."} />
+          <FAQItem q={lang==="TH"?"ปริมาณเกลือมีผลต่อความเร็วไหม?":"Does salt content affect speed?"} a={lang==="TH"?"มีผลมาก เกลือทำหน้าที่ยับยั้งแบคทีเรียก่อโรค แต่ถ้าใส่มากเกินไป (เกิน 3-4% ของน้ำหนัก) จะไปยับยั้งแลคโตบาซิลลัสด้วย ทำให้การหมักช้าลงมากๆ ปริมาณที่แนะนำคือ 2% ของน้ำหนักผัก":"Yes. Salt inhibits pathogens, but too much (>3-4% by weight) also inhibits Lactobacillus, drastically slowing fermentation. The standard recommendation is 2% salt by vegetable weight."} />
+          <FAQItem q={lang==="TH"?"การหมักในตู้เย็นทำได้ไหม?":"Can I ferment in the fridge?"} a={lang==="TH"?"ทำได้ เรียกว่า 'Cold Fermentation' เช่น การหมักแป้งพิซซ่าหรือซาวร์โดในตู้เย็น (4°C) จะใช้เวลานานขึ้นมาก (24-72 ชั่วโมง) แต่จะช่วยพัฒนารสชาติให้ซับซ้อนและอร่อยยิ่งขึ้น":"Yes, known as 'Cold Fermentation'. Fermenting pizza dough or sourdough in the fridge (4°C) takes much longer (24-72 hours) but develops a much more complex and superior flavor profile."} />
+          <FAQItem q={lang==="TH"?"ต้อง 'เปิดฝาระบายก๊าซ' (Burping) บ่อยแค่ไหน?":"How often should I 'burp' the jars?"} a={lang==="TH"?"ในช่วง 3-5 วันแรกที่แบคทีเรียทำงานหนักสุด ควรหมุนเปิดฝาเล็กน้อยเพื่อระบายก๊าซ CO2 วันละ 1-2 ครั้ง เพื่อป้องกันขวดแก้วระเบิดจากแรงดัน หรือใช้ฝาหมักแบบ Airlock เพื่อความสะดวก":"During the first 3-5 active days, slightly unscrew the lid 1-2 times daily to release CO2 buildup and prevent jars from exploding. Alternatively, use an airlock lid for convenience."} />
+          <FAQItem q={lang==="TH"?"ฝ้าสีขาวบนผิวน้ำดองคืออะไร? กินได้ไหม?":"What is the white film on top? Is it safe?"} a={lang==="TH"?"ฝ้าสีขาวขุ่นที่ผิวน้ำเรียกว่า ยีสต์คาม (Kahm Yeast) เป็นยีสต์ที่ไม่อันตราย สามารถตักออกและกินอาหารหมักต่อได้ แต่หากปล่อยไว้อาจทำให้รสชาติขมและมีกลิ่นแปลกๆ":"A thin, white, powdery film is usually Kahm Yeast. It is harmless and can be skimmed off. However, if left unchecked, it can impart a bitter taste and off-putting smell to the ferment."} />
+          <FAQItem q={lang==="TH"?"เครื่องมือนี้แม่นยำแค่ไหน?":"How accurate is this calculator?"} a={lang==="TH"?"เครื่องมือนี้ให้ค่า 'ประมาณการ' เชิงตัวเลขเท่านั้น ในความเป็นจริง ความเร็วขึ้นอยู่กับปริมาณน้ำตาลเริ่มต้น ชนิดของจุลินทรีย์ และความเค็ม ควรใช้สายตาและการชิมควบคู่ไปด้วยเสมอ":"This calculator provides a mathematical 'estimate'. In reality, speed relies heavily on initial sugar content, specific microbe strains, and salinity. Always use visual cues and tasting alongside this tool."} />
+        </SEOFAQ>
+      </div>
     </div>
   );
 }

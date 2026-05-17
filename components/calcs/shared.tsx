@@ -122,15 +122,21 @@ export function FAQItem({ q, a, isStep }: { q: string, a: React.ReactNode | stri
   );
 }
 
-export function CalculationSteps({ title, steps }: { title: string, steps: React.ReactNode }) {
+export function CalculationSteps({ title, steps }: { title?: string, steps: React.ReactNode | string[] }) {
+  const renderedSteps = Array.isArray(steps) ? (
+    <ul className="list-disc list-inside space-y-1">
+      {steps.map((s, i) => <li key={i}>{s}</li>)}
+    </ul>
+  ) : steps;
+
   return (
     <div className="mt-8 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-500/30 p-5 rounded-xl text-left">
       <h4 className="font-bold text-blue-800 dark:text-blue-300 mb-3 flex items-center gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-        {title}
+        {title || "วิธีการคำนวณ"}
       </h4>
       <div className="text-sm text-blue-900 dark:text-blue-200 space-y-2">
-        {steps}
+        {renderedSteps}
       </div>
     </div>
   );
