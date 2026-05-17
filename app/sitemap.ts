@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://คำนวณ.com';
+  const baseUrl = 'https://xn--42c4ar0dyc.com';
 
   return [
     {
