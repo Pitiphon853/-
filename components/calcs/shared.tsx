@@ -24,8 +24,82 @@ export function useLocalState<T>(key: string, initialValue: T): [T, (val: T) => 
 }
 
 // Common CSS Classes
-export const inputClass = "w-full px-4 py-3 bg-gray-100 dark:bg-white/5 border border-gray-300 dark:border-white/20 rounded text-gray-900 dark:text-white outline-none focus:ring-2 focus:border-transparent transition-all";
-export const labelClass = "block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2";
+export const inputClass = "w-full px-4 py-3.5 bg-gray-50/50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl text-gray-900 dark:text-white outline-none focus:ring-2 focus:ring-blue-500/40 dark:focus:ring-blue-400/40 focus:border-blue-500 dark:focus:border-blue-400 transition-all duration-300";
+export const labelClass = "block text-sm font-bold text-gray-600 dark:text-gray-400 mb-2 tracking-wide";
+
+// Numeric Input with Comma Auto-format
+export function NumericInput({ 
+  value, 
+  onChange, 
+  placeholder, 
+  min, 
+  max, 
+  step,
+  required,
+  className
+}: { 
+  value: number | string; 
+  onChange: (val: string) => void; 
+  placeholder?: string;
+  min?: number | string;
+  max?: number | string;
+  step?: string;
+  required?: boolean;
+  className?: string;
+}) {
+  const [displayValue, setDisplayValue] = useState(value ? Number(value).toLocaleString("en-US", { maximumFractionDigits: 10 }) : "");
+
+  useEffect(() => {
+    if (value === "") setDisplayValue("");
+    else {
+      const rawNum = String(value);
+      if (rawNum !== displayValue.replace(/,/g, '')) {
+         const parts = rawNum.split('.');
+         parts[0] = Number(parts[0]).toLocaleString("en-US");
+         setDisplayValue(parts.join('.'));
+      }
+    }
+  }, [value, displayValue]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const raw = e.target.value.replace(/[^0-9.-]/g, '');
+    
+    if (raw === "" || raw === "-") {
+      setDisplayValue(raw);
+      onChange("");
+      return;
+    }
+
+    if (raw.endsWith('.')) {
+      setDisplayValue(Number(raw.slice(0, -1)).toLocaleString("en-US") + ".");
+      onChange(raw);
+      return;
+    }
+    
+    const num = Number(raw);
+    if (!isNaN(num)) {
+      const parts = raw.split('.');
+      parts[0] = Number(parts[0]).toLocaleString("en-US");
+      setDisplayValue(parts.join('.'));
+      onChange(raw);
+    }
+  };
+
+  return (
+    <input
+      type="text"
+      inputMode="decimal"
+      value={displayValue}
+      onChange={handleChange}
+      placeholder={placeholder}
+      className={className || inputClass}
+      min={min}
+      max={max}
+      step={step}
+      required={required}
+    />
+  );
+}
 
 // SEO & FAQ Component
 export function SEOFAQ({ title, children }: { title: string, children: React.ReactNode }) {

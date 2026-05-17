@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
-import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem } from "./shared";
+import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem, NumericInput } from "./shared";
 
 // 1. Financial Ratios
 export function FinancialRatioCalculator({ lang }: { lang: Lang }) {
@@ -40,16 +40,16 @@ export function FinancialRatioCalculator({ lang }: { lang: Lang }) {
       <h2 className="text-3xl font-black mb-2 text-green-600 dark:text-green-400">{lang === "TH" ? "อัตราส่วนทางการเงิน" : "Financial Ratios"}</h2>
       <form onSubmit={calculate} className="space-y-4 mt-6">
         <div className="grid grid-cols-2 gap-4">
-           <div><label className={labelClass}>{lang==="TH"?"สินทรัพย์หมุนเวียน":"Current Assets"}</label><input type="number" value={currentAssets} onChange={e=>setCurrentAssets(e.target.value)} required className={inputClass} /></div>
-           <div><label className={labelClass}>{lang==="TH"?"หนี้สินหมุนเวียน":"Current Liabilities"}</label><input type="number" value={currentLiabilities} onChange={e=>setCurrentLiabilities(e.target.value)} required className={inputClass} /></div>
+           <div><label className={labelClass}>{lang==="TH"?"สินทรัพย์หมุนเวียน":"Current Assets"}</label><NumericInput value={currentAssets} onChange={setCurrentAssets} required className={inputClass} /></div>
+           <div><label className={labelClass}>{lang==="TH"?"หนี้สินหมุนเวียน":"Current Liabilities"}</label><NumericInput value={currentLiabilities} onChange={setCurrentLiabilities} required className={inputClass} /></div>
         </div>
         <div className="grid grid-cols-2 gap-4">
-           <div><label className={labelClass}>{lang==="TH"?"หนี้สินรวม":"Total Liabilities"}</label><input type="number" value={totalLiabilities} onChange={e=>setTotalLiabilities(e.target.value)} required className={inputClass} /></div>
-           <div><label className={labelClass}>{lang==="TH"?"ส่วนของผู้ถือหุ้นรวม":"Total Equity"}</label><input type="number" value={totalEquity} onChange={e=>setTotalEquity(e.target.value)} required className={inputClass} /></div>
+           <div><label className={labelClass}>{lang==="TH"?"หนี้สินรวม":"Total Liabilities"}</label><NumericInput value={totalLiabilities} onChange={setTotalLiabilities} required className={inputClass} /></div>
+           <div><label className={labelClass}>{lang==="TH"?"ส่วนของผู้ถือหุ้นรวม":"Total Equity"}</label><NumericInput value={totalEquity} onChange={setTotalEquity} required className={inputClass} /></div>
         </div>
         <div className="grid grid-cols-2 gap-4">
-           <div><label className={labelClass}>{lang==="TH"?"กำไรสุทธิ":"Net Income"}</label><input type="number" value={netIncome} onChange={e=>setNetIncome(e.target.value)} required className={inputClass} /></div>
-           <div><label className={labelClass}>{lang==="TH"?"รายได้รวม (ยอดขาย)":"Total Revenue"}</label><input type="number" value={revenue} onChange={e=>setRevenue(e.target.value)} required className={inputClass} /></div>
+           <div><label className={labelClass}>{lang==="TH"?"กำไรสุทธิ":"Net Income"}</label><NumericInput value={netIncome} onChange={setNetIncome} required className={inputClass} /></div>
+           <div><label className={labelClass}>{lang==="TH"?"รายได้รวม (ยอดขาย)":"Total Revenue"}</label><NumericInput value={revenue} onChange={setRevenue} required className={inputClass} /></div>
         </div>
         <button type="submit" className="w-full py-4 bg-green-500 font-bold text-white rounded hover:bg-green-600">{lang==="TH"?"คำนวณ":"Calculate"}</button>
       </form>
@@ -122,8 +122,8 @@ export function MarketplaceFeeCalculator({ lang }: { lang: Lang }) {
           </select>
         </div>
         <div className="grid grid-cols-2 gap-4">
-          <div><label className={labelClass}>{lang === "TH" ? "ราคาขาย (บาท)" : "Selling Price"}</label><input type="number" value={price} onChange={e=>setPrice(e.target.value)} required className={inputClass} /></div>
-          <div><label className={labelClass}>{lang === "TH" ? "ต้นทุนสินค้า (บาท)" : "Product Cost"}</label><input type="number" value={cost} onChange={e=>setCost(e.target.value)} required className={inputClass} /></div>
+          <div><label className={labelClass}>{lang === "TH" ? "ราคาขาย (บาท)" : "Selling Price"}</label><NumericInput value={price} onChange={setPrice} required className={inputClass} /></div>
+          <div><label className={labelClass}>{lang === "TH" ? "ต้นทุนสินค้า (บาท)" : "Product Cost"}</label><NumericInput value={cost} onChange={setCost} required className={inputClass} /></div>
         </div>
         <button type="submit" className="w-full py-4 bg-green-500 font-bold text-white rounded hover:bg-green-600">{lang==="TH"?"คำนวณกำไรสุทธิ":"Calculate Net Profit"}</button>
       </form>
@@ -177,8 +177,8 @@ export function SafetyStockCalculator({ lang }: { lang: Lang }) {
       <h2 className="text-3xl font-black mb-2 text-green-600 dark:text-green-400">{lang === "TH" ? "จุดสั่งซื้อ & สต็อกสำรอง" : "Reorder Point & Safety Stock"}</h2>
       <form onSubmit={calculate} className="space-y-4 mt-6">
         <div className="grid grid-cols-2 gap-4">
-          <div><label className={labelClass}>{lang==="TH"?"ยอดขายสูงสุด/วัน":"Max Daily Sales"}</label><input type="number" value={maxSales} onChange={e=>setMaxSales(e.target.value)} required className={inputClass} /></div>
-          <div><label className={labelClass}>{lang==="TH"?"ยอดขายเฉลี่ย/วัน":"Avg Daily Sales"}</label><input type="number" value={avgSales} onChange={e=>setAvgSales(e.target.value)} required className={inputClass} /></div>
+          <div><label className={labelClass}>{lang==="TH"?"ยอดขายสูงสุด/วัน":"Max Daily Sales"}</label><NumericInput value={maxSales} onChange={setMaxSales} required className={inputClass} /></div>
+          <div><label className={labelClass}>{lang==="TH"?"ยอดขายเฉลี่ย/วัน":"Avg Daily Sales"}</label><NumericInput value={avgSales} onChange={setAvgSales} required className={inputClass} /></div>
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div><label className={labelClass}>{lang==="TH"?"รอสินค้านานสุด (วัน)":"Max Lead Time (Days)"}</label><input type="number" value={maxLead} onChange={e=>setMaxLead(e.target.value)} required className={inputClass} /></div>
@@ -293,13 +293,13 @@ export function ReturnRateCalculator({ lang }: { lang: Lang }) {
       <h2 className="text-3xl font-black mb-2 text-green-600 dark:text-green-400">{lang === "TH" ? "ผลกระทบจากการตีกลับ/คืนสินค้า" : "Return Rate Impact"}</h2>
       <form onSubmit={calculate} className="space-y-4 mt-6">
         <div className="grid grid-cols-2 gap-4">
-           <div><label className={labelClass}>{lang==="TH"?"จำนวนออเดอร์ทั้งหมด":"Total Orders"}</label><input type="number" value={sales} onChange={e=>setSales(e.target.value)} required className={inputClass} /></div>
+           <div><label className={labelClass}>{lang==="TH"?"จำนวนออเดอร์ทั้งหมด":"Total Orders"}</label><NumericInput value={sales} onChange={setSales} required className={inputClass} /></div>
            <div><label className={labelClass}>{lang==="TH"?"อัตราการตีกลับ/คืน (%)":"Return Rate (%)"}</label><input type="number" value={rate} onChange={e=>setRate(e.target.value)} required className={inputClass} /></div>
         </div>
         <div className="grid grid-cols-3 gap-4">
-           <div><label className={labelClass}>{lang==="TH"?"ราคาขาย":"Price"}</label><input type="number" value={price} onChange={e=>setPrice(e.target.value)} required className={inputClass} /></div>
-           <div><label className={labelClass}>{lang==="TH"?"ต้นทุน/ชิ้น":"Cost/Item"}</label><input type="number" value={cost} onChange={e=>setCost(e.target.value)} required className={inputClass} /></div>
-           <div><label className={labelClass}>{lang==="TH"?"ค่าส่ง/ชิ้น":"Ship/Item"}</label><input type="number" value={shippingCost} onChange={e=>setShippingCost(e.target.value)} required className={inputClass} /></div>
+           <div><label className={labelClass}>{lang==="TH"?"ราคาขาย":"Price"}</label><NumericInput value={price} onChange={setPrice} required className={inputClass} /></div>
+           <div><label className={labelClass}>{lang==="TH"?"ต้นทุน/ชิ้น":"Cost/Item"}</label><NumericInput value={cost} onChange={setCost} required className={inputClass} /></div>
+           <div><label className={labelClass}>{lang==="TH"?"ค่าส่ง/ชิ้น":"Ship/Item"}</label><NumericInput value={shippingCost} onChange={setShippingCost} required className={inputClass} /></div>
         </div>
         <button type="submit" className="w-full py-4 bg-green-500 font-bold text-white rounded hover:bg-green-600">{lang==="TH"?"คำนวณ":"Calculate"}</button>
       </form>

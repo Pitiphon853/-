@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
-import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem } from "./shared";
+import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem, NumericInput } from "./shared";
 
 // 1. DCA Calculator
 export function DCACalculator({ lang }: { lang: Lang }) {
@@ -36,7 +36,7 @@ export function DCACalculator({ lang }: { lang: Lang }) {
       <form onSubmit={calculate} className="space-y-4 mt-6">
         <div>
           <label className={labelClass}>{lang === "TH" ? "เงินลงทุนต่อเดือน (บาท)" : "Monthly Investment"}</label>
-          <input type="number" value={monthly} onChange={e=>setMonthly(e.target.value)} required className={`${inputClass} focus:ring-green-400`} />
+          <NumericInput value={monthly} onChange={setMonthly} required className={`${inputClass} focus:ring-green-400`} />
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
@@ -111,7 +111,7 @@ export function StockFeeCalculator({ lang }: { lang: Lang }) {
       <form onSubmit={calculate} className="space-y-4 mt-6">
         <div>
           <label className={labelClass}>{lang === "TH" ? "มูลค่าการซื้อขาย (บาท)" : "Trading Value"}</label>
-          <input type="number" value={amount} onChange={e=>setAmount(e.target.value)} required className={`${inputClass} focus:ring-green-400`} />
+          <NumericInput value={amount} onChange={setAmount} required className={`${inputClass} focus:ring-green-400`} />
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
@@ -182,11 +182,11 @@ export function NetSalaryCalculator({ lang }: { lang: Lang }) {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className={labelClass}>{lang === "TH" ? "เงินเดือนฐาน" : "Base Salary"}</label>
-            <input type="number" value={salary} onChange={e=>setSalary(e.target.value)} required className={`${inputClass} focus:ring-green-400`} />
+            <NumericInput value={salary} onChange={setSalary} required className={`${inputClass} focus:ring-green-400`} />
           </div>
           <div>
             <label className={labelClass}>{lang === "TH" ? "เงินพิเศษ/เบี้ยเลี้ยง" : "Allowances"}</label>
-            <input type="number" value={allowance} onChange={e=>setAllowance(e.target.value)} className={`${inputClass} focus:ring-green-400`} />
+            <NumericInput value={allowance} onChange={setAllowance} className={`${inputClass} focus:ring-green-400`} />
           </div>
         </div>
         <button type="submit" className="w-full py-4 bg-green-500 font-bold text-white rounded hover:bg-green-600">{lang==="TH"?"คำนวณ":"Calculate"}</button>
@@ -238,7 +238,7 @@ export function ExpenseTrackerCalculator({ lang }: { lang: Lang }) {
       <form onSubmit={calculate} className="space-y-4">
         <div>
           <label className={labelClass}>{lang === "TH" ? "รายรับรายเดือนสุทธิ" : "Monthly Net Income"}</label>
-          <input type="number" value={income} onChange={e=>setIncome(e.target.value)} required className={`${inputClass} focus:ring-green-400`} />
+          <NumericInput value={income} onChange={setIncome} required className={`${inputClass} focus:ring-green-400`} />
         </div>
         <button type="submit" className="w-full py-4 bg-green-500 font-bold text-white rounded hover:bg-green-600">{lang==="TH"?"แบ่งสัดส่วน":"Calculate Budget"}</button>
       </form>

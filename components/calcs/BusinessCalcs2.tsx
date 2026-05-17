@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
-import { useLocalState, inputClass, labelClass , SEOFAQ, FAQItem } from "./shared";
+import { useLocalState, inputClass, labelClass , SEOFAQ, FAQItem, NumericInput } from "./shared";
 
 // 1. Break Even
 export function BreakEvenCalculator({ lang }: { lang: Lang }) {
@@ -17,10 +17,10 @@ export function BreakEvenCalculator({ lang }: { lang: Lang }) {
     <div>
       <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "จุดคุ้มทุน (Break-even)" : "Break-Even"}</h2>
       <div className="space-y-4 mt-6">
-        <div><label className={labelClass}>{lang === "TH" ? "ต้นทุนคงที่รวม" : "Total Fixed Costs"}</label><input type="number" value={fixed} onChange={e=>setFixed(e.target.value)} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "ต้นทุนคงที่รวม" : "Total Fixed Costs"}</label><NumericInput value={fixed} onChange={setFixed} className={inputClass} /></div>
         <div className="grid grid-cols-2 gap-4">
-          <div><label className={labelClass}>{lang === "TH" ? "ต้นทุนผันแปรต่อชิ้น" : "Variable Cost/Unit"}</label><input type="number" value={variable} onChange={e=>setVar(e.target.value)} className={inputClass} /></div>
-          <div><label className={labelClass}>{lang === "TH" ? "ราคาขายต่อชิ้น" : "Sale Price/Unit"}</label><input type="number" value={price} onChange={e=>setPrice(e.target.value)} className={inputClass} /></div>
+          <div><label className={labelClass}>{lang === "TH" ? "ต้นทุนผันแปรต่อชิ้น" : "Variable Cost/Unit"}</label><NumericInput value={variable} onChange={setVar} className={inputClass} /></div>
+          <div><label className={labelClass}>{lang === "TH" ? "ราคาขายต่อชิ้น" : "Sale Price/Unit"}</label><NumericInput value={price} onChange={setPrice} className={inputClass} /></div>
         </div>
       </div>
       {fixed && variable && price && !isNaN(be) && be > 0 && (
@@ -52,7 +52,7 @@ export function MarkupCalculator({ lang }: { lang: Lang }) {
     <div>
       <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "ตั้งราคาจาก Markup" : "Markup Calculator"}</h2>
       <div className="space-y-4 mt-6">
-        <div><label className={labelClass}>{lang === "TH" ? "ต้นทุน" : "Cost"}</label><input type="number" value={cost} onChange={e=>setCost(e.target.value)} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "ต้นทุน" : "Cost"}</label><NumericInput value={cost} onChange={setCost} className={inputClass} /></div>
         <div><label className={labelClass}>{lang === "TH" ? "Markup (%)" : "Markup (%)"}</label><input type="number" value={markup} onChange={e=>setMarkup(e.target.value)} className={inputClass} /></div>
       </div>
       {cost && markup && !isNaN(price) && (
@@ -89,9 +89,9 @@ export function DepreciationCalculator({ lang }: { lang: Lang }) {
     <div>
       <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "ค่าเสื่อมราคา (แบบเส้นตรง)" : "Depreciation"}</h2>
       <div className="space-y-4 mt-6">
-        <div><label className={labelClass}>{lang === "TH" ? "ราคาทุนทรัพย์สิน" : "Asset Cost"}</label><input type="number" value={cost} onChange={e=>setCost(e.target.value)} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "ราคาทุนทรัพย์สิน" : "Asset Cost"}</label><NumericInput value={cost} onChange={setCost} className={inputClass} /></div>
         <div className="grid grid-cols-2 gap-4">
-          <div><label className={labelClass}>{lang === "TH" ? "ราคาซาก" : "Salvage Value"}</label><input type="number" value={salvage} onChange={e=>setSalvage(e.target.value)} className={inputClass} /></div>
+          <div><label className={labelClass}>{lang === "TH" ? "ราคาซาก" : "Salvage Value"}</label><NumericInput value={salvage} onChange={setSalvage} className={inputClass} /></div>
           <div><label className={labelClass}>{lang === "TH" ? "อายุการใช้งาน (ปี)" : "Useful Life (Years)"}</label><input type="number" value={years} onChange={e=>setYears(e.target.value)} className={inputClass} /></div>
         </div>
       </div>
@@ -128,9 +128,9 @@ export function COGSCalculator({ lang }: { lang: Lang }) {
     <div>
       <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "ต้นทุนขาย (COGS)" : "COGS"}</h2>
       <div className="space-y-4 mt-6">
-        <div><label className={labelClass}>{lang === "TH" ? "สินค้าคงเหลือต้นงวด" : "Beginning Inventory"}</label><input type="number" value={invBeg} onChange={e=>setBeg(e.target.value)} className={inputClass} /></div>
-        <div><label className={labelClass}>{lang === "TH" ? "การซื้อสุทธิ" : "Purchases"}</label><input type="number" value={purchases} onChange={e=>setPur(e.target.value)} className={inputClass} /></div>
-        <div><label className={labelClass}>{lang === "TH" ? "สินค้าคงเหลือปลายงวด" : "Ending Inventory"}</label><input type="number" value={invEnd} onChange={e=>setEnd(e.target.value)} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "สินค้าคงเหลือต้นงวด" : "Beginning Inventory"}</label><NumericInput value={invBeg} onChange={setBeg} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "การซื้อสุทธิ" : "Purchases"}</label><NumericInput value={purchases} onChange={setPur} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "สินค้าคงเหลือปลายงวด" : "Ending Inventory"}</label><NumericInput value={invEnd} onChange={setEnd} className={inputClass} /></div>
       </div>
       {invBeg && purchases && invEnd && !isNaN(cogs) && (
         <motion.div initial={{opacity:0}} animate={{opacity:1}} className="mt-6 p-6 bg-green-50 rounded-xl text-center">
@@ -159,7 +159,7 @@ export function LTVCalculator({ lang }: { lang: Lang }) {
     <div>
       <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "มูลค่าลูกค้าตลอดชีพ (LTV)" : "LTV"}</h2>
       <div className="space-y-4 mt-6">
-        <div><label className={labelClass}>{lang === "TH" ? "รายได้เฉลี่ยต่อลูกค้า (ARPU)" : "Avg Revenue Per User"}</label><input type="number" value={arpu} onChange={e=>setArpu(e.target.value)} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "รายได้เฉลี่ยต่อลูกค้า (ARPU)" : "Avg Revenue Per User"}</label><NumericInput value={arpu} onChange={setArpu} className={inputClass} /></div>
         <div><label className={labelClass}>{lang === "TH" ? "อัตราการยกเลิก Churn Rate (%)" : "Churn Rate (%)"}</label><input type="number" value={churn} onChange={e=>setChurn(e.target.value)} className={inputClass} /></div>
       </div>
       {arpu && churn && !isNaN(ltv) && (
@@ -189,7 +189,7 @@ export function CACCalculator({ lang }: { lang: Lang }) {
     <div>
       <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "ต้นทุนได้ลูกค้าใหม่ (CAC)" : "CAC"}</h2>
       <div className="space-y-4 mt-6">
-        <div><label className={labelClass}>{lang === "TH" ? "งบการตลาด/ขายทั้งหมด" : "Total Marketing/Sales Spend"}</label><input type="number" value={spend} onChange={e=>setSpend(e.target.value)} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "งบการตลาด/ขายทั้งหมด" : "Total Marketing/Sales Spend"}</label><NumericInput value={spend} onChange={setSpend} className={inputClass} /></div>
         <div><label className={labelClass}>{lang === "TH" ? "ลูกค้าใหม่ที่ได้" : "New Customers Acquired"}</label><input type="number" value={cust} onChange={e=>setCust(e.target.value)} className={inputClass} /></div>
       </div>
       {spend && cust && !isNaN(cac) && (
@@ -249,8 +249,8 @@ export function InventoryTurnoverCalculator({ lang }: { lang: Lang }) {
     <div>
       <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "อัตราหมุนเวียนสินค้า" : "Inventory Turnover"}</h2>
       <div className="space-y-4 mt-6">
-        <div><label className={labelClass}>{lang === "TH" ? "ต้นทุนขาย (COGS)" : "Cost of Goods Sold"}</label><input type="number" value={cogs} onChange={e=>setCogs(e.target.value)} className={inputClass} /></div>
-        <div><label className={labelClass}>{lang === "TH" ? "สินค้าคงคลังเฉลี่ย" : "Average Inventory"}</label><input type="number" value={avgInv} onChange={e=>setAvg(e.target.value)} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "ต้นทุนขาย (COGS)" : "Cost of Goods Sold"}</label><NumericInput value={cogs} onChange={setCogs} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "สินค้าคงคลังเฉลี่ย" : "Average Inventory"}</label><NumericInput value={avgInv} onChange={setAvg} className={inputClass} /></div>
       </div>
       {cogs && avgInv && !isNaN(turn) && (
         <motion.div initial={{opacity:0}} animate={{opacity:1}} className="mt-6 p-6 bg-green-50 rounded-xl text-center">

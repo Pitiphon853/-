@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
 import { AdPlaceholder } from "../AdPlaceholder";
-import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem, ExportResult } from "./shared";
+import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem, ExportResult, NumericInput } from "./shared";
 
 // 1. VAT
 export function VatCalculator({ lang }: { lang: Lang }) {
@@ -36,7 +36,7 @@ export function VatCalculator({ lang }: { lang: Lang }) {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className={labelClass}>{lang === "TH" ? "จำนวนเงิน" : "Amount"}</label>
-            <input type="number" step="0.01" value={amount} onChange={e=>setAmount(e.target.value)} required className={`${inputClass} focus:ring-green-500`} />
+            <NumericInput value={amount} onChange={setAmount} required className={`${inputClass} focus:ring-green-500`} />
           </div>
           <div>
             <label className={labelClass}>{lang === "TH" ? "อัตรา VAT (%)" : "VAT Rate (%)"}</label>
@@ -107,7 +107,7 @@ export function MarginCalculator({ lang }: { lang: Lang }) {
       <form onSubmit={calculate} className="space-y-4 mt-6">
         <div>
           <label className={labelClass}>{lang === "TH" ? "ต้นทุนสินค้า" : "Cost"}</label>
-          <input type="number" value={cost} onChange={e=>setCost(e.target.value)} required className={`${inputClass} focus:ring-green-500`} />
+          <NumericInput value={cost} onChange={setCost} required className={`${inputClass} focus:ring-green-500`} />
         </div>
         <div>
           <label className={labelClass}>{lang === "TH" ? "กำไรที่ต้องการ (% Margin)" : "Target Margin (%)"}</label>

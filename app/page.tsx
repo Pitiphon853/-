@@ -455,7 +455,7 @@ export default function CalculatorHub() {
                   <ArrowLeft className="w-5 h-5" /> {t.back}
                 </button>
 
-                <div className={`glass-card p-6 md:p-8 rounded-2xl border-2 transition-colors shadow-neo dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] bg-white/80 dark:bg-black/50 backdrop-blur-xl ${colorClasses[activeColor as keyof typeof colorClasses]}`}>
+                <div className={`glass-card p-8 md:p-12 rounded-3xl border-2 transition-colors shadow-neo dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] bg-white/80 dark:bg-black/50 backdrop-blur-xl ${colorClasses[activeColor as keyof typeof colorClasses]}`}>
                   <Calculators activeCalc={activeCalc} lang={lang} setCalc={setActiveCalc} />
                 </div>
               </motion.div>

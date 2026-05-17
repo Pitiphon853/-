@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
-import { useLocalState, inputClass, labelClass , SEOFAQ, FAQItem } from "./shared";
+import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem, NumericInput } from "./shared";
 
 // 1. Savings Goal
 export function SavingsGoalCalculator({ lang }: { lang: Lang }) {
@@ -16,8 +16,8 @@ export function SavingsGoalCalculator({ lang }: { lang: Lang }) {
     <div>
       <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "เป้าหมายการออม" : "Savings Goal"}</h2>
       <div className="space-y-4 mt-6">
-        <div><label className={labelClass}>{lang === "TH" ? "จำนวนเงินเป้าหมาย" : "Goal Amount"}</label><input type="number" value={goal} onChange={e=>setGoal(e.target.value)} className={inputClass} /></div>
-        <div><label className={labelClass}>{lang === "TH" ? "เงินออมต่อเดือน" : "Monthly Savings"}</label><input type="number" value={monthly} onChange={e=>setMonthly(e.target.value)} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "จำนวนเงินเป้าหมาย" : "Goal Amount"}</label><NumericInput value={goal} onChange={setGoal} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "เงินออมต่อเดือน" : "Monthly Savings"}</label><NumericInput value={monthly} onChange={setMonthly} className={inputClass} /></div>
       </div>
       {goal && monthly && !isNaN(months) && (
         <motion.div initial={{opacity:0}} animate={{opacity:1}} className="mt-6 p-6 bg-green-50 rounded-xl text-center">
@@ -49,7 +49,7 @@ export function InflationCalculator({ lang }: { lang: Lang }) {
     <div>
       <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "คำนวณเงินเฟ้อ" : "Inflation Impact"}</h2>
       <div className="space-y-4 mt-6">
-        <div><label className={labelClass}>{lang === "TH" ? "มูลค่าปัจจุบัน" : "Current Amount"}</label><input type="number" value={amount} onChange={e=>setAmount(e.target.value)} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "มูลค่าปัจจุบัน" : "Current Amount"}</label><NumericInput value={amount} onChange={setAmount} className={inputClass} /></div>
         <div className="grid grid-cols-2 gap-4">
           <div><label className={labelClass}>{lang === "TH" ? "อัตราเงินเฟ้อ (%)" : "Inflation Rate (%)"}</label><input type="number" value={rate} onChange={e=>setRate(e.target.value)} className={inputClass} /></div>
           <div><label className={labelClass}>{lang === "TH" ? "จำนวนปี" : "Years"}</label><input type="number" value={years} onChange={e=>setYears(e.target.value)} className={inputClass} /></div>
@@ -82,7 +82,7 @@ export function SalaryToHourlyCalculator({ lang }: { lang: Lang }) {
     <div>
       <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "แปลงเงินเดือนเป็นรายชั่วโมง" : "Salary to Hourly"}</h2>
       <div className="space-y-4 mt-6">
-        <div><label className={labelClass}>{lang === "TH" ? "เงินเดือน (รายปี)" : "Annual Salary"}</label><input type="number" value={salary} onChange={e=>setSalary(e.target.value)} className={inputClass} placeholder={lang==="TH"?"ถ้าเป็นรายเดือนให้คูณ 12 ก่อน":"Yearly total"} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "เงินเดือน (รายปี)" : "Annual Salary"}</label><NumericInput value={salary} onChange={setSalary} className={inputClass} placeholder={lang==="TH"?"ถ้าเป็นรายเดือนให้คูณ 12 ก่อน":"Yearly total"} /></div>
         <div><label className={labelClass}>{lang === "TH" ? "ชั่วโมงทำงาน (ต่อสัปดาห์)" : "Hours per Week"}</label><input type="number" value={hours} onChange={e=>setHours(e.target.value)} className={inputClass} /></div>
       </div>
       {salary && hours && !isNaN(hourly) && (
@@ -112,8 +112,8 @@ export function NetWorthCalculator({ lang }: { lang: Lang }) {
     <div>
       <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "ความมั่งคั่งสุทธิ" : "Net Worth"}</h2>
       <div className="space-y-4 mt-6">
-        <div><label className={labelClass}>{lang === "TH" ? "ทรัพย์สินรวม (Assets)" : "Total Assets"}</label><input type="number" value={assets} onChange={e=>setAssets(e.target.value)} className={inputClass} /></div>
-        <div><label className={labelClass}>{lang === "TH" ? "หนี้สินรวม (Liabilities)" : "Total Liabilities"}</label><input type="number" value={liab} onChange={e=>setLiab(e.target.value)} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "ทรัพย์สินรวม (Assets)" : "Total Assets"}</label><NumericInput value={assets} onChange={setAssets} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "หนี้สินรวม (Liabilities)" : "Total Liabilities"}</label><NumericInput value={liab} onChange={setLiab} className={inputClass} /></div>
       </div>
       {assets && liab && !isNaN(nw) && (
         <motion.div initial={{opacity:0}} animate={{opacity:1}} className="mt-6 p-6 bg-green-50 rounded-xl text-center">
@@ -154,10 +154,10 @@ export function StockProfitCalculator({ lang }: { lang: Lang }) {
       <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "กำไรหุ้น" : "Stock Profit"}</h2>
       <div className="space-y-4 mt-6">
         <div className="grid grid-cols-2 gap-4">
-          <div><label className={labelClass}>{lang === "TH" ? "ราคาซื้อ" : "Buy Price"}</label><input type="number" value={buyPrice} onChange={e=>setBuy(e.target.value)} className={inputClass} /></div>
-          <div><label className={labelClass}>{lang === "TH" ? "ราคาขาย" : "Sell Price"}</label><input type="number" value={sellPrice} onChange={e=>setSell(e.target.value)} className={inputClass} /></div>
+          <div><label className={labelClass}>{lang === "TH" ? "ราคาซื้อ" : "Buy Price"}</label><NumericInput value={buyPrice} onChange={setBuy} className={inputClass} /></div>
+          <div><label className={labelClass}>{lang === "TH" ? "ราคาขาย" : "Sell Price"}</label><NumericInput value={sellPrice} onChange={setSell} className={inputClass} /></div>
         </div>
-        <div><label className={labelClass}>{lang === "TH" ? "จำนวนหุ้น" : "Shares"}</label><input type="number" value={shares} onChange={e=>setShares(e.target.value)} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "จำนวนหุ้น" : "Shares"}</label><NumericInput value={shares} onChange={setShares} className={inputClass} /></div>
       </div>
       {buyPrice && sellPrice && shares && !isNaN(profit) && (
         <motion.div initial={{opacity:0}} animate={{opacity:1}} className="mt-6 p-6 bg-green-50 rounded-xl text-center">
@@ -186,8 +186,8 @@ export function ROICalculator({ lang }: { lang: Lang }) {
     <div>
       <h2 className="text-3xl font-black mb-2 text-green-600">{lang === "TH" ? "ผลตอบแทน ROI" : "ROI"}</h2>
       <div className="space-y-4 mt-6">
-        <div><label className={labelClass}>{lang === "TH" ? "เงินลงทุน" : "Amount Invested"}</label><input type="number" value={invested} onChange={e=>setInv(e.target.value)} className={inputClass} /></div>
-        <div><label className={labelClass}>{lang === "TH" ? "เงินที่ได้รับกลับมา" : "Amount Returned"}</label><input type="number" value={returned} onChange={e=>setRet(e.target.value)} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "เงินลงทุน" : "Amount Invested"}</label><NumericInput value={invested} onChange={setInv} className={inputClass} /></div>
+        <div><label className={labelClass}>{lang === "TH" ? "เงินที่ได้รับกลับมา" : "Amount Returned"}</label><NumericInput value={returned} onChange={setRet} className={inputClass} /></div>
       </div>
       {invested && returned && !isNaN(roi) && (
         <motion.div initial={{opacity:0}} animate={{opacity:1}} className="mt-6 p-6 bg-green-50 rounded-xl text-center">

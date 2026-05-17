@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Lang } from "../dictionary";
 import { AdPlaceholder } from "../AdPlaceholder";
-import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem, CalculationSteps } from "./shared";
+import { useLocalState, inputClass, labelClass, SEOFAQ, FAQItem, CalculationSteps, NumericInput } from "./shared";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer } from "recharts";
 
 // 2. Discount
@@ -30,7 +30,7 @@ export function DiscountCalculator({ lang }: { lang: Lang }) {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className={labelClass}>{lang === "TH" ? "ราคาสินค้า" : "Original Price"}</label>
-            <input type="number" value={price} onChange={e=>setPrice(e.target.value)} required className={`${inputClass} focus:ring-green-400`} />
+            <NumericInput value={price} onChange={setPrice} required className={`${inputClass} focus:ring-green-400`} />
           </div>
           <div>
             <label className={labelClass}>{lang === "TH" ? "ส่วนลด (%)" : "Discount (%)"}</label>
@@ -84,12 +84,12 @@ export function CarLoanCalculator({ lang }: { lang: Lang }) {
       <form onSubmit={calculate} className="space-y-4 mt-6">
         <div>
           <label className={labelClass}>{lang === "TH" ? "ราคารถ" : "Car Price"}</label>
-          <input type="number" value={price} onChange={e=>setPrice(e.target.value)} required className={`${inputClass} focus:ring-green-500`} />
+          <NumericInput value={price} onChange={setPrice} required className={`${inputClass} focus:ring-green-500`} />
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className={labelClass}>{lang === "TH" ? "เงินดาวน์" : "Down Payment"}</label>
-            <input type="number" value={down} onChange={e=>setDown(e.target.value)} className={`${inputClass} focus:ring-green-500`} />
+            <NumericInput value={down} onChange={setDown} className={`${inputClass} focus:ring-green-500`} />
           </div>
           <div>
             <label className={labelClass}>{lang === "TH" ? "ดอกเบี้ยต่อปี (%)" : "Interest Rate (%)"}</label>
@@ -145,7 +145,7 @@ export function MortgageCalculator({ lang }: { lang: Lang }) {
       <form onSubmit={calculate} className="space-y-4 mt-6">
         <div>
           <label className={labelClass}>{lang === "TH" ? "ยอดเงินกู้" : "Loan Amount"}</label>
-          <input type="number" value={loan} onChange={e=>setLoan(e.target.value)} required className={`${inputClass} focus:ring-green-400`} />
+          <NumericInput value={loan} onChange={setLoan} required className={`${inputClass} focus:ring-green-400`} />
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
@@ -229,11 +229,11 @@ export function CompoundInterest({ lang }: { lang: Lang }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className={labelClass}>{lang === "TH" ? "เงินต้น" : "Initial Principal"}</label>
-            <input type="number" value={principal} onChange={e=>setPrincipal(e.target.value)} required className={`${inputClass} focus:ring-green-500`} />
+            <NumericInput value={principal} onChange={setPrincipal} required className={`${inputClass} focus:ring-green-500`} />
           </div>
           <div>
             <label className={labelClass}>{lang === "TH" ? "เงินสมทบต่อเดือน" : "Monthly Contribution"}</label>
-            <input type="number" value={monthlyAddition} onChange={e=>setMonthlyAddition(e.target.value)} className={`${inputClass} focus:ring-green-500`} />
+            <NumericInput value={monthlyAddition} onChange={setMonthlyAddition} className={`${inputClass} focus:ring-green-500`} />
           </div>
           <div>
             <label className={labelClass}>{lang === "TH" ? "ระยะเวลา (ปี)" : "Years to Grow"}</label>
@@ -357,7 +357,7 @@ export function BillSplitter({ lang }: { lang: Lang }) {
       <form onSubmit={calculate} className="space-y-4 mt-6">
         <div>
           <label className={labelClass}>{lang === "TH" ? "ราคาอาหารรวม (Subtotal)" : "Subtotal"}</label>
-          <input type="number" value={subtotal} onChange={e=>setSubtotal(e.target.value)} required className={`${inputClass} focus:ring-green-500`} placeholder={lang==="TH"?"ก่อนบวก SC/VAT":"Before SC/VAT"} />
+          <NumericInput value={subtotal} onChange={setSubtotal} required className={`${inputClass} focus:ring-green-500`} placeholder={lang==="TH"?"ก่อนบวก SC/VAT":"Before SC/VAT"} />
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
@@ -393,7 +393,7 @@ export function BillSplitter({ lang }: { lang: Lang }) {
             {specials.map((s, idx) => (
               <div key={idx} className="flex gap-2">
                 <input type="text" value={s.name} onChange={e=>updateSpecial(idx, "name", e.target.value)} placeholder={lang==="TH"?"ชื่อ":"Name"} className={`${inputClass} flex-1 py-2 text-sm`} />
-                <input type="number" value={s.price} onChange={e=>updateSpecial(idx, "price", e.target.value)} placeholder={lang==="TH"?"ราคาเมนู":"Price"} className={`${inputClass} w-24 py-2 text-sm`} />
+                <NumericInput value={s.price} onChange={(val)=>updateSpecial(idx, "price", val)} placeholder={lang==="TH"?"ราคาเมนู":"Price"} className={`${inputClass} w-24 py-2 text-sm`} />
                 <button type="button" onClick={()=>removeSpecial(idx)} className="text-red-500 p-2 font-bold hover:bg-red-50 dark:hover:bg-red-900/20 rounded">X</button>
               </div>
             ))}
@@ -502,7 +502,7 @@ export function CurrencyConverter({ lang }: { lang: Lang }) {
       
       <div className="bg-white dark:bg-white/5 p-6 rounded-2xl border border-gray-200 dark:border-white/10 mb-6">
         <label className={labelClass}>{lang === "TH" ? "จำนวนเงิน" : "Amount"}</label>
-        <input type="number" value={amount} onChange={e=>setAmount(e.target.value)} className={`${inputClass} text-2xl font-bold text-center h-16 focus:ring-green-500`} />
+        <NumericInput value={amount} onChange={setAmount} className={`${inputClass} text-2xl font-bold text-center h-16 focus:ring-green-500`} />
         
         <div className="flex items-center gap-4 mt-6">
           <div className="flex-1">
