@@ -70,6 +70,7 @@ export default function CalculatorHub() {
     { id: "ovulation", name: lang==="TH"?"วันตกไข่":"Ovulation", desc: lang==="TH"?"คำนวณวันไข่ตก":"Fertility Window", category: "Family", icon: Heart },
     { id: "blood-type", name: lang==="TH"?"ทำนายกรุ๊ปเลือด":"Blood Type", desc: lang==="TH"?"กรุ๊ปเลือดลูก":"Child Blood Predictor", category: "Family", icon: Heart },
     { id: "zodiac", name: lang==="TH"?"ราศีเกิด":"Zodiac", desc: lang==="TH"?"คำนวณราศี":"Star Sign", category: "Family", icon: BookOpen },
+    { id: "horoscope", name: lang==="TH"?"ดูดวงและโชคชะตา":"Horoscope", desc: lang==="TH"?"ทำนายพื้นดวง":"Fortune Teller", category: "Family", icon: BookOpen },
     { id: "pet-age", name: lang==="TH"?"อายุสัตว์เลี้ยง":"Pet Age", desc: lang==="TH"?"เทียบอายุคน":"Human Years", category: "Family", icon: BookOpen },
     { id: "fetal-weight", name: lang==="TH"?"น้ำหนักทารกในครรภ์":"Fetal Weight", desc: lang==="TH"?"ตามอายุครรภ์ (สัปดาห์)":"WHO Fetal Dev", category: "Family", icon: Baby },
     { id: "child-cost", name: lang==="TH"?"ค่าเลี้ยงลูก":"Child Raising Cost", desc: lang==="TH"?"ประมาณการต่อปี":"Yearly Cost", category: "Family", icon: Coins },
@@ -126,6 +127,7 @@ export default function CalculatorHub() {
     { id: "basen", name: lang==="TH"?"แปลงเลขฐาน":"Base Converter", desc: lang==="TH"?"ฐาน 2–36 ครบทุกฐาน":"Base 2–36, Step-by-Step", category: "Utility", icon: Calculator },
     { id: "btu", name: lang==="TH"?"คำนวณ BTU":"AC BTU", desc: lang==="TH"?"ขนาดแอร์บ้าน":"Air Conditioner BTU", category: "Utility", icon: Home },
     { id: "electric", name: lang==="TH"?"ค่าไฟ":"Electricity", desc: lang==="TH"?"คำนวณค่าไฟฟ้า":"Electricity Bill", category: "Utility", icon: Zap },
+    { id: "lottery", name: lang==="TH"?"ตรวจผลสลาก":"Lottery Checker", desc: lang==="TH"?"ตรวจหวยล่าสุด":"Thai Lottery", category: "Utility", icon: Hash },
     { id: "water-bill", name: lang==="TH"?"ค่าน้ำ":"Water Bill", desc: lang==="TH"?"ค่าน้ำประปา":"Water Usage Bill", category: "Utility", icon: Home },
     { id: "fuel-cost", name: lang==="TH"?"ค่าน้ำมันรถ":"Fuel Cost", desc: lang==="TH"?"คำนวณค่าน้ำมันเดินทาง":"Trip Fuel Estimate", category: "Utility", icon: Car },
     { id: "cooking-unit", name: lang==="TH"?"แปลงหน่วยทำอาหาร":"Cooking Units", desc: lang==="TH"?"ถ้วยตวง ↔ กรัม":"Cups to Grams", category: "Utility", icon: Utensils },
@@ -140,6 +142,7 @@ export default function CalculatorHub() {
     { id: "food-energy", name: lang==="TH"?"พลังงานอาหาร":"Food Energy", desc: lang==="TH"?"Joule ↔ kcal":"Joule ↔ kcal", category: "Agriculture", icon: Zap },
     { id: "fertilizer", name: lang==="TH"?"ปุ๋ยต่อไร่":"Fertilizer", desc: lang==="TH"?"NPK ตามชนิดพืช":"Fertilizer per Rai", category: "Agriculture", icon: Home },
     { id: "irrigation", name: lang==="TH"?"น้ำชลประทาน":"Irrigation", desc: lang==="TH"?"ปริมาณน้ำต่อไร่":"Water per Rai", category: "Agriculture", icon: Home },
+    { id: "durian", name: lang==="TH"?"คำนวณทำสวนทุเรียน":"Durian Farming", desc: lang==="TH"?"วันตัด/การปลูก":"Harvest & Plant", category: "Agriculture", icon: Home },
     { id: "yield", name: lang==="TH"?"ผลผลิตต่อไร่":"Crop Yield", desc: lang==="TH"?"กำไรเกษตรกร":"Yield per Rai", category: "Agriculture", icon: Coins },
 
     // Construction (Amber)

@@ -21,6 +21,9 @@ import { PantoneConverter } from "./calcs/ConversionCalcs3";
 import { FermentationTimeCalculator, FoodEnergyCalculator, FertilizerCalculator, IrrigationCalculator, YieldCalculator } from "./calcs/AgricultureCalcs";
 import { HousePaintCalculator, CementCalculator, WallpaperCalculator, RoofAreaCalculator, WaterTankCalculator, PoolVolumeCalculator, InsulationCalculator, RenovationCostCalculator } from "./calcs/ConstructionCalcs";
 import { BandwidthCalculator, ServerCostCalculator, ImageSizeCalculator, IPSubnetCalculator, VideoBitrateCalculator, BatteryLifeCalculator, HashRateCalculator } from "./calcs/TechnologyCalcs";
+import { DurianCalculator } from "./calcs/AgricultureCalcs2";
+import { LotteryChecker } from "./calcs/UtilityCalcs3";
+import { HoroscopeCalculator } from "./calcs/FamilyCalcs3";
 
 export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string, lang: Lang, setCalc: (id: string) => void }) {
   // Health & Diet
@@ -51,6 +54,7 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "fetal-weight") return <FetalWeightCalculator lang={lang} />;
   if (activeCalc === "child-cost") return <ChildCostCalculator lang={lang} />;
   if (activeCalc === "child-milestone") return <ChildMilestoneCalculator lang={lang} />;
+  if (activeCalc === "horoscope") return <HoroscopeCalculator lang={lang} setCalc={setCalc} />;
   
   // Travel
   if (activeCalc === "time-zone") return <TimeZoneConverter lang={lang} />;
@@ -109,6 +113,7 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "target-gpa") return <TargetGPACalculator lang={lang} />;
   if (activeCalc === "percentile") return <PercentileCalculator lang={lang} />;
   if (activeCalc === "reading-time") return <ReadingTimeCalculator lang={lang} />;
+  if (activeCalc === "lottery") return <LotteryChecker lang={lang} setCalc={setCalc} />;
 
   // Conversion
   if (activeCalc === "cooking-unit") return <CookingUnitConverter lang={lang} />;
@@ -132,6 +137,7 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "fertilizer") return <FertilizerCalculator lang={lang} />;
   if (activeCalc === "irrigation") return <IrrigationCalculator lang={lang} />;
   if (activeCalc === "yield") return <YieldCalculator lang={lang} />;
+  if (activeCalc === "durian") return <DurianCalculator lang={lang} setCalc={setCalc} />;
 
   // Construction
   if (activeCalc === "house-paint") return <HousePaintCalculator lang={lang} />;
