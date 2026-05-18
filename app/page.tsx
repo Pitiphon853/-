@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Calculator, Heart, Home, BookOpen, Coins, Zap, Car, ArrowLeft, Star, Mail, Moon, Sun, Baby, Utensils, Briefcase, Hash, Lightbulb, Receipt, Plane } from "lucide-react";
+import { Search, Calculator, Heart, Home, BookOpen, Coins, Zap, Car, ArrowLeft, Star, Mail, Moon, Sun, Baby, Utensils, Briefcase, Hash, Lightbulb, Receipt, Plane, Sparkles } from "lucide-react";
 import { dict, Lang } from "../components/dictionary";
 import { Calculators } from "../components/calculators";
 import { useTheme } from "../components/ThemeProvider";
@@ -71,6 +71,7 @@ export default function CalculatorHub() {
     { id: "blood-type", name: lang==="TH"?"ทำนายกรุ๊ปเลือด":"Blood Type", desc: lang==="TH"?"กรุ๊ปเลือดลูก":"Child Blood Predictor", category: "Family", icon: Heart },
     { id: "zodiac", name: lang==="TH"?"ราศีเกิด":"Zodiac", desc: lang==="TH"?"คำนวณราศี":"Star Sign", category: "Family", icon: BookOpen },
     { id: "horoscope", name: lang==="TH"?"ดูดวงและโชคชะตา":"Horoscope", desc: lang==="TH"?"ทำนายพื้นดวง":"Fortune Teller", category: "Family", icon: BookOpen },
+    { id: "tarot", name: lang==="TH"?"ดูดวงไพ่ยิปซี":"Tarot Reading", desc: lang==="TH"?"อดีต ปัจจุบัน อนาคต":"3-Card Spread", category: "Family", icon: Sparkles },
     { id: "pet-age", name: lang==="TH"?"อายุสัตว์เลี้ยง":"Pet Age", desc: lang==="TH"?"เทียบอายุคน":"Human Years", category: "Family", icon: BookOpen },
     { id: "fetal-weight", name: lang==="TH"?"น้ำหนักทารกในครรภ์":"Fetal Weight", desc: lang==="TH"?"ตามอายุครรภ์ (สัปดาห์)":"WHO Fetal Dev", category: "Family", icon: Baby },
     { id: "child-cost", name: lang==="TH"?"ค่าเลี้ยงลูก":"Child Raising Cost", desc: lang==="TH"?"ประมาณการต่อปี":"Yearly Cost", category: "Family", icon: Coins },

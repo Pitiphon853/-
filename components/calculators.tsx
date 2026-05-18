@@ -24,6 +24,7 @@ import { BandwidthCalculator, ServerCostCalculator, ImageSizeCalculator, IPSubne
 import { DurianCalculator } from "./calcs/AgricultureCalcs2";
 import { LotteryChecker } from "./calcs/UtilityCalcs3";
 import { HoroscopeCalculator } from "./calcs/FamilyCalcs3";
+import { TarotReadingCalculator } from "./calcs/TarotCalcs";
 
 export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string, lang: Lang, setCalc: (id: string) => void }) {
   // Health & Diet
@@ -55,6 +56,7 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "child-cost") return <ChildCostCalculator lang={lang} />;
   if (activeCalc === "child-milestone") return <ChildMilestoneCalculator lang={lang} />;
   if (activeCalc === "horoscope") return <HoroscopeCalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "tarot") return <TarotReadingCalculator lang={lang} setCalc={setCalc} />;
   
   // Travel
   if (activeCalc === "time-zone") return <TimeZoneConverter lang={lang} />;
