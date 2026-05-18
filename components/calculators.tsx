@@ -9,6 +9,7 @@ import { TimeZoneConverter, TravelBudgetCalculator, FlightTimeCalculator, Packin
 import { DiscountCalculator, CarLoanCalculator, MortgageCalculator, CompoundInterest, BillSplitter, CurrencyConverter } from "./calcs/FinanceCalcs";
 import { SavingsGoalCalculator, InflationCalculator, SalaryToHourlyCalculator, NetWorthCalculator, DebtPayoffCalculator, RetirementCalculator, StockProfitCalculator, ROICalculator } from "./calcs/FinanceCalcs2";
 import { DCACalculator, StockFeeCalculator, NetSalaryCalculator, ExpenseTrackerCalculator } from "./calcs/FinanceCalcs3";
+import { GoldPriceCalculator } from "./calcs/GoldCalcs";
 import { VatCalculator, MarginCalculator } from "./calcs/BusinessCalcs";
 import { BreakEvenCalculator, MarkupCalculator, DepreciationCalculator, PayrollCalculator, COGSCalculator, LTVCalculator, CACCalculator, ConversionRateCalculator, InventoryTurnoverCalculator } from "./calcs/BusinessCalcs2";
 import { FinancialRatioCalculator, MarketplaceFeeCalculator, SafetyStockCalculator, ShippingCostCalculator, ReturnRateCalculator } from "./calcs/BusinessCalcs3";
@@ -62,6 +63,7 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "oracle") return <OracleCalculator lang={lang} setCalc={setCalc} />;
   if (activeCalc === "playing-card") return <PlayingCardCalculator lang={lang} setCalc={setCalc} />;
   if (activeCalc === "kipper") return <KipperCalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "gold-price") return <GoldPriceCalculator lang={lang} setCalc={setCalc} />;
   
   // Travel
   if (activeCalc === "time-zone") return <TimeZoneConverter lang={lang} />;

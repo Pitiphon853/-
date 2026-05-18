@@ -19,7 +19,7 @@ import { TravelSEO } from "../components/seo/TravelSEO";
 import { UtilitySEO } from "../components/seo/UtilitySEO";
 import { GeneralSEO } from "../components/seo/GeneralSEO";
 
-type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Agriculture" | "Construction" | "Technology" | "Travel" | "Utility" | "General" | "Fortune";
+type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Agriculture" | "Construction" | "Technology" | "Travel" | "Utility" | "General" | "Fortune" | "Gold";
 
 export default function CalculatorHub() {
   const [lang, setLang] = useState<Lang>("TH");
@@ -93,6 +93,7 @@ export default function CalculatorHub() {
     { id: "discount", name: lang==="TH"?"ส่วนลด":"Discount", desc: lang==="TH"?"เปอร์เซ็นต์ส่วนลด":"Discount Percentage", category: "Finance", icon: Coins },
     { id: "car-loan", name: lang==="TH"?"ผ่อนรถยนต์":"Car Loan", desc: lang==="TH"?"ค่างวดรถ":"Auto Loan Calculator", category: "Finance", icon: Car },
     { id: "mortgage", name: lang==="TH"?"เงินกู้/บ้าน":"Mortgage", desc: lang==="TH"?"ยอดผ่อนรายเดือน":"Loan Calculator", category: "Finance", icon: Coins },
+    { id: "gold-price", name: lang==="TH"?"ราคาทองคำวันนี้":"Gold Price", desc: lang==="TH"?"เช็คราคา กราฟ คำนวณ":"Live Price & Calc", category: "Gold", icon: Coins },
     { id: "compound-interest", name: lang==="TH"?"ดอกเบี้ยทบต้น":"Compound Interest", desc: lang==="TH"?"ผลตอบแทนลงทุน":"Investment Growth", category: "Finance", icon: Coins },
     { id: "bill-splitter", name: lang==="TH"?"หารค่าอาหาร":"Bill Splitter", desc: lang==="TH"?"แยกจ่าย + SC/VAT":"Split Bill + SC/VAT", category: "Finance", icon: Receipt },
     { id: "currency-converter", name: lang==="TH"?"แปลงสกุลเงิน":"Currency Converter", desc: lang==="TH"?"เรทเงินสดล่าสุด":"Live Exchange Rates", category: "Finance", icon: Coins },
@@ -209,6 +210,7 @@ export default function CalculatorHub() {
       case "Travel": return "cyan";
       case "General": return "purple";
       case "Fortune": return "indigo";
+      case "Gold": return "yellow";
       default: return "blue";
     }
   };
@@ -221,7 +223,8 @@ export default function CalculatorHub() {
     amber: "text-amber-500 border-amber-500 hover:border-amber-500 focus:ring-amber-500 group-hover:text-amber-500 shadow-[4px_4px_0px_0px_rgba(245,158,11,1)]",
     orange: "text-orange-500 border-orange-500 hover:border-orange-500 focus:ring-orange-500 group-hover:text-orange-500 shadow-[4px_4px_0px_0px_rgba(249,115,22,1)]",
     cyan: "text-cyan-500 border-cyan-500 hover:border-cyan-500 focus:ring-cyan-500 group-hover:text-cyan-500 shadow-[4px_4px_0px_0px_rgba(6,182,212,1)]",
-    indigo: "text-indigo-500 border-indigo-500 hover:border-indigo-500 focus:ring-indigo-500 group-hover:text-indigo-500 shadow-[4px_4px_0px_0px_rgba(99,102,241,1)]"
+    indigo: "text-indigo-500 border-indigo-500 hover:border-indigo-500 focus:ring-indigo-500 group-hover:text-indigo-500 shadow-[4px_4px_0px_0px_rgba(99,102,241,1)]",
+    yellow: "text-yellow-500 border-yellow-500 hover:border-yellow-500 focus:ring-yellow-500 group-hover:text-yellow-500 shadow-[4px_4px_0px_0px_rgba(234,179,8,1)]"
   };
 
   const getActiveCalcColor = () => {
@@ -303,6 +306,7 @@ export default function CalculatorHub() {
                     { id: "Technology", label: lang==="TH"?"เทคโนโลยี":"Technology", color: "orange" },
                     { id: "Travel", label: lang==="TH"?"ท่องเที่ยว":"Travel", color: "cyan" },
                     { id: "Fortune", label: lang==="TH"?"ดูดวง/พยากรณ์":"Fortune", color: "indigo" },
+                    { id: "Gold", label: lang==="TH"?"ราคาทองคำ":"Gold", color: "yellow" },
                     { id: "Utility", label: t.utility, color: "blue" },
                     { id: "General", label: lang==="TH"?"ทั่วไป":"General", color: "purple" }
                   ].map((cat) => (
@@ -348,7 +352,8 @@ export default function CalculatorHub() {
                           amber: "hover:border-amber-500 hover:shadow-[4px_4px_0px_0px_#f59e0b]",
                           orange: "hover:border-orange-500 hover:shadow-[4px_4px_0px_0px_#f97316]",
                           cyan: "hover:border-cyan-500 hover:shadow-[4px_4px_0px_0px_#06b6d4]",
-                          indigo: "hover:border-indigo-500 hover:shadow-[4px_4px_0px_0px_#6366f1]"
+                          indigo: "hover:border-indigo-500 hover:shadow-[4px_4px_0px_0px_#6366f1]",
+                          yellow: "hover:border-yellow-500 hover:shadow-[4px_4px_0px_0px_#eab308]"
                         };
 
                         const textHoverClasses = {
@@ -359,7 +364,8 @@ export default function CalculatorHub() {
                           amber: "group-hover:text-amber-500",
                           orange: "group-hover:text-orange-500",
                           cyan: "group-hover:text-cyan-500",
-                          indigo: "group-hover:text-indigo-500"
+                          indigo: "group-hover:text-indigo-500",
+                          yellow: "group-hover:text-yellow-500"
                         };
 
                         const bgGlowClasses = {
@@ -370,7 +376,8 @@ export default function CalculatorHub() {
                           amber: "bg-amber-500/5 group-hover:bg-amber-500/20",
                           orange: "bg-orange-500/5 group-hover:bg-orange-500/20",
                           cyan: "bg-cyan-500/5 group-hover:bg-cyan-500/20",
-                          indigo: "bg-indigo-500/5 group-hover:bg-indigo-500/20"
+                          indigo: "bg-indigo-500/5 group-hover:bg-indigo-500/20",
+                          yellow: "bg-yellow-500/5 group-hover:bg-yellow-500/20"
                         };
                         
                         return (
