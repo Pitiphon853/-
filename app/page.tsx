@@ -19,7 +19,7 @@ import { TravelSEO } from "../components/seo/TravelSEO";
 import { UtilitySEO } from "../components/seo/UtilitySEO";
 import { GeneralSEO } from "../components/seo/GeneralSEO";
 
-type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Agriculture" | "Construction" | "Technology" | "Travel" | "Utility" | "General";
+type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Agriculture" | "Construction" | "Technology" | "Travel" | "Utility" | "General" | "Fortune";
 
 export default function CalculatorHub() {
   const [lang, setLang] = useState<Lang>("TH");
@@ -70,8 +70,12 @@ export default function CalculatorHub() {
     { id: "ovulation", name: lang==="TH"?"วันตกไข่":"Ovulation", desc: lang==="TH"?"คำนวณวันไข่ตก":"Fertility Window", category: "Family", icon: Heart },
     { id: "blood-type", name: lang==="TH"?"ทำนายกรุ๊ปเลือด":"Blood Type", desc: lang==="TH"?"กรุ๊ปเลือดลูก":"Child Blood Predictor", category: "Family", icon: Heart },
     { id: "zodiac", name: lang==="TH"?"ราศีเกิด":"Zodiac", desc: lang==="TH"?"คำนวณราศี":"Star Sign", category: "Family", icon: BookOpen },
-    { id: "horoscope", name: lang==="TH"?"ดูดวงและโชคชะตา":"Horoscope", desc: lang==="TH"?"ทำนายพื้นดวง":"Fortune Teller", category: "Family", icon: BookOpen },
-    { id: "tarot", name: lang==="TH"?"ดูดวงไพ่ยิปซี":"Tarot Reading", desc: lang==="TH"?"อดีต ปัจจุบัน อนาคต":"3-Card Spread", category: "Family", icon: Sparkles },
+    { id: "horoscope", name: lang==="TH"?"ดูดวงและโชคชะตา":"Horoscope", desc: lang==="TH"?"ทำนายพื้นดวง":"Fortune Teller", category: "Fortune", icon: BookOpen },
+    { id: "tarot", name: lang==="TH"?"ดูดวงไพ่ยิปซี":"Tarot Reading", desc: lang==="TH"?"อดีต ปัจจุบัน อนาคต":"3-Card Spread", category: "Fortune", icon: Sparkles },
+    { id: "lenormand", name: lang==="TH"?"ไพ่เลอนอร์มองด์":"Lenormand", desc: lang==="TH"?"แม่นยำ ตรงไปตรงมา":"3-Card Spread", category: "Fortune", icon: Sparkles },
+    { id: "oracle", name: lang==="TH"?"ไพ่ออราเคิล":"Oracle Cards", desc: lang==="TH"?"คำแนะนำ เยียวยาใจ":"Daily Draw", category: "Fortune", icon: Heart },
+    { id: "playing-card", name: lang==="TH"?"ดูดวงไพ่ป๊อก":"Playing Cards", desc: lang==="TH"?"การงาน เงิน ความรัก":"Cartomancy", category: "Fortune", icon: Star },
+    { id: "kipper", name: lang==="TH"?"ไพ่คิปเปอร์":"Kipper Cards", desc: lang==="TH"?"เจาะลึกความสัมพันธ์":"Social & People", category: "Fortune", icon: BookOpen },
     { id: "pet-age", name: lang==="TH"?"อายุสัตว์เลี้ยง":"Pet Age", desc: lang==="TH"?"เทียบอายุคน":"Human Years", category: "Family", icon: BookOpen },
     { id: "fetal-weight", name: lang==="TH"?"น้ำหนักทารกในครรภ์":"Fetal Weight", desc: lang==="TH"?"ตามอายุครรภ์ (สัปดาห์)":"WHO Fetal Dev", category: "Family", icon: Baby },
     { id: "child-cost", name: lang==="TH"?"ค่าเลี้ยงลูก":"Child Raising Cost", desc: lang==="TH"?"ประมาณการต่อปี":"Yearly Cost", category: "Family", icon: Coins },
@@ -204,6 +208,7 @@ export default function CalculatorHub() {
       case "Technology": return "orange";
       case "Travel": return "cyan";
       case "General": return "purple";
+      case "Fortune": return "indigo";
       default: return "blue";
     }
   };
@@ -215,7 +220,8 @@ export default function CalculatorHub() {
     purple: "text-purple-500 border-purple-500 hover:border-purple-500 focus:ring-purple-500 group-hover:text-purple-500 shadow-[4px_4px_0px_0px_rgba(168,85,247,1)]",
     amber: "text-amber-500 border-amber-500 hover:border-amber-500 focus:ring-amber-500 group-hover:text-amber-500 shadow-[4px_4px_0px_0px_rgba(245,158,11,1)]",
     orange: "text-orange-500 border-orange-500 hover:border-orange-500 focus:ring-orange-500 group-hover:text-orange-500 shadow-[4px_4px_0px_0px_rgba(249,115,22,1)]",
-    cyan: "text-cyan-500 border-cyan-500 hover:border-cyan-500 focus:ring-cyan-500 group-hover:text-cyan-500 shadow-[4px_4px_0px_0px_rgba(6,182,212,1)]"
+    cyan: "text-cyan-500 border-cyan-500 hover:border-cyan-500 focus:ring-cyan-500 group-hover:text-cyan-500 shadow-[4px_4px_0px_0px_rgba(6,182,212,1)]",
+    indigo: "text-indigo-500 border-indigo-500 hover:border-indigo-500 focus:ring-indigo-500 group-hover:text-indigo-500 shadow-[4px_4px_0px_0px_rgba(99,102,241,1)]"
   };
 
   const getActiveCalcColor = () => {
@@ -296,6 +302,7 @@ export default function CalculatorHub() {
                     { id: "Construction", label: lang==="TH"?"ก่อสร้าง":"Construction", color: "amber" },
                     { id: "Technology", label: lang==="TH"?"เทคโนโลยี":"Technology", color: "orange" },
                     { id: "Travel", label: lang==="TH"?"ท่องเที่ยว":"Travel", color: "cyan" },
+                    { id: "Fortune", label: lang==="TH"?"ดูดวง/พยากรณ์":"Fortune", color: "indigo" },
                     { id: "Utility", label: t.utility, color: "blue" },
                     { id: "General", label: lang==="TH"?"ทั่วไป":"General", color: "purple" }
                   ].map((cat) => (
@@ -340,7 +347,8 @@ export default function CalculatorHub() {
                           purple: "hover:border-purple-500 hover:shadow-[4px_4px_0px_0px_#a855f7]",
                           amber: "hover:border-amber-500 hover:shadow-[4px_4px_0px_0px_#f59e0b]",
                           orange: "hover:border-orange-500 hover:shadow-[4px_4px_0px_0px_#f97316]",
-                          cyan: "hover:border-cyan-500 hover:shadow-[4px_4px_0px_0px_#06b6d4]"
+                          cyan: "hover:border-cyan-500 hover:shadow-[4px_4px_0px_0px_#06b6d4]",
+                          indigo: "hover:border-indigo-500 hover:shadow-[4px_4px_0px_0px_#6366f1]"
                         };
 
                         const textHoverClasses = {
@@ -350,7 +358,8 @@ export default function CalculatorHub() {
                           purple: "group-hover:text-purple-500",
                           amber: "group-hover:text-amber-500",
                           orange: "group-hover:text-orange-500",
-                          cyan: "group-hover:text-cyan-500"
+                          cyan: "group-hover:text-cyan-500",
+                          indigo: "group-hover:text-indigo-500"
                         };
 
                         const bgGlowClasses = {
@@ -360,7 +369,8 @@ export default function CalculatorHub() {
                           purple: "bg-purple-500/5 group-hover:bg-purple-500/20",
                           amber: "bg-amber-500/5 group-hover:bg-amber-500/20",
                           orange: "bg-orange-500/5 group-hover:bg-orange-500/20",
-                          cyan: "bg-cyan-500/5 group-hover:bg-cyan-500/20"
+                          cyan: "bg-cyan-500/5 group-hover:bg-cyan-500/20",
+                          indigo: "bg-indigo-500/5 group-hover:bg-indigo-500/20"
                         };
                         
                         return (

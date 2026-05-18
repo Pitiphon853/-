@@ -25,6 +25,7 @@ import { DurianCalculator } from "./calcs/AgricultureCalcs2";
 import { LotteryChecker } from "./calcs/UtilityCalcs3";
 import { HoroscopeCalculator } from "./calcs/FamilyCalcs3";
 import { TarotReadingCalculator } from "./calcs/TarotCalcs";
+import { LenormandCalculator, OracleCalculator, PlayingCardCalculator, KipperCalculator } from "./calcs/CardReadingCalcs";
 
 export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string, lang: Lang, setCalc: (id: string) => void }) {
   // Health & Diet
@@ -57,6 +58,10 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "child-milestone") return <ChildMilestoneCalculator lang={lang} />;
   if (activeCalc === "horoscope") return <HoroscopeCalculator lang={lang} setCalc={setCalc} />;
   if (activeCalc === "tarot") return <TarotReadingCalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "lenormand") return <LenormandCalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "oracle") return <OracleCalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "playing-card") return <PlayingCardCalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "kipper") return <KipperCalculator lang={lang} setCalc={setCalc} />;
   
   // Travel
   if (activeCalc === "time-zone") return <TimeZoneConverter lang={lang} />;
