@@ -19,7 +19,7 @@ import { TravelSEO } from "../components/seo/TravelSEO";
 import { UtilitySEO } from "../components/seo/UtilitySEO";
 import { GeneralSEO } from "../components/seo/GeneralSEO";
 
-type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Agriculture" | "Construction" | "Technology" | "Travel" | "Utility" | "General" | "Fortune" | "Gold";
+type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Agriculture" | "Construction" | "Technology" | "Travel" | "Utility" | "General" | "Fortune" | "Gold" | "Lottery";
 
 export default function CalculatorHub() {
   const [lang, setLang] = useState<Lang>("TH");
@@ -133,7 +133,7 @@ export default function CalculatorHub() {
     { id: "basen", name: lang==="TH"?"แปลงเลขฐาน":"Base Converter", desc: lang==="TH"?"ฐาน 2–36 ครบทุกฐาน":"Base 2–36, Step-by-Step", category: "Utility", icon: Calculator },
     { id: "btu", name: lang==="TH"?"คำนวณ BTU":"AC BTU", desc: lang==="TH"?"ขนาดแอร์บ้าน":"Air Conditioner BTU", category: "Utility", icon: Home },
     { id: "electric", name: lang==="TH"?"ค่าไฟ":"Electricity", desc: lang==="TH"?"คำนวณค่าไฟฟ้า":"Electricity Bill", category: "Utility", icon: Zap },
-    { id: "lottery", name: lang==="TH"?"ตรวจผลสลาก":"Lottery Checker", desc: lang==="TH"?"ตรวจหวยล่าสุด":"Thai Lottery", category: "Utility", icon: Hash },
+    { id: "lottery", name: lang==="TH"?"ตรวจผลสลาก":"Lottery Checker", desc: lang==="TH"?"ตรวจหวยล่าสุด":"Thai Lottery", category: "Lottery", icon: Hash },
     { id: "water-bill", name: lang==="TH"?"ค่าน้ำ":"Water Bill", desc: lang==="TH"?"ค่าน้ำประปา":"Water Usage Bill", category: "Utility", icon: Home },
     { id: "fuel-cost", name: lang==="TH"?"ค่าน้ำมันรถ":"Fuel Cost", desc: lang==="TH"?"คำนวณค่าน้ำมันเดินทาง":"Trip Fuel Estimate", category: "Utility", icon: Car },
     { id: "cooking-unit", name: lang==="TH"?"แปลงหน่วยทำอาหาร":"Cooking Units", desc: lang==="TH"?"ถ้วยตวง ↔ กรัม":"Cups to Grams", category: "Utility", icon: Utensils },
@@ -211,6 +211,7 @@ export default function CalculatorHub() {
       case "General": return "purple";
       case "Fortune": return "indigo";
       case "Gold": return "yellow";
+      case "Lottery": return "emerald";
       default: return "blue";
     }
   };
@@ -224,7 +225,8 @@ export default function CalculatorHub() {
     orange: "text-orange-500 border-orange-500 hover:border-orange-500 focus:ring-orange-500 group-hover:text-orange-500 shadow-[4px_4px_0px_0px_rgba(249,115,22,1)]",
     cyan: "text-cyan-500 border-cyan-500 hover:border-cyan-500 focus:ring-cyan-500 group-hover:text-cyan-500 shadow-[4px_4px_0px_0px_rgba(6,182,212,1)]",
     indigo: "text-indigo-500 border-indigo-500 hover:border-indigo-500 focus:ring-indigo-500 group-hover:text-indigo-500 shadow-[4px_4px_0px_0px_rgba(99,102,241,1)]",
-    yellow: "text-yellow-500 border-yellow-500 hover:border-yellow-500 focus:ring-yellow-500 group-hover:text-yellow-500 shadow-[4px_4px_0px_0px_rgba(234,179,8,1)]"
+    yellow: "text-yellow-500 border-yellow-500 hover:border-yellow-500 focus:ring-yellow-500 group-hover:text-yellow-500 shadow-[4px_4px_0px_0px_rgba(234,179,8,1)]",
+    emerald: "text-emerald-500 border-emerald-500 hover:border-emerald-500 focus:ring-emerald-500 group-hover:text-emerald-500 shadow-[4px_4px_0px_0px_rgba(16,185,129,1)]"
   };
 
   const getActiveCalcColor = () => {
@@ -307,6 +309,7 @@ export default function CalculatorHub() {
                     { id: "Travel", label: lang==="TH"?"ท่องเที่ยว":"Travel", color: "cyan" },
                     { id: "Fortune", label: lang==="TH"?"ดูดวง/พยากรณ์":"Fortune", color: "indigo" },
                     { id: "Gold", label: lang==="TH"?"ราคาทองคำ":"Gold", color: "yellow" },
+                    { id: "Lottery", label: lang==="TH"?"ตรวจหวย":"Lottery", color: "emerald" },
                     { id: "Utility", label: t.utility, color: "blue" },
                     { id: "General", label: lang==="TH"?"ทั่วไป":"General", color: "purple" }
                   ].map((cat) => (
@@ -353,7 +356,8 @@ export default function CalculatorHub() {
                           orange: "hover:border-orange-500 hover:shadow-[4px_4px_0px_0px_#f97316]",
                           cyan: "hover:border-cyan-500 hover:shadow-[4px_4px_0px_0px_#06b6d4]",
                           indigo: "hover:border-indigo-500 hover:shadow-[4px_4px_0px_0px_#6366f1]",
-                          yellow: "hover:border-yellow-500 hover:shadow-[4px_4px_0px_0px_#eab308]"
+                          yellow: "hover:border-yellow-500 hover:shadow-[4px_4px_0px_0px_#eab308]",
+                          emerald: "hover:border-emerald-500 hover:shadow-[4px_4px_0px_0px_#10b981]"
                         };
 
                         const textHoverClasses = {
@@ -365,7 +369,8 @@ export default function CalculatorHub() {
                           orange: "group-hover:text-orange-500",
                           cyan: "group-hover:text-cyan-500",
                           indigo: "group-hover:text-indigo-500",
-                          yellow: "group-hover:text-yellow-500"
+                          yellow: "group-hover:text-yellow-500",
+                          emerald: "group-hover:text-emerald-500"
                         };
 
                         const bgGlowClasses = {
@@ -377,7 +382,8 @@ export default function CalculatorHub() {
                           orange: "bg-orange-500/5 group-hover:bg-orange-500/20",
                           cyan: "bg-cyan-500/5 group-hover:bg-cyan-500/20",
                           indigo: "bg-indigo-500/5 group-hover:bg-indigo-500/20",
-                          yellow: "bg-yellow-500/5 group-hover:bg-yellow-500/20"
+                          yellow: "bg-yellow-500/5 group-hover:bg-yellow-500/20",
+                          emerald: "bg-emerald-500/5 group-hover:bg-emerald-500/20"
                         };
                         
                         return (
