@@ -10,20 +10,26 @@ import { DiscountCalculator, CarLoanCalculator, MortgageCalculator, CompoundInte
 import { SavingsGoalCalculator, InflationCalculator, SalaryToHourlyCalculator, NetWorthCalculator, DebtPayoffCalculator, RetirementCalculator, StockProfitCalculator, ROICalculator } from "./calcs/FinanceCalcs2";
 import { DCACalculator, StockFeeCalculator, NetSalaryCalculator, ExpenseTrackerCalculator } from "./calcs/FinanceCalcs3";
 import { GoldPriceCalculator } from "./calcs/GoldCalcs";
+import { VO2MaxCalculator, SwimPaceCalculator, CyclingPowerZones } from "./calcs/ExerciseCalcs";
+import { RacePredictor, LiftingPyramid, RowingSplit, CarbEnduranceCalc } from "./calcs/ExerciseCalcs2";
+import { FiberCalculator, VitaminDCalculator, BMIKidsCalculator } from "./calcs/HealthCalcs3";
+import { WeddingBudget, NewbornCost, PetCost, FoodExpiration, RentVsBuyCalc } from "./calcs/FamilyCalcs4";
+import { EOQCalculator, ChurnRetentionCalc, ShrinkageCalc, ImportMarkupCalc, FreelanceRate } from "./calcs/BusinessCalcs4";
+import { EnglishTestConverter, PomodoroTimer, FlashCardTimer } from "./calcs/EducationCalcs";
 import { VatCalculator, MarginCalculator } from "./calcs/BusinessCalcs";
 import { BreakEvenCalculator, MarkupCalculator, DepreciationCalculator, PayrollCalculator, COGSCalculator, LTVCalculator, CACCalculator, ConversionRateCalculator, InventoryTurnoverCalculator } from "./calcs/BusinessCalcs2";
 import { FinancialRatioCalculator, MarketplaceFeeCalculator, SafetyStockCalculator, ShippingCostCalculator, ReturnRateCalculator } from "./calcs/BusinessCalcs3";
 import { BTUCalculator, ElectricCalculator, WaterCalculator as UtilityWaterCalculator, BaseNCalculator, GPACalculator, FuelCostCalculator } from "./calcs/UtilityCalcs";
 import { GradeConverter, TargetGPACalculator, PercentileCalculator, ReadingTimeCalculator } from "./calcs/UtilityCalcs2";
-import { RandomizerCalculator, WordCounter, AgeCalculator } from "./calcs/GeneralCalcs";
+import { WordCounter, AgeCalculator } from "./calcs/GeneralCalcs";
 import { CookingUnitConverter, TileAreaCalculator } from "./calcs/ConversionCalcs";
 import { DigitalUnitConverter, AngleConverter, ColorConverter, TemperatureConverter, SpeedConverter, AreaUnitConverter, WeightUnitConverter, RomanNumeralConverter, AreaShapeCalculator, VolumeShapeCalculator, WorkingDaysCalculator } from "./calcs/ConversionCalcs2";
 import { PantoneConverter } from "./calcs/ConversionCalcs3";
-import { FermentationTimeCalculator, FoodEnergyCalculator, FertilizerCalculator, IrrigationCalculator, YieldCalculator } from "./calcs/AgricultureCalcs";
+import { FoodEnergyCalculator, FertilizerCalculator, IrrigationCalculator, YieldCalculator } from "./calcs/AgricultureCalcs";
 import { HousePaintCalculator, CementCalculator, WallpaperCalculator, RoofAreaCalculator, WaterTankCalculator, PoolVolumeCalculator, InsulationCalculator, RenovationCostCalculator } from "./calcs/ConstructionCalcs";
 import { BandwidthCalculator, ServerCostCalculator, ImageSizeCalculator, IPSubnetCalculator, VideoBitrateCalculator, BatteryLifeCalculator, HashRateCalculator } from "./calcs/TechnologyCalcs";
 import { DurianCalculator } from "./calcs/AgricultureCalcs2";
-import { LotteryChecker } from "./calcs/UtilityCalcs3";
+
 import { HoroscopeCalculator } from "./calcs/FamilyCalcs3";
 import { TarotReadingCalculator } from "./calcs/TarotCalcs";
 import { LenormandCalculator, OracleCalculator, PlayingCardCalculator, KipperCalculator } from "./calcs/CardReadingCalcs";
@@ -46,6 +52,17 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "steps-converter") return <StepsCalculator lang={lang} />;
   if (activeCalc === "1rm") return <OneRepMaxCalculator lang={lang} />;
   if (activeCalc === "pace") return <PaceCalculator lang={lang} />;
+  if (activeCalc === "vo2-max") return <VO2MaxCalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "swim-pace") return <SwimPaceCalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "cycling-power") return <CyclingPowerZones lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "race-predictor") return <RacePredictor lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "lifting-pyramid") return <LiftingPyramid lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "rowing-split") return <RowingSplit lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "carb-endurance") return <CarbEnduranceCalc lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "fiber-intake") return <FiberCalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "vitamin-d") return <VitaminDCalculator lang={lang} setCalc={setCalc} />;
+
+  if (activeCalc === "bmi-kids") return <BMIKidsCalculator lang={lang} setCalc={setCalc} />;
 
   // Family
   if (activeCalc === "child-height") return <ChildHeightCalculator lang={lang} />;
@@ -64,6 +81,11 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "playing-card") return <PlayingCardCalculator lang={lang} setCalc={setCalc} />;
   if (activeCalc === "kipper") return <KipperCalculator lang={lang} setCalc={setCalc} />;
   if (activeCalc === "gold-price") return <GoldPriceCalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "wedding-budget") return <WeddingBudget lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "newborn-cost") return <NewbornCost lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "pet-cost") return <PetCost lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "food-expiration") return <FoodExpiration lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "rent-vs-buy") return <RentVsBuyCalc lang={lang} setCalc={setCalc} />;
   
   // Travel
   if (activeCalc === "time-zone") return <TimeZoneConverter lang={lang} />;
@@ -110,6 +132,11 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "safety-stock") return <SafetyStockCalculator lang={lang} />;
   if (activeCalc === "shipping-cost") return <ShippingCostCalculator lang={lang} />;
   if (activeCalc === "return-rate") return <ReturnRateCalculator lang={lang} />;
+  if (activeCalc === "eoq") return <EOQCalculator lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "churn-retention") return <ChurnRetentionCalc lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "shrinkage") return <ShrinkageCalc lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "import-markup") return <ImportMarkupCalc lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "freelance-rate") return <FreelanceRate lang={lang} setCalc={setCalc} />;
 
   // Utility
   if (activeCalc === "btu") return <BTUCalculator lang={lang} />;
@@ -122,7 +149,10 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "target-gpa") return <TargetGPACalculator lang={lang} />;
   if (activeCalc === "percentile") return <PercentileCalculator lang={lang} />;
   if (activeCalc === "reading-time") return <ReadingTimeCalculator lang={lang} />;
-  if (activeCalc === "lottery") return <LotteryChecker lang={lang} setCalc={setCalc} />;
+
+  if (activeCalc === "english-test") return <EnglishTestConverter lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "pomodoro") return <PomodoroTimer lang={lang} />;
+  if (activeCalc === "flashcard-timer") return <FlashCardTimer lang={lang} />;
 
   // Conversion
   if (activeCalc === "cooking-unit") return <CookingUnitConverter lang={lang} />;
@@ -141,7 +171,7 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "pantone") return <PantoneConverter lang={lang} />;
 
   // Agriculture
-  if (activeCalc === "ferm-time") return <FermentationTimeCalculator lang={lang} />;
+
   if (activeCalc === "food-energy") return <FoodEnergyCalculator lang={lang} />;
   if (activeCalc === "fertilizer") return <FertilizerCalculator lang={lang} />;
   if (activeCalc === "irrigation") return <IrrigationCalculator lang={lang} />;
@@ -159,7 +189,7 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "reno-cost") return <RenovationCostCalculator lang={lang} />;
 
   // General
-  if (activeCalc === "randomizer") return <RandomizerCalculator lang={lang} />;
+
   if (activeCalc === "word-counter") return <WordCounter lang={lang} />;
   if (activeCalc === "age") return <AgeCalculator lang={lang} />;
   

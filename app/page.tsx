@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Calculator, Heart, Home, BookOpen, Coins, Zap, Car, ArrowLeft, Star, Mail, Moon, Sun, Baby, Utensils, Briefcase, Hash, Lightbulb, Receipt, Plane, Sparkles } from "lucide-react";
+import { Search, Calculator, Heart, Home, BookOpen, Coins, Zap, Car, ArrowLeft, Star, Mail, Moon, Sun, Baby, Utensils, Briefcase, Hash, Lightbulb, Receipt, Plane, Sparkles, Clock } from "lucide-react";
 import { dict, Lang } from "../components/dictionary";
 import { Calculators } from "../components/calculators";
 import { useTheme } from "../components/ThemeProvider";
@@ -19,7 +19,7 @@ import { TravelSEO } from "../components/seo/TravelSEO";
 import { UtilitySEO } from "../components/seo/UtilitySEO";
 import { GeneralSEO } from "../components/seo/GeneralSEO";
 
-type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Agriculture" | "Construction" | "Technology" | "Travel" | "Utility" | "General" | "Fortune" | "Gold" | "Lottery";
+type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Agriculture" | "Construction" | "Technology" | "Travel" | "Utility" | "General" | "Fortune" | "Gold" | "Education" | "Sports";
 
 export default function CalculatorHub() {
   const [lang, setLang] = useState<Lang>("TH");
@@ -63,6 +63,20 @@ export default function CalculatorHub() {
     { id: "steps-converter", name: lang==="TH"?"แปลงก้าวเดิน":"Steps Converter", desc: lang==="TH"?"ก้าว ↔ ระยะทาง ↔ แคล":"Steps to Distance", category: "Health", icon: Heart },
     { id: "1rm", name: lang==="TH"?"คำนวณ 1RM":"1RM Calculator", desc: lang==="TH"?"น้ำหนักยกสูงสุด":"One Rep Max", category: "Health", icon: Zap },
     { id: "pace", name: lang==="TH"?"Pace วิ่ง":"Pace Calculator", desc: lang==="TH"?"คำนวณความเร็ววิ่ง":"Running Pace", category: "Health", icon: Zap },
+    
+    // Sports (Orange)
+    { id: "vo2-max", name: lang==="TH"?"คำนวณ VO2 Max":"VO2 Max", desc: lang==="TH"?"ประเมินความฟิต":"Cardio Fitness", category: "Sports", icon: Zap },
+    { id: "swim-pace", name: lang==="TH"?"Pace ว่ายน้ำ":"Swim Pace", desc: lang==="TH"?"ความเร็ว 100m":"100m Pace", category: "Sports", icon: Zap },
+    { id: "cycling-power", name: lang==="TH"?"โซนปั่นจักรยาน":"Cycling Power Zones", desc: lang==="TH"?"FTP Zones":"Power Zones", category: "Sports", icon: Zap },
+    { id: "race-predictor", name: lang==="TH"?"ทำนายเวลาวิ่งแข่ง":"Race Predictor", desc: lang==="TH"?"มาราธอน ฮาล์ฟ":"Marathon/Half", category: "Sports", icon: Zap },
+    { id: "lifting-pyramid", name: lang==="TH"?"ตาราง Squat/Deadlift":"Squat/Deadlift Pyramid", desc: lang==="TH"?"น้ำหนักเซ็ตพีระมิด":"Pyramid Sets", category: "Sports", icon: Zap },
+    { id: "rowing-split", name: lang==="TH"?"Rowing Split Time":"Rowing Split Time", desc: lang==="TH"?"ความเร็วพายเรือ":"Erg/Rowing Split", category: "Sports", icon: Zap },
+    { id: "carb-endurance", name: lang==="TH"?"คาร์บโหลด (Endurance)":"Carb Loading", desc: lang==="TH"?"พลังงานก่อนแข่ง":"Carbs for Race", category: "Sports", icon: Utensils },
+    
+    // Additional Health
+    { id: "fiber-intake", name: lang==="TH"?"คำนวณ Fiber ต่อวัน":"Fiber Intake", desc: lang==="TH"?"ใยอาหารที่ควรได้รับ":"Daily Fiber", category: "Health", icon: Utensils },
+    { id: "vitamin-d", name: lang==="TH"?"รับ Vitamin D จากแสงแดด":"Vitamin D from Sun", desc: lang==="TH"?"เวลาตากแดด":"Sun Exposure", category: "Health", icon: Zap },
+    { id: "bmi-kids", name: lang==="TH"?"BMI เด็กตาม Percentile":"Kids BMI Percentile", desc: lang==="TH"?"เด็กโตตามเกณฑ์ไหม":"Child Growth", category: "Health", icon: Baby },
 
     // Family (Pink)
     { id: "child-height", name: lang==="TH"?"ส่วนสูงลูก":"Child Height", desc: lang==="TH"?"ทำนายส่วนสูง":"Height Predictor", category: "Family", icon: Baby },
@@ -80,6 +94,11 @@ export default function CalculatorHub() {
     { id: "fetal-weight", name: lang==="TH"?"น้ำหนักทารกในครรภ์":"Fetal Weight", desc: lang==="TH"?"ตามอายุครรภ์ (สัปดาห์)":"WHO Fetal Dev", category: "Family", icon: Baby },
     { id: "child-cost", name: lang==="TH"?"ค่าเลี้ยงลูก":"Child Raising Cost", desc: lang==="TH"?"ประมาณการต่อปี":"Yearly Cost", category: "Family", icon: Coins },
     { id: "child-milestone", name: lang==="TH"?"พัฒนาการเด็ก":"Child Milestones", desc: lang==="TH"?"ตามช่วงอายุเดือน":"Development Check", category: "Family", icon: Baby },
+    { id: "wedding-budget", name: lang==="TH"?"ค่าใช้จ่ายแต่งงาน":"Wedding Budget", desc: lang==="TH"?"แจกแจงงบแต่งงาน":"Wedding Costs", category: "Family", icon: Heart },
+    { id: "newborn-cost", name: lang==="TH"?"ค่าใช้จ่ายทารกแรกเกิด":"Newborn Cost", desc: lang==="TH"?"ปีแรกต้องเตรียมเงินเท่าไหร่":"First Year Cost", category: "Family", icon: Baby },
+    { id: "pet-cost", name: lang==="TH"?"ค่าใช้จ่ายสัตว์เลี้ยง/ปี":"Pet Cost", desc: lang==="TH"?"หมา/แมว":"Dog & Cat", category: "Family", icon: Heart },
+    { id: "food-expiration", name: lang==="TH"?"วันหมดอายุอาหาร/นม":"Food/Milk Expiration", desc: lang==="TH"?"ตู้เย็น/ช่องฟรีซเก็บได้กี่วัน":"Fridge Storage Time", category: "Family", icon: Home },
+    { id: "rent-vs-buy", name: lang==="TH"?"เช่า vs ซื้อบ้าน":"Rent vs Buy Home", desc: lang==="TH"?"เปรียบเทียบความคุ้มค่า":"Financial Comparison", category: "Family", icon: Home },
 
     // Travel (Cyan)
     { id: "time-zone", name: lang==="TH"?"แปลงเวลาโลก":"Time Zone", desc: lang==="TH"?"เทียบเวลาประเทศต่างๆ":"Global Time", category: "Travel", icon: BookOpen },
@@ -127,13 +146,17 @@ export default function CalculatorHub() {
     { id: "safety-stock", name: lang==="TH"?"จุดสั่งซื้อ/สต็อกสำรอง":"Safety Stock", desc: lang==="TH"?"Reorder Point":"Inventory Control", category: "Business", icon: Calculator },
     { id: "shipping-cost", name: lang==="TH"?"เปรียบเทียบค่าส่ง":"Shipping Cost", desc: lang==="TH"?"Kerry, J&T, Flash, ปณ.":"Courier Rates", category: "Business", icon: Car },
     { id: "return-rate", name: lang==="TH"?"ผลกระทบตีกลับ":"Return Rate Impact", desc: lang==="TH"?"กำไรที่หายจากของตีกลับ":"Lost Profit Return", category: "Business", icon: Receipt },
+    { id: "eoq", name: lang==="TH"?"จุดสั่งซื้อที่ประหยัดที่สุด (EOQ)":"EOQ Calculator", desc: lang==="TH"?"สต็อกของอย่างไรให้คุ้ม":"Optimal Order Qty", category: "Business", icon: Briefcase },
+    { id: "churn-retention", name: lang==="TH"?"Churn & Retention Rate":"Churn Rate", desc: lang==="TH"?"ลูกค้ายกเลิกกี่เปอร์เซ็นต์":"Lost Customers", category: "Business", icon: Briefcase },
+    { id: "shrinkage", name: lang==="TH"?"การสูญเสียสต็อก (Shrinkage)":"Inventory Shrinkage", desc: lang==="TH"?"ของหาย/พัง":"Lost Inventory", category: "Business", icon: Briefcase },
+    { id: "import-markup", name: lang==="TH"?"ตั้งราคาสินค้านำเข้า":"Import Markup", desc: lang==="TH"?"คำนวณภาษี+ค่าส่ง":"Landed Cost", category: "Business", icon: Briefcase },
+    { id: "freelance-rate", name: lang==="TH"?"เรทค่าตัวฟรีแลนซ์":"Freelance Hourly Rate", desc: lang==="TH"?"ทำงานรายชั่วโมง/วัน":"Hourly Rate", category: "Business", icon: Briefcase },
 
     // Utility & Education (Blue)
     { id: "gpa", name: lang==="TH"?"จำลองเกรดเบื้องต้น":"GPA Simulator", desc: lang==="TH"?"จำลองเกรด (GPA)":"GPA Estimator", category: "Utility", icon: BookOpen },
     { id: "basen", name: lang==="TH"?"แปลงเลขฐาน":"Base Converter", desc: lang==="TH"?"ฐาน 2–36 ครบทุกฐาน":"Base 2–36, Step-by-Step", category: "Utility", icon: Calculator },
     { id: "btu", name: lang==="TH"?"คำนวณ BTU":"AC BTU", desc: lang==="TH"?"ขนาดแอร์บ้าน":"Air Conditioner BTU", category: "Utility", icon: Home },
     { id: "electric", name: lang==="TH"?"ค่าไฟ":"Electricity", desc: lang==="TH"?"คำนวณค่าไฟฟ้า":"Electricity Bill", category: "Utility", icon: Zap },
-    { id: "lottery", name: lang==="TH"?"ตรวจผลสลาก":"Lottery Checker", desc: lang==="TH"?"ตรวจหวยล่าสุด":"Thai Lottery", category: "Lottery", icon: Hash },
     { id: "water-bill", name: lang==="TH"?"ค่าน้ำ":"Water Bill", desc: lang==="TH"?"ค่าน้ำประปา":"Water Usage Bill", category: "Utility", icon: Home },
     { id: "fuel-cost", name: lang==="TH"?"ค่าน้ำมันรถ":"Fuel Cost", desc: lang==="TH"?"คำนวณค่าน้ำมันเดินทาง":"Trip Fuel Estimate", category: "Utility", icon: Car },
     { id: "cooking-unit", name: lang==="TH"?"แปลงหน่วยทำอาหาร":"Cooking Units", desc: lang==="TH"?"ถ้วยตวง ↔ กรัม":"Cups to Grams", category: "Utility", icon: Utensils },
@@ -143,8 +166,12 @@ export default function CalculatorHub() {
     { id: "percentile", name: lang==="TH"?"Percentile/Z-Score":"Percentile Calculator", desc: lang==="TH"?"เทียบค่าเฉลี่ย":"Normal Distribution", category: "Utility", icon: Hash },
     { id: "reading-time", name: lang==="TH"?"เวลาอ่านหนังสือ":"Reading Time", desc: lang==="TH"?"คำนวณวันจบเล่ม":"Books Finishing Time", category: "Utility", icon: BookOpen },
 
+    // Education (Blue)
+    { id: "english-test", name: lang==="TH"?"IELTS ↔ TOEFL ↔ CEFR":"IELTS/TOEFL", desc: lang==="TH"?"แปลงคะแนนภาษาอังกฤษ":"English Tests", category: "Education", icon: BookOpen },
+    { id: "pomodoro", name: lang==="TH"?"Pomodoro Timer":"Pomodoro Timer", desc: lang==="TH"?"นาฬิกาโฟกัสการทำงาน":"Focus Timer", category: "Education", icon: Clock },
+    { id: "flashcard-timer", name: lang==="TH"?"Flash Card Timer":"Flash Card Timer", desc: lang==="TH"?"จับเวลาตอบสั้นๆ":"Active Recall", category: "Education", icon: Clock },
+
     // Agriculture (Green)
-    { id: "ferm-time", name: lang==="TH"?"เวลาหมักดอง":"Fermentation Time", desc: lang==="TH"?"อุณหภูมิ x เวลา":"Temp x Time", category: "Agriculture", icon: Zap },
     { id: "food-energy", name: lang==="TH"?"พลังงานอาหาร":"Food Energy", desc: lang==="TH"?"Joule ↔ kcal":"Joule ↔ kcal", category: "Agriculture", icon: Zap },
     { id: "fertilizer", name: lang==="TH"?"ปุ๋ยต่อไร่":"Fertilizer", desc: lang==="TH"?"NPK ตามชนิดพืช":"Fertilizer per Rai", category: "Agriculture", icon: Home },
     { id: "irrigation", name: lang==="TH"?"น้ำชลประทาน":"Irrigation", desc: lang==="TH"?"ปริมาณน้ำต่อไร่":"Water per Rai", category: "Agriculture", icon: Home },
@@ -182,7 +209,6 @@ export default function CalculatorHub() {
     { id: "area-shape", name: lang==="TH"?"คำนวณพื้นที่รูปทรง":"Shape Area", desc: lang==="TH"?"วงกลม สามเหลี่ยม":"Circle, Triangle", category: "General", icon: Hash },
     { id: "volume-shape", name: lang==="TH"?"คำนวณปริมาตรภาชนะ":"Shape Volume", desc: lang==="TH"?"กล่อง กระบอก ทรงกลม":"Box, Cylinder", category: "General", icon: Hash },
     { id: "working-days", name: lang==="TH"?"คำนวณวันทำงาน":"Working Days", desc: lang==="TH"?"หักวันหยุดนักขัตฤกษ์":"Minus Holidays", category: "General", icon: Calculator },
-    { id: "randomizer", name: lang==="TH"?"สุ่มเลข/สุ่มชื่อ":"Randomizer", desc: lang==="TH"?"จับฉลาก":"Number/Name Picker", category: "General", icon: Hash },
     { id: "word-counter", name: lang==="TH"?"นับจำนวนคำ":"Word Counter", desc: lang==="TH"?"นับคำ/ตัวอักษร":"Words & Chars", category: "General", icon: BookOpen },
     { id: "age", name: lang==="TH"?"คำนวณอายุ":"Age Calculator", desc: lang==="TH"?"อายุละเอียด":"Exact Age", category: "General", icon: Calculator },
     { id: "pantone", name: lang==="TH"?"แปลงสี Pantone":"Pantone Converter", desc: lang==="TH"?"HEX เป็น Pantone (Approx)":"Approx Pantone", category: "General", icon: Hash },
@@ -206,12 +232,13 @@ export default function CalculatorHub() {
       case "Business":
       case "Agriculture": return "green";
       case "Construction": return "amber";
-      case "Technology": return "orange";
+      case "Technology": 
+      case "Sports": return "orange";
       case "Travel": return "cyan";
       case "General": return "purple";
       case "Fortune": return "indigo";
       case "Gold": return "yellow";
-      case "Lottery": return "emerald";
+      case "Education": return "blue";
       default: return "blue";
     }
   };
@@ -300,16 +327,17 @@ export default function CalculatorHub() {
                   {[
                     { id: "All", label: t.all, color: "blue" },
                     { id: "Health", label: lang==="TH"?"สุขภาพ/อาหาร":"Health", color: "pink" },
+                    { id: "Sports", label: lang==="TH"?"กีฬา/ออกกำลังกาย":"Sports", color: "orange" },
                     { id: "Family", label: lang==="TH"?"ครอบครัว":"Family", color: "pink" },
                     { id: "Finance", label: t.finance, color: "green" },
                     { id: "Business", label: lang==="TH"?"ธุรกิจ/แม่ค้า":"Business", color: "green" },
+                    { id: "Education", label: lang==="TH"?"การศึกษา":"Education", color: "blue" },
                     { id: "Agriculture", label: lang==="TH"?"เกษตร":"Agriculture", color: "green" },
                     { id: "Construction", label: lang==="TH"?"ก่อสร้าง":"Construction", color: "amber" },
                     { id: "Technology", label: lang==="TH"?"เทคโนโลยี":"Technology", color: "orange" },
                     { id: "Travel", label: lang==="TH"?"ท่องเที่ยว":"Travel", color: "cyan" },
                     { id: "Fortune", label: lang==="TH"?"ดูดวง/พยากรณ์":"Fortune", color: "indigo" },
                     { id: "Gold", label: lang==="TH"?"ราคาทองคำ":"Gold", color: "yellow" },
-                    { id: "Lottery", label: lang==="TH"?"ตรวจหวย":"Lottery", color: "emerald" },
                     { id: "Utility", label: t.utility, color: "blue" },
                     { id: "General", label: lang==="TH"?"ทั่วไป":"General", color: "purple" }
                   ].map((cat) => (
