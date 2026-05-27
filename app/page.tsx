@@ -470,8 +470,20 @@ export default function CalculatorHub() {
                 {activeCategory === "Utility" && <UtilitySEO lang={lang} />}
                 {activeCategory === "General" && <GeneralSEO lang={lang} />}
 
+                {/* Popular Dedicated Calculators (For SEO Internal Linking) */}
+                <div className="mt-12 text-center text-sm">
+                  <h3 className="font-bold text-gray-500 mb-4">{lang === "TH" ? "เครื่องมือยอดนิยม:" : "Popular Tools:"}</h3>
+                  <div className="flex flex-wrap justify-center gap-4">
+                    <a href="/area-converter" className="text-gray-400 hover:text-deep-teal transition-colors">วิธีแปลงไร่เป็นตารางเมตร</a>
+                    <a href="/used-car-loan" className="text-gray-400 hover:text-deep-teal transition-colors">คำนวณค่างวดรถมือสอง</a>
+                    <a href="/cylinder-volume" className="text-gray-400 hover:text-deep-teal transition-colors">สูตรหาปริมาตรทรงกระบอก</a>
+                    <a href="/mortgage-2026" className="text-gray-400 hover:text-deep-teal transition-colors">คำนวณผ่อนบ้าน 2569</a>
+                    <a href="/electricity-2026" className="text-gray-400 hover:text-deep-teal transition-colors">คำนวณค่าไฟ 2569</a>
+                  </div>
+                </div>
+
                 {/* Footer SEO Content & Disclaimer */}
-                <div className="mt-20 pt-10 border-t border-gray-200 dark:border-white/10 text-center max-w-3xl mx-auto">
+                <div className="mt-16 pt-10 border-t border-gray-200 dark:border-white/10 text-center max-w-3xl mx-auto">
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{lang === "TH" ? "เว็บเครื่องมือคำนวณออนไลน์ที่ใช้งานง่ายที่สุด" : "The Most Intuitive Online Calculators"}</h2>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8 text-sm">
                     {lang === "TH" 
