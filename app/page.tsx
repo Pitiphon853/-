@@ -18,8 +18,10 @@ import { TechnologySEO } from "../components/seo/TechnologySEO";
 import { TravelSEO } from "../components/seo/TravelSEO";
 import { UtilitySEO } from "../components/seo/UtilitySEO";
 import { GeneralSEO } from "../components/seo/GeneralSEO";
+import { EnvironmentSEO } from "../components/seo/EnvironmentSEO";
+import { ScienceSEO } from "../components/seo/ScienceSEO";
 
-type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Agriculture" | "Construction" | "Technology" | "Travel" | "Utility" | "General" | "Fortune" | "Gold" | "Education" | "Sports";
+type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Agriculture" | "Construction" | "Technology" | "Travel" | "Environment" | "Science" | "Utility" | "General" | "Fortune" | "Gold" | "Education" | "Sports";
 
 export default function CalculatorHub() {
   const [lang, setLang] = useState<Lang>("TH");
@@ -107,6 +109,8 @@ export default function CalculatorHub() {
     { id: "packing-list", name: lang==="TH"?"จัดกระเป๋าเดินทาง":"Packing List", desc: lang==="TH"?"เช็กลิสต์จัดกระเป๋า":"Luggage Checklist", category: "Travel", icon: BookOpen },
     { id: "road-trip", name: lang==="TH"?"ค่าน้ำมัน Road Trip":"Road Trip", desc: lang==="TH"?"ค่าแก๊ส/ทางด่วน":"Fuel & Tolls", category: "Travel", icon: Car },
     { id: "baggage-weight", name: lang==="TH"?"เช็คน้ำหนักกระเป๋า":"Baggage Weight", desc: lang==="TH"?"เทียบลิมิตสายการบิน":"Baggage Fee Checker", category: "Travel", icon: Plane },
+    { id: "jet-lag", name: lang==="TH"?"Jet Lag":"Jet Lag", desc: lang==="TH"?"เวลาปรับตัวข้ามโซน":"Timezone Recovery", category: "Travel", icon: Plane },
+    { id: "roaming-cost", name: lang==="TH"?"ค่า Roaming":"Roaming Cost", desc: lang==="TH"?"ประเมินค่าเน็ตตปท.":"Data Roaming", category: "Travel", icon: Coins },
 
     // Finance (Green/Gold)
     { id: "discount", name: lang==="TH"?"ส่วนลด":"Discount", desc: lang==="TH"?"เปอร์เซ็นต์ส่วนลด":"Discount Percentage", category: "Finance", icon: Coins },
@@ -177,6 +181,11 @@ export default function CalculatorHub() {
     { id: "irrigation", name: lang==="TH"?"น้ำชลประทาน":"Irrigation", desc: lang==="TH"?"ปริมาณน้ำต่อไร่":"Water per Rai", category: "Agriculture", icon: Home },
     { id: "durian", name: lang==="TH"?"คำนวณทำสวนทุเรียน":"Durian Farming", desc: lang==="TH"?"วันตัด/การปลูก":"Harvest & Plant", category: "Agriculture", icon: Home },
     { id: "yield", name: lang==="TH"?"ผลผลิตต่อไร่":"Crop Yield", desc: lang==="TH"?"กำไรเกษตรกร":"Yield per Rai", category: "Agriculture", icon: Coins },
+    { id: "soil-ph", name: lang==="TH"?"pH ดิน + ปูนแก้ดิน":"Soil pH & Lime", desc: lang==="TH"?"คำนวณปูนขาวปรับดิน":"Soil Amendment", category: "Agriculture", icon: Home },
+    { id: "livestock-profit", name: lang==="TH"?"ต้นทุน/กำไร ปศุสัตว์":"Livestock Profit", desc: lang==="TH"?"กำไรการเลี้ยงสัตว์":"Farming Profit", category: "Agriculture", icon: Coins },
+    { id: "spray-volume", name: lang==="TH"?"น้ำยาฉีดพ่น":"Spray Volume", desc: lang==="TH"?"ผสมน้ำยาเคมีเกษตร":"Chemical Mixing", category: "Agriculture", icon: Zap },
+    { id: "fishery-income", name: lang==="TH"?"รายได้ประมง":"Fishery Income", desc: lang==="TH"?"กำไรบ่อปลา/กุ้ง":"Aquaculture Profit", category: "Agriculture", icon: Coins },
+    { id: "yield-gap", name: lang==="TH"?"Yield Gap":"Yield Gap", desc: lang==="TH"?"ศักยภาพผลผลิต":"Potential vs Actual", category: "Agriculture", icon: Calculator },
 
     // Construction (Amber)
     { id: "house-paint", name: lang==="TH"?"สีทาบ้าน":"House Paint", desc: lang==="TH"?"พื้นที่ผนัง → ลิตร":"Wall Area → Liters", category: "Construction", icon: Home },
@@ -187,6 +196,25 @@ export default function CalculatorHub() {
     { id: "pool-vol", name: lang==="TH"?"สระว่ายน้ำ":"Pool Volume", desc: lang==="TH"?"ปริมาตรน้ำ/คลอรีน":"Water Volume", category: "Construction", icon: Home },
     { id: "insulation", name: lang==="TH"?"ฉนวนกันความร้อน":"Insulation", desc: lang==="TH"?"R-value ที่ต้องการ":"R-Value Needed", category: "Construction", icon: Home },
     { id: "reno-cost", name: lang==="TH"?"ค่าใช้จ่ายรีโนเวท":"Renovation Cost", desc: lang==="TH"?"ประเมินงบก่อสร้าง":"Estimated Budget", category: "Construction", icon: Coins },
+    { id: "solar-panel", name: lang==="TH"?"โซลาร์เซลล์":"Solar Panel", desc: lang==="TH"?"จำนวนแผงที่ต้องการ":"Panels Needed", category: "Construction", icon: Zap },
+    { id: "interior-cost", name: lang==="TH"?"ค่าตกแต่งภายใน":"Interior Cost", desc: lang==="TH"?"ประเมินงบ Built-in":"Interior Budget", category: "Construction", icon: Home },
+    { id: "ach-calc", name: lang==="TH"?"ระบบระบายอากาศ ACH":"ACH Ventilation", desc: lang==="TH"?"Air Changes/Hour":"Air Changes per Hour", category: "Construction", icon: Zap },
+    { id: "concrete-vol", name: lang==="TH"?"คอนกรีต m³":"Concrete Volume", desc: lang==="TH"?"คำนวณคิวปูน":"Cubic Meters", category: "Construction", icon: Home },
+    { id: "rebar-weight", name: lang==="TH"?"เหล็กเสริม Rebar":"Rebar Weight", desc: lang==="TH"?"น้ำหนักเหล็กเส้น":"Rebar Weight", category: "Construction", icon: Hash },
+    { id: "aac-blocks", name: lang==="TH"?"อิฐมวลเบา":"AAC Blocks", desc: lang==="TH"?"จำนวนก้อนอิฐมวลเบา":"Blocks Needed", category: "Construction", icon: Home },
+    { id: "labor-cost-sqm", name: lang==="TH"?"ค่าแรงงานต่อ ตร.ม.":"Labor Cost per sqm", desc: lang==="TH"?"ประเมินค่าแรงก่อสร้าง":"Construction Labor", category: "Construction", icon: Coins },
+    { id: "plumbing-pipe", name: lang==="TH"?"ท่อประปา":"Plumbing Pipe", desc: lang==="TH"?"ความยาวและข้อต่อ":"Pipe & Fittings", category: "Construction", icon: Home },
+    { id: "slope-grade", name: lang==="TH"?"ความลาดชัน (Slope)":"Slope / Grade", desc: lang==="TH"?"เปอร์เซ็นต์ Slope":"Slope Percentage", category: "Construction", icon: Hash },
+
+    // Environment (Emerald)
+    { id: "carbon-footprint", name: lang==="TH"?"Carbon Footprint ส่วนตัว":"Personal Carbon Footprint", desc: lang==="TH"?"ประเมินคาร์บอนรายปี":"Annual CO2", category: "Environment", icon: Sparkles },
+    { id: "wind-energy", name: lang==="TH"?"พลังงานลม":"Wind Energy", desc: lang==="TH"?"กำลังไฟฟ้าจากลม":"Wind Power", category: "Environment", icon: Zap },
+    { id: "water-savings", name: lang==="TH"?"ประหยัดน้ำ":"Water Savings", desc: lang==="TH"?"ลดค่าน้ำจากก๊อก/ชักโครก":"Water Conservation", category: "Environment", icon: Home },
+    { id: "plastic-footprint", name: lang==="TH"?"Plastic Footprint":"Plastic Footprint", desc: lang==="TH"?"ขยะพลาสติกต่อปี":"Annual Plastic Waste", category: "Environment", icon: Sparkles },
+
+    // Science (Indigo)
+    { id: "quadratic-eq", name: lang==="TH"?"สมการกำลังสอง":"Quadratic Equation", desc: lang==="TH"?"หาค่า x จากสมการ":"Solve for x", category: "Science", icon: Calculator },
+    { id: "ph-poh", name: lang==="TH"?"คำนวณ pH / pOH":"pH / pOH", desc: lang==="TH"?"ความเข้มข้นไฮโดรเจน":"Ion Concentration", category: "Science", icon: Hash },
 
     // Technology (Orange)
     { id: "bandwidth", name: lang==="TH"?"คำนวณ Bandwidth":"Bandwidth", desc: lang==="TH"?"เวลาดาวน์โหลดไฟล์":"Download Time", category: "Technology", icon: Zap },
@@ -238,12 +266,14 @@ export default function CalculatorHub() {
       case "Finance":
       case "Business":
       case "Agriculture": return "green";
+      case "Environment": return "emerald";
       case "Construction": return "amber";
       case "Technology": 
       case "Sports": return "orange";
       case "Travel": return "cyan";
       case "General": return "purple";
       case "Fortune": return "indigo";
+      case "Science": return "indigo";
       case "Gold": return "yellow";
       case "Education": return "blue";
       default: return "blue";
@@ -340,9 +370,11 @@ export default function CalculatorHub() {
                     { id: "Business", label: lang==="TH"?"ธุรกิจ/แม่ค้า":"Business", color: "green" },
                     { id: "Education", label: lang==="TH"?"การศึกษา":"Education", color: "blue" },
                     { id: "Agriculture", label: lang==="TH"?"เกษตร":"Agriculture", color: "green" },
+                    { id: "Environment", label: lang==="TH"?"สิ่งแวดล้อม":"Environment", color: "emerald" },
                     { id: "Construction", label: lang==="TH"?"ก่อสร้าง":"Construction", color: "amber" },
                     { id: "Technology", label: lang==="TH"?"เทคโนโลยี":"Technology", color: "orange" },
                     { id: "Travel", label: lang==="TH"?"ท่องเที่ยว":"Travel", color: "cyan" },
+                    { id: "Science", label: lang==="TH"?"คณิตศาสตร์/วิทย์":"Science", color: "indigo" },
                     { id: "Fortune", label: lang==="TH"?"ดูดวง/พยากรณ์":"Fortune", color: "indigo" },
                     { id: "Gold", label: lang==="TH"?"ราคาทองคำ":"Gold", color: "yellow" },
                     { id: "Utility", label: t.utility, color: "blue" },
@@ -474,6 +506,8 @@ export default function CalculatorHub() {
                 {activeCategory === "Construction" && <ConstructionSEO lang={lang} />}
                 {activeCategory === "Technology" && <TechnologySEO lang={lang} />}
                 {activeCategory === "Travel" && <TravelSEO lang={lang} />}
+                {activeCategory === "Environment" && <EnvironmentSEO lang={lang} />}
+                {activeCategory === "Science" && <ScienceSEO lang={lang} />}
                 {activeCategory === "Utility" && <UtilitySEO lang={lang} />}
                 {activeCategory === "General" && <GeneralSEO lang={lang} />}
 

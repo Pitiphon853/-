@@ -30,6 +30,11 @@ import { HousePaintCalculator, CementCalculator, WallpaperCalculator, RoofAreaCa
 import { BandwidthCalculator, ServerCostCalculator, ImageSizeCalculator, IPSubnetCalculator, VideoBitrateCalculator, BatteryLifeCalculator, HashRateCalculator } from "./calcs/TechnologyCalcs";
 import { RaidCalculator, PpiCalculator, ApiCostCalculator, UpsRuntimeCalculator, MorseCodeConverter, AsciiConverter, CacheHitRateCalculator } from "./calcs/TechnologyCalcs2";
 import { DurianCalculator } from "./calcs/AgricultureCalcs2";
+import { SoilPhCalculator, LivestockProfitCalculator, SprayVolumeCalculator, FisheryIncomeCalculator, YieldGapCalculator } from "./calcs/AgricultureCalcs3";
+import { JetLagCalculator, RoamingCostCalculator } from "./calcs/TravelCalcs2";
+import { SolarPanelCalculator, InteriorCostCalculator, AchVentilationCalculator, ConcreteVolumeCalculator, RebarWeightCalculator, AacBlocksCalculator, LaborCostCalculator, PlumbingPipeCalculator, SlopeGradeCalculator } from "./calcs/ConstructionCalcs2";
+import { CarbonFootprintCalculator, WindEnergyCalculator, WaterSavingsCalculator, PlasticFootprintCalculator } from "./calcs/EnvironmentCalcs";
+import { QuadraticCalculator, PHCalculator } from "./calcs/ScienceCalcs";
 
 import { HoroscopeCalculator } from "./calcs/FamilyCalcs3";
 import { TarotReadingCalculator } from "./calcs/TarotCalcs";
@@ -209,6 +214,38 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "morse-code") return <MorseCodeConverter lang={lang} />;
   if (activeCalc === "ascii-converter") return <AsciiConverter lang={lang} />;
   if (activeCalc === "cache-hit-rate") return <CacheHitRateCalculator lang={lang} />;
+
+  // Agriculture 3
+  if (activeCalc === "soil-ph") return <SoilPhCalculator lang={lang} />;
+  if (activeCalc === "livestock-profit") return <LivestockProfitCalculator lang={lang} />;
+  if (activeCalc === "spray-volume") return <SprayVolumeCalculator lang={lang} />;
+  if (activeCalc === "fishery-income") return <FisheryIncomeCalculator lang={lang} />;
+  if (activeCalc === "yield-gap") return <YieldGapCalculator lang={lang} />;
+
+  // Travel 2
+  if (activeCalc === "jet-lag") return <JetLagCalculator lang={lang} />;
+  if (activeCalc === "roaming-cost") return <RoamingCostCalculator lang={lang} />;
+
+  // Construction 2
+  if (activeCalc === "solar-panel") return <SolarPanelCalculator lang={lang} />;
+  if (activeCalc === "interior-cost") return <InteriorCostCalculator lang={lang} />;
+  if (activeCalc === "ach-calc") return <AchVentilationCalculator lang={lang} />;
+  if (activeCalc === "concrete-vol") return <ConcreteVolumeCalculator lang={lang} />;
+  if (activeCalc === "rebar-weight") return <RebarWeightCalculator lang={lang} />;
+  if (activeCalc === "aac-blocks") return <AacBlocksCalculator lang={lang} />;
+  if (activeCalc === "labor-cost-sqm") return <LaborCostCalculator lang={lang} />;
+  if (activeCalc === "plumbing-pipe") return <PlumbingPipeCalculator lang={lang} />;
+  if (activeCalc === "slope-grade") return <SlopeGradeCalculator lang={lang} />;
+
+  // Environment
+  if (activeCalc === "carbon-footprint") return <CarbonFootprintCalculator lang={lang} />;
+  if (activeCalc === "wind-energy") return <WindEnergyCalculator lang={lang} />;
+  if (activeCalc === "water-savings") return <WaterSavingsCalculator lang={lang} />;
+  if (activeCalc === "plastic-footprint") return <PlasticFootprintCalculator lang={lang} />;
+
+  // Science
+  if (activeCalc === "quadratic-eq") return <QuadraticCalculator lang={lang} />;
+  if (activeCalc === "ph-poh") return <PHCalculator lang={lang} />;
 
   return (
     <div className="text-center p-12 text-gray-500">
