@@ -22,6 +22,18 @@ const nextConfig = {
         source: '/คำนวณ-ผ่อนบ้าน-2569',
         destination: '/mortgage-2026',
       },
+      {
+        source: '/วิธีแปลงไร่เป็นตารางเมตร',
+        destination: '/area-converter',
+      },
+      {
+        source: '/คำนวณค่างวดรถมือสอง',
+        destination: '/used-car-loan',
+      },
+      {
+        source: '/สูตรหาปริมาตรทรงกระบอก',
+        destination: '/cylinder-volume',
+      },
     ];
   },
 };
