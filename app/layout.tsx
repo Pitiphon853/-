@@ -11,6 +11,7 @@ const prompt = Prompt({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://xn--42c4ar0dtc7i.com"),
   title: "คำนวณ.com | The Ultimate Calculator Hub",
   description: "ศูนย์รวมเครื่องมือคำนวณออนไลน์ที่ใช้งานง่ายที่สุด",
 };
