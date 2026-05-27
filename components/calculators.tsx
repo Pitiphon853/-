@@ -28,6 +28,7 @@ import { PantoneConverter } from "./calcs/ConversionCalcs3";
 import { FoodEnergyCalculator, FertilizerCalculator, IrrigationCalculator, YieldCalculator } from "./calcs/AgricultureCalcs";
 import { HousePaintCalculator, CementCalculator, WallpaperCalculator, RoofAreaCalculator, WaterTankCalculator, PoolVolumeCalculator, InsulationCalculator, RenovationCostCalculator } from "./calcs/ConstructionCalcs";
 import { BandwidthCalculator, ServerCostCalculator, ImageSizeCalculator, IPSubnetCalculator, VideoBitrateCalculator, BatteryLifeCalculator, HashRateCalculator } from "./calcs/TechnologyCalcs";
+import { RaidCalculator, PpiCalculator, ApiCostCalculator, UpsRuntimeCalculator, MorseCodeConverter, AsciiConverter, CacheHitRateCalculator } from "./calcs/TechnologyCalcs2";
 import { DurianCalculator } from "./calcs/AgricultureCalcs2";
 
 import { HoroscopeCalculator } from "./calcs/FamilyCalcs3";
@@ -201,6 +202,13 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "video-bitrate") return <VideoBitrateCalculator lang={lang} />;
   if (activeCalc === "battery-life") return <BatteryLifeCalculator lang={lang} />;
   if (activeCalc === "hash-rate") return <HashRateCalculator lang={lang} />;
+  if (activeCalc === "raid-calc") return <RaidCalculator lang={lang} />;
+  if (activeCalc === "ppi-calc") return <PpiCalculator lang={lang} />;
+  if (activeCalc === "api-cost") return <ApiCostCalculator lang={lang} />;
+  if (activeCalc === "ups-runtime") return <UpsRuntimeCalculator lang={lang} />;
+  if (activeCalc === "morse-code") return <MorseCodeConverter lang={lang} />;
+  if (activeCalc === "ascii-converter") return <AsciiConverter lang={lang} />;
+  if (activeCalc === "cache-hit-rate") return <CacheHitRateCalculator lang={lang} />;
 
   return (
     <div className="text-center p-12 text-gray-500">

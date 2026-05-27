@@ -196,6 +196,13 @@ export default function CalculatorHub() {
     { id: "video-bitrate", name: lang==="TH"?"FPS/Bitrate วิดีโอ":"Video Bitrate", desc: lang==="TH"?"คุณภาพ VS ขนาดไฟล์":"Video Size", category: "Technology", icon: Hash },
     { id: "battery-life", name: lang==="TH"?"คำนวณ Battery Life":"Battery Life", desc: lang==="TH"?"mAh ÷ การใช้งาน":"mAh Usage", category: "Technology", icon: Zap },
     { id: "hash-rate", name: lang==="TH"?"คำนวณ Hash Rate":"Hash Rate", desc: lang==="TH"?"เหมืองคริปโต":"Crypto Mining", category: "Technology", icon: Coins },
+    { id: "raid-calc", name: lang==="TH"?"คำนวณความจุ RAID":"RAID Storage", desc: lang==="TH"?"RAID 0, 1, 5, 6, 10":"RAID 0, 1, 5, 6, 10", category: "Technology", icon: Hash },
+    { id: "ppi-calc", name: lang==="TH"?"ความหนาแน่นพิกเซล":"Pixel Density", desc: lang==="TH"?"PPI / DPI":"PPI / DPI", category: "Technology", icon: Hash },
+    { id: "api-cost", name: lang==="TH"?"คำนวณค่าบริการ API":"API Cost", desc: lang==="TH"?"Token เป็นเงินบาท":"Token to THB", category: "Technology", icon: Calculator },
+    { id: "ups-runtime", name: lang==="TH"?"ระยะเวลาสำรองไฟ UPS":"UPS Runtime", desc: lang==="TH"?"คำนวณเวลาแบตเตอรี่":"Battery Time", category: "Technology", icon: Zap },
+    { id: "morse-code", name: lang==="TH"?"แปลงรหัสมอร์ส":"Morse Code", desc: lang==="TH"?"Text ↔ Morse":"Text ↔ Morse", category: "Technology", icon: BookOpen },
+    { id: "ascii-converter", name: lang==="TH"?"แปลง ASCII/Unicode":"ASCII/Unicode", desc: lang==="TH"?"Text ↔ Binary/Hex":"Text ↔ Binary/Hex", category: "Technology", icon: Hash },
+    { id: "cache-hit-rate", name: lang==="TH"?"คำนวณ Cache Hit Rate":"Cache Hit Rate", desc: lang==="TH"?"Hits vs Misses":"Hits vs Misses", category: "Technology", icon: Hash },
 
     // General (Purple)
     { id: "digital-unit", name: lang==="TH"?"แปลงหน่วยดิจิทัล":"Digital Unit", desc: lang==="TH"?"MB ↔ GB ↔ TB":"MB ↔ GB ↔ TB", category: "General", icon: Hash },
