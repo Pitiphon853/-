@@ -1,0 +1,8 @@
+{
+  "id": "full-house-furniture-cost",
+  "slug": "full-house-furniture-cost",
+  "name": { "TH": "ค่าใช้จ่ายเปลี่ยนเฟอร์นิเจอร์ทั้งบ้าน", "EN": "Full House Furniture Cost" },
+  "desc": { "TH": "ประเมินงบประมาณซื้อเฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าสำหรับตกแต่งบ้านใหม่", "EN": "Estimate budget for furnishing a whole house with furniture and appliances." },
+  "category": "Family",
+  "icon": "Sofa"
+}

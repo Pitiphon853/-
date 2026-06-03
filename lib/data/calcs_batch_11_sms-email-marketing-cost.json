@@ -1,0 +1,14 @@
+{
+  "id": "sms-email-marketing-cost",
+  "slug": "sms-email-marketing-cost",
+  "name": {
+    "TH": "ค่าใช้จ่าย SMS/Email Marketing",
+    "EN": "SMS & Email Marketing Cost"
+  },
+  "desc": {
+    "TH": "คำนวณและเปรียบเทียบต้นทุนการส่งแคมเปญการตลาดผ่าน SMS และ Email พร้อมประเมินค่าใช้จ่ายต่อผู้รับ (Cost per User)",
+    "EN": "Calculate and compare the cost of marketing campaigns via SMS and Email, including Cost per User."
+  },
+  "category": "Technology",
+  "icon": "Calculator"
+}

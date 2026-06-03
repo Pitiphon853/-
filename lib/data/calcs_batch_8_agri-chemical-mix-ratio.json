@@ -1,0 +1,14 @@
+{
+  "id": "agri-chemical-mix-ratio",
+  "slug": "agri-chemical-mix-ratio",
+  "name": {
+    "TH": "คำนวณสารเคมีเกษตรต่อถัง",
+    "EN": "Agri-Chemical Mix Ratio"
+  },
+  "desc": {
+    "TH": "คำนวณอัตราส่วนการผสมสารเคมีเกษตร ปุ๋ย และฮอร์โมนต่อน้ำ 1 ถัง",
+    "EN": "Calculate the precise mixing ratio of agricultural chemicals per spray tank."
+  },
+  "category": "Agriculture",
+  "icon": "Beaker"
+}

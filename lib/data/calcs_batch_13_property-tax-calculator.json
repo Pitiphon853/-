@@ -1,0 +1,8 @@
+{
+  "id": "property-tax-calculator",
+  "slug": "property-tax-calculator",
+  "name": { "TH": "ค่าภาษีที่ดินและสิ่งปลูกสร้าง", "EN": "Property Tax Calculator" },
+  "desc": { "TH": "คำนวณภาษีที่ดินและสิ่งปลูกสร้าง สำหรับบ้านหลังแรก บ้านหลังที่สอง และที่ดินเปล่า", "EN": "Calculate property and land tax for first home, second home, and vacant land." },
+  "category": "Family",
+  "icon": "Building"
+}

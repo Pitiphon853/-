@@ -1,0 +1,14 @@
+{
+  "id": "google-ads-roi-roas",
+  "slug": "google-ads-roi-roas",
+  "name": {
+    "TH": "เครื่องมือคำนวณ ROI โฆษณา Google Ads",
+    "EN": "Google Ads ROI & ROAS Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณผลตอบแทนการลงทุน (ROI), ROAS, CPC, และเปรียบเทียบกำไรจากแคมเปญ Google Ads (Search/Display/Shopping)",
+    "EN": "Calculate Return on Investment (ROI), ROAS, CPC, and profitability for Google Ads campaigns."
+  },
+  "category": "Technology",
+  "icon": "Calculator"
+}

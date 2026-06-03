@@ -1,0 +1,14 @@
+{
+  "id": "seeds-per-rai-calculator",
+  "slug": "seeds-per-rai-calculator",
+  "name": {
+    "TH": "คำนวณปริมาณเมล็ดพันธุ์ต่อไร่",
+    "EN": "Seeds per Rai Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณจำนวนต้นต่อไร่และปริมาณเมล็ดพันธุ์ที่ต้องใช้ตามระยะปลูก",
+    "EN": "Calculate the exact amount of seeds needed per Rai based on planting spacing."
+  },
+  "category": "Agriculture",
+  "icon": "Sprout"
+}

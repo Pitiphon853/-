@@ -1,0 +1,14 @@
+{
+  "id": "rubber-tree-farming-calculator",
+  "slug": "rubber-tree-farming-calculator",
+  "name": {
+    "TH": "คำนวณต้นทุน/กำไรปลูกยางพารา",
+    "EN": "Rubber Tree Farming Profit Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือประเมินรายรับ ต้นทุน และกำไรสุทธิจากสวนยางพาราต่อปี",
+    "EN": "Calculate costs, revenue, and net profit for rubber tree farming per year."
+  },
+  "category": "Agriculture",
+  "icon": "Trees"
+}

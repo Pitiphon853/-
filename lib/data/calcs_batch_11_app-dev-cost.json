@@ -1,0 +1,14 @@
+{
+  "id": "app-dev-cost",
+  "slug": "app-dev-cost",
+  "name": {
+    "TH": "เครื่องมือประเมินค่าใช้จ่ายพัฒนาแอปพลิเคชัน",
+    "EN": "App Development Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินค่าใช้จ่ายในการพัฒนาแอป (iOS, Android, Web) ตามขนาดของฟีเจอร์และเรทนักพัฒนา",
+    "EN": "Estimate app development costs (iOS, Android, Web) based on feature size and developer rates."
+  },
+  "category": "Technology",
+  "icon": "Calculator"
+}

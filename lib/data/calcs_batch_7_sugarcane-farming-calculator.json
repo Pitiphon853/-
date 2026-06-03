@@ -1,0 +1,14 @@
+{
+  "id": "sugarcane-farming-calculator",
+  "slug": "sugarcane-farming-calculator",
+  "name": {
+    "TH": "คำนวณต้นทุน/กำไรปลูกอ้อย",
+    "EN": "Sugarcane Farming Profit Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือประเมินรายรับ ต้นทุน และกำไรสุทธิจากการปลูกอ้อยโรงงาน",
+    "EN": "Calculate costs, revenue, and net profit for sugarcane farming."
+  },
+  "category": "Agriculture",
+  "icon": "Tractor"
+}

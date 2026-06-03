@@ -1,0 +1,14 @@
+{
+  "id": "food-carbon-footprint",
+  "slug": "food-carbon-footprint",
+  "name": {
+    "TH": "คำนวณ Carbon Footprint อาหาร",
+    "EN": "Food Carbon Footprint"
+  },
+  "desc": {
+    "TH": "เปรียบเทียบการปล่อยคาร์บอนระหว่างการบริโภคเนื้อสัตว์และพืชผัก เพื่อทางเลือกที่รักษ์โลก",
+    "EN": "Compare carbon emissions between meat and plant-based foods for eco-friendly choices."
+  },
+  "category": "Environment",
+  "icon": "Utensils"
+}

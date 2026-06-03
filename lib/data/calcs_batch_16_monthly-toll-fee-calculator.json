@@ -1,0 +1,14 @@
+{
+  "id": "monthly-toll-fee-calculator",
+  "slug": "monthly-toll-fee-calculator",
+  "name": {
+    "TH": "เครื่องคิดเลขค่าทางด่วน/ค่าผ่านทางต่อเดือน",
+    "EN": "Monthly Toll Fee Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่าใช้จ่ายทางด่วน ค่าผ่านทางมอเตอร์เวย์ ต่อเดือนและต่อปี เพื่อการวางแผนเติมเงิน EasyPass/M-Flow",
+    "EN": "Calculate your monthly and annual toll fees for better budget planning."
+  },
+  "category": "Travel",
+  "icon": "Navigation"
+}

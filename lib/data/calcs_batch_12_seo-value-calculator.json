@@ -1,0 +1,14 @@
+{
+  "id": "seo-value-calculator",
+  "slug": "seo-value-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณ SEO Value",
+    "EN": "SEO Value Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณมูลค่าของทราฟฟิกออร์แกนิก (SEO Value) จาก Search Volume และ CPC",
+    "EN": "Calculate the organic traffic value (SEO Value) based on Search Volume and CPC."
+  },
+  "category": "Technology",
+  "icon": "Search"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "broiler-chicken-farm-calculator",
+  "slug": "broiler-chicken-farm-calculator",
+  "name": {
+    "TH": "คำนวณต้นทุน/กำไรฟาร์มไก่เนื้อ",
+    "EN": "Broiler Chicken Farm Profit Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมประเมินรายรับ ต้นทุน และกำไรจากการเลี้ยงไก่เนื้อ (ต่อรุ่น/ต่อโรงเรือน)",
+    "EN": "Calculate costs, revenue, and net profit for a broiler chicken farm per batch."
+  },
+  "category": "Agriculture",
+  "icon": "Bird"
+}

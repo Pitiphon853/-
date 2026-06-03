@@ -1,0 +1,14 @@
+{
+  "id": "ac-btu-size-calculator",
+  "slug": "ac-btu-size-calculator",
+  "name": {
+    "TH": "คำนวณขนาดแอร์ (BTU)",
+    "EN": "AC BTU Size Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณขนาดเครื่องปรับอากาศ (BTU) ที่เหมาะสมกับขนาดห้องและสภาพแสงแดด เพื่อความเย็นที่พอดีและประหยัดไฟ",
+    "EN": "Calculate the appropriate Air Conditioner BTU size based on room dimensions and sunlight exposure."
+  },
+  "category": "Utility",
+  "icon": "Snowflake"
+}

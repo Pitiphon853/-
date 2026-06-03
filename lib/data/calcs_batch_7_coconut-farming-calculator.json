@@ -1,0 +1,14 @@
+{
+  "id": "coconut-farming-calculator",
+  "slug": "coconut-farming-calculator",
+  "name": {
+    "TH": "คำนวณต้นทุน/กำไรปลูกมะพร้าว",
+    "EN": "Coconut Farming Profit Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณรายได้ ต้นทุน และกำไรสุทธิจากสวนมะพร้าว (มะพร้าวน้ำหอม/มะพร้าวแกง)",
+    "EN": "Calculate costs, revenue, and net profit for coconut farming per year."
+  },
+  "category": "Agriculture",
+  "icon": "Trees"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "farm-land-rent-roi",
+  "slug": "farm-land-rent-roi",
+  "name": {
+    "TH": "คำนวณค่าเช่าที่ดินเกษตร เทียบกำไร",
+    "EN": "Farm Land Rent ROI Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินความคุ้มค่าของการเช่าที่ดินเพื่อการเกษตร โดยเปรียบเทียบค่าเช่ากับรายได้สุทธิ",
+    "EN": "Evaluate the profitability of renting agricultural land by comparing rent costs with net income."
+  },
+  "category": "Agriculture",
+  "icon": "Tractor"
+}

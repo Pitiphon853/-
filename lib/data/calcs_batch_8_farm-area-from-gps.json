@@ -1,0 +1,14 @@
+{
+  "id": "farm-area-from-gps",
+  "slug": "farm-area-from-gps",
+  "name": {
+    "TH": "คำนวณพื้นที่เกษตรจาก GPS Coordinates",
+    "EN": "Farm Area from GPS"
+  },
+  "desc": {
+    "TH": "แปลงพิกัดละติจูด/ลองจิจูดจากมุมแปลงเป็นขนาดพื้นที่ (ไร่-งาน-ตารางวา)",
+    "EN": "Calculate farm area in Rai and Sqm by inputting GPS coordinates of the field."
+  },
+  "category": "Agriculture",
+  "icon": "Map"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "tree-co2-offset",
+  "slug": "tree-co2-offset",
+  "name": {
+    "TH": "คำนวณปริมาณ CO₂ ที่ต้นไม้ดูดซับ",
+    "EN": "Tree CO₂ Offset Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณและประเมินปริมาณก๊าซคาร์บอนไดออกไซด์ (CO₂) ที่ต้นไม้สามารถดูดซับได้ต่อปี",
+    "EN": "Calculate and estimate the amount of carbon dioxide (CO₂) absorbed by trees per year."
+  },
+  "category": "Environment",
+  "icon": "TreeDeciduous"
+}

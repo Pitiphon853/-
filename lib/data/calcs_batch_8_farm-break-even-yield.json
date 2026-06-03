@@ -1,0 +1,14 @@
+{
+  "id": "farm-break-even-yield",
+  "slug": "farm-break-even-yield",
+  "name": {
+    "TH": "ปริมาณผลผลิตที่ต้องขายเพื่อคืนทุน",
+    "EN": "Farm Break-even Yield"
+  },
+  "desc": {
+    "TH": "คำนวณปริมาณผลผลิตขั้นต่ำต่อไร่ที่ต้องทำให้ได้เพื่อไม่ให้ขาดทุน",
+    "EN": "Calculate the minimum crop yield required per Rai to break even."
+  },
+  "category": "Agriculture",
+  "icon": "Target"
+}

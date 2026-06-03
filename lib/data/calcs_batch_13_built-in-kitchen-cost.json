@@ -1,0 +1,8 @@
+{
+  "id": "built-in-kitchen-cost",
+  "slug": "built-in-kitchen-cost",
+  "name": { "TH": "ค่าใช้จ่ายทำ Kitchen Set Built-in", "EN": "Built-in Kitchen Cost" },
+  "desc": { "TH": "ประเมินราคางานบิ้วอินชุดครัว ตามความยาวและวัสดุเคาน์เตอร์", "EN": "Estimate cost of built-in kitchen set based on length and materials." },
+  "category": "Family",
+  "icon": "Utensils"
+}

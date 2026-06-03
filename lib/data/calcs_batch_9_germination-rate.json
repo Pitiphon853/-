@@ -1,0 +1,14 @@
+{
+  "id": "germination-rate",
+  "slug": "germination-rate",
+  "name": {
+    "TH": "คำนวณอัตราการงอกของเมล็ดพันธุ์",
+    "EN": "Germination Rate Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณเปอร์เซ็นต์อัตราการงอกของเมล็ดพันธุ์ เพื่อประเมินคุณภาพเมล็ดก่อนปลูกจริง",
+    "EN": "Calculate the germination rate percentage of seeds to assess seed quality before planting."
+  },
+  "category": "Agriculture",
+  "icon": "Sprout"
+}

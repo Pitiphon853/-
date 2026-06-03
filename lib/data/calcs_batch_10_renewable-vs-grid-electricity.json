@@ -1,0 +1,14 @@
+{
+  "id": "renewable-vs-grid-electricity",
+  "slug": "renewable-vs-grid-electricity",
+  "name": {
+    "TH": "เปรียบเทียบค่าไฟพลังงานทดแทน vs ไฟฟ้าปกติ",
+    "EN": "Renewable vs Grid Electricity Calculator"
+  },
+  "desc": {
+    "TH": "เปรียบเทียบค่าใช้จ่ายรายเดือนระหว่างการใช้ไฟฟ้าจากการไฟฟ้าปกติ กับการผสมผสานพลังงานทดแทน",
+    "EN": "Compare monthly electricity costs between standard grid power and a mix of renewable energy."
+  },
+  "category": "Environment",
+  "icon": "Zap"
+}

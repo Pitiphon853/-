@@ -1,0 +1,14 @@
+{
+  "id": "cloud-storage-cost",
+  "slug": "cloud-storage-cost",
+  "name": {
+    "TH": "เครื่องมือคำนวณค่าบริการ Cloud Storage",
+    "EN": "Cloud Storage Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินค่าใช้จ่ายพื้นที่จัดเก็บข้อมูลบนคลาวด์มาตรฐาน (เทียบเท่า AWS S3, GCS) รวมถึงค่าแบนด์วิดท์และ Requests",
+    "EN": "Estimate standard cloud storage costs (comparable to AWS S3, GCS) including bandwidth and requests."
+  },
+  "category": "Technology",
+  "icon": "Calculator"
+}

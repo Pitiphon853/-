@@ -1,0 +1,14 @@
+{
+  "id": "database-cost",
+  "slug": "database-cost",
+  "name": {
+    "TH": "เครื่องมือคำนวณ Database Cost (Managed DB)",
+    "EN": "Database Cost Calculator (Managed DB)"
+  },
+  "desc": {
+    "TH": "ประมาณการค่าใช้จ่ายบริการฐานข้อมูลบนคลาวด์ (เช่น RDS) โดยคิดจาก Instance, Storage และ Data Transfer",
+    "EN": "Estimate cloud managed database costs (like RDS) based on Instance, Storage, and Data Transfer."
+  },
+  "category": "Technology",
+  "icon": "Calculator"
+}

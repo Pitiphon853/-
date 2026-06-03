@@ -1,0 +1,14 @@
+{
+  "id": "annual-commute-cost-calculator",
+  "slug": "annual-commute-cost-calculator",
+  "name": {
+    "TH": "เครื่องคำนวณระยะทางและค่าใช้จ่ายไป-กลับทำงานต่อปี",
+    "EN": "Annual Commute Cost Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่าใช้จ่ายและระยะทางรวมที่คุณใช้ในการเดินทางไปทำงานตลอดทั้งปี",
+    "EN": "Calculate the total distance and cost of your annual commute."
+  },
+  "category": "Travel",
+  "icon": "MapPin"
+}

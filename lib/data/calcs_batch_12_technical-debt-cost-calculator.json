@@ -1,0 +1,14 @@
+{
+  "id": "technical-debt-cost-calculator",
+  "slug": "technical-debt-cost-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณมูลค่า Technical Debt",
+    "EN": "Technical Debt Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินต้นทุนที่สูญเสียไปจากการรับมือกับโค้ดที่ไม่มีคุณภาพและหนี้ทางเทคนิค (Technical Debt)",
+    "EN": "Evaluate the financial cost of technical debt and time lost dealing with bad code."
+  },
+  "category": "Technology",
+  "icon": "Code"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "mango-farming-calculator",
+  "slug": "mango-farming-calculator",
+  "name": {
+    "TH": "คำนวณต้นทุน/กำไรปลูกมะม่วง",
+    "EN": "Mango Farming Profit Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณรายได้ ต้นทุน และกำไรสุทธิจากสวนมะม่วงเพื่อการค้า",
+    "EN": "Calculate annual costs, revenue, and net profit for a commercial mango orchard."
+  },
+  "category": "Agriculture",
+  "icon": "Trees"
+}

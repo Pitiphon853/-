@@ -1,0 +1,8 @@
+{
+  "id": "ac-electricity-cost",
+  "slug": "ac-electricity-cost",
+  "name": { "TH": "ค่าไฟแอร์", "EN": "AC Electricity Cost" },
+  "desc": { "TH": "คำนวณค่าไฟแอร์รายเดือน จากขนาด BTU ค่า SEER และชั่วโมงการใช้งาน", "EN": "Calculate monthly AC electricity cost based on BTU, SEER, and usage hours." },
+  "category": "Utility",
+  "icon": "Zap"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "car-comparison",
+  "slug": "car-comparison",
+  "name": {
+    "TH": "เปรียบเทียบรถยนต์ 2 คัน (ค่าใช้จ่าย)",
+    "EN": "Car Comparison Calculator"
+  },
+  "desc": {
+    "TH": "เปรียบเทียบค่าใช้จ่ายรายปีและการผ่อนชำระของรถยนต์ 2 คัน เพื่อประกอบการตัดสินใจ",
+    "EN": "Compare annual costs and loan payments of 2 cars to make a better decision."
+  },
+  "category": "Finance",
+  "icon": "ArrowRightLeft"
+}

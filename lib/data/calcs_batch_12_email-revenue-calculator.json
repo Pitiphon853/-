@@ -1,0 +1,14 @@
+{
+  "id": "email-revenue-calculator",
+  "slug": "email-revenue-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณรายได้จาก Email Marketing",
+    "EN": "Email Revenue Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณผลตอบแทนและรายได้จากแคมเปญอีเมล จาก Open Rate และ Conversion Rate",
+    "EN": "Calculate ROI and revenue from email campaigns based on Open Rate and Conversion Rate."
+  },
+  "category": "Technology",
+  "icon": "Mail"
+}

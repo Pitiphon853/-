@@ -1,0 +1,14 @@
+{
+  "id": "farm-labor-cost-per-rai",
+  "slug": "farm-labor-cost-per-rai",
+  "name": {
+    "TH": "คำนวณค่าจ้างแรงงานเกษตรต่อไร่",
+    "EN": "Farm Labor Cost per Rai"
+  },
+  "desc": {
+    "TH": "คำนวณต้นทุนค่าแรงเฉลี่ยต่อไร่ และวัดประสิทธิภาพการทำงานของคนงาน (ไร่/คน/วัน)",
+    "EN": "Calculate exact labor cost per Rai and analyze workers' efficiency."
+  },
+  "category": "Agriculture",
+  "icon": "Users"
+}

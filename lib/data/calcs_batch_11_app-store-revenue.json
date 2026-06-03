@@ -1,0 +1,14 @@
+{
+  "id": "app-store-revenue",
+  "slug": "app-store-revenue",
+  "name": {
+    "TH": "เครื่องมือคำนวณรายได้ App Store / Google Play",
+    "EN": "App Store Revenue Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณรายได้สุทธิและหักค่าคอมมิชชั่นของ Apple App Store และ Google Play Store (15% vs 30%)",
+    "EN": "Calculate net revenue and commissions for Apple App Store and Google Play Store (15% vs 30%)."
+  },
+  "category": "Technology",
+  "icon": "Calculator"
+}

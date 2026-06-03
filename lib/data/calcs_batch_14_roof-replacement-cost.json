@@ -1,0 +1,14 @@
+{
+  "id": "roof-replacement-cost",
+  "slug": "roof-replacement-cost",
+  "name": {
+    "TH": "คำนวณค่าเปลี่ยนหลังคาบ้าน",
+    "EN": "Roof Replacement Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินงบประมาณในการรื้อถอนและเปลี่ยนหลังคาใหม่ ตามพื้นที่และประเภทของวัสดุหลังคา",
+    "EN": "Estimate the budget for roof replacement including demolition and new materials based on roof area."
+  },
+  "category": "Construction",
+  "icon": "Home"
+}

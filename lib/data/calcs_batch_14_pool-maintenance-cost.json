@@ -1,0 +1,14 @@
+{
+  "id": "pool-maintenance-cost",
+  "slug": "pool-maintenance-cost",
+  "name": {
+    "TH": "คำนวณค่าดูแลสระว่ายน้ำ",
+    "EN": "Pool Maintenance Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินค่าใช้จ่ายในการดูแลรักษาสระว่ายน้ำรายเดือนและรายปี ทั้งค่าสารเคมี ไฟฟ้า น้ำ และบริการทำความสะอาด",
+    "EN": "Estimate monthly and yearly pool maintenance costs including chemicals, electricity, water, and cleaning services."
+  },
+  "category": "Family",
+  "icon": "Waves"
+}

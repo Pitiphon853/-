@@ -1,0 +1,14 @@
+{
+  "id": "household-water-usage-cost",
+  "slug": "household-water-usage-cost",
+  "name": {
+    "TH": "คำนวณค่าน้ำอุปโภคบริโภค",
+    "EN": "Household Water Usage Cost Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณปริมาณการใช้น้ำและประมาณการค่าน้ำประปารายเดือนของครอบครัว",
+    "EN": "Calculate water usage volume and estimate monthly water bill for your household."
+  },
+  "category": "Utility",
+  "icon": "Droplet"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "rental-yield-calculator",
+  "slug": "rental-yield-calculator",
+  "name": { "TH": "คำนวณ Rental Yield", "EN": "Rental Yield Calculator" },
+  "desc": { "TH": "หาอัตราผลตอบแทนการปล่อยเช่า Gross Yield และ Net Yield เพื่อการลงทุน", "EN": "Calculate Gross and Net Rental Yield for property investments." },
+  "category": "Family",
+  "icon": "Percent"
+}

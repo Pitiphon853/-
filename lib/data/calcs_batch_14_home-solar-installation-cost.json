@@ -1,0 +1,14 @@
+{
+  "id": "home-solar-installation-cost",
+  "slug": "home-solar-installation-cost",
+  "name": {
+    "TH": "คำนวณค่าติดตั้งและจุดคุ้มทุนโซลาร์รูฟท็อป",
+    "EN": "Home Solar Installation Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินค่าใช้จ่ายเบื้องต้นในการติดตั้งแผงโซลาร์เซลล์บนหลังคาบ้าน คำนวณค่าไฟที่ประหยัดได้และระยะเวลาคืนทุน",
+    "EN": "Estimate home solar panel installation costs, monthly savings, and payback period."
+  },
+  "category": "Construction",
+  "icon": "Sun"
+}

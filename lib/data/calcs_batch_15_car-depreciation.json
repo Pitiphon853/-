@@ -1,0 +1,14 @@
+{
+  "id": "car-depreciation",
+  "slug": "car-depreciation",
+  "name": {
+    "TH": "คำนวณค่าเสื่อมราคารถ",
+    "EN": "Car Depreciation Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณและประเมินมูลค่ารถยนต์ที่ลดลงตามกาลเวลา (Depreciation) พร้อมตารางแสดงมูลค่ารายปี",
+    "EN": "Estimate the declining value of a car over time with a yearly depreciation table."
+  },
+  "category": "Finance",
+  "icon": "TrendingDown"
+}

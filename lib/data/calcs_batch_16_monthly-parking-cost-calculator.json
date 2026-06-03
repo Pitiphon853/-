@@ -1,0 +1,14 @@
+{
+  "id": "monthly-parking-cost-calculator",
+  "slug": "monthly-parking-cost-calculator",
+  "name": {
+    "TH": "เครื่องคิดเลขค่าใช้จ่ายที่จอดรถรายเดือน",
+    "EN": "Monthly Parking Cost Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณและเปรียบเทียบค่าที่จอดรถแบบรายวันกับรายเดือน แบบไหนคุ้มค่ากว่ากัน",
+    "EN": "Compare daily vs monthly parking costs to find the best deal."
+  },
+  "category": "Travel",
+  "icon": "Car"
+}

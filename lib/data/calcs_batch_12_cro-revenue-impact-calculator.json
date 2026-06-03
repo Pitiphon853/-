@@ -1,0 +1,14 @@
+{
+  "id": "cro-revenue-impact-calculator",
+  "slug": "cro-revenue-impact-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณรายได้จาก CRO (Conversion Rate)",
+    "EN": "CRO Revenue Impact Calculator"
+  },
+  "desc": {
+    "TH": "วิเคราะห์การเติบโตของรายได้ (Revenue Uplift) จากการปรับปรุงอัตราการแปลง (Conversion Rate)",
+    "EN": "Analyze the potential revenue uplift from optimizing your Conversion Rate (CRO)."
+  },
+  "category": "Technology",
+  "icon": "TrendingUp"
+}

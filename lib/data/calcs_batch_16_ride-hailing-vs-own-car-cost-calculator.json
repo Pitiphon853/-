@@ -1,0 +1,14 @@
+{
+  "id": "ride-hailing-vs-own-car-cost-calculator",
+  "slug": "ride-hailing-vs-own-car-cost-calculator",
+  "name": {
+    "TH": "เปรียบเทียบค่าใช้จ่าย เรียกรถ vs รถส่วนตัว",
+    "EN": "Ride Hailing vs Own Car Cost Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณและเปรียบเทียบว่าการใช้แอปเรียกรถ (Grab/Uber) หรือการซื้อรถยนต์ส่วนตัว แบบไหนคุ้มค่ากว่ากัน",
+    "EN": "Compare the true costs of using ride-hailing services versus owning a car."
+  },
+  "category": "Travel",
+  "icon": "CarFront"
+}

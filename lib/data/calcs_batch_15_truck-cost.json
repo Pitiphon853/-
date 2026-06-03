@@ -1,0 +1,14 @@
+{
+  "id": "truck-cost",
+  "slug": "truck-cost",
+  "name": {
+    "TH": "คำนวณต้นทุนรถบรรทุกขนส่ง",
+    "EN": "Truck Operating Cost"
+  },
+  "desc": {
+    "TH": "คำนวณต้นทุนการวิ่งรถบรรทุกต่อเที่ยวและต่อกิโลเมตร รวมถึงค่าน้ำมันและค่าจ้างคนขับ",
+    "EN": "Calculate truck operating cost per trip and per kilometer, including fuel and driver wages."
+  },
+  "category": "Finance",
+  "icon": "Truck"
+}

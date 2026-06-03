@@ -1,0 +1,14 @@
+{
+  "id": "ev-ice-breakeven",
+  "slug": "ev-ice-breakeven",
+  "name": {
+    "TH": "คำนวณจุดคุ้มทุนรถ EV",
+    "EN": "EV vs ICE Break-even"
+  },
+  "desc": {
+    "TH": "เปรียบเทียบว่าต้องใช้รถ EV กี่ปี ถึงจะคุ้มส่วนต่างราคาเมื่อเทียบกับรถน้ำมัน",
+    "EN": "Calculate how many years it takes for an EV's fuel savings to offset its higher purchase price."
+  },
+  "category": "Finance",
+  "icon": "Scale"
+}

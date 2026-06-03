@@ -1,0 +1,14 @@
+{
+  "id": "car-insurance",
+  "slug": "car-insurance",
+  "name": {
+    "TH": "คำนวณค่าประกันรถยนต์",
+    "EN": "Car Insurance Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินค่าประกันภัยรถยนต์รายปี รวมพ.ร.บ. และตัวเลือกเสริมต่างๆ",
+    "EN": "Estimate annual car insurance premiums including compulsory insurance and add-ons."
+  },
+  "category": "Finance",
+  "icon": "Shield"
+}

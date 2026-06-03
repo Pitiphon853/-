@@ -1,0 +1,14 @@
+{
+  "id": "facebook-ads-roi-cpa",
+  "slug": "facebook-ads-roi-cpa",
+  "name": {
+    "TH": "เครื่องมือคำนวณ ROI โฆษณา Facebook Ads",
+    "EN": "Facebook Ads ROI & CPA Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณผลตอบแทนการลงทุน (ROI), ROAS, CPA, และจุดคุ้มทุนสำหรับแคมเปญ Facebook Ads",
+    "EN": "Calculate Return on Investment (ROI), ROAS, CPA, and break-even point for Facebook Ads campaigns."
+  },
+  "category": "Technology",
+  "icon": "Calculator"
+}

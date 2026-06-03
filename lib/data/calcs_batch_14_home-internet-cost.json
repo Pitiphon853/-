@@ -1,0 +1,14 @@
+{
+  "id": "home-internet-cost",
+  "slug": "home-internet-cost",
+  "name": {
+    "TH": "เปรียบเทียบค่าอินเทอร์เน็ตบ้าน",
+    "EN": "Home Internet Cost Comparison"
+  },
+  "desc": {
+    "TH": "เปรียบเทียบค่าใช้จ่ายอินเทอร์เน็ตบ้าน 2 แพ็กเกจ เพื่อหาตัวเลือกที่คุ้มค่าที่สุดตลอดอายุสัญญา",
+    "EN": "Compare 2 home internet plans to find the most cost-effective option over the contract period."
+  },
+  "category": "Family",
+  "icon": "Wifi"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ltv-to-cac-ratio",
+  "slug": "ltv-to-cac-ratio",
+  "name": {
+    "TH": "เครื่องมือคำนวณ LTV:CAC Ratio",
+    "EN": "LTV to CAC Ratio Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณมูลค่าตลอดอายุการใช้งานของลูกค้า (LTV) เทียบกับต้นทุนในการหาลูกค้าใหม่ (CAC) เพื่อวัดสุขภาพของธุรกิจระยะยาว",
+    "EN": "Calculate Customer Lifetime Value (LTV) to Customer Acquisition Cost (CAC) ratio to measure long-term business health."
+  },
+  "category": "Technology",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "product-water-footprint",
+  "slug": "product-water-footprint",
+  "name": {
+    "TH": "คำนวณ Water Footprint สินค้า",
+    "EN": "Product Water Footprint"
+  },
+  "desc": {
+    "TH": "เปรียบเทียบปริมาณน้ำที่ใช้ในการผลิตสินค้าอุปโภคบริโภคต่างๆ เพื่อสร้างความตระหนักรู้",
+    "EN": "Compare the hidden water used to produce various consumer goods to raise awareness."
+  },
+  "category": "Environment",
+  "icon": "Droplets"
+}

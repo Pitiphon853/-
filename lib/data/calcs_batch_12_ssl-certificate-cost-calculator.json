@@ -1,0 +1,14 @@
+{
+  "id": "ssl-certificate-cost-calculator",
+  "slug": "ssl-certificate-cost-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณค่าใช้จ่าย SSL Certificate",
+    "EN": "SSL Certificate Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินค่าใช้จ่ายในการจดทะเบียนและต่ออายุ SSL Certificate ประเภทต่างๆ (DV, OV, EV)",
+    "EN": "Estimate the cost of purchasing and renewing different types of SSL Certificates."
+  },
+  "category": "Technology",
+  "icon": "ShieldCheck"
+}

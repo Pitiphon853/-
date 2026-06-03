@@ -1,0 +1,14 @@
+{
+  "id": "white-shrimp-farm-calculator",
+  "slug": "white-shrimp-farm-calculator",
+  "name": {
+    "TH": "คำนวณต้นทุน/กำไรฟาร์มกุ้งขาว",
+    "EN": "White Shrimp Farm Profit Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณต้นทุน รายได้ และกำไรจากการเลี้ยงกุ้งขาวแวนนาไม (ต่อบ่อ/ต่อรอบ)",
+    "EN": "Calculate costs, revenue, and net profit for white shrimp farming per pond/crop."
+  },
+  "category": "Agriculture",
+  "icon": "Fish"
+}

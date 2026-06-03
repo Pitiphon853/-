@@ -1,0 +1,14 @@
+{
+  "id": "pwa-vs-native-app-cost-calculator",
+  "slug": "pwa-vs-native-app-cost-calculator",
+  "name": {
+    "TH": "เครื่องมือเปรียบเทียบค่าใช้จ่าย PWA vs Native App",
+    "EN": "PWA vs Native App Cost Calculator"
+  },
+  "desc": {
+    "TH": "เปรียบเทียบต้นทุนการพัฒนาและดูแลรักษาระหว่าง Progressive Web App และ Native App (iOS/Android)",
+    "EN": "Compare development and maintenance costs between Progressive Web Apps (PWA) and Native Apps."
+  },
+  "category": "Technology",
+  "icon": "Smartphone"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "motorcycle-loan",
+  "slug": "motorcycle-loan",
+  "name": {
+    "TH": "คำนวณค่าผ่อนรถมอเตอร์ไซค์",
+    "EN": "Motorcycle Loan Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่างวดรถมอเตอร์ไซค์ ดอกเบี้ยคงที่ต่อเดือน/ต่อปี พร้อมตารางการผ่อนชำระ",
+    "EN": "Calculate motorcycle loan monthly payments with flat interest rates (monthly/yearly)."
+  },
+  "category": "Finance",
+  "icon": "Bike"
+}

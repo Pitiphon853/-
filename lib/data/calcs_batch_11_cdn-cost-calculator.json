@@ -1,0 +1,14 @@
+{
+  "id": "cdn-cost-calculator",
+  "slug": "cdn-cost-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณ CDN Cost",
+    "EN": "CDN Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินค่าใช้จ่าย Content Delivery Network (CDN) รายเดือนตามปริมาณแบนด์วิดท์และ Requests",
+    "EN": "Estimate monthly Content Delivery Network (CDN) costs based on bandwidth and requests."
+  },
+  "category": "Technology",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "tractor-rent-vs-buy",
+  "slug": "tractor-rent-vs-buy",
+  "name": {
+    "TH": "ต้นทุนรถไถเช่า vs ซื้อ",
+    "EN": "Tractor Rent vs Buy"
+  },
+  "desc": {
+    "TH": "เปรียบเทียบต้นทุนและหาจุดคุ้มทุน เลือกระหว่างการซื้อรถไถเองหรือจ้างเหมา",
+    "EN": "Compare costs and find the break-even point between buying a tractor and renting one."
+  },
+  "category": "Agriculture",
+  "icon": "Tractor"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "e-waste-water-footprint",
+  "slug": "e-waste-water-footprint",
+  "name": {
+    "TH": "คำนวณปริมาณน้ำในขยะอิเล็กทรอนิกส์",
+    "EN": "E-waste Water Footprint Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินปริมาณน้ำซ่อนเร้น (Water Footprint) ที่ถูกใช้ในกระบวนการผลิตอุปกรณ์อิเล็กทรอนิกส์ต่างๆ",
+    "EN": "Estimate the hidden water (Water Footprint) used in manufacturing various electronic devices."
+  },
+  "category": "Environment",
+  "icon": "Droplet"
+}

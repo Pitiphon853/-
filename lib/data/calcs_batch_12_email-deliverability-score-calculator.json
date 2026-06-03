@@ -1,0 +1,14 @@
+{
+  "id": "email-deliverability-score-calculator",
+  "slug": "email-deliverability-score-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณ Email Deliverability Score",
+    "EN": "Email Deliverability Score Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินคุณภาพและโอกาสที่อีเมลของคุณจะถูกส่งเข้า Inbox จากค่า Bounce Rate และการตั้งค่า DMARC",
+    "EN": "Assess your email inbox placement score based on bounce rates, spam complaints, and authentication (DMARC/SPF/DKIM)."
+  },
+  "category": "Technology",
+  "icon": "MailCheck"
+}

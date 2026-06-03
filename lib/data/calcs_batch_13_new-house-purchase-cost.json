@@ -1,0 +1,8 @@
+{
+  "id": "new-house-purchase-cost",
+  "slug": "new-house-purchase-cost",
+  "name": { "TH": "ค่าใช้จ่ายซื้อบ้านมือหนึ่ง", "EN": "New House Purchase Cost" },
+  "desc": { "TH": "คำนวณค่าใช้จ่ายทั้งหมดในการซื้อบ้านมือหนึ่ง เช่น ค่าจดจำนอง ค่าโอน ค่ามิเตอร์", "EN": "Calculate total costs of buying a new house including mortgage fee, transfer fee, and utility deposits." },
+  "category": "Family",
+  "icon": "Home"
+}

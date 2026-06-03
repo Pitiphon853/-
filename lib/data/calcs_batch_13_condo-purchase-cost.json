@@ -1,0 +1,8 @@
+{
+  "id": "condo-purchase-cost",
+  "slug": "condo-purchase-cost",
+  "name": { "TH": "ค่าใช้จ่ายซื้อคอนโด", "EN": "Condo Purchase Cost" },
+  "desc": { "TH": "คำนวณค่าใช้จ่ายวันโอนคอนโด ค่ากองทุนส่วนกลาง ค่าจดจำนอง และอื่นๆ", "EN": "Calculate condo transfer day costs, sinking fund, mortgage fee, etc." },
+  "category": "Family",
+  "icon": "Building"
+}

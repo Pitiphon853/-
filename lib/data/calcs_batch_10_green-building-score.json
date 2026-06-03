@@ -1,0 +1,14 @@
+{
+  "id": "green-building-score",
+  "slug": "green-building-score",
+  "name": {
+    "TH": "คำนวณคะแนนอาคารสีเขียว (Green Building Score)",
+    "EN": "Green Building Score Calculator"
+  },
+  "desc": {
+    "TH": "จำลองการประเมินคะแนนอาคารสีเขียวเบื้องต้น (อ้างอิงตามเกณฑ์ LEED) เพื่อดูระดับการรับรองของอาคารคุณ",
+    "EN": "Simulate a basic Green Building score (based on LEED criteria) to see your potential certification level."
+  },
+  "category": "Environment",
+  "icon": "Building2"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "condo-maintenance-fee-total",
+  "slug": "condo-maintenance-fee-total",
+  "name": { "TH": "ค่าส่วนกลางคอนโด", "EN": "Condo Maintenance Fee Total" },
+  "desc": { "TH": "คำนวณค่าส่วนกลางคอนโดรายปี พร้อมค่าที่จอดรถและค่าใช้จ่ายอื่นๆ", "EN": "Calculate total yearly condo maintenance fee including parking and other fees." },
+  "category": "Family",
+  "icon": "Building"
+}

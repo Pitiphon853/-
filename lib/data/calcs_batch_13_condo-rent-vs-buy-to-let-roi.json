@@ -1,0 +1,8 @@
+{
+  "id": "condo-rent-vs-buy-to-let-roi",
+  "slug": "condo-rent-vs-buy-to-let-roi",
+  "name": { "TH": "เทียบกำไรถ้าซื้อปล่อยเช่า (ROI)", "EN": "Condo Buy to Let ROI" },
+  "desc": { "TH": "ประเมินความคุ้มค่าและคำนวณผลตอบแทน (ROI) จากการซื้อคอนโดเพื่อปล่อยเช่า", "EN": "Evaluate profitability and calculate ROI for buying a condo to rent out." },
+  "category": "Family",
+  "icon": "TrendingUp"
+}

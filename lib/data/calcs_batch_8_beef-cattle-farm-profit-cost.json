@@ -1,0 +1,14 @@
+{
+  "id": "beef-cattle-farm-profit-cost",
+  "slug": "beef-cattle-farm-profit-cost",
+  "name": {
+    "TH": "ต้นทุน/กำไรฟาร์มโคเนื้อ",
+    "EN": "Beef Cattle Farm Profit/Cost"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณต้นทุนค่าอาหารและประเมินกำไรสำหรับการเลี้ยงโคเนื้อ/โคขุน",
+    "EN": "Calculate costs and profit margin for beef cattle and fattening farms."
+  },
+  "category": "Agriculture",
+  "icon": "Activity"
+}

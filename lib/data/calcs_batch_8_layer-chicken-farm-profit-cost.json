@@ -1,0 +1,14 @@
+{
+  "id": "layer-chicken-farm-profit-cost",
+  "slug": "layer-chicken-farm-profit-cost",
+  "name": {
+    "TH": "ต้นทุน/กำไรฟาร์มไก่ไข่",
+    "EN": "Layer Chicken Farm Profit/Cost"
+  },
+  "desc": {
+    "TH": "คำนวณต้นทุน รายได้ และกำไรสำหรับการทำฟาร์มไก่ไข่เบื้องต้น",
+    "EN": "Calculate costs, revenues, and profit for layer chicken farming."
+  },
+  "category": "Agriculture",
+  "icon": "Egg"
+}

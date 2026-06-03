@@ -1,0 +1,14 @@
+{
+  "id": "personal-ecological-footprint",
+  "slug": "personal-ecological-footprint",
+  "name": {
+    "TH": "คำนวณ Ecological Footprint ส่วนตัว",
+    "EN": "Personal Ecological Footprint Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินรอยเท้านิเวศของคุณ เพื่อดูว่าไลฟ์สไตล์ปัจจุบันใช้ทรัพยากรธรรมชาติไปมากน้อยเพียงใด",
+    "EN": "Estimate your ecological footprint to see how much of the Earth's resources your lifestyle consumes."
+  },
+  "category": "Environment",
+  "icon": "Globe"
+}

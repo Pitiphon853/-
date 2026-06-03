@@ -1,0 +1,14 @@
+{
+  "id": "cassava-farming-calculator",
+  "slug": "cassava-farming-calculator",
+  "name": {
+    "TH": "คำนวณต้นทุน/กำไรปลูกมันสำปะหลัง",
+    "EN": "Cassava Farming Profit Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณต้นทุน รายรับ และกำไรสุทธิจากการปลูกมันสำปะหลังต่อไร่",
+    "EN": "Calculate costs, revenue, and net profit for cassava farming per rai."
+  },
+  "category": "Agriculture",
+  "icon": "Sprout"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ev-charging-cost",
+  "slug": "ev-charging-cost",
+  "name": {
+    "TH": "คำนวณต้นทุนการชาร์จรถ EV",
+    "EN": "EV Charging Cost per 100km Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่าไฟฟ้าในการชาร์จรถยนต์ไฟฟ้า (EV) และประเมินค่าใช้จ่ายในการเดินทางต่อ 100 กิโลเมตร",
+    "EN": "Calculate the electricity cost of charging an EV and estimate the travel cost per 100 kilometers."
+  },
+  "category": "Environment",
+  "icon": "Car"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "mill-storage-electricity",
+  "slug": "mill-storage-electricity",
+  "name": {
+    "TH": "คำนวณการใช้ไฟฟ้าโรงสี/โรงเก็บ",
+    "EN": "Mill/Storage Electricity Cost"
+  },
+  "desc": {
+    "TH": "คำนวณค่าไฟฟ้าของมอเตอร์ เครื่องจักร และระบบระบายอากาศในโรงสีหรือไซโล",
+    "EN": "Calculate electricity costs for motors, machinery, and ventilation in mills or silos."
+  },
+  "category": "Agriculture",
+  "icon": "Zap"
+}

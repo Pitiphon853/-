@@ -1,0 +1,8 @@
+{
+  "id": "moving-house-cost",
+  "slug": "moving-house-cost",
+  "name": { "TH": "ค่าใช้จ่ายย้ายบ้าน", "EN": "Moving House Cost" },
+  "desc": { "TH": "ประเมินงบประมาณค่าย้ายบ้าน ค่ารถบรรทุก ค่าเด็กยกของ และค่ากล่อง", "EN": "Estimate budget for moving house, truck, movers, and packing materials." },
+  "category": "Family",
+  "icon": "Truck"
+}

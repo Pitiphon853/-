@@ -1,0 +1,14 @@
+{
+  "id": "ev-charger-installation-cost",
+  "slug": "ev-charger-installation-cost",
+  "name": {
+    "TH": "คำนวณค่าใช้จ่ายติดตั้งสถานีชาร์จ EV",
+    "EN": "EV Charger Installation Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินค่าใช้จ่ายในการติดตั้งเครื่องชาร์จรถยนต์ไฟฟ้า (EV Charger) ที่บ้าน รวมถึงการขอเปลี่ยนมิเตอร์",
+    "EN": "Estimate the total cost of installing a home EV charger, including meter upgrades and labor."
+  },
+  "category": "Environment",
+  "icon": "PlugZap"
+}

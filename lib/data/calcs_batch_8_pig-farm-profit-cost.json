@@ -1,0 +1,14 @@
+{
+  "id": "pig-farm-profit-cost",
+  "slug": "pig-farm-profit-cost",
+  "name": {
+    "TH": "ต้นทุน/กำไรฟาร์มหมู",
+    "EN": "Pig Farm Profit/Cost"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณต้นทุน กำไร และประเมินจุดคุ้มทุนสำหรับการเลี้ยงหมูขุน",
+    "EN": "Calculate and estimate profit, costs, and ROI for a commercial pig farm."
+  },
+  "category": "Agriculture",
+  "icon": "Activity"
+}

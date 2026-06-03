@@ -1,0 +1,14 @@
+{
+  "id": "corn-farming-calculator",
+  "slug": "corn-farming-calculator",
+  "name": {
+    "TH": "คำนวณต้นทุนและกำไรปลูกข้าวโพด",
+    "EN": "Corn Farming Profit Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณต้นทุน รายได้ และกำไรสุทธิจากการปลูกข้าวโพด ประเมินความคุ้มค่าในการลงทุน",
+    "EN": "Calculate costs, revenue, and net profit for corn farming."
+  },
+  "category": "Agriculture",
+  "icon": "Tractor"
+}

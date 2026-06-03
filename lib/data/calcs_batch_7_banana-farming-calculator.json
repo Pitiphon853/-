@@ -1,0 +1,14 @@
+{
+  "id": "banana-farming-calculator",
+  "slug": "banana-farming-calculator",
+  "name": {
+    "TH": "คำนวณต้นทุน/กำไรปลูกกล้วย",
+    "EN": "Banana Farming Profit Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณต้นทุน รายรับ และกำไรสุทธิจากการปลูกกล้วย (กล้วยน้ำว้า/กล้วยหอม)",
+    "EN": "Calculate costs, revenue, and net profit for banana farming."
+  },
+  "category": "Agriculture",
+  "icon": "Sprout"
+}

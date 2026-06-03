@@ -1,0 +1,14 @@
+{
+  "id": "saas-stack-total-cost-calculator",
+  "slug": "saas-stack-total-cost-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณค่าใช้จ่าย SaaS Stack",
+    "EN": "SaaS Stack Total Cost Calculator"
+  },
+  "desc": {
+    "TH": "จัดการและประเมินค่าใช้จ่ายรวมของซอฟต์แวร์ SaaS (Software as a Service) ที่องค์กรใช้งาน",
+    "EN": "Manage and calculate the total cost of all your SaaS subscriptions to optimize software spend."
+  },
+  "category": "Technology",
+  "icon": "Layers"
+}

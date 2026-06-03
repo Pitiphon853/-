@@ -1,0 +1,14 @@
+{
+  "id": "sme-cybersecurity-cost-calculator",
+  "slug": "sme-cybersecurity-cost-calculator",
+  "name": {
+    "TH": "เครื่องมือประเมินค่าใช้จ่าย Cybersecurity สำหรับ SME",
+    "EN": "SME Cybersecurity Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินต้นทุนพื้นฐานในการรักษาความปลอดภัยไซเบอร์รายปี สำหรับองค์กรธุรกิจและ SME",
+    "EN": "Estimate the baseline annual cybersecurity costs for small and medium-sized businesses."
+  },
+  "category": "Technology",
+  "icon": "ShieldAlert"
+}

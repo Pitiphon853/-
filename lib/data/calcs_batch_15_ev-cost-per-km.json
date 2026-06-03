@@ -1,0 +1,14 @@
+{
+  "id": "ev-cost-per-km",
+  "slug": "ev-cost-per-km",
+  "name": {
+    "TH": "ค่าใช้จ่ายรถ EV ต่อกม.",
+    "EN": "EV Cost per KM Calculator"
+  },
+  "desc": {
+    "TH": "เปรียบเทียบค่าใช้จ่ายพลังงานต่อกิโลเมตร ระหว่างรถยนต์ไฟฟ้า (EV) และรถน้ำมันสันดาป (ICE)",
+    "EN": "Compare energy cost per kilometer between Electric Vehicles (EV) and Internal Combustion Engine (ICE) cars."
+  },
+  "category": "Finance",
+  "icon": "Zap"
+}

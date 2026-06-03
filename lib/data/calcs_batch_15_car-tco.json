@@ -1,0 +1,14 @@
+{
+  "id": "car-tco",
+  "slug": "car-tco",
+  "name": {
+    "TH": "เครื่องคำนวณต้นทุนความเป็นเจ้าของรถ TCO",
+    "EN": "Car Total Cost of Ownership (TCO) Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณต้นทุนทั้งหมดในการเป็นเจ้าของรถยนต์ ทั้งค่าผ่อน ค่าน้ำมัน ค่าบำรุงรักษา และค่าเสื่อมราคา",
+    "EN": "Calculate the total cost of owning a car including loan, fuel, maintenance, and depreciation."
+  },
+  "category": "Finance",
+  "icon": "CarFront"
+}

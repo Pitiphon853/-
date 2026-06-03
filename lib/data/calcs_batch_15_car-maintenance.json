@@ -1,0 +1,14 @@
+{
+  "id": "car-maintenance",
+  "slug": "car-maintenance",
+  "name": {
+    "TH": "คำนวณค่าบำรุงรักษารถยนต์",
+    "EN": "Car Maintenance Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประมาณการค่าใช้จ่ายในการซ่อมบำรุงรถยนต์รายปี ตามรอบระยะทาง เช่น น้ำมันเครื่อง ยาง แบตเตอรี่",
+    "EN": "Estimate annual maintenance costs including oil, tires, and battery replacements based on mileage."
+  },
+  "category": "Finance",
+  "icon": "Wrench"
+}

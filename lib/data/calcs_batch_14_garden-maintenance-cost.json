@@ -1,0 +1,14 @@
+{
+  "id": "garden-maintenance-cost",
+  "slug": "garden-maintenance-cost",
+  "name": {
+    "TH": "คำนวณค่าดูแลสวน",
+    "EN": "Garden Maintenance Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินค่าใช้จ่ายในการดูแลสวนรายเดือน เช่น ค่าจ้างคนสวน ค่าปุ๋ย ค่าน้ำ เพื่อการจัดสรรงบประมาณที่เหมาะสม",
+    "EN": "Estimate monthly garden maintenance costs including gardener fees, fertilizers, and water usage."
+  },
+  "category": "Family",
+  "icon": "TreeDeciduous"
+}

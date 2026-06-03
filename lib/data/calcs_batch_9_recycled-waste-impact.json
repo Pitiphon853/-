@@ -1,0 +1,14 @@
+{
+  "id": "recycled-waste-impact",
+  "slug": "recycled-waste-impact",
+  "name": {
+    "TH": "ปริมาณขยะรีไซเคิลที่ลดได้ต่อปี",
+    "EN": "Recycled Waste Impact"
+  },
+  "desc": {
+    "TH": "คำนวณการลดการปล่อยก๊าซเรือนกระจกจากการคัดแยกและรีไซเคิลขยะประเภทต่างๆ",
+    "EN": "Calculate greenhouse gas emission reductions from sorting and recycling various types of waste."
+  },
+  "category": "Environment",
+  "icon": "Recycle"
+}

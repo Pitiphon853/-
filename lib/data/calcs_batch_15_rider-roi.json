@@ -1,0 +1,14 @@
+{
+  "id": "rider-roi",
+  "slug": "rider-roi",
+  "name": {
+    "TH": "คำนวณรายได้จุดคุ้มทุนไรเดอร์",
+    "EN": "Rider ROI & Income Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณรายได้สุทธิและระยะเวลาคืนทุน (ROI) สำหรับอาชีพขับรถส่งอาหาร (Grab, Lineman, Foodpanda)",
+    "EN": "Calculate net income and ROI payback period for food delivery riders."
+  },
+  "category": "Finance",
+  "icon": "Bike"
+}

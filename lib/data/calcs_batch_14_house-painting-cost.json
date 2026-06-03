@@ -1,0 +1,14 @@
+{
+  "id": "house-painting-cost",
+  "slug": "house-painting-cost",
+  "name": {
+    "TH": "คำนวณค่าทาสีบ้านใหม่",
+    "EN": "House Painting Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินงบประมาณค่าทาสีบ้าน คำนวณปริมาณสีที่ต้องใช้และค่าแรงช่างตามพื้นที่ตารางเมตร",
+    "EN": "Estimate house painting budget, calculate required paint volume and labor costs based on square meters."
+  },
+  "category": "Construction",
+  "icon": "PaintRoller"
+}

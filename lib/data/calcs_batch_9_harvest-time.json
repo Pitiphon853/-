@@ -1,0 +1,14 @@
+{
+  "id": "harvest-time",
+  "slug": "harvest-time",
+  "name": {
+    "TH": "คำนวณระยะเวลาเก็บเกี่ยว",
+    "EN": "Harvest Time from Planting"
+  },
+  "desc": {
+    "TH": "คำนวณวันเก็บเกี่ยวผลผลิตจากวันปลูกและอายุของพืช เพื่อวางแผนการเก็บเกี่ยว",
+    "EN": "Calculate expected harvest date based on planting date and days to maturity."
+  },
+  "category": "Agriculture",
+  "icon": "Calendar"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "home-security-cost",
+  "slug": "home-security-cost",
+  "name": {
+    "TH": "คำนวณค่าใช้จ่ายรักษาความปลอดภัยบ้าน",
+    "EN": "Home Security Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินค่าใช้จ่ายเบื้องต้นในการติดตั้งระบบรักษาความปลอดภัย เช่น กล้องวงจรปิด สัญญาณกันขโมย และค่าใช้จ่ายรายเดือน",
+    "EN": "Estimate upfront and ongoing costs for home security systems including CCTV, alarms, and monitoring."
+  },
+  "category": "Family",
+  "icon": "Shield"
+}

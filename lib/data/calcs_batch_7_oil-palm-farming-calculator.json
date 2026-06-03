@@ -1,0 +1,14 @@
+{
+  "id": "oil-palm-farming-calculator",
+  "slug": "oil-palm-farming-calculator",
+  "name": {
+    "TH": "คำนวณต้นทุน/กำไรปลูกปาล์มน้ำมัน",
+    "EN": "Oil Palm Farming Profit Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณต้นทุน รายได้ และกำไรสุทธิจากสวนปาล์มน้ำมันต่อปี",
+    "EN": "Calculate annual costs, revenue, and net profit for oil palm farming."
+  },
+  "category": "Agriculture",
+  "icon": "Trees"
+}

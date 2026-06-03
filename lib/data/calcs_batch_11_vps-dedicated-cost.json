@@ -1,0 +1,14 @@
+{
+  "id": "vps-dedicated-cost",
+  "slug": "vps-dedicated-cost",
+  "name": {
+    "TH": "เครื่องมือเปรียบเทียบค่าใช้จ่าย VPS / Dedicated Server",
+    "EN": "VPS vs Dedicated Server Cost Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณและเปรียบเทียบค่าใช้จ่ายรายเดือนและรายปีของการเช่า Server ไม่ว่าจะเป็น VPS หรือ Dedicated พร้อมค่า Management",
+    "EN": "Calculate and compare monthly and yearly costs of renting VPS or Dedicated servers, including management fees."
+  },
+  "category": "Technology",
+  "icon": "Calculator"
+}

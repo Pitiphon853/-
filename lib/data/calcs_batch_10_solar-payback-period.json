@@ -1,0 +1,14 @@
+{
+  "id": "solar-payback-period",
+  "slug": "solar-payback-period",
+  "name": {
+    "TH": "คำนวณระยะเวลาคืนทุนแผงโซลาร์",
+    "EN": "Solar Payback Period Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณระยะเวลาคืนทุนของการติดตั้งแผงโซลาร์เซลล์ ประเมินการผลิตไฟและจุดคุ้มทุนเบื้องต้น",
+    "EN": "Estimate the payback period, annual energy generation, and savings for a solar panel installation."
+  },
+  "category": "Environment",
+  "icon": "Sun"
+}

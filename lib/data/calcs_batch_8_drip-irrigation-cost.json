@@ -1,0 +1,14 @@
+{
+  "id": "drip-irrigation-cost",
+  "slug": "drip-irrigation-cost",
+  "name": {
+    "TH": "ระบบน้ำหยด - ออกแบบและค่าใช้จ่าย",
+    "EN": "Drip Irrigation Cost"
+  },
+  "desc": {
+    "TH": "คำนวณความยาวเทปน้ำหยด จำนวนม้วน และประเมินต้นทุนระบบน้ำหยดต่อไร่",
+    "EN": "Estimate materials and costs for installing a drip irrigation system."
+  },
+  "category": "Agriculture",
+  "icon": "Waves"
+}

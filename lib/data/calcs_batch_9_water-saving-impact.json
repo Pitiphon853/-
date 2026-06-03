@@ -1,0 +1,14 @@
+{
+  "id": "water-saving-impact",
+  "slug": "water-saving-impact",
+  "name": {
+    "TH": "ค่าน้ำที่ประหยัดได้จากการเปลี่ยนพฤติกรรม",
+    "EN": "Water Saving Impact"
+  },
+  "desc": {
+    "TH": "คำนวณปริมาณน้ำและเงินที่ประหยัดได้จากการลดเวลาอาบน้ำหรือปิดน้ำขณะแปรงฟัน",
+    "EN": "Calculate water and money saved by reducing shower time or turning off the tap while brushing."
+  },
+  "category": "Environment",
+  "icon": "Droplets"
+}

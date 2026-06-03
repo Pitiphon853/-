@@ -1,0 +1,14 @@
+{
+  "id": "fresh-to-dry-weight",
+  "slug": "fresh-to-dry-weight",
+  "name": {
+    "TH": "คำนวณน้ำหนักผลผลิตสดเป็นแห้ง",
+    "EN": "Fresh to Dry Weight Converter"
+  },
+  "desc": {
+    "TH": "คำนวณน้ำหนักผลผลิตทางการเกษตรหลังการอบแห้งหรือตากแห้ง โดยอิงจากความชื้น",
+    "EN": "Calculate agricultural product weight after drying based on moisture content."
+  },
+  "category": "Agriculture",
+  "icon": "Scale"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "car-pool-savings-calculator",
+  "slug": "car-pool-savings-calculator",
+  "name": {
+    "TH": "เครื่องคิดเลขค่าใช้จ่าย Car Pool",
+    "EN": "Car Pool Savings Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่าใช้จ่ายและเงินที่ประหยัดได้จากการนั่งรถตู้คาร์พูลหรือเดินทางไปทำงานด้วยกัน",
+    "EN": "Calculate costs and savings from carpooling."
+  },
+  "category": "Travel",
+  "icon": "Users"
+}

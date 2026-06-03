@@ -1,0 +1,14 @@
+{
+  "id": "domain-hosting-cost-calculator",
+  "slug": "domain-hosting-cost-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณค่าใช้จ่าย Domain & Hosting",
+    "EN": "Domain & Hosting Cost Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณต้นทุนการทำเว็บไซต์ต่อปี ทั้งค่าจดโดเมน ค่าบริการเว็บโฮสติ้ง และส่วนเสริมต่างๆ",
+    "EN": "Calculate the annual cost of running a website, including domain registration, hosting, and addons."
+  },
+  "category": "Technology",
+  "icon": "Server"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "led-savings",
+  "slug": "led-savings",
+  "name": {
+    "TH": "คำนวณพลังงานที่ประหยัดได้จากเปลี่ยน LED",
+    "EN": "LED Savings Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่าไฟฟ้าและพลังงานที่คุณสามารถประหยัดได้จากการเปลี่ยนหลอดไฟธรรมดาเป็นหลอดไฟ LED",
+    "EN": "Calculate the electricity cost and energy savings from switching to LED bulbs."
+  },
+  "category": "Environment",
+  "icon": "Lightbulb"
+}

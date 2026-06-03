@@ -1,0 +1,14 @@
+{
+  "id": "travel-carbon-footprint",
+  "slug": "travel-carbon-footprint",
+  "name": {
+    "TH": "คำนวณ Carbon Footprint การเดินทาง",
+    "EN": "Travel Carbon Footprint"
+  },
+  "desc": {
+    "TH": "ประเมินปริมาณการปล่อยก๊าซคาร์บอนไดออกไซด์จากการเดินทางด้วยยานพาหนะประเภทต่างๆ",
+    "EN": "Estimate CO2 emissions from traveling using various modes of transportation."
+  },
+  "category": "Environment",
+  "icon": "Car"
+}

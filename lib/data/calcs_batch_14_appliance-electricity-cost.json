@@ -1,0 +1,14 @@
+{
+  "id": "appliance-electricity-cost",
+  "slug": "appliance-electricity-cost",
+  "name": {
+    "TH": "คำนวณค่าไฟเครื่องใช้ไฟฟ้าแต่ละชนิด",
+    "EN": "Appliance Electricity Cost Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณค่าไฟสำหรับเครื่องใช้ไฟฟ้าแต่ละชนิด ประเมินค่าไฟรายเดือนและรายปี",
+    "EN": "Calculate electricity cost for specific appliances to estimate monthly and yearly expenses."
+  },
+  "category": "Utility",
+  "icon": "Zap"
+}
