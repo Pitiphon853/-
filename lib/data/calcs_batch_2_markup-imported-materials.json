@@ -1,0 +1,8 @@
+{
+  "id": "markup-imported-materials",
+  "slug": "markup-imported-materials-calculator",
+  "name": { "TH": "คำนวณต้นทุนและราคาขายสินค้านำเข้า", "EN": "Imported Material Markup Calculator" },
+  "desc": { "TH": "คำนวณต้นทุนสินค้านำเข้ารวมภาษีและบวกกำไรเพื่อตั้งราคาขาย", "EN": "Calculate total cost of imported goods including duty and add markup for selling price" },
+  "category": "Business",
+  "icon": "Package"
+}

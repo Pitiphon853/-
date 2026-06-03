@@ -1,0 +1,14 @@
+{
+  "id": "return-rate-impact",
+  "slug": "return-rate-impact-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณต้นทุนการคืนสินค้า (Return Rate Impact)",
+    "EN": "Cost of Returns Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณผลกระทบและมูลค่าความเสียหายที่เกิดจากอัตราการคืนสินค้า (Return/COD ตีกลับ) ที่มีต่อกำไรสุทธิของคุณ",
+    "EN": "Calculate the financial impact and hidden costs of your product return rate on overall business profitability."
+  },
+  "category": "Finance",
+  "icon": "RotateCcw"
+}

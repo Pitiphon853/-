@@ -1,0 +1,8 @@
+{
+  "id": "employee-ot-calculation",
+  "slug": "employee-ot-calculator",
+  "name": { "TH": "คำนวณค่าล่วงเวลา (OT)", "EN": "Employee OT Calculator" },
+  "desc": { "TH": "คำนวณค่าล่วงเวลาและค่าทำงานในวันหยุดตามกฎหมายแรงงานไทย", "EN": "Calculate overtime pay based on Thai labor laws" },
+  "category": "Business",
+  "icon": "Clock" 
+}

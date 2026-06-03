@@ -1,0 +1,82 @@
+[
+  {
+    "id": "break-even-time",
+    "slug": "break-even-time-calculator",
+    "name": { "TH": "ระยะเวลาคืนทุน", "EN": "Break-Even Time" },
+    "desc": { "TH": "คำนวณระยะเวลา (เดือน) ที่ธุรกิจจะคืนทุนจากกระแสเงินสด", "EN": "Calculate months to payback initial investment" },
+    "category": "Finance",
+    "icon": "Clock"
+  },
+  {
+    "id": "double-declining-depreciation",
+    "slug": "double-declining-depreciation-calculator",
+    "name": { "TH": "ค่าเสื่อมราคาแบบยอดลดลงทวีคูณ", "EN": "Double Declining Balance Depreciation" },
+    "desc": { "TH": "คำนวณตารางค่าเสื่อมราคาสินทรัพย์แบบเร่งรัด", "EN": "Calculate accelerated depreciation schedule" },
+    "category": "Finance",
+    "icon": "TrendingDown"
+  },
+  {
+    "id": "cash-flow-projection",
+    "slug": "12-month-cash-flow-projection",
+    "name": { "TH": "ประมาณการกระแสเงินสด 12 เดือน", "EN": "12-Month Cash Flow Projection" },
+    "desc": { "TH": "วางแผนและคาดการณ์กระแสเงินสดรับจ่ายรายเดือน", "EN": "Forecast monthly cash inflows and outflows" },
+    "category": "Finance",
+    "icon": "LineChart"
+  },
+  {
+    "id": "working-capital",
+    "slug": "working-capital-calculator",
+    "name": { "TH": "เงินทุนหมุนเวียนสุทธิ", "EN": "Working Capital" },
+    "desc": { "TH": "คำนวณเงินทุนหมุนเวียนและอัตราส่วนสภาพคล่อง", "EN": "Calculate net working capital and current ratio" },
+    "category": "Finance",
+    "icon": "Briefcase"
+  },
+  {
+    "id": "wholesale-vs-retail-margin",
+    "slug": "wholesale-retail-margin-calculator",
+    "name": { "TH": "คำนวณราคาส่งและราคาปลีก", "EN": "Wholesale vs Retail Margin" },
+    "desc": { "TH": "คำนวณโครงสร้างราคาขายและอัตรากำไรสำหรับผู้ผลิตและร้านค้า", "EN": "Calculate wholesale and retail prices based on margin" },
+    "category": "Business",
+    "icon": "Tags"
+  },
+  {
+    "id": "retail-space-rent-roi",
+    "slug": "retail-space-rent-roi-calculator",
+    "name": { "TH": "ความคุ้มค่าค่าเช่าพื้นที่", "EN": "Retail Space Rent ROI" },
+    "desc": { "TH": "ประเมินจุดคุ้มทุนและกำไรจากการเช่าหน้าร้าน", "EN": "Evaluate break-even sales and ROI for renting retail space" },
+    "category": "Business",
+    "icon": "Store"
+  },
+  {
+    "id": "simplified-p-and-l",
+    "slug": "simplified-profit-and-loss-calculator",
+    "name": { "TH": "งบกำไรขาดทุนอย่างง่าย", "EN": "Simplified P&L" },
+    "desc": { "TH": "คำนวณงบกำไรขาดทุนและอัตรากำไรสุทธิ", "EN": "Calculate simplified profit and loss statement" },
+    "category": "Finance",
+    "icon": "FileText"
+  },
+  {
+    "id": "cost-per-unit",
+    "slug": "manufacturing-cost-per-unit-calculator",
+    "name": { "TH": "ต้นทุนต่อหน่วย (ผลิต)", "EN": "Cost per Unit" },
+    "desc": { "TH": "คำนวณต้นทุนรวมต่อการผลิตสินค้า 1 ชิ้น", "EN": "Calculate total manufacturing cost per unit" },
+    "category": "Business",
+    "icon": "Factory"
+  },
+  {
+    "id": "capacity-utilization-rate",
+    "slug": "capacity-utilization-rate-calculator",
+    "name": { "TH": "อัตราการใช้กำลังการผลิต", "EN": "Capacity Utilization Rate" },
+    "desc": { "TH": "คำนวณประสิทธิภาพการใช้ทรัพยากรเทียบกับขีดจำกัดสูงสุด", "EN": "Calculate output relative to potential maximum capacity" },
+    "category": "Business",
+    "icon": "Activity"
+  },
+  {
+    "id": "freelance-vs-fulltime-cost",
+    "slug": "freelance-vs-fulltime-cost-calculator",
+    "name": { "TH": "เปรียบเทียบฟรีแลนซ์และพนักงาน", "EN": "Freelance vs Full-time Cost" },
+    "desc": { "TH": "คำนวณและเปรียบเทียบต้นทุนแฝงในการจ้างงาน", "EN": "Compare true costs of hiring freelance vs full-time" },
+    "category": "Business",
+    "icon": "UserCheck"
+  }
+]

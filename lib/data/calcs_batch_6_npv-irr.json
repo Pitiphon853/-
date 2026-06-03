@@ -1,0 +1,8 @@
+{
+  "id": "npv-irr",
+  "slug": "npv-irr-calculator",
+  "name": { "TH": "คำนวณ NPV และ IRR", "EN": "NPV & IRR Calculator" },
+  "desc": { "TH": "ประเมินมูลค่าปัจจุบันสุทธิ (NPV) และอัตราผลตอบแทนภายใน (IRR) ของโครงการ", "EN": "Calculate Net Present Value and Internal Rate of Return for projects." },
+  "category": "Finance",
+  "icon": "TrendingUp"
+}

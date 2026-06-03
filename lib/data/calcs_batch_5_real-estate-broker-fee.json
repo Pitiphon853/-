@@ -1,0 +1,14 @@
+{
+  "id": "real-estate-broker-fee",
+  "slug": "real-estate-broker-fee-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณค่านายหน้าอสังหาฯ",
+    "EN": "Real Estate Broker Fee Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่านายหน้า (คอมมิชชั่น) อสังหาริมทรัพย์ พร้อมคำนวณภาษีมูลค่าเพิ่ม (VAT) และภาษีหัก ณ ที่จ่าย (WHT)",
+    "EN": "Calculate real estate agent commission fees including VAT and Withholding Tax."
+  },
+  "category": "Business",
+  "icon": "Home"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "acceptable-cpc",
+  "slug": "acceptable-cpc-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณ Acceptable CPC (ต้นทุนต่อคลิกที่ยอมรับได้)",
+    "EN": "Acceptable CPC Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาค่า CPC สูงสุดที่คุณสามารถจ่ายได้โดยไม่ขาดทุน จาก Conversion Rate และกำไรต่อออเดอร์",
+    "EN": "Calculate the maximum CPC you can afford based on your conversion rate and profit per order."
+  },
+  "category": "Business",
+  "icon": "MousePointerClick"
+}

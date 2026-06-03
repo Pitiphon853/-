@@ -1,0 +1,8 @@
+{
+  "id": "fx-forward-rate-risk",
+  "slug": "fx-forward-rate-calculator",
+  "name": { "TH": "คำนวณอัตราแลกเปลี่ยนล่วงหน้า (FX Forward)", "EN": "FX Forward Rate Calculator" },
+  "desc": { "TH": "คำนวณและประเมินความเสี่ยงอัตราแลกเปลี่ยนด้วยสัญญา Forward", "EN": "Calculate and assess foreign exchange risk with Forward contracts" },
+  "category": "Finance",
+  "icon": "LineChart" 
+}

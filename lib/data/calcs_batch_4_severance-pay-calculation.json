@@ -1,0 +1,8 @@
+{
+  "id": "severance-pay-calculation",
+  "slug": "severance-pay-calculator",
+  "name": { "TH": "คำนวณเงินชดเชยเลิกจ้าง", "EN": "Severance Pay Calculator" },
+  "desc": { "TH": "คำนวณเงินชดเชยเมื่อถูกเลิกจ้างตามอายุงานและกฎหมายแรงงานไทย", "EN": "Calculate severance pay based on tenure and Thai labor laws" },
+  "category": "Business",
+  "icon": "Briefcase" 
+}

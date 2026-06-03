@@ -1,0 +1,14 @@
+{
+  "id": "gross-margin-sku",
+  "slug": "gross-margin-sku-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณกำไรขั้นต้นต่อสินค้า (Gross Margin per SKU)",
+    "EN": "Gross Margin per SKU Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณกำไรขั้นต้นและอัตรากำไร (Gross Margin %) ของสินค้าแต่ละรายการ เพื่อวิเคราะห์ความคุ้มค่าก่อนตั้งราคาขาย",
+    "EN": "Calculate the Gross Margin percentage and gross profit per SKU to analyze product profitability before pricing."
+  },
+  "category": "Finance",
+  "icon": "Package"
+}

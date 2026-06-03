@@ -1,0 +1,8 @@
+{
+  "id": "event-cost-per-attendee",
+  "slug": "event-cost-per-attendee",
+  "name": { "TH": "คำนวณต้นทุนงานอีเวนต์ต่อหัว", "EN": "Event Cost per Attendee Calculator" },
+  "desc": { "TH": "ประเมินต้นทุนรวมและต้นทุนต่อหัวในการจัดงานอีเวนต์", "EN": "Estimate total event cost and cost per attendee." },
+  "category": "Business",
+  "icon": "Users"
+}

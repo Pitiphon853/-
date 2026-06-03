@@ -1,0 +1,14 @@
+{
+  "id": "dio",
+  "slug": "days-inventory-outstanding-calculator",
+  "name": {
+    "TH": "คำนวณระยะเวลาขายสินค้าเฉลี่ย (DIO)",
+    "EN": "DIO Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณ Days Inventory Outstanding (DIO) ระยะเวลาที่สินค้าค้างในสต็อกก่อนขายออก",
+    "EN": "Calculate Days Inventory Outstanding to track how long inventory stays in stock."
+  },
+  "category": "Finance",
+  "icon": "Warehouse"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "employer-social-security",
+  "slug": "employer-social-security-calculator",
+  "name": { "TH": "คำนวณเงินสมทบประกันสังคม (นายจ้าง)", "EN": "Employer Social Security Cost Calculator" },
+  "desc": { "TH": "คำนวณภาระต้นทุนเงินสมทบประกันสังคมและกองทุนเงินทดแทนในมุมมองของนายจ้าง", "EN": "Calculate employer contributions to Social Security and Workmen's Compensation Fund" },
+  "category": "Business",
+  "icon": "ShieldPlus" 
+}

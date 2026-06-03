@@ -1,0 +1,8 @@
+{
+  "id": "quick-current-ratio",
+  "slug": "quick-current-ratio-calculator",
+  "name": { "TH": "คำนวณอัตราส่วนสภาพคล่อง", "EN": "Quick & Current Ratio Calculator" },
+  "desc": { "TH": "คำนวณ Current Ratio และ Quick Ratio เพื่อประเมินสภาพคล่องระยะสั้น", "EN": "Calculate Current and Quick Ratios to assess short-term liquidity" },
+  "category": "Finance",
+  "icon": "Activity"
+}

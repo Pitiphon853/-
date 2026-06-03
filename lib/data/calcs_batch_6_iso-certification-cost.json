@@ -1,0 +1,8 @@
+{
+  "id": "iso-certification-cost",
+  "slug": "iso-certification-cost",
+  "name": { "TH": "คำนวณต้นทุนมาตรฐาน ISO", "EN": "ISO Certification Cost" },
+  "desc": { "TH": "ประเมินค่าใช้จ่ายในการขอรับรองและรักษาระบบมาตรฐาน ISO", "EN": "Estimate the cost of obtaining and maintaining ISO certification." },
+  "category": "Business",
+  "icon": "Award"
+}

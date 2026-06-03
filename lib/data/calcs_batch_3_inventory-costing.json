@@ -1,0 +1,14 @@
+{
+  "id": "inventory-costing",
+  "slug": "inventory-costing-fifo-avco",
+  "name": {
+    "TH": "คำนวณต้นทุนสินค้า FIFO vs ถัวเฉลี่ย",
+    "EN": "Inventory Costing (FIFO vs AVCO)"
+  },
+  "desc": {
+    "TH": "เปรียบเทียบการตีราคาต้นทุนสินค้าคงคลังแบบเข้าก่อนออกก่อน (FIFO) กับแบบต้นทุนถัวเฉลี่ย (AVCO)",
+    "EN": "Compare Cost of Goods Sold and Ending Inventory using FIFO and Average Cost (AVCO) methods."
+  },
+  "category": "Finance",
+  "icon": "Layers"
+}

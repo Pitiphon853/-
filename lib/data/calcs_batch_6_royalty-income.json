@@ -1,0 +1,8 @@
+{
+  "id": "royalty-income",
+  "slug": "royalty-income-calculator",
+  "name": { "TH": "คำนวณรายได้ค่าลิขสิทธิ์", "EN": "Royalty Income Calculator" },
+  "desc": { "TH": "คำนวณรายได้จากค่าลิขสิทธิ์และการหักภาษี ณ ที่จ่าย", "EN": "Calculate royalty income and withholding tax deductions." },
+  "category": "Finance",
+  "icon": "Coins"
+}

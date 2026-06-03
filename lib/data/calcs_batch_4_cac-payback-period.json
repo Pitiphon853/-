@@ -1,0 +1,8 @@
+{
+  "id": "cac-payback-period",
+  "slug": "cac-payback-period-calculator",
+  "name": { "TH": "คำนวณระยะเวลาคืนทุนของลูกค้า (CAC Payback)", "EN": "CAC Payback Period Calculator" },
+  "desc": { "TH": "คำนวณระยะเวลาที่ใช้ในการคืนทุนค่าใช้จ่ายในการได้ลูกค้าใหม่ (CAC) สำหรับธุรกิจ Subscription หรือ SaaS", "EN": "Calculate the months required to recover Customer Acquisition Cost for subscription businesses" },
+  "category": "Business",
+  "icon": "Repeat" 
+}

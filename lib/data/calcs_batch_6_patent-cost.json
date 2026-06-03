@@ -1,0 +1,8 @@
+{
+  "id": "patent-cost",
+  "slug": "patent-cost-calculator",
+  "name": { "TH": "คำนวณค่าจดสิทธิบัตรและบำรุงรักษา", "EN": "Patent Cost Calculator" },
+  "desc": { "TH": "คำนวณค่าใช้จ่ายในการยื่นจดสิทธิบัตรและค่าบำรุงรักษารายปี", "EN": "Calculate patent filing fees and annual maintenance costs." },
+  "category": "Business",
+  "icon": "FileBadge"
+}

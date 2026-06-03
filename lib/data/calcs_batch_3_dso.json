@@ -1,0 +1,14 @@
+{
+  "id": "dso",
+  "slug": "days-sales-outstanding-calculator",
+  "name": {
+    "TH": "คำนวณระยะเวลาเก็บหนี้ (DSO)",
+    "EN": "DSO Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณ Days Sales Outstanding (DSO) หรือระยะเวลาเก็บหนี้เฉลี่ย เพื่อวิเคราะห์สภาพคล่องของธุรกิจ",
+    "EN": "Calculate Days Sales Outstanding to analyze your business liquidity and collection efficiency."
+  },
+  "category": "Finance",
+  "icon": "CalendarClock"
+}

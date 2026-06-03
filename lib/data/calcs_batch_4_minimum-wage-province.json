@@ -1,0 +1,8 @@
+{
+  "id": "minimum-wage-province",
+  "slug": "minimum-wage-thailand-calculator",
+  "name": { "TH": "คำนวณและเปรียบเทียบค่าแรงขั้นต่ำรายจังหวัด", "EN": "Minimum Wage by Province Calculator" },
+  "desc": { "TH": "คำนวณฐานเงินเดือนและเปรียบเทียบค่าแรงขั้นต่ำของแต่ละจังหวัดในประเทศไทย", "EN": "Calculate and compare minimum wages across provinces in Thailand" },
+  "category": "Business",
+  "icon": "MapPin" 
+}

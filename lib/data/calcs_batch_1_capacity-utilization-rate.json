@@ -1,0 +1,14 @@
+{
+  "id": "capacity-utilization-rate",
+  "slug": "capacity-utilization-rate-calculator",
+  "name": {
+    "TH": "อัตราการใช้กำลังการผลิต",
+    "EN": "Capacity Utilization Rate"
+  },
+  "desc": {
+    "TH": "คำนวณประสิทธิภาพการใช้ทรัพยากรเทียบกับขีดจำกัดสูงสุด",
+    "EN": "Calculate output relative to potential maximum capacity"
+  },
+  "category": "Business",
+  "icon": "Activity"
+}

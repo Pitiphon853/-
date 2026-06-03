@@ -1,0 +1,8 @@
+{
+  "id": "sensitivity-analysis",
+  "slug": "sensitivity-analysis-calculator",
+  "name": { "TH": "เครื่องมือวิเคราะห์ความอ่อนไหว", "EN": "Sensitivity Analysis Calculator" },
+  "desc": { "TH": "ประเมินผลกระทบของตัวแปรที่เปลี่ยนแปลงต่อผลกำไรของธุรกิจ", "EN": "Analyze how changes in key variables impact business profit." },
+  "category": "Finance",
+  "icon": "Activity"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "factory-electricity",
+  "slug": "factory-electricity-calculator",
+  "name": {
+    "TH": "เครื่องมือเปรียบเทียบค่าไฟ TOU (ธุรกิจ/โรงงาน)",
+    "EN": "Factory Electricity TOU Calculator"
+  },
+  "desc": {
+    "TH": "เปรียบเทียบค่าไฟฟ้าสำหรับธุรกิจและโรงงาน ระหว่างอัตราปกติ (Flat Rate) และอัตราตามช่วงเวลา (TOU) เพื่อวางแผนลดต้นทุน",
+    "EN": "Compare business electricity costs between standard flat rates and Time of Use (TOU) rates to optimize overhead expenses."
+  },
+  "category": "Business",
+  "icon": "Zap"
+}

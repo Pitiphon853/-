@@ -1,0 +1,14 @@
+{
+  "id": "roas",
+  "slug": "roas-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณ ROAS (ผลตอบแทนจากโฆษณา)",
+    "EN": "ROAS Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณ Return on Ad Spend ประเมินว่าค่าแอดที่จ่ายไปสร้างยอดขายกลับมาได้กี่เท่า พร้อมหาจุดคุ้มทุน (Break-even ROAS)",
+    "EN": "Calculate the Return on Ad Spend (ROAS) to evaluate the effectiveness of your advertising campaigns and find break-even point."
+  },
+  "category": "Finance",
+  "icon": "Target"
+}

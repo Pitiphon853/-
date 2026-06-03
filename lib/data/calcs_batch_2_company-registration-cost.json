@@ -1,0 +1,8 @@
+{
+  "id": "company-registration-cost",
+  "slug": "company-registration-cost-calculator",
+  "name": { "TH": "คำนวณค่าธรรมเนียมจดทะเบียนบริษัท", "EN": "Company Registration Cost Calculator" },
+  "desc": { "TH": "คำนวณค่าธรรมเนียมรัฐและอากรแสตมป์เบื้องต้นในการจดทะเบียนตั้งบริษัท", "EN": "Calculate government fees and stamp duty for company registration" },
+  "category": "Business",
+  "icon": "Building2"
+}

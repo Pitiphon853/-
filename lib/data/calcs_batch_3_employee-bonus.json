@@ -1,0 +1,14 @@
+{
+  "id": "employee-bonus",
+  "slug": "employee-bonus-calculator",
+  "name": {
+    "TH": "คำนวณโบนัสพนักงาน (อิงผลงาน)",
+    "EN": "Employee Bonus Calculation"
+  },
+  "desc": {
+    "TH": "คำนวณโบนัสสิ้นปีโดยใช้ระบบตัวคูณตามผลประกอบการบริษัทและผลงานส่วนบุคคล (KPI)",
+    "EN": "Calculate year-end bonus using performance multipliers for company and individual KPIs."
+  },
+  "category": "Business",
+  "icon": "Gift"
+}

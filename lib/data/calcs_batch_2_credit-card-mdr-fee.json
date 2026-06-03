@@ -1,0 +1,8 @@
+{
+  "id": "credit-card-mdr-fee",
+  "slug": "credit-card-mdr-fee-calculator",
+  "name": { "TH": "คำนวณค่าธรรมเนียมรูดบัตร (MDR)", "EN": "Credit Card MDR Fee Calculator" },
+  "desc": { "TH": "คำนวณผลกระทบของค่าธรรมเนียมรูดบัตรเครดิตที่มีต่อกำไรของร้านค้า", "EN": "Calculate the impact of Merchant Discount Rate (MDR) on store profit" },
+  "category": "Finance",
+  "icon": "CreditCard"
+}

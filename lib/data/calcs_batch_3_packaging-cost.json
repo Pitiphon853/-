@@ -1,0 +1,14 @@
+{
+  "id": "packaging-cost",
+  "slug": "packaging-cost-calculator",
+  "name": {
+    "TH": "คำนวณต้นทุนบรรจุภัณฑ์ต่อชิ้น",
+    "EN": "Packaging Cost per Unit"
+  },
+  "desc": {
+    "TH": "คำนวณต้นทุนบรรจุภัณฑ์ทั้งหมดที่ใช้ต่อสินค้า 1 ชิ้น รวมถึงกล่อง ฉลาก และค่าแรงแพ็ค",
+    "EN": "Calculate the total packaging cost used per 1 item including box, labels, and labor."
+  },
+  "category": "Business",
+  "icon": "Package"
+}

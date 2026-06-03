@@ -1,9 +1,10 @@
 import { MetadataRoute } from 'next';
+import { getCalcs } from '../lib/toolsData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://xn--42c4ar0dtc7i.com';
-
-  return [
+  
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}`,
       lastModified: new Date(),
@@ -28,53 +29,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.5,
     },
-    {
-      url: `${baseUrl}/คำนวณ-ภาษี-2569`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/คำนวณ-เงินเดือนสุทธิ-2569`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/คำนวณ-ค่าไฟ-2569`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/คำนวณ-bmi`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/คำนวณ-ผ่อนบ้าน-2569`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/วิธีแปลงไร่เป็นตารางเมตร`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/คำนวณค่างวดรถมือสอง`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/สูตรหาปริมาตรทรงกระบอก`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
   ];
+
+  const tools = getCalcs("TH");
+  const toolPages: MetadataRoute.Sitemap = tools.map(calc => ({
+    url: `${baseUrl}/${encodeURI(calc.slug || calc.id)}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.9,
+  }));
+
+  return [...staticPages, ...toolPages];
 }

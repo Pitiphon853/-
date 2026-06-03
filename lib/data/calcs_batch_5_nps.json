@@ -1,0 +1,14 @@
+{
+  "id": "nps",
+  "slug": "nps-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณ Net Promoter Score (NPS)",
+    "EN": "NPS Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณคะแนนความพึงพอใจและวัดความภักดีของลูกค้าที่มีต่อแบรนด์จากผลสำรวจ (NPS)",
+    "EN": "Calculate your Net Promoter Score (NPS) based on customer survey results to gauge brand loyalty and customer satisfaction."
+  },
+  "category": "Business",
+  "icon": "Smile"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "headcount-to-sales",
+  "slug": "optimal-headcount-sales-calculator",
+  "name": {
+    "TH": "คำนวณจำนวนพนักงานขายที่เหมาะสม",
+    "EN": "Optimal Headcount to Sales"
+  },
+  "desc": {
+    "TH": "คำนวณว่าต้องจ้างพนักงานขายเพิ่มอีกกี่คน เพื่อให้บรรลุเป้าหมายยอดขายใหม่ที่ตั้งไว้",
+    "EN": "Calculate how many sales reps you need to hire to hit your target revenue."
+  },
+  "category": "Business",
+  "icon": "Users"
+}

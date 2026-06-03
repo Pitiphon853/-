@@ -1,0 +1,14 @@
+{
+  "id": "freelance-vs-fulltime-cost",
+  "slug": "freelance-vs-fulltime-cost-calculator",
+  "name": {
+    "TH": "เปรียบเทียบฟรีแลนซ์และพนักงาน",
+    "EN": "Freelance vs Full-time Cost"
+  },
+  "desc": {
+    "TH": "คำนวณและเปรียบเทียบต้นทุนแฝงในการจ้างงาน",
+    "EN": "Compare true costs of hiring freelance vs full-time"
+  },
+  "category": "Business",
+  "icon": "UserCheck"
+}

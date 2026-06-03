@@ -1,0 +1,14 @@
+{
+  "id": "simplified-p-and-l",
+  "slug": "simplified-profit-and-loss-calculator",
+  "name": {
+    "TH": "งบกำไรขาดทุนอย่างง่าย",
+    "EN": "Simplified P&L"
+  },
+  "desc": {
+    "TH": "คำนวณงบกำไรขาดทุนและอัตรากำไรสุทธิ",
+    "EN": "Calculate simplified profit and loss statement"
+  },
+  "category": "Finance",
+  "icon": "FileText"
+}

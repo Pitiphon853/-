@@ -1,0 +1,14 @@
+{
+  "id": "expense-ratio",
+  "slug": "expense-ratio-calculator",
+  "name": {
+    "TH": "คำนวณอัตราส่วนค่าใช้จ่าย (Expense Ratio)",
+    "EN": "Expense Ratio Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณสัดส่วนค่าใช้จ่ายดำเนินงานต่อรายได้รวม (OER) เพื่อวิเคราะห์ประสิทธิภาพการคุมต้นทุน",
+    "EN": "Calculate the Operating Expense Ratio to analyze cost efficiency against total revenue."
+  },
+  "category": "Finance",
+  "icon": "PieChart"
+}

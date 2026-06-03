@@ -1,0 +1,8 @@
+{
+  "id": "de-ratio",
+  "slug": "de-ratio-calculator",
+  "name": { "TH": "คำนวณอัตราส่วนหนี้สินต่อทุน (D/E)", "EN": "Debt-to-Equity Ratio Calculator" },
+  "desc": { "TH": "คำนวณอัตราส่วนหนี้สินต่อทุน (D/E Ratio) เพื่อประเมินความเสี่ยงทางการเงิน", "EN": "Calculate Debt-to-Equity Ratio to assess financial risk" },
+  "category": "Finance",
+  "icon": "Scale"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "break-even-time",
+  "slug": "break-even-time-calculator",
+  "name": {
+    "TH": "ระยะเวลาคืนทุน",
+    "EN": "Break-Even Time"
+  },
+  "desc": {
+    "TH": "คำนวณระยะเวลา (เดือน) ที่ธุรกิจจะคืนทุนจากกระแสเงินสด",
+    "EN": "Calculate months to payback initial investment"
+  },
+  "category": "Finance",
+  "icon": "Clock"
+}

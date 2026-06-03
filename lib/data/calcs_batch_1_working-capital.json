@@ -1,0 +1,14 @@
+{
+  "id": "working-capital",
+  "slug": "working-capital-calculator",
+  "name": {
+    "TH": "เงินทุนหมุนเวียนสุทธิ",
+    "EN": "Working Capital"
+  },
+  "desc": {
+    "TH": "คำนวณเงินทุนหมุนเวียนและอัตราส่วนสภาพคล่อง",
+    "EN": "Calculate net working capital and current ratio"
+  },
+  "category": "Finance",
+  "icon": "Briefcase"
+}

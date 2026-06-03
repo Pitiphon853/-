@@ -1,0 +1,14 @@
+{
+  "id": "double-declining-depreciation",
+  "slug": "double-declining-depreciation-calculator",
+  "name": {
+    "TH": "ค่าเสื่อมราคาแบบยอดลดลงทวีคูณ",
+    "EN": "Double Declining Balance Depreciation"
+  },
+  "desc": {
+    "TH": "คำนวณตารางค่าเสื่อมราคาสินทรัพย์แบบเร่งรัด",
+    "EN": "Calculate accelerated depreciation schedule"
+  },
+  "category": "Finance",
+  "icon": "TrendingDown"
+}

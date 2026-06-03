@@ -1,0 +1,8 @@
+{
+  "id": "ebitda-calculator",
+  "slug": "ebitda-calculator",
+  "name": { "TH": "คำนวณ EBITDA", "EN": "EBITDA Calculator" },
+  "desc": { "TH": "คำนวณกำไรก่อนหักดอกเบี้ย ภาษี ค่าเสื่อมราคา และค่าตัดจำหน่าย เพื่อประเมินผลการดำเนินงาน", "EN": "Calculate Earnings Before Interest, Taxes, Depreciation, and Amortization" },
+  "category": "Finance",
+  "icon": "BarChart3" 
+}

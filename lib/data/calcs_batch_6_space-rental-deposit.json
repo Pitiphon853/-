@@ -1,0 +1,8 @@
+{
+  "id": "space-rental-deposit",
+  "slug": "space-rental-deposit-calculator",
+  "name": { "TH": "คำนวณเงินมัดจำเช่าพื้นที่", "EN": "Space Rental Deposit" },
+  "desc": { "TH": "คำนวณเงินมัดจำ ค่าเช่าล่วงหน้า และค่าใช้จ่ายวันทำสัญญาสำหรับพื้นที่ธุรกิจ", "EN": "Calculate rental deposits, advance payments, and move-in costs." },
+  "category": "Business",
+  "icon": "Key"
+}

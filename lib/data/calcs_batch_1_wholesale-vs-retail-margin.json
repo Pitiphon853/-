@@ -1,0 +1,14 @@
+{
+  "id": "wholesale-vs-retail-margin",
+  "slug": "wholesale-retail-margin-calculator",
+  "name": {
+    "TH": "คำนวณราคาส่งและราคาปลีก",
+    "EN": "Wholesale vs Retail Margin"
+  },
+  "desc": {
+    "TH": "คำนวณโครงสร้างราคาขายและอัตรากำไรสำหรับผู้ผลิตและร้านค้า",
+    "EN": "Calculate wholesale and retail prices based on margin"
+  },
+  "category": "Business",
+  "icon": "Tags"
+}

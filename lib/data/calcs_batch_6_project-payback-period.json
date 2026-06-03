@@ -1,0 +1,8 @@
+{
+  "id": "project-payback-period",
+  "slug": "project-payback-period-calculator",
+  "name": { "TH": "คำนวณระยะเวลาคืนทุน", "EN": "Project Payback Period" },
+  "desc": { "TH": "คำนวณระยะเวลาคืนทุนของโครงการลงทุน (Payback Period)", "EN": "Calculate the payback period for a project investment." },
+  "category": "Finance",
+  "icon": "Clock"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "pos-system-comparison",
+  "slug": "pos-system-comparison",
+  "name": { "TH": "เปรียบเทียบต้นทุนระบบ POS", "EN": "POS System Comparison" },
+  "desc": { "TH": "เปรียบเทียบต้นทุนรายปีของระบบ POS แบบซื้อขาด vs แบบเช่า/หัก GP", "EN": "Compare annual cost of POS systems (Upfront vs Subscription/GP)" },
+  "category": "Business",
+  "icon": "MonitorSmartphone"
+}

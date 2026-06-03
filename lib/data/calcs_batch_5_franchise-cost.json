@@ -1,0 +1,14 @@
+{
+  "id": "franchise-cost",
+  "slug": "franchise-cost-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณงบลงทุนเปิดแฟรนไชส์ (Total Franchise Cost)",
+    "EN": "Franchise Cost Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณเงินลงทุนรวมทั้งหมดในการซื้อและเปิดร้านแฟรนไชส์ (ค่าธรรมเนียม, ค่าก่อสร้าง, อุปกรณ์ และเงินทุนหมุนเวียนสำรอง)",
+    "EN": "Calculate the total initial investment required to open a franchise business including fees, build-out, and working capital."
+  },
+  "category": "Business",
+  "icon": "Store"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "cash-flow-projection",
+  "slug": "12-month-cash-flow-projection",
+  "name": {
+    "TH": "ประมาณการกระแสเงินสด 12 เดือน",
+    "EN": "12-Month Cash Flow Projection"
+  },
+  "desc": {
+    "TH": "วางแผนและคาดการณ์กระแสเงินสดรับจ่ายรายเดือน",
+    "EN": "Forecast monthly cash inflows and outflows"
+  },
+  "category": "Finance",
+  "icon": "LineChart"
+}

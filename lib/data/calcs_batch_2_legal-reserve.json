@@ -1,0 +1,8 @@
+{
+  "id": "legal-reserve",
+  "slug": "legal-reserve-calculator",
+  "name": { "TH": "คำนวณทุนสำรองตามกฎหมาย", "EN": "Legal Reserve Calculator" },
+  "desc": { "TH": "คำนวณเงินสำรองตามกฎหมายที่บริษัทต้องจัดสรรเมื่อมีกำไร", "EN": "Calculate the legal reserve required by law when a company makes a profit" },
+  "category": "Finance",
+  "icon": "PiggyBank"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "carbon-credit-cost",
+  "slug": "carbon-credit-cost-calculator",
+  "name": { "TH": "คำนวณต้นทุนคาร์บอนเครดิต", "EN": "Carbon Credit Cost Calculator" },
+  "desc": { "TH": "คำนวณต้นทุนการซื้อหรือชดเชยคาร์บอนเครดิตสำหรับธุรกิจ", "EN": "Calculate the cost of purchasing or offsetting carbon credits for business." },
+  "category": "Business",
+  "icon": "Leaf"
+}

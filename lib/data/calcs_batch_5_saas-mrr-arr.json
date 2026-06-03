@@ -1,0 +1,14 @@
+{
+  "id": "saas-mrr-arr",
+  "slug": "saas-mrr-arr-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณ MRR และ ARR (SaaS/Subscription)",
+    "EN": "SaaS MRR & ARR Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณรายได้ประจำรายเดือน (MRR) และรายได้ประจำรายปี (ARR) ของธุรกิจรูปแบบสมัครสมาชิก",
+    "EN": "Calculate Monthly Recurring Revenue (MRR) and Annual Recurring Revenue (ARR) for Subscription and SaaS businesses."
+  },
+  "category": "Business",
+  "icon": "Repeat"
+}

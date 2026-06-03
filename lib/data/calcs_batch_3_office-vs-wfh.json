@@ -1,0 +1,14 @@
+{
+  "id": "office-vs-wfh",
+  "slug": "office-vs-wfh-calculator",
+  "name": {
+    "TH": "เปรียบเทียบต้นทุน ออฟฟิศ vs WFH",
+    "EN": "Office vs WFH Cost Saving"
+  },
+  "desc": {
+    "TH": "คำนวณเงินที่องค์กรประหยัดได้จากการให้พนักงาน Work From Home เทียบกับการเช่าออฟฟิศ",
+    "EN": "Calculate the money saved by transitioning from a traditional office to a Work From Home model."
+  },
+  "category": "Business",
+  "icon": "Building"
+}

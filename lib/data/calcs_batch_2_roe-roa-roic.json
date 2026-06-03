@@ -1,0 +1,8 @@
+{
+  "id": "roe-roa-roic",
+  "slug": "roe-roa-roic-calculator",
+  "name": { "TH": "คำนวณ ROE / ROA / ROIC", "EN": "ROE / ROA / ROIC Calculator" },
+  "desc": { "TH": "คำนวณอัตราผลตอบแทนจากสินทรัพย์ ผู้ถือหุ้น และเงินทุน", "EN": "Calculate Return on Equity, Return on Assets, and Return on Invested Capital" },
+  "category": "Finance",
+  "icon": "TrendingUp"
+}

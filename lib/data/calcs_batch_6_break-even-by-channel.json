@@ -1,0 +1,8 @@
+{
+  "id": "break-even-by-channel",
+  "slug": "break-even-by-channel",
+  "name": { "TH": "จุดคุ้มทุนแยกช่องทาง", "EN": "Break-even by Channel" },
+  "desc": { "TH": "เปรียบเทียบจุดคุ้มทุนระหว่างการขายหน้าร้าน (Retail) และออนไลน์ (Online)", "EN": "Compare break-even points between retail and online sales channels." },
+  "category": "Business",
+  "icon": "Store"
+}

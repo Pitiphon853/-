@@ -1,0 +1,8 @@
+{
+  "id": "sales-commission-structure",
+  "slug": "sales-commission-structure",
+  "name": { "TH": "คำนวณค่าคอมมิชชั่นพนักงานขาย", "EN": "Sales Commission Structure Calculator" },
+  "desc": { "TH": "คำนวณค่าคอมมิชชั่นแบบ Flat Rate และแบบขั้นบันได (Tiered)", "EN": "Calculate flat rate and tiered sales commission structure" },
+  "category": "Business",
+  "icon": "Target"
+}

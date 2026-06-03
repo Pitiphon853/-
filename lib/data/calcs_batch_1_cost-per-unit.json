@@ -1,0 +1,14 @@
+{
+  "id": "cost-per-unit",
+  "slug": "manufacturing-cost-per-unit-calculator",
+  "name": {
+    "TH": "ต้นทุนต่อหน่วย (ผลิต)",
+    "EN": "Cost per Unit"
+  },
+  "desc": {
+    "TH": "คำนวณต้นทุนรวมต่อการผลิตสินค้า 1 ชิ้น",
+    "EN": "Calculate total manufacturing cost per unit"
+  },
+  "category": "Business",
+  "icon": "Factory"
+}

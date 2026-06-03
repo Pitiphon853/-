@@ -1,0 +1,14 @@
+{
+  "id": "retail-space-rent-roi",
+  "slug": "retail-space-rent-roi-calculator",
+  "name": {
+    "TH": "ความคุ้มค่าค่าเช่าพื้นที่",
+    "EN": "Retail Space Rent ROI"
+  },
+  "desc": {
+    "TH": "ประเมินจุดคุ้มทุนและกำไรจากการเช่าหน้าร้าน",
+    "EN": "Evaluate break-even sales and ROI for renting retail space"
+  },
+  "category": "Business",
+  "icon": "Store"
+}

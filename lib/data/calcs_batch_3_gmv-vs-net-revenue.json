@@ -1,0 +1,14 @@
+{
+  "id": "gmv-vs-net-revenue",
+  "slug": "gmv-vs-net-revenue-calculator",
+  "name": {
+    "TH": "คำนวณยอดขายแพลตฟอร์ม (GMV vs Net)",
+    "EN": "GMV vs Net Revenue Calculator"
+  },
+  "desc": {
+    "TH": "แปลงตัวเลขยอดขายรวม (GMV) ให้เป็นรายได้สุทธิ (Net Revenue) หลังหักค่าธรรมเนียมและส่วนลด",
+    "EN": "Convert Gross Merchandise Value (GMV) to true Net Revenue by deducting platform fees."
+  },
+  "category": "Business",
+  "icon": "ShoppingCart"
+}

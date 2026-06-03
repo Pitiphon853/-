@@ -1,0 +1,14 @@
+{
+  "id": "landed-cost",
+  "slug": "landed-cost-calculator",
+  "name": {
+    "TH": "คำนวณต้นทุนสินค้านำเข้า",
+    "EN": "Landed Cost Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณต้นทุนสินค้านำเข้ารวมค่าขนส่ง ภาษี และค่าธรรมเนียม เพื่อหาราคาต้นทุนต่อชิ้นที่แท้จริง",
+    "EN": "Calculate the true cost of imported goods including shipping, taxes, and fees."
+  },
+  "category": "Finance",
+  "icon": "Ship"
+}

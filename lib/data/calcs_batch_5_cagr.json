@@ -1,0 +1,14 @@
+{
+  "id": "cagr",
+  "slug": "cagr-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณอัตราการเติบโต (CAGR)",
+    "EN": "CAGR Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณอัตราการเติบโตเฉลี่ยต่อปีแบบทบต้น (Compound Annual Growth Rate) เพื่อประเมินผลตอบแทนหรือธุรกิจระยะยาว",
+    "EN": "Calculate the Compound Annual Growth Rate (CAGR) to measure smooth investment return or business growth over multiple years."
+  },
+  "category": "Finance",
+  "icon": "TrendingUp"
+}

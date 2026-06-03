@@ -1,0 +1,8 @@
+{
+  "id": "corporate-tax",
+  "slug": "corporate-tax-calculator",
+  "name": { "TH": "คำนวณภาษีเงินได้นิติบุคคล", "EN": "Corporate Tax Calculator" },
+  "desc": { "TH": "คำนวณภาษีเงินได้นิติบุคคลสำหรับ SME และบริษัททั่วไป", "EN": "Calculate corporate income tax for SME and general companies" },
+  "category": "Finance",
+  "icon": "Calculator"
+}

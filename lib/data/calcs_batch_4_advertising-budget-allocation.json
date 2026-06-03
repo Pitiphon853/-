@@ -1,0 +1,8 @@
+{
+  "id": "advertising-budget-allocation",
+  "slug": "advertising-budget-allocation",
+  "name": { "TH": "คำนวณสัดส่วนงบโฆษณา (Ad Budget Allocation)", "EN": "Advertising Budget Allocation" },
+  "desc": { "TH": "คำนวณและจัดสรรงบประมาณโฆษณาเพื่อสร้างยอดขายตามเป้าหมาย (ROAS)", "EN": "Calculate and allocate advertising budget to achieve sales target (ROAS)" },
+  "category": "Business",
+  "icon": "Megaphone" 
+}
