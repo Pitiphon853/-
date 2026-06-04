@@ -1,0 +1,14 @@
+{
+  "id": "thai-lunar-phase",
+  "slug": "thai-lunar-phase",
+  "name": {
+    "TH": "ข้างขึ้นข้างแรมไทย",
+    "EN": "Thai Lunar Phase Calculator"
+  },
+  "desc": {
+    "TH": "ตรวจสอบเฟสดวงจันทร์ ข้างขึ้นข้างแรม วันจันทรคติ และความสว่างของดวงจันทร์",
+    "EN": "Check lunar phase, waxing/waning moon, Thai lunar day, and moon illumination"
+  },
+  "category": "Misc",
+  "icon": "Moon"
+}

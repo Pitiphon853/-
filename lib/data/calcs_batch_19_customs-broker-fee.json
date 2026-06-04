@@ -1,0 +1,8 @@
+{
+  "id": "customs-broker-fee",
+  "slug": "customs-broker-fee",
+  "name": { "TH": "ค่าธรรมเนียม Customs Broker", "EN": "Customs Broker Fee Calculator" },
+  "desc": { "TH": "คำนวณค่าธรรมเนียมตัวแทนออกของรวมค่าเอกสาร ค่าตรวจสอบ และค่าขนส่ง", "EN": "Calculate customs broker fees including documentation, inspection, and delivery" },
+  "category": "Business",
+  "icon": "Calculator"
+}

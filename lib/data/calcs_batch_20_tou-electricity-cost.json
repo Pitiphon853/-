@@ -1,0 +1,14 @@
+{
+  "id": "tou-electricity-cost",
+  "slug": "tou-electricity-cost",
+  "name": {
+    "TH": "ค่าไฟฟ้า TOU Peak/Off-Peak",
+    "EN": "TOU Electricity Cost Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่าไฟฟ้าอัตรา TOU แยก Peak/Off-Peak/วันหยุด เปรียบเทียบกับอัตราปกติ",
+    "EN": "Calculate TOU electricity costs by Peak/Off-Peak/holiday periods vs normal rates"
+  },
+  "category": "Utility",
+  "icon": "Zap"
+}

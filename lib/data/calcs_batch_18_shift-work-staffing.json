@@ -1,0 +1,14 @@
+{
+  "id": "shift-work-staffing",
+  "slug": "shift-work-staffing",
+  "name": {
+    "TH": "คำนวณเวรยามจำนวนคนต่อกะ",
+    "EN": "Shift Work Staffing Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณจำนวนพนักงานที่ต้องการสำหรับงานกะ รวมสำรองขาดงาน",
+    "EN": "Calculate staffing requirements for shift work including absence coverage"
+  },
+  "category": "Business",
+  "icon": "Users"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "sound-insulation",
+  "slug": "sound-insulation",
+  "name": { "TH": "คำนวณฉนวนเสียงที่ต้องการ", "EN": "Sound Insulation Calculator" },
+  "desc": { "TH": "คำนวณค่า STC ขั้นต่ำที่ต้องการและแนะนำวัสดุกันเสียงที่เหมาะสม", "EN": "Calculate minimum STC rating needed and recommend suitable soundproofing materials" },
+  "category": "Health",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "cost-of-living-comparison",
+  "slug": "cost-of-living-comparison",
+  "name": {
+    "TH": "เปรียบเทียบค่าครองชีพ กรุงเทพ vs ต่างจังหวัด",
+    "EN": "Cost of Living Comparison"
+  },
+  "desc": {
+    "TH": "เปรียบเทียบค่าใช้จ่ายรายเดือนระหว่างกรุงเทพฯ กับต่างจังหวัด ดูส่วนต่างและเงินออมต่อปี",
+    "EN": "Compare monthly expenses between Bangkok and provincial cities with difference analysis"
+  },
+  "category": "Misc",
+  "icon": "Calculator"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "noise-level-db",
+  "slug": "noise-level-db",
+  "name": { "TH": "คำนวณระดับเสียงสะสม dB", "EN": "Noise Level dB Calculator" },
+  "desc": { "TH": "คำนวณระดับเสียงรวมจากหลายแหล่ง พร้อมประเมิน Noise Dose ตามมาตรฐาน NIOSH", "EN": "Calculate combined noise levels from multiple sources with NIOSH noise dose assessment" },
+  "category": "Health",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "qaly-calculator",
+  "slug": "qaly-calculator",
+  "name": {
+    "TH": "คำนวณ QALY ปีชีวิตปรับคุณภาพ",
+    "EN": "QALY Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณ Quality-Adjusted Life Year เพื่อประเมินคุณภาพชีวิตและความคุ้มค่าของการรักษา",
+    "EN": "Calculate Quality-Adjusted Life Years to assess health interventions cost-effectiveness"
+  },
+  "category": "Health",
+  "icon": "Calculator"
+}

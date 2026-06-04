@@ -1,0 +1,8 @@
+{
+  "id": "import-customs-duty",
+  "slug": "import-customs-duty",
+  "name": { "TH": "คำนวณค่าศุลกากรนำเข้าสินค้า", "EN": "Import Customs Duty Calculator" },
+  "desc": { "TH": "คำนวณอากรศุลกากร VAT ภาษีสรรพสามิต และต้นทุนรวมจากมูลค่า CIF", "EN": "Calculate customs duty, VAT, excise tax, and total cost from CIF value" },
+  "category": "Business",
+  "icon": "Calculator"
+}

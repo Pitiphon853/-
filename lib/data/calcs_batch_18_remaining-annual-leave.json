@@ -1,0 +1,14 @@
+{
+  "id": "remaining-annual-leave",
+  "slug": "remaining-annual-leave",
+  "name": {
+    "TH": "คำนวณวันลาพักร้อนเหลือกี่วัน",
+    "EN": "Remaining Annual Leave Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณวันลาพักร้อนคงเหลือ รวมวันลาสะสม วันที่ใช้แล้ว และวันที่รออนุมัติ",
+    "EN": "Calculate remaining annual leave including carry-over, used days, and pending days"
+  },
+  "category": "Business",
+  "icon": "Calendar"
+}

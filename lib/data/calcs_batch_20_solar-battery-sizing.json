@@ -1,0 +1,14 @@
+{
+  "id": "solar-battery-sizing",
+  "slug": "solar-battery-sizing",
+  "name": {
+    "TH": "ขนาดแบตเตอรี่ Solar kWh",
+    "EN": "Solar Battery Sizing Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณขนาดแบตเตอรี่โซลาร์เซลล์ที่เหมาะสม kWh/Ah พร้อมประมาณราคา",
+    "EN": "Calculate optimal solar battery size in kWh/Ah with cost estimation"
+  },
+  "category": "Utility",
+  "icon": "Battery"
+}
