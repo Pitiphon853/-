@@ -1,0 +1,14 @@
+{
+  "id": "bayes-theorem",
+  "slug": "คำนวณความน่าจะเป็น-bayes",
+  "name": {
+    "TH": "คำนวณความน่าจะเป็น Bayes",
+    "EN": "Bayes' Theorem Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณความน่าจะเป็นแบบมีเงื่อนไขตามทฤษฎีบทของเบย์",
+    "EN": "Calculate conditional probabilities based on Bayes' Theorem."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

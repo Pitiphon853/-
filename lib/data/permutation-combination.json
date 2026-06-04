@@ -1,0 +1,14 @@
+{
+  "id": "permutation-combination",
+  "slug": "คำนวณ-permutation-combination",
+  "name": {
+    "TH": "คำนวณ Permutation & Combination",
+    "EN": "Permutation & Combination Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณจำนวนวิธีการเรียงสับเปลี่ยน (nPr) และการจัดหมู่ (nCr) ของสิ่งของ",
+    "EN": "Calculate the number of permutations (nPr) and combinations (nCr) for a set of items."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

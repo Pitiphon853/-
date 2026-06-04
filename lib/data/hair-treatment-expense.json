@@ -1,0 +1,14 @@
+{
+  "id": "hair-treatment-expense",
+  "slug": "คำนวณค่าทำผมต่อปี",
+  "name": {
+    "TH": "คำนวณค่าทำผมต่อปี",
+    "EN": "Annual Hair Treatment Expense Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่าใช้จ่ายในการทำสี ทำเคมี อบไอน้ำ สปาผม และผลิตภัณฑ์ดูแลผมรายปี",
+    "EN": "Aggregate annual hair salon chemistry, premium spa, and product costs."
+  },
+  "category": "Finance",
+  "icon": "Calculator"
+}

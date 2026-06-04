@@ -1,0 +1,14 @@
+{
+  "id": "wardrobe-budget",
+  "slug": "คำนวณงบประมาณเสื้อผ้าต่อปี",
+  "name": {
+    "TH": "คำนวณงบประมาณเสื้อผ้าต่อปี",
+    "EN": "Annual Wardrobe Budget Calculator"
+  },
+  "desc": {
+    "TH": "จัดสรรงบประมาณเสื้อผ้าและเครื่องประดับให้สอดคล้องกับรายได้ต่อเดือนอย่างคุ้มค่า",
+    "EN": "Plan and allocate clothing budget wisely based on your monthly income."
+  },
+  "category": "Finance",
+  "icon": "Coins"
+}

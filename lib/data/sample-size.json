@@ -1,0 +1,14 @@
+{
+  "id": "sample-size",
+  "slug": "คำนวณขนาดกลุ่มตัวอย่าง",
+  "name": {
+    "TH": "คำนวณขนาดกลุ่มตัวอย่าง",
+    "EN": "Sample Size Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณขนาดกลุ่มตัวอย่างด้วยสูตร Yamane, Taro Yamane หรือ Cochran",
+    "EN": "Calculate the required sample size using Yamane or Cochran formula."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

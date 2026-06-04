@@ -1,0 +1,14 @@
+{
+  "id": "power-converter",
+  "slug": "แปลงหน่วยกำลัง",
+  "name": {
+    "TH": "แปลงหน่วยกำลัง (Watt, Horsepower)",
+    "EN": "Power Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือแปลงหน่วยกำลังไฟฟ้าและกำลังกล เช่น วัตต์ (W) กิโลวัตต์ (kW) และกำลังม้า (hp)",
+    "EN": "Convert between power units such as Watts (W), Kilowatts (kW), and Horsepower (hp)."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

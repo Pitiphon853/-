@@ -1,0 +1,14 @@
+{
+  "id": "antenna-length-frequency",
+  "slug": "คำนวณขนาดเสาอากาศ",
+  "name": {
+    "TH": "คำนวณขนาดเสาอากาศ",
+    "EN": "Antenna Length and Frequency Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณความยาวทางกายภาพของเสาอากาศวิทยุประเภทต่างๆ (เช่น Dipole, Monopole) ตามความถี่ที่ต้องการใช้งาน",
+    "EN": "Calculate the physical length of radio antennas (e.g., Dipole, Monopole) based on target frequency and velocity factor."
+  },
+  "category": "Utility",
+  "icon": "Radio"
+}

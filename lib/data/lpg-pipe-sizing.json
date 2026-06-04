@@ -1,0 +1,14 @@
+{
+  "id": "lpg-pipe-sizing",
+  "slug": "คำนวณขนาดท่อแก๊ส-lpg",
+  "name": {
+    "TH": "คำนวณขนาดท่อแก๊ส LPG",
+    "EN": "LPG Gas Pipe Sizing Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณขนาดท่อแก๊ส LPG ที่เหมาะสมตามปริมาณการใช้แก๊ส (BTU/hr หรือ kg/hr) และความยาวท่อ",
+    "EN": "Calculate the recommended LPG gas pipe size based on flow demand (BTU/hr or kg/hr) and pipe length."
+  },
+  "category": "Construction",
+  "icon": "Flame"
+}

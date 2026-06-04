@@ -1,0 +1,14 @@
+{
+  "id": "density-converter",
+  "slug": "คำนวณความหนาแน่น",
+  "name": {
+    "TH": "คำนวณและแปลงความหนาแน่น (Density Converter)",
+    "EN": "Density Calculator & Converter"
+  },
+  "desc": {
+    "TH": "คำนวณความหนาแน่นจากมวลและปริมาตร หรือแปลงหน่วยความหนาแน่นต่างๆ",
+    "EN": "Calculate density from mass and volume, or convert between different density units."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "commercial-cap-rate",
+  "slug": "คำนวณ-cap-rate-อสังหา",
+  "name": {
+    "TH": "คำนวณ Cap Rate อสังหาฯ เชิงพาณิชย์",
+    "EN": "Commercial Property Cap Rate Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณอัตราผลตอบแทนจากการลงทุนในอสังหาริมทรัพย์เพื่อการพาณิชย์ เช่น อาคารสำนักงาน ร้านค้า หอพัก",
+    "EN": "Calculate the capitalization rate for commercial real estate properties."
+  },
+  "category": "Finance",
+  "icon": "Building"
+}

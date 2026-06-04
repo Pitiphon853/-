@@ -1,0 +1,14 @@
+{
+  "id": "projectile-motion",
+  "slug": "คำนวณ-projectile-motion",
+  "name": {
+    "TH": "คำนวณโปรเจกไทล์ (Projectile Motion)",
+    "EN": "Projectile Motion Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณระยะทางสูงสุด ความสูงสูงสุด และเวลาในการบินของการเคลื่อนที่แบบโปรเจกไทล์",
+    "EN": "Calculate the range, maximum height, and time of flight for a projectile."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

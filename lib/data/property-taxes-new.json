@@ -1,0 +1,14 @@
+{
+  "id": "property-taxes-new",
+  "slug": "คำนวณภาษีที่ดินและธุรกิจเฉพาะ",
+  "name": {
+    "TH": "คำนวณค่าโอนและภาษีอสังหาฯ (กรมที่ดิน)",
+    "EN": "Property Transfer Tax & Fees Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่าโอน ภาษีธุรกิจเฉพาะ อากรแสตมป์ และภาษีหัก ณ ที่จ่าย ที่ต้องจ่าย ณ กรมที่ดิน",
+    "EN": "Calculate transfer fee, specific business tax, stamp duty, and withholding tax at the Land Department."
+  },
+  "category": "Finance",
+  "icon": "Receipt"
+}

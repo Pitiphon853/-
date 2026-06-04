@@ -1,4 +1,4 @@
-import { Heart, Zap, Utensils, Baby, BookOpen, Sparkles, Star, Home, Coins, Plane, Car, Receipt, Calculator, Hash, Briefcase, Clock, Lightbulb } from "lucide-react";
+import { Heart, Zap, Utensils, Baby, BookOpen, Sparkles, Star, Home, Coins, Plane, Car, Receipt, Calculator, Hash, Briefcase, Clock, Lightbulb, Shirt, Flame, Wrench, Droplets, Radio } from "lucide-react";
 import { Lang } from "../components/dictionary";
 
 export const getCalcs = (lang: Lang) => {
@@ -384,7 +384,129 @@ export const getCalcs = (lang: Lang) => {
     { id: "brooks-law-team-size", slug: "brooks-law-team-size", name: lang==="TH"?"Brook's Law ขนาดทีมที่เหมาะสม":"Brook's Law Team Size Calculator", desc: lang==="TH"?"คำนวณขนาดทีมที่เหมาะสมตามกฎ Brook's Law วิเคราะห์ communication overhead และประสิทธิภาพทีม":"Calculate optimal team size based on Brook's Law, analyzing communication overhead and team efficiency", category: "Technology", icon: Calculator },
     { id: "noise-level-db", slug: "noise-level-db", name: lang==="TH"?"คำนวณระดับเสียงสะสม dB":"Noise Level dB Calculator", desc: lang==="TH"?"คำนวณระดับเสียงรวมจากหลายแหล่ง พร้อมประเมิน Noise Dose ตามมาตรฐาน NIOSH":"Calculate combined noise levels from multiple sources with NIOSH noise dose assessment", category: "Health", icon: Calculator },
     { id: "sound-insulation", slug: "sound-insulation", name: lang==="TH"?"คำนวณฉนวนเสียงที่ต้องการ":"Sound Insulation Calculator", desc: lang==="TH"?"คำนวณค่า STC ขั้นต่ำที่ต้องการและแนะนำวัสดุกันเสียงที่เหมาะสม":"Calculate minimum STC rating needed and recommend suitable soundproofing materials", category: "Health", icon: Calculator },
-    { id: "flow-state-frequency", slug: "flow-state-frequency", name: lang==="TH"?"Flow State Frequency เข้าถึง Flow กี่ครั้ง":"Flow State Frequency Calculator", desc: lang==="TH"?"คำนวณความถี่ในการเข้าสู่สถานะ Flow และวัดประสิทธิภาพการทำงานลึก":"Calculate how often you enter flow state and measure deep work effectiveness", category: "Misc", icon: Calculator }
+    { id: "flow-state-frequency", slug: "flow-state-frequency", name: lang==="TH"?"Flow State Frequency เข้าถึง Flow กี่ครั้ง":"Flow State Frequency Calculator", desc: lang==="TH"?"คำนวณความถี่ในการเข้าสู่สถานะ Flow และวัดประสิทธิภาพการทำงานลึก":"Calculate how often you enter flow state and measure deep work effectiveness", category: "Misc", icon: Calculator },
+    { id: "rental-yield-new", slug: "คำนวณ-rental-yield-ห้องชุด", name: lang==="TH"?"คำนวณ Rental Yield คอนโด/ห้องชุด":"Condo Rental Yield Calculator", desc: lang==="TH"?"หาอัตราผลตอบแทนการปล่อยเช่าคอนโดมิเนียม Gross Yield และ Net Yield แบบละเอียด":"Calculate Gross and Net Rental Yield for condo and apartment investments.", category: "Finance", icon: Calculator },
+    { id: "commercial-cap-rate", slug: "คำนวณ-cap-rate-อสังหา", name: lang==="TH"?"คำนวณ Cap Rate อสังหาฯ เชิงพาณิชย์":"Commercial Property Cap Rate Calculator", desc: lang==="TH"?"คำนวณอัตราผลตอบแทนจากการลงทุนในอสังหาริมทรัพย์เพื่อการพาณิชย์ เช่น อาคารสำนักงาน ร้านค้า หอพัก":"Calculate the capitalization rate for commercial real estate properties.", category: "Finance", icon: Calculator },
+    { id: "valuation-income-approach", slug: "คำนวณมูลค่าอสังหา-income-approach", name: lang==="TH"?"คำนวณมูลค่าอสังหาฯ วิธีรายได้ (Income Approach)":"Income Approach Property Valuation Calculator", desc: lang==="TH"?"ประเมินมูลค่าอสังหาริมทรัพย์โดยอิงจากรายได้สุทธิจากการดำเนินงานและอัตราผลตอบแทนคาดหวัง":"Estimate property value based on Net Operating Income (NOI) and Capitalization Rate.", category: "Finance", icon: Calculator },
+    { id: "valuation-cost-approach", slug: "คำนวณมูลค่าอสังหา-cost-approach", name: lang==="TH"?"คำนวณมูลค่าอสังหาฯ วิธีต้นทุน (Cost Approach)":"Cost Approach Property Valuation Calculator", desc: lang==="TH"?"ประเมินมูลค่าบ้านและที่ดินโดยใช้วิธีต้นทุนทดแทนใหม่ หักค่าเสื่อมราคาสิ่งปลูกสร้างสะสม":"Estimate property value by combining land value and depreciated building replacement cost.", category: "Finance", icon: Calculator },
+    { id: "house-flipping-roi", slug: "คำนวณกำไร-flip-บ้าน", name: lang==="TH"?"คำนวณกำไรและ ROI ฟลิปบ้าน/คอนโด":"House Flipping ROI Calculator", desc: lang==="TH"?"คำนวณต้นทุน กำไรสุทธิ และผลตอบแทน (ROI) สำหรับการซื้ออสังหาริมทรัพย์มาปรับปรุงแล้วขายต่อ":"Calculate costs, net profit, and ROI for house flipping projects.", category: "Finance", icon: Calculator },
+    { id: "airbnb-profit-estimator", slug: "คำนวณกำไร-airbnb", name: lang==="TH"?"คำนวณกำไรโฮมสเตย์ Airbnb":"Airbnb Profit Estimator", desc: lang==="TH"?"ประมาณการรายได้ ค่าธรรมเนียมแพลตฟอร์ม ค่าใช้จ่ายดำเนินงาน และกำไรสุทธิจากการปล่อยเช่ารายวัน":"Estimate monthly revenue, platform fees, operational costs, and net profit for short-term rentals.", category: "Finance", icon: Calculator },
+    { id: "property-taxes-new", slug: "คำนวณภาษีที่ดินและธุรกิจเฉพาะ", name: lang==="TH"?"คำนวณค่าโอนและภาษีอสังหาฯ (กรมที่ดิน)":"Property Transfer Tax & Fees Calculator", desc: lang==="TH"?"คำนวณค่าโอน ภาษีธุรกิจเฉพาะ อากรแสตมป์ และภาษีหัก ณ ที่จ่าย ที่ต้องจ่าย ณ กรมที่ดิน":"Calculate transfer fee, specific business tax, stamp duty, and withholding tax at the Land Department.", category: "Finance", icon: Calculator },
+    { id: "land-price-valuation", slug: "คำนวณราคาประเมินที่ดิน", name: lang==="TH"?"คำนวณราคาประเมินที่ดิน (ไร่-งาน-ตร.ว.)":"Land Price Valuation Calculator", desc: lang==="TH"?"แปลงพื้นที่ดินจาก ไร่-งาน-ตารางวา และคำนวณมูลค่าราคาประเมินและราคาตลาดรวม":"Convert land area (Rai-Ngan-Wah) and calculate total appraised and estimated market value.", category: "Finance", icon: Calculator },
+    { id: "land-subdivision-cost", slug: "คำนวณค่ารังวัดแบ่งแยกโฉนด", name: lang==="TH"?"คำนวณค่ารังวัดแบ่งแยกโฉนดที่ดิน":"Land Subdivision & Survey Cost Calculator", desc: lang==="TH"?"ประเมินค่าธรรมเนียมรังวัด ค่าหมุด และค่าใช้จ่ายต่างๆ ในการรังวัดแบ่งแยกโฉนดที่ดิน":"Estimate survey fees, boundary stone costs, and total expenses for land subdivision.", category: "Finance", icon: Calculator },
+    { id: "dscr-calculator", slug: "คำนวณ-dscr", name: lang==="TH"?"คำนวณ DSCR (อัตราส่วนการชำระหนี้)":"DSCR (Debt Service Coverage Ratio) Calculator", desc: lang==="TH"?"วิเคราะห์อัตราส่วนความสามารถในการชำระหนี้ (DSCR) สำหรับการลงทุนและขอสินเชื่ออสังหาฯ":"Calculate the Debt Service Coverage Ratio (DSCR) to evaluate loan viability for properties.", category: "Finance", icon: Calculator },
+    { id: "cost-per-wear", slug: "คำนวณ-cost-per-wear", name: lang==="TH"?"คำนวณ Cost per Wear":"Cost per Wear Calculator", desc: lang==="TH"?"คำนวณความคุ้มค่าของเสื้อผ้าและของใช้แฟชั่นต่อการสวมใส่ 1 ครั้ง":"Calculate the cost-per-wear of clothing and fashion items based on price and usage.", category: "Finance", icon: Shirt },
+    { id: "wardrobe-budget", slug: "คำนวณงบประมาณเสื้อผ้าต่อปี", name: lang==="TH"?"คำนวณงบประมาณเสื้อผ้าต่อปี":"Annual Wardrobe Budget Calculator", desc: lang==="TH"?"จัดสรรงบประมาณเสื้อผ้าและเครื่องประดับให้สอดคล้องกับรายได้ต่อเดือนอย่างคุ้มค่า":"Plan and allocate clothing budget wisely based on your monthly income.", category: "Finance", icon: Coins },
+    { id: "skincare-routine-cost", slug: "คำนวณค่าใช้จ่ายครีมบำรุงผิว", name: lang==="TH"?"คำนวณค่าใช้จ่ายครีมบำรุงผิว":"Skincare Routine Cost Calculator", desc: lang==="TH"?"คำนวณยอดเงินสะสมรายเดือนและรายปีของรูทีนสกินแคร์และเครื่องสำอาง":"Estimate your average monthly and yearly skincare routine costs.", category: "Finance", icon: Sparkles },
+    { id: "haircut-annual-expense", slug: "คำนวณค่าตัดผมต่อปี", name: lang==="TH"?"คำนวณค่าตัดผมต่อปี":"Annual Haircut Expense Calculator", desc: lang==="TH"?"ประมาณการค่าใช้จ่ายในการเข้าร้านตัดผม บาร์เบอร์ หรือซาลอน ตลอดทั้งปี":"Calculate yearly salon/barber expenses and long-term projections.", category: "Finance", icon: Calculator },
+    { id: "nail-care-expense", slug: "คำนวณค่าทำเล็บต่อปี", name: lang==="TH"?"คำนวณค่าทำเล็บต่อปี":"Annual Nail Care Expense Calculator", desc: lang==="TH"?"คำนวณงบประมาณการทำเล็บเจล ต่อเล็บ และบำรุงสุขภาพเล็บรายปี":"Estimate yearly gel manicure, nail extension, and care costs.", category: "Finance", icon: Sparkles },
+    { id: "hair-treatment-expense", slug: "คำนวณค่าทำผมต่อปี", name: lang==="TH"?"คำนวณค่าทำผมต่อปี":"Annual Hair Treatment Expense Calculator", desc: lang==="TH"?"คำนวณค่าใช้จ่ายในการทำสี ทำเคมี อบไอน้ำ สปาผม และผลิตภัณฑ์ดูแลผมรายปี":"Aggregate annual hair salon chemistry, premium spa, and product costs.", category: "Finance", icon: Calculator },
+    { id: "gym-supplement-cost", slug: "คำนวณค่าฟิตเนสและเวย์โปรตีน", name: lang==="TH"?"คำนวณค่าฟิตเนสและเวย์โปรตีน":"Gym & Supplement Cost Calculator", desc: lang==="TH"?"คำนวณค่าสมาชิกยิม เทรนเนอร์ เวย์โปรตีน และค่าอาหารเสริมต่อเดือน/ปี":"Estimate fitness fees, personal training, whey protein, and health supplements.", category: "Health", icon: Zap },
+    { id: "streaming-subscriptions-cost", slug: "คำนวณค่าสมาชิกรายเดือน-streaming", name: lang==="TH"?"คำนวณค่าสมาชิกรายเดือน streaming":"Streaming Subscriptions Calculator", desc: lang==="TH"?"รวบรวมและวิเคราะห์ค่าสมาชิกสตรีมมิ่งความบันเทิงรายเดือนและรายปี":"Audit your monthly streaming services and track potential investment opportunity costs.", category: "Finance", icon: Calculator },
+    { id: "coffee-shop-annual-cost", slug: "คำนวณค่ากาแฟนอกบ้านต่อปี", name: lang==="TH"?"คำนวณค่ากาแฟนอกบ้านต่อปี":"Coffee Shop Annual Cost Calculator", desc: lang==="TH"?"คำนวณและประเมินค่าใช้จ่ายซื้อกาแฟและขนมนอกบ้านสะสมรายปี":"Evaluate your café expenses, home-brewing savings, and future value growth.", category: "Finance", icon: Utensils },
+    { id: "smoking-vaping-cost", slug: "คำนวณค่าบุหรี่ต่อปี", name: lang==="TH"?"คำนวณค่าบุหรี่ต่อปี":"Annual Smoking & Vaping Cost Calculator", desc: lang==="TH"?"คำนวณค่าใช้จ่ายและประมาณการเงินจมสะสมจากการสูบบุหรี่และพอตไฟฟ้า":"Estimate your costs related to traditional smoking or electronic vaping.", category: "Health", icon: Heart },
+    {
+      id: "wire-gauge-sizing",
+      slug: "คำนวณขนาดสายไฟตามกระแส",
+      name: lang === "TH" ? "คำนวณขนาดสายไฟตามกระแส" : "Wire Gauge Sizing Calculator",
+      desc: lang === "TH" ? "หาขนาดสายไฟทองแดงที่ปลอดภัยตามโหลดไฟฟ้าและระยะทาง" : "Calculate copper wire size based on load current and voltage drop.",
+      category: "Construction",
+      icon: Zap
+    },
+    {
+      id: "fuse-breaker-sizing",
+      slug: "คำนวณขนาดฟิวส์และเบรกเกอร์",
+      name: lang === "TH" ? "คำนวณขนาดฟิวส์และเบรกเกอร์" : "Fuse & Breaker Sizing Calculator",
+      desc: lang === "TH" ? "ประเมินขนาดกระแสของฟิวส์และเซอร์กิตเบรกเกอร์ที่เหมาะสมกับโหลดไฟฟ้าและชนิดของเครื่องใช้ไฟฟ้า" : "Calculate recommended fuse or circuit breaker size for electrical loads.",
+      category: "Construction",
+      icon: Zap
+    },
+    {
+      id: "lpg-pipe-sizing",
+      slug: "คำนวณขนาดท่อแก๊ส-lpg",
+      name: lang === "TH" ? "คำนวณขนาดท่อแก๊ส LPG" : "LPG Gas Pipe Sizing Calculator",
+      desc: lang === "TH" ? "คำนวณขนาดท่อแก๊ส LPG ที่เหมาะสมตามปริมาณการใช้แก๊สและระยะทางเดินท่อ" : "Calculate LPG pipe sizing recommendations based on flow load.",
+      category: "Construction",
+      icon: Flame
+    },
+    {
+      id: "diy-vs-shop-car-repair",
+      slug: "เปรียบเทียบซ่อมรถเองvsอู่",
+      name: lang === "TH" ? "เปรียบเทียบซ่อมรถเอง vs อู่" : "DIY vs Shop Car Repair Calculator",
+      desc: lang === "TH" ? "เปรียบเทียบค่าใช้จ่าย เวลา และความคุ้มค่าระหว่างการซ่อมแซมรถยนต์ด้วยตนเองกับการส่งซ่อมอู่" : "Compare costs, labor time, and opportunity costs of DIY vs professional auto repair.",
+      category: "Utility",
+      icon: Wrench
+    },
+    {
+      id: "car-painting-cost",
+      slug: "คำนวณราคาพ่นสีรถยนต์",
+      name: lang === "TH" ? "คำนวณราคาพ่นสีรถยนต์" : "Car Painting Cost Estimator",
+      desc: lang === "TH" ? "ประมาณราคาค่าพ่นสีรถยนต์ตามขนาดของรถ ชนิดของสี และรูปแบบการพ่นสี" : "Estimate vehicle respray budgets by size and paint specifications.",
+      category: "Utility",
+      icon: Car
+    },
+    {
+      id: "home-addition-cost",
+      slug: "คำนวณค่าต่อเติมต่อยอดบ้าน",
+      name: lang === "TH" ? "คำนวณค่าต่อเติมบ้าน" : "Home Addition Cost Estimator",
+      desc: lang === "TH" ? "ประมาณการงบประมาณและค่าใช้จ่ายในการต่อเติมบ้าน ห้องครัว หรือหลังคาที่จอดรถ" : "Estimate structural, foundation, and finishing costs for house extensions.",
+      category: "Construction",
+      icon: Home
+    },
+    {
+      id: "water-filter-sizing",
+      slug: "คำนวณขนาดเครื่องกรองน้ำ",
+      name: lang === "TH" ? "คำนวณขนาดเครื่องกรองน้ำ" : "Water Filter Sizing Calculator",
+      desc: lang === "TH" ? "คำนวณขนาดและประเภทของเครื่องกรองน้ำอุปโภคบริโภคที่เหมาะสมกับจำนวนสมาชิกในครอบครัว" : "Determine domestic water consumption needs and matching filtration specs.",
+      category: "Construction",
+      icon: Droplets
+    },
+    {
+      id: "gas-cylinder-duration",
+      slug: "คำนวณระยะเวลาใช้ถังแก๊ส",
+      name: lang === "TH" ? "คำนวณระยะเวลาใช้ถังแก๊ส" : "LPG Gas Cylinder Duration Calculator",
+      desc: lang === "TH" ? "ประเมินอายุการใช้งานของถังแก๊สหุงต้มตามพฤติกรรมการประกอบอาหารรายวัน" : "Estimate how many days your gas cylinder will last based on cooking habits.",
+      category: "Utility",
+      icon: Clock
+    },
+    {
+      id: "ac-repair-cost",
+      slug: "คำนวณค่าบริการซ่อมแอร์",
+      name: lang === "TH" ? "คำนวณค่าบริการซ่อมแอร์" : "AC Repair & Cleaning Cost Estimator",
+      desc: lang === "TH" ? "ประมาณการค่าใช้จ่ายในการล้างแอร์ เติมน้ำยาแอร์ หรือเปลี่ยนอะไหล่ตามจริง" : "Estimate expected maintenance and parts replacement fees for air conditioners.",
+      category: "Utility",
+      icon: Wrench
+    },
+    {
+      id: "antenna-length-frequency",
+      slug: "คำนวณขนาดเสาอากาศ",
+      name: lang === "TH" ? "คำนวณขนาดเสาอากาศ" : "Antenna Length & Frequency Calculator",
+      desc: lang === "TH" ? "คำนวณความยาวทางกายภาพของเสาอากาศวิทยุประเภทต่างๆ ตามความถี่ที่ต้องการ" : "Calculate physical dimensions of RF antennas based on target frequency.",
+      category: "Utility",
+      icon: Radio
+    }
+  ,
+    { id: "bayes-theorem", slug: "คำนวณความน่าจะเป็น-bayes", name: lang==="TH"?"คำนวณความน่าจะเป็น Bayes":"Bayes' Theorem Calculator", desc: lang==="TH"?"คำนวณความน่าจะเป็นแบบมีเงื่อนไขตามทฤษฎีบทของเบย์":"Calculate conditional probabilities based on Bayes' Theorem.", category: "Science", icon: Calculator },
+    { id: "capacitor-charge", slug: "คำนวณ-capacitor-charge", name: lang==="TH"?"คำนวณประจุและพลังงานคาปาซิเตอร์":"Capacitor Charge & Energy Calculator", desc: lang==="TH"?"คำนวณประจุไฟฟ้า (Q) และพลังงานที่สะสม (E) ในตัวเก็บประจุจากค่าความจุและแรงดัน":"Calculate the charge (Q) and stored energy (E) in a capacitor given capacitance and voltage.", category: "Science", icon: Calculator },
+    { id: "chi-square", slug: "คำนวณ-chi-square", name: lang==="TH"?"คำนวณ Chi-Square Test":"Chi-Square Calculator", desc: lang==="TH"?"คำนวณการทดสอบไคสแควร์ (Chi-Square Test of Independence / Goodness of Fit)":"Calculate the Chi-Square statistics for testing independence or goodness of fit.", category: "Science", icon: Calculator },
+    { id: "confidence-interval", slug: "คำนวณ-confidence-interval", name: lang==="TH"?"คำนวณ Confidence Interval":"Confidence Interval Calculator", desc: lang==="TH"?"คำนวณหาช่วงความเชื่อมั่นของค่าเฉลี่ยประชากร (90%, 95%, 99%)":"Calculate the confidence interval for a population mean (90%, 95%, 99%).", category: "Science", icon: Calculator },
+    { id: "continuous-compounding", slug: "คำนวณดอกเบี้ยทบต้นต่อเนื่อง", name: lang==="TH"?"คำนวณดอกเบี้ยทบต้นต่อเนื่อง":"Continuous Compounding Calculator", desc: lang==="TH"?"คำนวณเงินต้นรวมดอกเบี้ยทบต้นแบบต่อเนื่องตามเวลาและอัตราดอกเบี้ยรายปี":"Calculate continuous compounding interest over time with annual interest rate.", category: "Science", icon: Calculator },
+    { id: "density-converter", slug: "คำนวณความหนาแน่น", name: lang==="TH"?"คำนวณและแปลงความหนาแน่น (Density Converter)":"Density Calculator & Converter", desc: lang==="TH"?"คำนวณความหนาแน่นจากมวลและปริมาตร หรือแปลงหน่วยความหนาแน่นต่างๆ":"Calculate density from mass and volume, or convert between different density units.", category: "Science", icon: Calculator },
+    { id: "energy-converter-new", slug: "แปลงหน่วยพลังงาน-j-kwh", name: lang==="TH"?"แปลงหน่วยพลังงาน (Joule, kWh, Calorie)":"Energy Converter", desc: lang==="TH"?"เครื่องมือแปลงหน่วยพลังงาน เช่น จูล (J) กิโลวัตต์-ชั่วโมง (kWh) และแคลอรี (cal)":"Convert between energy units such as Joules (J), Kilowatt-hours (kWh), and Calories (cal).", category: "Science", icon: Calculator },
+    { id: "equilibrium-constant", slug: "คำนวณสมดุลเคมี", name: lang==="TH"?"คำนวณค่าคงที่สมดุลเคมี (Kc)":"Chemical Equilibrium Constant Calculator", desc: lang==="TH"?"คำนวณค่าคงที่สมดุล (Kc) หรือความเข้มข้นสารที่ภาวะสมดุลสำหรับปฏิกิริยาเคมี":"Calculate the chemical equilibrium constant (Kc) or equilibrium concentrations.", category: "Science", icon: Calculator },
+    { id: "force-converter", slug: "แปลงหน่วยแรง", name: lang==="TH"?"แปลงหน่วยแรง (Force Converter)":"Force Converter", desc: lang==="TH"?"เครื่องมือแปลงหน่วยของแรง เช่น นิวตัน (N) แรงปอนด์ (lbf) และกิโลกรัมแรง (kgf)":"Convert between different force units including Newtons (N), Pound-force (lbf), and Kilogram-force (kgf).", category: "Science", icon: Calculator },
+    { id: "ohms-law", slug: "คำนวณกฎของโอห์ม", name: lang==="TH"?"คำนวณกฎของโอห์ม (Ohm's Law)":"Ohm's Law Calculator", desc: lang==="TH"?"คำนวณความต่างศักย์ (V) กระแสไฟฟ้า (I) ความต้านทาน (R) และกำลังไฟฟ้า (P) ตามกฎของโอห์ม":"Calculate voltage, current, resistance, and power using Ohm's Law.", category: "Science", icon: Calculator },
+    { id: "permutation-combination", slug: "คำนวณ-permutation-combination", name: lang==="TH"?"คำนวณ Permutation & Combination":"Permutation & Combination Calculator", desc: lang==="TH"?"คำนวณจำนวนวิธีการเรียงสับเปลี่ยน (nPr) และการจัดหมู่ (nCr) ของสิ่งของ":"Calculate the number of permutations (nPr) and combinations (nCr) for a set of items.", category: "Science", icon: Calculator },
+    { id: "personal-tax", slug: "คำนวณ-ภาษี-2569", name: lang==="TH"?"คำนวณภาษีเงินได้ 2569":"Personal Income Tax 2026", desc: lang==="TH"?"คำนวณภาษีเงินได้บุคคลธรรมดาพร้อมรายการลดหย่อนทั้งหมด":"Calculate personal income tax with all deductions", category: "Finance", icon: Coins },
+    { id: "ph-buffer", slug: "คำนวณ-ph-buffer", name: lang==="TH"?"คำนวณสารละลายบัฟเฟอร์ (pH Buffer)":"pH Buffer Calculator", desc: lang==="TH"?"คำนวณหาค่า pH ของสารละลายบัฟเฟอร์กรด/เบสด้วยสมการ Henderson-Hasselbalch":"Calculate the pH of an acidic or basic buffer solution using the Henderson-Hasselbalch equation.", category: "Science", icon: Calculator },
+    { id: "power-converter", slug: "แปลงหน่วยกำลัง", name: lang==="TH"?"แปลงหน่วยกำลัง (Watt, Horsepower)":"Power Converter", desc: lang==="TH"?"เครื่องมือแปลงหน่วยกำลังไฟฟ้าและกำลังกล เช่น วัตต์ (W) กิโลวัตต์ (kW) และกำลังม้า (hp)":"Convert between power units such as Watts (W), Kilowatts (kW), and Horsepower (hp).", category: "Science", icon: Calculator },
+    { id: "pressure-converter", slug: "แปลงหน่วยความดัน", name: lang==="TH"?"แปลงหน่วยความดัน (Pressure Converter)":"Pressure Converter", desc: lang==="TH"?"เครื่องมือแปลงหน่วยความดัน เช่น ปาสกาล (Pa) บาร์ (bar) บรรยากาศ (atm) และปอนด์ต่อตารางนิ้ว (psi)":"Convert between pressure units such as Pascal (Pa), Bar, Atmosphere (atm), and Psi.", category: "Science", icon: Calculator },
+    { id: "projectile-motion", slug: "คำนวณ-projectile-motion", name: lang==="TH"?"คำนวณโปรเจกไทล์ (Projectile Motion)":"Projectile Motion Calculator", desc: lang==="TH"?"คำนวณระยะทางสูงสุด ความสูงสูงสุด และเวลาในการบินของการเคลื่อนที่แบบโปรเจกไทล์":"Calculate the range, maximum height, and time of flight for a projectile.", category: "Science", icon: Calculator },
+    { id: "regression-line", slug: "คำนวณ-regression-line", name: lang==="TH"?"คำนวณ Regression Line":"Linear Regression Calculator", desc: lang==="TH"?"คำนวณสมการเส้นถดถอยเชิงเส้นอย่างง่าย (y = mx + c) และหาค่าสหสัมพันธ์ R²":"Calculate the simple linear regression equation (y = mx + c) and R-squared coefficient.", category: "Science", icon: Calculator },
+    { id: "sample-size", slug: "คำนวณขนาดกลุ่มตัวอย่าง", name: lang==="TH"?"คำนวณขนาดกลุ่มตัวอย่าง":"Sample Size Calculator", desc: lang==="TH"?"คำนวณขนาดกลุ่มตัวอย่างด้วยสูตร Yamane, Taro Yamane หรือ Cochran":"Calculate the required sample size using Yamane or Cochran formula.", category: "Science", icon: Calculator },
+    { id: "standard-deviation", slug: "คำนวณ-standard-deviation", name: lang==="TH"?"คำนวณ Standard Deviation":"Standard Deviation Calculator", desc: lang==="TH"?"คำนวณส่วนเบี่ยงเบนมาตรฐาน (SD) ความแปรปรวน (Variance) และค่าเฉลี่ยของข้อมูล":"Calculate the standard deviation (SD), variance, and mean for a dataset.", category: "Science", icon: Calculator },
+    { id: "t-test", slug: "คำนวณ-t-test", name: lang==="TH"?"คำนวณ T-Test":"Student's T-Test Calculator", desc: lang==="TH"?"คำนวณการทดสอบที (t-test) เพื่อเปรียบเทียบค่าเฉลี่ยของสองกลุ่มตัวอย่าง":"Perform Student's t-test (independent or paired) to compare means of two groups.", category: "Science", icon: Calculator },
+    { id: "wave-calculator", slug: "คำนวณความยาวคลื่น", name: lang==="TH"?"คำนวณคลื่น (ความถี่ ความยาวคลื่น ความเร็ว)":"Wave Calculator (Frequency, Wavelength)", desc: lang==="TH"?"คำนวณหาความเร็ว ความถี่ หรือความยาวคลื่น ตามสมการคลื่น (v = fλ)":"Calculate wave speed, frequency, or wavelength using the wave equation (v = fλ).", category: "Science", icon: Calculator }
   ];
 };
 

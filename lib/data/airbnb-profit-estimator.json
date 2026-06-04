@@ -1,0 +1,14 @@
+{
+  "id": "airbnb-profit-estimator",
+  "slug": "คำนวณกำไร-airbnb",
+  "name": {
+    "TH": "คำนวณกำไรโฮมสเตย์ Airbnb",
+    "EN": "Airbnb Profit Estimator"
+  },
+  "desc": {
+    "TH": "ประมาณการรายได้ ค่าธรรมเนียมแพลตฟอร์ม ค่าใช้จ่ายดำเนินงาน และกำไรสุทธิจากการปล่อยเช่ารายวัน",
+    "EN": "Estimate monthly revenue, platform fees, operational costs, and net profit for short-term rentals."
+  },
+  "category": "Finance",
+  "icon": "Key"
+}

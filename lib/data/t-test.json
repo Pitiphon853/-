@@ -1,0 +1,14 @@
+{
+  "id": "t-test",
+  "slug": "คำนวณ-t-test",
+  "name": {
+    "TH": "คำนวณ T-Test",
+    "EN": "Student's T-Test Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณการทดสอบที (t-test) เพื่อเปรียบเทียบค่าเฉลี่ยของสองกลุ่มตัวอย่าง",
+    "EN": "Perform Student's t-test (independent or paired) to compare means of two groups."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

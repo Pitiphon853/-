@@ -1,0 +1,14 @@
+{
+  "id": "wire-gauge-sizing",
+  "slug": "คำนวณขนาดสายไฟตามกระแส",
+  "name": {
+    "TH": "คำนวณขนาดสายไฟตามกระแส",
+    "EN": "Wire Gauge Sizing Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณขนาดสายไฟทองแดงที่เหมาะสมตามปริมาณกระแสไฟฟ้า ระยะทาง และแรงดันไฟฟ้าเพื่อความปลอดภัย",
+    "EN": "Calculate the recommended copper wire gauge size based on electrical current, distance, and voltage drop."
+  },
+  "category": "Construction",
+  "icon": "Zap"
+}

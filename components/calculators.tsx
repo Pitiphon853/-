@@ -36,9 +36,58 @@ import { JetLagCalculator, RoamingCostCalculator } from "./calcs/TravelCalcs2";
 import { SolarPanelCalculator, InteriorCostCalculator, AchVentilationCalculator, ConcreteVolumeCalculator, RebarWeightCalculator, AacBlocksCalculator, LaborCostCalculator, PlumbingPipeCalculator, SlopeGradeCalculator } from "./calcs/ConstructionCalcs2";
 import { CarbonFootprintCalculator, WindEnergyCalculator, WaterSavingsCalculator, PlasticFootprintCalculator } from "./calcs/EnvironmentCalcs";
 import { QuadraticCalculator, PHCalculator } from "./calcs/ScienceCalcs";
+import { 
+  CostPerWear, 
+  WardrobeBudget, 
+  SkincareRoutineCost, 
+  HaircutAnnualExpense, 
+  NailCareExpense, 
+  HairTreatmentExpense, 
+  GymSupplementCost, 
+  StreamingSubscriptionsCost, 
+  CoffeeShopAnnualCost, 
+  SmokingVapingCost 
+} from "./calcs/FashionLifestyleCalcs";
+
+import { 
+  RentalYieldNew, 
+  CommercialCapRate, 
+  ValuationIncomeApproach, 
+  ValuationCostApproach, 
+  HouseFlippingROI, 
+  AirbnbProfitEstimator, 
+  PropertyTaxesNew, 
+  LandPriceValuation, 
+  LandSubdivisionCost, 
+  DSCRCalculator 
+} from "./calcs/RealEstateCalcsNew";
 
 import { HoroscopeCalculator } from "./calcs/FamilyCalcs3";
+import {
+  ContinuousCompoundingCalculator,
+  PermutationCombinationCalculator,
+  BayesTheoremCalculator,
+  StandardDeviationCalculator,
+  RegressionLineCalculator,
+  ChiSquareCalculator,
+  TTestCalculator,
+  SampleSizeCalculator,
+  ConfidenceIntervalCalculator,
+  ForceConverter,
+  PressureConverter,
+  EnergyConverterNew,
+  PowerConverter,
+  DensityConverter,
+  ProjectileMotionCalculator,
+  OhmsLawCalculator,
+  CapacitorChargeCalculator,
+  WaveCalculator,
+  PHBufferCalculator,
+  EquilibriumConstantCalculator
+} from "./calcs/MathScienceCalcs";
+
 import { TarotReadingCalculator } from "./calcs/TarotCalcs";
+import RelationshipInvestment from "./calcs/calcs_batch_26_relationship-investment";
 import DIOCalculator from "./calcs/calcs_batch_3_dio";
 import DSOCalculator from "./calcs/calcs_batch_3_dso";
 import EmployeeBonusCalculator from "./calcs/calcs_batch_3_employee-bonus";
@@ -356,8 +405,31 @@ import ProductWaterFootprintBatch9 from "./calcs/calcs_batch_9_product-water-foo
 import RecycledWasteImpactBatch9 from "./calcs/calcs_batch_9_recycled-waste-impact";
 import TravelCarbonFootprintBatch9 from "./calcs/calcs_batch_9_travel-carbon-footprint";
 import WaterSavingImpactBatch9 from "./calcs/calcs_batch_9_water-saving-impact";
+import {
+  WireGaugeSizing,
+  FuseBreakerSizing,
+  LpgPipeSizing,
+  DiyVsShopCarRepair,
+  CarPaintingCost,
+  HomeAdditionCost,
+  WaterFilterSizing,
+  GasCylinderDuration,
+  AcRepairCost,
+  AntennaLengthFrequency
+} from "./calcs/DiyHandymanCalcs";
 
 export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string, lang: Lang, setCalc: (id: string) => void }) {
+  if (activeCalc === "relationship-investment") return <RelationshipInvestment lang={lang} />;
+  if (activeCalc === "wire-gauge-sizing") return <WireGaugeSizing lang={lang} />;
+  if (activeCalc === "fuse-breaker-sizing") return <FuseBreakerSizing lang={lang} />;
+  if (activeCalc === "lpg-pipe-sizing") return <LpgPipeSizing lang={lang} />;
+  if (activeCalc === "diy-vs-shop-car-repair") return <DiyVsShopCarRepair lang={lang} />;
+  if (activeCalc === "car-painting-cost") return <CarPaintingCost lang={lang} />;
+  if (activeCalc === "home-addition-cost") return <HomeAdditionCost lang={lang} />;
+  if (activeCalc === "water-filter-sizing") return <WaterFilterSizing lang={lang} />;
+  if (activeCalc === "gas-cylinder-duration") return <GasCylinderDuration lang={lang} />;
+  if (activeCalc === "ac-repair-cost") return <AcRepairCost lang={lang} />;
+  if (activeCalc === "antenna-length-frequency") return <AntennaLengthFrequency lang={lang} />;
   if (activeCalc === "dio") return <DIOCalculator lang={lang} />;
   if (activeCalc === "dso") return <DSOCalculator lang={lang} />;
   if (activeCalc === "employee-bonus") return <EmployeeBonusCalculator lang={lang} />;
@@ -624,6 +696,26 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   // Science
   if (activeCalc === "quadratic-eq") return <QuadraticCalculator lang={lang} />;
   if (activeCalc === "ph-poh") return <PHCalculator lang={lang} />;
+  if (activeCalc === "continuous-compounding") return <ContinuousCompoundingCalculator lang={lang} />;
+  if (activeCalc === "permutation-combination") return <PermutationCombinationCalculator lang={lang} />;
+  if (activeCalc === "bayes-theorem") return <BayesTheoremCalculator lang={lang} />;
+  if (activeCalc === "standard-deviation") return <StandardDeviationCalculator lang={lang} />;
+  if (activeCalc === "regression-line") return <RegressionLineCalculator lang={lang} />;
+  if (activeCalc === "chi-square") return <ChiSquareCalculator lang={lang} />;
+  if (activeCalc === "t-test") return <TTestCalculator lang={lang} />;
+  if (activeCalc === "sample-size") return <SampleSizeCalculator lang={lang} />;
+  if (activeCalc === "confidence-interval") return <ConfidenceIntervalCalculator lang={lang} />;
+  if (activeCalc === "force-converter") return <ForceConverter lang={lang} />;
+  if (activeCalc === "pressure-converter") return <PressureConverter lang={lang} />;
+  if (activeCalc === "energy-converter") return <EnergyConverterNew lang={lang} />;
+  if (activeCalc === "power-converter") return <PowerConverter lang={lang} />;
+  if (activeCalc === "density-converter") return <DensityConverter lang={lang} />;
+  if (activeCalc === "projectile-motion") return <ProjectileMotionCalculator lang={lang} />;
+  if (activeCalc === "ohms-law") return <OhmsLawCalculator lang={lang} />;
+  if (activeCalc === "capacitor-charge") return <CapacitorChargeCalculator lang={lang} />;
+  if (activeCalc === "wave-calculator") return <WaveCalculator lang={lang} />;
+  if (activeCalc === "ph-buffer") return <PHBufferCalculator lang={lang} />;
+  if (activeCalc === "equilibrium-constant") return <EquilibriumConstantCalculator lang={lang} />;
 
     if (activeCalc === "e-waste-water-footprint") return <EWasteWaterFootprintBatch10 lang={lang} />;
   if (activeCalc === "ev-charger-installation-cost") return <EVChargerInstallationCostBatch10 lang={lang} />;
@@ -746,6 +838,28 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "recycled-waste-impact") return <RecycledWasteImpactBatch9 lang={lang} />;
   if (activeCalc === "travel-carbon-footprint") return <TravelCarbonFootprintBatch9 lang={lang} />;
   if (activeCalc === "water-saving-impact") return <WaterSavingImpactBatch9 lang={lang} />;
+
+  if (activeCalc === "rental-yield-new") return <RentalYieldNew lang={lang} />;
+  if (activeCalc === "commercial-cap-rate") return <CommercialCapRate lang={lang} />;
+  if (activeCalc === "valuation-income-approach") return <ValuationIncomeApproach lang={lang} />;
+  if (activeCalc === "valuation-cost-approach") return <ValuationCostApproach lang={lang} />;
+  if (activeCalc === "house-flipping-roi") return <HouseFlippingROI lang={lang} />;
+  if (activeCalc === "airbnb-profit-estimator") return <AirbnbProfitEstimator lang={lang} />;
+  if (activeCalc === "property-taxes-new") return <PropertyTaxesNew lang={lang} />;
+  if (activeCalc === "land-price-valuation") return <LandPriceValuation lang={lang} />;
+  if (activeCalc === "land-subdivision-cost") return <LandSubdivisionCost lang={lang} />;
+  if (activeCalc === "dscr-calculator") return <DSCRCalculator lang={lang} />;
+
+  if (activeCalc === "cost-per-wear") return <CostPerWear lang={lang} setCalc={setCalc} />;
+  if (activeCalc === "wardrobe-budget") return <WardrobeBudget lang={lang} />;
+  if (activeCalc === "skincare-routine-cost") return <SkincareRoutineCost lang={lang} />;
+  if (activeCalc === "haircut-annual-expense") return <HaircutAnnualExpense lang={lang} />;
+  if (activeCalc === "nail-care-expense") return <NailCareExpense lang={lang} />;
+  if (activeCalc === "hair-treatment-expense") return <HairTreatmentExpense lang={lang} />;
+  if (activeCalc === "gym-supplement-cost") return <GymSupplementCost lang={lang} />;
+  if (activeCalc === "streaming-subscriptions-cost") return <StreamingSubscriptionsCost lang={lang} />;
+  if (activeCalc === "coffee-shop-annual-cost") return <CoffeeShopAnnualCost lang={lang} />;
+  if (activeCalc === "smoking-vaping-cost") return <SmokingVapingCost lang={lang} />;
 
   return (
     <div className="text-center p-12 text-gray-500">

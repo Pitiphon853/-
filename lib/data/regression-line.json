@@ -1,0 +1,14 @@
+{
+  "id": "regression-line",
+  "slug": "คำนวณ-regression-line",
+  "name": {
+    "TH": "คำนวณ Regression Line",
+    "EN": "Linear Regression Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณสมการเส้นถดถอยเชิงเส้นอย่างง่าย (y = mx + c) และหาค่าสหสัมพันธ์ R²",
+    "EN": "Calculate the simple linear regression equation (y = mx + c) and R-squared coefficient."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ohms-law",
+  "slug": "คำนวณกฎของโอห์ม",
+  "name": {
+    "TH": "คำนวณกฎของโอห์ม (Ohm's Law)",
+    "EN": "Ohm's Law Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณความต่างศักย์ (V) กระแสไฟฟ้า (I) ความต้านทาน (R) และกำลังไฟฟ้า (P) ตามกฎของโอห์ม",
+    "EN": "Calculate voltage, current, resistance, and power using Ohm's Law."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

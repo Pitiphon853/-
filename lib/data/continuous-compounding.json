@@ -1,0 +1,14 @@
+{
+  "id": "continuous-compounding",
+  "slug": "คำนวณดอกเบี้ยทบต้นต่อเนื่อง",
+  "name": {
+    "TH": "คำนวณดอกเบี้ยทบต้นต่อเนื่อง",
+    "EN": "Continuous Compounding Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณเงินต้นรวมดอกเบี้ยทบต้นแบบต่อเนื่องตามเวลาและอัตราดอกเบี้ยรายปี",
+    "EN": "Calculate continuous compounding interest over time with annual interest rate."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

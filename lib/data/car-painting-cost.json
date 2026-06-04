@@ -1,0 +1,14 @@
+{
+  "id": "car-painting-cost",
+  "slug": "คำนวณราคาพ่นสีรถยนต์",
+  "name": {
+    "TH": "คำนวณราคาพ่นสีรถยนต์",
+    "EN": "Car Painting Cost Estimator"
+  },
+  "desc": {
+    "TH": "ประมาณราคาค่าพ่นสีรถยนต์ตามขนาดของรถ ชนิดของสี และรูปแบบการพ่นสี (ทั้งคัน / เฉพาะจุด)",
+    "EN": "Estimate the cost of painting a car based on vehicle size, paint grade, and full body or panel-by-panel options."
+  },
+  "category": "Utility",
+  "icon": "Car"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "equilibrium-constant",
+  "slug": "คำนวณสมดุลเคมี",
+  "name": {
+    "TH": "คำนวณค่าคงที่สมดุลเคมี (Kc)",
+    "EN": "Chemical Equilibrium Constant Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่าคงที่สมดุล (Kc) หรือความเข้มข้นสารที่ภาวะสมดุลสำหรับปฏิกิริยาเคมี",
+    "EN": "Calculate the chemical equilibrium constant (Kc) or equilibrium concentrations."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

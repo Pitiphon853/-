@@ -1,0 +1,14 @@
+{
+  "id": "ac-repair-cost",
+  "slug": "คำนวณค่าบริการซ่อมแอร์",
+  "name": {
+    "TH": "คำนวณค่าบริการซ่อมแอร์",
+    "EN": "AC Repair & Cleaning Cost Estimator"
+  },
+  "desc": {
+    "TH": "ประมาณการค่าใช้จ่ายในการซ่อมแซมแอร์ ล้างแอร์ เติมน้ำยาแอร์ หรือเปลี่ยนอะไหล่ตามจริง เพื่อการเตรียมงบประมาณ",
+    "EN": "Estimate the expected cost of air conditioner maintenance, deep cleaning, refrigerant refills, and parts replacement."
+  },
+  "category": "Utility",
+  "icon": "Wrench"
+}

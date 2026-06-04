@@ -1,0 +1,14 @@
+{
+  "id": "home-addition-cost",
+  "slug": "คำนวณค่าต่อเติมต่อยอดบ้าน",
+  "name": {
+    "TH": "คำนวณค่าต่อเติมบ้าน",
+    "EN": "Home Addition Cost Estimator"
+  },
+  "desc": {
+    "TH": "ประมาณการงบประมาณและค่าใช้จ่ายในการต่อเติมบ้าน ห้องครัว ที่จอดรถ หรือระเบียง ตามขนาดและประเภทฐานราก",
+    "EN": "Estimate the construction budget for home additions, kitchen extensions, and garage roofing based on materials and foundation."
+  },
+  "category": "Construction",
+  "icon": "Home"
+}

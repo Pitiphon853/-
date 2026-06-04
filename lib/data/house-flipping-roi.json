@@ -1,0 +1,14 @@
+{
+  "id": "house-flipping-roi",
+  "slug": "คำนวณกำไร-flip-บ้าน",
+  "name": {
+    "TH": "คำนวณกำไรและ ROI ฟลิปบ้าน/คอนโด",
+    "EN": "House Flipping ROI Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณต้นทุน กำไรสุทธิ และผลตอบแทน (ROI) สำหรับการซื้ออสังหาริมทรัพย์มาปรับปรุงแล้วขายต่อ",
+    "EN": "Calculate costs, net profit, and ROI for house flipping projects."
+  },
+  "category": "Finance",
+  "icon": "TrendingUp"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "haircut-annual-expense",
+  "slug": "คำนวณค่าตัดผมต่อปี",
+  "name": {
+    "TH": "คำนวณค่าตัดผมต่อปี",
+    "EN": "Annual Haircut Expense Calculator"
+  },
+  "desc": {
+    "TH": "ประมาณการค่าใช้จ่ายในการเข้าร้านตัดผม บาร์เบอร์ หรือซาลอน ตลอดทั้งปี",
+    "EN": "Calculate yearly salon/barber expenses and long-term projections."
+  },
+  "category": "Finance",
+  "icon": "Calculator"
+}

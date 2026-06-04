@@ -1,0 +1,14 @@
+{
+  "id": "confidence-interval",
+  "slug": "คำนวณ-confidence-interval",
+  "name": {
+    "TH": "คำนวณ Confidence Interval",
+    "EN": "Confidence Interval Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาช่วงความเชื่อมั่นของค่าเฉลี่ยประชากร (90%, 95%, 99%)",
+    "EN": "Calculate the confidence interval for a population mean (90%, 95%, 99%)."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

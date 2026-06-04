@@ -1,0 +1,14 @@
+{
+  "id": "nail-care-expense",
+  "slug": "คำนวณค่าทำเล็บต่อปี",
+  "name": {
+    "TH": "คำนวณค่าทำเล็บต่อปี",
+    "EN": "Annual Nail Care Expense Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณงบประมาณการทำเล็บเจล ต่อเล็บ และบำรุงสุขภาพเล็บรายปี",
+    "EN": "Estimate yearly gel manicure, nail extension, and care costs."
+  },
+  "category": "Finance",
+  "icon": "Sparkles"
+}

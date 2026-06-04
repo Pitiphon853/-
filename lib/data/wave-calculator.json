@@ -1,0 +1,14 @@
+{
+  "id": "wave-calculator",
+  "slug": "คำนวณความยาวคลื่น",
+  "name": {
+    "TH": "คำนวณคลื่น (ความถี่ ความยาวคลื่น ความเร็ว)",
+    "EN": "Wave Calculator (Frequency, Wavelength)"
+  },
+  "desc": {
+    "TH": "คำนวณหาความเร็ว ความถี่ หรือความยาวคลื่น ตามสมการคลื่น (v = fλ)",
+    "EN": "Calculate wave speed, frequency, or wavelength using the wave equation (v = fλ)."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

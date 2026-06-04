@@ -1,0 +1,14 @@
+{
+  "id": "fuse-breaker-sizing",
+  "slug": "คำนวณขนาดฟิวส์และเบรกเกอร์",
+  "name": {
+    "TH": "คำนวณขนาดฟิวส์และเบรกเกอร์",
+    "EN": "Fuse and Breaker Sizing Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณและประเมินขนาดกระแสของฟิวส์และเซอร์กิตเบรกเกอร์ที่เหมาะสมกับโหลดไฟฟ้าและชนิดของเครื่องใช้ไฟฟ้า",
+    "EN": "Calculate the recommended fuse or circuit breaker size and matching wire gauge for electrical loads."
+  },
+  "category": "Construction",
+  "icon": "Zap"
+}

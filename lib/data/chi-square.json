@@ -1,0 +1,14 @@
+{
+  "id": "chi-square",
+  "slug": "คำนวณ-chi-square",
+  "name": {
+    "TH": "คำนวณ Chi-Square Test",
+    "EN": "Chi-Square Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณการทดสอบไคสแควร์ (Chi-Square Test of Independence / Goodness of Fit)",
+    "EN": "Calculate the Chi-Square statistics for testing independence or goodness of fit."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

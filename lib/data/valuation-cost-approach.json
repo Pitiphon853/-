@@ -1,0 +1,14 @@
+{
+  "id": "valuation-cost-approach",
+  "slug": "คำนวณมูลค่าอสังหา-cost-approach",
+  "name": {
+    "TH": "คำนวณมูลค่าอสังหาฯ วิธีต้นทุน (Cost Approach)",
+    "EN": "Cost Approach Property Valuation Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินมูลค่าบ้านและที่ดินโดยใช้วิธีต้นทุนทดแทนใหม่ หักค่าเสื่อมราคาสิ่งปลูกสร้างสะสม",
+    "EN": "Estimate property value by combining land value and depreciated building replacement cost."
+  },
+  "category": "Finance",
+  "icon": "Home"
+}

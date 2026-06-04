@@ -1,0 +1,14 @@
+{
+  "id": "valuation-income-approach",
+  "slug": "คำนวณมูลค่าอสังหา-income-approach",
+  "name": {
+    "TH": "คำนวณมูลค่าอสังหาฯ วิธีรายได้ (Income Approach)",
+    "EN": "Income Approach Property Valuation Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินมูลค่าอสังหาริมทรัพย์โดยอิงจากรายได้สุทธิจากการดำเนินงานและอัตราผลตอบแทนคาดหวัง",
+    "EN": "Estimate property value based on Net Operating Income (NOI) and Capitalization Rate."
+  },
+  "category": "Finance",
+  "icon": "Coins"
+}

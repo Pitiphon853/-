@@ -1,0 +1,14 @@
+{
+  "id": "smoking-vaping-cost",
+  "slug": "คำนวณค่าบุหรี่ต่อปี",
+  "name": {
+    "TH": "คำนวณค่าบุหรี่ต่อปี",
+    "EN": "Annual Smoking & Vaping Cost Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่าใช้จ่ายและประมาณการเงินจมสะสมจากการสูบบุหรี่และพอตไฟฟ้า",
+    "EN": "Estimate your costs related to traditional smoking or electronic vaping."
+  },
+  "category": "Health",
+  "icon": "Heart"
+}

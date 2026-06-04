@@ -1,0 +1,14 @@
+{
+  "id": "ph-buffer",
+  "slug": "คำนวณ-ph-buffer",
+  "name": {
+    "TH": "คำนวณสารละลายบัฟเฟอร์ (pH Buffer)",
+    "EN": "pH Buffer Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาค่า pH ของสารละลายบัฟเฟอร์กรด/เบสด้วยสมการ Henderson-Hasselbalch",
+    "EN": "Calculate the pH of an acidic or basic buffer solution using the Henderson-Hasselbalch equation."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

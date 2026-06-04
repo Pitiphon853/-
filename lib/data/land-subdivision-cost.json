@@ -1,0 +1,14 @@
+{
+  "id": "land-subdivision-cost",
+  "slug": "คำนวณค่ารังวัดแบ่งแยกโฉนด",
+  "name": {
+    "TH": "คำนวณค่ารังวัดแบ่งแยกโฉนดที่ดิน",
+    "EN": "Land Subdivision & Survey Cost Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินค่าธรรมเนียมรังวัด ค่าหมุด และค่าใช้จ่ายต่างๆ ในการรังวัดแบ่งแยกโฉนดที่ดิน",
+    "EN": "Estimate survey fees, boundary stone costs, and total expenses for land subdivision."
+  },
+  "category": "Finance",
+  "icon": "Compass"
+}

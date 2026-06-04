@@ -1,0 +1,14 @@
+{
+  "id": "water-filter-sizing",
+  "slug": "คำนวณขนาดเครื่องกรองน้ำ",
+  "name": {
+    "TH": "คำนวณขนาดเครื่องกรองน้ำ",
+    "EN": "Water Filter Sizing Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณขนาดและประเภทของเครื่องกรองน้ำดื่ม หรือระบบกรองน้ำใช้ทั้งบ้านที่เหมาะสมกับจำนวนสมาชิกในครอบครัว",
+    "EN": "Calculate the recommended water filter capacity and technology based on household size and water source."
+  },
+  "category": "Construction",
+  "icon": "Droplets"
+}

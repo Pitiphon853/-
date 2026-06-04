@@ -1,0 +1,14 @@
+{
+  "id": "land-price-valuation",
+  "slug": "คำนวณราคาประเมินที่ดิน",
+  "name": {
+    "TH": "คำนวณราคาประเมินที่ดิน (ไร่-งาน-ตร.ว.)",
+    "EN": "Land Price Valuation Calculator"
+  },
+  "desc": {
+    "TH": "แปลงพื้นที่ดินจาก ไร่-งาน-ตารางวา และคำนวณมูลค่าราคาประเมินและราคาตลาดรวม",
+    "EN": "Convert land area (Rai-Ngan-Wah) and calculate total appraised and estimated market value."
+  },
+  "category": "Finance",
+  "icon": "Scale"
+}

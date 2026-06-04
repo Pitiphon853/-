@@ -1,0 +1,14 @@
+{
+  "id": "pressure-converter",
+  "slug": "แปลงหน่วยความดัน",
+  "name": {
+    "TH": "แปลงหน่วยความดัน (Pressure Converter)",
+    "EN": "Pressure Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือแปลงหน่วยความดัน เช่น ปาสกาล (Pa) บาร์ (bar) บรรยากาศ (atm) และปอนด์ต่อตารางนิ้ว (psi)",
+    "EN": "Convert between pressure units such as Pascal (Pa), Bar, Atmosphere (atm), and Psi."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

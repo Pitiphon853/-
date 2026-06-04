@@ -1,0 +1,14 @@
+{
+  "id": "force-converter",
+  "slug": "แปลงหน่วยแรง",
+  "name": {
+    "TH": "แปลงหน่วยแรง (Force Converter)",
+    "EN": "Force Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือแปลงหน่วยของแรง เช่น นิวตัน (N) แรงปอนด์ (lbf) และกิโลกรัมแรง (kgf)",
+    "EN": "Convert between different force units including Newtons (N), Pound-force (lbf), and Kilogram-force (kgf)."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

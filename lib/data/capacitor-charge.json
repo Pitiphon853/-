@@ -1,0 +1,14 @@
+{
+  "id": "capacitor-charge",
+  "slug": "คำนวณ-capacitor-charge",
+  "name": {
+    "TH": "คำนวณประจุและพลังงานคาปาซิเตอร์",
+    "EN": "Capacitor Charge & Energy Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณประจุไฟฟ้า (Q) และพลังงานที่สะสม (E) ในตัวเก็บประจุจากค่าความจุและแรงดัน",
+    "EN": "Calculate the charge (Q) and stored energy (E) in a capacitor given capacitance and voltage."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

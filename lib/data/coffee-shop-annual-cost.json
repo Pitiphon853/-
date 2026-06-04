@@ -1,0 +1,14 @@
+{
+  "id": "coffee-shop-annual-cost",
+  "slug": "คำนวณค่ากาแฟนอกบ้านต่อปี",
+  "name": {
+    "TH": "คำนวณค่ากาแฟนอกบ้านต่อปี",
+    "EN": "Coffee Shop Annual Cost Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณและประเมินค่าใช้จ่ายซื้อกาแฟและขนมนอกบ้านสะสมรายปี",
+    "EN": "Evaluate your café expenses, home-brewing savings, and future value growth."
+  },
+  "category": "Finance",
+  "icon": "Calculator"
+}

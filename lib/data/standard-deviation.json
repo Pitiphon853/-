@@ -1,0 +1,14 @@
+{
+  "id": "standard-deviation",
+  "slug": "คำนวณ-standard-deviation",
+  "name": {
+    "TH": "คำนวณ Standard Deviation",
+    "EN": "Standard Deviation Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณส่วนเบี่ยงเบนมาตรฐาน (SD) ความแปรปรวน (Variance) และค่าเฉลี่ยของข้อมูล",
+    "EN": "Calculate the standard deviation (SD), variance, and mean for a dataset."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

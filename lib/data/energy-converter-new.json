@@ -1,0 +1,14 @@
+{
+  "id": "energy-converter-new",
+  "slug": "แปลงหน่วยพลังงาน-j-kwh",
+  "name": {
+    "TH": "แปลงหน่วยพลังงาน (Joule, kWh, Calorie)",
+    "EN": "Energy Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือแปลงหน่วยพลังงาน เช่น จูล (J) กิโลวัตต์-ชั่วโมง (kWh) และแคลอรี (cal)",
+    "EN": "Convert between energy units such as Joules (J), Kilowatt-hours (kWh), and Calories (cal)."
+  },
+  "category": "Science",
+  "icon": "Calculator"
+}

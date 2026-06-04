@@ -1,0 +1,14 @@
+{
+  "id": "streaming-subscriptions-cost",
+  "slug": "คำนวณค่าสมาชิกรายเดือน-streaming",
+  "name": {
+    "TH": "คำนวณค่าสมาชิกรายเดือน streaming",
+    "EN": "Streaming Subscriptions Calculator"
+  },
+  "desc": {
+    "TH": "รวบรวมและวิเคราะห์ค่าสมาชิกสตรีมมิ่งความบันเทิงรายเดือนและรายปี",
+    "EN": "Audit your monthly streaming services and track potential investment opportunity costs."
+  },
+  "category": "Finance",
+  "icon": "Calculator"
+}

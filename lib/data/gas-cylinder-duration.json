@@ -1,0 +1,14 @@
+{
+  "id": "gas-cylinder-duration",
+  "slug": "คำนวณระยะเวลาใช้ถังแก๊ส",
+  "name": {
+    "TH": "คำนวณระยะเวลาใช้ถังแก๊ส",
+    "EN": "LPG Gas Cylinder Duration Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินระยะเวลาการใช้งานของถังแก๊สหุงต้ม (LPG) ตามขนาดถัง จำนวนหัวเตา และพฤติกรรมการทำอาหารต่อวัน",
+    "EN": "Estimate how many days your LPG gas cylinder will last based on cylinder capacity, burner consumption, and daily usage."
+  },
+  "category": "Utility",
+  "icon": "Clock"
+}

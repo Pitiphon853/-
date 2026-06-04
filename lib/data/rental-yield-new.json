@@ -1,0 +1,14 @@
+{
+  "id": "rental-yield-new",
+  "slug": "คำนวณ-rental-yield-ห้องชุด",
+  "name": {
+    "TH": "คำนวณ Rental Yield คอนโด/ห้องชุด",
+    "EN": "Condo Rental Yield Calculator"
+  },
+  "desc": {
+    "TH": "หาอัตราผลตอบแทนการปล่อยเช่าคอนโดมิเนียม Gross Yield และ Net Yield แบบละเอียด",
+    "EN": "Calculate Gross and Net Rental Yield for condo and apartment investments."
+  },
+  "category": "Finance",
+  "icon": "Percent"
+}

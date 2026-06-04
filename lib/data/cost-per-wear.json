@@ -1,0 +1,14 @@
+{
+  "id": "cost-per-wear",
+  "slug": "คำนวณ-cost-per-wear",
+  "name": {
+    "TH": "คำนวณ Cost per Wear",
+    "EN": "Cost per Wear Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณความคุ้มค่าของเสื้อผ้าและของใช้แฟชั่นต่อการสวมใส่ 1 ครั้ง",
+    "EN": "Calculate the cost-per-wear of clothing and fashion items based on price and usage."
+  },
+  "category": "Finance",
+  "icon": "Calculator"
+}

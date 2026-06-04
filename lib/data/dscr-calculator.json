@@ -1,0 +1,14 @@
+{
+  "id": "dscr-calculator",
+  "slug": "คำนวณ-dscr",
+  "name": {
+    "TH": "คำนวณ DSCR (อัตราส่วนการชำระหนี้)",
+    "EN": "DSCR (Debt Service Coverage Ratio) Calculator"
+  },
+  "desc": {
+    "TH": "วิเคราะห์อัตราส่วนความสามารถในการชำระหนี้ (DSCR) สำหรับการลงทุนและขอสินเชื่ออสังหาฯ",
+    "EN": "Calculate the Debt Service Coverage Ratio (DSCR) to evaluate loan viability for properties."
+  },
+  "category": "Finance",
+  "icon": "Landmark"
+}

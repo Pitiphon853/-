@@ -1,0 +1,14 @@
+{
+  "id": "gym-supplement-cost",
+  "slug": "คำนวณค่าฟิตเนสและเวย์โปรตีน",
+  "name": {
+    "TH": "คำนวณค่าฟิตเนสและเวย์โปรตีน",
+    "EN": "Gym & Supplement Cost Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่าสมาชิกยิม เทรนเนอร์ เวย์โปรตีน และค่าอาหารเสริมต่อเดือน/ปี",
+    "EN": "Estimate fitness fees, personal training, whey protein, and health supplements."
+  },
+  "category": "Health",
+  "icon": "Zap"
+}

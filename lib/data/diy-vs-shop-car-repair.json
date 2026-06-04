@@ -1,0 +1,14 @@
+{
+  "id": "diy-vs-shop-car-repair",
+  "slug": "เปรียบเทียบซ่อมรถเองvsอู่",
+  "name": {
+    "TH": "เปรียบเทียบซ่อมรถเอง vs อู่",
+    "EN": "DIY vs Shop Car Repair Calculator"
+  },
+  "desc": {
+    "TH": "เปรียบเทียบค่าใช้จ่าย เวลา และความคุ้มค่าระหว่างการซ่อมแซมรถยนต์ด้วยตนเองกับการส่งซ่อมอู่หรือศูนย์บริการ",
+    "EN": "Compare costs, tools, labor time, and opportunity costs of DIY car repair versus taking it to a professional shop."
+  },
+  "category": "Utility",
+  "icon": "Wrench"
+}

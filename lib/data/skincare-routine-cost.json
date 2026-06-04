@@ -1,0 +1,14 @@
+{
+  "id": "skincare-routine-cost",
+  "slug": "คำนวณค่าใช้จ่ายครีมบำรุงผิว",
+  "name": {
+    "TH": "คำนวณค่าใช้จ่ายครีมบำรุงผิว",
+    "EN": "Skincare Routine Cost Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณยอดเงินสะสมรายเดือนและรายปีของรูทีนสกินแคร์และเครื่องสำอาง",
+    "EN": "Estimate your average monthly and yearly skincare routine costs."
+  },
+  "category": "Finance",
+  "icon": "Sparkles"
+}
