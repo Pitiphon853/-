@@ -1,0 +1,8 @@
+{
+  "id": "ngan-to-sqwa",
+  "slug": "ngan-to-sqwa",
+  "name": { "TH": "แปลงงานเป็นตารางวา", "EN": "Ngan to Square Wa Converter" },
+  "desc": { "TH": "เครื่องมือแปลงพื้นที่จากงานเป็นตารางวา (1 งาน = 100 ตารางวา)", "EN": "Convert area from Ngan to Square Wa (1 Ngan = 100 Sq Wa)" },
+  "category": "Math",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "sqft-to-sqin",
+  "slug": "sqft-to-sqin",
+  "name": {
+    "TH": "แปลงตารางฟุตเป็นตารางนิ้ว",
+    "EN": "Sq Ft to Sq In Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือแปลงพื้นที่จากตารางฟุต (Square Feet) เป็น ตารางนิ้ว (Square Inches) พร้อมสูตรคำนวณ",
+    "EN": "Convert Square Feet to Square Inches with formula"
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "area-circle-radius",
+  "slug": "area-circle-radius",
+  "name": {
+    "TH": "คำนวณพื้นที่วงกลม (จากรัศมี)",
+    "EN": "Circle Area Calculator (from Radius)"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณพื้นที่วงกลมจากความยาวของรัศมี",
+    "EN": "Calculate the area of a circle from its radius."
+  },
+  "category": "Math",
+  "icon": "Circle"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "area-triangle",
+  "slug": "area-triangle",
+  "name": {
+    "TH": "คำนวณพื้นที่สามเหลี่ยม",
+    "EN": "Triangle Area Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณพื้นที่สามเหลี่ยม พร้อมสูตรและวิธีการคำนวณ",
+    "EN": "Calculate the area of a triangle with formula and steps."
+  },
+  "category": "Math",
+  "icon": "Triangle"
+}

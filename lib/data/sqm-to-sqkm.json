@@ -1,0 +1,14 @@
+{
+  "id": "sqm-to-sqkm",
+  "slug": "sqm-to-sqkm",
+  "name": {
+    "TH": "แปลงตารางเมตรเป็นตารางกิโลเมตร",
+    "EN": "Square Meter to Square Kilometer Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือแปลงหน่วยพื้นที่จากตารางเมตร (sq.m.) เป็นตารางกิโลเมตร (sq.km.) แบบออนไลน์ ใช้งานฟรี",
+    "EN": "Convert Square Meters to Square Kilometers"
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

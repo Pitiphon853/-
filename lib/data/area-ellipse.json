@@ -1,0 +1,14 @@
+{
+  "id": "area-ellipse",
+  "slug": "area-ellipse",
+  "name": {
+    "TH": "คำนวณพื้นที่วงรี",
+    "EN": "Ellipse Area Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณพื้นที่วงรี พร้อมอธิบายสูตร",
+    "EN": "Calculate the area of an ellipse."
+  },
+  "category": "Math",
+  "icon": "CircleOff"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "sqm-to-sqwa",
+  "slug": "sqm-to-sqwa",
+  "name": { "TH": "แปลงตารางเมตรเป็นตารางวา", "EN": "Sq.m to Sq.Wa" },
+  "desc": { "TH": "โปรแกรมแปลงพื้นที่ตารางเมตรเป็นตารางวา", "EN": "Convert Square Meters to Square Wa." },
+  "category": "Math",
+  "icon": "Map"
+}

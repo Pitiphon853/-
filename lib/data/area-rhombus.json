@@ -1,0 +1,14 @@
+{
+  "id": "area-rhombus",
+  "slug": "area-rhombus",
+  "name": {
+    "TH": "พื้นที่สี่เหลี่ยมขนมเปียกปูน",
+    "EN": "Rhombus Area Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณพื้นที่สี่เหลี่ยมขนมเปียกปูน (Rhombus Area Calculator) พร้อมสูตรและวิธีคิดละเอียด",
+    "EN": "Calculate the area of a rhombus using diagonals or base and height."
+  },
+  "category": "Math",
+  "icon": "Square"
+}

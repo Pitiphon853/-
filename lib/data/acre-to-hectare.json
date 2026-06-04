@@ -1,0 +1,14 @@
+{
+  "id": "acre-to-hectare",
+  "slug": "acre-to-hectare",
+  "name": {
+    "TH": "แปลงเอเคอร์เป็นเฮกตาร์",
+    "EN": "Acre to Hectare Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือแปลงพื้นที่จากเอเคอร์ (Acres) เป็น เฮกตาร์ (Hectares) พร้อมสูตรคำนวณ",
+    "EN": "Convert Acres to Hectares with formula"
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

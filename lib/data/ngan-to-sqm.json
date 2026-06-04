@@ -1,0 +1,8 @@
+{
+  "id": "ngan-to-sqm",
+  "slug": "ngan-to-sqm",
+  "name": { "TH": "แปลงงานเป็นตารางเมตร", "EN": "Ngan to Square Meters Converter" },
+  "desc": { "TH": "เครื่องมือแปลงพื้นที่จากงานเป็นตารางเมตร (1 งาน = 400 ตารางเมตร)", "EN": "Convert area from Ngan to Square Meters (1 Ngan = 400 Sq m)" },
+  "category": "Math",
+  "icon": "Calculator"
+}

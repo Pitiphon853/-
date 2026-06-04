@@ -1,0 +1,8 @@
+{
+  "id": "rai-to-sqwa",
+  "slug": "rai-to-sqwa",
+  "name": { "TH": "แปลงไร่เป็นตารางวา", "EN": "Rai to Square Wa Converter" },
+  "desc": { "TH": "เครื่องมือแปลงพื้นที่จากไร่เป็นตารางวา (1 ไร่ = 400 ตารางวา)", "EN": "Convert area from Rai to Square Wa (1 Rai = 400 Sq Wa)" },
+  "category": "Math",
+  "icon": "Calculator"
+}

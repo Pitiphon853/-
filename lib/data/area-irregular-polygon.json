@@ -1,0 +1,14 @@
+{
+  "id": "area-irregular-polygon",
+  "slug": "area-irregular-polygon",
+  "name": {
+    "TH": "พื้นที่รูปทรงอิสระ (แบ่งส่วนสามเหลี่ยม)",
+    "EN": "Irregular Polygon Area Calculator (Triangulation)"
+  },
+  "desc": {
+    "TH": "คำนวณพื้นที่รูปหลายเหลี่ยมด้านไม่เท่า รูปทรงอิสระ หรือที่ดินบิดเบี้ยว ด้วยเทคนิคการแบ่งพื้นที่เป็นรูปสามเหลี่ยม (Triangulation) รองรับสูตรของ Heron",
+    "EN": "Calculate the area of irregular polygons by dividing them into triangles and summing their areas."
+  },
+  "category": "Math",
+  "icon": "Shapes"
+}

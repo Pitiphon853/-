@@ -1,0 +1,8 @@
+{
+  "id": "sqm-to-rai",
+  "slug": "sqm-to-rai",
+  "name": { "TH": "แปลงตารางเมตรเป็นไร่", "EN": "Sq.m to Rai" },
+  "desc": { "TH": "โปรแกรมแปลงพื้นที่ตารางเมตรเป็นไร่", "EN": "Convert Square Meters to Rai." },
+  "category": "Math",
+  "icon": "Map"
+}

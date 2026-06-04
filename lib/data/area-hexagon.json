@@ -1,0 +1,14 @@
+{
+  "id": "area-hexagon",
+  "slug": "area-hexagon",
+  "name": {
+    "TH": "พื้นที่หกเหลี่ยมด้านเท่า",
+    "EN": "Hexagon Area Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณพื้นที่รูปหกเหลี่ยมด้านเท่ามุมเท่า พร้อมสูตรและที่มาของการจัดเรียงแบบรังผึ้ง",
+    "EN": "Calculate the area of a regular hexagon from its side length."
+  },
+  "category": "Math",
+  "icon": "Hexagon"
+}

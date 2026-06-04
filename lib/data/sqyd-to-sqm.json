@@ -1,0 +1,14 @@
+{
+  "id": "sqyd-to-sqm",
+  "slug": "sqyd-to-sqm",
+  "name": {
+    "TH": "แปลงตารางหลาเป็นตารางเมตร",
+    "EN": "Sq Yd to Sq m Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือแปลงพื้นที่จากตารางหลา (Square Yards) เป็น ตารางเมตร (Square Meters) พร้อมสูตรคำนวณ",
+    "EN": "Convert Square Yards to Square Meters with formula"
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

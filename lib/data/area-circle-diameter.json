@@ -1,0 +1,14 @@
+{
+  "id": "area-circle-diameter",
+  "slug": "area-circle-diameter",
+  "name": {
+    "TH": "คำนวณพื้นที่วงกลม (จากเส้นผ่านศูนย์กลาง)",
+    "EN": "Circle Area Calculator (from Diameter)"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณพื้นที่วงกลมจากความยาวเส้นผ่านศูนย์กลาง",
+    "EN": "Calculate the area of a circle from its diameter."
+  },
+  "category": "Math",
+  "icon": "CircleDot"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "sqm-to-acre",
+  "slug": "sqm-to-acre",
+  "name": {
+    "TH": "แปลงตารางเมตรเป็นเอเคอร์",
+    "EN": "Square Meter to Acre Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือแปลงหน่วยพื้นที่จากตารางเมตร (sq.m.) เป็นเอเคอร์ (Acre) แบบออนไลน์ แม่นยำและใช้งานฟรี",
+    "EN": "Convert Square Meters to Acres"
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

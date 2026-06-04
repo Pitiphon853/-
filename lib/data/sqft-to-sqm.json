@@ -1,0 +1,14 @@
+{
+  "id": "sqft-to-sqm",
+  "slug": "sqft-to-sqm",
+  "name": {
+    "TH": "แปลงตารางฟุตเป็นตารางเมตร",
+    "EN": "Sq Ft to Sq m Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือแปลงพื้นที่จากตารางฟุต (Square Feet) เป็น ตารางเมตร (Square Meters) พร้อมสูตรคำนวณ",
+    "EN": "Convert Square Feet to Square Meters with formula"
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

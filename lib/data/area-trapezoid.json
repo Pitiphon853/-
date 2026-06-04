@@ -1,0 +1,14 @@
+{
+  "id": "area-trapezoid",
+  "slug": "area-trapezoid",
+  "name": {
+    "TH": "คำนวณพื้นที่สี่เหลี่ยมคางหมู",
+    "EN": "Trapezoid Area Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณพื้นที่สี่เหลี่ยมคางหมู",
+    "EN": "Calculate the area of a trapezoid."
+  },
+  "category": "Math",
+  "icon": "Box"
+}

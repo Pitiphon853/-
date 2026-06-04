@@ -1,0 +1,8 @@
+{
+  "id": "ngan-to-rai",
+  "slug": "ngan-to-rai",
+  "name": { "TH": "แปลงงานเป็นไร่", "EN": "Ngan to Rai Converter" },
+  "desc": { "TH": "เครื่องมือแปลงพื้นที่จากงานเป็นไร่ (4 งาน = 1 ไร่)", "EN": "Convert area from Ngan to Rai (4 Ngan = 1 Rai)" },
+  "category": "Math",
+  "icon": "Calculator"
+}

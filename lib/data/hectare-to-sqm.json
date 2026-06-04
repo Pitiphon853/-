@@ -1,0 +1,8 @@
+{
+  "id": "hectare-to-sqm",
+  "slug": "hectare-to-sqm",
+  "name": { "TH": "แปลงเฮกตาร์เป็นตารางเมตร", "EN": "Hectare to Sq Meter Converter" },
+  "desc": { "TH": "โปรแกรมแปลงหน่วยพื้นที่จากเฮกตาร์เป็นตารางเมตร", "EN": "Convert area from hectares to square meters" },
+  "category": "Math",
+  "icon": "Calculator"
+}

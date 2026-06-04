@@ -1,0 +1,8 @@
+{
+  "id": "area-rectangle",
+  "slug": "area-rectangle",
+  "name": { "TH": "คำนวณพื้นที่สี่เหลี่ยมผืนผ้า", "EN": "Rectangle Area Calculator" },
+  "desc": { "TH": "โปรแกรมคำนวณพื้นที่สี่เหลี่ยมผืนผ้าจากความกว้างและความยาว", "EN": "Calculate the area of a rectangle from width and length" },
+  "category": "Math",
+  "icon": "Calculator"
+}
