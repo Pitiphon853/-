@@ -1,0 +1,14 @@
+{
+  "id": "lux-lighting",
+  "slug": "lux-lighting",
+  "name": {
+    "TH": "คำนวณความสว่าง (Lux / Foot-candle)",
+    "EN": "Lux / Foot-candle Lighting Calculator"
+  },
+  "desc": {
+    "TH": "แปลงค่าความสว่างระหว่าง Lux และ Foot-candle และคำนวณความสว่างที่เหมาะสม",
+    "EN": "Convert illuminance between Lux and Foot-candle and calculate appropriate lighting."
+  },
+  "category": "Utility",
+  "icon": "Sun"
+}

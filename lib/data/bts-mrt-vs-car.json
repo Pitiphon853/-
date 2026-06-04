@@ -1,0 +1,14 @@
+{
+  "id": "bts-mrt-vs-car",
+  "slug": "bts-mrt-vs-car",
+  "name": {
+    "TH": "เปรียบเทียบค่าเดินทาง รถไฟฟ้า vs รถส่วนตัว",
+    "EN": "BTS/MRT vs Personal Car Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณเปรียบเทียบค่าใช้จ่ายรายเดือนระหว่างการใช้รถไฟฟ้า (BTS/MRT) กับการขับรถส่วนตัว",
+    "EN": "Compare monthly expenses between using public transit (BTS/MRT) and driving a personal car"
+  },
+  "category": "Family",
+  "icon": "Train"
+}

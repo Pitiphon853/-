@@ -1,0 +1,14 @@
+{
+  "id": "diet-environment",
+  "slug": "diet-environment",
+  "name": {
+    "TH": "เครื่องคำนวณผลกระทบต่อสิ่งแวดล้อมจากอาหาร",
+    "EN": "Diet Environmental Impact"
+  },
+  "desc": {
+    "TH": "คำนวณปริมาณคาร์บอนฟุตพริ้นท์และการใช้น้ำจากพฤติกรรมการกินของคุณ",
+    "EN": "Calculate the carbon footprint and water usage based on your dietary choices."
+  },
+  "category": "Environment",
+  "icon": "Utensils"
+}

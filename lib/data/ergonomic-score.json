@@ -1,0 +1,14 @@
+{
+  "id": "ergonomic-score",
+  "slug": "ergonomic-score",
+  "name": {
+    "TH": "ประเมินตามหลักการยศาสตร์ (Ergonomic Score)",
+    "EN": "Workstation Ergonomic Score Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินความเหมาะสมของโต๊ะทำงานตามหลักการยศาสตร์ (Ergonomics)",
+    "EN": "Assess your workstation's ergonomic setup and get recommendations."
+  },
+  "category": "Health",
+  "icon": "Activity"
+}

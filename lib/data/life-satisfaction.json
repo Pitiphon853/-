@@ -1,0 +1,14 @@
+{
+  "id": "life-satisfaction",
+  "slug": "life-satisfaction",
+  "name": {
+    "TH": "แบบประเมินความพึงพอใจในชีวิต",
+    "EN": "Life Satisfaction Index"
+  },
+  "desc": {
+    "TH": "ประเมินระดับความสุขและความพึงพอใจโดยรวมในชีวิตของคุณ",
+    "EN": "Evaluate your overall happiness and level of satisfaction with your life."
+  },
+  "category": "Misc",
+  "icon": "Smile"
+}

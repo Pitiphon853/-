@@ -1,0 +1,14 @@
+{
+  "id": "mttr",
+  "slug": "mttr",
+  "name": {
+    "TH": "เครื่องคำนวณ MTTR (Mean Time to Repair)",
+    "EN": "MTTR Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณระยะเวลาเฉลี่ยในการซ่อมแซมระบบหรืออุปกรณ์ (Mean Time to Repair) ประเมินประสิทธิภาพการกู้คืนระบบ",
+    "EN": "Calculate the Mean Time to Repair (MTTR) for systems and equipment."
+  },
+  "category": "Technology",
+  "icon": "Timer"
+}

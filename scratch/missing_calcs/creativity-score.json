@@ -1,0 +1,14 @@
+{
+  "id": "creativity-score",
+  "slug": "creativity-score",
+  "name": {
+    "TH": "ประเมินคะแนนความคิดสร้างสรรค์",
+    "EN": "Creativity Score Evaluator"
+  },
+  "desc": {
+    "TH": "ประเมินความคิดสร้างสรรค์ของคุณตามหลักของ Guilford (Fluency, Originality, Flexibility, Elaboration)",
+    "EN": "Evaluate your creativity based on Guilford's components (Fluency, Originality, Flexibility, Elaboration)"
+  },
+  "category": "Misc",
+  "icon": "Lightbulb"
+}

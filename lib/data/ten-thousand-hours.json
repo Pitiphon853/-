@@ -1,0 +1,14 @@
+{
+  "id": "ten-thousand-hours",
+  "slug": "ten-thousand-hours",
+  "name": {
+    "TH": "10,000 ชั่วโมง ชำนาญเมื่อไหร่",
+    "EN": "10,000 Hours Mastery Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณระยะเวลาในการไปถึง 10,000 ชั่วโมง เพื่อเป็นผู้เชี่ยวชาญตามทฤษฎี",
+    "EN": "Calculate the time to reach 10,000 hours for mastery"
+  },
+  "category": "Misc",
+  "icon": "Clock"
+}

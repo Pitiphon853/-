@@ -1,0 +1,8 @@
+{
+  "id": "china-import-lead-time",
+  "slug": "china-import-lead-time",
+  "name": { "TH": "คำนวณระยะเวลานำเข้าสินค้าจากจีน", "EN": "China Import Lead Time Calculator" },
+  "desc": { "TH": "คำนวณ Lead Time การสั่งสินค้าจาก Alibaba/1688 มาไทย", "EN": "Calculate Lead Time for importing goods from Alibaba/1688 to Thailand." },
+  "category": "Business",
+  "icon": "Ship"
+}

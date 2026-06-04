@@ -1,0 +1,14 @@
+{
+  "id": "social-media-roi",
+  "slug": "social-media-roi",
+  "name": {
+    "TH": "เครื่องคำนวณความคุ้มค่าของการเล่นโซเชียล",
+    "EN": "Personal Social Media ROI"
+  },
+  "desc": {
+    "TH": "ประเมินมูลค่าเวลาที่คุณใช้ไปกับโซเชียลมีเดียเทียบกับผลตอบแทนที่ได้รับ",
+    "EN": "Calculate the value of time spent on social media versus your hourly worth."
+  },
+  "category": "Misc",
+  "icon": "Smartphone"
+}

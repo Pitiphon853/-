@@ -1,0 +1,14 @@
+{
+  "id": "behavioral-life",
+  "slug": "behavioral-life",
+  "name": {
+    "TH": "เครื่องคำนวณอายุขัยจากพฤติกรรม",
+    "EN": "Behavioral Life Expectancy Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินอายุขัยที่คาดหวังของคุณโดยพิจารณาจากพฤติกรรมและวิถีชีวิต",
+    "EN": "Estimate your life expectancy based on your behaviors and lifestyle choices."
+  },
+  "category": "Misc",
+  "icon": "Activity"
+}

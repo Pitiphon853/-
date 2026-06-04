@@ -1,0 +1,14 @@
+{
+  "id": "mtbf",
+  "slug": "mtbf",
+  "name": {
+    "TH": "เครื่องคำนวณ MTBF (Mean Time Between Failures)",
+    "EN": "MTBF Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณระยะเวลาเฉลี่ยระหว่างการขัดข้องแต่ละครั้ง (Mean Time Between Failures) เพื่อประเมินความน่าเชื่อถือของระบบ",
+    "EN": "Calculate the Mean Time Between Failures (MTBF) for systems and equipment."
+  },
+  "category": "Technology",
+  "icon": "Activity"
+}

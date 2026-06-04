@@ -1,0 +1,14 @@
+{
+  "id": "dunbar-number",
+  "slug": "dunbar-number",
+  "name": {
+    "TH": "Dunbar Number จัดการเพื่อน",
+    "EN": "Dunbar's Number Calculator"
+  },
+  "desc": {
+    "TH": "วิเคราะห์จำนวนเพื่อนบน Social Network ของคุณ ว่าเกินขีดจำกัดทางสมองตามทฤษฎี Dunbar หรือไม่",
+    "EN": "Analyze your social network size against Dunbar's cognitive limit theory"
+  },
+  "category": "Technology",
+  "icon": "Users"
+}

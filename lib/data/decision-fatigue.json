@@ -1,0 +1,14 @@
+{
+  "id": "decision-fatigue",
+  "slug": "decision-fatigue",
+  "name": {
+    "TH": "ประเมินความเหนื่อยล้าจากการตัดสินใจ",
+    "EN": "Decision Fatigue Estimator"
+  },
+  "desc": {
+    "TH": "ประเมินระดับความเหนื่อยล้าของสมองจากการตัดสินใจในแต่ละวัน เพื่อหาจุดสมดุลและฟื้นฟูพลังงาน",
+    "EN": "Estimate your mental fatigue from daily decisions to find balance and restore energy."
+  },
+  "category": "Misc",
+  "icon": "Scale"
+}

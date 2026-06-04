@@ -1,0 +1,8 @@
+{
+  "id": "work-life-balance-score",
+  "slug": "work-life-balance-score",
+  "name": { "TH": "ประเมินสมดุลชีวิตและการทำงาน", "EN": "Work-Life Balance Score" },
+  "desc": { "TH": "คำนวณคะแนนและวิเคราะห์ความสมดุลระหว่างชีวิตส่วนตัวและการทำงาน", "EN": "Calculate your work-life balance score and get recommendations." },
+  "category": "Health",
+  "icon": "Scale"
+}

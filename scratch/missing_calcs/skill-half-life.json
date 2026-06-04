@@ -1,0 +1,14 @@
+{
+  "id": "skill-half-life",
+  "slug": "skill-half-life",
+  "name": {
+    "TH": "เครื่องคำนวณอายุทักษะ (Skill Half-Life Calculator)",
+    "EN": "Skill Half-Life Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณว่าทักษะความรู้ในสายอาชีพของคุณจะล้าสมัยไปครึ่งหนึ่งเมื่อใด",
+    "EN": "Estimate how fast your professional skills might become obsolete."
+  },
+  "category": "Misc",
+  "icon": "Hourglass"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "print-cost-per-page",
+  "slug": "print-cost-per-page",
+  "name": {
+    "TH": "คำนวณต้นทุนการพิมพ์ต่อแผ่น",
+    "EN": "Print Cost Per Page Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณต้นทุนกระดาษ หมึก และค่าใช้จ่ายอื่นๆ ในการพิมพ์แต่ละหน้าอย่างละเอียด",
+    "EN": "Calculate the exact cost of printing per page including paper, ink, and other expenses."
+  },
+  "category": "Utility",
+  "icon": "Printer"
+}

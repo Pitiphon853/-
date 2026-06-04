@@ -1,0 +1,14 @@
+{
+  "id": "minimalism-score",
+  "slug": "minimalism-score",
+  "name": {
+    "TH": "แบบทดสอบระดับความมินิมอล (Minimalism Score)",
+    "EN": "Minimalism & Clutter Score"
+  },
+  "desc": {
+    "TH": "ประเมินระดับความรกของบ้านและไลฟ์สไตล์ เพื่อดูว่าคุณมีความเป็นมินิมอลแค่ไหน",
+    "EN": "Assess your clutter level and lifestyle to see how minimalist you are."
+  },
+  "category": "Misc",
+  "icon": "Box"
+}

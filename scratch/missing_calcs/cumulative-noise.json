@@ -1,0 +1,14 @@
+{
+  "id": "cumulative-noise",
+  "slug": "cumulative-noise",
+  "name": {
+    "TH": "คำนวณระดับเสียงสะสม (dB)",
+    "EN": "Cumulative Noise Level Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณระดับเสียงสะสมเพื่อประเมินความเสี่ยงต่อการสูญเสียการได้ยิน",
+    "EN": "Calculate cumulative noise exposure level to assess hearing loss risk."
+  },
+  "category": "Health",
+  "icon": "Volume2"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "thai-post-ems-cost",
+  "slug": "thai-post-ems-cost",
+  "name": { "TH": "คำนวณค่าส่งพัสดุ EMS", "EN": "Thai Post EMS Cost Calculator" },
+  "desc": { "TH": "คำนวณค่าส่งไปรษณีย์ไทยแบบ EMS ตามน้ำหนัก", "EN": "Calculate Thai Post EMS shipping cost based on weight." },
+  "category": "Business",
+  "icon": "Truck"
+}

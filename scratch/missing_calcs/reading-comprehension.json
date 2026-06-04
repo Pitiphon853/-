@@ -1,0 +1,14 @@
+{
+  "id": "reading-comprehension",
+  "slug": "reading-comprehension",
+  "name": {
+    "TH": "คำนวณคะแนนความเข้าใจในการอ่าน",
+    "EN": "Reading Comprehension Score"
+  },
+  "desc": {
+    "TH": "คำนวณอัตราความเข้าใจในการอ่าน ความเร็วในการอ่าน (WPM) และประสิทธิภาพโดยรวม",
+    "EN": "Calculate reading comprehension rate, reading speed (WPM), and overall efficiency score"
+  },
+  "category": "Misc",
+  "icon": "BookOpen"
+}

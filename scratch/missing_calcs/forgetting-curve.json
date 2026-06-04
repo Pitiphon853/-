@@ -1,0 +1,14 @@
+{
+  "id": "forgetting-curve",
+  "slug": "forgetting-curve",
+  "name": {
+    "TH": "เครื่องคำนวณกราฟการลืม (Ebbinghaus Forgetting Curve)",
+    "EN": "Forgetting Curve / Memory Retention Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณอัตราการลืมเนื้อหาและวางแผนการทบทวนเพื่อเปลี่ยนเป็นความจำระยะยาว",
+    "EN": "Estimate memory retention and plan spaced repetition sessions."
+  },
+  "category": "Misc",
+  "icon": "Brain"
+}

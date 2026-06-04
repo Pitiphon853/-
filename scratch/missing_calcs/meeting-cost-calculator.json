@@ -1,0 +1,14 @@
+{
+  "id": "meeting-cost-calculator",
+  "slug": "meeting-cost-calculator",
+  "name": {
+    "TH": "ต้นทุนการประชุม",
+    "EN": "Meeting Cost Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณต้นทุนแฝงที่แท้จริงของการจัดประชุม 1 ครั้ง โดยอ้างอิงจากเงินเดือนของผู้เข้าร่วม",
+    "EN": "Calculate the true cost of a meeting based on attendees' salaries"
+  },
+  "category": "Business",
+  "icon": "Presentation"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "moq-vs-price",
+  "slug": "moq-vs-price",
+  "name": { "TH": "เปรียบเทียบ MOQ กับ ราคา", "EN": "MOQ vs Price Calculator" },
+  "desc": { "TH": "เปรียบเทียบความคุ้มค่าของการซื้อจำนวนมาก (MOQ)", "EN": "Compare the cost-effectiveness of buying in bulk (MOQ)." },
+  "category": "Business",
+  "icon": "BarChart"
+}

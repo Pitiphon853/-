@@ -1,0 +1,14 @@
+{
+  "id": "willpower-depletion",
+  "slug": "willpower-depletion",
+  "name": {
+    "TH": "เครื่องคำนวณระดับความเหนื่อยล้าทางใจ (Willpower Depletion Score)",
+    "EN": "Willpower Depletion Score Calculator"
+  },
+  "desc": {
+    "TH": "ประเมินระดับความเหนื่อยล้าจากการตัดสินใจและใช้ความคิดในแต่ละวัน",
+    "EN": "Assess your level of ego depletion and decision fatigue throughout the day."
+  },
+  "category": "Misc",
+  "icon": "BatteryWarning"
+}

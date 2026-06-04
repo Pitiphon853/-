@@ -1,0 +1,8 @@
+{
+  "id": "container-weight-capacity",
+  "slug": "container-weight-capacity",
+  "name": { "TH": "คำนวณความจุน้ำหนักตู้คอนเทนเนอร์", "EN": "Container Weight Capacity Calculator" },
+  "desc": { "TH": "คำนวณจำนวนสินค้าที่สามารถโหลดเข้าตู้ 20/40 ฟุต", "EN": "Calculate the number of items that can be loaded into 20/40 ft containers based on weight and volume." },
+  "category": "Business",
+  "icon": "Box"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "circadian-rhythm",
+  "slug": "circadian-rhythm",
+  "name": {
+    "TH": "คำนวณเวลานอน (วัฏจักรการนอนหลับ)",
+    "EN": "Sleep Cycle Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณเวลาเข้านอนหรือเวลาตื่นนอนที่เหมาะสม เพื่อให้ตื่นมาสดชื่นไม่งัวเงียตามหลักวัฏจักรการนอนหลับ",
+    "EN": "Calculate the optimal bedtime or wake-up time based on 90-minute sleep cycles."
+  },
+  "category": "Health",
+  "icon": "Moon"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "wpm-productivity",
+  "slug": "wpm-productivity",
+  "name": {
+    "TH": "คำนวณความเร็วในการพิมพ์ (WPM) และผลิตภาพ",
+    "EN": "WPM Typing Speed & Productivity Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณความเร็วในการพิมพ์ WPM ความแม่นยำ และประเมินเวลาในการทำงานเอกสาร",
+    "EN": "Calculate WPM typing speed, accuracy, and estimate time required for document tasks."
+  },
+  "category": "Utility",
+  "icon": "Keyboard"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "thai-public-holidays",
+  "slug": "thai-public-holidays",
+  "name": { "TH": "เช็ควันหยุดนักขัตฤกษ์", "EN": "Thai Public Holidays" },
+  "desc": { "TH": "ตรวจสอบวันหยุดนักขัตฤกษ์ประจำปีว่าเหลือกี่วัน", "EN": "Check remaining Thai public holidays for the year" },
+  "category": "Misc",
+  "icon": "Calendar"
+}

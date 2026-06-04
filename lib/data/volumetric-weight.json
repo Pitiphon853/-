@@ -1,0 +1,14 @@
+{
+  "id": "volumetric-weight",
+  "slug": "volumetric-weight",
+  "name": {
+    "TH": "คำนวณน้ำหนักตามปริมาตร (Volumetric Weight)",
+    "EN": "Volumetric Weight Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณน้ำหนักตามปริมาตรของกล่องพัสดุ เพื่อประเมินค่าจัดส่งสินค้าและเปรียบเทียบกับน้ำหนักจริง",
+    "EN": "Calculate the volumetric weight of a parcel to estimate shipping costs and compare with actual weight."
+  },
+  "category": "Business",
+  "icon": "Box"
+}

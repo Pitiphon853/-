@@ -1,0 +1,14 @@
+{
+  "id": "food-delivery-vs-cooking",
+  "slug": "food-delivery-vs-cooking",
+  "name": {
+    "TH": "เปรียบเทียบสั่งอาหารเดลิเวอรี่ vs ทำกินเอง",
+    "EN": "Food Delivery vs Cooking Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณเปรียบเทียบค่าใช้จ่ายรายเดือนระหว่างการสั่งแอปเดลิเวอรี่กับการซื้อวัตถุดิบมาทำกินเอง",
+    "EN": "Compare monthly food expenses between ordering food delivery and cooking at home"
+  },
+  "category": "Family",
+  "icon": "Utensils"
+}

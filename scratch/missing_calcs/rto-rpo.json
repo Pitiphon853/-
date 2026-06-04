@@ -1,0 +1,14 @@
+{
+  "id": "rto-rpo",
+  "slug": "rto-rpo",
+  "name": {
+    "TH": "เครื่องคำนวณต้นทุน RTO/RPO",
+    "EN": "RTO/RPO Cost Calculator"
+  },
+  "desc": {
+    "TH": "วิเคราะห์ต้นทุนและความเสียหายจากเป้าหมายเวลาการกู้คืน (RTO) และจุดกู้คืนข้อมูล (RPO)",
+    "EN": "Analyze the potential costs and exposure based on Recovery Time Objective (RTO) and Recovery Point Objective (RPO)."
+  },
+  "category": "Technology",
+  "icon": "Target"
+}

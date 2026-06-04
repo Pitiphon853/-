@@ -1,0 +1,14 @@
+{
+  "id": "compound-learning-roi",
+  "slug": "compound-learning-roi",
+  "name": {
+    "TH": "Compound Learning ความรู้ที่เพิ่มทบต้น",
+    "EN": "Compound Learning ROI"
+  },
+  "desc": {
+    "TH": "คำนวณการเติบโตของทักษะความรู้ หากคุณพัฒนาขึ้นเพียงวันละ 1% ตามกฎผลตอบแทนทบต้น",
+    "EN": "Calculate the growth of your knowledge if you improve 1% a day"
+  },
+  "category": "Misc",
+  "icon": "BookOpen"
+}
