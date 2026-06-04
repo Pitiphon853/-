@@ -31,9 +31,28 @@ export default function MainPage({ activeSlug = null }: { activeSlug?: string | 
   const [activeCategory, setActiveCategory] = useState<Category>("All");
   const [searchQuery, setSearchQuery] = useState("");
   const allCalcs = getCalcs(lang);
-  const initialCalc = activeSlug ? allCalcs.find(c => c.slug === activeSlug)?.id || null : null;
+  const initialCalc = activeSlug ? (allCalcs.find(c => c.slug === activeSlug || c.id === activeSlug || c.slug === decodeURIComponent(activeSlug) || c.id === decodeURIComponent(activeSlug))?.id || null) : null;
   const [activeCalc, setActiveCalc] = useState<string | null>(initialCalc);
   const [favorites, setFavorites] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (activeSlug) {
+      const decodedSlug = decodeURIComponent(activeSlug);
+      const calc = allCalcs.find(c => 
+        c.slug === activeSlug || 
+        c.id === activeSlug || 
+        c.slug === decodedSlug || 
+        c.id === decodedSlug
+      );
+      if (calc) {
+        setActiveCalc(calc.id);
+      } else {
+        setActiveCalc(null);
+      }
+    } else {
+      setActiveCalc(null);
+    }
+  }, [activeSlug, allCalcs]);
   const { theme, toggleTheme } = useTheme();
   
   const t = dict[lang];
