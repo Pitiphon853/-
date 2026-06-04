@@ -1,0 +1,14 @@
+{
+  "id": "car-loan-flat-rate",
+  "slug": "car-loan-flat-rate",
+  "name": {
+    "TH": "คำนวณค่างวดผ่อนรถใหม่ (Flat Rate)",
+    "EN": "New Car Loan Calculator (Flat Rate)"
+  },
+  "desc": {
+    "TH": "คำนวณค่างวดรถยนต์ป้ายแดง ด้วยดอกเบี้ยแบบ Flat Rate พร้อมยอดจัดและดอกเบี้ยรวม",
+    "EN": "Calculate new car loan monthly payments using a flat interest rate."
+  },
+  "category": "Finance",
+  "icon": "Car"
+}

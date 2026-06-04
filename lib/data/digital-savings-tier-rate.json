@@ -1,0 +1,14 @@
+{
+  "id": "digital-savings-tier-rate",
+  "slug": "digital-savings-tier-rate",
+  "name": {
+    "TH": "คำนวณดอกเบี้ยออมทรัพย์ดิจิทัลแบบขั้นบันได",
+    "EN": "Tier Rate Digital Savings Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณดอกเบี้ยเงินฝากออมทรัพย์ดิจิทัลแบบขั้นบันได (Tier Rate)",
+    "EN": "Calculate interest for digital savings accounts with tiered interest rates."
+  },
+  "category": "Finance",
+  "icon": "PiggyBank"
+}

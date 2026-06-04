@@ -1,0 +1,14 @@
+{
+  "id": "hidden-home-costs",
+  "slug": "hidden-home-costs",
+  "name": {
+    "TH": "คำนวณต้นทุนแฝงซื้อบ้าน",
+    "EN": "Hidden Home Costs Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่าโอน ค่าจดจำนอง อากรแสตมป์ และค่าใช้จ่ายแฝงอื่นๆ ในการซื้อบ้าน",
+    "EN": "Calculate transfer fees, mortgage fees, and other hidden costs of buying a home."
+  },
+  "category": "Finance",
+  "icon": "Home"
+}

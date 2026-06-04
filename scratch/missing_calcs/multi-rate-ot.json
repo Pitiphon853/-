@@ -1,8 +1,0 @@
-{
-  "id": "multi-rate-ot",
-  "slug": "multi-rate-ot",
-  "name": { "TH": "คำนวณ OT หลายอัตรา (1.5x, 2x, 3x)", "EN": "Multi-Rate OT Calculator" },
-  "desc": { "TH": "คำนวณค่าล่วงเวลา (OT) ในอัตรา 1.5 เท่า, 2 เท่า และ 3 เท่า ตามกฎหมายแรงงาน", "EN": "Calculate Overtime (OT) pay at 1.5x, 2x, and 3x rates according to labor laws" },
-  "category": "Business",
-  "icon": "Clock"
-}

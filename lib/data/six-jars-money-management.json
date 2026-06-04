@@ -1,0 +1,14 @@
+{
+  "id": "six-jars-money-management",
+  "slug": "six-jars-money-management",
+  "name": {
+    "TH": "สัดส่วนการจัดการเงินสูตร 6 Jars (หกไห)",
+    "EN": "Six Jars Money Management Calculator"
+  },
+  "desc": {
+    "TH": "แบ่งสัดส่วนการเงินตามทฤษฎี 6 Jars (หกไห) ของ T. Harv Eker",
+    "EN": "Allocate your income based on the Six Jars money management system."
+  },
+  "category": "Finance",
+  "icon": "PieChart"
+}

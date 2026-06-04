@@ -1,0 +1,14 @@
+{
+  "id": "wht-3-percent",
+  "slug": "wht-3-percent",
+  "name": {
+    "TH": "คำนวณภาษีหัก ณ ที่จ่าย 3%",
+    "EN": "3% Withholding Tax Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณภาษีหัก ณ ที่จ่าย 3% สำหรับค่าบริการและรับจ้างทำของ",
+    "EN": "Calculate 3% withholding tax for services."
+  },
+  "category": "Finance",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "wht-5-percent",
+  "slug": "wht-5-percent",
+  "name": {
+    "TH": "คำนวณภาษีหัก ณ ที่จ่าย 5%",
+    "EN": "5% Withholding Tax Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณภาษีหัก ณ ที่จ่าย 5% สำหรับค่าเช่าอสังหาริมทรัพย์ รถยนต์ และเงินรางวัล",
+    "EN": "Calculate 5% withholding tax for rent and prizes."
+  },
+  "category": "Finance",
+  "icon": "Calculator"
+}

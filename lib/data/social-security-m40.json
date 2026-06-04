@@ -1,0 +1,14 @@
+{
+  "id": "social-security-m40",
+  "slug": "social-security-m40",
+  "name": {
+    "TH": "คำนวณเงินสมทบประกันสังคม ม.40",
+    "EN": "Social Security M40 Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณเงินสมทบและดูสิทธิประโยชน์ประกันสังคมมาตรา 40 สำหรับอาชีพอิสระ (ทางเลือก 1-3)",
+    "EN": "Calculate contributions and benefits for Social Security Section 40 (Freelance)"
+  },
+  "category": "Finance",
+  "icon": "UserCheck"
+}

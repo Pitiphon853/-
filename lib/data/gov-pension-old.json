@@ -1,0 +1,14 @@
+{
+  "id": "gov-pension-old",
+  "slug": "gov-pension-old",
+  "name": {
+    "TH": "คำนวณบำนาญสูตรเดิม",
+    "EN": "Old Gov Pension Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณเงินบำนาญข้าราชการสูตรดั้งเดิม (ไม่ได้เป็นสมาชิก กบข.) ใช้เงินเดือนเดือนสุดท้าย",
+    "EN": "Calculate the government pension using the old formula (non-GPF members) based on the final salary."
+  },
+  "category": "Finance",
+  "icon": "ScrollText"
+}

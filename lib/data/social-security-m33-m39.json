@@ -1,0 +1,14 @@
+{
+  "id": "social-security-m33-m39",
+  "slug": "social-security-m33-m39",
+  "name": {
+    "TH": "คำนวณเงินสมทบประกันสังคม ม.33 และ ม.39",
+    "EN": "Social Security M33 & M39 Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณเงินสมทบประกันสังคมมาตรา 33 (พนักงานประจำ) และมาตรา 39 (ผู้ประกันตนโดยสมัครใจ)",
+    "EN": "Calculate social security contributions for Section 33 (Employees) and Section 39 (Voluntary)"
+  },
+  "category": "Finance",
+  "icon": "Building"
+}

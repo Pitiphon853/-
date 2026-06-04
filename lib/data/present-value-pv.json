@@ -1,0 +1,14 @@
+{
+  "id": "present-value-pv",
+  "slug": "present-value-pv",
+  "name": {
+    "TH": "คำนวณมูลค่าเงินปัจจุบัน (Present Value)",
+    "EN": "Present Value (PV) Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณมูลค่าเงินปัจจุบัน (PV) เพื่อหามูลค่าที่แท้จริงของเงินในอนาคต",
+    "EN": "Calculate the present value of a future sum of money given a specific rate of return."
+  },
+  "category": "Finance",
+  "icon": "TrendingDown"
+}

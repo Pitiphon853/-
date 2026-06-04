@@ -1,8 +1,0 @@
-{
-  "id": "working-days-calculator",
-  "slug": "working-days-calculator",
-  "name": { "TH": "คำนวณวันทำงาน", "EN": "Working Days Calculator" },
-  "desc": { "TH": "คำนวณจำนวนวันทำงานในแต่ละเดือน หรือ ช่วงเวลาที่กำหนด (ไม่รวมวันหยุด)", "EN": "Calculate the number of working days in a month or given period" },
-  "category": "Business",
-  "icon": "Briefcase"
-}

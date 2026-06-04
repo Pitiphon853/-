@@ -1,0 +1,14 @@
+{
+  "id": "home-refinance-savings",
+  "slug": "home-refinance-savings",
+  "name": {
+    "TH": "คำนวณยอดรีไฟแนนซ์บ้าน ส่วนต่างความคุ้มค่า",
+    "EN": "Home Refinance Savings Calculator"
+  },
+  "desc": {
+    "TH": "เปรียบเทียบความคุ้มค่าในการรีไฟแนนซ์บ้าน พร้อมคำนวณส่วนต่างค่างวดและจุดคุ้มทุน",
+    "EN": "Compare home refinance savings, calculate payment differences and break-even point."
+  },
+  "category": "Finance",
+  "icon": "Home"
+}

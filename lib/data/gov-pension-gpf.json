@@ -1,0 +1,14 @@
+{
+  "id": "gov-pension-gpf",
+  "slug": "gov-pension-gpf",
+  "name": {
+    "TH": "คำนวณบำนาญ กบข.",
+    "EN": "GPF Pension Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณเงินบำนาญข้าราชการรายเดือน สำหรับสมาชิกกองทุนบำเหน็จบำนาญข้าราชการ (กบข.)",
+    "EN": "Calculate the monthly government pension for Government Pension Fund (GPF) members."
+  },
+  "category": "Finance",
+  "icon": "Landmark"
+}

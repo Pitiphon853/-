@@ -1,8 +1,0 @@
-{
-  "id": "gnh-calculator",
-  "slug": "gnh-calculator",
-  "name": { "TH": "ประเมินความสุขมวลรวม (GNH Proxy)", "EN": "GNH Proxy Calculator" },
-  "desc": { "TH": "แบบประเมินดัชนีความสุขมวลรวมจำลองจากหลากหลายมิติในชีวิต", "EN": "Assess your Gross National Happiness proxy score based on multiple life dimensions." },
-  "category": "Misc",
-  "icon": "Smile"
-}

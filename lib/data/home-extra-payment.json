@@ -1,0 +1,14 @@
+{
+  "id": "home-extra-payment",
+  "slug": "home-extra-payment",
+  "name": {
+    "TH": "คำนวณยอดโปะบ้าน หมดหนี้เร็วขึ้นกี่ปี",
+    "EN": "Home Extra Payment Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณว่าการโปะบ้านเพิ่มต่อเดือน จะช่วยประหยัดดอกเบี้ยและลดเวลาผ่อนได้กี่ปี",
+    "EN": "Calculate how much time and interest you save by making extra payments on your home loan."
+  },
+  "category": "Finance",
+  "icon": "Banknote"
+}

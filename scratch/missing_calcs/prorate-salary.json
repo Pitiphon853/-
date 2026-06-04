@@ -1,8 +1,0 @@
-{
-  "id": "prorate-salary",
-  "slug": "prorate-salary",
-  "name": { "TH": "คำนวณเงินเดือนแบบ Prorate", "EN": "Prorated Salary Calculator" },
-  "desc": { "TH": "คำนวณสัดส่วนเงินเดือนสำหรับพนักงานเข้าใหม่ ลาออกระหว่างเดือน หรือทำงานไม่เต็มเดือน (Prorate)", "EN": "Calculate prorated salary for new joiners or mid-month resignations" },
-  "category": "Business",
-  "icon": "Wallet"
-}

@@ -1,0 +1,14 @@
+{
+  "id": "tax-deduction-insurance",
+  "slug": "tax-deduction-insurance",
+  "name": {
+    "TH": "คำนวณสิทธิลดหย่อนภาษีประกันชีวิต/สุขภาพ",
+    "EN": "Life & Health Insurance Tax Deduction Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณสิทธิการลดหย่อนภาษีสูงสุดจากเบี้ยประกันชีวิต ประกันสุขภาพ และประกันบำนาญ",
+    "EN": "Calculate maximum tax deduction rights from life, health, and pension insurance premiums"
+  },
+  "category": "Finance",
+  "icon": "HeartHandshake"
+}

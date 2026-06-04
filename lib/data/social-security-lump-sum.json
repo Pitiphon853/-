@@ -1,0 +1,14 @@
+{
+  "id": "social-security-lump-sum",
+  "slug": "social-security-lump-sum",
+  "name": {
+    "TH": "คำนวณบำเหน็จชราภาพประกันสังคม",
+    "EN": "Social Security Lump Sum Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณเงินบำเหน็จชราภาพประกันสังคม (เงินก้อน) สำหรับผู้ที่ส่งเงินสมทบไม่ถึง 180 เดือน",
+    "EN": "Calculate the social security old-age lump sum for those who contributed less than 180 months."
+  },
+  "category": "Finance",
+  "icon": "Coins"
+}

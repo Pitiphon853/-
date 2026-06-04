@@ -1,0 +1,14 @@
+{
+  "id": "net-income-after-tax",
+  "slug": "net-income-after-tax",
+  "name": {
+    "TH": "คำนวณเงินได้สุทธิและภาษี",
+    "EN": "Net Income & Tax Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณเงินได้สุทธิหลังหักค่าใช้จ่ายและค่าลดหย่อน พร้อมประเมินภาษีที่ต้องจ่าย",
+    "EN": "Calculate net income after deductions and estimate personal income tax."
+  },
+  "category": "Finance",
+  "icon": "Calculator"
+}

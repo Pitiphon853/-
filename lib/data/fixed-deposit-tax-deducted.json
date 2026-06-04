@@ -1,0 +1,14 @@
+{
+  "id": "fixed-deposit-tax-deducted",
+  "slug": "fixed-deposit-tax-deducted",
+  "name": {
+    "TH": "คำนวณดอกเบี้ยเงินฝากประจำ (หักภาษี 15%)",
+    "EN": "Fixed Deposit Calculator (with 15% Tax)"
+  },
+  "desc": {
+    "TH": "คำนวณดอกเบี้ยเงินฝากประจำ พร้อมหักภาษี ณ ที่จ่าย 15%",
+    "EN": "Calculate fixed deposit interest with 15% withholding tax deduction."
+  },
+  "category": "Finance",
+  "icon": "Landmark"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "pvd-retirement-calculator",
+  "slug": "pvd-retirement-calculator",
+  "name": {
+    "TH": "คำนวณกองทุนสำรองเลี้ยงชีพ PVD",
+    "EN": "Provident Fund Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมประมาณการเงินก้อนกองทุนสำรองเลี้ยงชีพ (Provident Fund) ที่จะได้รับในวันเกษียณอายุ",
+    "EN": "Estimate the total lump sum you will receive from your Provident Fund (PVD) upon retirement."
+  },
+  "category": "Finance",
+  "icon": "Briefcase"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "wht-1-percent",
+  "slug": "wht-1-percent",
+  "name": {
+    "TH": "คำนวณภาษีหัก ณ ที่จ่าย 1%",
+    "EN": "1% Withholding Tax Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณภาษีหัก ณ ที่จ่าย 1% สำหรับค่าขนส่งสินค้า",
+    "EN": "Calculate 1% withholding tax for transportation."
+  },
+  "category": "Finance",
+  "icon": "Calculator"
+}

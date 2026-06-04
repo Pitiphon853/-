@@ -1,0 +1,14 @@
+{
+  "id": "tax-deduction-thaiesg",
+  "slug": "tax-deduction-thaiesg",
+  "name": {
+    "TH": "คำนวณสิทธิลดหย่อนภาษีกองทุน ThaiESG",
+    "EN": "ThaiESG Tax Deduction Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณสิทธิลดหย่อนภาษีจากกองทุน ThaiESG สูงสุด 30% ของรายได้ ไม่เกิน 300,000 บาท (เกณฑ์ใหม่)",
+    "EN": "Calculate tax deduction from ThaiESG up to 30% of income, max 300,000 THB (New rules)"
+  },
+  "category": "Finance",
+  "icon": "Leaf"
+}

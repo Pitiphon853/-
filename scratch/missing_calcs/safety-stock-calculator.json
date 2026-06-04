@@ -1,8 +1,0 @@
-{
-  "id": "safety-stock-calculator",
-  "slug": "safety-stock-calculator",
-  "name": { "TH": "คำนวณ Safety Stock", "EN": "Safety Stock Calculator" },
-  "desc": { "TH": "คำนวณสต็อกปลอดภัย (Safety Stock) เพื่อป้องกันปัญหาสินค้าขาดมือ", "EN": "Calculate safety stock to prevent stockouts and manage inventory efficiently." },
-  "category": "Business",
-  "icon": "ShieldCheck"
-}

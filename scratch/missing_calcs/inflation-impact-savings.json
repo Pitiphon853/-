@@ -1,8 +1,0 @@
-{
-  "id": "inflation-impact-savings",
-  "slug": "inflation-impact-savings",
-  "name": { "TH": "คำนวณผลกระทบเงินเฟ้อต่อเงินออม", "EN": "Inflation Impact on Savings" },
-  "desc": { "TH": "ประเมินมูลค่าเงินออมและอำนาจซื้อที่ลดลงจากอัตราเงินเฟ้อในอนาคต", "EN": "Assess the impact of inflation on the purchasing power of your savings." },
-  "category": "Finance",
-  "icon": "TrendingDown"
-}

@@ -1,8 +1,0 @@
-{
-  "id": "warehousing-cost",
-  "slug": "warehousing-cost",
-  "name": { "TH": "คำนวณค่าจัดเก็บในคลังสินค้า", "EN": "Warehousing Cost Calculator" },
-  "desc": { "TH": "คำนวณต้นทุนการจัดเก็บสินค้าในคลังสินค้า รวมถึงค่าฝากเก็บและค่าดำเนินการ", "EN": "Calculate warehousing and storage costs, including storage fees and handling charges." },
-  "category": "Business",
-  "icon": "Warehouse"
-}

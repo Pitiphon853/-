@@ -1,8 +1,0 @@
-{
-  "id": "sleep-debt-calculator",
-  "slug": "sleep-debt-calculator",
-  "name": { "TH": "คำนวณหนี้การนอน (Sleep Debt)", "EN": "Sleep Debt Calculator" },
-  "desc": { "TH": "คำนวณชั่วโมงการนอนที่ขาดหายไปและวิธีใช้หนี้การนอน", "EN": "Calculate accumulated sleep debt and how to recover" },
-  "category": "Health",
-  "icon": "Moon"
-}

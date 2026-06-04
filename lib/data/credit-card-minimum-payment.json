@@ -1,0 +1,14 @@
+{
+  "id": "credit-card-minimum-payment",
+  "slug": "credit-card-minimum-payment",
+  "name": {
+    "TH": "คำนวณระยะเวลาปลดหนี้บัตรเครดิต (จ่ายขั้นต่ำ)",
+    "EN": "Credit Card Minimum Payment Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณระยะเวลาในการปลดหนี้และดอกเบี้ยที่ต้องจ่าย เมื่อคุณเลือกจ่ายแค่ขั้นต่ำของบัตรเครดิต",
+    "EN": "Calculate payoff time and interest paid when making only minimum payments on your credit card."
+  },
+  "category": "Finance",
+  "icon": "CreditCard"
+}

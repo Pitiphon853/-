@@ -1,8 +1,0 @@
-{
-  "id": "reorder-point-calculator",
-  "slug": "reorder-point-calculator",
-  "name": { "TH": "คำนวณจุดสั่งซื้อใหม่ (Reorder Point)", "EN": "Reorder Point Calculator" },
-  "desc": { "TH": "คำนวณจุดสั่งซื้อสินค้าใหม่ (ROP) เพื่อให้มีสินค้าพอขายตลอดเวลาและลดต้นทุนจม", "EN": "Calculate the Reorder Point (ROP) to ensure optimal inventory levels." },
-  "category": "Business",
-  "icon": "ArrowDownToLine"
-}

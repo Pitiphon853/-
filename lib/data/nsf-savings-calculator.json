@@ -1,0 +1,14 @@
+{
+  "id": "nsf-savings-calculator",
+  "slug": "nsf-savings-calculator",
+  "name": {
+    "TH": "คำนวณเงินออม กอช.",
+    "EN": "NSF Savings Calculator"
+  },
+  "desc": {
+    "TH": "ประมาณการเงินบำนาญและเงินสะสมกองทุนออมแห่งชาติ (กอช.) เมื่ออายุครบ 60 ปี",
+    "EN": "Estimate your pension and total savings in the National Savings Fund (NSF) at age 60."
+  },
+  "category": "Finance",
+  "icon": "PiggyBank"
+}

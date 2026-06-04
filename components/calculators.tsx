@@ -477,6 +477,36 @@ import WillpowerDepletion from "./calcs/willpower-depletion";
 import WorkLifeBalanceScore from "./calcs/work-life-balance-score";
 import WorkingDaysCalculatorNew from "./calcs/working-days-calculator";
 import WpmProductivityCalculator from "./calcs/wpm-productivity";
+import CarLoanFlatRate from "./calcs/car-loan-flat-rate";
+import CarLoanUsedCar from "./calcs/car-loan-used-car";
+import CreditCardMinimumPayment from "./calcs/credit-card-minimum-payment";
+import DigitalSavingsTierRate from "./calcs/digital-savings-tier-rate";
+import FixedDepositCalculator from "./calcs/fixed-deposit-tax-deducted";
+import FutureValueCalculator from "./calcs/future-value-fv";
+import GovPensionGpf from "./calcs/gov-pension-gpf";
+import GovPensionOld from "./calcs/gov-pension-old";
+import HiddenHomeCosts from "./calcs/hidden-home-costs";
+import HomeExtraPayment from "./calcs/home-extra-payment";
+import HomeRefinanceSavings from "./calcs/home-refinance-savings";
+import NetIncomeAfterTaxCalculator from "./calcs/net-income-after-tax";
+import NsfSavingsCalculator from "./calcs/nsf-savings-calculator";
+import PresentValueCalculator from "./calcs/present-value-pv";
+import PvdRetirementCalculator from "./calcs/pvd-retirement-calculator";
+import SeverancePayCalculator from "./calcs/severance-pay-calculator";
+import SixJarsCalculator from "./calcs/six-jars-money-management";
+import SocialSecurityLumpSum from "./calcs/social-security-lump-sum";
+import SocialSecurityM33M39 from "./calcs/social-security-m33-m39";
+import SocialSecurityM40 from "./calcs/social-security-m40";
+import SocialSecurityPension from "./calcs/social-security-pension";
+import TaxDeductionDonationCalculator from "./calcs/tax-deduction-donation";
+import TaxDeductionInsurance from "./calcs/tax-deduction-insurance";
+import TaxDeductionRMF from "./calcs/tax-deduction-rmf";
+import TaxDeductionSSF from "./calcs/tax-deduction-ssf";
+import TaxDeductionThaiESG from "./calcs/tax-deduction-thaiesg";
+import WHT1PercentCalculator from "./calcs/wht-1-percent";
+import WHT2PercentCalculator from "./calcs/wht-2-percent";
+import WHT3PercentCalculator from "./calcs/wht-3-percent";
+import WHT5PercentCalculator from "./calcs/wht-5-percent";
 import {
   WireGaugeSizing,
   FuseBreakerSizing,
@@ -1005,6 +1035,37 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "work-life-balance-score") return <WorkLifeBalanceScore lang={lang} />;
   if (activeCalc === "working-days-calculator") return <WorkingDaysCalculatorNew lang={lang} />;
   if (activeCalc === "wpm-productivity") return <WpmProductivityCalculator lang={lang} />;
+
+    if (activeCalc === "car-loan-flat-rate") return <CarLoanFlatRate lang={lang} />;
+  if (activeCalc === "car-loan-used-car") return <CarLoanUsedCar lang={lang} />;
+  if (activeCalc === "credit-card-minimum-payment") return <CreditCardMinimumPayment lang={lang} />;
+  if (activeCalc === "digital-savings-tier-rate") return <DigitalSavingsTierRate lang={lang} />;
+  if (activeCalc === "fixed-deposit-tax-deducted") return <FixedDepositCalculator lang={lang} />;
+  if (activeCalc === "future-value-fv") return <FutureValueCalculator lang={lang} />;
+  if (activeCalc === "gov-pension-gpf") return <GovPensionGpf lang={lang} />;
+  if (activeCalc === "gov-pension-old") return <GovPensionOld lang={lang} />;
+  if (activeCalc === "hidden-home-costs") return <HiddenHomeCosts lang={lang} />;
+  if (activeCalc === "home-extra-payment") return <HomeExtraPayment lang={lang} />;
+  if (activeCalc === "home-refinance-savings") return <HomeRefinanceSavings lang={lang} />;
+  if (activeCalc === "net-income-after-tax") return <NetIncomeAfterTaxCalculator lang={lang} />;
+  if (activeCalc === "nsf-savings-calculator") return <NsfSavingsCalculator lang={lang} />;
+  if (activeCalc === "present-value-pv") return <PresentValueCalculator lang={lang} />;
+  if (activeCalc === "pvd-retirement-calculator") return <PvdRetirementCalculator lang={lang} />;
+  if (activeCalc === "severance-pay-calculator") return <SeverancePayCalculator lang={lang} />;
+  if (activeCalc === "six-jars-money-management") return <SixJarsCalculator lang={lang} />;
+  if (activeCalc === "social-security-lump-sum") return <SocialSecurityLumpSum lang={lang} />;
+  if (activeCalc === "social-security-m33-m39") return <SocialSecurityM33M39 lang={lang} />;
+  if (activeCalc === "social-security-m40") return <SocialSecurityM40 lang={lang} />;
+  if (activeCalc === "social-security-pension") return <SocialSecurityPension lang={lang} />;
+  if (activeCalc === "tax-deduction-donation") return <TaxDeductionDonationCalculator lang={lang} />;
+  if (activeCalc === "tax-deduction-insurance") return <TaxDeductionInsurance lang={lang} />;
+  if (activeCalc === "tax-deduction-rmf") return <TaxDeductionRMF lang={lang} />;
+  if (activeCalc === "tax-deduction-ssf") return <TaxDeductionSSF lang={lang} />;
+  if (activeCalc === "tax-deduction-thaiesg") return <TaxDeductionThaiESG lang={lang} />;
+  if (activeCalc === "wht-1-percent") return <WHT1PercentCalculator lang={lang} />;
+  if (activeCalc === "wht-2-percent") return <WHT2PercentCalculator lang={lang} />;
+  if (activeCalc === "wht-3-percent") return <WHT3PercentCalculator lang={lang} />;
+  if (activeCalc === "wht-5-percent") return <WHT5PercentCalculator lang={lang} />;
 
   return (
     <div className="text-center p-12 text-gray-500">

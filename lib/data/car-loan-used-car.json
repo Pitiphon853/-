@@ -1,0 +1,14 @@
+{
+  "id": "car-loan-used-car",
+  "slug": "car-loan-used-car",
+  "name": {
+    "TH": "คำนวณค่างวดรถมือสอง (รวม VAT 7%)",
+    "EN": "Used Car Loan Calculator (incl. VAT)"
+  },
+  "desc": {
+    "TH": "คำนวณค่างวดผ่อนรถยนต์มือสอง ที่ต้องบวก VAT 7% ในแต่ละงวด",
+    "EN": "Calculate used car loan payments, including the mandatory 7% VAT."
+  },
+  "category": "Finance",
+  "icon": "CarFront"
+}

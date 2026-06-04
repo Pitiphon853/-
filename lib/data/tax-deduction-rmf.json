@@ -1,0 +1,14 @@
+{
+  "id": "tax-deduction-rmf",
+  "slug": "tax-deduction-rmf",
+  "name": {
+    "TH": "คำนวณสิทธิลดหย่อนภาษีกองทุน RMF",
+    "EN": "RMF Tax Deduction Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณสิทธิลดหย่อนภาษีจากกองทุนรวมเพื่อการเลี้ยงชีพ (RMF) สูงสุด 30% ของรายได้ ไม่เกิน 500,000 บาท",
+    "EN": "Calculate tax deduction from RMF up to 30% of income, max 500,000 THB"
+  },
+  "category": "Finance",
+  "icon": "Briefcase"
+}

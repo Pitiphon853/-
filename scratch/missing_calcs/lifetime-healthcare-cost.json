@@ -1,8 +1,0 @@
-{
-  "id": "lifetime-healthcare-cost",
-  "slug": "lifetime-healthcare-cost",
-  "name": { "TH": "คำนวณต้นทุนดูแลสุขภาพตลอดชีวิต", "EN": "Lifetime Healthcare Cost" },
-  "desc": { "TH": "คำนวณค่าใช้จ่ายด้านสุขภาพและค่ารักษาพยาบาลตลอดช่วงอายุขัยที่เหลืออยู่", "EN": "Calculate the estimated healthcare costs for the rest of your life." },
-  "category": "Finance",
-  "icon": "HeartPulse"
-}

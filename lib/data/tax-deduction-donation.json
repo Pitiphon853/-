@@ -1,0 +1,14 @@
+{
+  "id": "tax-deduction-donation",
+  "slug": "tax-deduction-donation",
+  "name": {
+    "TH": "คำนวณลดหย่อนภาษีเงินบริจาค",
+    "EN": "Donation Tax Deduction Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณสิทธิประโยชน์ภาษีเงินบริจาคทั่วไป (1 เท่า) และบริจาคเพื่อการศึกษา/โรงพยาบาล (2 เท่า)",
+    "EN": "Calculate tax deduction limits for general and double donations."
+  },
+  "category": "Finance",
+  "icon": "Calculator"
+}

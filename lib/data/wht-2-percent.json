@@ -1,0 +1,14 @@
+{
+  "id": "wht-2-percent",
+  "slug": "wht-2-percent",
+  "name": {
+    "TH": "คำนวณภาษีหัก ณ ที่จ่าย 2%",
+    "EN": "2% Withholding Tax Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณภาษีหัก ณ ที่จ่าย 2% สำหรับค่าโฆษณา",
+    "EN": "Calculate 2% withholding tax for advertising."
+  },
+  "category": "Finance",
+  "icon": "Calculator"
+}

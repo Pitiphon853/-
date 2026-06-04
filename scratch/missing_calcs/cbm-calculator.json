@@ -1,8 +1,0 @@
-{
-  "id": "cbm-calculator",
-  "slug": "cbm-calculator",
-  "name": { "TH": "คำนวณ CBM ลูกบาศก์เมตร", "EN": "CBM Calculator" },
-  "desc": { "TH": "เครื่องมือคำนวณ CBM (Cubic Meter) สำหรับประเมินปริมาตรสินค้าและค่าขนส่ง", "EN": "CBM (Cubic Meter) calculator for estimating cargo volume and shipping costs." },
-  "category": "Business",
-  "icon": "Box"
-}

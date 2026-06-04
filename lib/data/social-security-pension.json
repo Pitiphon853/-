@@ -1,0 +1,14 @@
+{
+  "id": "social-security-pension",
+  "slug": "social-security-pension",
+  "name": {
+    "TH": "คำนวณบำนาญชราภาพประกันสังคม",
+    "EN": "Social Security Pension Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณเงินบำนาญชราภาพประกันสังคมรายเดือนที่คุณจะได้รับเมื่อเกษียณอายุ",
+    "EN": "Calculate the monthly social security old-age pension you will receive upon retirement."
+  },
+  "category": "Finance",
+  "icon": "PiggyBank"
+}

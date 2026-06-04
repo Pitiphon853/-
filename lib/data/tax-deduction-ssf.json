@@ -1,0 +1,14 @@
+{
+  "id": "tax-deduction-ssf",
+  "slug": "tax-deduction-ssf",
+  "name": {
+    "TH": "คำนวณสิทธิลดหย่อนภาษีกองทุน SSF",
+    "EN": "SSF Tax Deduction Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณสิทธิลดหย่อนภาษีจากกองทุนรวมเพื่อการออม (SSF) สูงสุด 30% ของรายได้ ไม่เกิน 200,000 บาท",
+    "EN": "Calculate tax deduction from SSF up to 30% of income, max 200,000 THB"
+  },
+  "category": "Finance",
+  "icon": "TrendingUp"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "future-value-fv",
+  "slug": "future-value-fv",
+  "name": {
+    "TH": "คำนวณมูลค่าเงินในอนาคต (Future Value)",
+    "EN": "Future Value (FV) Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณมูลค่าเงินในอนาคต (FV) จากเงินต้น ดอกเบี้ย และระยะเวลา",
+    "EN": "Calculate the future value of an investment based on initial amount, interest, and time."
+  },
+  "category": "Finance",
+  "icon": "TrendingUp"
+}
