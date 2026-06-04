@@ -1,0 +1,14 @@
+{
+  "id": "social-media-image-size",
+  "slug": "social-media-image-size",
+  "name": {
+    "TH": "ขนาดรูปภาพสำหรับ Social Media",
+    "EN": "Social Media Image Size Guide"
+  },
+  "desc": {
+    "TH": "ค้นหาขนาดรูปภาพที่เหมาะสมสำหรับ Facebook, Instagram, X, YouTube, TikTok, LINE",
+    "EN": "Find the recommended image sizes for Facebook, Instagram, X, YouTube, TikTok, LINE"
+  },
+  "category": "Utility",
+  "icon": "Image"
+}

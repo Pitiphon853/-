@@ -1,0 +1,14 @@
+{
+  "id": "online-course-roi",
+  "slug": "online-course-roi",
+  "name": {
+    "TH": "ค่าใช้จ่ายเรียน Online Course ROI",
+    "EN": "Online Course ROI Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณผลตอบแทนจากการลงทุนเรียนคอร์สออนไลน์ รวมค่าเสียโอกาสและระยะเวลาคืนทุน",
+    "EN": "Calculate the return on investment for online courses including opportunity cost and payback period"
+  },
+  "category": "Misc",
+  "icon": "BookOpen"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "brooks-law-team-size",
+  "slug": "brooks-law-team-size",
+  "name": { "TH": "Brook's Law ขนาดทีมที่เหมาะสม", "EN": "Brook's Law Team Size Calculator" },
+  "desc": { "TH": "คำนวณขนาดทีมที่เหมาะสมตามกฎ Brook's Law วิเคราะห์ communication overhead และประสิทธิภาพทีม", "EN": "Calculate optimal team size based on Brook's Law, analyzing communication overhead and team efficiency" },
+  "category": "Technology",
+  "icon": "Calculator"
+}

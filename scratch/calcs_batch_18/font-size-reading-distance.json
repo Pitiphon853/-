@@ -1,0 +1,14 @@
+{
+  "id": "font-size-reading-distance",
+  "slug": "font-size-reading-distance",
+  "name": {
+    "TH": "Font Size ระยะการอ่านที่เหมาะสม",
+    "EN": "Font Size & Reading Distance Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณขนาดตัวอักษรที่เหมาะสมตามระยะการอ่าน สำหรับจอ สิ่งพิมพ์ และป้าย",
+    "EN": "Calculate appropriate font sizes based on reading distance for screen, print, and signage"
+  },
+  "category": "Utility",
+  "icon": "Type"
+}

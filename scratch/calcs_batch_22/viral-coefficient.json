@@ -1,0 +1,14 @@
+{
+  "id": "viral-coefficient",
+  "slug": "viral-coefficient",
+  "name": {
+    "TH": "Viral Coefficient แอปโตเร็วแค่ไหน",
+    "EN": "Viral Coefficient Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณ K-Factor และคาดการณ์การเติบโตแบบ Viral ของแอปหรือผลิตภัณฑ์",
+    "EN": "Calculate K-Factor and project viral growth of your app or product"
+  },
+  "category": "Technology",
+  "icon": "Share2"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "solar-inverter-sizing",
+  "slug": "solar-inverter-sizing",
+  "name": {
+    "TH": "ขนาด Inverter Solar กำลังวัตต์",
+    "EN": "Solar Inverter Sizing Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณขนาด Inverter ที่เหมาะสมกับแผงโซลาร์และโหลดไฟฟ้าบ้าน",
+    "EN": "Calculate the right inverter size for your solar panel system and home load"
+  },
+  "category": "Utility",
+  "icon": "Zap"
+}

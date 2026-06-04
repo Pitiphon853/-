@@ -1,0 +1,8 @@
+{
+  "id": "hs-code-import-tax",
+  "slug": "hs-code-import-tax",
+  "name": { "TH": "HS Code ภาษีนำเข้า", "EN": "HS Code Import Tax Calculator" },
+  "desc": { "TH": "ค้นหาหมวดสินค้า HS Code และคำนวณภาษีนำเข้าเบื้องต้น", "EN": "Search HS Code categories and estimate import tax" },
+  "category": "Business",
+  "icon": "Calculator"
+}

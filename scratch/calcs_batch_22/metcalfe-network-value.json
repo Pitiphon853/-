@@ -1,0 +1,14 @@
+{
+  "id": "metcalfe-network-value",
+  "slug": "metcalfe-network-value",
+  "name": {
+    "TH": "Metcalfe's Law Network Value",
+    "EN": "Metcalfe's Law Network Value Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณมูลค่าเครือข่ายตามกฎของ Metcalfe พร้อมคาดการณ์การเติบโต",
+    "EN": "Calculate network value using Metcalfe's Law with growth projections"
+  },
+  "category": "Technology",
+  "icon": "Network"
+}

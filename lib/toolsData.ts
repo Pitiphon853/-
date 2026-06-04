@@ -1,1258 +1,365 @@
-import * as Icons from "lucide-react";
+import { Heart, Zap, Utensils, Baby, BookOpen, Sparkles, Star, Home, Coins, Plane, Car, Receipt, Calculator, Hash, Briefcase, Clock, Lightbulb } from "lucide-react";
+import { Lang } from "../components/dictionary";
 
-export type Lang = "TH" | "EN";
+export const getCalcs = (lang: Lang) => {
+    return [
 
-export type Calculator = {
-  id: string;
-  slug: string;
-  name: string;
-  desc: string;
-  category: string;
-  icon: any;
+    // Health & Diet (Pink)
+    { id: "bmi", slug: "คำนวณ-bmi", name: lang==="TH"?"คำนวณ BMI":"BMI Calculator", desc: lang==="TH"?"ดัชนีมวลกาย":"Body Mass Index", category: "Health", icon: Heart },
+    { id: "sleep", slug: "คำนวณ-sleep", name: lang==="TH"?"การนอนหลับ":"Sleep Cycle", desc: lang==="TH"?"คำนวณเวลานอน":"Sleep Time Calculator", category: "Health", icon: Heart },
+    { id: "tdee", slug: "คำนวณ-tdee", name: lang==="TH"?"คำนวณ TDEE":"TDEE Calculator", desc: lang==="TH"?"พลังงานที่ใช้ต่อวัน":"Daily Energy", category: "Health", icon: Zap },
+    { id: "water-intake", slug: "คำนวณ-water-intake", name: lang==="TH"?"ปริมาณน้ำดื่ม":"Water Intake", desc: lang==="TH"?"ดื่มน้ำวันละกี่ลิตร":"Daily Water", category: "Health", icon: Heart },
+    { id: "food-random", slug: "คำนวณ-food-random", name: lang==="TH"?"สุ่มเมนูอาหาร":"Food Randomizer", desc: lang==="TH"?"สุ่มตามแคลอรี่":"By Calorie Limit", category: "Health", icon: Utensils },
+    { id: "exercise-calories", slug: "คำนวณ-exercise-calories", name: lang==="TH"?"แคลอรี่ออกกำลังกาย":"Exercise Calories", desc: lang==="TH"?"เผาผลาญจากการออกกำลัง":"Calories Burned", category: "Health", icon: Zap },
+    { id: "protein-daily", slug: "คำนวณ-protein-daily", name: lang==="TH"?"โปรตีนที่ควรได้รับ":"Daily Protein", desc: lang==="TH"?"ตามเป้าหมาย/น้ำหนัก":"Protein Needs", category: "Health", icon: Utensils },
+    { id: "body-fat", slug: "คำนวณ-body-fat", name: lang==="TH"?"เปอร์เซ็นต์ไขมัน":"Body Fat %", desc: lang==="TH"?"US Navy Method":"Body Fat %", category: "Health", icon: Heart },
+    { id: "whr", slug: "คำนวณ-whr", name: lang==="TH"?"เอวต่อสะโพก":"WHR", desc: lang==="TH"?"ประเมินความเสี่ยงโรค":"Waist-Hip Ratio", category: "Health", icon: Heart },
+    { id: "heart-rate-zone", slug: "คำนวณ-heart-rate-zone", name: lang==="TH"?"โซนหัวใจ":"Heart Rate Zones", desc: lang==="TH"?"อัตราการเต้นเป้าหมาย":"Target HR Zones", category: "Health", icon: Heart },
+    { id: "macro", slug: "คำนวณ-macro", name: lang==="TH"?"สัดส่วนสารอาหาร":"Macro Split", desc: lang==="TH"?"คาร์บ/โปรตีน/ไขมัน":"Carb/Protein/Fat", category: "Health", icon: Utensils },
+    { id: "blood-sugar", slug: "คำนวณ-blood-sugar", name: lang==="TH"?"ค่าน้ำตาลในเลือด":"Blood Sugar", desc: lang==="TH"?"แปลงหน่วย mg ↔ mmol":"mg/dL ↔ mmol/L", category: "Health", icon: Heart },
+    { id: "ibw", slug: "คำนวณ-ibw", name: lang==="TH"?"น้ำหนักอุดมคติ":"Ideal Body Weight", desc: lang==="TH"?"IBW (Devine, etc.)":"IBW Formulas", category: "Health", icon: Heart },
+    { id: "steps-converter", slug: "คำนวณ-steps-converter", name: lang==="TH"?"แปลงก้าวเดิน":"Steps Converter", desc: lang==="TH"?"ก้าว ↔ ระยะทาง ↔ แคล":"Steps to Distance", category: "Health", icon: Heart },
+    { id: "1rm", slug: "คำนวณ-1rm", name: lang==="TH"?"คำนวณ 1RM":"1RM Calculator", desc: lang==="TH"?"น้ำหนักยกสูงสุด":"One Rep Max", category: "Health", icon: Zap },
+    { id: "pace", slug: "คำนวณ-pace", name: lang==="TH"?"Pace วิ่ง":"Pace Calculator", desc: lang==="TH"?"คำนวณความเร็ววิ่ง":"Running Pace", category: "Health", icon: Zap },
+    
+    // Sports (Orange)
+    { id: "vo2-max", slug: "คำนวณ-vo2-max", name: lang==="TH"?"คำนวณ VO2 Max":"VO2 Max", desc: lang==="TH"?"ประเมินความฟิต":"Cardio Fitness", category: "Sports", icon: Zap },
+    { id: "swim-pace", slug: "คำนวณ-swim-pace", name: lang==="TH"?"Pace ว่ายน้ำ":"Swim Pace", desc: lang==="TH"?"ความเร็ว 100m":"100m Pace", category: "Sports", icon: Zap },
+    { id: "cycling-power", slug: "คำนวณ-cycling-power", name: lang==="TH"?"โซนปั่นจักรยาน":"Cycling Power Zones", desc: lang==="TH"?"FTP Zones":"Power Zones", category: "Sports", icon: Zap },
+    { id: "race-predictor", slug: "คำนวณ-race-predictor", name: lang==="TH"?"ทำนายเวลาวิ่งแข่ง":"Race Predictor", desc: lang==="TH"?"มาราธอน ฮาล์ฟ":"Marathon/Half", category: "Sports", icon: Zap },
+    { id: "lifting-pyramid", slug: "คำนวณ-lifting-pyramid", name: lang==="TH"?"ตาราง Squat/Deadlift":"Squat/Deadlift Pyramid", desc: lang==="TH"?"น้ำหนักเซ็ตพีระมิด":"Pyramid Sets", category: "Sports", icon: Zap },
+    { id: "rowing-split", slug: "คำนวณ-rowing-split", name: lang==="TH"?"Rowing Split Time":"Rowing Split Time", desc: lang==="TH"?"ความเร็วพายเรือ":"Erg/Rowing Split", category: "Sports", icon: Zap },
+    { id: "carb-endurance", slug: "คำนวณ-carb-endurance", name: lang==="TH"?"คาร์บโหลด (Endurance)":"Carb Loading", desc: lang==="TH"?"พลังงานก่อนแข่ง":"Carbs for Race", category: "Sports", icon: Utensils },
+    
+    // Additional Health
+    { id: "fiber-intake", slug: "คำนวณ-fiber-intake", name: lang==="TH"?"คำนวณ Fiber ต่อวัน":"Fiber Intake", desc: lang==="TH"?"ใยอาหารที่ควรได้รับ":"Daily Fiber", category: "Health", icon: Utensils },
+    { id: "vitamin-d", slug: "คำนวณ-vitamin-d", name: lang==="TH"?"รับ Vitamin D จากแสงแดด":"Vitamin D from Sun", desc: lang==="TH"?"เวลาตากแดด":"Sun Exposure", category: "Health", icon: Zap },
+    { id: "bmi-kids", slug: "คำนวณ-bmi-kids", name: lang==="TH"?"BMI เด็กตาม Percentile":"Kids BMI Percentile", desc: lang==="TH"?"เด็กโตตามเกณฑ์ไหม":"Child Growth", category: "Health", icon: Baby },
+
+    // Family (Pink)
+    { id: "child-height", slug: "คำนวณ-child-height", name: lang==="TH"?"ส่วนสูงลูก":"Child Height", desc: lang==="TH"?"ทำนายส่วนสูง":"Height Predictor", category: "Family", icon: Baby },
+    { id: "pregnancy-due", slug: "คำนวณ-pregnancy-due", name: lang==="TH"?"กำหนดคลอด":"Due Date", desc: lang==="TH"?"ทำนายกำหนดคลอด":"Pregnancy Due Date", category: "Family", icon: Baby },
+    { id: "ovulation", slug: "คำนวณ-ovulation", name: lang==="TH"?"วันตกไข่":"Ovulation", desc: lang==="TH"?"คำนวณวันไข่ตก":"Fertility Window", category: "Family", icon: Heart },
+    { id: "blood-type", slug: "คำนวณ-blood-type", name: lang==="TH"?"ทำนายกรุ๊ปเลือด":"Blood Type", desc: lang==="TH"?"กรุ๊ปเลือดลูก":"Child Blood Predictor", category: "Family", icon: Heart },
+    { id: "zodiac", slug: "คำนวณ-zodiac", name: lang==="TH"?"ราศีเกิด":"Zodiac", desc: lang==="TH"?"คำนวณราศี":"Star Sign", category: "Family", icon: BookOpen },
+    { id: "horoscope", slug: "คำนวณ-horoscope", name: lang==="TH"?"ดูดวงและโชคชะตา":"Horoscope", desc: lang==="TH"?"ทำนายพื้นดวง":"Fortune Teller", category: "Fortune", icon: BookOpen },
+    { id: "tarot", slug: "คำนวณ-tarot", name: lang==="TH"?"ดูดวงไพ่ยิปซี":"Tarot Reading", desc: lang==="TH"?"อดีต ปัจจุบัน อนาคต":"3-Card Spread", category: "Fortune", icon: Sparkles },
+    { id: "lenormand", slug: "คำนวณ-lenormand", name: lang==="TH"?"ไพ่เลอนอร์มองด์":"Lenormand", desc: lang==="TH"?"แม่นยำ ตรงไปตรงมา":"3-Card Spread", category: "Fortune", icon: Sparkles },
+    { id: "oracle", slug: "คำนวณ-oracle", name: lang==="TH"?"ไพ่ออราเคิล":"Oracle Cards", desc: lang==="TH"?"คำแนะนำ เยียวยาใจ":"Daily Draw", category: "Fortune", icon: Heart },
+    { id: "playing-card", slug: "คำนวณ-playing-card", name: lang==="TH"?"ดูดวงไพ่ป๊อก":"Playing Cards", desc: lang==="TH"?"การงาน เงิน ความรัก":"Cartomancy", category: "Fortune", icon: Star },
+    { id: "kipper", slug: "คำนวณ-kipper", name: lang==="TH"?"ไพ่คิปเปอร์":"Kipper Cards", desc: lang==="TH"?"เจาะลึกความสัมพันธ์":"Social & People", category: "Fortune", icon: BookOpen },
+    { id: "pet-age", slug: "คำนวณ-pet-age", name: lang==="TH"?"อายุสัตว์เลี้ยง":"Pet Age", desc: lang==="TH"?"เทียบอายุคน":"Human Years", category: "Family", icon: BookOpen },
+    { id: "fetal-weight", slug: "คำนวณ-fetal-weight", name: lang==="TH"?"น้ำหนักทารกในครรภ์":"Fetal Weight", desc: lang==="TH"?"ตามอายุครรภ์ (สัปดาห์)":"WHO Fetal Dev", category: "Family", icon: Baby },
+    { id: "child-cost", slug: "คำนวณ-child-cost", name: lang==="TH"?"ค่าเลี้ยงลูก":"Child Raising Cost", desc: lang==="TH"?"ประมาณการต่อปี":"Yearly Cost", category: "Family", icon: Coins },
+    { id: "child-milestone", slug: "คำนวณ-child-milestone", name: lang==="TH"?"พัฒนาการเด็ก":"Child Milestones", desc: lang==="TH"?"ตามช่วงอายุเดือน":"Development Check", category: "Family", icon: Baby },
+    { id: "wedding-budget", slug: "คำนวณ-wedding-budget", name: lang==="TH"?"ค่าใช้จ่ายแต่งงาน":"Wedding Budget", desc: lang==="TH"?"แจกแจงงบแต่งงาน":"Wedding Costs", category: "Family", icon: Heart },
+    { id: "newborn-cost", slug: "คำนวณ-newborn-cost", name: lang==="TH"?"ค่าใช้จ่ายทารกแรกเกิด":"Newborn Cost", desc: lang==="TH"?"ปีแรกต้องเตรียมเงินเท่าไหร่":"First Year Cost", category: "Family", icon: Baby },
+    { id: "pet-cost", slug: "คำนวณ-pet-cost", name: lang==="TH"?"ค่าใช้จ่ายสัตว์เลี้ยง/ปี":"Pet Cost", desc: lang==="TH"?"หมา/แมว":"Dog & Cat", category: "Family", icon: Heart },
+    { id: "food-expiration", slug: "คำนวณ-food-expiration", name: lang==="TH"?"วันหมดอายุอาหาร/นม":"Food/Milk Expiration", desc: lang==="TH"?"ตู้เย็น/ช่องฟรีซเก็บได้กี่วัน":"Fridge Storage Time", category: "Family", icon: Home },
+    { id: "rent-vs-buy", slug: "คำนวณ-rent-vs-buy", name: lang==="TH"?"เช่า vs ซื้อบ้าน":"Rent vs Buy Home", desc: lang==="TH"?"เปรียบเทียบความคุ้มค่า":"Financial Comparison", category: "Family", icon: Home },
+
+    // Travel (Cyan)
+    { id: "time-zone", slug: "คำนวณ-time-zone", name: lang==="TH"?"แปลงเวลาโลก":"Time Zone", desc: lang==="TH"?"เทียบเวลาประเทศต่างๆ":"Global Time", category: "Travel", icon: BookOpen },
+    { id: "travel-budget", slug: "คำนวณ-travel-budget", name: lang==="TH"?"งบท่องเที่ยว":"Travel Budget", desc: lang==="TH"?"คำนวณค่าใช้จ่ายทริป":"Trip Expenses", category: "Travel", icon: Coins },
+    { id: "flight-time", slug: "คำนวณ-flight-time", name: lang==="TH"?"เวลาบิน":"Flight Time", desc: lang==="TH"?"เวลาเดินทางเครื่องบิน":"Plane Travel Time", category: "Travel", icon: Plane },
+    { id: "packing-list", slug: "คำนวณ-packing-list", name: lang==="TH"?"จัดกระเป๋าเดินทาง":"Packing List", desc: lang==="TH"?"เช็กลิสต์จัดกระเป๋า":"Luggage Checklist", category: "Travel", icon: BookOpen },
+    { id: "road-trip", slug: "คำนวณ-road-trip", name: lang==="TH"?"ค่าน้ำมัน Road Trip":"Road Trip", desc: lang==="TH"?"ค่าแก๊ส/ทางด่วน":"Fuel & Tolls", category: "Travel", icon: Car },
+    { id: "baggage-weight", slug: "คำนวณ-baggage-weight", name: lang==="TH"?"เช็คน้ำหนักกระเป๋า":"Baggage Weight", desc: lang==="TH"?"เทียบลิมิตสายการบิน":"Baggage Fee Checker", category: "Travel", icon: Plane },
+    { id: "jet-lag", slug: "คำนวณ-jet-lag", name: lang==="TH"?"Jet Lag":"Jet Lag", desc: lang==="TH"?"เวลาปรับตัวข้ามโซน":"Timezone Recovery", category: "Travel", icon: Plane },
+    { id: "roaming-cost", slug: "คำนวณ-roaming-cost", name: lang==="TH"?"ค่า Roaming":"Roaming Cost", desc: lang==="TH"?"ประเมินค่าเน็ตตปท.":"Data Roaming", category: "Travel", icon: Coins },
+
+    // Finance (Green/Gold)
+    { id: "discount", slug: "คำนวณ-discount", name: lang==="TH"?"ส่วนลด":"Discount", desc: lang==="TH"?"เปอร์เซ็นต์ส่วนลด":"Discount Percentage", category: "Finance", icon: Coins },
+    { id: "car-loan", slug: "คำนวณค่างวดรถมือสอง", name: lang==="TH"?"ผ่อนรถยนต์":"Car Loan", desc: lang==="TH"?"ค่างวดรถ":"Auto Loan Calculator", category: "Finance", icon: Car },
+    { id: "mortgage", slug: "คำนวณ-ผ่อนบ้าน-2569", name: lang==="TH"?"เงินกู้/บ้าน":"Mortgage", desc: lang==="TH"?"ยอดผ่อนรายเดือน":"Loan Calculator", category: "Finance", icon: Coins },
+    { id: "gold-price", slug: "คำนวณ-gold-price", name: lang==="TH"?"ราคาทองคำวันนี้":"Gold Price", desc: lang==="TH"?"เช็คราคา กราฟ คำนวณ":"Live Price & Calc", category: "Gold", icon: Coins },
+    { id: "compound-interest", slug: "คำนวณ-compound-interest", name: lang==="TH"?"ดอกเบี้ยทบต้น":"Compound Interest", desc: lang==="TH"?"ผลตอบแทนลงทุน":"Investment Growth", category: "Finance", icon: Coins },
+    { id: "bill-splitter", slug: "คำนวณ-bill-splitter", name: lang==="TH"?"หารค่าอาหาร":"Bill Splitter", desc: lang==="TH"?"แยกจ่าย + SC/VAT":"Split Bill + SC/VAT", category: "Finance", icon: Receipt },
+    { id: "currency-converter", slug: "คำนวณ-currency-converter", name: lang==="TH"?"แปลงสกุลเงิน":"Currency Converter", desc: lang==="TH"?"เรทเงินสดล่าสุด":"Live Exchange Rates", category: "Finance", icon: Coins },
+    { id: "savings-goal", slug: "คำนวณ-savings-goal", name: lang==="TH"?"เป้าหมายการออม":"Savings Goal", desc: lang==="TH"?"ต้องเก็บเดือนละเท่าไหร่":"Monthly Savings", category: "Finance", icon: Coins },
+    { id: "inflation", slug: "คำนวณ-inflation", name: lang==="TH"?"เงินเฟ้อ":"Inflation", desc: lang==="TH"?"มูลค่าเงินในอนาคต":"Future Money Value", category: "Finance", icon: Coins },
+    { id: "salary-hourly", slug: "คำนวณ-salary-hourly", name: lang==="TH"?"เงินเดือน ↔ รายชั่วโมง":"Salary to Hourly", desc: lang==="TH"?"ค่าแรงรายชั่วโมง":"Hourly Rate", category: "Finance", icon: Calculator },
+    { id: "net-worth", slug: "คำนวณ-net-worth", name: lang==="TH"?"ความมั่งคั่งสุทธิ":"Net Worth", desc: lang==="TH"?"ทรัพย์สินหักหนี้สิน":"Assets - Liabilities", category: "Finance", icon: Coins },
+    { id: "debt-payoff", slug: "คำนวณ-debt-payoff", name: lang==="TH"?"วางแผนปลดหนี้":"Debt Payoff", desc: lang==="TH"?"จ่ายโปะแบบไหนดี":"Snowball/Avalanche", category: "Finance", icon: Coins },
+    { id: "retirement", slug: "คำนวณ-retirement", name: lang==="TH"?"เกษียณอายุ":"Retirement", desc: lang==="TH"?"ต้องมีเงินเท่าไหร่":"Needed for Retirement", category: "Finance", icon: Coins },
+    { id: "stock-profit", slug: "คำนวณ-stock-profit", name: lang==="TH"?"กำไรหุ้น/คริปโต":"Stock Profit", desc: lang==="TH"?"จุดคุ้มทุน/กำไรสุทธิ":"Trading Profit", category: "Finance", icon: Coins },
+    { id: "roi", slug: "คำนวณ-roi", name: lang==="TH"?"ผลตอบแทน ROI":"ROI", desc: lang==="TH"?"ความคุ้มค่าการลงทุน":"Return on Investment", category: "Finance", icon: Calculator },
+    { id: "dca", slug: "คำนวณ-dca", name: lang==="TH"?"DCA หุ้น/กองทุน":"DCA Calculator", desc: lang==="TH"?"ลงทุนรายเดือนสม่ำเสมอ":"Dollar Cost Average", category: "Finance", icon: Coins },
+    { id: "stock-fee", slug: "คำนวณ-stock-fee", name: lang==="TH"?"ค่าธรรมเนียมหุ้น":"Stock Trading Fee", desc: lang==="TH"?"คอมมิชชั่น + VAT":"Commission Fee", category: "Finance", icon: Receipt },
+    { id: "net-salary", slug: "คำนวณ-เงินเดือนสุทธิ-2569", name: lang==="TH"?"เงินเดือนสุทธิ":"Net Salary", desc: lang==="TH"?"หักประกันสังคม/ภาษี":"Take-home Pay", category: "Finance", icon: Coins },
+    { id: "expense-tracker", slug: "คำนวณ-expense-tracker", name: lang==="TH"?"จัดสรรเงิน 50/30/20":"Budget 50/30/20", desc: lang==="TH"?"แบ่งเงินออมและใช้จ่าย":"Rule Budgeting", category: "Finance", icon: Coins },
+
+    // Business (Green/Gold)
+    { id: "vat", slug: "คำนวณ-vat", name: lang==="TH"?"คำนวณ VAT":"VAT Calculator", desc: lang==="TH"?"ถอด/เพิ่ม VAT":"Value Added Tax", category: "Business", icon: Receipt },
+    { id: "margin", slug: "คำนวณ-margin", name: lang==="TH"?"คำนวณราคาขาย":"Margin", desc: lang==="TH"?"ตั้งราคาจากต้นทุน":"Profit Margin", category: "Business", icon: Calculator },
+    { id: "break-even", slug: "คำนวณ-break-even", name: lang==="TH"?"จุดคุ้มทุน":"Break-even", desc: lang==="TH"?"ต้องขายกี่ชิ้น":"Units to Break-even", category: "Business", icon: Calculator },
+    { id: "markup", slug: "คำนวณ-markup", name: lang==="TH"?"ตั้งราคาจากต้นทุน":"Markup Pricing", desc: lang==="TH"?"ราคาขายแนะนำ":"Suggested Price", category: "Business", icon: Calculator },
+    { id: "depreciation", slug: "คำนวณ-depreciation", name: lang==="TH"?"ค่าเสื่อมราคา":"Depreciation", desc: lang==="TH"?"ตัดจ่ายรายปี":"Straight-line", category: "Business", icon: Calculator },
+    { id: "payroll", slug: "คำนวณ-payroll", name: lang==="TH"?"คำนวณเงินเดือนพนักงาน":"Payroll", desc: lang==="TH"?"หักประกันสังคม/ภาษี":"Net Salary", category: "Business", icon: Calculator },
+    { id: "cogs", slug: "คำนวณ-cogs", name: lang==="TH"?"ต้นทุนขาย (COGS)":"COGS", desc: lang==="TH"?"ต้นทุนสินค้าที่ขาย":"Cost of Goods Sold", category: "Business", icon: Calculator },
+    { id: "ltv", slug: "คำนวณ-ltv", name: lang==="TH"?"มูลค่าลูกค้าตลอดชีพ":"Customer LTV", desc: lang==="TH"?"Customer Lifetime Value":"Customer Lifetime Value", category: "Business", icon: Calculator },
+    { id: "cac", slug: "คำนวณ-cac", name: lang==="TH"?"ต้นทุนได้ลูกค้าใหม่":"CAC", desc: lang==="TH"?"Customer Acquisition":"Acquisition Cost", category: "Business", icon: Coins },
+    { id: "conversion-rate", slug: "คำนวณ-conversion-rate", name: lang==="TH"?"อัตราการเปลี่ยนเป็นยอดขาย":"Conversion Rate", desc: lang==="TH"?"% คนซื้อ":"Sales Conversion", category: "Business", icon: Calculator },
+    { id: "inventory-turnover", slug: "คำนวณ-inventory-turnover", name: lang==="TH"?"รอบหมุนเวียนสินค้า":"Inventory Turnover", desc: lang==="TH"?"ขายของออกเร็วแค่ไหน":"Turnover Ratio", category: "Business", icon: Calculator },
+    { id: "financial-ratio", slug: "คำนวณ-financial-ratio", name: lang==="TH"?"อัตราส่วนการเงิน":"Financial Ratios", desc: lang==="TH"?"วิเคราะห์สภาพธุรกิจ":"Business Health", category: "Business", icon: Calculator },
+    { id: "marketplace-fee", slug: "คำนวณ-marketplace-fee", name: lang==="TH"?"ค่าธรรมเนียมขายของ":"Marketplace Fee", desc: lang==="TH"?"Shopee/Lazada/TikTok":"Platform Fees", category: "Business", icon: Receipt },
+    { id: "safety-stock", slug: "คำนวณ-safety-stock", name: lang==="TH"?"จุดสั่งซื้อ/สต็อกสำรอง":"Safety Stock", desc: lang==="TH"?"Reorder Point":"Inventory Control", category: "Business", icon: Calculator },
+    { id: "shipping-cost", slug: "คำนวณ-shipping-cost", name: lang==="TH"?"เปรียบเทียบค่าส่ง":"Shipping Cost", desc: lang==="TH"?"Kerry, J&T, Flash, ปณ.":"Courier Rates", category: "Business", icon: Car },
+    { id: "return-rate", slug: "คำนวณ-return-rate", name: lang==="TH"?"ผลกระทบตีกลับ":"Return Rate Impact", desc: lang==="TH"?"กำไรที่หายจากของตีกลับ":"Lost Profit Return", category: "Business", icon: Receipt },
+    { id: "eoq", slug: "คำนวณ-eoq", name: lang==="TH"?"จุดสั่งซื้อที่ประหยัดที่สุด (EOQ)":"EOQ Calculator", desc: lang==="TH"?"สต็อกของอย่างไรให้คุ้ม":"Optimal Order Qty", category: "Business", icon: Briefcase },
+    { id: "churn-retention", slug: "คำนวณ-churn-retention", name: lang==="TH"?"Churn & Retention Rate":"Churn Rate", desc: lang==="TH"?"ลูกค้ายกเลิกกี่เปอร์เซ็นต์":"Lost Customers", category: "Business", icon: Briefcase },
+    { id: "shrinkage", slug: "คำนวณ-shrinkage", name: lang==="TH"?"การสูญเสียสต็อก (Shrinkage)":"Inventory Shrinkage", desc: lang==="TH"?"ของหาย/พัง":"Lost Inventory", category: "Business", icon: Briefcase },
+    { id: "import-markup", slug: "คำนวณ-import-markup", name: lang==="TH"?"ตั้งราคาสินค้านำเข้า":"Import Markup", desc: lang==="TH"?"คำนวณภาษี+ค่าส่ง":"Landed Cost", category: "Business", icon: Briefcase },
+    { id: "freelance-rate", slug: "คำนวณ-freelance-rate", name: lang==="TH"?"เรทค่าตัวฟรีแลนซ์":"Freelance Hourly Rate", desc: lang==="TH"?"ทำงานรายชั่วโมง/วัน":"Hourly Rate", category: "Business", icon: Briefcase },
+
+    // Utility & Education (Blue)
+    { id: "gpa", slug: "คำนวณ-gpa", name: lang==="TH"?"จำลองเกรดเบื้องต้น":"GPA Simulator", desc: lang==="TH"?"จำลองเกรด (GPA)":"GPA Estimator", category: "Utility", icon: BookOpen },
+    { id: "basen", slug: "คำนวณ-basen", name: lang==="TH"?"แปลงเลขฐาน":"Base Converter", desc: lang==="TH"?"ฐาน 2–36 ครบทุกฐาน":"Base 2–36, Step-by-Step", category: "Utility", icon: Calculator },
+    { id: "btu", slug: "คำนวณ-btu", name: lang==="TH"?"คำนวณ BTU":"AC BTU", desc: lang==="TH"?"ขนาดแอร์บ้าน":"Air Conditioner BTU", category: "Utility", icon: Home },
+    { id: "electric", slug: "คำนวณ-ค่าไฟ-2569", name: lang==="TH"?"ค่าไฟ":"Electricity", desc: lang==="TH"?"คำนวณค่าไฟฟ้า":"Electricity Bill", category: "Utility", icon: Zap },
+    { id: "water-bill", slug: "คำนวณ-water-bill", name: lang==="TH"?"ค่าน้ำ":"Water Bill", desc: lang==="TH"?"ค่าน้ำประปา":"Water Usage Bill", category: "Utility", icon: Home },
+    { id: "fuel-cost", slug: "คำนวณ-fuel-cost", name: lang==="TH"?"ค่าน้ำมันรถ":"Fuel Cost", desc: lang==="TH"?"คำนวณค่าน้ำมันเดินทาง":"Trip Fuel Estimate", category: "Utility", icon: Car },
+    { id: "cooking-unit", slug: "คำนวณ-cooking-unit", name: lang==="TH"?"แปลงหน่วยทำอาหาร":"Cooking Units", desc: lang==="TH"?"ถ้วยตวง ↔ กรัม":"Cups to Grams", category: "Utility", icon: Utensils },
+    { id: "tile-area", slug: "คำนวณ-tile-area", name: lang==="TH"?"กระเบื้องปูพื้น":"Tile Area", desc: lang==="TH"?"คำนวณเผื่อกันพลาด":"Floor Tile Estimate", category: "Utility", icon: Home },
+    { id: "grade-converter", slug: "คำนวณ-grade-converter", name: lang==="TH"?"แปลงเกรดต่างประเทศ":"Grade Converter", desc: lang==="TH"?"TH ↔ US ↔ UK":"Intl Grade", category: "Utility", icon: BookOpen },
+    { id: "target-gpa", slug: "คำนวณ-target-gpa", name: lang==="TH"?"เป้าหมาย GPA":"Target GPA", desc: lang==="TH"?"เกรดที่ต้องทำเพิ่ม":"Required GPA", category: "Utility", icon: BookOpen },
+    { id: "percentile", slug: "คำนวณ-percentile", name: lang==="TH"?"Percentile/Z-Score":"Percentile Calculator", desc: lang==="TH"?"เทียบค่าเฉลี่ย":"Normal Distribution", category: "Utility", icon: Hash },
+    { id: "reading-time", slug: "คำนวณ-reading-time", name: lang==="TH"?"เวลาอ่านหนังสือ":"Reading Time", desc: lang==="TH"?"คำนวณวันจบเล่ม":"Books Finishing Time", category: "Utility", icon: BookOpen },
+
+    // Education (Blue)
+    { id: "english-test", slug: "คำนวณ-english-test", name: lang==="TH"?"IELTS ↔ TOEFL ↔ CEFR":"IELTS/TOEFL", desc: lang==="TH"?"แปลงคะแนนภาษาอังกฤษ":"English Tests", category: "Education", icon: BookOpen },
+    { id: "pomodoro", slug: "คำนวณ-pomodoro", name: lang==="TH"?"Pomodoro Timer":"Pomodoro Timer", desc: lang==="TH"?"นาฬิกาโฟกัสการทำงาน":"Focus Timer", category: "Education", icon: Clock },
+    { id: "flashcard-timer", slug: "คำนวณ-flashcard-timer", name: lang==="TH"?"Flash Card Timer":"Flash Card Timer", desc: lang==="TH"?"จับเวลาตอบสั้นๆ":"Active Recall", category: "Education", icon: Clock },
+
+    // Agriculture (Green)
+    { id: "food-energy", slug: "คำนวณ-food-energy", name: lang==="TH"?"พลังงานอาหาร":"Food Energy", desc: lang==="TH"?"Joule ↔ kcal":"Joule ↔ kcal", category: "Agriculture", icon: Zap },
+    { id: "fertilizer", slug: "คำนวณ-fertilizer", name: lang==="TH"?"ปุ๋ยต่อไร่":"Fertilizer", desc: lang==="TH"?"NPK ตามชนิดพืช":"Fertilizer per Rai", category: "Agriculture", icon: Home },
+    { id: "irrigation", slug: "คำนวณ-irrigation", name: lang==="TH"?"น้ำชลประทาน":"Irrigation", desc: lang==="TH"?"ปริมาณน้ำต่อไร่":"Water per Rai", category: "Agriculture", icon: Home },
+    { id: "durian", slug: "คำนวณ-durian", name: lang==="TH"?"คำนวณทำสวนทุเรียน":"Durian Farming", desc: lang==="TH"?"วันตัด/การปลูก":"Harvest & Plant", category: "Agriculture", icon: Home },
+    { id: "yield", slug: "คำนวณ-yield", name: lang==="TH"?"ผลผลิตต่อไร่":"Crop Yield", desc: lang==="TH"?"กำไรเกษตรกร":"Yield per Rai", category: "Agriculture", icon: Coins },
+    { id: "soil-ph", slug: "คำนวณ-soil-ph", name: lang==="TH"?"pH ดิน + ปูนแก้ดิน":"Soil pH & Lime", desc: lang==="TH"?"คำนวณปูนขาวปรับดิน":"Soil Amendment", category: "Agriculture", icon: Home },
+    { id: "livestock-profit", slug: "คำนวณ-livestock-profit", name: lang==="TH"?"ต้นทุน/กำไร ปศุสัตว์":"Livestock Profit", desc: lang==="TH"?"กำไรการเลี้ยงสัตว์":"Farming Profit", category: "Agriculture", icon: Coins },
+    { id: "spray-volume", slug: "คำนวณ-spray-volume", name: lang==="TH"?"น้ำยาฉีดพ่น":"Spray Volume", desc: lang==="TH"?"ผสมน้ำยาเคมีเกษตร":"Chemical Mixing", category: "Agriculture", icon: Zap },
+    { id: "fishery-income", slug: "คำนวณ-fishery-income", name: lang==="TH"?"รายได้ประมง":"Fishery Income", desc: lang==="TH"?"กำไรบ่อปลา/กุ้ง":"Aquaculture Profit", category: "Agriculture", icon: Coins },
+    { id: "yield-gap", slug: "คำนวณ-yield-gap", name: lang==="TH"?"Yield Gap":"Yield Gap", desc: lang==="TH"?"ศักยภาพผลผลิต":"Potential vs Actual", category: "Agriculture", icon: Calculator },
+
+    // Construction (Amber)
+    { id: "house-paint", slug: "คำนวณ-house-paint", name: lang==="TH"?"สีทาบ้าน":"House Paint", desc: lang==="TH"?"พื้นที่ผนัง → ลิตร":"Wall Area → Liters", category: "Construction", icon: Home },
+    { id: "cement", slug: "คำนวณ-cement", name: lang==="TH"?"ปูนซีเมนต์":"Cement", desc: lang==="TH"?"ปริมาณปูนตามพื้นที่":"Cement Volume", category: "Construction", icon: Home },
+    { id: "wallpaper", slug: "คำนวณ-wallpaper", name: lang==="TH"?"วอลเปเปอร์":"Wallpaper", desc: lang==="TH"?"ม้วนที่ต้องการ":"Rolls Needed", category: "Construction", icon: Home },
+    { id: "roof-area", slug: "คำนวณ-roof-area", name: lang==="TH"?"พื้นที่หลังคา":"Roof Area", desc: lang==="TH"?"ทรงต่างๆ":"Roof Shapes", category: "Construction", icon: Home },
+    { id: "water-tank", slug: "คำนวณ-water-tank", name: lang==="TH"?"ถังน้ำ":"Water Tank", desc: lang==="TH"?"ขนาดถังที่เหมาะสม":"Tank Size", category: "Construction", icon: Home },
+    { id: "pool-vol", slug: "คำนวณ-pool-vol", name: lang==="TH"?"สระว่ายน้ำ":"Pool Volume", desc: lang==="TH"?"ปริมาตรน้ำ/คลอรีน":"Water Volume", category: "Construction", icon: Home },
+    { id: "insulation", slug: "คำนวณ-insulation", name: lang==="TH"?"ฉนวนกันความร้อน":"Insulation", desc: lang==="TH"?"R-value ที่ต้องการ":"R-Value Needed", category: "Construction", icon: Home },
+    { id: "reno-cost", slug: "คำนวณ-reno-cost", name: lang==="TH"?"ค่าใช้จ่ายรีโนเวท":"Renovation Cost", desc: lang==="TH"?"ประเมินงบก่อสร้าง":"Estimated Budget", category: "Construction", icon: Coins },
+    { id: "solar-panel", slug: "คำนวณ-solar-panel", name: lang==="TH"?"โซลาร์เซลล์":"Solar Panel", desc: lang==="TH"?"จำนวนแผงที่ต้องการ":"Panels Needed", category: "Construction", icon: Zap },
+    { id: "interior-cost", slug: "คำนวณ-interior-cost", name: lang==="TH"?"ค่าตกแต่งภายใน":"Interior Cost", desc: lang==="TH"?"ประเมินงบ Built-in":"Interior Budget", category: "Construction", icon: Home },
+    { id: "ach-calc", slug: "คำนวณ-ach-calc", name: lang==="TH"?"ระบบระบายอากาศ ACH":"ACH Ventilation", desc: lang==="TH"?"Air Changes/Hour":"Air Changes per Hour", category: "Construction", icon: Zap },
+    { id: "concrete-vol", slug: "คำนวณ-concrete-vol", name: lang==="TH"?"คอนกรีต m³":"Concrete Volume", desc: lang==="TH"?"คำนวณคิวปูน":"Cubic Meters", category: "Construction", icon: Home },
+    { id: "rebar-weight", slug: "คำนวณ-rebar-weight", name: lang==="TH"?"เหล็กเสริม Rebar":"Rebar Weight", desc: lang==="TH"?"น้ำหนักเหล็กเส้น":"Rebar Weight", category: "Construction", icon: Hash },
+    { id: "aac-blocks", slug: "คำนวณ-aac-blocks", name: lang==="TH"?"อิฐมวลเบา":"AAC Blocks", desc: lang==="TH"?"จำนวนก้อนอิฐมวลเบา":"Blocks Needed", category: "Construction", icon: Home },
+    { id: "labor-cost-sqm", slug: "คำนวณ-labor-cost-sqm", name: lang==="TH"?"ค่าแรงงานต่อ ตร.ม.":"Labor Cost per sqm", desc: lang==="TH"?"ประเมินค่าแรงก่อสร้าง":"Construction Labor", category: "Construction", icon: Coins },
+    { id: "plumbing-pipe", slug: "คำนวณ-plumbing-pipe", name: lang==="TH"?"ท่อประปา":"Plumbing Pipe", desc: lang==="TH"?"ความยาวและข้อต่อ":"Pipe & Fittings", category: "Construction", icon: Home },
+    { id: "slope-grade", slug: "คำนวณ-slope-grade", name: lang==="TH"?"ความลาดชัน (Slope)":"Slope / Grade", desc: lang==="TH"?"เปอร์เซ็นต์ Slope":"Slope Percentage", category: "Construction", icon: Hash },
+
+    // Environment (Emerald)
+    { id: "carbon-footprint", slug: "คำนวณ-carbon-footprint", name: lang==="TH"?"Carbon Footprint ส่วนตัว":"Personal Carbon Footprint", desc: lang==="TH"?"ประเมินคาร์บอนรายปี":"Annual CO2", category: "Environment", icon: Sparkles },
+    { id: "wind-energy", slug: "คำนวณ-wind-energy", name: lang==="TH"?"พลังงานลม":"Wind Energy", desc: lang==="TH"?"กำลังไฟฟ้าจากลม":"Wind Power", category: "Environment", icon: Zap },
+    { id: "water-savings", slug: "คำนวณ-water-savings", name: lang==="TH"?"ประหยัดน้ำ":"Water Savings", desc: lang==="TH"?"ลดค่าน้ำจากก๊อก/ชักโครก":"Water Conservation", category: "Environment", icon: Home },
+    { id: "plastic-footprint", slug: "คำนวณ-plastic-footprint", name: lang==="TH"?"Plastic Footprint":"Plastic Footprint", desc: lang==="TH"?"ขยะพลาสติกต่อปี":"Annual Plastic Waste", category: "Environment", icon: Sparkles },
+
+    // Science (Indigo)
+    { id: "quadratic-eq", slug: "คำนวณ-quadratic-eq", name: lang==="TH"?"สมการกำลังสอง":"Quadratic Equation", desc: lang==="TH"?"หาค่า x จากสมการ":"Solve for x", category: "Science", icon: Calculator },
+    { id: "ph-poh", slug: "คำนวณ-ph-poh", name: lang==="TH"?"คำนวณ pH / pOH":"pH / pOH", desc: lang==="TH"?"ความเข้มข้นไฮโดรเจน":"Ion Concentration", category: "Science", icon: Hash },
+
+    // Technology (Orange)
+    { id: "bandwidth", slug: "คำนวณ-bandwidth", name: lang==="TH"?"คำนวณ Bandwidth":"Bandwidth", desc: lang==="TH"?"เวลาดาวน์โหลดไฟล์":"Download Time", category: "Technology", icon: Zap },
+    { id: "server-cost", slug: "คำนวณ-server-cost", name: lang==="TH"?"คำนวณ Server Cost":"Server Cost", desc: lang==="TH"?"EC2/VM ต่อเดือน":"Monthly Cost", category: "Technology", icon: Calculator },
+    { id: "image-size", slug: "คำนวณ-image-size", name: lang==="TH"?"ขนาดรูปภาพ":"Image Size", desc: lang==="TH"?"Resolution x bit depth":"Resolution Size", category: "Technology", icon: Hash },
+    { id: "ip-subnet", slug: "คำนวณ-ip-subnet", name: lang==="TH"?"คำนวณ IP Subnet":"IP Subnet", desc: lang==="TH"?"CIDR/subnet mask":"CIDR Network", category: "Technology", icon: Hash },
+    { id: "video-bitrate", slug: "คำนวณ-video-bitrate", name: lang==="TH"?"FPS/Bitrate วิดีโอ":"Video Bitrate", desc: lang==="TH"?"คุณภาพ VS ขนาดไฟล์":"Video Size", category: "Technology", icon: Hash },
+    { id: "battery-life", slug: "คำนวณ-battery-life", name: lang==="TH"?"คำนวณ Battery Life":"Battery Life", desc: lang==="TH"?"mAh ÷ การใช้งาน":"mAh Usage", category: "Technology", icon: Zap },
+    { id: "hash-rate", slug: "คำนวณ-hash-rate", name: lang==="TH"?"คำนวณ Hash Rate":"Hash Rate", desc: lang==="TH"?"เหมืองคริปโต":"Crypto Mining", category: "Technology", icon: Coins },
+    { id: "raid-calc", slug: "คำนวณ-raid-calc", name: lang==="TH"?"คำนวณความจุ RAID":"RAID Storage", desc: lang==="TH"?"RAID 0, 1, 5, 6, 10":"RAID 0, 1, 5, 6, 10", category: "Technology", icon: Hash },
+    { id: "ppi-calc", slug: "คำนวณ-ppi-calc", name: lang==="TH"?"ความหนาแน่นพิกเซล":"Pixel Density", desc: lang==="TH"?"PPI / DPI":"PPI / DPI", category: "Technology", icon: Hash },
+    { id: "api-cost", slug: "คำนวณ-api-cost", name: lang==="TH"?"คำนวณค่าบริการ API":"API Cost", desc: lang==="TH"?"Token เป็นเงินบาท":"Token to THB", category: "Technology", icon: Calculator },
+    { id: "ups-runtime", slug: "คำนวณ-ups-runtime", name: lang==="TH"?"ระยะเวลาสำรองไฟ UPS":"UPS Runtime", desc: lang==="TH"?"คำนวณเวลาแบตเตอรี่":"Battery Time", category: "Technology", icon: Zap },
+    { id: "morse-code", slug: "คำนวณ-morse-code", name: lang==="TH"?"แปลงรหัสมอร์ส":"Morse Code", desc: lang==="TH"?"Text ↔ Morse":"Text ↔ Morse", category: "Technology", icon: BookOpen },
+    { id: "ascii-converter", slug: "คำนวณ-ascii-converter", name: lang==="TH"?"แปลง ASCII/Unicode":"ASCII/Unicode", desc: lang==="TH"?"Text ↔ Binary/Hex":"Text ↔ Binary/Hex", category: "Technology", icon: Hash },
+    { id: "cache-hit-rate", slug: "คำนวณ-cache-hit-rate", name: lang==="TH"?"คำนวณ Cache Hit Rate":"Cache Hit Rate", desc: lang==="TH"?"Hits vs Misses":"Hits vs Misses", category: "Technology", icon: Hash },
+
+    // General (Purple)
+    { id: "digital-unit", slug: "คำนวณ-digital-unit", name: lang==="TH"?"แปลงหน่วยดิจิทัล":"Digital Unit", desc: lang==="TH"?"MB ↔ GB ↔ TB":"MB ↔ GB ↔ TB", category: "General", icon: Hash },
+    { id: "angle", slug: "คำนวณ-angle", name: lang==="TH"?"คำนวณมุมและองศา":"Angle Converter", desc: lang==="TH"?"° ↔ radian":"° ↔ radian", category: "General", icon: Hash },
+    { id: "color", slug: "คำนวณ-color", name: lang==="TH"?"แปลงสีเฮกซ์/RGB":"Color Converter", desc: lang==="TH"?"HEX ↔ RGB ↔ HSL":"HEX ↔ RGB ↔ HSL", category: "General", icon: Hash },
+    { id: "temperature", slug: "คำนวณ-temperature", name: lang==="TH"?"แปลงหน่วยอุณหภูมิ":"Temperature", desc: lang==="TH"?"°C ↔ °F ↔ K":"°C ↔ °F ↔ K", category: "General", icon: Hash },
+    { id: "speed", slug: "คำนวณ-speed", name: lang==="TH"?"แปลงหน่วยความเร็ว":"Speed Converter", desc: lang==="TH"?"km/h ↔ mph ↔ knot":"km/h ↔ mph", category: "General", icon: Hash },
+    { id: "area-unit", slug: "วิธีแปลงไร่เป็นตารางเมตร", name: lang==="TH"?"แปลงหน่วยพื้นที่":"Area Converter", desc: lang==="TH"?"ตร.ม. ↔ ไร่ ↔ acre":"sqm ↔ rai ↔ acre", category: "General", icon: Home },
+    { id: "weight-unit", slug: "คำนวณ-weight-unit", name: lang==="TH"?"แปลงหน่วยน้ำหนัก":"Weight Converter", desc: lang==="TH"?"กก. ↔ ปอนด์ ↔ ออนซ์":"kg ↔ lb ↔ oz", category: "General", icon: Hash },
+    { id: "roman", slug: "คำนวณ-roman", name: lang==="TH"?"ตัวแปลงเลขโรมัน":"Roman Numeral", desc: lang==="TH"?"Roman ↔ อารบิก":"Roman ↔ Arabic", category: "General", icon: BookOpen },
+    { id: "area-shape", slug: "คำนวณ-area-shape", name: lang==="TH"?"คำนวณพื้นที่รูปทรง":"Shape Area", desc: lang==="TH"?"วงกลม สามเหลี่ยม":"Circle, Triangle", category: "General", icon: Hash },
+    { id: "volume-shape", slug: "สูตรหาปริมาตรทรงกระบอก", name: lang==="TH"?"คำนวณปริมาตรภาชนะ":"Shape Volume", desc: lang==="TH"?"กล่อง กระบอก ทรงกลม":"Box, Cylinder", category: "General", icon: Hash },
+    { id: "working-days", slug: "คำนวณ-working-days", name: lang==="TH"?"คำนวณวันทำงาน":"Working Days", desc: lang==="TH"?"หักวันหยุดนักขัตฤกษ์":"Minus Holidays", category: "General", icon: Calculator },
+    { id: "word-counter", slug: "คำนวณ-word-counter", name: lang==="TH"?"นับจำนวนคำ":"Word Counter", desc: lang==="TH"?"นับคำ/ตัวอักษร":"Words & Chars", category: "General", icon: BookOpen },
+    { id: "age", slug: "คำนวณ-age", name: lang==="TH"?"คำนวณอายุ":"Age Calculator", desc: lang==="TH"?"อายุละเอียด":"Exact Age", category: "General", icon: Calculator },
+    { id: "pantone", slug: "คำนวณ-pantone", name: lang==="TH"?"แปลงสี Pantone":"Pantone Converter", desc: lang==="TH"?"HEX เป็น Pantone (Approx)":"Approx Pantone", category: "General", icon: Hash },
+    { id: "e-waste-water-footprint", slug: "e-waste-water-footprint", name: lang==="TH"?"คำนวณปริมาณน้ำในขยะอิเล็กทรอนิกส์":"E-waste Water Footprint Calculator", desc: lang==="TH"?"ประเมินปริมาณน้ำซ่อนเร้น (Water Footprint) ที่ถูกใช้ในกระบวนการผลิตอุปกรณ์อิเล็กทรอนิกส์ต่างๆ":"Estimate the hidden water (Water Footprint) used in manufacturing various electronic devices.", category: "Environment", icon: Calculator },
+    { id: "ev-charger-installation-cost", slug: "ev-charger-installation-cost", name: lang==="TH"?"คำนวณค่าใช้จ่ายติดตั้งสถานีชาร์จ EV":"EV Charger Installation Cost Calculator", desc: lang==="TH"?"ประเมินค่าใช้จ่ายในการติดตั้งเครื่องชาร์จรถยนต์ไฟฟ้า (EV Charger) ที่บ้าน รวมถึงการขอเปลี่ยนมิเตอร์":"Estimate the total cost of installing a home EV charger, including meter upgrades and labor.", category: "Environment", icon: Calculator },
+    { id: "ev-charging-cost", slug: "ev-charging-cost", name: lang==="TH"?"คำนวณต้นทุนการชาร์จรถ EV":"EV Charging Cost per 100km Calculator", desc: lang==="TH"?"คำนวณค่าไฟฟ้าในการชาร์จรถยนต์ไฟฟ้า (EV) และประเมินค่าใช้จ่ายในการเดินทางต่อ 100 กิโลเมตร":"Calculate the electricity cost of charging an EV and estimate the travel cost per 100 kilometers.", category: "Environment", icon: Calculator },
+    { id: "green-building-score", slug: "green-building-score", name: lang==="TH"?"คำนวณคะแนนอาคารสีเขียว (Green Building Score)":"Green Building Score Calculator", desc: lang==="TH"?"จำลองการประเมินคะแนนอาคารสีเขียวเบื้องต้น (อ้างอิงตามเกณฑ์ LEED) เพื่อดูระดับการรับรองของอาคารคุณ":"Simulate a basic Green Building score (based on LEED criteria) to see your potential certification level.", category: "Environment", icon: Calculator },
+    { id: "led-savings", slug: "led-savings", name: lang==="TH"?"คำนวณพลังงานที่ประหยัดได้จากเปลี่ยน LED":"LED Savings Calculator", desc: lang==="TH"?"คำนวณค่าไฟฟ้าและพลังงานที่คุณสามารถประหยัดได้จากการเปลี่ยนหลอดไฟธรรมดาเป็นหลอดไฟ LED":"Calculate the electricity cost and energy savings from switching to LED bulbs.", category: "Environment", icon: Calculator },
+    { id: "livestock-methane-emissions", slug: "livestock-methane-emissions", name: lang==="TH"?"คำนวณปริมาณมีเทนจากฟาร์มปศุสัตว์":"Livestock Methane Emissions Calculator", desc: lang==="TH"?"ประเมินปริมาณก๊าซมีเทน (Methane) ที่ปล่อยออกมาจากการทำฟาร์มปศุสัตว์ต่อปี":"Estimate the annual methane (CH₄) emissions generated by livestock farming.", category: "Environment", icon: Calculator },
+    { id: "personal-ecological-footprint", slug: "personal-ecological-footprint", name: lang==="TH"?"คำนวณ Ecological Footprint ส่วนตัว":"Personal Ecological Footprint Calculator", desc: lang==="TH"?"ประเมินรอยเท้านิเวศของคุณ เพื่อดูว่าไลฟ์สไตล์ปัจจุบันใช้ทรัพยากรธรรมชาติไปมากน้อยเพียงใด":"Estimate your ecological footprint to see how much of the Earth's resources your lifestyle consumes.", category: "Environment", icon: Calculator },
+    { id: "renewable-vs-grid-electricity", slug: "renewable-vs-grid-electricity", name: lang==="TH"?"เปรียบเทียบค่าไฟพลังงานทดแทน vs ไฟฟ้าปกติ":"Renewable vs Grid Electricity Calculator", desc: lang==="TH"?"เปรียบเทียบค่าใช้จ่ายรายเดือนระหว่างการใช้ไฟฟ้าจากการไฟฟ้าปกติ กับการผสมผสานพลังงานทดแทน":"Compare monthly electricity costs between standard grid power and a mix of renewable energy.", category: "Environment", icon: Calculator },
+    { id: "solar-payback-period", slug: "solar-payback-period", name: lang==="TH"?"คำนวณระยะเวลาคืนทุนแผงโซลาร์":"Solar Payback Period Calculator", desc: lang==="TH"?"คำนวณระยะเวลาคืนทุนของการติดตั้งแผงโซลาร์เซลล์ ประเมินการผลิตไฟและจุดคุ้มทุนเบื้องต้น":"Estimate the payback period, annual energy generation, and savings for a solar panel installation.", category: "Environment", icon: Calculator },
+    { id: "tree-co2-offset", slug: "tree-co2-offset", name: lang==="TH"?"คำนวณปริมาณ CO₂ ที่ต้นไม้ดูดซับ":"Tree CO₂ Offset Calculator", desc: lang==="TH"?"คำนวณและประเมินปริมาณก๊าซคาร์บอนไดออกไซด์ (CO₂) ที่ต้นไม้สามารถดูดซับได้ต่อปี":"Calculate and estimate the amount of carbon dioxide (CO₂) absorbed by trees per year.", category: "Environment", icon: Calculator },
+    { id: "app-dev-cost", slug: "app-dev-cost", name: lang==="TH"?"เครื่องมือประเมินค่าใช้จ่ายพัฒนาแอปพลิเคชัน":"App Development Cost Calculator", desc: lang==="TH"?"ประเมินค่าใช้จ่ายในการพัฒนาแอป (iOS, Android, Web) ตามขนาดของฟีเจอร์และเรทนักพัฒนา":"Estimate app development costs (iOS, Android, Web) based on feature size and developer rates.", category: "Technology", icon: Calculator },
+    { id: "app-store-revenue", slug: "app-store-revenue", name: lang==="TH"?"เครื่องมือคำนวณรายได้ App Store / Google Play":"App Store Revenue Calculator", desc: lang==="TH"?"คำนวณรายได้สุทธิและหักค่าคอมมิชชั่นของ Apple App Store และ Google Play Store (15% vs 30%)":"Calculate net revenue and commissions for Apple App Store and Google Play Store (15% vs 30%).", category: "Technology", icon: Calculator },
+    { id: "cdn-cost-calculator", slug: "cdn-cost-calculator", name: lang==="TH"?"เครื่องมือคำนวณ CDN Cost":"CDN Cost Calculator", desc: lang==="TH"?"ประเมินค่าใช้จ่าย Content Delivery Network (CDN) รายเดือนตามปริมาณแบนด์วิดท์และ Requests":"Estimate monthly Content Delivery Network (CDN) costs based on bandwidth and requests.", category: "Technology", icon: Calculator },
+    { id: "cloud-storage-cost", slug: "cloud-storage-cost", name: lang==="TH"?"เครื่องมือคำนวณค่าบริการ Cloud Storage":"Cloud Storage Cost Calculator", desc: lang==="TH"?"ประเมินค่าใช้จ่ายพื้นที่จัดเก็บข้อมูลบนคลาวด์มาตรฐาน (เทียบเท่า AWS S3, GCS) รวมถึงค่าแบนด์วิดท์และ Requests":"Estimate standard cloud storage costs (comparable to AWS S3, GCS) including bandwidth and requests.", category: "Technology", icon: Calculator },
+    { id: "database-cost", slug: "database-cost", name: lang==="TH"?"เครื่องมือคำนวณ Database Cost (Managed DB)":"Database Cost Calculator (Managed DB)", desc: lang==="TH"?"ประมาณการค่าใช้จ่ายบริการฐานข้อมูลบนคลาวด์ (เช่น RDS) โดยคิดจาก Instance, Storage และ Data Transfer":"Estimate cloud managed database costs (like RDS) based on Instance, Storage, and Data Transfer.", category: "Technology", icon: Calculator },
+    { id: "facebook-ads-roi-cpa", slug: "facebook-ads-roi-cpa", name: lang==="TH"?"เครื่องมือคำนวณ ROI โฆษณา Facebook Ads":"Facebook Ads ROI & CPA Calculator", desc: lang==="TH"?"คำนวณผลตอบแทนการลงทุน (ROI), ROAS, CPA, และจุดคุ้มทุนสำหรับแคมเปญ Facebook Ads":"Calculate Return on Investment (ROI), ROAS, CPA, and break-even point for Facebook Ads campaigns.", category: "Technology", icon: Calculator },
+    { id: "google-ads-roi-roas", slug: "google-ads-roi-roas", name: lang==="TH"?"เครื่องมือคำนวณ ROI โฆษณา Google Ads":"Google Ads ROI & ROAS Calculator", desc: lang==="TH"?"คำนวณผลตอบแทนการลงทุน (ROI), ROAS, CPC, และเปรียบเทียบกำไรจากแคมเปญ Google Ads (Search/Display/Shopping)":"Calculate Return on Investment (ROI), ROAS, CPC, and profitability for Google Ads campaigns.", category: "Technology", icon: Calculator },
+    { id: "ltv-to-cac-ratio", slug: "ltv-to-cac-ratio", name: lang==="TH"?"เครื่องมือคำนวณ LTV:CAC Ratio":"LTV to CAC Ratio Calculator", desc: lang==="TH"?"คำนวณมูลค่าตลอดอายุการใช้งานของลูกค้า (LTV) เทียบกับต้นทุนในการหาลูกค้าใหม่ (CAC) เพื่อวัดสุขภาพของธุรกิจระยะยาว":"Calculate Customer Lifetime Value (LTV) to Customer Acquisition Cost (CAC) ratio to measure long-term business health.", category: "Technology", icon: Calculator },
+    { id: "sms-email-marketing-cost", slug: "sms-email-marketing-cost", name: lang==="TH"?"ค่าใช้จ่าย SMS/Email Marketing":"SMS & Email Marketing Cost", desc: lang==="TH"?"คำนวณและเปรียบเทียบต้นทุนการส่งแคมเปญการตลาดผ่าน SMS และ Email พร้อมประเมินค่าใช้จ่ายต่อผู้รับ (Cost per User)":"Calculate and compare the cost of marketing campaigns via SMS and Email, including Cost per User.", category: "Technology", icon: Calculator },
+    { id: "vps-dedicated-cost", slug: "vps-dedicated-cost", name: lang==="TH"?"เครื่องมือเปรียบเทียบค่าใช้จ่าย VPS / Dedicated Server":"VPS vs Dedicated Server Cost Calculator", desc: lang==="TH"?"คำนวณและเปรียบเทียบค่าใช้จ่ายรายเดือนและรายปีของการเช่า Server ไม่ว่าจะเป็น VPS หรือ Dedicated พร้อมค่า Management":"Calculate and compare monthly and yearly costs of renting VPS or Dedicated servers, including management fees.", category: "Technology", icon: Calculator },
+    { id: "cro-revenue-impact-calculator", slug: "cro-revenue-impact-calculator", name: lang==="TH"?"เครื่องมือคำนวณรายได้จาก CRO (Conversion Rate)":"CRO Revenue Impact Calculator", desc: lang==="TH"?"วิเคราะห์การเติบโตของรายได้ (Revenue Uplift) จากการปรับปรุงอัตราการแปลง (Conversion Rate)":"Analyze the potential revenue uplift from optimizing your Conversion Rate (CRO).", category: "Technology", icon: Calculator },
+    { id: "domain-hosting-cost-calculator", slug: "domain-hosting-cost-calculator", name: lang==="TH"?"เครื่องมือคำนวณค่าใช้จ่าย Domain & Hosting":"Domain & Hosting Cost Calculator", desc: lang==="TH"?"คำนวณต้นทุนการทำเว็บไซต์ต่อปี ทั้งค่าจดโดเมน ค่าบริการเว็บโฮสติ้ง และส่วนเสริมต่างๆ":"Calculate the annual cost of running a website, including domain registration, hosting, and addons.", category: "Technology", icon: Calculator },
+    { id: "email-deliverability-score-calculator", slug: "email-deliverability-score-calculator", name: lang==="TH"?"เครื่องมือคำนวณ Email Deliverability Score":"Email Deliverability Score Calculator", desc: lang==="TH"?"ประเมินคุณภาพและโอกาสที่อีเมลของคุณจะถูกส่งเข้า Inbox จากค่า Bounce Rate และการตั้งค่า DMARC":"Assess your email inbox placement score based on bounce rates, spam complaints, and authentication (DMARC/SPF/DKIM).", category: "Technology", icon: Calculator },
+    { id: "email-revenue-calculator", slug: "email-revenue-calculator", name: lang==="TH"?"เครื่องมือคำนวณรายได้จาก Email Marketing":"Email Revenue Calculator", desc: lang==="TH"?"คำนวณผลตอบแทนและรายได้จากแคมเปญอีเมล จาก Open Rate และ Conversion Rate":"Calculate ROI and revenue from email campaigns based on Open Rate and Conversion Rate.", category: "Technology", icon: Calculator },
+    { id: "pwa-vs-native-app-cost-calculator", slug: "pwa-vs-native-app-cost-calculator", name: lang==="TH"?"เครื่องมือเปรียบเทียบค่าใช้จ่าย PWA vs Native App":"PWA vs Native App Cost Calculator", desc: lang==="TH"?"เปรียบเทียบต้นทุนการพัฒนาและดูแลรักษาระหว่าง Progressive Web App และ Native App (iOS/Android)":"Compare development and maintenance costs between Progressive Web Apps (PWA) and Native Apps.", category: "Technology", icon: Calculator },
+    { id: "saas-stack-total-cost-calculator", slug: "saas-stack-total-cost-calculator", name: lang==="TH"?"เครื่องมือคำนวณค่าใช้จ่าย SaaS Stack":"SaaS Stack Total Cost Calculator", desc: lang==="TH"?"จัดการและประเมินค่าใช้จ่ายรวมของซอฟต์แวร์ SaaS (Software as a Service) ที่องค์กรใช้งาน":"Manage and calculate the total cost of all your SaaS subscriptions to optimize software spend.", category: "Technology", icon: Calculator },
+    { id: "seo-value-calculator", slug: "seo-value-calculator", name: lang==="TH"?"เครื่องมือคำนวณ SEO Value":"SEO Value Calculator", desc: lang==="TH"?"คำนวณมูลค่าของทราฟฟิกออร์แกนิก (SEO Value) จาก Search Volume และ CPC":"Calculate the organic traffic value (SEO Value) based on Search Volume and CPC.", category: "Technology", icon: Calculator },
+    { id: "sme-cybersecurity-cost-calculator", slug: "sme-cybersecurity-cost-calculator", name: lang==="TH"?"เครื่องมือประเมินค่าใช้จ่าย Cybersecurity สำหรับ SME":"SME Cybersecurity Cost Calculator", desc: lang==="TH"?"ประเมินต้นทุนพื้นฐานในการรักษาความปลอดภัยไซเบอร์รายปี สำหรับองค์กรธุรกิจและ SME":"Estimate the baseline annual cybersecurity costs for small and medium-sized businesses.", category: "Technology", icon: Calculator },
+    { id: "ssl-certificate-cost-calculator", slug: "ssl-certificate-cost-calculator", name: lang==="TH"?"เครื่องมือคำนวณค่าใช้จ่าย SSL Certificate":"SSL Certificate Cost Calculator", desc: lang==="TH"?"ประเมินค่าใช้จ่ายในการจดทะเบียนและต่ออายุ SSL Certificate ประเภทต่างๆ (DV, OV, EV)":"Estimate the cost of purchasing and renewing different types of SSL Certificates.", category: "Technology", icon: Calculator },
+    { id: "technical-debt-cost-calculator", slug: "technical-debt-cost-calculator", name: lang==="TH"?"เครื่องมือคำนวณมูลค่า Technical Debt":"Technical Debt Cost Calculator", desc: lang==="TH"?"ประเมินต้นทุนที่สูญเสียไปจากการรับมือกับโค้ดที่ไม่มีคุณภาพและหนี้ทางเทคนิค (Technical Debt)":"Evaluate the financial cost of technical debt and time lost dealing with bad code.", category: "Technology", icon: Calculator },
+    { id: "ac-electricity-cost", slug: "ac-electricity-cost", name: lang==="TH"?"ค่าไฟแอร์":"AC Electricity Cost", desc: lang==="TH"?"คำนวณค่าไฟแอร์รายเดือน จากขนาด BTU ค่า SEER และชั่วโมงการใช้งาน":"Calculate monthly AC electricity cost based on BTU, SEER, and usage hours.", category: "Utility", icon: Calculator },
+    { id: "built-in-kitchen-cost", slug: "built-in-kitchen-cost", name: lang==="TH"?"ค่าใช้จ่ายทำ Kitchen Set Built-in":"Built-in Kitchen Cost", desc: lang==="TH"?"ประเมินราคางานบิ้วอินชุดครัว ตามความยาวและวัสดุเคาน์เตอร์":"Estimate cost of built-in kitchen set based on length and materials.", category: "Family", icon: Calculator },
+    { id: "condo-maintenance-fee-total", slug: "condo-maintenance-fee-total", name: lang==="TH"?"ค่าส่วนกลางคอนโด":"Condo Maintenance Fee Total", desc: lang==="TH"?"คำนวณค่าส่วนกลางคอนโดรายปี พร้อมค่าที่จอดรถและค่าใช้จ่ายอื่นๆ":"Calculate total yearly condo maintenance fee including parking and other fees.", category: "Family", icon: Calculator },
+    { id: "condo-purchase-cost", slug: "condo-purchase-cost", name: lang==="TH"?"ค่าใช้จ่ายซื้อคอนโด":"Condo Purchase Cost", desc: lang==="TH"?"คำนวณค่าใช้จ่ายวันโอนคอนโด ค่ากองทุนส่วนกลาง ค่าจดจำนอง และอื่นๆ":"Calculate condo transfer day costs, sinking fund, mortgage fee, etc.", category: "Family", icon: Calculator },
+    { id: "condo-rent-vs-buy-to-let-roi", slug: "condo-rent-vs-buy-to-let-roi", name: lang==="TH"?"เทียบกำไรถ้าซื้อปล่อยเช่า (ROI)":"Condo Buy to Let ROI", desc: lang==="TH"?"ประเมินความคุ้มค่าและคำนวณผลตอบแทน (ROI) จากการซื้อคอนโดเพื่อปล่อยเช่า":"Evaluate profitability and calculate ROI for buying a condo to rent out.", category: "Family", icon: Calculator },
+    { id: "full-house-furniture-cost", slug: "full-house-furniture-cost", name: lang==="TH"?"ค่าใช้จ่ายเปลี่ยนเฟอร์นิเจอร์ทั้งบ้าน":"Full House Furniture Cost", desc: lang==="TH"?"ประเมินงบประมาณซื้อเฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าสำหรับตกแต่งบ้านใหม่":"Estimate budget for furnishing a whole house with furniture and appliances.", category: "Family", icon: Calculator },
+    { id: "moving-house-cost", slug: "moving-house-cost", name: lang==="TH"?"ค่าใช้จ่ายย้ายบ้าน":"Moving House Cost", desc: lang==="TH"?"ประเมินงบประมาณค่าย้ายบ้าน ค่ารถบรรทุก ค่าเด็กยกของ และค่ากล่อง":"Estimate budget for moving house, truck, movers, and packing materials.", category: "Family", icon: Calculator },
+    { id: "new-house-purchase-cost", slug: "new-house-purchase-cost", name: lang==="TH"?"ค่าใช้จ่ายซื้อบ้านมือหนึ่ง":"New House Purchase Cost", desc: lang==="TH"?"คำนวณค่าใช้จ่ายทั้งหมดในการซื้อบ้านมือหนึ่ง เช่น ค่าจดจำนอง ค่าโอน ค่ามิเตอร์":"Calculate total costs of buying a new house including mortgage fee, transfer fee, and utility deposits.", category: "Family", icon: Calculator },
+    { id: "property-tax-calculator", slug: "property-tax-calculator", name: lang==="TH"?"ค่าภาษีที่ดินและสิ่งปลูกสร้าง":"Property Tax Calculator", desc: lang==="TH"?"คำนวณภาษีที่ดินและสิ่งปลูกสร้าง สำหรับบ้านหลังแรก บ้านหลังที่สอง และที่ดินเปล่า":"Calculate property and land tax for first home, second home, and vacant land.", category: "Family", icon: Calculator },
+    { id: "rental-yield-calculator", slug: "rental-yield-calculator", name: lang==="TH"?"คำนวณ Rental Yield":"Rental Yield Calculator", desc: lang==="TH"?"หาอัตราผลตอบแทนการปล่อยเช่า Gross Yield และ Net Yield เพื่อการลงทุน":"Calculate Gross and Net Rental Yield for property investments.", category: "Family", icon: Calculator },
+    { id: "ac-btu-size-calculator", slug: "ac-btu-size-calculator", name: lang==="TH"?"คำนวณขนาดแอร์ (BTU)":"AC BTU Size Calculator", desc: lang==="TH"?"คำนวณขนาดเครื่องปรับอากาศ (BTU) ที่เหมาะสมกับขนาดห้องและสภาพแสงแดด เพื่อความเย็นที่พอดีและประหยัดไฟ":"Calculate the appropriate Air Conditioner BTU size based on room dimensions and sunlight exposure.", category: "Utility", icon: Calculator },
+    { id: "appliance-electricity-cost", slug: "appliance-electricity-cost", name: lang==="TH"?"คำนวณค่าไฟเครื่องใช้ไฟฟ้าแต่ละชนิด":"Appliance Electricity Cost Calculator", desc: lang==="TH"?"เครื่องมือคำนวณค่าไฟสำหรับเครื่องใช้ไฟฟ้าแต่ละชนิด ประเมินค่าไฟรายเดือนและรายปี":"Calculate electricity cost for specific appliances to estimate monthly and yearly expenses.", category: "Utility", icon: Calculator },
+    { id: "garden-maintenance-cost", slug: "garden-maintenance-cost", name: lang==="TH"?"คำนวณค่าดูแลสวน":"Garden Maintenance Cost Calculator", desc: lang==="TH"?"ประเมินค่าใช้จ่ายในการดูแลสวนรายเดือน เช่น ค่าจ้างคนสวน ค่าปุ๋ย ค่าน้ำ เพื่อการจัดสรรงบประมาณที่เหมาะสม":"Estimate monthly garden maintenance costs including gardener fees, fertilizers, and water usage.", category: "Family", icon: Calculator },
+    { id: "home-internet-cost", slug: "home-internet-cost", name: lang==="TH"?"เปรียบเทียบค่าอินเทอร์เน็ตบ้าน":"Home Internet Cost Comparison", desc: lang==="TH"?"เปรียบเทียบค่าใช้จ่ายอินเทอร์เน็ตบ้าน 2 แพ็กเกจ เพื่อหาตัวเลือกที่คุ้มค่าที่สุดตลอดอายุสัญญา":"Compare 2 home internet plans to find the most cost-effective option over the contract period.", category: "Family", icon: Calculator },
+    { id: "home-security-cost", slug: "home-security-cost", name: lang==="TH"?"คำนวณค่าใช้จ่ายรักษาความปลอดภัยบ้าน":"Home Security Cost Calculator", desc: lang==="TH"?"ประเมินค่าใช้จ่ายเบื้องต้นในการติดตั้งระบบรักษาความปลอดภัย เช่น กล้องวงจรปิด สัญญาณกันขโมย และค่าใช้จ่ายรายเดือน":"Estimate upfront and ongoing costs for home security systems including CCTV, alarms, and monitoring.", category: "Family", icon: Calculator },
+    { id: "home-solar-installation-cost", slug: "home-solar-installation-cost", name: lang==="TH"?"คำนวณค่าติดตั้งและจุดคุ้มทุนโซลาร์รูฟท็อป":"Home Solar Installation Cost Calculator", desc: lang==="TH"?"ประเมินค่าใช้จ่ายเบื้องต้นในการติดตั้งแผงโซลาร์เซลล์บนหลังคาบ้าน คำนวณค่าไฟที่ประหยัดได้และระยะเวลาคืนทุน":"Estimate home solar panel installation costs, monthly savings, and payback period.", category: "Construction", icon: Calculator },
+    { id: "house-painting-cost", slug: "house-painting-cost", name: lang==="TH"?"คำนวณค่าทาสีบ้านใหม่":"House Painting Cost Calculator", desc: lang==="TH"?"ประเมินงบประมาณค่าทาสีบ้าน คำนวณปริมาณสีที่ต้องใช้และค่าแรงช่างตามพื้นที่ตารางเมตร":"Estimate house painting budget, calculate required paint volume and labor costs based on square meters.", category: "Construction", icon: Calculator },
+    { id: "household-water-usage-cost", slug: "household-water-usage-cost", name: lang==="TH"?"คำนวณค่าน้ำอุปโภคบริโภค":"Household Water Usage Cost Calculator", desc: lang==="TH"?"คำนวณปริมาณการใช้น้ำและประมาณการค่าน้ำประปารายเดือนของครอบครัว":"Calculate water usage volume and estimate monthly water bill for your household.", category: "Utility", icon: Calculator },
+    { id: "pool-maintenance-cost", slug: "pool-maintenance-cost", name: lang==="TH"?"คำนวณค่าดูแลสระว่ายน้ำ":"Pool Maintenance Cost Calculator", desc: lang==="TH"?"ประเมินค่าใช้จ่ายในการดูแลรักษาสระว่ายน้ำรายเดือนและรายปี ทั้งค่าสารเคมี ไฟฟ้า น้ำ และบริการทำความสะอาด":"Estimate monthly and yearly pool maintenance costs including chemicals, electricity, water, and cleaning services.", category: "Family", icon: Calculator },
+    { id: "roof-replacement-cost", slug: "roof-replacement-cost", name: lang==="TH"?"คำนวณค่าเปลี่ยนหลังคาบ้าน":"Roof Replacement Cost Calculator", desc: lang==="TH"?"ประเมินงบประมาณในการรื้อถอนและเปลี่ยนหลังคาใหม่ ตามพื้นที่และประเภทของวัสดุหลังคา":"Estimate the budget for roof replacement including demolition and new materials based on roof area.", category: "Construction", icon: Calculator },
+    { id: "car-comparison", slug: "car-comparison", name: lang==="TH"?"เปรียบเทียบรถยนต์ 2 คัน (ค่าใช้จ่าย)":"Car Comparison Calculator", desc: lang==="TH"?"เปรียบเทียบค่าใช้จ่ายรายปีและการผ่อนชำระของรถยนต์ 2 คัน เพื่อประกอบการตัดสินใจ":"Compare annual costs and loan payments of 2 cars to make a better decision.", category: "Finance", icon: Calculator },
+    { id: "car-depreciation", slug: "car-depreciation", name: lang==="TH"?"คำนวณค่าเสื่อมราคารถ":"Car Depreciation Calculator", desc: lang==="TH"?"คำนวณและประเมินมูลค่ารถยนต์ที่ลดลงตามกาลเวลา (Depreciation) พร้อมตารางแสดงมูลค่ารายปี":"Estimate the declining value of a car over time with a yearly depreciation table.", category: "Finance", icon: Calculator },
+    { id: "car-insurance", slug: "car-insurance", name: lang==="TH"?"คำนวณค่าประกันรถยนต์":"Car Insurance Calculator", desc: lang==="TH"?"ประเมินค่าประกันภัยรถยนต์รายปี รวมพ.ร.บ. และตัวเลือกเสริมต่างๆ":"Estimate annual car insurance premiums including compulsory insurance and add-ons.", category: "Finance", icon: Calculator },
+    { id: "car-maintenance", slug: "car-maintenance", name: lang==="TH"?"คำนวณค่าบำรุงรักษารถยนต์":"Car Maintenance Cost Calculator", desc: lang==="TH"?"ประมาณการค่าใช้จ่ายในการซ่อมบำรุงรถยนต์รายปี ตามรอบระยะทาง เช่น น้ำมันเครื่อง ยาง แบตเตอรี่":"Estimate annual maintenance costs including oil, tires, and battery replacements based on mileage.", category: "Finance", icon: Calculator },
+    { id: "car-tco", slug: "car-tco", name: lang==="TH"?"เครื่องคำนวณต้นทุนความเป็นเจ้าของรถ TCO":"Car Total Cost of Ownership (TCO) Calculator", desc: lang==="TH"?"คำนวณต้นทุนทั้งหมดในการเป็นเจ้าของรถยนต์ ทั้งค่าผ่อน ค่าน้ำมัน ค่าบำรุงรักษา และค่าเสื่อมราคา":"Calculate the total cost of owning a car including loan, fuel, maintenance, and depreciation.", category: "Finance", icon: Calculator },
+    { id: "ev-cost-per-km", slug: "ev-cost-per-km", name: lang==="TH"?"ค่าใช้จ่ายรถ EV ต่อกม.":"EV Cost per KM Calculator", desc: lang==="TH"?"เปรียบเทียบค่าใช้จ่ายพลังงานต่อกิโลเมตร ระหว่างรถยนต์ไฟฟ้า (EV) และรถน้ำมันสันดาป (ICE)":"Compare energy cost per kilometer between Electric Vehicles (EV) and Internal Combustion Engine (ICE) cars.", category: "Finance", icon: Calculator },
+    { id: "ev-ice-breakeven", slug: "ev-ice-breakeven", name: lang==="TH"?"คำนวณจุดคุ้มทุนรถ EV":"EV vs ICE Break-even", desc: lang==="TH"?"เปรียบเทียบว่าต้องใช้รถ EV กี่ปี ถึงจะคุ้มส่วนต่างราคาเมื่อเทียบกับรถน้ำมัน":"Calculate how many years it takes for an EV's fuel savings to offset its higher purchase price.", category: "Finance", icon: Calculator },
+    { id: "motorcycle-loan", slug: "motorcycle-loan", name: lang==="TH"?"คำนวณค่าผ่อนรถมอเตอร์ไซค์":"Motorcycle Loan Calculator", desc: lang==="TH"?"คำนวณค่างวดรถมอเตอร์ไซค์ ดอกเบี้ยคงที่ต่อเดือน/ต่อปี พร้อมตารางการผ่อนชำระ":"Calculate motorcycle loan monthly payments with flat interest rates (monthly/yearly).", category: "Finance", icon: Calculator },
+    { id: "rider-roi", slug: "rider-roi", name: lang==="TH"?"คำนวณรายได้จุดคุ้มทุนไรเดอร์":"Rider ROI & Income Calculator", desc: lang==="TH"?"คำนวณรายได้สุทธิและระยะเวลาคืนทุน (ROI) สำหรับอาชีพขับรถส่งอาหาร (Grab, Lineman, Foodpanda)":"Calculate net income and ROI payback period for food delivery riders.", category: "Finance", icon: Calculator },
+    { id: "truck-cost", slug: "truck-cost", name: lang==="TH"?"คำนวณต้นทุนรถบรรทุกขนส่ง":"Truck Operating Cost", desc: lang==="TH"?"คำนวณต้นทุนการวิ่งรถบรรทุกต่อเที่ยวและต่อกิโลเมตร รวมถึงค่าน้ำมันและค่าจ้างคนขับ":"Calculate truck operating cost per trip and per kilometer, including fuel and driver wages.", category: "Finance", icon: Calculator },
+    { id: "annual-commute-cost-calculator", slug: "annual-commute-cost-calculator", name: lang==="TH"?"เครื่องคำนวณระยะทางและค่าใช้จ่ายไป-กลับทำงานต่อปี":"Annual Commute Cost Calculator", desc: lang==="TH"?"คำนวณค่าใช้จ่ายและระยะทางรวมที่คุณใช้ในการเดินทางไปทำงานตลอดทั้งปี":"Calculate the total distance and cost of your annual commute.", category: "Travel", icon: Calculator },
+    { id: "car-pool-savings-calculator", slug: "car-pool-savings-calculator", name: lang==="TH"?"เครื่องคิดเลขค่าใช้จ่าย Car Pool":"Car Pool Savings Calculator", desc: lang==="TH"?"คำนวณค่าใช้จ่ายและเงินที่ประหยัดได้จากการนั่งรถตู้คาร์พูลหรือเดินทางไปทำงานด้วยกัน":"Calculate costs and savings from carpooling.", category: "Travel", icon: Calculator },
+    { id: "monthly-parking-cost-calculator", slug: "monthly-parking-cost-calculator", name: lang==="TH"?"เครื่องคิดเลขค่าใช้จ่ายที่จอดรถรายเดือน":"Monthly Parking Cost Calculator", desc: lang==="TH"?"คำนวณและเปรียบเทียบค่าที่จอดรถแบบรายวันกับรายเดือน แบบไหนคุ้มค่ากว่ากัน":"Compare daily vs monthly parking costs to find the best deal.", category: "Travel", icon: Calculator },
+    { id: "monthly-toll-fee-calculator", slug: "monthly-toll-fee-calculator", name: lang==="TH"?"เครื่องคิดเลขค่าทางด่วน/ค่าผ่านทางต่อเดือน":"Monthly Toll Fee Calculator", desc: lang==="TH"?"คำนวณค่าใช้จ่ายทางด่วน ค่าผ่านทางมอเตอร์เวย์ ต่อเดือนและต่อปี เพื่อการวางแผนเติมเงิน EasyPass/M-Flow":"Calculate your monthly and annual toll fees for better budget planning.", category: "Travel", icon: Calculator },
+    { id: "ride-hailing-vs-own-car-cost-calculator", slug: "ride-hailing-vs-own-car-cost-calculator", name: lang==="TH"?"เปรียบเทียบค่าใช้จ่าย เรียกรถ vs รถส่วนตัว":"Ride Hailing vs Own Car Cost Calculator", desc: lang==="TH"?"คำนวณและเปรียบเทียบว่าการใช้แอปเรียกรถ (Grab/Uber) หรือการซื้อรถยนต์ส่วนตัว แบบไหนคุ้มค่ากว่ากัน":"Compare the true costs of using ride-hailing services versus owning a car.", category: "Travel", icon: Calculator },
+    { id: "break-even-time", slug: "break-even-time-calculator", name: lang==="TH"?"ระยะเวลาคืนทุน":"Break-Even Time", desc: lang==="TH"?"คำนวณระยะเวลา (เดือน) ที่ธุรกิจจะคืนทุนจากกระแสเงินสด":"Calculate months to payback initial investment", category: "Finance", icon: Calculator },
+    { id: "capacity-utilization-rate", slug: "capacity-utilization-rate-calculator", name: lang==="TH"?"อัตราการใช้กำลังการผลิต":"Capacity Utilization Rate", desc: lang==="TH"?"คำนวณประสิทธิภาพการใช้ทรัพยากรเทียบกับขีดจำกัดสูงสุด":"Calculate output relative to potential maximum capacity", category: "Business", icon: Calculator },
+    { id: "cash-flow-projection", slug: "12-month-cash-flow-projection", name: lang==="TH"?"ประมาณการกระแสเงินสด 12 เดือน":"12-Month Cash Flow Projection", desc: lang==="TH"?"วางแผนและคาดการณ์กระแสเงินสดรับจ่ายรายเดือน":"Forecast monthly cash inflows and outflows", category: "Finance", icon: Calculator },
+    { id: "cost-per-unit", slug: "manufacturing-cost-per-unit-calculator", name: lang==="TH"?"ต้นทุนต่อหน่วย (ผลิต)":"Cost per Unit", desc: lang==="TH"?"คำนวณต้นทุนรวมต่อการผลิตสินค้า 1 ชิ้น":"Calculate total manufacturing cost per unit", category: "Business", icon: Calculator },
+    { id: "double-declining-depreciation", slug: "double-declining-depreciation-calculator", name: lang==="TH"?"ค่าเสื่อมราคาแบบยอดลดลงทวีคูณ":"Double Declining Balance Depreciation", desc: lang==="TH"?"คำนวณตารางค่าเสื่อมราคาสินทรัพย์แบบเร่งรัด":"Calculate accelerated depreciation schedule", category: "Finance", icon: Calculator },
+    { id: "working-capital", slug: "working-capital-calculator", name: lang==="TH"?"เงินทุนหมุนเวียนสุทธิ":"Working Capital", desc: lang==="TH"?"คำนวณเงินทุนหมุนเวียนและอัตราส่วนสภาพคล่อง":"Calculate net working capital and current ratio", category: "Finance", icon: Calculator },
+    { id: "wholesale-vs-retail-margin", slug: "wholesale-retail-margin-calculator", name: lang==="TH"?"คำนวณราคาส่งและราคาปลีก":"Wholesale vs Retail Margin", desc: lang==="TH"?"คำนวณโครงสร้างราคาขายและอัตรากำไรสำหรับผู้ผลิตและร้านค้า":"Calculate wholesale and retail prices based on margin", category: "Business", icon: Calculator },
+    { id: "retail-space-rent-roi", slug: "retail-space-rent-roi-calculator", name: lang==="TH"?"ความคุ้มค่าค่าเช่าพื้นที่":"Retail Space Rent ROI", desc: lang==="TH"?"ประเมินจุดคุ้มทุนและกำไรจากการเช่าหน้าร้าน":"Evaluate break-even sales and ROI for renting retail space", category: "Business", icon: Calculator },
+    { id: "simplified-p-and-l", slug: "simplified-profit-and-loss-calculator", name: lang==="TH"?"งบกำไรขาดทุนอย่างง่าย":"Simplified P&L", desc: lang==="TH"?"คำนวณงบกำไรขาดทุนและอัตรากำไรสุทธิ":"Calculate simplified profit and loss statement", category: "Finance", icon: Calculator },
+    { id: "freelance-vs-fulltime-cost", slug: "freelance-vs-fulltime-cost-calculator", name: lang==="TH"?"เปรียบเทียบฟรีแลนซ์และพนักงาน":"Freelance vs Full-time Cost", desc: lang==="TH"?"คำนวณและเปรียบเทียบต้นทุนแฝงในการจ้างงาน":"Compare true costs of hiring freelance vs full-time", category: "Business", icon: Calculator },
+    { id: "company-registration-cost", slug: "company-registration-cost-calculator", name: lang==="TH"?"คำนวณค่าธรรมเนียมจดทะเบียนบริษัท":"Company Registration Cost Calculator", desc: lang==="TH"?"คำนวณค่าธรรมเนียมรัฐและอากรแสตมป์เบื้องต้นในการจดทะเบียนตั้งบริษัท":"Calculate government fees and stamp duty for company registration", category: "Business", icon: Calculator },
+    { id: "corporate-tax", slug: "corporate-tax-calculator", name: lang==="TH"?"คำนวณภาษีเงินได้นิติบุคคล":"Corporate Tax Calculator", desc: lang==="TH"?"คำนวณภาษีเงินได้นิติบุคคลสำหรับ SME และบริษัททั่วไป":"Calculate corporate income tax for SME and general companies", category: "Finance", icon: Calculator },
+    { id: "credit-card-mdr-fee", slug: "credit-card-mdr-fee-calculator", name: lang==="TH"?"คำนวณค่าธรรมเนียมรูดบัตร (MDR)":"Credit Card MDR Fee Calculator", desc: lang==="TH"?"คำนวณผลกระทบของค่าธรรมเนียมรูดบัตรเครดิตที่มีต่อกำไรของร้านค้า":"Calculate the impact of Merchant Discount Rate (MDR) on store profit", category: "Finance", icon: Calculator },
+    { id: "de-ratio", slug: "de-ratio-calculator", name: lang==="TH"?"คำนวณอัตราส่วนหนี้สินต่อทุน (D/E)":"Debt-to-Equity Ratio Calculator", desc: lang==="TH"?"คำนวณอัตราส่วนหนี้สินต่อทุน (D/E Ratio) เพื่อประเมินความเสี่ยงทางการเงิน":"Calculate Debt-to-Equity Ratio to assess financial risk", category: "Finance", icon: Calculator },
+    { id: "legal-reserve", slug: "legal-reserve-calculator", name: lang==="TH"?"คำนวณทุนสำรองตามกฎหมาย":"Legal Reserve Calculator", desc: lang==="TH"?"คำนวณเงินสำรองตามกฎหมายที่บริษัทต้องจัดสรรเมื่อมีกำไร":"Calculate the legal reserve required by law when a company makes a profit", category: "Finance", icon: Calculator },
+    { id: "markup-imported-materials", slug: "markup-imported-materials-calculator", name: lang==="TH"?"คำนวณต้นทุนและราคาขายสินค้านำเข้า":"Imported Material Markup Calculator", desc: lang==="TH"?"คำนวณต้นทุนสินค้านำเข้ารวมภาษีและบวกกำไรเพื่อตั้งราคาขาย":"Calculate total cost of imported goods including duty and add markup for selling price", category: "Business", icon: Calculator },
+    { id: "pos-system-comparison", slug: "pos-system-comparison", name: lang==="TH"?"เปรียบเทียบต้นทุนระบบ POS":"POS System Comparison", desc: lang==="TH"?"เปรียบเทียบต้นทุนรายปีของระบบ POS แบบซื้อขาด vs แบบเช่า/หัก GP":"Compare annual cost of POS systems (Upfront vs Subscription/GP)", category: "Business", icon: Calculator },
+    { id: "quick-current-ratio", slug: "quick-current-ratio-calculator", name: lang==="TH"?"คำนวณอัตราส่วนสภาพคล่อง":"Quick & Current Ratio Calculator", desc: lang==="TH"?"คำนวณ Current Ratio และ Quick Ratio เพื่อประเมินสภาพคล่องระยะสั้น":"Calculate Current and Quick Ratios to assess short-term liquidity", category: "Finance", icon: Calculator },
+    { id: "roe-roa-roic", slug: "roe-roa-roic-calculator", name: lang==="TH"?"คำนวณ ROE / ROA / ROIC":"ROE / ROA / ROIC Calculator", desc: lang==="TH"?"คำนวณอัตราผลตอบแทนจากสินทรัพย์ ผู้ถือหุ้น และเงินทุน":"Calculate Return on Equity, Return on Assets, and Return on Invested Capital", category: "Finance", icon: Calculator },
+    { id: "sales-commission-structure", slug: "sales-commission-structure", name: lang==="TH"?"คำนวณค่าคอมมิชชั่นพนักงานขาย":"Sales Commission Structure Calculator", desc: lang==="TH"?"คำนวณค่าคอมมิชชั่นแบบ Flat Rate และแบบขั้นบันได (Tiered)":"Calculate flat rate and tiered sales commission structure", category: "Business", icon: Calculator },
+    { id: "dio", slug: "days-inventory-outstanding-calculator", name: lang==="TH"?"คำนวณระยะเวลาขายสินค้าเฉลี่ย (DIO)":"DIO Calculator", desc: lang==="TH"?"คำนวณ Days Inventory Outstanding (DIO) ระยะเวลาที่สินค้าค้างในสต็อกก่อนขายออก":"Calculate Days Inventory Outstanding to track how long inventory stays in stock.", category: "Finance", icon: Calculator },
+    { id: "dso", slug: "days-sales-outstanding-calculator", name: lang==="TH"?"คำนวณระยะเวลาเก็บหนี้ (DSO)":"DSO Calculator", desc: lang==="TH"?"คำนวณ Days Sales Outstanding (DSO) หรือระยะเวลาเก็บหนี้เฉลี่ย เพื่อวิเคราะห์สภาพคล่องของธุรกิจ":"Calculate Days Sales Outstanding to analyze your business liquidity and collection efficiency.", category: "Finance", icon: Calculator },
+    { id: "employee-bonus", slug: "employee-bonus-calculator", name: lang==="TH"?"คำนวณโบนัสพนักงาน (อิงผลงาน)":"Employee Bonus Calculation", desc: lang==="TH"?"คำนวณโบนัสสิ้นปีโดยใช้ระบบตัวคูณตามผลประกอบการบริษัทและผลงานส่วนบุคคล (KPI)":"Calculate year-end bonus using performance multipliers for company and individual KPIs.", category: "Business", icon: Calculator },
+    { id: "expense-ratio", slug: "expense-ratio-calculator", name: lang==="TH"?"คำนวณอัตราส่วนค่าใช้จ่าย (Expense Ratio)":"Expense Ratio Calculator", desc: lang==="TH"?"คำนวณสัดส่วนค่าใช้จ่ายดำเนินงานต่อรายได้รวม (OER) เพื่อวิเคราะห์ประสิทธิภาพการคุมต้นทุน":"Calculate the Operating Expense Ratio to analyze cost efficiency against total revenue.", category: "Finance", icon: Calculator },
+    { id: "gmv-vs-net-revenue", slug: "gmv-vs-net-revenue-calculator", name: lang==="TH"?"คำนวณยอดขายแพลตฟอร์ม (GMV vs Net)":"GMV vs Net Revenue Calculator", desc: lang==="TH"?"แปลงตัวเลขยอดขายรวม (GMV) ให้เป็นรายได้สุทธิ (Net Revenue) หลังหักค่าธรรมเนียมและส่วนลด":"Convert Gross Merchandise Value (GMV) to true Net Revenue by deducting platform fees.", category: "Business", icon: Calculator },
+    { id: "headcount-to-sales", slug: "optimal-headcount-sales-calculator", name: lang==="TH"?"คำนวณจำนวนพนักงานขายที่เหมาะสม":"Optimal Headcount to Sales", desc: lang==="TH"?"คำนวณว่าต้องจ้างพนักงานขายเพิ่มอีกกี่คน เพื่อให้บรรลุเป้าหมายยอดขายใหม่ที่ตั้งไว้":"Calculate how many sales reps you need to hire to hit your target revenue.", category: "Business", icon: Calculator },
+    { id: "inventory-costing", slug: "inventory-costing-fifo-avco", name: lang==="TH"?"คำนวณต้นทุนสินค้า FIFO vs ถัวเฉลี่ย":"Inventory Costing (FIFO vs AVCO)", desc: lang==="TH"?"เปรียบเทียบการตีราคาต้นทุนสินค้าคงคลังแบบเข้าก่อนออกก่อน (FIFO) กับแบบต้นทุนถัวเฉลี่ย (AVCO)":"Compare Cost of Goods Sold and Ending Inventory using FIFO and Average Cost (AVCO) methods.", category: "Finance", icon: Calculator },
+    { id: "landed-cost", slug: "landed-cost-calculator", name: lang==="TH"?"คำนวณต้นทุนสินค้านำเข้า":"Landed Cost Calculator", desc: lang==="TH"?"คำนวณต้นทุนสินค้านำเข้ารวมค่าขนส่ง ภาษี และค่าธรรมเนียม เพื่อหาราคาต้นทุนต่อชิ้นที่แท้จริง":"Calculate the true cost of imported goods including shipping, taxes, and fees.", category: "Finance", icon: Calculator },
+    { id: "office-vs-wfh", slug: "office-vs-wfh-calculator", name: lang==="TH"?"เปรียบเทียบต้นทุน ออฟฟิศ vs WFH":"Office vs WFH Cost Saving", desc: lang==="TH"?"คำนวณเงินที่องค์กรประหยัดได้จากการให้พนักงาน Work From Home เทียบกับการเช่าออฟฟิศ":"Calculate the money saved by transitioning from a traditional office to a Work From Home model.", category: "Business", icon: Calculator },
+    { id: "packaging-cost", slug: "packaging-cost-calculator", name: lang==="TH"?"คำนวณต้นทุนบรรจุภัณฑ์ต่อชิ้น":"Packaging Cost per Unit", desc: lang==="TH"?"คำนวณต้นทุนบรรจุภัณฑ์ทั้งหมดที่ใช้ต่อสินค้า 1 ชิ้น รวมถึงกล่อง ฉลาก และค่าแรงแพ็ค":"Calculate the total packaging cost used per 1 item including box, labels, and labor.", category: "Business", icon: Calculator },
+    { id: "advertising-budget-allocation", slug: "advertising-budget-allocation", name: lang==="TH"?"คำนวณสัดส่วนงบโฆษณา (Ad Budget Allocation)":"Advertising Budget Allocation", desc: lang==="TH"?"คำนวณและจัดสรรงบประมาณโฆษณาเพื่อสร้างยอดขายตามเป้าหมาย (ROAS)":"Calculate and allocate advertising budget to achieve sales target (ROAS)", category: "Business", icon: Calculator },
+    { id: "cac-payback-period", slug: "cac-payback-period-calculator", name: lang==="TH"?"คำนวณระยะเวลาคืนทุนของลูกค้า (CAC Payback)":"CAC Payback Period Calculator", desc: lang==="TH"?"คำนวณระยะเวลาที่ใช้ในการคืนทุนค่าใช้จ่ายในการได้ลูกค้าใหม่ (CAC) สำหรับธุรกิจ Subscription หรือ SaaS":"Calculate the months required to recover Customer Acquisition Cost for subscription businesses", category: "Business", icon: Calculator },
+    { id: "ebitda-calculator", slug: "ebitda-calculator", name: lang==="TH"?"คำนวณ EBITDA":"EBITDA Calculator", desc: lang==="TH"?"คำนวณกำไรก่อนหักดอกเบี้ย ภาษี ค่าเสื่อมราคา และค่าตัดจำหน่าย เพื่อประเมินผลการดำเนินงาน":"Calculate Earnings Before Interest, Taxes, Depreciation, and Amortization", category: "Finance", icon: Calculator },
+    { id: "employee-ot-calculation", slug: "employee-ot-calculator", name: lang==="TH"?"คำนวณค่าล่วงเวลา (OT)":"Employee OT Calculator", desc: lang==="TH"?"คำนวณค่าล่วงเวลาและค่าทำงานในวันหยุดตามกฎหมายแรงงานไทย":"Calculate overtime pay based on Thai labor laws", category: "Business", icon: Calculator },
+    { id: "employer-social-security", slug: "employer-social-security-calculator", name: lang==="TH"?"คำนวณเงินสมทบประกันสังคม (นายจ้าง)":"Employer Social Security Cost Calculator", desc: lang==="TH"?"คำนวณภาระต้นทุนเงินสมทบประกันสังคมและกองทุนเงินทดแทนในมุมมองของนายจ้าง":"Calculate employer contributions to Social Security and Workmen's Compensation Fund", category: "Business", icon: Calculator },
+    { id: "fx-forward-rate-risk", slug: "fx-forward-rate-calculator", name: lang==="TH"?"คำนวณอัตราแลกเปลี่ยนล่วงหน้า (FX Forward)":"FX Forward Rate Calculator", desc: lang==="TH"?"คำนวณและประเมินความเสี่ยงอัตราแลกเปลี่ยนด้วยสัญญา Forward":"Calculate and assess foreign exchange risk with Forward contracts", category: "Finance", icon: Calculator },
+    { id: "international-shipping-cost", slug: "international-shipping-cost-calculator", name: lang==="TH"?"คำนวณต้นทุนการนำเข้า/ส่งออก (EXW/FOB/CIF)":"International Shipping Cost Calculator (EXW/FOB/CIF)", desc: lang==="TH"?"คำนวณและเปรียบเทียบต้นทุนการขนส่งสินค้าระหว่างประเทศตามเงื่อนไข Incoterms (EXW, FOB, CIF)":"Calculate and compare international shipping costs based on Incoterms (EXW, FOB, CIF)", category: "Business", icon: Calculator },
+    { id: "minimum-wage-province", slug: "minimum-wage-thailand-calculator", name: lang==="TH"?"คำนวณและเปรียบเทียบค่าแรงขั้นต่ำรายจังหวัด":"Minimum Wage by Province Calculator", desc: lang==="TH"?"คำนวณฐานเงินเดือนและเปรียบเทียบค่าแรงขั้นต่ำของแต่ละจังหวัดในประเทศไทย":"Calculate and compare minimum wages across provinces in Thailand", category: "Business", icon: Calculator },
+    { id: "severance-pay-calculation", slug: "severance-pay-calculator", name: lang==="TH"?"คำนวณเงินชดเชยเลิกจ้าง":"Severance Pay Calculator", desc: lang==="TH"?"คำนวณเงินชดเชยเมื่อถูกเลิกจ้างตามอายุงานและกฎหมายแรงงานไทย":"Calculate severance pay based on tenure and Thai labor laws", category: "Business", icon: Calculator },
+    { id: "warehouse-rent-vs-buy", slug: "warehouse-rent-vs-buy-calculator", name: lang==="TH"?"คำนวณเช่า vs ซื้อคลังสินค้า":"Warehouse Rent vs Buy Calculator", desc: lang==="TH"?"เปรียบเทียบความคุ้มค่าทางการเงินระหว่างการเช่าคลังสินค้ากับการลงทุนสร้าง/ซื้อเองในระยะยาว":"Compare financial viability between renting a warehouse and building/buying one for long-term", category: "Business", icon: Calculator },
+    { id: "acceptable-cpc", slug: "acceptable-cpc-calculator", name: lang==="TH"?"เครื่องมือคำนวณ Acceptable CPC (ต้นทุนต่อคลิกที่ยอมรับได้)":"Acceptable CPC Calculator", desc: lang==="TH"?"คำนวณหาค่า CPC สูงสุดที่คุณสามารถจ่ายได้โดยไม่ขาดทุน จาก Conversion Rate และกำไรต่อออเดอร์":"Calculate the maximum CPC you can afford based on your conversion rate and profit per order.", category: "Business", icon: Calculator },
+    { id: "cagr", slug: "cagr-calculator", name: lang==="TH"?"เครื่องมือคำนวณอัตราการเติบโต (CAGR)":"CAGR Calculator", desc: lang==="TH"?"คำนวณอัตราการเติบโตเฉลี่ยต่อปีแบบทบต้น (Compound Annual Growth Rate) เพื่อประเมินผลตอบแทนหรือธุรกิจระยะยาว":"Calculate the Compound Annual Growth Rate (CAGR) to measure smooth investment return or business growth over multiple years.", category: "Finance", icon: Calculator },
+    { id: "factory-electricity", slug: "factory-electricity-calculator", name: lang==="TH"?"เครื่องมือเปรียบเทียบค่าไฟ TOU (ธุรกิจ/โรงงาน)":"Factory Electricity TOU Calculator", desc: lang==="TH"?"เปรียบเทียบค่าไฟฟ้าสำหรับธุรกิจและโรงงาน ระหว่างอัตราปกติ (Flat Rate) และอัตราตามช่วงเวลา (TOU) เพื่อวางแผนลดต้นทุน":"Compare business electricity costs between standard flat rates and Time of Use (TOU) rates to optimize overhead expenses.", category: "Business", icon: Calculator },
+    { id: "franchise-cost", slug: "franchise-cost-calculator", name: lang==="TH"?"เครื่องมือคำนวณงบลงทุนเปิดแฟรนไชส์ (Total Franchise Cost)":"Franchise Cost Calculator", desc: lang==="TH"?"คำนวณเงินลงทุนรวมทั้งหมดในการซื้อและเปิดร้านแฟรนไชส์ (ค่าธรรมเนียม, ค่าก่อสร้าง, อุปกรณ์ และเงินทุนหมุนเวียนสำรอง)":"Calculate the total initial investment required to open a franchise business including fees, build-out, and working capital.", category: "Business", icon: Calculator },
+    { id: "gross-margin-sku", slug: "gross-margin-sku-calculator", name: lang==="TH"?"เครื่องมือคำนวณกำไรขั้นต้นต่อสินค้า (Gross Margin per SKU)":"Gross Margin per SKU Calculator", desc: lang==="TH"?"คำนวณกำไรขั้นต้นและอัตรากำไร (Gross Margin %) ของสินค้าแต่ละรายการ เพื่อวิเคราะห์ความคุ้มค่าก่อนตั้งราคาขาย":"Calculate the Gross Margin percentage and gross profit per SKU to analyze product profitability before pricing.", category: "Finance", icon: Calculator },
+    { id: "nps", slug: "nps-calculator", name: lang==="TH"?"เครื่องมือคำนวณ Net Promoter Score (NPS)":"NPS Calculator", desc: lang==="TH"?"คำนวณคะแนนความพึงพอใจและวัดความภักดีของลูกค้าที่มีต่อแบรนด์จากผลสำรวจ (NPS)":"Calculate your Net Promoter Score (NPS) based on customer survey results to gauge brand loyalty and customer satisfaction.", category: "Business", icon: Calculator },
+    { id: "real-estate-broker-fee", slug: "real-estate-broker-fee-calculator", name: lang==="TH"?"เครื่องมือคำนวณค่านายหน้าอสังหาฯ":"Real Estate Broker Fee Calculator", desc: lang==="TH"?"คำนวณค่านายหน้า (คอมมิชชั่น) อสังหาริมทรัพย์ พร้อมคำนวณภาษีมูลค่าเพิ่ม (VAT) และภาษีหัก ณ ที่จ่าย (WHT)":"Calculate real estate agent commission fees including VAT and Withholding Tax.", category: "Business", icon: Calculator },
+    { id: "return-rate-impact", slug: "return-rate-impact-calculator", name: lang==="TH"?"เครื่องมือคำนวณต้นทุนการคืนสินค้า (Return Rate Impact)":"Cost of Returns Calculator", desc: lang==="TH"?"คำนวณผลกระทบและมูลค่าความเสียหายที่เกิดจากอัตราการคืนสินค้า (Return/COD ตีกลับ) ที่มีต่อกำไรสุทธิของคุณ":"Calculate the financial impact and hidden costs of your product return rate on overall business profitability.", category: "Finance", icon: Calculator },
+    { id: "roas", slug: "roas-calculator", name: lang==="TH"?"เครื่องมือคำนวณ ROAS (ผลตอบแทนจากโฆษณา)":"ROAS Calculator", desc: lang==="TH"?"คำนวณ Return on Ad Spend ประเมินว่าค่าแอดที่จ่ายไปสร้างยอดขายกลับมาได้กี่เท่า พร้อมหาจุดคุ้มทุน (Break-even ROAS)":"Calculate the Return on Ad Spend (ROAS) to evaluate the effectiveness of your advertising campaigns and find break-even point.", category: "Finance", icon: Calculator },
+    { id: "saas-mrr-arr", slug: "saas-mrr-arr-calculator", name: lang==="TH"?"เครื่องมือคำนวณ MRR และ ARR (SaaS/Subscription)":"SaaS MRR & ARR Calculator", desc: lang==="TH"?"คำนวณรายได้ประจำรายเดือน (MRR) และรายได้ประจำรายปี (ARR) ของธุรกิจรูปแบบสมัครสมาชิก":"Calculate Monthly Recurring Revenue (MRR) and Annual Recurring Revenue (ARR) for Subscription and SaaS businesses.", category: "Business", icon: Calculator },
+    { id: "break-even-by-channel", slug: "break-even-by-channel", name: lang==="TH"?"จุดคุ้มทุนแยกช่องทาง":"Break-even by Channel", desc: lang==="TH"?"เปรียบเทียบจุดคุ้มทุนระหว่างการขายหน้าร้าน (Retail) และออนไลน์ (Online)":"Compare break-even points between retail and online sales channels.", category: "Business", icon: Calculator },
+    { id: "carbon-credit-cost", slug: "carbon-credit-cost-calculator", name: lang==="TH"?"คำนวณต้นทุนคาร์บอนเครดิต":"Carbon Credit Cost Calculator", desc: lang==="TH"?"คำนวณต้นทุนการซื้อหรือชดเชยคาร์บอนเครดิตสำหรับธุรกิจ":"Calculate the cost of purchasing or offsetting carbon credits for business.", category: "Business", icon: Calculator },
+    { id: "event-cost-per-attendee", slug: "event-cost-per-attendee", name: lang==="TH"?"คำนวณต้นทุนงานอีเวนต์ต่อหัว":"Event Cost per Attendee Calculator", desc: lang==="TH"?"ประเมินต้นทุนรวมและต้นทุนต่อหัวในการจัดงานอีเวนต์":"Estimate total event cost and cost per attendee.", category: "Business", icon: Calculator },
+    { id: "iso-certification-cost", slug: "iso-certification-cost", name: lang==="TH"?"คำนวณต้นทุนมาตรฐาน ISO":"ISO Certification Cost", desc: lang==="TH"?"ประเมินค่าใช้จ่ายในการขอรับรองและรักษาระบบมาตรฐาน ISO":"Estimate the cost of obtaining and maintaining ISO certification.", category: "Business", icon: Calculator },
+    { id: "npv-irr", slug: "npv-irr-calculator", name: lang==="TH"?"คำนวณ NPV และ IRR":"NPV & IRR Calculator", desc: lang==="TH"?"ประเมินมูลค่าปัจจุบันสุทธิ (NPV) และอัตราผลตอบแทนภายใน (IRR) ของโครงการ":"Calculate Net Present Value and Internal Rate of Return for projects.", category: "Finance", icon: Calculator },
+    { id: "patent-cost", slug: "patent-cost-calculator", name: lang==="TH"?"คำนวณค่าจดสิทธิบัตรและบำรุงรักษา":"Patent Cost Calculator", desc: lang==="TH"?"คำนวณค่าใช้จ่ายในการยื่นจดสิทธิบัตรและค่าบำรุงรักษารายปี":"Calculate patent filing fees and annual maintenance costs.", category: "Business", icon: Calculator },
+    { id: "project-payback-period", slug: "project-payback-period-calculator", name: lang==="TH"?"คำนวณระยะเวลาคืนทุน":"Project Payback Period", desc: lang==="TH"?"คำนวณระยะเวลาคืนทุนของโครงการลงทุน (Payback Period)":"Calculate the payback period for a project investment.", category: "Finance", icon: Calculator },
+    { id: "royalty-income", slug: "royalty-income-calculator", name: lang==="TH"?"คำนวณรายได้ค่าลิขสิทธิ์":"Royalty Income Calculator", desc: lang==="TH"?"คำนวณรายได้จากค่าลิขสิทธิ์และการหักภาษี ณ ที่จ่าย":"Calculate royalty income and withholding tax deductions.", category: "Finance", icon: Calculator },
+    { id: "sensitivity-analysis", slug: "sensitivity-analysis-calculator", name: lang==="TH"?"เครื่องมือวิเคราะห์ความอ่อนไหว":"Sensitivity Analysis Calculator", desc: lang==="TH"?"ประเมินผลกระทบของตัวแปรที่เปลี่ยนแปลงต่อผลกำไรของธุรกิจ":"Analyze how changes in key variables impact business profit.", category: "Finance", icon: Calculator },
+    { id: "space-rental-deposit", slug: "space-rental-deposit-calculator", name: lang==="TH"?"คำนวณเงินมัดจำเช่าพื้นที่":"Space Rental Deposit", desc: lang==="TH"?"คำนวณเงินมัดจำ ค่าเช่าล่วงหน้า และค่าใช้จ่ายวันทำสัญญาสำหรับพื้นที่ธุรกิจ":"Calculate rental deposits, advance payments, and move-in costs.", category: "Business", icon: Calculator },
+    { id: "banana-farming-calculator", slug: "banana-farming-calculator", name: lang==="TH"?"คำนวณต้นทุน/กำไรปลูกกล้วย":"Banana Farming Profit Calculator", desc: lang==="TH"?"โปรแกรมคำนวณต้นทุน รายรับ และกำไรสุทธิจากการปลูกกล้วย (กล้วยน้ำว้า/กล้วยหอม)":"Calculate costs, revenue, and net profit for banana farming.", category: "Agriculture", icon: Calculator },
+    { id: "broiler-chicken-farm-calculator", slug: "broiler-chicken-farm-calculator", name: lang==="TH"?"คำนวณต้นทุน/กำไรฟาร์มไก่เนื้อ":"Broiler Chicken Farm Profit Calculator", desc: lang==="TH"?"โปรแกรมประเมินรายรับ ต้นทุน และกำไรจากการเลี้ยงไก่เนื้อ (ต่อรุ่น/ต่อโรงเรือน)":"Calculate costs, revenue, and net profit for a broiler chicken farm per batch.", category: "Agriculture", icon: Calculator },
+    { id: "cassava-farming-calculator", slug: "cassava-farming-calculator", name: lang==="TH"?"คำนวณต้นทุน/กำไรปลูกมันสำปะหลัง":"Cassava Farming Profit Calculator", desc: lang==="TH"?"เครื่องมือคำนวณต้นทุน รายรับ และกำไรสุทธิจากการปลูกมันสำปะหลังต่อไร่":"Calculate costs, revenue, and net profit for cassava farming per rai.", category: "Agriculture", icon: Calculator },
+    { id: "coconut-farming-calculator", slug: "coconut-farming-calculator", name: lang==="TH"?"คำนวณต้นทุน/กำไรปลูกมะพร้าว":"Coconut Farming Profit Calculator", desc: lang==="TH"?"โปรแกรมคำนวณรายได้ ต้นทุน และกำไรสุทธิจากสวนมะพร้าว (มะพร้าวน้ำหอม/มะพร้าวแกง)":"Calculate costs, revenue, and net profit for coconut farming per year.", category: "Agriculture", icon: Calculator },
+    { id: "corn-farming-calculator", slug: "corn-farming-calculator", name: lang==="TH"?"คำนวณต้นทุนและกำไรปลูกข้าวโพด":"Corn Farming Profit Calculator", desc: lang==="TH"?"โปรแกรมคำนวณต้นทุน รายได้ และกำไรสุทธิจากการปลูกข้าวโพด ประเมินความคุ้มค่าในการลงทุน":"Calculate costs, revenue, and net profit for corn farming.", category: "Agriculture", icon: Calculator },
+    { id: "mango-farming-calculator", slug: "mango-farming-calculator", name: lang==="TH"?"คำนวณต้นทุน/กำไรปลูกมะม่วง":"Mango Farming Profit Calculator", desc: lang==="TH"?"โปรแกรมคำนวณรายได้ ต้นทุน และกำไรสุทธิจากสวนมะม่วงเพื่อการค้า":"Calculate annual costs, revenue, and net profit for a commercial mango orchard.", category: "Agriculture", icon: Calculator },
+    { id: "oil-palm-farming-calculator", slug: "oil-palm-farming-calculator", name: lang==="TH"?"คำนวณต้นทุน/กำไรปลูกปาล์มน้ำมัน":"Oil Palm Farming Profit Calculator", desc: lang==="TH"?"เครื่องมือคำนวณต้นทุน รายได้ และกำไรสุทธิจากสวนปาล์มน้ำมันต่อปี":"Calculate annual costs, revenue, and net profit for oil palm farming.", category: "Agriculture", icon: Calculator },
+    { id: "rubber-tree-farming-calculator", slug: "rubber-tree-farming-calculator", name: lang==="TH"?"คำนวณต้นทุน/กำไรปลูกยางพารา":"Rubber Tree Farming Profit Calculator", desc: lang==="TH"?"เครื่องมือประเมินรายรับ ต้นทุน และกำไรสุทธิจากสวนยางพาราต่อปี":"Calculate costs, revenue, and net profit for rubber tree farming per year.", category: "Agriculture", icon: Calculator },
+    { id: "sugarcane-farming-calculator", slug: "sugarcane-farming-calculator", name: lang==="TH"?"คำนวณต้นทุน/กำไรปลูกอ้อย":"Sugarcane Farming Profit Calculator", desc: lang==="TH"?"เครื่องมือประเมินรายรับ ต้นทุน และกำไรสุทธิจากการปลูกอ้อยโรงงาน":"Calculate costs, revenue, and net profit for sugarcane farming.", category: "Agriculture", icon: Calculator },
+    { id: "white-shrimp-farm-calculator", slug: "white-shrimp-farm-calculator", name: lang==="TH"?"คำนวณต้นทุน/กำไรฟาร์มกุ้งขาว":"White Shrimp Farm Profit Calculator", desc: lang==="TH"?"โปรแกรมคำนวณต้นทุน รายได้ และกำไรจากการเลี้ยงกุ้งขาวแวนนาไม (ต่อบ่อ/ต่อรอบ)":"Calculate costs, revenue, and net profit for white shrimp farming per pond/crop.", category: "Agriculture", icon: Calculator },
+    { id: "agri-chemical-mix-ratio", slug: "agri-chemical-mix-ratio", name: lang==="TH"?"คำนวณสารเคมีเกษตรต่อถัง":"Agri-Chemical Mix Ratio", desc: lang==="TH"?"คำนวณอัตราส่วนการผสมสารเคมีเกษตร ปุ๋ย และฮอร์โมนต่อน้ำ 1 ถัง":"Calculate the precise mixing ratio of agricultural chemicals per spray tank.", category: "Agriculture", icon: Calculator },
+    { id: "beef-cattle-farm-profit-cost", slug: "beef-cattle-farm-profit-cost", name: lang==="TH"?"ต้นทุน/กำไรฟาร์มโคเนื้อ":"Beef Cattle Farm Profit/Cost", desc: lang==="TH"?"โปรแกรมคำนวณต้นทุนค่าอาหารและประเมินกำไรสำหรับการเลี้ยงโคเนื้อ/โคขุน":"Calculate costs and profit margin for beef cattle and fattening farms.", category: "Agriculture", icon: Calculator },
+    { id: "drip-irrigation-cost", slug: "drip-irrigation-cost", name: lang==="TH"?"ระบบน้ำหยด - ออกแบบและค่าใช้จ่าย":"Drip Irrigation Cost", desc: lang==="TH"?"คำนวณความยาวเทปน้ำหยด จำนวนม้วน และประเมินต้นทุนระบบน้ำหยดต่อไร่":"Estimate materials and costs for installing a drip irrigation system.", category: "Agriculture", icon: Calculator },
+    { id: "farm-area-from-gps", slug: "farm-area-from-gps", name: lang==="TH"?"คำนวณพื้นที่เกษตรจาก GPS Coordinates":"Farm Area from GPS", desc: lang==="TH"?"แปลงพิกัดละติจูด/ลองจิจูดจากมุมแปลงเป็นขนาดพื้นที่ (ไร่-งาน-ตารางวา)":"Calculate farm area in Rai and Sqm by inputting GPS coordinates of the field.", category: "Agriculture", icon: Calculator },
+    { id: "farm-break-even-yield", slug: "farm-break-even-yield", name: lang==="TH"?"ปริมาณผลผลิตที่ต้องขายเพื่อคืนทุน":"Farm Break-even Yield", desc: lang==="TH"?"คำนวณปริมาณผลผลิตขั้นต่ำต่อไร่ที่ต้องทำให้ได้เพื่อไม่ให้ขาดทุน":"Calculate the minimum crop yield required per Rai to break even.", category: "Agriculture", icon: Calculator },
+    { id: "farm-labor-cost-per-rai", slug: "farm-labor-cost-per-rai", name: lang==="TH"?"คำนวณค่าจ้างแรงงานเกษตรต่อไร่":"Farm Labor Cost per Rai", desc: lang==="TH"?"คำนวณต้นทุนค่าแรงเฉลี่ยต่อไร่ และวัดประสิทธิภาพการทำงานของคนงาน (ไร่/คน/วัน)":"Calculate exact labor cost per Rai and analyze workers' efficiency.", category: "Agriculture", icon: Calculator },
+    { id: "layer-chicken-farm-profit-cost", slug: "layer-chicken-farm-profit-cost", name: lang==="TH"?"ต้นทุน/กำไรฟาร์มไก่ไข่":"Layer Chicken Farm Profit/Cost", desc: lang==="TH"?"คำนวณต้นทุน รายได้ และกำไรสำหรับการทำฟาร์มไก่ไข่เบื้องต้น":"Calculate costs, revenues, and profit for layer chicken farming.", category: "Agriculture", icon: Calculator },
+    { id: "pig-farm-profit-cost", slug: "pig-farm-profit-cost", name: lang==="TH"?"ต้นทุน/กำไรฟาร์มหมู":"Pig Farm Profit/Cost", desc: lang==="TH"?"โปรแกรมคำนวณต้นทุน กำไร และประเมินจุดคุ้มทุนสำหรับการเลี้ยงหมูขุน":"Calculate and estimate profit, costs, and ROI for a commercial pig farm.", category: "Agriculture", icon: Calculator },
+    { id: "seeds-per-rai-calculator", slug: "seeds-per-rai-calculator", name: lang==="TH"?"คำนวณปริมาณเมล็ดพันธุ์ต่อไร่":"Seeds per Rai Calculator", desc: lang==="TH"?"คำนวณจำนวนต้นต่อไร่และปริมาณเมล็ดพันธุ์ที่ต้องใช้ตามระยะปลูก":"Calculate the exact amount of seeds needed per Rai based on planting spacing.", category: "Agriculture", icon: Calculator },
+    { id: "tractor-rent-vs-buy", slug: "tractor-rent-vs-buy", name: lang==="TH"?"ต้นทุนรถไถเช่า vs ซื้อ":"Tractor Rent vs Buy", desc: lang==="TH"?"เปรียบเทียบต้นทุนและหาจุดคุ้มทุน เลือกระหว่างการซื้อรถไถเองหรือจ้างเหมา":"Compare costs and find the break-even point between buying a tractor and renting one.", category: "Agriculture", icon: Calculator },
+    { id: "farm-land-rent-roi", slug: "farm-land-rent-roi", name: lang==="TH"?"คำนวณค่าเช่าที่ดินเกษตร เทียบกำไร":"Farm Land Rent ROI Calculator", desc: lang==="TH"?"ประเมินความคุ้มค่าของการเช่าที่ดินเพื่อการเกษตร โดยเปรียบเทียบค่าเช่ากับรายได้สุทธิ":"Evaluate the profitability of renting agricultural land by comparing rent costs with net income.", category: "Agriculture", icon: Calculator },
+    { id: "food-carbon-footprint", slug: "food-carbon-footprint", name: lang==="TH"?"คำนวณ Carbon Footprint อาหาร":"Food Carbon Footprint", desc: lang==="TH"?"เปรียบเทียบการปล่อยคาร์บอนระหว่างการบริโภคเนื้อสัตว์และพืชผัก เพื่อทางเลือกที่รักษ์โลก":"Compare carbon emissions between meat and plant-based foods for eco-friendly choices.", category: "Environment", icon: Calculator },
+    { id: "fresh-to-dry-weight", slug: "fresh-to-dry-weight", name: lang==="TH"?"คำนวณน้ำหนักผลผลิตสดเป็นแห้ง":"Fresh to Dry Weight Converter", desc: lang==="TH"?"คำนวณน้ำหนักผลผลิตทางการเกษตรหลังการอบแห้งหรือตากแห้ง โดยอิงจากความชื้น":"Calculate agricultural product weight after drying based on moisture content.", category: "Agriculture", icon: Calculator },
+    { id: "germination-rate", slug: "germination-rate", name: lang==="TH"?"คำนวณอัตราการงอกของเมล็ดพันธุ์":"Germination Rate Calculator", desc: lang==="TH"?"คำนวณเปอร์เซ็นต์อัตราการงอกของเมล็ดพันธุ์ เพื่อประเมินคุณภาพเมล็ดก่อนปลูกจริง":"Calculate the germination rate percentage of seeds to assess seed quality before planting.", category: "Agriculture", icon: Calculator },
+    { id: "harvest-time", slug: "harvest-time", name: lang==="TH"?"คำนวณระยะเวลาเก็บเกี่ยว":"Harvest Time from Planting", desc: lang==="TH"?"คำนวณวันเก็บเกี่ยวผลผลิตจากวันปลูกและอายุของพืช เพื่อวางแผนการเก็บเกี่ยว":"Calculate expected harvest date based on planting date and days to maturity.", category: "Agriculture", icon: Calculator },
+    { id: "mill-storage-electricity", slug: "mill-storage-electricity", name: lang==="TH"?"คำนวณการใช้ไฟฟ้าโรงสี/โรงเก็บ":"Mill/Storage Electricity Cost", desc: lang==="TH"?"คำนวณค่าไฟฟ้าของมอเตอร์ เครื่องจักร และระบบระบายอากาศในโรงสีหรือไซโล":"Calculate electricity costs for motors, machinery, and ventilation in mills or silos.", category: "Agriculture", icon: Calculator },
+    { id: "product-water-footprint", slug: "product-water-footprint", name: lang==="TH"?"คำนวณ Water Footprint สินค้า":"Product Water Footprint", desc: lang==="TH"?"เปรียบเทียบปริมาณน้ำที่ใช้ในการผลิตสินค้าอุปโภคบริโภคต่างๆ เพื่อสร้างความตระหนักรู้":"Compare the hidden water used to produce various consumer goods to raise awareness.", category: "Environment", icon: Calculator },
+    { id: "recycled-waste-impact", slug: "recycled-waste-impact", name: lang==="TH"?"ปริมาณขยะรีไซเคิลที่ลดได้ต่อปี":"Recycled Waste Impact", desc: lang==="TH"?"คำนวณการลดการปล่อยก๊าซเรือนกระจกจากการคัดแยกและรีไซเคิลขยะประเภทต่างๆ":"Calculate greenhouse gas emission reductions from sorting and recycling various types of waste.", category: "Environment", icon: Calculator },
+    { id: "travel-carbon-footprint", slug: "travel-carbon-footprint", name: lang==="TH"?"คำนวณ Carbon Footprint การเดินทาง":"Travel Carbon Footprint", desc: lang==="TH"?"ประเมินปริมาณการปล่อยก๊าซคาร์บอนไดออกไซด์จากการเดินทางด้วยยานพาหนะประเภทต่างๆ":"Estimate CO2 emissions from traveling using various modes of transportation.", category: "Environment", icon: Calculator },
+    { id: "water-saving-impact", slug: "water-saving-impact", name: lang==="TH"?"ค่าน้ำที่ประหยัดได้จากการเปลี่ยนพฤติกรรม":"Water Saving Impact", desc: lang==="TH"?"คำนวณปริมาณน้ำและเงินที่ประหยัดได้จากการลดเวลาอาบน้ำหรือปิดน้ำขณะแปรงฟัน":"Calculate water and money saved by reducing shower time or turning off the tap while brushing.", category: "Environment", icon: Calculator }
+  ];
 };
-
-export const getCalcs = (lang: Lang): Calculator[] => [
-  {
-    id: "e-waste-water-footprint",
-    slug: "e-waste-water-footprint",
-    name: lang === "TH" ? "คำนวณปริมาณน้ำในขยะอิเล็กทรอนิกส์" : "E-waste Water Footprint Calculator",
-    desc: lang === "TH" ? "ประเมินปริมาณน้ำซ่อนเร้น (Water Footprint) ที่ถูกใช้ในกระบวนการผลิตอุปกรณ์อิเล็กทรอนิกส์ต่างๆ" : "Estimate the hidden water (Water Footprint) used in manufacturing various electronic devices.",
-    category: "Environment",
-    icon: Icons.Droplet
-  },
-  {
-    id: "ev-charger-installation-cost",
-    slug: "ev-charger-installation-cost",
-    name: lang === "TH" ? "คำนวณค่าใช้จ่ายติดตั้งสถานีชาร์จ EV" : "EV Charger Installation Cost Calculator",
-    desc: lang === "TH" ? "ประเมินค่าใช้จ่ายในการติดตั้งเครื่องชาร์จรถยนต์ไฟฟ้า (EV Charger) ที่บ้าน รวมถึงการขอเปลี่ยนมิเตอร์" : "Estimate the total cost of installing a home EV charger, including meter upgrades and labor.",
-    category: "Environment",
-    icon: Icons.PlugZap
-  },
-  {
-    id: "ev-charging-cost",
-    slug: "ev-charging-cost",
-    name: lang === "TH" ? "คำนวณต้นทุนการชาร์จรถ EV" : "EV Charging Cost per 100km Calculator",
-    desc: lang === "TH" ? "คำนวณค่าไฟฟ้าในการชาร์จรถยนต์ไฟฟ้า (EV) และประเมินค่าใช้จ่ายในการเดินทางต่อ 100 กิโลเมตร" : "Calculate the electricity cost of charging an EV and estimate the travel cost per 100 kilometers.",
-    category: "Environment",
-    icon: Icons.Car
-  },
-  {
-    id: "green-building-score",
-    slug: "green-building-score",
-    name: lang === "TH" ? "คำนวณคะแนนอาคารสีเขียว (Green Building Score)" : "Green Building Score Calculator",
-    desc: lang === "TH" ? "จำลองการประเมินคะแนนอาคารสีเขียวเบื้องต้น (อ้างอิงตามเกณฑ์ LEED) เพื่อดูระดับการรับรองของอาคารคุณ" : "Simulate a basic Green Building score (based on LEED criteria) to see your potential certification level.",
-    category: "Environment",
-    icon: Icons.Building2
-  },
-  {
-    id: "led-savings",
-    slug: "led-savings",
-    name: lang === "TH" ? "คำนวณพลังงานที่ประหยัดได้จากเปลี่ยน LED" : "LED Savings Calculator",
-    desc: lang === "TH" ? "คำนวณค่าไฟฟ้าและพลังงานที่คุณสามารถประหยัดได้จากการเปลี่ยนหลอดไฟธรรมดาเป็นหลอดไฟ LED" : "Calculate the electricity cost and energy savings from switching to LED bulbs.",
-    category: "Environment",
-    icon: Icons.Lightbulb
-  },
-  {
-    id: "livestock-methane-emissions",
-    slug: "livestock-methane-emissions",
-    name: lang === "TH" ? "คำนวณปริมาณมีเทนจากฟาร์มปศุสัตว์" : "Livestock Methane Emissions Calculator",
-    desc: lang === "TH" ? "ประเมินปริมาณก๊าซมีเทน (Methane) ที่ปล่อยออกมาจากการทำฟาร์มปศุสัตว์ต่อปี" : "Estimate the annual methane (CH₄) emissions generated by livestock farming.",
-    category: "Environment",
-    icon: Icons.Tractor
-  },
-  {
-    id: "personal-ecological-footprint",
-    slug: "personal-ecological-footprint",
-    name: lang === "TH" ? "คำนวณ Ecological Footprint ส่วนตัว" : "Personal Ecological Footprint Calculator",
-    desc: lang === "TH" ? "ประเมินรอยเท้านิเวศของคุณ เพื่อดูว่าไลฟ์สไตล์ปัจจุบันใช้ทรัพยากรธรรมชาติไปมากน้อยเพียงใด" : "Estimate your ecological footprint to see how much of the Earth's resources your lifestyle consumes.",
-    category: "Environment",
-    icon: Icons.Globe
-  },
-  {
-    id: "renewable-vs-grid-electricity",
-    slug: "renewable-vs-grid-electricity",
-    name: lang === "TH" ? "เปรียบเทียบค่าไฟพลังงานทดแทน vs ไฟฟ้าปกติ" : "Renewable vs Grid Electricity Calculator",
-    desc: lang === "TH" ? "เปรียบเทียบค่าใช้จ่ายรายเดือนระหว่างการใช้ไฟฟ้าจากการไฟฟ้าปกติ กับการผสมผสานพลังงานทดแทน" : "Compare monthly electricity costs between standard grid power and a mix of renewable energy.",
-    category: "Environment",
-    icon: Icons.Zap
-  },
-  {
-    id: "solar-payback-period",
-    slug: "solar-payback-period",
-    name: lang === "TH" ? "คำนวณระยะเวลาคืนทุนแผงโซลาร์" : "Solar Payback Period Calculator",
-    desc: lang === "TH" ? "คำนวณระยะเวลาคืนทุนของการติดตั้งแผงโซลาร์เซลล์ ประเมินการผลิตไฟและจุดคุ้มทุนเบื้องต้น" : "Estimate the payback period, annual energy generation, and savings for a solar panel installation.",
-    category: "Environment",
-    icon: Icons.Sun
-  },
-  {
-    id: "tree-co2-offset",
-    slug: "tree-co2-offset",
-    name: lang === "TH" ? "คำนวณปริมาณ CO₂ ที่ต้นไม้ดูดซับ" : "Tree CO₂ Offset Calculator",
-    desc: lang === "TH" ? "คำนวณและประเมินปริมาณก๊าซคาร์บอนไดออกไซด์ (CO₂) ที่ต้นไม้สามารถดูดซับได้ต่อปี" : "Calculate and estimate the amount of carbon dioxide (CO₂) absorbed by trees per year.",
-    category: "Environment",
-    icon: Icons.TreeDeciduous
-  },
-  {
-    id: "app-dev-cost",
-    slug: "app-dev-cost",
-    name: lang === "TH" ? "เครื่องมือประเมินค่าใช้จ่ายพัฒนาแอปพลิเคชัน" : "App Development Cost Calculator",
-    desc: lang === "TH" ? "ประเมินค่าใช้จ่ายในการพัฒนาแอป (iOS, Android, Web) ตามขนาดของฟีเจอร์และเรทนักพัฒนา" : "Estimate app development costs (iOS, Android, Web) based on feature size and developer rates.",
-    category: "Technology",
-    icon: Icons.Calculator
-  },
-  {
-    id: "app-store-revenue",
-    slug: "app-store-revenue",
-    name: lang === "TH" ? "เครื่องมือคำนวณรายได้ App Store / Google Play" : "App Store Revenue Calculator",
-    desc: lang === "TH" ? "คำนวณรายได้สุทธิและหักค่าคอมมิชชั่นของ Apple App Store และ Google Play Store (15% vs 30%)" : "Calculate net revenue and commissions for Apple App Store and Google Play Store (15% vs 30%).",
-    category: "Technology",
-    icon: Icons.Calculator
-  },
-  {
-    id: "cdn-cost-calculator",
-    slug: "cdn-cost-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณ CDN Cost" : "CDN Cost Calculator",
-    desc: lang === "TH" ? "ประเมินค่าใช้จ่าย Content Delivery Network (CDN) รายเดือนตามปริมาณแบนด์วิดท์และ Requests" : "Estimate monthly Content Delivery Network (CDN) costs based on bandwidth and requests.",
-    category: "Technology",
-    icon: Icons.Calculator
-  },
-  {
-    id: "cloud-storage-cost",
-    slug: "cloud-storage-cost",
-    name: lang === "TH" ? "เครื่องมือคำนวณค่าบริการ Cloud Storage" : "Cloud Storage Cost Calculator",
-    desc: lang === "TH" ? "ประเมินค่าใช้จ่ายพื้นที่จัดเก็บข้อมูลบนคลาวด์มาตรฐาน (เทียบเท่า AWS S3, GCS) รวมถึงค่าแบนด์วิดท์และ Requests" : "Estimate standard cloud storage costs (comparable to AWS S3, GCS) including bandwidth and requests.",
-    category: "Technology",
-    icon: Icons.Calculator
-  },
-  {
-    id: "database-cost",
-    slug: "database-cost",
-    name: lang === "TH" ? "เครื่องมือคำนวณ Database Cost (Managed DB)" : "Database Cost Calculator (Managed DB)",
-    desc: lang === "TH" ? "ประมาณการค่าใช้จ่ายบริการฐานข้อมูลบนคลาวด์ (เช่น RDS) โดยคิดจาก Instance, Storage และ Data Transfer" : "Estimate cloud managed database costs (like RDS) based on Instance, Storage, and Data Transfer.",
-    category: "Technology",
-    icon: Icons.Calculator
-  },
-  {
-    id: "facebook-ads-roi-cpa",
-    slug: "facebook-ads-roi-cpa",
-    name: lang === "TH" ? "เครื่องมือคำนวณ ROI โฆษณา Facebook Ads" : "Facebook Ads ROI & CPA Calculator",
-    desc: lang === "TH" ? "คำนวณผลตอบแทนการลงทุน (ROI), ROAS, CPA, และจุดคุ้มทุนสำหรับแคมเปญ Facebook Ads" : "Calculate Return on Investment (ROI), ROAS, CPA, and break-even point for Facebook Ads campaigns.",
-    category: "Technology",
-    icon: Icons.Calculator
-  },
-  {
-    id: "google-ads-roi-roas",
-    slug: "google-ads-roi-roas",
-    name: lang === "TH" ? "เครื่องมือคำนวณ ROI โฆษณา Google Ads" : "Google Ads ROI & ROAS Calculator",
-    desc: lang === "TH" ? "คำนวณผลตอบแทนการลงทุน (ROI), ROAS, CPC, และเปรียบเทียบกำไรจากแคมเปญ Google Ads (Search/Display/Shopping)" : "Calculate Return on Investment (ROI), ROAS, CPC, and profitability for Google Ads campaigns.",
-    category: "Technology",
-    icon: Icons.Calculator
-  },
-  {
-    id: "ltv-to-cac-ratio",
-    slug: "ltv-to-cac-ratio",
-    name: lang === "TH" ? "เครื่องมือคำนวณ LTV:CAC Ratio" : "LTV to CAC Ratio Calculator",
-    desc: lang === "TH" ? "คำนวณมูลค่าตลอดอายุการใช้งานของลูกค้า (LTV) เทียบกับต้นทุนในการหาลูกค้าใหม่ (CAC) เพื่อวัดสุขภาพของธุรกิจระยะยาว" : "Calculate Customer Lifetime Value (LTV) to Customer Acquisition Cost (CAC) ratio to measure long-term business health.",
-    category: "Technology",
-    icon: Icons.Calculator
-  },
-  {
-    id: "sms-email-marketing-cost",
-    slug: "sms-email-marketing-cost",
-    name: lang === "TH" ? "ค่าใช้จ่าย SMS/Email Marketing" : "SMS & Email Marketing Cost",
-    desc: lang === "TH" ? "คำนวณและเปรียบเทียบต้นทุนการส่งแคมเปญการตลาดผ่าน SMS และ Email พร้อมประเมินค่าใช้จ่ายต่อผู้รับ (Cost per User)" : "Calculate and compare the cost of marketing campaigns via SMS and Email, including Cost per User.",
-    category: "Technology",
-    icon: Icons.Calculator
-  },
-  {
-    id: "vps-dedicated-cost",
-    slug: "vps-dedicated-cost",
-    name: lang === "TH" ? "เครื่องมือเปรียบเทียบค่าใช้จ่าย VPS / Dedicated Server" : "VPS vs Dedicated Server Cost Calculator",
-    desc: lang === "TH" ? "คำนวณและเปรียบเทียบค่าใช้จ่ายรายเดือนและรายปีของการเช่า Server ไม่ว่าจะเป็น VPS หรือ Dedicated พร้อมค่า Management" : "Calculate and compare monthly and yearly costs of renting VPS or Dedicated servers, including management fees.",
-    category: "Technology",
-    icon: Icons.Calculator
-  },
-  {
-    id: "cro-revenue-impact-calculator",
-    slug: "cro-revenue-impact-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณรายได้จาก CRO (Conversion Rate)" : "CRO Revenue Impact Calculator",
-    desc: lang === "TH" ? "วิเคราะห์การเติบโตของรายได้ (Revenue Uplift) จากการปรับปรุงอัตราการแปลง (Conversion Rate)" : "Analyze the potential revenue uplift from optimizing your Conversion Rate (CRO).",
-    category: "Technology",
-    icon: Icons.TrendingUp
-  },
-  {
-    id: "domain-hosting-cost-calculator",
-    slug: "domain-hosting-cost-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณค่าใช้จ่าย Domain & Hosting" : "Domain & Hosting Cost Calculator",
-    desc: lang === "TH" ? "คำนวณต้นทุนการทำเว็บไซต์ต่อปี ทั้งค่าจดโดเมน ค่าบริการเว็บโฮสติ้ง และส่วนเสริมต่างๆ" : "Calculate the annual cost of running a website, including domain registration, hosting, and addons.",
-    category: "Technology",
-    icon: Icons.Server
-  },
-  {
-    id: "email-deliverability-score-calculator",
-    slug: "email-deliverability-score-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณ Email Deliverability Score" : "Email Deliverability Score Calculator",
-    desc: lang === "TH" ? "ประเมินคุณภาพและโอกาสที่อีเมลของคุณจะถูกส่งเข้า Inbox จากค่า Bounce Rate และการตั้งค่า DMARC" : "Assess your email inbox placement score based on bounce rates, spam complaints, and authentication (DMARC/SPF/DKIM).",
-    category: "Technology",
-    icon: Icons.MailCheck
-  },
-  {
-    id: "email-revenue-calculator",
-    slug: "email-revenue-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณรายได้จาก Email Marketing" : "Email Revenue Calculator",
-    desc: lang === "TH" ? "คำนวณผลตอบแทนและรายได้จากแคมเปญอีเมล จาก Open Rate และ Conversion Rate" : "Calculate ROI and revenue from email campaigns based on Open Rate and Conversion Rate.",
-    category: "Technology",
-    icon: Icons.Mail
-  },
-  {
-    id: "pwa-vs-native-app-cost-calculator",
-    slug: "pwa-vs-native-app-cost-calculator",
-    name: lang === "TH" ? "เครื่องมือเปรียบเทียบค่าใช้จ่าย PWA vs Native App" : "PWA vs Native App Cost Calculator",
-    desc: lang === "TH" ? "เปรียบเทียบต้นทุนการพัฒนาและดูแลรักษาระหว่าง Progressive Web App และ Native App (iOS/Android)" : "Compare development and maintenance costs between Progressive Web Apps (PWA) and Native Apps.",
-    category: "Technology",
-    icon: Icons.Smartphone
-  },
-  {
-    id: "saas-stack-total-cost-calculator",
-    slug: "saas-stack-total-cost-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณค่าใช้จ่าย SaaS Stack" : "SaaS Stack Total Cost Calculator",
-    desc: lang === "TH" ? "จัดการและประเมินค่าใช้จ่ายรวมของซอฟต์แวร์ SaaS (Software as a Service) ที่องค์กรใช้งาน" : "Manage and calculate the total cost of all your SaaS subscriptions to optimize software spend.",
-    category: "Technology",
-    icon: Icons.Layers
-  },
-  {
-    id: "seo-value-calculator",
-    slug: "seo-value-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณ SEO Value" : "SEO Value Calculator",
-    desc: lang === "TH" ? "คำนวณมูลค่าของทราฟฟิกออร์แกนิก (SEO Value) จาก Search Volume และ CPC" : "Calculate the organic traffic value (SEO Value) based on Search Volume and CPC.",
-    category: "Technology",
-    icon: Icons.Search
-  },
-  {
-    id: "sme-cybersecurity-cost-calculator",
-    slug: "sme-cybersecurity-cost-calculator",
-    name: lang === "TH" ? "เครื่องมือประเมินค่าใช้จ่าย Cybersecurity สำหรับ SME" : "SME Cybersecurity Cost Calculator",
-    desc: lang === "TH" ? "ประเมินต้นทุนพื้นฐานในการรักษาความปลอดภัยไซเบอร์รายปี สำหรับองค์กรธุรกิจและ SME" : "Estimate the baseline annual cybersecurity costs for small and medium-sized businesses.",
-    category: "Technology",
-    icon: Icons.ShieldAlert
-  },
-  {
-    id: "ssl-certificate-cost-calculator",
-    slug: "ssl-certificate-cost-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณค่าใช้จ่าย SSL Certificate" : "SSL Certificate Cost Calculator",
-    desc: lang === "TH" ? "ประเมินค่าใช้จ่ายในการจดทะเบียนและต่ออายุ SSL Certificate ประเภทต่างๆ (DV, OV, EV)" : "Estimate the cost of purchasing and renewing different types of SSL Certificates.",
-    category: "Technology",
-    icon: Icons.ShieldCheck
-  },
-  {
-    id: "technical-debt-cost-calculator",
-    slug: "technical-debt-cost-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณมูลค่า Technical Debt" : "Technical Debt Cost Calculator",
-    desc: lang === "TH" ? "ประเมินต้นทุนที่สูญเสียไปจากการรับมือกับโค้ดที่ไม่มีคุณภาพและหนี้ทางเทคนิค (Technical Debt)" : "Evaluate the financial cost of technical debt and time lost dealing with bad code.",
-    category: "Technology",
-    icon: Icons.Code
-  },
-  {
-    id: "ac-electricity-cost",
-    slug: "ac-electricity-cost",
-    name: lang === "TH" ? "ค่าไฟแอร์" : "AC Electricity Cost",
-    desc: lang === "TH" ? "คำนวณค่าไฟแอร์รายเดือน จากขนาด BTU ค่า SEER และชั่วโมงการใช้งาน" : "Calculate monthly AC electricity cost based on BTU, SEER, and usage hours.",
-    category: "Utility",
-    icon: Icons.Zap
-  },
-  {
-    id: "built-in-kitchen-cost",
-    slug: "built-in-kitchen-cost",
-    name: lang === "TH" ? "ค่าใช้จ่ายทำ Kitchen Set Built-in" : "Built-in Kitchen Cost",
-    desc: lang === "TH" ? "ประเมินราคางานบิ้วอินชุดครัว ตามความยาวและวัสดุเคาน์เตอร์" : "Estimate cost of built-in kitchen set based on length and materials.",
-    category: "Family",
-    icon: Icons.Utensils
-  },
-  {
-    id: "condo-maintenance-fee-total",
-    slug: "condo-maintenance-fee-total",
-    name: lang === "TH" ? "ค่าส่วนกลางคอนโด" : "Condo Maintenance Fee Total",
-    desc: lang === "TH" ? "คำนวณค่าส่วนกลางคอนโดรายปี พร้อมค่าที่จอดรถและค่าใช้จ่ายอื่นๆ" : "Calculate total yearly condo maintenance fee including parking and other fees.",
-    category: "Family",
-    icon: Icons.Building
-  },
-  {
-    id: "condo-purchase-cost",
-    slug: "condo-purchase-cost",
-    name: lang === "TH" ? "ค่าใช้จ่ายซื้อคอนโด" : "Condo Purchase Cost",
-    desc: lang === "TH" ? "คำนวณค่าใช้จ่ายวันโอนคอนโด ค่ากองทุนส่วนกลาง ค่าจดจำนอง และอื่นๆ" : "Calculate condo transfer day costs, sinking fund, mortgage fee, etc.",
-    category: "Family",
-    icon: Icons.Building
-  },
-  {
-    id: "condo-rent-vs-buy-to-let-roi",
-    slug: "condo-rent-vs-buy-to-let-roi",
-    name: lang === "TH" ? "เทียบกำไรถ้าซื้อปล่อยเช่า (ROI)" : "Condo Buy to Let ROI",
-    desc: lang === "TH" ? "ประเมินความคุ้มค่าและคำนวณผลตอบแทน (ROI) จากการซื้อคอนโดเพื่อปล่อยเช่า" : "Evaluate profitability and calculate ROI for buying a condo to rent out.",
-    category: "Family",
-    icon: Icons.TrendingUp
-  },
-  {
-    id: "full-house-furniture-cost",
-    slug: "full-house-furniture-cost",
-    name: lang === "TH" ? "ค่าใช้จ่ายเปลี่ยนเฟอร์นิเจอร์ทั้งบ้าน" : "Full House Furniture Cost",
-    desc: lang === "TH" ? "ประเมินงบประมาณซื้อเฟอร์นิเจอร์และเครื่องใช้ไฟฟ้าสำหรับตกแต่งบ้านใหม่" : "Estimate budget for furnishing a whole house with furniture and appliances.",
-    category: "Family",
-    icon: Icons.Sofa
-  },
-  {
-    id: "moving-house-cost",
-    slug: "moving-house-cost",
-    name: lang === "TH" ? "ค่าใช้จ่ายย้ายบ้าน" : "Moving House Cost",
-    desc: lang === "TH" ? "ประเมินงบประมาณค่าย้ายบ้าน ค่ารถบรรทุก ค่าเด็กยกของ และค่ากล่อง" : "Estimate budget for moving house, truck, movers, and packing materials.",
-    category: "Family",
-    icon: Icons.Truck
-  },
-  {
-    id: "new-house-purchase-cost",
-    slug: "new-house-purchase-cost",
-    name: lang === "TH" ? "ค่าใช้จ่ายซื้อบ้านมือหนึ่ง" : "New House Purchase Cost",
-    desc: lang === "TH" ? "คำนวณค่าใช้จ่ายทั้งหมดในการซื้อบ้านมือหนึ่ง เช่น ค่าจดจำนอง ค่าโอน ค่ามิเตอร์" : "Calculate total costs of buying a new house including mortgage fee, transfer fee, and utility deposits.",
-    category: "Family",
-    icon: Icons.Home
-  },
-  {
-    id: "property-tax-calculator",
-    slug: "property-tax-calculator",
-    name: lang === "TH" ? "ค่าภาษีที่ดินและสิ่งปลูกสร้าง" : "Property Tax Calculator",
-    desc: lang === "TH" ? "คำนวณภาษีที่ดินและสิ่งปลูกสร้าง สำหรับบ้านหลังแรก บ้านหลังที่สอง และที่ดินเปล่า" : "Calculate property and land tax for first home, second home, and vacant land.",
-    category: "Family",
-    icon: Icons.Building
-  },
-  {
-    id: "rental-yield-calculator",
-    slug: "rental-yield-calculator",
-    name: lang === "TH" ? "คำนวณ Rental Yield" : "Rental Yield Calculator",
-    desc: lang === "TH" ? "หาอัตราผลตอบแทนการปล่อยเช่า Gross Yield และ Net Yield เพื่อการลงทุน" : "Calculate Gross and Net Rental Yield for property investments.",
-    category: "Family",
-    icon: Icons.Percent
-  },
-  {
-    id: "ac-btu-size-calculator",
-    slug: "ac-btu-size-calculator",
-    name: lang === "TH" ? "คำนวณขนาดแอร์ (BTU)" : "AC BTU Size Calculator",
-    desc: lang === "TH" ? "คำนวณขนาดเครื่องปรับอากาศ (BTU) ที่เหมาะสมกับขนาดห้องและสภาพแสงแดด เพื่อความเย็นที่พอดีและประหยัดไฟ" : "Calculate the appropriate Air Conditioner BTU size based on room dimensions and sunlight exposure.",
-    category: "Utility",
-    icon: Icons.Snowflake
-  },
-  {
-    id: "appliance-electricity-cost",
-    slug: "appliance-electricity-cost",
-    name: lang === "TH" ? "คำนวณค่าไฟเครื่องใช้ไฟฟ้าแต่ละชนิด" : "Appliance Electricity Cost Calculator",
-    desc: lang === "TH" ? "เครื่องมือคำนวณค่าไฟสำหรับเครื่องใช้ไฟฟ้าแต่ละชนิด ประเมินค่าไฟรายเดือนและรายปี" : "Calculate electricity cost for specific appliances to estimate monthly and yearly expenses.",
-    category: "Utility",
-    icon: Icons.Zap
-  },
-  {
-    id: "garden-maintenance-cost",
-    slug: "garden-maintenance-cost",
-    name: lang === "TH" ? "คำนวณค่าดูแลสวน" : "Garden Maintenance Cost Calculator",
-    desc: lang === "TH" ? "ประเมินค่าใช้จ่ายในการดูแลสวนรายเดือน เช่น ค่าจ้างคนสวน ค่าปุ๋ย ค่าน้ำ เพื่อการจัดสรรงบประมาณที่เหมาะสม" : "Estimate monthly garden maintenance costs including gardener fees, fertilizers, and water usage.",
-    category: "Family",
-    icon: Icons.TreeDeciduous
-  },
-  {
-    id: "home-internet-cost",
-    slug: "home-internet-cost",
-    name: lang === "TH" ? "เปรียบเทียบค่าอินเทอร์เน็ตบ้าน" : "Home Internet Cost Comparison",
-    desc: lang === "TH" ? "เปรียบเทียบค่าใช้จ่ายอินเทอร์เน็ตบ้าน 2 แพ็กเกจ เพื่อหาตัวเลือกที่คุ้มค่าที่สุดตลอดอายุสัญญา" : "Compare 2 home internet plans to find the most cost-effective option over the contract period.",
-    category: "Family",
-    icon: Icons.Wifi
-  },
-  {
-    id: "home-security-cost",
-    slug: "home-security-cost",
-    name: lang === "TH" ? "คำนวณค่าใช้จ่ายรักษาความปลอดภัยบ้าน" : "Home Security Cost Calculator",
-    desc: lang === "TH" ? "ประเมินค่าใช้จ่ายเบื้องต้นในการติดตั้งระบบรักษาความปลอดภัย เช่น กล้องวงจรปิด สัญญาณกันขโมย และค่าใช้จ่ายรายเดือน" : "Estimate upfront and ongoing costs for home security systems including CCTV, alarms, and monitoring.",
-    category: "Family",
-    icon: Icons.Shield
-  },
-  {
-    id: "home-solar-installation-cost",
-    slug: "home-solar-installation-cost",
-    name: lang === "TH" ? "คำนวณค่าติดตั้งและจุดคุ้มทุนโซลาร์รูฟท็อป" : "Home Solar Installation Cost Calculator",
-    desc: lang === "TH" ? "ประเมินค่าใช้จ่ายเบื้องต้นในการติดตั้งแผงโซลาร์เซลล์บนหลังคาบ้าน คำนวณค่าไฟที่ประหยัดได้และระยะเวลาคืนทุน" : "Estimate home solar panel installation costs, monthly savings, and payback period.",
-    category: "Construction",
-    icon: Icons.Sun
-  },
-  {
-    id: "house-painting-cost",
-    slug: "house-painting-cost",
-    name: lang === "TH" ? "คำนวณค่าทาสีบ้านใหม่" : "House Painting Cost Calculator",
-    desc: lang === "TH" ? "ประเมินงบประมาณค่าทาสีบ้าน คำนวณปริมาณสีที่ต้องใช้และค่าแรงช่างตามพื้นที่ตารางเมตร" : "Estimate house painting budget, calculate required paint volume and labor costs based on square meters.",
-    category: "Construction",
-    icon: Icons.PaintRoller
-  },
-  {
-    id: "household-water-usage-cost",
-    slug: "household-water-usage-cost",
-    name: lang === "TH" ? "คำนวณค่าน้ำอุปโภคบริโภค" : "Household Water Usage Cost Calculator",
-    desc: lang === "TH" ? "คำนวณปริมาณการใช้น้ำและประมาณการค่าน้ำประปารายเดือนของครอบครัว" : "Calculate water usage volume and estimate monthly water bill for your household.",
-    category: "Utility",
-    icon: Icons.Droplet
-  },
-  {
-    id: "pool-maintenance-cost",
-    slug: "pool-maintenance-cost",
-    name: lang === "TH" ? "คำนวณค่าดูแลสระว่ายน้ำ" : "Pool Maintenance Cost Calculator",
-    desc: lang === "TH" ? "ประเมินค่าใช้จ่ายในการดูแลรักษาสระว่ายน้ำรายเดือนและรายปี ทั้งค่าสารเคมี ไฟฟ้า น้ำ และบริการทำความสะอาด" : "Estimate monthly and yearly pool maintenance costs including chemicals, electricity, water, and cleaning services.",
-    category: "Family",
-    icon: Icons.Waves
-  },
-  {
-    id: "roof-replacement-cost",
-    slug: "roof-replacement-cost",
-    name: lang === "TH" ? "คำนวณค่าเปลี่ยนหลังคาบ้าน" : "Roof Replacement Cost Calculator",
-    desc: lang === "TH" ? "ประเมินงบประมาณในการรื้อถอนและเปลี่ยนหลังคาใหม่ ตามพื้นที่และประเภทของวัสดุหลังคา" : "Estimate the budget for roof replacement including demolition and new materials based on roof area.",
-    category: "Construction",
-    icon: Icons.Home
-  },
-  {
-    id: "car-comparison",
-    slug: "car-comparison",
-    name: lang === "TH" ? "เปรียบเทียบรถยนต์ 2 คัน (ค่าใช้จ่าย)" : "Car Comparison Calculator",
-    desc: lang === "TH" ? "เปรียบเทียบค่าใช้จ่ายรายปีและการผ่อนชำระของรถยนต์ 2 คัน เพื่อประกอบการตัดสินใจ" : "Compare annual costs and loan payments of 2 cars to make a better decision.",
-    category: "Finance",
-    icon: Icons.ArrowRightLeft
-  },
-  {
-    id: "car-depreciation",
-    slug: "car-depreciation",
-    name: lang === "TH" ? "คำนวณค่าเสื่อมราคารถ" : "Car Depreciation Calculator",
-    desc: lang === "TH" ? "คำนวณและประเมินมูลค่ารถยนต์ที่ลดลงตามกาลเวลา (Depreciation) พร้อมตารางแสดงมูลค่ารายปี" : "Estimate the declining value of a car over time with a yearly depreciation table.",
-    category: "Finance",
-    icon: Icons.TrendingDown
-  },
-  {
-    id: "car-insurance",
-    slug: "car-insurance",
-    name: lang === "TH" ? "คำนวณค่าประกันรถยนต์" : "Car Insurance Calculator",
-    desc: lang === "TH" ? "ประเมินค่าประกันภัยรถยนต์รายปี รวมพ.ร.บ. และตัวเลือกเสริมต่างๆ" : "Estimate annual car insurance premiums including compulsory insurance and add-ons.",
-    category: "Finance",
-    icon: Icons.Shield
-  },
-  {
-    id: "car-maintenance",
-    slug: "car-maintenance",
-    name: lang === "TH" ? "คำนวณค่าบำรุงรักษารถยนต์" : "Car Maintenance Cost Calculator",
-    desc: lang === "TH" ? "ประมาณการค่าใช้จ่ายในการซ่อมบำรุงรถยนต์รายปี ตามรอบระยะทาง เช่น น้ำมันเครื่อง ยาง แบตเตอรี่" : "Estimate annual maintenance costs including oil, tires, and battery replacements based on mileage.",
-    category: "Finance",
-    icon: Icons.Wrench
-  },
-  {
-    id: "car-tco",
-    slug: "car-tco",
-    name: lang === "TH" ? "เครื่องคำนวณต้นทุนความเป็นเจ้าของรถ TCO" : "Car Total Cost of Ownership (TCO) Calculator",
-    desc: lang === "TH" ? "คำนวณต้นทุนทั้งหมดในการเป็นเจ้าของรถยนต์ ทั้งค่าผ่อน ค่าน้ำมัน ค่าบำรุงรักษา และค่าเสื่อมราคา" : "Calculate the total cost of owning a car including loan, fuel, maintenance, and depreciation.",
-    category: "Finance",
-    icon: Icons.CarFront
-  },
-  {
-    id: "ev-cost-per-km",
-    slug: "ev-cost-per-km",
-    name: lang === "TH" ? "ค่าใช้จ่ายรถ EV ต่อกม." : "EV Cost per KM Calculator",
-    desc: lang === "TH" ? "เปรียบเทียบค่าใช้จ่ายพลังงานต่อกิโลเมตร ระหว่างรถยนต์ไฟฟ้า (EV) และรถน้ำมันสันดาป (ICE)" : "Compare energy cost per kilometer between Electric Vehicles (EV) and Internal Combustion Engine (ICE) cars.",
-    category: "Finance",
-    icon: Icons.Zap
-  },
-  {
-    id: "ev-ice-breakeven",
-    slug: "ev-ice-breakeven",
-    name: lang === "TH" ? "คำนวณจุดคุ้มทุนรถ EV" : "EV vs ICE Break-even",
-    desc: lang === "TH" ? "เปรียบเทียบว่าต้องใช้รถ EV กี่ปี ถึงจะคุ้มส่วนต่างราคาเมื่อเทียบกับรถน้ำมัน" : "Calculate how many years it takes for an EV's fuel savings to offset its higher purchase price.",
-    category: "Finance",
-    icon: Icons.Scale
-  },
-  {
-    id: "motorcycle-loan",
-    slug: "motorcycle-loan",
-    name: lang === "TH" ? "คำนวณค่าผ่อนรถมอเตอร์ไซค์" : "Motorcycle Loan Calculator",
-    desc: lang === "TH" ? "คำนวณค่างวดรถมอเตอร์ไซค์ ดอกเบี้ยคงที่ต่อเดือน/ต่อปี พร้อมตารางการผ่อนชำระ" : "Calculate motorcycle loan monthly payments with flat interest rates (monthly/yearly).",
-    category: "Finance",
-    icon: Icons.Bike
-  },
-  {
-    id: "rider-roi",
-    slug: "rider-roi",
-    name: lang === "TH" ? "คำนวณรายได้จุดคุ้มทุนไรเดอร์" : "Rider ROI & Income Calculator",
-    desc: lang === "TH" ? "คำนวณรายได้สุทธิและระยะเวลาคืนทุน (ROI) สำหรับอาชีพขับรถส่งอาหาร (Grab, Lineman, Foodpanda)" : "Calculate net income and ROI payback period for food delivery riders.",
-    category: "Finance",
-    icon: Icons.Bike
-  },
-  {
-    id: "truck-cost",
-    slug: "truck-cost",
-    name: lang === "TH" ? "คำนวณต้นทุนรถบรรทุกขนส่ง" : "Truck Operating Cost",
-    desc: lang === "TH" ? "คำนวณต้นทุนการวิ่งรถบรรทุกต่อเที่ยวและต่อกิโลเมตร รวมถึงค่าน้ำมันและค่าจ้างคนขับ" : "Calculate truck operating cost per trip and per kilometer, including fuel and driver wages.",
-    category: "Finance",
-    icon: Icons.Truck
-  },
-  {
-    id: "annual-commute-cost-calculator",
-    slug: "annual-commute-cost-calculator",
-    name: lang === "TH" ? "เครื่องคำนวณระยะทางและค่าใช้จ่ายไป-กลับทำงานต่อปี" : "Annual Commute Cost Calculator",
-    desc: lang === "TH" ? "คำนวณค่าใช้จ่ายและระยะทางรวมที่คุณใช้ในการเดินทางไปทำงานตลอดทั้งปี" : "Calculate the total distance and cost of your annual commute.",
-    category: "Travel",
-    icon: Icons.MapPin
-  },
-  {
-    id: "car-pool-savings-calculator",
-    slug: "car-pool-savings-calculator",
-    name: lang === "TH" ? "เครื่องคิดเลขค่าใช้จ่าย Car Pool" : "Car Pool Savings Calculator",
-    desc: lang === "TH" ? "คำนวณค่าใช้จ่ายและเงินที่ประหยัดได้จากการนั่งรถตู้คาร์พูลหรือเดินทางไปทำงานด้วยกัน" : "Calculate costs and savings from carpooling.",
-    category: "Travel",
-    icon: Icons.Users
-  },
-  {
-    id: "monthly-parking-cost-calculator",
-    slug: "monthly-parking-cost-calculator",
-    name: lang === "TH" ? "เครื่องคิดเลขค่าใช้จ่ายที่จอดรถรายเดือน" : "Monthly Parking Cost Calculator",
-    desc: lang === "TH" ? "คำนวณและเปรียบเทียบค่าที่จอดรถแบบรายวันกับรายเดือน แบบไหนคุ้มค่ากว่ากัน" : "Compare daily vs monthly parking costs to find the best deal.",
-    category: "Travel",
-    icon: Icons.Car
-  },
-  {
-    id: "monthly-toll-fee-calculator",
-    slug: "monthly-toll-fee-calculator",
-    name: lang === "TH" ? "เครื่องคิดเลขค่าทางด่วน/ค่าผ่านทางต่อเดือน" : "Monthly Toll Fee Calculator",
-    desc: lang === "TH" ? "คำนวณค่าใช้จ่ายทางด่วน ค่าผ่านทางมอเตอร์เวย์ ต่อเดือนและต่อปี เพื่อการวางแผนเติมเงิน EasyPass/M-Flow" : "Calculate your monthly and annual toll fees for better budget planning.",
-    category: "Travel",
-    icon: Icons.Navigation
-  },
-  {
-    id: "ride-hailing-vs-own-car-cost-calculator",
-    slug: "ride-hailing-vs-own-car-cost-calculator",
-    name: lang === "TH" ? "เปรียบเทียบค่าใช้จ่าย เรียกรถ vs รถส่วนตัว" : "Ride Hailing vs Own Car Cost Calculator",
-    desc: lang === "TH" ? "คำนวณและเปรียบเทียบว่าการใช้แอปเรียกรถ (Grab/Uber) หรือการซื้อรถยนต์ส่วนตัว แบบไหนคุ้มค่ากว่ากัน" : "Compare the true costs of using ride-hailing services versus owning a car.",
-    category: "Travel",
-    icon: Icons.CarFront
-  },
-  {
-    id: "break-even-time",
-    slug: "break-even-time-calculator",
-    name: lang === "TH" ? "ระยะเวลาคืนทุน" : "Break-Even Time",
-    desc: lang === "TH" ? "คำนวณระยะเวลา (เดือน) ที่ธุรกิจจะคืนทุนจากกระแสเงินสด" : "Calculate months to payback initial investment",
-    category: "Finance",
-    icon: Icons.Clock
-  },
-  {
-    id: "capacity-utilization-rate",
-    slug: "capacity-utilization-rate-calculator",
-    name: lang === "TH" ? "อัตราการใช้กำลังการผลิต" : "Capacity Utilization Rate",
-    desc: lang === "TH" ? "คำนวณประสิทธิภาพการใช้ทรัพยากรเทียบกับขีดจำกัดสูงสุด" : "Calculate output relative to potential maximum capacity",
-    category: "Business",
-    icon: Icons.Activity
-  },
-  {
-    id: "cash-flow-projection",
-    slug: "12-month-cash-flow-projection",
-    name: lang === "TH" ? "ประมาณการกระแสเงินสด 12 เดือน" : "12-Month Cash Flow Projection",
-    desc: lang === "TH" ? "วางแผนและคาดการณ์กระแสเงินสดรับจ่ายรายเดือน" : "Forecast monthly cash inflows and outflows",
-    category: "Finance",
-    icon: Icons.LineChart
-  },
-  {
-    id: "cost-per-unit",
-    slug: "manufacturing-cost-per-unit-calculator",
-    name: lang === "TH" ? "ต้นทุนต่อหน่วย (ผลิต)" : "Cost per Unit",
-    desc: lang === "TH" ? "คำนวณต้นทุนรวมต่อการผลิตสินค้า 1 ชิ้น" : "Calculate total manufacturing cost per unit",
-    category: "Business",
-    icon: Icons.Factory
-  },
-  {
-    id: "double-declining-depreciation",
-    slug: "double-declining-depreciation-calculator",
-    name: lang === "TH" ? "ค่าเสื่อมราคาแบบยอดลดลงทวีคูณ" : "Double Declining Balance Depreciation",
-    desc: lang === "TH" ? "คำนวณตารางค่าเสื่อมราคาสินทรัพย์แบบเร่งรัด" : "Calculate accelerated depreciation schedule",
-    category: "Finance",
-    icon: Icons.TrendingDown
-  },
-  {
-    id: "working-capital",
-    slug: "working-capital-calculator",
-    name: lang === "TH" ? "เงินทุนหมุนเวียนสุทธิ" : "Working Capital",
-    desc: lang === "TH" ? "คำนวณเงินทุนหมุนเวียนและอัตราส่วนสภาพคล่อง" : "Calculate net working capital and current ratio",
-    category: "Finance",
-    icon: Icons.Briefcase
-  },
-  {
-    id: "wholesale-vs-retail-margin",
-    slug: "wholesale-retail-margin-calculator",
-    name: lang === "TH" ? "คำนวณราคาส่งและราคาปลีก" : "Wholesale vs Retail Margin",
-    desc: lang === "TH" ? "คำนวณโครงสร้างราคาขายและอัตรากำไรสำหรับผู้ผลิตและร้านค้า" : "Calculate wholesale and retail prices based on margin",
-    category: "Business",
-    icon: Icons.Tags
-  },
-  {
-    id: "retail-space-rent-roi",
-    slug: "retail-space-rent-roi-calculator",
-    name: lang === "TH" ? "ความคุ้มค่าค่าเช่าพื้นที่" : "Retail Space Rent ROI",
-    desc: lang === "TH" ? "ประเมินจุดคุ้มทุนและกำไรจากการเช่าหน้าร้าน" : "Evaluate break-even sales and ROI for renting retail space",
-    category: "Business",
-    icon: Icons.Store
-  },
-  {
-    id: "simplified-p-and-l",
-    slug: "simplified-profit-and-loss-calculator",
-    name: lang === "TH" ? "งบกำไรขาดทุนอย่างง่าย" : "Simplified P&L",
-    desc: lang === "TH" ? "คำนวณงบกำไรขาดทุนและอัตรากำไรสุทธิ" : "Calculate simplified profit and loss statement",
-    category: "Finance",
-    icon: Icons.FileText
-  },
-  {
-    id: "freelance-vs-fulltime-cost",
-    slug: "freelance-vs-fulltime-cost-calculator",
-    name: lang === "TH" ? "เปรียบเทียบฟรีแลนซ์และพนักงาน" : "Freelance vs Full-time Cost",
-    desc: lang === "TH" ? "คำนวณและเปรียบเทียบต้นทุนแฝงในการจ้างงาน" : "Compare true costs of hiring freelance vs full-time",
-    category: "Business",
-    icon: Icons.UserCheck
-  },
-  {
-    id: "company-registration-cost",
-    slug: "company-registration-cost-calculator",
-    name: lang === "TH" ? "คำนวณค่าธรรมเนียมจดทะเบียนบริษัท" : "Company Registration Cost Calculator",
-    desc: lang === "TH" ? "คำนวณค่าธรรมเนียมรัฐและอากรแสตมป์เบื้องต้นในการจดทะเบียนตั้งบริษัท" : "Calculate government fees and stamp duty for company registration",
-    category: "Business",
-    icon: Icons.Building2
-  },
-  {
-    id: "corporate-tax",
-    slug: "corporate-tax-calculator",
-    name: lang === "TH" ? "คำนวณภาษีเงินได้นิติบุคคล" : "Corporate Tax Calculator",
-    desc: lang === "TH" ? "คำนวณภาษีเงินได้นิติบุคคลสำหรับ SME และบริษัททั่วไป" : "Calculate corporate income tax for SME and general companies",
-    category: "Finance",
-    icon: Icons.Calculator
-  },
-  {
-    id: "credit-card-mdr-fee",
-    slug: "credit-card-mdr-fee-calculator",
-    name: lang === "TH" ? "คำนวณค่าธรรมเนียมรูดบัตร (MDR)" : "Credit Card MDR Fee Calculator",
-    desc: lang === "TH" ? "คำนวณผลกระทบของค่าธรรมเนียมรูดบัตรเครดิตที่มีต่อกำไรของร้านค้า" : "Calculate the impact of Merchant Discount Rate (MDR) on store profit",
-    category: "Finance",
-    icon: Icons.CreditCard
-  },
-  {
-    id: "de-ratio",
-    slug: "de-ratio-calculator",
-    name: lang === "TH" ? "คำนวณอัตราส่วนหนี้สินต่อทุน (D/E)" : "Debt-to-Equity Ratio Calculator",
-    desc: lang === "TH" ? "คำนวณอัตราส่วนหนี้สินต่อทุน (D/E Ratio) เพื่อประเมินความเสี่ยงทางการเงิน" : "Calculate Debt-to-Equity Ratio to assess financial risk",
-    category: "Finance",
-    icon: Icons.Scale
-  },
-  {
-    id: "legal-reserve",
-    slug: "legal-reserve-calculator",
-    name: lang === "TH" ? "คำนวณทุนสำรองตามกฎหมาย" : "Legal Reserve Calculator",
-    desc: lang === "TH" ? "คำนวณเงินสำรองตามกฎหมายที่บริษัทต้องจัดสรรเมื่อมีกำไร" : "Calculate the legal reserve required by law when a company makes a profit",
-    category: "Finance",
-    icon: Icons.PiggyBank
-  },
-  {
-    id: "markup-imported-materials",
-    slug: "markup-imported-materials-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุนและราคาขายสินค้านำเข้า" : "Imported Material Markup Calculator",
-    desc: lang === "TH" ? "คำนวณต้นทุนสินค้านำเข้ารวมภาษีและบวกกำไรเพื่อตั้งราคาขาย" : "Calculate total cost of imported goods including duty and add markup for selling price",
-    category: "Business",
-    icon: Icons.Package
-  },
-  {
-    id: "pos-system-comparison",
-    slug: "pos-system-comparison",
-    name: lang === "TH" ? "เปรียบเทียบต้นทุนระบบ POS" : "POS System Comparison",
-    desc: lang === "TH" ? "เปรียบเทียบต้นทุนรายปีของระบบ POS แบบซื้อขาด vs แบบเช่า/หัก GP" : "Compare annual cost of POS systems (Upfront vs Subscription/GP)",
-    category: "Business",
-    icon: Icons.MonitorSmartphone
-  },
-  {
-    id: "quick-current-ratio",
-    slug: "quick-current-ratio-calculator",
-    name: lang === "TH" ? "คำนวณอัตราส่วนสภาพคล่อง" : "Quick & Current Ratio Calculator",
-    desc: lang === "TH" ? "คำนวณ Current Ratio และ Quick Ratio เพื่อประเมินสภาพคล่องระยะสั้น" : "Calculate Current and Quick Ratios to assess short-term liquidity",
-    category: "Finance",
-    icon: Icons.Activity
-  },
-  {
-    id: "roe-roa-roic",
-    slug: "roe-roa-roic-calculator",
-    name: lang === "TH" ? "คำนวณ ROE / ROA / ROIC" : "ROE / ROA / ROIC Calculator",
-    desc: lang === "TH" ? "คำนวณอัตราผลตอบแทนจากสินทรัพย์ ผู้ถือหุ้น และเงินทุน" : "Calculate Return on Equity, Return on Assets, and Return on Invested Capital",
-    category: "Finance",
-    icon: Icons.TrendingUp
-  },
-  {
-    id: "sales-commission-structure",
-    slug: "sales-commission-structure",
-    name: lang === "TH" ? "คำนวณค่าคอมมิชชั่นพนักงานขาย" : "Sales Commission Structure Calculator",
-    desc: lang === "TH" ? "คำนวณค่าคอมมิชชั่นแบบ Flat Rate และแบบขั้นบันได (Tiered)" : "Calculate flat rate and tiered sales commission structure",
-    category: "Business",
-    icon: Icons.Target
-  },
-  {
-    id: "dio",
-    slug: "days-inventory-outstanding-calculator",
-    name: lang === "TH" ? "คำนวณระยะเวลาขายสินค้าเฉลี่ย (DIO)" : "DIO Calculator",
-    desc: lang === "TH" ? "คำนวณ Days Inventory Outstanding (DIO) ระยะเวลาที่สินค้าค้างในสต็อกก่อนขายออก" : "Calculate Days Inventory Outstanding to track how long inventory stays in stock.",
-    category: "Finance",
-    icon: Icons.Warehouse
-  },
-  {
-    id: "dso",
-    slug: "days-sales-outstanding-calculator",
-    name: lang === "TH" ? "คำนวณระยะเวลาเก็บหนี้ (DSO)" : "DSO Calculator",
-    desc: lang === "TH" ? "คำนวณ Days Sales Outstanding (DSO) หรือระยะเวลาเก็บหนี้เฉลี่ย เพื่อวิเคราะห์สภาพคล่องของธุรกิจ" : "Calculate Days Sales Outstanding to analyze your business liquidity and collection efficiency.",
-    category: "Finance",
-    icon: Icons.CalendarClock
-  },
-  {
-    id: "employee-bonus",
-    slug: "employee-bonus-calculator",
-    name: lang === "TH" ? "คำนวณโบนัสพนักงาน (อิงผลงาน)" : "Employee Bonus Calculation",
-    desc: lang === "TH" ? "คำนวณโบนัสสิ้นปีโดยใช้ระบบตัวคูณตามผลประกอบการบริษัทและผลงานส่วนบุคคล (KPI)" : "Calculate year-end bonus using performance multipliers for company and individual KPIs.",
-    category: "Business",
-    icon: Icons.Gift
-  },
-  {
-    id: "expense-ratio",
-    slug: "expense-ratio-calculator",
-    name: lang === "TH" ? "คำนวณอัตราส่วนค่าใช้จ่าย (Expense Ratio)" : "Expense Ratio Calculator",
-    desc: lang === "TH" ? "คำนวณสัดส่วนค่าใช้จ่ายดำเนินงานต่อรายได้รวม (OER) เพื่อวิเคราะห์ประสิทธิภาพการคุมต้นทุน" : "Calculate the Operating Expense Ratio to analyze cost efficiency against total revenue.",
-    category: "Finance",
-    icon: Icons.PieChart
-  },
-  {
-    id: "gmv-vs-net-revenue",
-    slug: "gmv-vs-net-revenue-calculator",
-    name: lang === "TH" ? "คำนวณยอดขายแพลตฟอร์ม (GMV vs Net)" : "GMV vs Net Revenue Calculator",
-    desc: lang === "TH" ? "แปลงตัวเลขยอดขายรวม (GMV) ให้เป็นรายได้สุทธิ (Net Revenue) หลังหักค่าธรรมเนียมและส่วนลด" : "Convert Gross Merchandise Value (GMV) to true Net Revenue by deducting platform fees.",
-    category: "Business",
-    icon: Icons.ShoppingCart
-  },
-  {
-    id: "headcount-to-sales",
-    slug: "optimal-headcount-sales-calculator",
-    name: lang === "TH" ? "คำนวณจำนวนพนักงานขายที่เหมาะสม" : "Optimal Headcount to Sales",
-    desc: lang === "TH" ? "คำนวณว่าต้องจ้างพนักงานขายเพิ่มอีกกี่คน เพื่อให้บรรลุเป้าหมายยอดขายใหม่ที่ตั้งไว้" : "Calculate how many sales reps you need to hire to hit your target revenue.",
-    category: "Business",
-    icon: Icons.Users
-  },
-  {
-    id: "inventory-costing",
-    slug: "inventory-costing-fifo-avco",
-    name: lang === "TH" ? "คำนวณต้นทุนสินค้า FIFO vs ถัวเฉลี่ย" : "Inventory Costing (FIFO vs AVCO)",
-    desc: lang === "TH" ? "เปรียบเทียบการตีราคาต้นทุนสินค้าคงคลังแบบเข้าก่อนออกก่อน (FIFO) กับแบบต้นทุนถัวเฉลี่ย (AVCO)" : "Compare Cost of Goods Sold and Ending Inventory using FIFO and Average Cost (AVCO) methods.",
-    category: "Finance",
-    icon: Icons.Layers
-  },
-  {
-    id: "landed-cost",
-    slug: "landed-cost-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุนสินค้านำเข้า" : "Landed Cost Calculator",
-    desc: lang === "TH" ? "คำนวณต้นทุนสินค้านำเข้ารวมค่าขนส่ง ภาษี และค่าธรรมเนียม เพื่อหาราคาต้นทุนต่อชิ้นที่แท้จริง" : "Calculate the true cost of imported goods including shipping, taxes, and fees.",
-    category: "Finance",
-    icon: Icons.Ship
-  },
-  {
-    id: "office-vs-wfh",
-    slug: "office-vs-wfh-calculator",
-    name: lang === "TH" ? "เปรียบเทียบต้นทุน ออฟฟิศ vs WFH" : "Office vs WFH Cost Saving",
-    desc: lang === "TH" ? "คำนวณเงินที่องค์กรประหยัดได้จากการให้พนักงาน Work From Home เทียบกับการเช่าออฟฟิศ" : "Calculate the money saved by transitioning from a traditional office to a Work From Home model.",
-    category: "Business",
-    icon: Icons.Building
-  },
-  {
-    id: "packaging-cost",
-    slug: "packaging-cost-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุนบรรจุภัณฑ์ต่อชิ้น" : "Packaging Cost per Unit",
-    desc: lang === "TH" ? "คำนวณต้นทุนบรรจุภัณฑ์ทั้งหมดที่ใช้ต่อสินค้า 1 ชิ้น รวมถึงกล่อง ฉลาก และค่าแรงแพ็ค" : "Calculate the total packaging cost used per 1 item including box, labels, and labor.",
-    category: "Business",
-    icon: Icons.Package
-  },
-  {
-    id: "advertising-budget-allocation",
-    slug: "advertising-budget-allocation",
-    name: lang === "TH" ? "คำนวณสัดส่วนงบโฆษณา (Ad Budget Allocation)" : "Advertising Budget Allocation",
-    desc: lang === "TH" ? "คำนวณและจัดสรรงบประมาณโฆษณาเพื่อสร้างยอดขายตามเป้าหมาย (ROAS)" : "Calculate and allocate advertising budget to achieve sales target (ROAS)",
-    category: "Business",
-    icon: Icons.Megaphone
-  },
-  {
-    id: "cac-payback-period",
-    slug: "cac-payback-period-calculator",
-    name: lang === "TH" ? "คำนวณระยะเวลาคืนทุนของลูกค้า (CAC Payback)" : "CAC Payback Period Calculator",
-    desc: lang === "TH" ? "คำนวณระยะเวลาที่ใช้ในการคืนทุนค่าใช้จ่ายในการได้ลูกค้าใหม่ (CAC) สำหรับธุรกิจ Subscription หรือ SaaS" : "Calculate the months required to recover Customer Acquisition Cost for subscription businesses",
-    category: "Business",
-    icon: Icons.Repeat
-  },
-  {
-    id: "ebitda-calculator",
-    slug: "ebitda-calculator",
-    name: lang === "TH" ? "คำนวณ EBITDA" : "EBITDA Calculator",
-    desc: lang === "TH" ? "คำนวณกำไรก่อนหักดอกเบี้ย ภาษี ค่าเสื่อมราคา และค่าตัดจำหน่าย เพื่อประเมินผลการดำเนินงาน" : "Calculate Earnings Before Interest, Taxes, Depreciation, and Amortization",
-    category: "Finance",
-    icon: Icons.BarChart3
-  },
-  {
-    id: "employee-ot-calculation",
-    slug: "employee-ot-calculator",
-    name: lang === "TH" ? "คำนวณค่าล่วงเวลา (OT)" : "Employee OT Calculator",
-    desc: lang === "TH" ? "คำนวณค่าล่วงเวลาและค่าทำงานในวันหยุดตามกฎหมายแรงงานไทย" : "Calculate overtime pay based on Thai labor laws",
-    category: "Business",
-    icon: Icons.Clock
-  },
-  {
-    id: "employer-social-security",
-    slug: "employer-social-security-calculator",
-    name: lang === "TH" ? "คำนวณเงินสมทบประกันสังคม (นายจ้าง)" : "Employer Social Security Cost Calculator",
-    desc: lang === "TH" ? "คำนวณภาระต้นทุนเงินสมทบประกันสังคมและกองทุนเงินทดแทนในมุมมองของนายจ้าง" : "Calculate employer contributions to Social Security and Workmen's Compensation Fund",
-    category: "Business",
-    icon: Icons.ShieldPlus
-  },
-  {
-    id: "fx-forward-rate-risk",
-    slug: "fx-forward-rate-calculator",
-    name: lang === "TH" ? "คำนวณอัตราแลกเปลี่ยนล่วงหน้า (FX Forward)" : "FX Forward Rate Calculator",
-    desc: lang === "TH" ? "คำนวณและประเมินความเสี่ยงอัตราแลกเปลี่ยนด้วยสัญญา Forward" : "Calculate and assess foreign exchange risk with Forward contracts",
-    category: "Finance",
-    icon: Icons.LineChart
-  },
-  {
-    id: "international-shipping-cost",
-    slug: "international-shipping-cost-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุนการนำเข้า/ส่งออก (EXW/FOB/CIF)" : "International Shipping Cost Calculator (EXW/FOB/CIF)",
-    desc: lang === "TH" ? "คำนวณและเปรียบเทียบต้นทุนการขนส่งสินค้าระหว่างประเทศตามเงื่อนไข Incoterms (EXW, FOB, CIF)" : "Calculate and compare international shipping costs based on Incoterms (EXW, FOB, CIF)",
-    category: "Business",
-    icon: Icons.Ship
-  },
-  {
-    id: "minimum-wage-province",
-    slug: "minimum-wage-thailand-calculator",
-    name: lang === "TH" ? "คำนวณและเปรียบเทียบค่าแรงขั้นต่ำรายจังหวัด" : "Minimum Wage by Province Calculator",
-    desc: lang === "TH" ? "คำนวณฐานเงินเดือนและเปรียบเทียบค่าแรงขั้นต่ำของแต่ละจังหวัดในประเทศไทย" : "Calculate and compare minimum wages across provinces in Thailand",
-    category: "Business",
-    icon: Icons.MapPin
-  },
-  {
-    id: "severance-pay-calculation",
-    slug: "severance-pay-calculator",
-    name: lang === "TH" ? "คำนวณเงินชดเชยเลิกจ้าง" : "Severance Pay Calculator",
-    desc: lang === "TH" ? "คำนวณเงินชดเชยเมื่อถูกเลิกจ้างตามอายุงานและกฎหมายแรงงานไทย" : "Calculate severance pay based on tenure and Thai labor laws",
-    category: "Business",
-    icon: Icons.Briefcase
-  },
-  {
-    id: "warehouse-rent-vs-buy",
-    slug: "warehouse-rent-vs-buy-calculator",
-    name: lang === "TH" ? "คำนวณเช่า vs ซื้อคลังสินค้า" : "Warehouse Rent vs Buy Calculator",
-    desc: lang === "TH" ? "เปรียบเทียบความคุ้มค่าทางการเงินระหว่างการเช่าคลังสินค้ากับการลงทุนสร้าง/ซื้อเองในระยะยาว" : "Compare financial viability between renting a warehouse and building/buying one for long-term",
-    category: "Business",
-    icon: Icons.Warehouse
-  },
-  {
-    id: "acceptable-cpc",
-    slug: "acceptable-cpc-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณ Acceptable CPC (ต้นทุนต่อคลิกที่ยอมรับได้)" : "Acceptable CPC Calculator",
-    desc: lang === "TH" ? "คำนวณหาค่า CPC สูงสุดที่คุณสามารถจ่ายได้โดยไม่ขาดทุน จาก Conversion Rate และกำไรต่อออเดอร์" : "Calculate the maximum CPC you can afford based on your conversion rate and profit per order.",
-    category: "Business",
-    icon: Icons.MousePointerClick
-  },
-  {
-    id: "cagr",
-    slug: "cagr-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณอัตราการเติบโต (CAGR)" : "CAGR Calculator",
-    desc: lang === "TH" ? "คำนวณอัตราการเติบโตเฉลี่ยต่อปีแบบทบต้น (Compound Annual Growth Rate) เพื่อประเมินผลตอบแทนหรือธุรกิจระยะยาว" : "Calculate the Compound Annual Growth Rate (CAGR) to measure smooth investment return or business growth over multiple years.",
-    category: "Finance",
-    icon: Icons.TrendingUp
-  },
-  {
-    id: "factory-electricity",
-    slug: "factory-electricity-calculator",
-    name: lang === "TH" ? "เครื่องมือเปรียบเทียบค่าไฟ TOU (ธุรกิจ/โรงงาน)" : "Factory Electricity TOU Calculator",
-    desc: lang === "TH" ? "เปรียบเทียบค่าไฟฟ้าสำหรับธุรกิจและโรงงาน ระหว่างอัตราปกติ (Flat Rate) และอัตราตามช่วงเวลา (TOU) เพื่อวางแผนลดต้นทุน" : "Compare business electricity costs between standard flat rates and Time of Use (TOU) rates to optimize overhead expenses.",
-    category: "Business",
-    icon: Icons.Zap
-  },
-  {
-    id: "franchise-cost",
-    slug: "franchise-cost-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณงบลงทุนเปิดแฟรนไชส์ (Total Franchise Cost)" : "Franchise Cost Calculator",
-    desc: lang === "TH" ? "คำนวณเงินลงทุนรวมทั้งหมดในการซื้อและเปิดร้านแฟรนไชส์ (ค่าธรรมเนียม, ค่าก่อสร้าง, อุปกรณ์ และเงินทุนหมุนเวียนสำรอง)" : "Calculate the total initial investment required to open a franchise business including fees, build-out, and working capital.",
-    category: "Business",
-    icon: Icons.Store
-  },
-  {
-    id: "gross-margin-sku",
-    slug: "gross-margin-sku-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณกำไรขั้นต้นต่อสินค้า (Gross Margin per SKU)" : "Gross Margin per SKU Calculator",
-    desc: lang === "TH" ? "คำนวณกำไรขั้นต้นและอัตรากำไร (Gross Margin %) ของสินค้าแต่ละรายการ เพื่อวิเคราะห์ความคุ้มค่าก่อนตั้งราคาขาย" : "Calculate the Gross Margin percentage and gross profit per SKU to analyze product profitability before pricing.",
-    category: "Finance",
-    icon: Icons.Package
-  },
-  {
-    id: "nps",
-    slug: "nps-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณ Net Promoter Score (NPS)" : "NPS Calculator",
-    desc: lang === "TH" ? "คำนวณคะแนนความพึงพอใจและวัดความภักดีของลูกค้าที่มีต่อแบรนด์จากผลสำรวจ (NPS)" : "Calculate your Net Promoter Score (NPS) based on customer survey results to gauge brand loyalty and customer satisfaction.",
-    category: "Business",
-    icon: Icons.Smile
-  },
-  {
-    id: "real-estate-broker-fee",
-    slug: "real-estate-broker-fee-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณค่านายหน้าอสังหาฯ" : "Real Estate Broker Fee Calculator",
-    desc: lang === "TH" ? "คำนวณค่านายหน้า (คอมมิชชั่น) อสังหาริมทรัพย์ พร้อมคำนวณภาษีมูลค่าเพิ่ม (VAT) และภาษีหัก ณ ที่จ่าย (WHT)" : "Calculate real estate agent commission fees including VAT and Withholding Tax.",
-    category: "Business",
-    icon: Icons.Home
-  },
-  {
-    id: "return-rate-impact",
-    slug: "return-rate-impact-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณต้นทุนการคืนสินค้า (Return Rate Impact)" : "Cost of Returns Calculator",
-    desc: lang === "TH" ? "คำนวณผลกระทบและมูลค่าความเสียหายที่เกิดจากอัตราการคืนสินค้า (Return/COD ตีกลับ) ที่มีต่อกำไรสุทธิของคุณ" : "Calculate the financial impact and hidden costs of your product return rate on overall business profitability.",
-    category: "Finance",
-    icon: Icons.RotateCcw
-  },
-  {
-    id: "roas",
-    slug: "roas-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณ ROAS (ผลตอบแทนจากโฆษณา)" : "ROAS Calculator",
-    desc: lang === "TH" ? "คำนวณ Return on Ad Spend ประเมินว่าค่าแอดที่จ่ายไปสร้างยอดขายกลับมาได้กี่เท่า พร้อมหาจุดคุ้มทุน (Break-even ROAS)" : "Calculate the Return on Ad Spend (ROAS) to evaluate the effectiveness of your advertising campaigns and find break-even point.",
-    category: "Finance",
-    icon: Icons.Target
-  },
-  {
-    id: "saas-mrr-arr",
-    slug: "saas-mrr-arr-calculator",
-    name: lang === "TH" ? "เครื่องมือคำนวณ MRR และ ARR (SaaS/Subscription)" : "SaaS MRR & ARR Calculator",
-    desc: lang === "TH" ? "คำนวณรายได้ประจำรายเดือน (MRR) และรายได้ประจำรายปี (ARR) ของธุรกิจรูปแบบสมัครสมาชิก" : "Calculate Monthly Recurring Revenue (MRR) and Annual Recurring Revenue (ARR) for Subscription and SaaS businesses.",
-    category: "Business",
-    icon: Icons.Repeat
-  },
-  {
-    id: "break-even-by-channel",
-    slug: "break-even-by-channel",
-    name: lang === "TH" ? "จุดคุ้มทุนแยกช่องทาง" : "Break-even by Channel",
-    desc: lang === "TH" ? "เปรียบเทียบจุดคุ้มทุนระหว่างการขายหน้าร้าน (Retail) และออนไลน์ (Online)" : "Compare break-even points between retail and online sales channels.",
-    category: "Business",
-    icon: Icons.Store
-  },
-  {
-    id: "carbon-credit-cost",
-    slug: "carbon-credit-cost-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุนคาร์บอนเครดิต" : "Carbon Credit Cost Calculator",
-    desc: lang === "TH" ? "คำนวณต้นทุนการซื้อหรือชดเชยคาร์บอนเครดิตสำหรับธุรกิจ" : "Calculate the cost of purchasing or offsetting carbon credits for business.",
-    category: "Business",
-    icon: Icons.Leaf
-  },
-  {
-    id: "event-cost-per-attendee",
-    slug: "event-cost-per-attendee",
-    name: lang === "TH" ? "คำนวณต้นทุนงานอีเวนต์ต่อหัว" : "Event Cost per Attendee Calculator",
-    desc: lang === "TH" ? "ประเมินต้นทุนรวมและต้นทุนต่อหัวในการจัดงานอีเวนต์" : "Estimate total event cost and cost per attendee.",
-    category: "Business",
-    icon: Icons.Users
-  },
-  {
-    id: "iso-certification-cost",
-    slug: "iso-certification-cost",
-    name: lang === "TH" ? "คำนวณต้นทุนมาตรฐาน ISO" : "ISO Certification Cost",
-    desc: lang === "TH" ? "ประเมินค่าใช้จ่ายในการขอรับรองและรักษาระบบมาตรฐาน ISO" : "Estimate the cost of obtaining and maintaining ISO certification.",
-    category: "Business",
-    icon: Icons.Award
-  },
-  {
-    id: "npv-irr",
-    slug: "npv-irr-calculator",
-    name: lang === "TH" ? "คำนวณ NPV และ IRR" : "NPV & IRR Calculator",
-    desc: lang === "TH" ? "ประเมินมูลค่าปัจจุบันสุทธิ (NPV) และอัตราผลตอบแทนภายใน (IRR) ของโครงการ" : "Calculate Net Present Value and Internal Rate of Return for projects.",
-    category: "Finance",
-    icon: Icons.TrendingUp
-  },
-  {
-    id: "patent-cost",
-    slug: "patent-cost-calculator",
-    name: lang === "TH" ? "คำนวณค่าจดสิทธิบัตรและบำรุงรักษา" : "Patent Cost Calculator",
-    desc: lang === "TH" ? "คำนวณค่าใช้จ่ายในการยื่นจดสิทธิบัตรและค่าบำรุงรักษารายปี" : "Calculate patent filing fees and annual maintenance costs.",
-    category: "Business",
-    icon: Icons.FileBadge
-  },
-  {
-    id: "project-payback-period",
-    slug: "project-payback-period-calculator",
-    name: lang === "TH" ? "คำนวณระยะเวลาคืนทุน" : "Project Payback Period",
-    desc: lang === "TH" ? "คำนวณระยะเวลาคืนทุนของโครงการลงทุน (Payback Period)" : "Calculate the payback period for a project investment.",
-    category: "Finance",
-    icon: Icons.Clock
-  },
-  {
-    id: "royalty-income",
-    slug: "royalty-income-calculator",
-    name: lang === "TH" ? "คำนวณรายได้ค่าลิขสิทธิ์" : "Royalty Income Calculator",
-    desc: lang === "TH" ? "คำนวณรายได้จากค่าลิขสิทธิ์และการหักภาษี ณ ที่จ่าย" : "Calculate royalty income and withholding tax deductions.",
-    category: "Finance",
-    icon: Icons.Coins
-  },
-  {
-    id: "sensitivity-analysis",
-    slug: "sensitivity-analysis-calculator",
-    name: lang === "TH" ? "เครื่องมือวิเคราะห์ความอ่อนไหว" : "Sensitivity Analysis Calculator",
-    desc: lang === "TH" ? "ประเมินผลกระทบของตัวแปรที่เปลี่ยนแปลงต่อผลกำไรของธุรกิจ" : "Analyze how changes in key variables impact business profit.",
-    category: "Finance",
-    icon: Icons.Activity
-  },
-  {
-    id: "space-rental-deposit",
-    slug: "space-rental-deposit-calculator",
-    name: lang === "TH" ? "คำนวณเงินมัดจำเช่าพื้นที่" : "Space Rental Deposit",
-    desc: lang === "TH" ? "คำนวณเงินมัดจำ ค่าเช่าล่วงหน้า และค่าใช้จ่ายวันทำสัญญาสำหรับพื้นที่ธุรกิจ" : "Calculate rental deposits, advance payments, and move-in costs.",
-    category: "Business",
-    icon: Icons.Key
-  },
-  {
-    id: "banana-farming-calculator",
-    slug: "banana-farming-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุน/กำไรปลูกกล้วย" : "Banana Farming Profit Calculator",
-    desc: lang === "TH" ? "โปรแกรมคำนวณต้นทุน รายรับ และกำไรสุทธิจากการปลูกกล้วย (กล้วยน้ำว้า/กล้วยหอม)" : "Calculate costs, revenue, and net profit for banana farming.",
-    category: "Agriculture",
-    icon: Icons.Sprout
-  },
-  {
-    id: "broiler-chicken-farm-calculator",
-    slug: "broiler-chicken-farm-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุน/กำไรฟาร์มไก่เนื้อ" : "Broiler Chicken Farm Profit Calculator",
-    desc: lang === "TH" ? "โปรแกรมประเมินรายรับ ต้นทุน และกำไรจากการเลี้ยงไก่เนื้อ (ต่อรุ่น/ต่อโรงเรือน)" : "Calculate costs, revenue, and net profit for a broiler chicken farm per batch.",
-    category: "Agriculture",
-    icon: Icons.Bird
-  },
-  {
-    id: "cassava-farming-calculator",
-    slug: "cassava-farming-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุน/กำไรปลูกมันสำปะหลัง" : "Cassava Farming Profit Calculator",
-    desc: lang === "TH" ? "เครื่องมือคำนวณต้นทุน รายรับ และกำไรสุทธิจากการปลูกมันสำปะหลังต่อไร่" : "Calculate costs, revenue, and net profit for cassava farming per rai.",
-    category: "Agriculture",
-    icon: Icons.Sprout
-  },
-  {
-    id: "coconut-farming-calculator",
-    slug: "coconut-farming-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุน/กำไรปลูกมะพร้าว" : "Coconut Farming Profit Calculator",
-    desc: lang === "TH" ? "โปรแกรมคำนวณรายได้ ต้นทุน และกำไรสุทธิจากสวนมะพร้าว (มะพร้าวน้ำหอม/มะพร้าวแกง)" : "Calculate costs, revenue, and net profit for coconut farming per year.",
-    category: "Agriculture",
-    icon: Icons.Trees
-  },
-  {
-    id: "corn-farming-calculator",
-    slug: "corn-farming-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุนและกำไรปลูกข้าวโพด" : "Corn Farming Profit Calculator",
-    desc: lang === "TH" ? "โปรแกรมคำนวณต้นทุน รายได้ และกำไรสุทธิจากการปลูกข้าวโพด ประเมินความคุ้มค่าในการลงทุน" : "Calculate costs, revenue, and net profit for corn farming.",
-    category: "Agriculture",
-    icon: Icons.Tractor
-  },
-  {
-    id: "mango-farming-calculator",
-    slug: "mango-farming-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุน/กำไรปลูกมะม่วง" : "Mango Farming Profit Calculator",
-    desc: lang === "TH" ? "โปรแกรมคำนวณรายได้ ต้นทุน และกำไรสุทธิจากสวนมะม่วงเพื่อการค้า" : "Calculate annual costs, revenue, and net profit for a commercial mango orchard.",
-    category: "Agriculture",
-    icon: Icons.Trees
-  },
-  {
-    id: "oil-palm-farming-calculator",
-    slug: "oil-palm-farming-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุน/กำไรปลูกปาล์มน้ำมัน" : "Oil Palm Farming Profit Calculator",
-    desc: lang === "TH" ? "เครื่องมือคำนวณต้นทุน รายได้ และกำไรสุทธิจากสวนปาล์มน้ำมันต่อปี" : "Calculate annual costs, revenue, and net profit for oil palm farming.",
-    category: "Agriculture",
-    icon: Icons.Trees
-  },
-  {
-    id: "rubber-tree-farming-calculator",
-    slug: "rubber-tree-farming-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุน/กำไรปลูกยางพารา" : "Rubber Tree Farming Profit Calculator",
-    desc: lang === "TH" ? "เครื่องมือประเมินรายรับ ต้นทุน และกำไรสุทธิจากสวนยางพาราต่อปี" : "Calculate costs, revenue, and net profit for rubber tree farming per year.",
-    category: "Agriculture",
-    icon: Icons.Trees
-  },
-  {
-    id: "sugarcane-farming-calculator",
-    slug: "sugarcane-farming-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุน/กำไรปลูกอ้อย" : "Sugarcane Farming Profit Calculator",
-    desc: lang === "TH" ? "เครื่องมือประเมินรายรับ ต้นทุน และกำไรสุทธิจากการปลูกอ้อยโรงงาน" : "Calculate costs, revenue, and net profit for sugarcane farming.",
-    category: "Agriculture",
-    icon: Icons.Tractor
-  },
-  {
-    id: "white-shrimp-farm-calculator",
-    slug: "white-shrimp-farm-calculator",
-    name: lang === "TH" ? "คำนวณต้นทุน/กำไรฟาร์มกุ้งขาว" : "White Shrimp Farm Profit Calculator",
-    desc: lang === "TH" ? "โปรแกรมคำนวณต้นทุน รายได้ และกำไรจากการเลี้ยงกุ้งขาวแวนนาไม (ต่อบ่อ/ต่อรอบ)" : "Calculate costs, revenue, and net profit for white shrimp farming per pond/crop.",
-    category: "Agriculture",
-    icon: Icons.Fish
-  },
-  {
-    id: "agri-chemical-mix-ratio",
-    slug: "agri-chemical-mix-ratio",
-    name: lang === "TH" ? "คำนวณสารเคมีเกษตรต่อถัง" : "Agri-Chemical Mix Ratio",
-    desc: lang === "TH" ? "คำนวณอัตราส่วนการผสมสารเคมีเกษตร ปุ๋ย และฮอร์โมนต่อน้ำ 1 ถัง" : "Calculate the precise mixing ratio of agricultural chemicals per spray tank.",
-    category: "Agriculture",
-    icon: Icons.Beaker
-  },
-  {
-    id: "beef-cattle-farm-profit-cost",
-    slug: "beef-cattle-farm-profit-cost",
-    name: lang === "TH" ? "ต้นทุน/กำไรฟาร์มโคเนื้อ" : "Beef Cattle Farm Profit/Cost",
-    desc: lang === "TH" ? "โปรแกรมคำนวณต้นทุนค่าอาหารและประเมินกำไรสำหรับการเลี้ยงโคเนื้อ/โคขุน" : "Calculate costs and profit margin for beef cattle and fattening farms.",
-    category: "Agriculture",
-    icon: Icons.Activity
-  },
-  {
-    id: "drip-irrigation-cost",
-    slug: "drip-irrigation-cost",
-    name: lang === "TH" ? "ระบบน้ำหยด - ออกแบบและค่าใช้จ่าย" : "Drip Irrigation Cost",
-    desc: lang === "TH" ? "คำนวณความยาวเทปน้ำหยด จำนวนม้วน และประเมินต้นทุนระบบน้ำหยดต่อไร่" : "Estimate materials and costs for installing a drip irrigation system.",
-    category: "Agriculture",
-    icon: Icons.Waves
-  },
-  {
-    id: "farm-area-from-gps",
-    slug: "farm-area-from-gps",
-    name: lang === "TH" ? "คำนวณพื้นที่เกษตรจาก GPS Coordinates" : "Farm Area from GPS",
-    desc: lang === "TH" ? "แปลงพิกัดละติจูด/ลองจิจูดจากมุมแปลงเป็นขนาดพื้นที่ (ไร่-งาน-ตารางวา)" : "Calculate farm area in Rai and Sqm by inputting GPS coordinates of the field.",
-    category: "Agriculture",
-    icon: Icons.Map
-  },
-  {
-    id: "farm-break-even-yield",
-    slug: "farm-break-even-yield",
-    name: lang === "TH" ? "ปริมาณผลผลิตที่ต้องขายเพื่อคืนทุน" : "Farm Break-even Yield",
-    desc: lang === "TH" ? "คำนวณปริมาณผลผลิตขั้นต่ำต่อไร่ที่ต้องทำให้ได้เพื่อไม่ให้ขาดทุน" : "Calculate the minimum crop yield required per Rai to break even.",
-    category: "Agriculture",
-    icon: Icons.Target
-  },
-  {
-    id: "farm-labor-cost-per-rai",
-    slug: "farm-labor-cost-per-rai",
-    name: lang === "TH" ? "คำนวณค่าจ้างแรงงานเกษตรต่อไร่" : "Farm Labor Cost per Rai",
-    desc: lang === "TH" ? "คำนวณต้นทุนค่าแรงเฉลี่ยต่อไร่ และวัดประสิทธิภาพการทำงานของคนงาน (ไร่/คน/วัน)" : "Calculate exact labor cost per Rai and analyze workers' efficiency.",
-    category: "Agriculture",
-    icon: Icons.Users
-  },
-  {
-    id: "layer-chicken-farm-profit-cost",
-    slug: "layer-chicken-farm-profit-cost",
-    name: lang === "TH" ? "ต้นทุน/กำไรฟาร์มไก่ไข่" : "Layer Chicken Farm Profit/Cost",
-    desc: lang === "TH" ? "คำนวณต้นทุน รายได้ และกำไรสำหรับการทำฟาร์มไก่ไข่เบื้องต้น" : "Calculate costs, revenues, and profit for layer chicken farming.",
-    category: "Agriculture",
-    icon: Icons.Egg
-  },
-  {
-    id: "pig-farm-profit-cost",
-    slug: "pig-farm-profit-cost",
-    name: lang === "TH" ? "ต้นทุน/กำไรฟาร์มหมู" : "Pig Farm Profit/Cost",
-    desc: lang === "TH" ? "โปรแกรมคำนวณต้นทุน กำไร และประเมินจุดคุ้มทุนสำหรับการเลี้ยงหมูขุน" : "Calculate and estimate profit, costs, and ROI for a commercial pig farm.",
-    category: "Agriculture",
-    icon: Icons.Activity
-  },
-  {
-    id: "seeds-per-rai-calculator",
-    slug: "seeds-per-rai-calculator",
-    name: lang === "TH" ? "คำนวณปริมาณเมล็ดพันธุ์ต่อไร่" : "Seeds per Rai Calculator",
-    desc: lang === "TH" ? "คำนวณจำนวนต้นต่อไร่และปริมาณเมล็ดพันธุ์ที่ต้องใช้ตามระยะปลูก" : "Calculate the exact amount of seeds needed per Rai based on planting spacing.",
-    category: "Agriculture",
-    icon: Icons.Sprout
-  },
-  {
-    id: "tractor-rent-vs-buy",
-    slug: "tractor-rent-vs-buy",
-    name: lang === "TH" ? "ต้นทุนรถไถเช่า vs ซื้อ" : "Tractor Rent vs Buy",
-    desc: lang === "TH" ? "เปรียบเทียบต้นทุนและหาจุดคุ้มทุน เลือกระหว่างการซื้อรถไถเองหรือจ้างเหมา" : "Compare costs and find the break-even point between buying a tractor and renting one.",
-    category: "Agriculture",
-    icon: Icons.Tractor
-  },
-  {
-    id: "farm-land-rent-roi",
-    slug: "farm-land-rent-roi",
-    name: lang === "TH" ? "คำนวณค่าเช่าที่ดินเกษตร เทียบกำไร" : "Farm Land Rent ROI Calculator",
-    desc: lang === "TH" ? "ประเมินความคุ้มค่าของการเช่าที่ดินเพื่อการเกษตร โดยเปรียบเทียบค่าเช่ากับรายได้สุทธิ" : "Evaluate the profitability of renting agricultural land by comparing rent costs with net income.",
-    category: "Agriculture",
-    icon: Icons.Tractor
-  },
-  {
-    id: "food-carbon-footprint",
-    slug: "food-carbon-footprint",
-    name: lang === "TH" ? "คำนวณ Carbon Footprint อาหาร" : "Food Carbon Footprint",
-    desc: lang === "TH" ? "เปรียบเทียบการปล่อยคาร์บอนระหว่างการบริโภคเนื้อสัตว์และพืชผัก เพื่อทางเลือกที่รักษ์โลก" : "Compare carbon emissions between meat and plant-based foods for eco-friendly choices.",
-    category: "Environment",
-    icon: Icons.Utensils
-  },
-  {
-    id: "fresh-to-dry-weight",
-    slug: "fresh-to-dry-weight",
-    name: lang === "TH" ? "คำนวณน้ำหนักผลผลิตสดเป็นแห้ง" : "Fresh to Dry Weight Converter",
-    desc: lang === "TH" ? "คำนวณน้ำหนักผลผลิตทางการเกษตรหลังการอบแห้งหรือตากแห้ง โดยอิงจากความชื้น" : "Calculate agricultural product weight after drying based on moisture content.",
-    category: "Agriculture",
-    icon: Icons.Scale
-  },
-  {
-    id: "germination-rate",
-    slug: "germination-rate",
-    name: lang === "TH" ? "คำนวณอัตราการงอกของเมล็ดพันธุ์" : "Germination Rate Calculator",
-    desc: lang === "TH" ? "คำนวณเปอร์เซ็นต์อัตราการงอกของเมล็ดพันธุ์ เพื่อประเมินคุณภาพเมล็ดก่อนปลูกจริง" : "Calculate the germination rate percentage of seeds to assess seed quality before planting.",
-    category: "Agriculture",
-    icon: Icons.Sprout
-  },
-  {
-    id: "harvest-time",
-    slug: "harvest-time",
-    name: lang === "TH" ? "คำนวณระยะเวลาเก็บเกี่ยว" : "Harvest Time from Planting",
-    desc: lang === "TH" ? "คำนวณวันเก็บเกี่ยวผลผลิตจากวันปลูกและอายุของพืช เพื่อวางแผนการเก็บเกี่ยว" : "Calculate expected harvest date based on planting date and days to maturity.",
-    category: "Agriculture",
-    icon: Icons.Calendar
-  },
-  {
-    id: "mill-storage-electricity",
-    slug: "mill-storage-electricity",
-    name: lang === "TH" ? "คำนวณการใช้ไฟฟ้าโรงสี/โรงเก็บ" : "Mill/Storage Electricity Cost",
-    desc: lang === "TH" ? "คำนวณค่าไฟฟ้าของมอเตอร์ เครื่องจักร และระบบระบายอากาศในโรงสีหรือไซโล" : "Calculate electricity costs for motors, machinery, and ventilation in mills or silos.",
-    category: "Agriculture",
-    icon: Icons.Zap
-  },
-  {
-    id: "product-water-footprint",
-    slug: "product-water-footprint",
-    name: lang === "TH" ? "คำนวณ Water Footprint สินค้า" : "Product Water Footprint",
-    desc: lang === "TH" ? "เปรียบเทียบปริมาณน้ำที่ใช้ในการผลิตสินค้าอุปโภคบริโภคต่างๆ เพื่อสร้างความตระหนักรู้" : "Compare the hidden water used to produce various consumer goods to raise awareness.",
-    category: "Environment",
-    icon: Icons.Droplets
-  },
-  {
-    id: "recycled-waste-impact",
-    slug: "recycled-waste-impact",
-    name: lang === "TH" ? "ปริมาณขยะรีไซเคิลที่ลดได้ต่อปี" : "Recycled Waste Impact",
-    desc: lang === "TH" ? "คำนวณการลดการปล่อยก๊าซเรือนกระจกจากการคัดแยกและรีไซเคิลขยะประเภทต่างๆ" : "Calculate greenhouse gas emission reductions from sorting and recycling various types of waste.",
-    category: "Environment",
-    icon: Icons.Recycle
-  },
-  {
-    id: "travel-carbon-footprint",
-    slug: "travel-carbon-footprint",
-    name: lang === "TH" ? "คำนวณ Carbon Footprint การเดินทาง" : "Travel Carbon Footprint",
-    desc: lang === "TH" ? "ประเมินปริมาณการปล่อยก๊าซคาร์บอนไดออกไซด์จากการเดินทางด้วยยานพาหนะประเภทต่างๆ" : "Estimate CO2 emissions from traveling using various modes of transportation.",
-    category: "Environment",
-    icon: Icons.Car
-  },
-  {
-    id: "water-saving-impact",
-    slug: "water-saving-impact",
-    name: lang === "TH" ? "ค่าน้ำที่ประหยัดได้จากการเปลี่ยนพฤติกรรม" : "Water Saving Impact",
-    desc: lang === "TH" ? "คำนวณปริมาณน้ำและเงินที่ประหยัดได้จากการลดเวลาอาบน้ำหรือปิดน้ำขณะแปรงฟัน" : "Calculate water and money saved by reducing shower time or turning off the tap while brushing.",
-    category: "Environment",
-    icon: Icons.Droplets
-  }
-];
 
 export const categories = [
   "Finance",
@@ -1266,5 +373,7 @@ export const categories = [
   "Agriculture",
   "Environment",
   "Business",
+  "Fortune",
+  "Travel",
   "Misc"
 ];

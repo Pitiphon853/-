@@ -1,0 +1,8 @@
+{
+  "id": "anniversary-countdown",
+  "slug": "anniversary-countdown",
+  "name": { "TH": "คำนวณวันครบรอบ — เหลืออีกกี่วัน", "EN": "Anniversary Countdown" },
+  "desc": { "TH": "นับถอยหลังสู่วันครบรอบสำคัญ พร้อมบอกจำนวนวันที่ผ่านมาและวันครบรอบถัดไป", "EN": "Count down to your anniversary with days passed and next anniversary date" },
+  "category": "Misc",
+  "icon": "Heart"
+}

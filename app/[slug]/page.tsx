@@ -9,7 +9,8 @@ type Props = {
 export function generateMetadata({ params }: Props): Metadata {
   // Use Thai by default for SEO metadata
   const allCalcs = getCalcs("TH");
-  const calc = allCalcs.find(c => c.slug === decodeURIComponent(params.slug) || c.id === decodeURIComponent(params.slug));
+  const decoded = decodeURIComponent(params.slug);
+  const calc = allCalcs.find((c: any) => c.slug === decoded || c.id === decoded);
 
   if (!calc) {
     return {

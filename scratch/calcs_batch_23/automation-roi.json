@@ -1,0 +1,8 @@
+{
+  "id": "automation-roi",
+  "slug": "automation-roi",
+  "name": { "TH": "Automation ROI ลงทุนทำ Bot คืนทุนกี่เดือน", "EN": "Automation ROI Calculator" },
+  "desc": { "TH": "คำนวณความคุ้มค่าในการลงทุนสร้างระบบอัตโนมัติหรือ Bot โดยวิเคราะห์ระยะเวลาคืนทุนและ ROI", "EN": "Calculate payback period and ROI for investing in automation bots and systems" },
+  "category": "Technology",
+  "icon": "Calculator"
+}

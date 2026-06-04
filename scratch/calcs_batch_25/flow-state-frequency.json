@@ -1,0 +1,14 @@
+{
+  "id": "flow-state-frequency",
+  "slug": "flow-state-frequency",
+  "name": {
+    "TH": "Flow State Frequency เข้าถึง Flow กี่ครั้ง",
+    "EN": "Flow State Frequency Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณความถี่ในการเข้าสู่สถานะ Flow และวัดประสิทธิภาพการทำงานลึก",
+    "EN": "Calculate how often you enter flow state and measure deep work effectiveness"
+  },
+  "category": "Misc",
+  "icon": "Calculator"
+}
