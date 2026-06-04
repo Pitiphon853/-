@@ -3,14 +3,34 @@ import { getCalcs } from "../../lib/toolsData";
 import { Metadata } from "next";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
-export function generateMetadata({ params }: Props): Metadata {
+const slugMap: Record<string, string> = {
+  "bmi-thai": "bmi",
+  "tax-2026": "personal-tax",
+  "net-salary-2026": "net-salary",
+  "electricity-2026": "electric",
+  "mortgage-2026": "mortgage",
+  "area-converter": "area-unit",
+  "used-car-loan": "car-loan",
+  "cylinder-volume": "volume-shape"
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
   // Use Thai by default for SEO metadata
   const allCalcs = getCalcs("TH");
-  const decoded = decodeURIComponent(params.slug);
-  const calc = allCalcs.find((c: any) => c.slug === decoded || c.id === decoded);
+  const decoded = decodeURIComponent(slug);
+  const mapped = slugMap[slug] || slugMap[decoded] || decoded;
+  const decodedMapped = decodeURIComponent(mapped);
+  
+  const calc = allCalcs.find((c: any) => 
+    c.slug === mapped || 
+    c.id === mapped || 
+    c.slug === decodedMapped || 
+    c.id === decodedMapped
+  );
 
   if (!calc) {
     return {
@@ -24,6 +44,7 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function SlugPage({ params }: Props) {
-  return <MainPage activeSlug={decodeURIComponent(params.slug)} />;
+export default async function SlugPage({ params }: Props) {
+  const { slug } = await params;
+  return <MainPage activeSlug={decodeURIComponent(slug)} />;
 }

@@ -1,0 +1,8 @@
+{
+  "id": "personal-tax",
+  "slug": "คำนวณ-ภาษี-2569",
+  "name": { "TH": "คำนวณภาษีเงินได้ 2569", "EN": "Personal Income Tax 2026" },
+  "desc": { "TH": "คำนวณภาษีเงินได้บุคคลธรรมดาพร้อมรายการลดหย่อนทั้งหมด", "EN": "Calculate personal income tax with all deductions" },
+  "category": "Finance",
+  "icon": "Coins"
+}

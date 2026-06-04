@@ -26,26 +26,50 @@ type Category = "All" | "Health" | "Family" | "Finance" | "Business" | "Agricult
 import { getCalcs } from "../lib/toolsData";
 import Link from "next/link";
 
+const slugMap: Record<string, string> = {
+  "bmi-thai": "bmi",
+  "tax-2026": "personal-tax",
+  "net-salary-2026": "net-salary",
+  "electricity-2026": "electric",
+  "mortgage-2026": "mortgage",
+  "area-converter": "area-unit",
+  "used-car-loan": "car-loan",
+  "cylinder-volume": "volume-shape"
+};
+
 export default function MainPage({ activeSlug = null }: { activeSlug?: string | null }) {
   const [lang, setLang] = useState<Lang>("TH");
   const [activeCategory, setActiveCategory] = useState<Category>("All");
   const [searchQuery, setSearchQuery] = useState("");
   const allCalcs = getCalcs(lang);
-  const initialCalc = activeSlug ? (allCalcs.find(c => c.slug === activeSlug || c.id === activeSlug || c.slug === decodeURIComponent(activeSlug) || c.id === decodeURIComponent(activeSlug))?.id || null) : null;
+
+  const getMappedSlug = (slug: string | null) => {
+    if (!slug) return null;
+    const decoded = decodeURIComponent(slug);
+    return slugMap[slug] || slugMap[decoded] || slug;
+  };
+
+  const mappedSlug = getMappedSlug(activeSlug);
+  const initialCalc = mappedSlug ? (allCalcs.find(c => c.slug === mappedSlug || c.id === mappedSlug || c.slug === decodeURIComponent(mappedSlug) || c.id === decodeURIComponent(mappedSlug))?.id || null) : null;
   const [activeCalc, setActiveCalc] = useState<string | null>(initialCalc);
   const [favorites, setFavorites] = useState<string[]>([]);
 
   useEffect(() => {
     if (activeSlug) {
-      const decodedSlug = decodeURIComponent(activeSlug);
-      const calc = allCalcs.find(c => 
-        c.slug === activeSlug || 
-        c.id === activeSlug || 
-        c.slug === decodedSlug || 
-        c.id === decodedSlug
-      );
-      if (calc) {
-        setActiveCalc(calc.id);
+      const mapped = getMappedSlug(activeSlug);
+      if (mapped) {
+        const decodedSlug = decodeURIComponent(mapped);
+        const calc = allCalcs.find(c => 
+          c.slug === mapped || 
+          c.id === mapped || 
+          c.slug === decodedSlug || 
+          c.id === decodedSlug
+        );
+        if (calc) {
+          setActiveCalc(calc.id);
+        } else {
+          setActiveCalc(null);
+        }
       } else {
         setActiveCalc(null);
       }

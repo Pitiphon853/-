@@ -9,6 +9,7 @@ import { TimeZoneConverter, TravelBudgetCalculator, FlightTimeCalculator, Packin
 import { DiscountCalculator, CarLoanCalculator, MortgageCalculator, CompoundInterest, BillSplitter, CurrencyConverter } from "./calcs/FinanceCalcs";
 import { SavingsGoalCalculator, InflationCalculator, SalaryToHourlyCalculator, NetWorthCalculator, DebtPayoffCalculator, RetirementCalculator, StockProfitCalculator, ROICalculator } from "./calcs/FinanceCalcs2";
 import { DCACalculator, StockFeeCalculator, NetSalaryCalculator, ExpenseTrackerCalculator } from "./calcs/FinanceCalcs3";
+import { PersonalTaxCalculator } from "./calcs/PersonalTaxCalculator";
 import { GoldPriceCalculator } from "./calcs/GoldCalcs";
 import { VO2MaxCalculator, SwimPaceCalculator, CyclingPowerZones } from "./calcs/ExerciseCalcs";
 import { RacePredictor, LiftingPyramid, RowingSplit, CarbEnduranceCalc } from "./calcs/ExerciseCalcs2";
@@ -495,6 +496,7 @@ export function Calculators({ activeCalc, lang, setCalc }: { activeCalc: string,
   if (activeCalc === "dca") return <DCACalculator lang={lang} />;
   if (activeCalc === "stock-fee") return <StockFeeCalculator lang={lang} />;
   if (activeCalc === "net-salary") return <NetSalaryCalculator lang={lang} />;
+  if (activeCalc === "personal-tax") return <PersonalTaxCalculator lang={lang} setCalc={setCalc} />;
   if (activeCalc === "expense-tracker") return <ExpenseTrackerCalculator lang={lang} />;
 
   // Business
