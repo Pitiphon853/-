@@ -1,0 +1,14 @@
+{
+  "id": "base-10-to-8",
+  "slug": "base-10-to-8",
+  "name": {
+    "TH": "แปลงเลขฐาน 10 เป็นฐาน 8",
+    "EN": "Base 10 to Base 8 Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณแปลงเลขฐาน 10 (Decimal) เป็นเลขฐาน 8 (Octal)",
+    "EN": "Convert decimal (Base 10) numbers to octal (Base 8) numbers."
+  },
+  "category": "Math",
+  "icon": "Hash"
+}

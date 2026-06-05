@@ -1,0 +1,14 @@
+{
+  "id": "cross-product",
+  "slug": "cross-product",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาผลคูณเชิงเวกเตอร์แบบครอส",
+    "EN": "Cross Product Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาผลคูณเชิงเวกเตอร์แบบครอส (Cross Product) ของเวกเตอร์ 3 มิติ พร้อมแสดงวิธีทำ",
+    "EN": "Calculate the cross product of 3D vectors with step-by-step solution."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

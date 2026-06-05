@@ -1,0 +1,14 @@
+{
+  "id": "permutation-calculator",
+  "slug": "permutation-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณวิธีการจัดลำดับ (Permutation: nPr)",
+    "EN": "Permutation Calculator (nPr)"
+  },
+  "desc": {
+    "TH": "คำนวณจำนวนวิธีการจัดลำดับของสิ่งของต่างๆ (nPr) แสดงสูตรและวิธีคำนวณอย่างละเอียด พร้อมคำอธิบาย",
+    "EN": "Calculate the number of permutations (nPr) for arranging r items from n, with step-by-step calculation details."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

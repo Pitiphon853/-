@@ -1,0 +1,14 @@
+{
+  "id": "venn-diagram-2-sets",
+  "slug": "venn-diagram-2-sets",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาเวนน์ไดอะแกรม (Venn Diagram) 2 เซต",
+    "EN": "2-Set Venn Diagram Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาเซตยูเนียน อินเตอร์เซกชัน ผลต่าง และคอมพลีเมนต์ของ 2 เซต พร้อมวาดรูปเวนน์ไดอะแกรมจำลอง",
+    "EN": "Calculate union, intersection, difference, and complement of 2 sets with an interactive SVG Venn diagram."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

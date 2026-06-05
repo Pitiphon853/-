@@ -1,0 +1,14 @@
+{
+  "id": "factor-generator",
+  "slug": "factor-generator",
+  "name": {
+    "TH": "เครื่องมือหาตัวประกอบทั้งหมด",
+    "EN": "Factor Generator"
+  },
+  "desc": {
+    "TH": "ค้นหาตัวประกอบทั้งหมดของตัวเลข หาตัวหารร่วม จำนวนตัวประกอบ ผลบวกตัวประกอบ และการแยกตัวประกอบเฉพาะ",
+    "EN": "Find all factors (divisors) of a number, along with its prime factorization, sum, and count."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

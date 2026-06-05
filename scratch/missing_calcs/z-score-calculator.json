@@ -1,0 +1,14 @@
+{
+  "id": "z-score-calculator",
+  "slug": "z-score-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณค่า Z-Score",
+    "EN": "Z-Score Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณค่า Z-Score ทางสถิติ",
+    "EN": "Statistical Z-Score Calculator"
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

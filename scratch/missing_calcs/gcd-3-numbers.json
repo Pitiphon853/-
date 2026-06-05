@@ -1,0 +1,14 @@
+{
+  "id": "gcd-3-numbers",
+  "slug": "gcd-3-numbers",
+  "name": {
+    "TH": "โปรแกรมหา ห.ร.ม. 3 จำนวน",
+    "EN": "GCD of 3 Numbers Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาตัวหารร่วมมาก (ห.ร.ม.) ของตัวเลขสามจำนวน พร้อมแสดงวิธีทำ",
+    "EN": "Calculate the Greatest Common Divisor (GCD) of three numbers."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

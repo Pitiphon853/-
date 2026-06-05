@@ -1,0 +1,14 @@
+{
+  "id": "binary-addition-subtraction",
+  "slug": "binary-addition-subtraction",
+  "name": {
+    "TH": "เครื่องคำนวณการบวกลบเลขฐาน 2",
+    "EN": "Binary Addition and Subtraction"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณการบวกและการลบเลขฐาน 2 (Binary) พร้อมแสดงผลลัพธ์ในฐาน 10",
+    "EN": "Free online binary arithmetic calculator. Add and subtract base-2 numbers."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

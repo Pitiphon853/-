@@ -1,0 +1,14 @@
+{
+  "id": "percentage-decrease",
+  "slug": "percentage-decrease",
+  "name": {
+    "TH": "คำนวณการลดลงเป็นเปอร์เซ็นต์",
+    "EN": "Percentage Decrease Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณการลดลงเป็นเปอร์เซ็นต์จากค่าเดิม (Percentage Decrease) พร้อมสูตรและวิธีคิด",
+    "EN": "Calculate the percentage decrease from an initial value to a final value."
+  },
+  "category": "Math",
+  "icon": "TrendingDown"
+}

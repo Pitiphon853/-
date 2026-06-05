@@ -1,0 +1,8 @@
+{
+  "id": "five-number-summary",
+  "slug": "five-number-summary",
+  "name": { "TH": "สรุปข้อมูล 5 ค่า (Five-Number Summary)", "EN": "Five-Number Summary Calculator" },
+  "desc": { "TH": "คำนวณค่าต่ำสุด, ควอไทล์ที่ 1, มัธยฐาน, ควอไทล์ที่ 3, และค่าสูงสุด สำหรับสร้างแผนภาพกล่อง", "EN": "Calculate the five-number summary (Min, Q1, Median, Q3, Max) for box plots" },
+  "category": "Math",
+  "icon": "BarChart"
+}

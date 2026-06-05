@@ -1,0 +1,14 @@
+{
+  "id": "volume-sphere",
+  "slug": "volume-sphere",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาปริมาตรทรงกลม",
+    "EN": "Sphere Volume Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณหาปริมาตรของทรงกลมออนไลน์ เพียงระบุรัศมี พร้อมสูตรและวิธีคิด",
+    "EN": "Calculate the volume of a sphere online by entering the radius."
+  },
+  "category": "Math",
+  "icon": "Circle"
+}

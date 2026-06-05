@@ -1,0 +1,14 @@
+{
+  "id": "admission-score-percentage",
+  "slug": "admission-score-percentage",
+  "name": {
+    "TH": "เครื่องมือคำนวณเปรียบเทียบเปอร์เซ็นต์คะแนนสอบคัดเลือก",
+    "EN": "Admission Score Percentage Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณคะแนนรวมและเปอร์เซ็นต์คะแนนสอบคัดเลือกแบบทั่วไป (TCAS / Admission) ถ่วงน้ำหนักความสำคัญ พร้อมเปรียบเทียบคะแนนย้อนหลัง",
+    "EN": "Calculate and compare your weighted admission score and percentage with previous year cutoffs."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

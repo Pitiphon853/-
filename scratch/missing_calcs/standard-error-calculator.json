@@ -1,0 +1,14 @@
+{
+  "id": "standard-error-calculator",
+  "slug": "standard-error-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณความคลาดเคลื่อนมาตรฐาน (SE)",
+    "EN": "Standard Error Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาค่าความคลาดเคลื่อนมาตรฐาน (Standard Error)",
+    "EN": "Standard Error (SE) Calculator"
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "truth-table-2-variables",
+  "slug": "truth-table-2-variables",
+  "name": {
+    "TH": "เครื่องมือคำนวณตารางสัจนิรันดร์ทางตรรกศาสตร์ (2 ตัวแปร)",
+    "EN": "Truth Table Generator (2 Variables)"
+  },
+  "desc": {
+    "TH": "สร้างตารางค่าความจริงของประพจน์ตรรกศาสตร์ 2 ตัวแปร P, Q พร้อมวิเคราะห์ความเป็นสัจนิรันดร์ (Tautology)",
+    "EN": "Generate truth table for 2-variable logic expressions P, Q and analyze if it is a Tautology."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

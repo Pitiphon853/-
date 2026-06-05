@@ -1,0 +1,14 @@
+{
+  "id": "logic-equivalence-checker",
+  "slug": "logic-equivalence-checker",
+  "name": {
+    "TH": "ตรวจสอบสมมูลตรรกศาสตร์",
+    "EN": "Logic Equivalence Checker"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณตรวจสอบสมมูลตรรกศาสตร์ของประพจน์",
+    "EN": "Calculator to check logical equivalence of two propositions"
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

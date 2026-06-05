@@ -1,0 +1,14 @@
+{
+  "id": "krejcie-morgan-sample-size",
+  "slug": "krejcie-morgan-sample-size",
+  "name": {
+    "TH": "เครื่องมือคำนวณขนาดกลุ่มตัวอย่างของเครจซีและมอร์แกน",
+    "EN": "Krejcie & Morgan Sample Size Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาขนาดกลุ่มตัวอย่างขั้นต่ำตามตาราง Krejcie & Morgan ด้วยสูตรทางสถิติ",
+    "EN": "Calculate the minimum required sample size using the Krejcie & Morgan formula."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

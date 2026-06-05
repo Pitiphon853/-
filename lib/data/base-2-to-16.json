@@ -1,0 +1,14 @@
+{
+  "id": "base-2-to-16",
+  "slug": "base-2-to-16",
+  "name": {
+    "TH": "เครื่องคำนวณแปลงเลขฐาน 2 เป็นเลขฐาน 16",
+    "EN": "Binary to Hexadecimal Converter"
+  },
+  "desc": {
+    "TH": "โปรแกรมแปลงเลขฐาน 2 (Binary) เป็นเลขฐาน 16 (Hexadecimal) ออนไลน์ ใช้งานง่าย พร้อมคำอธิบาย",
+    "EN": "Free online binary (base-2) to hexadecimal (base-16) converter."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

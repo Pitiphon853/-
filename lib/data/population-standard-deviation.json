@@ -1,0 +1,14 @@
+{
+  "id": "population-standard-deviation",
+  "slug": "population-standard-deviation",
+  "name": {
+    "TH": "เครื่องคำนวณส่วนเบี่ยงเบนมาตรฐานประชากร (Population S.D.)",
+    "EN": "Population Standard Deviation Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาส่วนเบี่ยงเบนมาตรฐาน (S.D.) และความแปรปรวน (Variance) ของกลุ่มประชากรทั้งหมด พร้อมวิธีทำทีละขั้นตอน",
+    "EN": "Calculate the population standard deviation (S.D.) and variance of a full population with step-by-step math."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

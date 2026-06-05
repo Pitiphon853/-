@@ -1,0 +1,14 @@
+{
+  "id": "polygon-exterior-angle",
+  "slug": "polygon-exterior-angle",
+  "name": {
+    "TH": "มุมภายนอกของรูป N เหลี่ยม",
+    "EN": "Regular Polygon Exterior Angle Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหามุมภายนอกของรูปหลายเหลี่ยมด้านเท่า (Regular Polygon Exterior Angle) ขนาด N เหลี่ยม พร้อมสูตรและขั้นตอนวิธีคำนวณอย่างละเอียด",
+    "EN": "Calculate the size of each exterior angle of a regular N-sided polygon with step-by-step math."
+  },
+  "category": "Math",
+  "icon": "Shapes"
+}

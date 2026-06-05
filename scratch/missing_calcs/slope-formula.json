@@ -1,0 +1,14 @@
+{
+  "id": "slope-formula",
+  "slug": "slope-formula",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาความชันของเส้นตรง",
+    "EN": "Slope Formula Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาความชัน (m) ของเส้นตรงระหว่างจุดสองจุดพร้อมหามุมเอียงและทิศทาง",
+    "EN": "Calculate the slope (m) of a line passing through two coordinates and find its angle."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "inverse-matrix",
+  "slug": "inverse-matrix",
+  "name": {
+    "TH": "อินเวอร์สเมทริกซ์ 2x2",
+    "EN": "2x2 Inverse Matrix Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาอินเวอร์สการคูณของเมทริกซ์ขนาด 2x2 (Inverse Matrix) พร้อมแสดงดีเทอร์มิแนนต์และวิธีทำอย่างละเอียด",
+    "EN": "Calculate the inverse of a 2x2 matrix step-by-step, including determinant calculation and validation."
+  },
+  "category": "Math",
+  "icon": "Grid"
+}

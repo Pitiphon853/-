@@ -1,0 +1,14 @@
+{
+  "id": "herons-formula",
+  "slug": "herons-formula",
+  "name": {
+    "TH": "สูตรของเฮรอน (หาพื้นที่สามเหลี่ยม)",
+    "EN": "Heron's Formula Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาพื้นที่สามเหลี่ยมเมื่อทราบความยาวทั้งสามด้าน",
+    "EN": "Tool to calculate triangle area using Heron's formula"
+  },
+  "category": "Math",
+  "icon": "BoxSelect"
+}

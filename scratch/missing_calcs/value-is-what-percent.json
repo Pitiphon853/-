@@ -1,0 +1,14 @@
+{
+  "id": "value-is-what-percent",
+  "slug": "value-is-what-percent",
+  "name": {
+    "TH": "คำนวณหาเปอร์เซ็นต์ของจำนวนเทียบกับยอดรวม",
+    "EN": "Value is What Percent Calculator"
+  },
+  "desc": {
+    "TH": "หาว่าตัวเลขหนึ่งคิดเป็นกี่เปอร์เซ็นต์ของอีกตัวเลขหนึ่ง (เช่น 50 เป็นกี่ % ของ 200)",
+    "EN": "Calculate what percentage a number is of another number."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

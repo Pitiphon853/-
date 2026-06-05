@@ -1,0 +1,14 @@
+{
+  "id": "mean-deviation",
+  "slug": "mean-deviation",
+  "name": {
+    "TH": "เครื่องคำนวณส่วนเบี่ยงเบนเฉลี่ย",
+    "EN": "Mean Deviation Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาส่วนเบี่ยงเบนเฉลี่ย (Mean Deviation) จากชุดข้อมูล",
+    "EN": "Calculate the mean absolute deviation of a dataset."
+  },
+  "category": "Math",
+  "icon": "MinusCircle"
+}

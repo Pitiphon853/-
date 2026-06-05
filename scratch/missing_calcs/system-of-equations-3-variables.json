@@ -1,0 +1,14 @@
+{
+  "id": "system-of-equations-3-variables",
+  "slug": "system-of-equations-3-variables",
+  "name": {
+    "TH": "เครื่องมือคำนวณแก้ระบบสมการเชิงเส้นสามตัวแปร",
+    "EN": "System of Linear Equations (3 Variables) Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาคำตอบของระบบสมการเชิงเส้น 3 ตัวแปร (x, y, z) ด้วยหลักการเมทริกซ์ (Cramer's Rule)",
+    "EN": "Calculate the solution to a system of linear equations with 3 variables using matrix principles."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

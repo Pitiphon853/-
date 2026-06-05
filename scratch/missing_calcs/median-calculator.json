@@ -1,0 +1,14 @@
+{
+  "id": "median-calculator",
+  "slug": "median-calculator",
+  "name": {
+    "TH": "เครื่องคำนวณค่ามัธยฐาน (Median)",
+    "EN": "Median Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องคำนวณหาค่ามัธยฐาน (Median) จากชุดข้อมูล พร้อมแสดงขั้นตอนการคำนวณและการเรียงลำดับข้อมูลอย่างละเอียด",
+    "EN": "Find the median of a dataset step-by-step, including sorting and calculation explanations."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

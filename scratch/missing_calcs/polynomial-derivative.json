@@ -1,0 +1,14 @@
+{
+  "id": "polynomial-derivative",
+  "slug": "polynomial-derivative",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาอนุพันธ์ของฟังก์ชันพหุนาม",
+    "EN": "Polynomial Derivative Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาอนุพันธ์ (Derivative) ของฟังก์ชันพหุนามพื้นฐาน ตามกฎการหาอนุพันธ์ (Power Rule)",
+    "EN": "Calculate the derivative of a basic polynomial function."
+  },
+  "category": "Math",
+  "icon": "MoveDownRight"
+}

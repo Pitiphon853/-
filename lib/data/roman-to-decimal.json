@@ -1,0 +1,14 @@
+{
+  "id": "roman-to-decimal",
+  "slug": "roman-to-decimal",
+  "name": {
+    "TH": "เครื่องมือแปลงเลขโรมันเป็นเลขฐานสิบ",
+    "EN": "Roman to Decimal Converter"
+  },
+  "desc": {
+    "TH": "แปลงตัวเลขโรมัน (I, V, X, L, C, D, M) เป็นตัวเลขฐานสิบปกติ พร้อมวิเคราะห์ขั้นตอนวิธีบวกลบ",
+    "EN": "Convert Roman numerals (I, V, X, L, C, D, M) to decimal integers with breakdown steps."
+  },
+  "category": "Math",
+  "icon": "Hash"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "triangle-centroid",
+  "slug": "triangle-centroid",
+  "name": {
+    "TH": "หาพิกัดเซนทรอยด์ของสามเหลี่ยม",
+    "EN": "Triangle Centroid Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาจุดศูนย์ถ่วง (Centroid) ของรูปสามเหลี่ยมจากพิกัด 3 จุด",
+    "EN": "Tool to find the centroid coordinates of a triangle from its 3 vertices"
+  },
+  "category": "Math",
+  "icon": "Crosshair"
+}

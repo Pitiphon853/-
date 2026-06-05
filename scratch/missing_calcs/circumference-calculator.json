@@ -1,0 +1,14 @@
+{
+  "id": "circumference-calculator",
+  "slug": "circumference-calculator",
+  "name": {
+    "TH": "เครื่องคำนวณความยาวเส้นรอบวง",
+    "EN": "Circumference Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาความยาวเส้นรอบวงของวงกลม จากรัศมีหรือเส้นผ่านศูนย์กลาง",
+    "EN": "Calculate the circumference of a circle from its radius or diameter."
+  },
+  "category": "Math",
+  "icon": "Circle"
+}

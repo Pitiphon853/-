@@ -1,0 +1,14 @@
+{
+  "id": "arithmetic-series-sum",
+  "slug": "arithmetic-series-sum",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาผลรวมของอนุกรมเลขคณิต (Arithmetic Series)",
+    "EN": "Arithmetic Series Sum Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณผลรวมของอนุกรมเลขคณิต หาผลบวก N พจน์แรก แสดงสูตรคำนวณและวิธีหาคำตอบแบบทีละขั้นตอนอย่างละเอียด",
+    "EN": "Calculate the sum of an arithmetic series given the initial term, common difference/last term, and number of terms."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

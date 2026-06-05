@@ -1,0 +1,14 @@
+{
+  "id": "combination-calculator",
+  "slug": "combination-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณวิธีการจัดหมู่ (Combination: nCr)",
+    "EN": "Combination Calculator (nCr)"
+  },
+  "desc": {
+    "TH": "คำนวณจำนวนวิธีการจัดหมู่ของสิ่งของต่างๆ (nCr) แสดงสูตรและวิธีคำนวณอย่างละเอียด พร้อมคำอธิบาย",
+    "EN": "Calculate the number of combinations (nCr) for choosing r items from n, with step-by-step calculation details."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

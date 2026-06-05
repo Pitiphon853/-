@@ -1,0 +1,8 @@
+{
+  "id": "decimal-to-scientific-notation",
+  "slug": "decimal-to-scientific-notation",
+  "name": { "TH": "แปลงทศนิยมเป็นสัญกรณ์วิทยาศาสตร์", "EN": "Decimal to Scientific Notation Converter" },
+  "desc": { "TH": "แปลงตัวเลขปกติหรือทศนิยมให้อยู่ในรูปสัญกรณ์วิทยาศาสตร์ (a x 10^n)", "EN": "Convert decimal numbers to scientific notation (a x 10^n)" },
+  "category": "Math",
+  "icon": "Calculator"
+}

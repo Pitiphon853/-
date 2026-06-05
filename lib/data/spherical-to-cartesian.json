@@ -1,0 +1,14 @@
+{
+  "id": "spherical-to-cartesian",
+  "slug": "spherical-to-cartesian",
+  "name": {
+    "TH": "พิกัดทรงกลมเป็นพิกัดฉาก",
+    "EN": "Spherical to Cartesian Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณแปลงพิกัดทรงกลม (r, θ, φ) เป็นพิกัดฉาก (x, y, z) ในระบบ 3 มิติ",
+    "EN": "Convert spherical coordinates (r, theta, phi) to 3D Cartesian coordinates (x, y, z)."
+  },
+  "category": "Math",
+  "icon": "Globe"
+}

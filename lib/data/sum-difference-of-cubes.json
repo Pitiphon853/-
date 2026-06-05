@@ -1,0 +1,14 @@
+{
+  "id": "sum-difference-of-cubes",
+  "slug": "sum-difference-of-cubes",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาผลบวกและผลต่างกำลังสาม",
+    "EN": "Sum and Difference of Cubes Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณและแยกตัวประกอบของผลบวกกำลังสาม (a³ + b³) และผลต่างกำลังสาม (a³ - b³) พร้อมแสดงวิธีทำอย่างละเอียด",
+    "EN": "Calculate and factor the sum (a³ + b³) and difference (a³ - b³) of cubes with step-by-step explanations."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "sector-area-calculator",
+  "slug": "sector-area-calculator",
+  "name": {
+    "TH": "เครื่องคำนวณพื้นที่เซกเตอร์",
+    "EN": "Sector Area Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาพื้นที่เซกเตอร์ของวงกลม (ส่วนของวงกลมคล้ายชิ้นพิซซ่า) จากรัศมีและมุม",
+    "EN": "Calculate the area of a circular sector using radius and central angle."
+  },
+  "category": "Math",
+  "icon": "PieChart"
+}

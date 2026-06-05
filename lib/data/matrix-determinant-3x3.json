@@ -1,0 +1,14 @@
+{
+  "id": "matrix-determinant-3x3",
+  "slug": "matrix-determinant-3x3",
+  "name": {
+    "TH": "โปรแกรมหาดีเทอร์มิแนนต์เมทริกซ์ 3x3",
+    "EN": "Matrix Determinant 3x3 Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาค่าดีเทอร์มิแนนต์ (Determinant) ของเมทริกซ์ขนาด 3x3 พร้อมแสดงวิธีทำอย่างละเอียด",
+    "EN": "Calculate the determinant of a 3x3 matrix with step-by-step details."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

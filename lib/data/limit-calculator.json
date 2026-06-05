@@ -1,0 +1,14 @@
+{
+  "id": "limit-calculator",
+  "slug": "limit-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาค่าลิมิตของฟังก์ชันพหุนาม",
+    "EN": "Polynomial Limit Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาค่าลิมิตเบื้องต้นของฟังก์ชันพหุนามเมื่อ x เข้าใกล้ค่า a",
+    "EN": "Calculate the basic limit of a polynomial function as x approaches a."
+  },
+  "category": "Math",
+  "icon": "Sigma"
+}

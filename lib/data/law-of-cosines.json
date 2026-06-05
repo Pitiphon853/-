@@ -1,0 +1,14 @@
+{
+  "id": "law-of-cosines",
+  "slug": "law-of-cosines",
+  "name": {
+    "TH": "กฎของโคไซน์",
+    "EN": "Law of Cosines Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาความยาวด้านหรือมุมของสามเหลี่ยมด้วยกฎของโคไซน์",
+    "EN": "Tool to calculate side lengths or angles of a triangle using the Law of Cosines"
+  },
+  "category": "Math",
+  "icon": "TriangleRight"
+}

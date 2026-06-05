@@ -1,0 +1,14 @@
+{
+  "id": "fibonacci-number",
+  "slug": "fibonacci-number",
+  "name": {
+    "TH": "คำนวณหาเลขฟีโบนัชชี",
+    "EN": "Fibonacci Number Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือหาค่าของลำดับฟีโบนัชชีที่ตำแหน่ง N ที่ต้องการ",
+    "EN": "Tool to find the Fibonacci number at position N"
+  },
+  "category": "Math",
+  "icon": "Hash"
+}

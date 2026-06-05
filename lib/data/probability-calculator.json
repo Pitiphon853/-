@@ -1,0 +1,14 @@
+{
+  "id": "probability-calculator",
+  "slug": "probability-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณความน่าจะเป็นเบื้องต้น (Probability)",
+    "EN": "Basic Probability Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่าความน่าจะเป็นของเหตุการณ์ต่างๆ จากจำนวนเหตุการณ์ที่สนใจและจำนวนเหตุการณ์ทั้งหมดในสเปซตัวอย่าง",
+    "EN": "Calculate the basic probability of an event from the number of favorable outcomes and total possible outcomes."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

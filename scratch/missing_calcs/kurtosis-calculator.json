@@ -1,0 +1,14 @@
+{
+  "id": "kurtosis-calculator",
+  "slug": "kurtosis-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาค่าความโด่ง (Kurtosis)",
+    "EN": "Kurtosis Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาค่าความโด่งของชุดข้อมูล (Kurtosis) แบบออนไลน์ฟรี",
+    "EN": "Calculate the kurtosis of a dataset to measure its tailedness."
+  },
+  "category": "Math",
+  "icon": "BarChart2"
+}

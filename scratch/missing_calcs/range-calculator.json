@@ -1,0 +1,14 @@
+{
+  "id": "range-calculator",
+  "slug": "range-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาค่าพิสัย (Range)",
+    "EN": "Range Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาค่าพิสัย (Range) ของข้อมูล พร้อมหาค่าสูงสุดและต่ำสุดของข้อมูล",
+    "EN": "Calculate the range of a dataset by finding the difference between maximum and minimum values."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

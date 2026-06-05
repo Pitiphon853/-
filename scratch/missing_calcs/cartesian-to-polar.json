@@ -1,0 +1,8 @@
+{
+  "id": "cartesian-to-polar",
+  "slug": "cartesian-to-polar",
+  "name": { "TH": "แปลงพิกัดฉากเป็นพิกัดเชิงขั้ว", "EN": "Cartesian to Polar Converter" },
+  "desc": { "TH": "เครื่องมือคำนวณแปลงพิกัดฉาก (Cartesian) เป็นพิกัดเชิงขั้ว (Polar)", "EN": "Convert Cartesian coordinates (x, y) to Polar coordinates (r, θ)" },
+  "category": "Math",
+  "icon": "Compass"
+}

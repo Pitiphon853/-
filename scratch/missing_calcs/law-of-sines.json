@@ -1,0 +1,14 @@
+{
+  "id": "law-of-sines",
+  "slug": "law-of-sines",
+  "name": {
+    "TH": "กฎของไซน์",
+    "EN": "Law of Sines Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาความยาวด้านหรือมุมของสามเหลี่ยมด้วยกฎของไซน์",
+    "EN": "Tool to calculate side lengths or angles of a triangle using the Law of Sines"
+  },
+  "category": "Math",
+  "icon": "Triangle"
+}

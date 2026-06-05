@@ -1,0 +1,14 @@
+{
+  "id": "truth-table-3-variables",
+  "slug": "truth-table-3-variables",
+  "name": {
+    "TH": "ตารางค่าความจริง 3 ตัวแปร",
+    "EN": "Truth Table 3 Variables"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณตารางสัจนิรันดร์และค่าความจริง 3 ตัวแปร P, Q, R",
+    "EN": "Truth table calculator for 3 variables P, Q, R"
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

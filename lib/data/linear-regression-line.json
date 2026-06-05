@@ -1,0 +1,14 @@
+{
+  "id": "linear-regression-line",
+  "slug": "linear-regression-line",
+  "name": {
+    "TH": "เครื่องมือคำนวณสมการเส้นถดถอยเชิงเส้น",
+    "EN": "Linear Regression Line Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาสมการเส้นถดถอยเชิงเส้นอย่างง่าย (Simple Linear Regression Line)",
+    "EN": "Simple Linear Regression Line Calculator"
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

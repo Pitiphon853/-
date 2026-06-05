@@ -1,0 +1,14 @@
+{
+  "id": "trig-sin",
+  "slug": "trig-sin",
+  "name": {
+    "TH": "คำนวณค่าไซน์ (Sine)",
+    "EN": "Sine (Sin) Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณตรีโกณมิติเพื่อหาค่า Sine (sin) จากมุมที่กำหนด (องศา)",
+    "EN": "Calculate the Sine (sin) value from a given angle in degrees"
+  },
+  "category": "Math",
+  "icon": "Activity"
+}

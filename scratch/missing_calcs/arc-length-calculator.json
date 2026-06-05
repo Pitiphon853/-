@@ -1,0 +1,14 @@
+{
+  "id": "arc-length-calculator",
+  "slug": "arc-length-calculator",
+  "name": {
+    "TH": "เครื่องคำนวณความยาวส่วนโค้ง",
+    "EN": "Arc Length Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาความยาวส่วนโค้งของวงกลม จากรัศมีและมุมที่จุดศูนย์กลาง",
+    "EN": "Calculate the arc length of a circle using radius and central angle."
+  },
+  "category": "Math",
+  "icon": "CircleDashed"
+}

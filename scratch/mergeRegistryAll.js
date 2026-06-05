@@ -161,7 +161,7 @@ if (newImports.length > 0) {
     let lines = calculatorsContent.split(/\r?\n/);
     let lastImportIdx = -1;
     for (let i = 0; i < lines.length; i++) {
-        if (lines[i].trim().startsWith('import ')) {
+        if (lines[i].trim().startsWith('import ') || lines[i].includes(' from "') || lines[i].includes(" from '")) {
             lastImportIdx = i;
         }
     }

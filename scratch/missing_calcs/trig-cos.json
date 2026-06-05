@@ -1,0 +1,14 @@
+{
+  "id": "trig-cos",
+  "slug": "trig-cos",
+  "name": {
+    "TH": "คำนวณค่าโคไซน์ (Cosine)",
+    "EN": "Cosine (Cos) Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณตรีโกณมิติเพื่อหาค่า Cosine (cos) จากมุมที่กำหนด (องศา)",
+    "EN": "Calculate the Cosine (cos) value from a given angle in degrees"
+  },
+  "category": "Math",
+  "icon": "Activity"
+}

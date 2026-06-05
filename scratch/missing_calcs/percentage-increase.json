@@ -1,0 +1,14 @@
+{
+  "id": "percentage-increase",
+  "slug": "percentage-increase",
+  "name": {
+    "TH": "คำนวณการเพิ่มขึ้นเป็นเปอร์เซ็นต์",
+    "EN": "Percentage Increase Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณการเพิ่มขึ้นเป็นเปอร์เซ็นต์จากค่าเดิม (Percentage Increase) พร้อมสูตรและวิธีคิด",
+    "EN": "Calculate the percentage increase from an initial value to a final value."
+  },
+  "category": "Math",
+  "icon": "TrendingUp"
+}

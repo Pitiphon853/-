@@ -1,0 +1,14 @@
+{
+  "id": "percent-of-value",
+  "slug": "percent-of-value",
+  "name": {
+    "TH": "คำนวณหาเปอร์เซ็นต์จากค่าทั้งหมด",
+    "EN": "Percent of Value Calculator"
+  },
+  "desc": {
+    "TH": "หาค่าผลลัพธ์ของเปอร์เซ็นต์ที่ต้องการ (เช่น 15% ของ 2,500 คือเท่าไหร่)",
+    "EN": "Find the value that corresponds to a certain percentage of a total."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

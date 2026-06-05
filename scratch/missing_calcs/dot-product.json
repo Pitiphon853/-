@@ -1,0 +1,14 @@
+{
+  "id": "dot-product",
+  "slug": "dot-product",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาผลคูณเชิงเวกเตอร์แบบดอท",
+    "EN": "Dot Product Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาผลคูณเชิงเวกเตอร์แบบดอท (Dot Product) ระหว่างเวกเตอร์สองตัว ทั้งแบบ 2 มิติ และ 3 มิติ พร้อมแสดงวิธีทำ",
+    "EN": "Calculate the dot product between two vectors (2D and 3D) with step-by-step solution."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

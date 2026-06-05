@@ -1,0 +1,14 @@
+{
+  "id": "improper-to-mixed-fraction",
+  "slug": "improper-to-mixed-fraction",
+  "name": {
+    "TH": "แปลงเศษส่วนเกินเป็นเศษส่วนคละ",
+    "EN": "Improper to Mixed Fraction"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณแปลงเศษส่วนเกินเป็นเศษส่วนคละหรือจำนวนคละ",
+    "EN": "Convert improper fractions to mixed fractions/numbers."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

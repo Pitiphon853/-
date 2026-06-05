@@ -1,0 +1,14 @@
+{
+  "id": "distance-formula",
+  "slug": "distance-formula",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาระยะทางระหว่างสองจุด",
+    "EN": "Distance Formula Calculator"
+  },
+  "desc": {
+    "TH": "หาระยะห่างของจุดสองจุดบนระนาบคาร์ทีเซียนโดยอ้างอิงทฤษฎีบทพีทาโกรัส",
+    "EN": "Calculate the Euclidean distance between two points on a 2D plane."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

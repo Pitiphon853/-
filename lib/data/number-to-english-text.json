@@ -1,0 +1,14 @@
+{
+  "id": "number-to-english-text",
+  "slug": "number-to-english-text",
+  "name": {
+    "TH": "แปลงตัวเลขเป็นตัวหนังสือภาษาอังกฤษ",
+    "EN": "Number to English Text Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือแปลงตัวเลขเป็นข้อความภาษาอังกฤษสำหรับการเขียนเช็คและเอกสาร",
+    "EN": "Tool to convert numbers to English words for checks and documents"
+  },
+  "category": "Math",
+  "icon": "Type"
+}

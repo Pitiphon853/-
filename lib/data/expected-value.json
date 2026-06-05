@@ -1,0 +1,14 @@
+{
+  "id": "expected-value",
+  "slug": "expected-value",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาค่าคาดหมาย",
+    "EN": "Expected Value Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาค่าคาดหมาย (Expected Value: E(X)) ค่าเฉลี่ยถ่วงน้ำหนักความน่าจะเป็น และความแปรปรวน (Variance)",
+    "EN": "Calculate the expected value E(X), probability-weighted average, variance, and standard deviation."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

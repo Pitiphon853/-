@@ -1,0 +1,14 @@
+{
+  "id": "volume-cube",
+  "slug": "volume-cube",
+  "name": {
+    "TH": "เครื่องมือคำนวณปริมาตรลูกบาศก์",
+    "EN": "Cube Volume Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณปริมาตร พื้นที่ผิว และความยาวเส้นแทยงมุมของรูปทรงลูกบาศก์แบบสองทิศทาง (ป้อนความยาวด้าน หรือป้อนปริมาตร/พื้นที่ผิว เพื่อหาย้อนกลับ)",
+    "EN": "Calculate the volume, surface area, and diagonal length of a cube. Supports reverse calculations from volume or surface area."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

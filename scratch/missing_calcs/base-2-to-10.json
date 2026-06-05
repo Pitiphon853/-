@@ -1,0 +1,14 @@
+{
+  "id": "base-2-to-10",
+  "slug": "base-2-to-10",
+  "name": {
+    "TH": "เครื่องคำนวณแปลงเลขฐาน 2 เป็นเลขฐาน 10",
+    "EN": "Binary to Decimal Converter"
+  },
+  "desc": {
+    "TH": "โปรแกรมแปลงเลขฐาน 2 (Binary) เป็นเลขฐาน 10 (Decimal) ออนไลน์ ใช้งานง่าย พร้อมคำอธิบายและหลักการคำนวณ",
+    "EN": "Free online binary (base-2) to decimal (base-10) converter with easy to understand explanations."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

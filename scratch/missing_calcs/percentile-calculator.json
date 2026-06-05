@@ -1,0 +1,14 @@
+{
+  "id": "percentile-calculator",
+  "slug": "percentile-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณเปอร์เซ็นต์ไทล์ (Percentile)",
+    "EN": "Percentile Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณเปอร์เซ็นต์ไทล์ (Percentile) ของคะแนนชุดข้อมูลแบบเรียงลำดับ เลือกคำนวณได้ทั้งแบบหลักสูตรไทยและแบบสากล",
+    "EN": "Calculate the percentile of a dataset with step-by-step methods, supporting both educational and standard methods."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

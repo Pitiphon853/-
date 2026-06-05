@@ -1,0 +1,14 @@
+{
+  "id": "outliers-calculator",
+  "slug": "outliers-calculator",
+  "name": {
+    "TH": "เครื่องคำนวณหาค่าผิดปกติ (Outliers)",
+    "EN": "Outliers Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาขอบเขตบนและล่าง เพื่อค้นหาค่าผิดปกติ (Outliers) ในข้อมูล",
+    "EN": "Find upper and lower bounds to identify outliers in a dataset."
+  },
+  "category": "Math",
+  "icon": "AlertCircle"
+}

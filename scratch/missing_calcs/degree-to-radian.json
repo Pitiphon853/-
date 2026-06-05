@@ -1,0 +1,14 @@
+{
+  "id": "degree-to-radian",
+  "slug": "degree-to-radian",
+  "name": {
+    "TH": "แปลงองศาเป็นเรเดียน",
+    "EN": "Degree to Radian Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือแปลงมุมจากองศา (Degree) เป็นเรเดียน (Radian) อย่างแม่นยำ พร้อมสูตรและวิธีการคำนวณ",
+    "EN": "Convert angle from Degree to Radian accurately."
+  },
+  "category": "Math",
+  "icon": "Orbit"
+}

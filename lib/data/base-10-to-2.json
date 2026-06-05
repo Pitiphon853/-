@@ -1,0 +1,14 @@
+{
+  "id": "base-10-to-2",
+  "slug": "base-10-to-2",
+  "name": {
+    "TH": "แปลงเลขฐาน 10 เป็นฐาน 2",
+    "EN": "Base 10 to Base 2 Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณแปลงเลขฐาน 10 (Decimal) เป็นเลขฐาน 2 (Binary)",
+    "EN": "Convert decimal (Base 10) numbers to binary (Base 2) numbers."
+  },
+  "category": "Math",
+  "icon": "Hash"
+}

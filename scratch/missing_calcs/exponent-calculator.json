@@ -1,0 +1,14 @@
+{
+  "id": "exponent-calculator",
+  "slug": "exponent-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณเลขยกกำลัง (Exponent: X ยกกำลัง Y)",
+    "EN": "Exponent Calculator (X^Y)"
+  },
+  "desc": {
+    "TH": "คำนวณค่าเลขยกกำลัง ฐาน X ยกกำลัง Y แสดงวิธีคิดอย่างละเอียด รองรับทั้งเลขชี้กำลังที่เป็นบวก ลบ และทศนิยม",
+    "EN": "Calculate the exponent of a base X raised to the power Y, with step-by-step math breakdowns."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

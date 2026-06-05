@@ -1,0 +1,14 @@
+{
+  "id": "absolute-value",
+  "slug": "absolute-value",
+  "name": {
+    "TH": "เครื่องมือหาค่าสัมบูรณ์",
+    "EN": "Absolute Value Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาค่าสัมบูรณ์ (Absolute Value) ของจำนวนจริง และค่ามอดุลัสของจำนวนเชิงซ้อน พร้อมคำอธิบายทางคณิตศาสตร์",
+    "EN": "Find the absolute value of a real number or the modulus of a complex number."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

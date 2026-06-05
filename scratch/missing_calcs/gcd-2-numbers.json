@@ -1,0 +1,14 @@
+{
+  "id": "gcd-2-numbers",
+  "slug": "gcd-2-numbers",
+  "name": {
+    "TH": "โปรแกรมหา ห.ร.ม. 2 จำนวน",
+    "EN": "GCD of 2 Numbers Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือหาตัวหารร่วมมาก (ห.ร.ม.) ของตัวเลขสองจำนวน พร้อมแสดงขั้นตอนวิธีแบบยุคลิด",
+    "EN": "Calculate the Greatest Common Divisor (GCD) of two numbers with Euclidean algorithm steps."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

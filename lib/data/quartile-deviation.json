@@ -1,0 +1,14 @@
+{
+  "id": "quartile-deviation",
+  "slug": "quartile-deviation",
+  "name": {
+    "TH": "เครื่องคำนวณส่วนเบี่ยงเบนควอไทล์",
+    "EN": "Quartile Deviation Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณค่าส่วนเบี่ยงเบนควอไทล์ (Quartile Deviation) พร้อมวิธีทำ",
+    "EN": "Calculate the quartile deviation or semi-interquartile range of a dataset."
+  },
+  "category": "Math",
+  "icon": "Activity"
+}

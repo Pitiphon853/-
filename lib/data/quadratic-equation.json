@@ -1,0 +1,14 @@
+{
+  "id": "quadratic-equation",
+  "slug": "quadratic-equation",
+  "name": {
+    "TH": "โปรแกรมแก้สมการกำลังสอง (Quadratic)",
+    "EN": "Quadratic Equation Solver"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาคำตอบของสมการกำลังสอง (ax² + bx + c = 0) พร้อมแสดงวิธีทำด้วยสูตร Quadratic Formula",
+    "EN": "Solve quadratic equations (ax² + bx + c = 0) with step-by-step formula."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "matrix-determinant-2x2",
+  "slug": "matrix-determinant-2x2",
+  "name": {
+    "TH": "โปรแกรมหาดีเทอร์มิแนนต์เมทริกซ์ 2x2",
+    "EN": "Matrix Determinant 2x2 Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาค่าดีเทอร์มิแนนต์ (Determinant) ของเมทริกซ์ขนาด 2x2 พร้อมแสดงวิธีทำ",
+    "EN": "Calculate the determinant of a 2x2 matrix."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

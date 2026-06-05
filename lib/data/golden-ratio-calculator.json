@@ -1,0 +1,8 @@
+{
+  "id": "golden-ratio-calculator",
+  "slug": "golden-ratio-calculator",
+  "name": { "TH": "คำนวณสัดส่วนทองคำ", "EN": "Golden Ratio Calculator" },
+  "desc": { "TH": "เครื่องมือคำนวณสัดส่วนตามอัตราส่วนทองคำ (Golden Ratio: 1.618) สำหรับงานออกแบบและศิลปะ", "EN": "Calculate proportions based on the Golden Ratio (1.618)" },
+  "category": "Math",
+  "icon": "DivideCircle"
+}

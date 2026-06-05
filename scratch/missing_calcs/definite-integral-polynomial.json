@@ -1,0 +1,14 @@
+{
+  "id": "definite-integral-polynomial",
+  "slug": "definite-integral-polynomial",
+  "name": {
+    "TH": "เครื่องมือคำนวณอินทิกรัลจำกัดเขตพหุนาม",
+    "EN": "Definite Integral of Polynomial Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาอินทิกรัลแบบจำกัดเขต (Definite Integral) ของฟังก์ชันพหุนามในช่วง [a, b]",
+    "EN": "Calculate the definite integral of a polynomial function over the interval [a, b]."
+  },
+  "category": "Math",
+  "icon": "FunctionSquare"
+}

@@ -1,0 +1,1334 @@
+{
+  "1": {
+    "conversationId": "e7eb3e05-bd1f-403e-ada7-bd224fd9e726",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 1. Your task is to:\n1. Create the React component file at: `C:/Users/zazad/.gemini/antigravity/scratch/kamnuan-com/components/calcs/MathScienceCalcs.tsx`.\n2. Write 20 named calculator components inside this file:\n   - `ContinuousCompoundingCalculator` (ID: `continuous-compounding`, Slug: `คำนวณดอกเบี้ยทบต้นต่อเนื่อง`)\n   - `PermutationCombinationCalculator` (ID: `permutation-combination`, Slug: `คำนวณ-permutation-combination`)\n   - `BayesTheoremCalculator` (ID: `bayes-theorem`, Slug: `คำนวณความน่าจะเป็น-bayes`)\n   - `StandardDeviationCalculator` (ID: `standard-deviation`, Slug: `คำนวณ-standard-deviation`)\n   - `RegressionLineCalculator` (ID: `regression-line`, Slug: `คำนวณ-regression-line`)\n   - `ChiSquareCalculator` (ID: `chi-square`, Slug: `คำนวณ-chi-square`)\n   - `TTestCalculator` (ID: `t-test`, Slug: `คำนวณ-t-test`)\n   - `SampleSizeCalculator` (ID: `sample-size`, Slug: `คำนวณขนาดกลุ่มตัวอย่าง`)\n   - `ConfidenceIntervalCalculator` (ID: `confidence-interval`, Slug: `คำนวณ-confidence-interval`)\n   - `ForceConverter` (ID: `force-converter`, Slug: `แปลงหน่วยแรง`)\n   - `PressureConverter` (ID: `pressure-converter`, Slug: `แปลงหน่วยความดัน`)\n   - `EnergyConverterNew` (ID: `energy-converter-new`, Slug: `แปลงหน่วยพลังงาน-j-kwh`)\n   - `PowerConverter` (ID: `power-converter`, Slug: `แปลงหน่วยกำลัง`)\n   - `DensityConverter` (ID: `density-converter`, Slug: `คำนวณความหนาแน่น`)\n   - `ProjectileMotionCalculator` (ID: `projectile-motion`, Slug: `คำนวณ-projectile-motion`)\n   - `OhmsLawCalculator` (ID: `ohms-law`, Slug: `คำนวณกฎของโอห์ม`)\n   - `CapacitorChargeCalculator` (ID: `capacitor-charge`, Slug: `คำนวณ-capacitor-charge`)\n   - `WaveCalculator` (ID: `wave-calculator`, Slug: `คำนวณความยาวคลื่น`)\n   - `PHBufferCalculator` (ID: `ph-buffer`, Slug: `คำนวณ-ph-buffer`)\n   - `EquilibriumConstantCalculator` (ID: `equilibrium-constant`, Slug: `คำนวณสมดุลเคมี`)\n\nEach calculator component must import shared elements from `./shared` and contain a detailed Thai SEO FAQ section using `<SEOFAQ>` and `<FAQItem>` with at least 400 words (1200+ characters) in total.\n3. Write 20 metadata JSON files under: `C:/Users/zazad/.gemini/antigravity/scratch/kamnuan-com/lib/data/` (e.g. `continuous-compounding.json`, etc.) with correct schema.\n\nVerify your components compile correctly and write everything to the exact absolute paths specified.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T09:37:57+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "2": {
+    "conversationId": "b7817df4-ec3a-4111-a34e-d71814047ee4",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 2. Your task is to:\n1. Create the React component file at: `C:/Users/zazad/.gemini/antigravity/scratch/kamnuan-com/components/calcs/LocalUnitCalcs.tsx`.\n2. Write 15 named calculator components inside this file:\n   - `ThaiCookingUnitsCalculator` (ID: `thai-cooking-units`, Slug: `แปลงหน่วยอาหารไทย`)\n   - `ThaiLandUnitsCalculator` (ID: `thai-land-units`, Slug: `แปลงหน่วยที่ดินไทย`)\n   - `AgriAreaConverter` (ID: `agri-area-converter`, Slug: `แปลงหน่วยเนื้อที่เกษตร`)\n   - `ThaiGoldUnitsCalculator` (ID: `thai-gold-units`, Slug: `แปลงหน่วยทองคำไทย`)\n   - `RiceWeightConverter` (ID: `rice-weight-converter`, Slug: `แปลงหน่วยน้ำหนักข้าวสาร`)\n   - `PalmOilConverter` (ID: `palm-oil-converter`, Slug: `แปลงน้ำหนักน้ำมันปาล์ม`)\n   - `DrugDosageConverter` (ID: `drug-dosage-converter`, Slug: `แปลงหน่วยยา-mg-mcg`)\n   - `WorkTimeConverter` (ID: `work-time-converter`, Slug: `แปลงเวลาทำงาน`)\n   - `FabricLengthConverter` (ID: `fabric-length-converter`, Slug: `แปลงหน่วยผ้า-หลา-เมตร`)\n   - `YarnCountConverter` (ID: `yarn-count-converter`, Slug: `แปลงหน่วยเส้นด้าย`)\n   - `FuelVolumeConverter` (ID: `fuel-volume-converter`, Slug: `แปลงหน่วยน้ำมันเชื้อเพลิง`)\n   - `PaperSpecsConverter` (ID: `paper-specs-converter`, Slug: `แปลงขนาดกระดาษ`)\n   - `WineVolumeConverter` (ID: `wine-volume-converter`, Slug: `แปลงปริมาตรไวน์`)\n   - `BeverageUnitConverter` (ID: `beverage-unit-converter`, Slug: `แปลงหน่วยเครื่องดื่ม-ออนซ์`)\n   - `HardnessScaleConverter` (ID: `hardness-scale-converter`, Slug: `แปลงหน่วยความแข็งโลหะ`)\n\nEach calculator component must import shared elements from `./shared` and contain a detailed Thai SEO FAQ section using `<SEOFAQ>` and `<FAQItem>` with at least 400 words (1200+ characters) in total.\n3. Write 15 metadata JSON files under: `C:/Users/zazad/.gemini/antigravity/scratch/kamnuan-com/lib/data/` (e.g. `thai-cooking-units.json`, etc.) with correct schema.\n\nVerify your components compile correctly and write everything to the exact absolute paths specified.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T09:37:57+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "3": {
+    "conversationId": "809f1632-08c5-4f88-be9c-32872426dd3c",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 3. Your task is to:\n1. Create the React component file at: `C:/Users/zazad/.gemini/antigravity/scratch/kamnuan-com/components/calcs/FoodBeverageCalcs.tsx`.\n2. Write 15 named calculator components inside this file:\n   - `GuestFoodEstimator` (ID: `guest-food-estimator`, Slug: `คำนวณปริมาณอาหารจัดเลี้ยง`)\n   - `CookingVsDelivery` (ID: `cooking-vs-delivery`, Slug: `เปรียบเทียบทำอาหารเองvsเดลิเวอรี่`)\n   - `CostPerPlate` (ID: `cost-per-plate`, Slug: `คำนวณต้นทุนอาหารต่อจาน`)\n   - `CoffeeShopStartupCost` (ID: `coffeeshop-startup-cost`, Slug: `คำนวณค่าใช้จ่ายเปิดร้านกาแฟ`)\n   - `CoffeeMenuPricing` (ID: `coffee-menu-pricing`, Slug: `คำนวณราคาขายเมนูกาแฟ`)\n   - `CoffeeBrewingRatio` (ID: `coffee-brewing-ratio`, Slug: `คำนวณสัดส่วนชงกาแฟ`)\n   - `WineAgingPotency` (ID: `wine-aging-potency`, Slug: `คำนวณระยะเวลาเก็บไวน์`)\n   - `CateringCostEstimator` (ID: `catering-cost-estimator`, Slug: `คำนวณค่าจัดเลี้ยง-catering`)\n   - `ServingSizeCalories` (ID: `serving-size-calories`, Slug: `คำนวณแคลอรี่ต่อหน่วยบริโภค`)\n   - `BakeryCostEstimator` (ID: `bakery-cost-estimator`, Slug: `คำนวณต้นทุนเบเกอรี่`)\n   - `FruitFermentationFormula` (ID: `fruit-fermentation-formula`, Slug: `คำนวณสูตรน้ำหมักผลไม้`)\n   - `EventIceEstimator` (ID: `event-ice-estimator`, Slug: `คำนวณปริมาณน้ำแข็งสำหรับงานเลี้ยง`)\n   - `DrinkingWaterCost` (ID: `drinking-water-cost`, Slug: `เปรียบเทียบค่าใช้จ่ายน้ำดื่ม`)\n   - `WeeklyRestaurantStock` (ID: `weekly-restaurant-stock`, Slug: `คำนวณปริมาณวัตถุดิบร้านอาหาร`)\n   - `MonthlySupplementCost` (ID: `monthly-supplement-cost`, Slug: `คำนวณค่าใช้จ่ายอาหารเสริม`)\n\nEach calculator component must import shared elements from `./shared` and contain a detailed Thai SEO FAQ section using `<SEOFAQ>` and `<FAQItem>` with at least 400 words (1200+ characters) in total.\n3. Write 15 metadata JSON files under: `C:/Users/zazad/.gemini/antigravity/scratch/kamnuan-com/lib/data/` (e.g. `guest-food-estimator.json`, etc.) with correct schema.\n\nVerify your components compile correctly and write everything to the exact absolute paths specified.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T09:37:57+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "4": {
+    "conversationId": "c8c3b495-3851-4049-9c96-cf84f9f789d8",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 4.\nCreate the following 10 calculators:\n1. International Shipping Cost (EXW/FOB/CIF)\n2. FX Forward Rate Risk\n3. Minimum Wage Comparison by Province\n4. Employee OT Calculation\n5. Severance Pay Calculation\n6. Employer Social Security Cost\n7. Advertising Budget Allocation\n8. Customer Payback Period (CAC Payback)\n9. Warehouse Rent vs Buy (Long term)\n10. EBITDA\n\nFor EACH tool:\n1. Create a separate React component file: `scratch/calcs_batch_4/{english-id}.tsx`. Inside it, write the React code (form, logic, UI using Tailwind/Lucide) and the 400+ words SEO Thai article below the calculator UI.\n2. Create a separate JSON file: `scratch/calcs_batch_4/{english-id}.json` containing the metadata object for that tool (id, slug, name, desc, category, icon). Use category \"Business\" or \"Finance\".\n\nDo not write them all at once. Work on them one by one. When all 10 tools (.tsx and .json) are created, reply to me that you are done.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T19:03:31+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "5": {
+    "conversationId": "a23312f8-16cf-478e-ab1a-ea0a7c000be8",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 5.\nCreate the following 10 calculators:\n1. Acceptable CPC (based on Conv. Rate)\n2. ROAS (Return on Ad Spend)\n3. SaaS MRR/ARR\n4. Gross Margin per SKU\n5. Return Rate Impact (Cost of Returns)\n6. Franchise Fee / Total Franchise Cost\n7. CAGR (Compound Annual Growth Rate)\n8. Net Promoter Score (NPS) to Business Value\n9. Real Estate Broker Fee\n10. Factory Electricity Bill (TOU vs Flat Rate)\n\nFor EACH tool:\n1. Create a separate React component file: `scratch/calcs_batch_5/{english-id}.tsx`. Inside it, write the React code (form, logic, UI using Tailwind/Lucide) and the 400+ words SEO Thai article below the calculator UI.\n2. Create a separate JSON file: `scratch/calcs_batch_5/{english-id}.json` containing the metadata object for that tool (id, slug, name, desc, category, icon). Use category \"Business\" or \"Finance\".\n\nDo not write them all at once. Work on them one by one. When all 10 tools (.tsx and .json) are created, reply to me that you are done.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T19:03:31+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "6": {
+    "conversationId": "f2218712-3b6c-4150-9b47-430c47adec1d",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 6. Your task is to:\n1. Create the React component file at: `C:/Users/zazad/.gemini/antigravity/scratch/kamnuan-com/components/calcs/DiyHandymanCalcs.tsx`.\n2. Write 10 named calculator components inside this file:\n   - `WireGaugeSizing` (ID: `wire-gauge-sizing`, Slug: `คำนวณขนาดสายไฟตามกระแส`)\n   - `FuseBreakerSizing` (ID: `fuse-breaker-sizing`, Slug: `คำนวณขนาดฟิวส์และเบรกเกอร์`)\n   - `LpgPipeSizing` (ID: `lpg-pipe-sizing`, Slug: `คำนวณขนาดท่อแก๊ส-lpg`)\n   - `DiyVsShopCarRepair` (ID: `diy-vs-shop-car-repair`, Slug: `เปรียบเทียบซ่อมรถเองvsอู่`)\n   - `CarPaintingCost` (ID: `car-painting-cost`, Slug: `คำนวณราคาพ่นสีรถยนต์`)\n   - `HomeAdditionCost` (ID: `home-addition-cost`, Slug: `คำนวณค่าต่อเติมต่อยอดบ้าน`)\n   - `WaterFilterSizing` (ID: `water-filter-sizing`, Slug: `คำนวณขนาดเครื่องกรองน้ำ`)\n   - `GasCylinderDuration` (ID: `gas-cylinder-duration`, Slug: `คำนวณระยะเวลาใช้ถังแก๊ส`)\n   - `AcRepairCost` (ID: `ac-repair-cost`, Slug: `คำนวณค่าบริการซ่อมแอร์`)\n   - `AntennaLengthFrequency` (ID: `antenna-length-frequency`, Slug: `คำนวณขนาดเสาอากาศ`)\n\nEach calculator component must import shared elements from `./shared` and contain a detailed Thai SEO FAQ section using `<SEOFAQ>` and `<FAQItem>` with at least 400 words (1200+ characters) in total.\n3. Write 10 metadata JSON files under: `C:/Users/zazad/.gemini/antigravity/scratch/kamnuan-com/lib/data/` (e.g. `wire-gauge-sizing.json`, etc.) with correct schema.\n\nVerify your components compile correctly and write everything to the exact absolute paths specified.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T09:37:57+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "7": {
+    "conversationId": "caed5700-8a4d-40d8-b92d-40fe6ad60cd0",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 7. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_7`\n\nCreate the following 10 calculators:\n1. ต้นทุน/กำไรปลูกข้าวโพด (Corn Farming Profit/Cost)\n2. ต้นทุน/กำไรปลูกมันสำปะหลัง (Cassava Farming Profit/Cost)\n3. ต้นทุน/กำไรปลูกอ้อย (Sugarcane Farming Profit/Cost)\n4. ต้นทุน/กำไรปลูกยางพารา (Rubber Tree Farming Profit/Cost)\n5. ต้นทุน/กำไรปลูกปาล์มน้ำมัน (Oil Palm Farming Profit/Cost)\n6. ต้นทุน/กำไรปลูกมะพร้าว (Coconut Farming Profit/Cost)\n7. ต้นทุน/กำไรปลูกกล้วย (Banana Farming Profit/Cost)\n8. ต้นทุน/กำไรปลูกมะม่วง (Mango Farming Profit/Cost)\n9. ต้นทุน/กำไรฟาร์มกุ้งขาว (White Shrimp Farm Profit/Cost)\n10. ต้นทุน/กำไรฟาร์มไก่เนื้อ (Broiler Chicken Farm Profit/Cost)\n\nFollow all rules in your system prompt. Use category \"Agriculture\".\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T19:40:15+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "8": {
+    "conversationId": "77e1e525-19f8-46f4-b9b8-72be1e95da5f",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 8. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_8`\n\nCreate the following 10 calculators:\n1. ต้นทุน/กำไรฟาร์มไก่ไข่ (Layer Chicken Farm Profit/Cost)\n2. ต้นทุน/กำไรฟาร์มหมู (Pig Farm Profit/Cost)\n3. ต้นทุน/กำไรฟาร์มโคเนื้อ (Beef Cattle Farm Profit/Cost)\n4. คำนวณปริมาณเมล็ดพันธุ์ต่อไร่ (Seeds per Rai Calculator)\n5. คำนวณสารเคมีเกษตรต่อถัง — อัตราผสม (Agri-Chemical Mix Ratio)\n6. ระบบน้ำหยด — ออกแบบและค่าใช้จ่าย (Drip Irrigation Cost)\n7. คำนวณพื้นที่เกษตรจาก GPS Coordinates (Farm Area from GPS)\n8. ต้นทุนรถไถเช่า vs ซื้อ — คุ้มกี่ไร่ (Tractor Rent vs Buy)\n9. คำนวณค่าจ้างแรงงานเกษตรต่อไร่ (Farm Labor Cost per Rai)\n10. ปริมาณผลผลิตที่ต้องขายเพื่อคืนทุน (Farm Break-even Yield)\n\nFollow all rules in your system prompt. Use category \"Agriculture\".\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T19:40:15+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "9": {
+    "conversationId": "02e9d708-8052-46b5-b0f8-d81344829198",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 9. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_9`\n\nCreate the following 10 calculators:\n1. อัตราการงอกของเมล็ดพันธุ์ (Germination Rate)\n2. คำนวณน้ำหนักผลผลิตสดเป็นแห้ง (Fresh to Dry Weight Converter)\n3. ระยะเวลาเก็บเกี่ยว (Harvest Time from Planting)\n4. ค่าเช่าที่ดินเกษตร — เทียบกำไรที่ได้ (Farm Land Rent ROI)\n5. คำนวณการใช้ไฟฟ้าโรงสี/โรงเก็บ (Mill/Storage Electricity)\n6. Carbon Footprint การเดินทาง (Travel Carbon Footprint)\n7. Carbon Footprint อาหาร (Food Carbon Footprint Meat vs Veg)\n8. ปริมาณขยะรีไซเคิลที่ลดได้ต่อปี (Recycled Waste Impact)\n9. ค่าน้ำที่ประหยัดได้จากการเปลี่ยนพฤติกรรม (Water Saving Impact)\n10. คำนวณ Water Footprint ของสินค้า (Product Water Footprint)\n\nFollow all rules in your system prompt. For 1-5 use category \"Agriculture\", for 6-10 use \"Environment\".\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T19:40:15+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "10": {
+    "conversationId": "528f70f1-7034-4f1d-9b19-19c1ebff4a7d",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 10. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_10`\n\nCreate the following 10 calculators:\n1. พลังงานที่ประหยัดได้จากเปลี่ยน LED (LED Savings)\n2. ระยะเวลาคืนทุนแผงโซลาร์ (Solar Payback Period)\n3. ปริมาณ CO₂ ที่ต้นไม้ดูดซับ (Tree CO2 Offset Calculator)\n4. ค่าไฟจากพลังงานทดแทน vs ปกติ (Renewable vs Grid Electricity)\n5. Ecological Footprint ส่วนตัว (Personal Ecological Footprint)\n6. ปริมาณน้ำในขยะอิเล็กทรอนิกส์ (E-waste Water Footprint)\n7. คำนวณ Green Building Score (Green Building Score LEED)\n8. ค่าใช้จ่ายรถ EV — ต้นทุนชาร์จต่อ 100 กม. (EV Charging Cost per 100km)\n9. ค่าใช้จ่ายติดตั้งสถานีชาร์จ EV (EV Charger Installation Cost)\n10. ปริมาณมีเทนจากฟาร์มปศุสัตว์ (Livestock Methane Emissions)\n\nFollow all rules in your system prompt. Use category \"Environment\".\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T19:40:15+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "11": {
+    "conversationId": "41e8f76d-ad5a-4272-890c-e033f34e50ea",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 11. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_11`\n\nCreate the following 10 calculators:\n1. ROI โฆษณา Facebook Ads (Facebook Ads ROI/CPA)\n2. ROI โฆษณา Google Ads (Google Ads ROI/ROAS)\n3. คำนวณ LTV:CAC Ratio (LTV to CAC Ratio)\n4. ค่าใช้จ่าย Cloud Storage (Cloud Storage Cost AWS/GCP/Azure)\n5. คำนวณ CDN Cost (CDN Cost Calculator)\n6. ค่าใช้จ่าย VPS/Dedicated Server (VPS vs Dedicated Cost)\n7. คำนวณ Database Query Cost (Database Cost RDS/DynamoDB)\n8. ค่าใช้จ่าย SMS/Email Marketing (SMS & Email Marketing Cost)\n9. คำนวณ App Store Revenue (App Store Revenue Calculator)\n10. ค่าใช้จ่ายพัฒนาแอป (App Dev Cost iOS/Android/Web)\n\nFollow all rules in your system prompt. Use category \"Technology\".\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T19:40:15+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "12": {
+    "conversationId": "e30f4b55-cbd7-4877-94b6-6287e0393d72",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 12. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_12`\n\nCreate the following 10 calculators:\n1. คำนวณ SEO Value (SEO Value Traffic x CPC)\n2. Email Open Rate → Revenue Calculator (Email Revenue Calculator)\n3. ค่าใช้จ่าย SSL Certificate (SSL Certificate Cost)\n4. คำนวณ DMARC/Email Deliverability Score (Email Deliverability Score)\n5. ค่าใช้จ่าย Domain + Hosting ต่อปี (Domain and Hosting Cost)\n6. คำนวณ PWA vs Native App (PWA vs Native App Cost)\n7. Conversion Rate Optimization (CRO Revenue Impact)\n8. ค่าใช้จ่าย Cybersecurity (SME Cybersecurity Cost)\n9. คำนวณ Technical Debt (Technical Debt Cost)\n10. ค่าใช้จ่าย SaaS Stack (SaaS Stack Total Cost)\n\nFollow all rules in your system prompt. Use category \"Technology\".\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T19:40:31+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "13": {
+    "conversationId": "351a4dd5-7cba-47a8-8b8f-9cebcb3ace3d",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 13. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_13`\n\nCreate the following 10 calculators:\n1. ค่าใช้จ่ายซื้อบ้านมือหนึ่ง (New House Purchase Cost)\n2. ค่าใช้จ่ายซื้อคอนโด (Condo Purchase Cost)\n3. ค่าเช่าคอนโด — เทียบกำไรถ้าซื้อปล่อยเช่า (Condo Rent vs Buy to Let ROI)\n4. Rental Yield (Rental Yield Calculator)\n5. ค่าใช้จ่ายย้ายบ้าน (Moving House Cost)\n6. ค่าส่วนกลางคอนโด (Condo Maintenance Fee Total)\n7. ค่าภาษีที่ดินและสิ่งปลูกสร้าง (Property Tax Calculator)\n8. ค่าใช้จ่ายทำ Kitchen Set Built-in (Built-in Kitchen Cost)\n9. ค่าใช้จ่ายเปลี่ยนเฟอร์นิเจอร์ทั้งบ้าน (Full House Furniture Cost)\n10. ค่าไฟแอร์ — กี่ BTU กี่ชั่วโมง กี่บาท (AC Electricity Cost)\n\nFollow all rules in your system prompt. For 1-9 use category \"Family\", for 10 use \"Utility\".\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T19:40:31+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "14": {
+    "conversationId": "7228dd42-8ee7-44b1-a5bf-61e9a4d3dd3d",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 14. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_14`\n\nCreate the following 10 calculators:\n1. ค่าไฟเครื่องใช้ไฟฟ้าแต่ละชนิด (Appliance Electricity Cost)\n2. ค่าน้ำอุปโภคบริโภค (Household Water Usage Cost)\n3. ค่าอินเทอร์เน็ตบ้าน (Home Internet Cost Comparison)\n4. ค่าใช้จ่ายรักษาความปลอดภัย (Home Security Cost)\n5. ค่าใช้จ่ายสระว่ายน้ำ (Pool Maintenance Cost)\n6. ค่าใช้จ่ายสวน (Garden Maintenance Cost)\n7. ค่าทาสีบ้านใหม่ (House Painting Cost)\n8. ค่าเปลี่ยนหลังคา (Roof Replacement Cost)\n9. คำนวณขนาดเครื่องปรับอากาศ (AC BTU Size Calculator)\n10. ค่าใช้จ่ายติดตั้งโซลาร์บ้าน (Home Solar Installation Cost)\n\nFollow all rules in your system prompt. For 1, 2, 9 use category \"Utility\". For 7, 8, 10 use category \"Construction\". For the rest use \"Family\".\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T19:40:31+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "15": {
+    "conversationId": "631ddf83-d72c-4937-b690-710bb8524a8d",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 15. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_15`\n\nCreate the following 10 calculators:\n1. ต้นทุนความเป็นเจ้าของรถ TCO (Total Cost of Ownership - Car)\n2. เปรียบเทียบรถยนต์ (Car Comparison - Annual Cost)\n3. คำนวณค่าเสื่อมราคารถ (Car Depreciation Calculator)\n4. คำนวณค่าประกันรถ (Car Insurance Cost)\n5. ค่าบำรุงรักษารถ (Car Maintenance Cost)\n6. คำนวณ ROI รถมอเตอร์ไซค์ Grab/Lineman (Rider ROI Calculator)\n7. คำนวณต้นทุนรถบรรทุก (Truck Operating Cost)\n8. ค่าใช้จ่ายรถ EV ต่อกม. (EV Cost per KM vs ICE)\n9. คำนวณจุดคุ้มทุนรถ EV vs รถน้ำมัน (EV vs ICE Break-even)\n10. ค่าผ่อนรถมอเตอร์ไซค์ (Motorcycle Loan Calculator)\n\nFollow all rules in your system prompt. Use category \"Finance\".\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T19:40:31+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "16": {
+    "conversationId": "1e042a87-703c-4fee-8074-f4b1cbbecae5",
+    "tools": [],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 16. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_16`\n\nCreate the following 5 calculators:\n1. ค่าใช้จ่าย Car Pool (Car Pool Savings Calculator)\n2. ค่าใช้จ่ายที่จอดรถรายเดือน (Monthly Parking Cost)\n3. คำนวณระยะทางไป-กลับทำงานต่อปี (Annual Commute Cost)\n4. ค่าทางด่วน/ค่าผ่านทางต่อเดือน (Monthly Toll Fee Calculator)\n5. ค่าใช้จ่าย Uber/Grab vs รถส่วนตัว (Ride Hailing vs Own Car Cost)\n\nFollow all rules in your system prompt. Use category \"Finance\" or \"Travel\".\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T19:40:31+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "17": {
+    "conversationId": "91d3ff36-6970-4a14-837a-661cb06346f4",
+    "tools": [
+      {
+        "slug": "event-countdown",
+        "nameTH": "นับถอยหลัง Countdown วันสำคัญ"
+      },
+      {
+        "slug": "retirement-countdown",
+        "nameTH": "คำนวณวันเกษียณ"
+      },
+      {
+        "slug": "sunrise-sunset-calculator",
+        "nameTH": "เวลาพระอาทิตย์ขึ้น/ตก"
+      },
+      {
+        "slug": "thai-lunar-phase",
+        "nameTH": "ข้างขึ้นข้างแรมไทย"
+      },
+      {
+        "slug": "thai-public-holidays",
+        "nameTH": "วันหยุดนักขัตฤกษ์ปีนี้เหลือกี่วัน"
+      },
+      {
+        "slug": "working-days-calculator",
+        "nameTH": "จำนวนวันทำงานในเดือน/ปี"
+      },
+      {
+        "slug": "prorate-salary",
+        "nameTH": "เงินเดือนแบบ Prorate"
+      },
+      {
+        "slug": "multi-rate-ot",
+        "nameTH": "ค่าล่วงเวลา OT หลายอัตรา"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 17. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_17`\n\nCreate the following 10 calculators:\n1. event-countdown — นับถอยหลัง Countdown วันสำคัญ\n2. retirement-countdown — คำนวณวันเกษียณ\n3. sunrise-sunset-calculator — เวลาพระอาทิตย์ขึ้น/ตก\n4. thai-lunar-phase — ข้างขึ้นข้างแรมไทย\n5. thai-public-holidays — วันหยุดนักขัตฤกษ์ปีนี้เหลือกี่วัน\n6. working-days-calculator — จำนวนวันทำงานในเดือน/ปี\n7. prorate-salary — เงินเดือนแบบ Prorate\n8. multi-rate-ot — ค่าล่วงเวลา OT หลายอัตรา\n\nNOTE: The files exact-age-calculator and anniversary-countdown ALREADY EXIST in the batch 17 folder. Do NOT create them again.\n\nFollow all rules in your system prompt. Use category \"Misc\" for 1-5 and \"Business\" for 6-8.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T20:24:59+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "18": {
+    "conversationId": "4c14979d-a76c-4ec5-bd7b-a545fa239327",
+    "tools": [
+      {
+        "slug": "remaining-annual-leave",
+        "nameTH": "คำนวณวันลาพักร้อนเหลือกี่วัน"
+      },
+      {
+        "slug": "shift-work-staffing",
+        "nameTH": "คำนวณเวรยามจำนวนคนต่อกะ"
+      },
+      {
+        "slug": "social-media-image-size",
+        "nameTH": "ขนาดรูปภาพสำหรับ Social Media"
+      },
+      {
+        "slug": "font-size-reading-distance",
+        "nameTH": "Font Size ระยะการอ่านที่เหมาะสม"
+      },
+      {
+        "slug": "print-cost-per-page",
+        "nameTH": "ต้นทุนการพิมพ์ต่อแผ่น"
+      },
+      {
+        "slug": "flesch-kincaid-reading-level",
+        "nameTH": "Reading Level"
+      },
+      {
+        "slug": "wpm-productivity",
+        "nameTH": "ความเร็วพิมพ์ WPM ผลิตภาพ"
+      },
+      {
+        "slug": "volumetric-weight",
+        "nameTH": "ขนาดกล่องพัสดุ ปริมาตร+น้ำหนักปริมาตร"
+      },
+      {
+        "slug": "thai-post-ems-cost",
+        "nameTH": "ค่าส่งพัสดุ EMS ไทยไปรษณีย์"
+      },
+      {
+        "slug": "international-shipping-cost",
+        "nameTH": "ค่าส่งสินค้าต่างประเทศ DHL/FedEx/EMS"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 18. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_18`\n\nCreate the following 10 calculators:\n1. remaining-annual-leave — คำนวณวันลาพักร้อนเหลือกี่วัน\n2. shift-work-staffing — คำนวณเวรยามจำนวนคนต่อกะ\n3. social-media-image-size — ขนาดรูปภาพสำหรับ Social Media\n4. font-size-reading-distance — Font Size ระยะการอ่านที่เหมาะสม\n5. print-cost-per-page — ต้นทุนการพิมพ์ต่อแผ่น\n6. flesch-kincaid-reading-level — Reading Level\n7. wpm-productivity — ความเร็วพิมพ์ WPM ผลิตภาพ\n8. volumetric-weight — ขนาดกล่องพัสดุ ปริมาตร+น้ำหนักปริมาตร\n9. thai-post-ems-cost — ค่าส่งพัสดุ EMS ไทยไปรษณีย์\n10. international-shipping-cost — ค่าส่งสินค้าต่างประเทศ DHL/FedEx/EMS\n\nFollow all rules in your system prompt. Use category \"Business\" for 1-2, 8-10. Use category \"Utility\" for 3-7.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T20:24:59+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "19": {
+    "conversationId": "1dc4a982-db46-4cda-a0d0-5578297d1586",
+    "tools": [
+      {
+        "slug": "import-customs-duty",
+        "nameTH": "คำนวณค่าศุลกากรนำเข้าสินค้า"
+      },
+      {
+        "slug": "hs-code-import-tax",
+        "nameTH": "HS Code ภาษีนำเข้า"
+      },
+      {
+        "slug": "customs-broker-fee",
+        "nameTH": "ค่าธรรมเนียม Customs Broker"
+      },
+      {
+        "slug": "china-import-lead-time",
+        "nameTH": "Lead Time สินค้าจีน Alibaba/1688"
+      },
+      {
+        "slug": "moq-vs-price",
+        "nameTH": "MOQ vs ราคา ซื้อกี่ชิ้นถึงคุ้ม"
+      },
+      {
+        "slug": "container-weight-capacity",
+        "nameTH": "น้ำหนักสินค้าต่อตู้ 20/40 ฟุต"
+      },
+      {
+        "slug": "cbm-calculator",
+        "nameTH": "CBM ลูกบาศก์เมตร"
+      },
+      {
+        "slug": "warehousing-cost",
+        "nameTH": "ค่าเก็บในคลังสินค้า"
+      },
+      {
+        "slug": "safety-stock-calculator",
+        "nameTH": "Safety Stock"
+      },
+      {
+        "slug": "reorder-point-calculator",
+        "nameTH": "Reorder Point"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 19. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_19`\n\nCreate the following 10 calculators:\n1. import-customs-duty — คำนวณค่าศุลกากรนำเข้าสินค้า\n2. hs-code-import-tax — HS Code ภาษีนำเข้า\n3. customs-broker-fee — ค่าธรรมเนียม Customs Broker\n4. china-import-lead-time — Lead Time สินค้าจีน Alibaba/1688\n5. moq-vs-price — MOQ vs ราคา ซื้อกี่ชิ้นถึงคุ้ม\n6. container-weight-capacity — น้ำหนักสินค้าต่อตู้ 20/40 ฟุต\n7. cbm-calculator — CBM ลูกบาศก์เมตร\n8. warehousing-cost — ค่าเก็บในคลังสินค้า\n9. safety-stock-calculator — Safety Stock\n10. reorder-point-calculator — Reorder Point\n\nFollow all rules in your system prompt. Use category \"Business\" for all.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T20:25:32+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "20": {
+    "conversationId": "891ecfd5-3a3a-4950-996b-07043f2b4b24",
+    "tools": [
+      {
+        "slug": "tou-electricity-cost",
+        "nameTH": "ค่าไฟฟ้า TOU Peak/Off-Peak"
+      },
+      {
+        "slug": "solar-battery-sizing",
+        "nameTH": "ขนาดแบตเตอรี่ Solar kWh"
+      },
+      {
+        "slug": "solar-inverter-sizing",
+        "nameTH": "ขนาด Inverter Solar กำลังวัตต์"
+      },
+      {
+        "slug": "on-grid-solar-payback",
+        "nameTH": "Payback แผงโซลาร์ออนกริด"
+      },
+      {
+        "slug": "net-metering-revenue",
+        "nameTH": "Net Metering ขายไฟคืนได้เดือนละเท่าไหร่"
+      },
+      {
+        "slug": "carpool-savings",
+        "nameTH": "Carpool ประหยัดต่อคน"
+      },
+      {
+        "slug": "bts-mrt-vs-car",
+        "nameTH": "BTS/MRT รายเดือน vs รถส่วนตัว"
+      },
+      {
+        "slug": "food-delivery-vs-cooking",
+        "nameTH": "LINE MAN vs ทำเอง"
+      },
+      {
+        "slug": "lifetime-healthcare-cost",
+        "nameTH": "ต้นทุนดูแลสุขภาพตลอดชีวิต"
+      },
+      {
+        "slug": "inflation-impact-savings",
+        "nameTH": "ผลกระทบเงินเฟ้อต่อเงินออม"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 20. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_20`\n\nCreate the following 10 calculators:\n1. tou-electricity-cost — ค่าไฟฟ้า TOU Peak/Off-Peak\n2. solar-battery-sizing — ขนาดแบตเตอรี่ Solar kWh\n3. solar-inverter-sizing — ขนาด Inverter Solar กำลังวัตต์\n4. on-grid-solar-payback — Payback แผงโซลาร์ออนกริด\n5. net-metering-revenue — Net Metering ขายไฟคืนได้เดือนละเท่าไหร่\n6. carpool-savings — Carpool ประหยัดต่อคน\n7. bts-mrt-vs-car — BTS/MRT รายเดือน vs รถส่วนตัว\n8. food-delivery-vs-cooking — LINE MAN vs ทำเอง\n9. lifetime-healthcare-cost — ต้นทุนดูแลสุขภาพตลอดชีวิต\n10. inflation-impact-savings — ผลกระทบเงินเฟ้อต่อเงินออม\n\nFollow all rules in your system prompt. Use category \"Utility\" for 1-5, \"Family\" for 6-8, \"Finance\" for 9-10.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T20:25:32+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "21": {
+    "conversationId": "6fa2748c-349f-42e5-b4d8-7106c25c64c9",
+    "tools": [
+      {
+        "slug": "cost-of-living-comparison",
+        "nameTH": "ค่าครองชีพต่อเมือง กรุงเทพ vs ต่างจังหวัด"
+      },
+      {
+        "slug": "qaly-calculator",
+        "nameTH": "Quality-Adjusted Life Year"
+      },
+      {
+        "slug": "gnh-calculator",
+        "nameTH": "Gross National Happiness Proxy"
+      },
+      {
+        "slug": "work-life-balance-score",
+        "nameTH": "Work-Life Balance Score"
+      },
+      {
+        "slug": "digital-detox-time",
+        "nameTH": "Digital Detox / Screen Time"
+      },
+      {
+        "slug": "sleep-debt-calculator",
+        "nameTH": "ชั่วโมงนอนหนี้ Sleep Debt"
+      },
+      {
+        "slug": "habit-streak-calculator",
+        "nameTH": "Habit Streak กี่วันถึงจะติด"
+      },
+      {
+        "slug": "parkinsons-law-calculator",
+        "nameTH": "Parkinson's Law งานใช้เวลาเท่าเวลาที่มี"
+      },
+      {
+        "slug": "ten-thousand-hours",
+        "nameTH": "10,000 ชั่วโมง ชำนาญเมื่อไหร่"
+      },
+      {
+        "slug": "compound-learning-roi",
+        "nameTH": "Compound Learning ความรู้ที่เพิ่มทบต้น"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 21. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_21`\n\nCreate the following 10 calculators:\n1. cost-of-living-comparison — ค่าครองชีพต่อเมือง กรุงเทพ vs ต่างจังหวัด\n2. qaly-calculator — Quality-Adjusted Life Year\n3. gnh-calculator — Gross National Happiness Proxy\n4. work-life-balance-score — Work-Life Balance Score\n5. digital-detox-time — Digital Detox / Screen Time\n6. sleep-debt-calculator — ชั่วโมงนอนหนี้ Sleep Debt\n7. habit-streak-calculator — Habit Streak กี่วันถึงจะติด\n8. parkinsons-law-calculator — Parkinson's Law งานใช้เวลาเท่าเวลาที่มี\n9. ten-thousand-hours — 10,000 ชั่วโมง ชำนาญเมื่อไหร่\n10. compound-learning-roi — Compound Learning ความรู้ที่เพิ่มทบต้น\n\nFollow all rules in your system prompt. Use category \"Health\" for 2, 4, 5, 6. Use category \"Misc\" for the rest.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T20:26:01+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "22": {
+    "conversationId": "9c3ad30e-3883-4ff9-973d-5260b2de7e63",
+    "tools": [
+      {
+        "slug": "online-course-roi",
+        "nameTH": "ค่าใช้จ่ายเรียน Online Course ROI"
+      },
+      {
+        "slug": "metcalfe-network-value",
+        "nameTH": "Metcalfe's Law Network Value"
+      },
+      {
+        "slug": "viral-coefficient",
+        "nameTH": "Viral Coefficient แอปโตเร็วแค่ไหน"
+      },
+      {
+        "slug": "dunbar-number",
+        "nameTH": "Dunbar Number จัดการ Social Network"
+      },
+      {
+        "slug": "meeting-cost-calculator",
+        "nameTH": "ต้นทุนต่อชั่วโมงประชุม"
+      },
+      {
+        "slug": "meeting-roi",
+        "nameTH": "Meeting ROI ประชุมคุ้มไหม"
+      },
+      {
+        "slug": "email-response-time",
+        "nameTH": "Email Response Time ผลกระทบต่อ Productivity"
+      },
+      {
+        "slug": "deep-work-calculator",
+        "nameTH": "Deep Work Hours งานลึก vs งานตื้น"
+      },
+      {
+        "slug": "distraction-cost",
+        "nameTH": "ถูกขัดจังหวะเสียเวลาเท่าไหร่"
+      },
+      {
+        "slug": "task-batching",
+        "nameTH": "Task Batching ประหยัดเวลาได้เท่าไหร่"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 22. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_22`\n\nCreate the following 10 calculators:\n1. online-course-roi — ค่าใช้จ่ายเรียน Online Course ROI\n2. metcalfe-network-value — Metcalfe's Law Network Value\n3. viral-coefficient — Viral Coefficient แอปโตเร็วแค่ไหน\n4. dunbar-number — Dunbar Number จัดการ Social Network\n5. meeting-cost-calculator — ต้นทุนต่อชั่วโมงประชุม\n6. meeting-roi — Meeting ROI ประชุมคุ้มไหม\n7. email-response-time — Email Response Time ผลกระทบต่อ Productivity\n8. deep-work-calculator — Deep Work Hours งานลึก vs งานตื้น\n9. distraction-cost — ถูกขัดจังหวะเสียเวลาเท่าไหร่\n10. task-batching — Task Batching ประหยัดเวลาได้เท่าไหร่\n\nFollow all rules in your system prompt. Use category \"Technology\" for 2-4, \"Business\" for 5-6, \"Misc\" for the rest.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T20:26:01+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "23": {
+    "conversationId": "224beece-96c2-47e7-8a27-1c1beb1d020e",
+    "tools": [
+      {
+        "slug": "automation-roi",
+        "nameTH": "Automation ROI ลงทุนทำ Bot คืนทุนกี่เดือน"
+      },
+      {
+        "slug": "brooks-law-team-size",
+        "nameTH": "Brook's Law ขนาดทีมที่เหมาะสม"
+      },
+      {
+        "slug": "bus-factor",
+        "nameTH": "Bus Factor ทีมพึ่งพาคนเดียวมากไปไหม"
+      },
+      {
+        "slug": "sprint-velocity",
+        "nameTH": "Sprint Velocity Agile/Scrum"
+      },
+      {
+        "slug": "code-coverage-target",
+        "nameTH": "Code Coverage ที่ต้องการตามความเสี่ยง"
+      },
+      {
+        "slug": "mttr-calculator",
+        "nameTH": "MTTR Mean Time to Repair"
+      },
+      {
+        "slug": "mtbf-calculator",
+        "nameTH": "MTBF Mean Time Between Failures"
+      },
+      {
+        "slug": "sla-uptime-calculator",
+        "nameTH": "SLA Uptime 99.9% = ดาวน์ได้กี่นาทีต่อปี"
+      },
+      {
+        "slug": "rto-rpo-calculator",
+        "nameTH": "RTO/RPO Recovery Time/Point Objective"
+      },
+      {
+        "slug": "disaster-recovery-cost",
+        "nameTH": "Disaster Recovery Cost ค่าใช้จ่าย DR Site"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 23. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_23`\n\nCreate the following 10 calculators:\n1. automation-roi — Automation ROI ลงทุนทำ Bot คืนทุนกี่เดือน\n2. brooks-law-team-size — Brook's Law ขนาดทีมที่เหมาะสม\n3. bus-factor — Bus Factor ทีมพึ่งพาคนเดียวมากไปไหม\n4. sprint-velocity — Sprint Velocity Agile/Scrum\n5. code-coverage-target — Code Coverage ที่ต้องการตามความเสี่ยง\n6. mttr-calculator — MTTR Mean Time to Repair\n7. mtbf-calculator — MTBF Mean Time Between Failures\n8. sla-uptime-calculator — SLA Uptime 99.9% = ดาวน์ได้กี่นาทีต่อปี\n9. rto-rpo-calculator — RTO/RPO Recovery Time/Point Objective\n10. disaster-recovery-cost — Disaster Recovery Cost ค่าใช้จ่าย DR Site\n\nFollow all rules in your system prompt. Use category \"Technology\" for all.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T20:26:32+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "24": {
+    "conversationId": "6b8edd96-bcc1-4de1-8d9a-74d3acc2e0ac",
+    "tools": [
+      {
+        "slug": "noise-level-db",
+        "nameTH": "Noise Level dB ระดับเสียงสะสม"
+      },
+      {
+        "slug": "sound-insulation",
+        "nameTH": "Sound Insulation ฉนวนเสียงที่ต้องการ"
+      },
+      {
+        "slug": "lux-footcandle",
+        "nameTH": "Lux/Foot-candle ความสว่างที่เหมาะสม"
+      },
+      {
+        "slug": "ergonomic-score",
+        "nameTH": "Ergonomic Score โต๊ะ/เก้าอี้/จอ"
+      },
+      {
+        "slug": "standing-desk-time",
+        "nameTH": "Standing Desk Time ควรยืนกี่ชั่วโมง"
+      },
+      {
+        "slug": "blue-light-exposure",
+        "nameTH": "Blue Light Exposure จากหน้าจอต่อวัน"
+      },
+      {
+        "slug": "circadian-rhythm",
+        "nameTH": "Circadian Rhythm เวลาตื่น/นอนที่เหมาะสม"
+      },
+      {
+        "slug": "cognitive-load-score",
+        "nameTH": "Cognitive Load งานทางสมองต่อวัน"
+      },
+      {
+        "slug": "decision-fatigue",
+        "nameTH": "Decision Fatigue ตัดสินใจไปกี่ครั้งต่อวัน"
+      },
+      {
+        "slug": "willpower-depletion",
+        "nameTH": "Willpower Depletion ใช้ไปเท่าไหร่แล้ว"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 24. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_24`\n\nCreate the following 10 calculators:\n1. noise-level-db — Noise Level dB ระดับเสียงสะสม\n2. sound-insulation — Sound Insulation ฉนวนเสียงที่ต้องการ\n3. lux-footcandle — Lux/Foot-candle ความสว่างที่เหมาะสม\n4. ergonomic-score — Ergonomic Score โต๊ะ/เก้าอี้/จอ\n5. standing-desk-time — Standing Desk Time ควรยืนกี่ชั่วโมง\n6. blue-light-exposure — Blue Light Exposure จากหน้าจอต่อวัน\n7. circadian-rhythm — Circadian Rhythm เวลาตื่น/นอนที่เหมาะสม\n8. cognitive-load-score — Cognitive Load งานทางสมองต่อวัน\n9. decision-fatigue — Decision Fatigue ตัดสินใจไปกี่ครั้งต่อวัน\n10. willpower-depletion — Willpower Depletion ใช้ไปเท่าไหร่แล้ว\n\nFollow all rules in your system prompt. Use category \"Health\" for all.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T20:26:32+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "25": {
+    "conversationId": "180677f8-0c01-446e-a32f-4e1692bbc431",
+    "tools": [
+      {
+        "slug": "flow-state-frequency",
+        "nameTH": "Flow State Frequency เข้าถึง Flow กี่ครั้ง"
+      },
+      {
+        "slug": "skill-half-life",
+        "nameTH": "Skill Half-Life ความรู้ล้าสมัยใน X ปี"
+      },
+      {
+        "slug": "learning-rate",
+        "nameTH": "Learning Rate รู้เรื่องใหม่ได้เร็วแค่ไหน"
+      },
+      {
+        "slug": "memory-retention",
+        "nameTH": "Forgetting Curve Memory Retention"
+      },
+      {
+        "slug": "spaced-repetition",
+        "nameTH": "Spaced Repetition Interval"
+      },
+      {
+        "slug": "reading-comprehension",
+        "nameTH": "Reading Comprehension Score"
+      },
+      {
+        "slug": "note-taking-efficiency",
+        "nameTH": "Note-taking Efficiency เวลา vs ความจำ"
+      },
+      {
+        "slug": "creativity-score",
+        "nameTH": "Guilford Creativity Score"
+      },
+      {
+        "slug": "happiness-roi",
+        "nameTH": "Happiness ROI เงินลงทุนกับความสุข"
+      },
+      {
+        "slug": "time-affluence",
+        "nameTH": "Time Affluence ความรวยทางเวลา"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 25. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_25`\n\nCreate the following 10 calculators:\n1. flow-state-frequency — Flow State Frequency เข้าถึง Flow กี่ครั้ง\n2. skill-half-life — Skill Half-Life ความรู้ล้าสมัยใน X ปี\n3. learning-rate — Learning Rate รู้เรื่องใหม่ได้เร็วแค่ไหน\n4. memory-retention — Forgetting Curve Memory Retention\n5. spaced-repetition — Spaced Repetition Interval\n6. reading-comprehension — Reading Comprehension Score\n7. note-taking-efficiency — Note-taking Efficiency เวลา vs ความจำ\n8. creativity-score — Guilford Creativity Score\n9. happiness-roi — Happiness ROI เงินลงทุนกับความสุข\n10. time-affluence — Time Affluence ความรวยทางเวลา\n\nFollow all rules in your system prompt. Use category \"Misc\" for all.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T20:27:00+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "26": {
+    "conversationId": "d1bb8e59-763e-490d-9480-405ef221173d",
+    "tools": [
+      {
+        "slug": "relationship-investment",
+        "nameTH": "Relationship Time Investment เวลาให้คนสำคัญ"
+      },
+      {
+        "slug": "gratitude-impact",
+        "nameTH": "Gratitude Impact สุขภาพจิตจากการขอบคุณ"
+      },
+      {
+        "slug": "social-media-personal-roi",
+        "nameTH": "Social Media ROI เวลาที่ใช้ vs ประโยชน์ที่ได้"
+      },
+      {
+        "slug": "fomo-cost",
+        "nameTH": "FOMO Cost เสียอะไรจากการตามกระแส"
+      },
+      {
+        "slug": "minimalism-score",
+        "nameTH": "Minimalism Score สิ่งของที่ไม่จำเป็น"
+      },
+      {
+        "slug": "diet-environmental-impact",
+        "nameTH": "Environmental Impact ของ Diet"
+      },
+      {
+        "slug": "behavioral-life-expectancy",
+        "nameTH": "Life Expectancy ตามพฤติกรรมสุขภาพ"
+      },
+      {
+        "slug": "healthy-years-remaining",
+        "nameTH": "Healthy Years Remaining HALE"
+      },
+      {
+        "slug": "legacy-score",
+        "nameTH": "Personal Legacy Score สิ่งที่ทิ้งไว้ให้โลก"
+      },
+      {
+        "slug": "life-satisfaction-index",
+        "nameTH": "Life Satisfaction Index วัดความพึงพอใจชีวิต"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 26. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\calcs_batch_26`\n\nCreate the following 10 calculators:\n1. relationship-investment — Relationship Time Investment เวลาให้คนสำคัญ\n2. gratitude-impact — Gratitude Impact สุขภาพจิตจากการขอบคุณ\n3. social-media-personal-roi — Social Media ROI เวลาที่ใช้ vs ประโยชน์ที่ได้\n4. fomo-cost — FOMO Cost เสียอะไรจากการตามกระแส\n5. minimalism-score — Minimalism Score สิ่งของที่ไม่จำเป็น\n6. diet-environmental-impact — Environmental Impact ของ Diet\n7. behavioral-life-expectancy — Life Expectancy ตามพฤติกรรมสุขภาพ\n8. healthy-years-remaining — Healthy Years Remaining HALE\n9. legacy-score — Personal Legacy Score สิ่งที่ทิ้งไว้ให้โลก\n10. life-satisfaction-index — Life Satisfaction Index วัดความพึงพอใจชีวิต\n\nFollow all rules in your system prompt. Use category \"Environment\" for 6, \"Health\" for 7-8, \"Misc\" for the rest.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-03T20:27:00+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "27": {
+    "conversationId": "a3aa3e35-a1fa-43c8-8669-a16310aab41b",
+    "tools": [
+      {
+        "slug": "wht-3-percent",
+        "nameTH": "คำนวณภาษีหัก ณ ที่จ่าย 3% (ค่าบริการ) (Finance)"
+      },
+      {
+        "slug": "wht-5-percent",
+        "nameTH": "คำนวณภาษีหัก ณ ที่จ่าย 5% (ค่าเช่า) (Finance)"
+      },
+      {
+        "slug": "wht-1-percent",
+        "nameTH": "คำนวณภาษีหัก ณ ที่จ่าย 1% (ค่าขนส่ง) (Finance)"
+      },
+      {
+        "slug": "wht-2-percent",
+        "nameTH": "คำนวณภาษีหัก ณ ที่จ่าย 2% (ค่าโฆษณา) (Finance)"
+      },
+      {
+        "slug": "net-income-after-tax",
+        "nameTH": "คำนวณเงินได้สุทธิหลังหักค่าลดหย่อน (Finance)"
+      },
+      {
+        "slug": "tax-deduction-donation",
+        "nameTH": "สิทธิประโยชน์ภาษีบริจาคทั่วไป 1 เท่า / การศึกษา 2 เท่า (Finance)"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 27. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 6 calculators (tsx and json):\n1. wht-3-percent — คำนวณภาษีหัก ณ ที่จ่าย 3% (ค่าบริการ) (Finance)\n2. wht-5-percent — คำนวณภาษีหัก ณ ที่จ่าย 5% (ค่าเช่า) (Finance)\n3. wht-1-percent — คำนวณภาษีหัก ณ ที่จ่าย 1% (ค่าขนส่ง) (Finance)\n4. wht-2-percent — คำนวณภาษีหัก ณ ที่จ่าย 2% (ค่าโฆษณา) (Finance)\n5. net-income-after-tax — คำนวณเงินได้สุทธิหลังหักค่าลดหย่อน (Finance)\n6. tax-deduction-donation — สิทธิประโยชน์ภาษีบริจาคทั่วไป 1 เท่า / การศึกษา 2 เท่า (Finance)\nFollow all rules in your system prompt. Make them beautiful and robust, include 400+ words SEO article.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T17:37:28+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "28": {
+    "conversationId": "6121fa60-04ae-4998-8d93-d67c54ca520f",
+    "tools": [
+      {
+        "slug": "tax-deduction-insurance",
+        "nameTH": "สิทธิลดหย่อนภาษีประกันชีวิต/สุขภาพ (Finance)"
+      },
+      {
+        "slug": "tax-deduction-ssf",
+        "nameTH": "สิทธิลดหย่อนภาษีกองทุน SSF (Finance)"
+      },
+      {
+        "slug": "tax-deduction-rmf",
+        "nameTH": "สิทธิลดหย่อนภาษีกองทุน RMF (Finance)"
+      },
+      {
+        "slug": "tax-deduction-thaiesg",
+        "nameTH": "สิทธิลดหย่อนภาษีกองทุน ThaiESG (Finance)"
+      },
+      {
+        "slug": "social-security-m33-m39",
+        "nameTH": "คำนวณเงินสมทบประกันสังคม ม.33 และ ม.39 (Finance)"
+      },
+      {
+        "slug": "social-security-m40",
+        "nameTH": "คำนวณเงินสมทบประกันสังคม ม.40 (ทางเลือก 1-3) (Finance)"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 28. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 6 calculators (tsx and json):\n1. tax-deduction-insurance — สิทธิลดหย่อนภาษีประกันชีวิต/สุขภาพ (Finance)\n2. tax-deduction-ssf — สิทธิลดหย่อนภาษีกองทุน SSF (Finance)\n3. tax-deduction-rmf — สิทธิลดหย่อนภาษีกองทุน RMF (Finance)\n4. tax-deduction-thaiesg — สิทธิลดหย่อนภาษีกองทุน ThaiESG (Finance)\n5. social-security-m33-m39 — คำนวณเงินสมทบประกันสังคม ม.33 และ ม.39 (Finance)\n6. social-security-m40 — คำนวณเงินสมทบประกันสังคม ม.40 (ทางเลือก 1-3) (Finance)\nFollow all rules in your system prompt. Make them beautiful and robust, include 400+ words SEO article.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T17:37:28+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "29": {
+    "conversationId": "a6b3b217-5e7e-4ed1-954c-d505b2a5134c",
+    "tools": [
+      {
+        "slug": "social-security-pension",
+        "nameTH": "คำนวณเงินบำนาญชราภาพประกันสังคมรายเดือน (Finance)"
+      },
+      {
+        "slug": "social-security-lump-sum",
+        "nameTH": "คำนวณเงินบำเหน็จชราภาพประกันสังคมเงินก้อน (Finance)"
+      },
+      {
+        "slug": "gov-pension-gpf",
+        "nameTH": "คำนวณเงินบำนาญข้าราชการ (สูตร กบข.) (Finance)"
+      },
+      {
+        "slug": "gov-pension-old",
+        "nameTH": "คำนวณเงินบำนาญข้าราชการ (สูตรดั้งเดิม) (Finance)"
+      },
+      {
+        "slug": "nsf-savings-calculator",
+        "nameTH": "เงินสะสมกองทุนออมแห่งชาติ (กอช.) เมื่อครบ 60 ปี (Finance)"
+      },
+      {
+        "slug": "pvd-retirement-calculator",
+        "nameTH": "เงินสะสมกองทุนสำรองเลี้ยงชีพ (PVD) เมื่อเกษียณ (Finance)"
+      },
+      {
+        "slug": "severance-pay-calculator",
+        "nameTH": "เงินชดเชยถูกเลิกจ้างตามกฎหมายแรงงานไทย (Finance)"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 29. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 7 calculators (tsx and json):\n1. social-security-pension — คำนวณเงินบำนาญชราภาพประกันสังคมรายเดือน (Finance)\n2. social-security-lump-sum — คำนวณเงินบำเหน็จชราภาพประกันสังคมเงินก้อน (Finance)\n3. gov-pension-gpf — คำนวณเงินบำนาญข้าราชการ (สูตร กบข.) (Finance)\n4. gov-pension-old — คำนวณเงินบำนาญข้าราชการ (สูตรดั้งเดิม) (Finance)\n5. nsf-savings-calculator — เงินสะสมกองทุนออมแห่งชาติ (กอช.) เมื่อครบ 60 ปี (Finance)\n6. pvd-retirement-calculator — เงินสะสมกองทุนสำรองเลี้ยงชีพ (PVD) เมื่อเกษียณ (Finance)\n7. severance-pay-calculator — เงินชดเชยถูกเลิกจ้างตามกฎหมายแรงงานไทย (Finance)\nFollow all rules in your system prompt. Make them beautiful and robust, include 400+ words SEO article.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T17:37:28+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "30": {
+    "conversationId": "3b5ec689-268e-428f-803a-6190a8f26802",
+    "tools": [
+      {
+        "slug": "future-value-fv",
+        "nameTH": "คำนวณมูลค่าเงินในอนาคต (Future Value - FV) (Finance)"
+      },
+      {
+        "slug": "present-value-pv",
+        "nameTH": "คำนวณมูลค่าเงินปัจจุบัน (Present Value - PV) (Finance)"
+      },
+      {
+        "slug": "digital-savings-tier-rate",
+        "nameTH": "ดอกเบี้ยออมทรัพย์ดิจิทัลแบบขั้นบันได (Tier Rate) (Finance)"
+      },
+      {
+        "slug": "fixed-deposit-tax-deducted",
+        "nameTH": "ดอกเบี้ยเงินฝากประจำหักภาษี ณ ที่จ่าย 15% (Finance)"
+      },
+      {
+        "slug": "six-jars-money-management",
+        "nameTH": "สัดส่วนการจัดการเงินสูตร 6 Jars หกไห (Finance)"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 30. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 5 calculators (tsx and json):\n1. future-value-fv — คำนวณมูลค่าเงินในอนาคต (Future Value - FV) (Finance)\n2. present-value-pv — คำนวณมูลค่าเงินปัจจุบัน (Present Value - PV) (Finance)\n3. digital-savings-tier-rate — ดอกเบี้ยออมทรัพย์ดิจิทัลแบบขั้นบันได (Tier Rate) (Finance)\n4. fixed-deposit-tax-deducted — ดอกเบี้ยเงินฝากประจำหักภาษี ณ ที่จ่าย 15% (Finance)\n5. six-jars-money-management — สัดส่วนการจัดการเงินสูตร 6 Jars หกไห (Finance)\nFollow all rules in your system prompt. Make them beautiful and robust, include 400+ words SEO article.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T17:37:28+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "31": {
+    "conversationId": "7b2f574d-ff20-4be7-9d88-fba646489cba",
+    "tools": [
+      {
+        "slug": "credit-card-minimum-payment",
+        "nameTH": "ระยะเวลาปลดหนี้บัตรเครดิตจ่ายขั้นต่ำ (Finance)"
+      },
+      {
+        "slug": "home-refinance-savings",
+        "nameTH": "ยอดรีไฟแนนซ์บ้าน ส่วนต่างความคุ้มค่า (Finance)"
+      },
+      {
+        "slug": "home-extra-payment",
+        "nameTH": "ยอดโปะบ้าน หมดหนี้เร็วขึ้นกี่ปี (Finance)"
+      },
+      {
+        "slug": "hidden-home-costs",
+        "nameTH": "ต้นทุนแฝงซื้อบ้าน ค่าโอน จดจำนอง ประกัน (Finance)"
+      },
+      {
+        "slug": "car-loan-flat-rate",
+        "nameTH": "ค่างวดผ่อนรถยนต์ใหม่ Flat Rate (Finance)"
+      },
+      {
+        "slug": "car-loan-used-car",
+        "nameTH": "ค่างวดผ่อนรถยนต์มือสอง รวม VAT 7% (Finance)"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 31. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 6 calculators (tsx and json):\n1. credit-card-minimum-payment — ระยะเวลาปลดหนี้บัตรเครดิตจ่ายขั้นต่ำ (Finance)\n2. home-refinance-savings — ยอดรีไฟแนนซ์บ้าน ส่วนต่างความคุ้มค่า (Finance)\n3. home-extra-payment — ยอดโปะบ้าน หมดหนี้เร็วขึ้นกี่ปี (Finance)\n4. hidden-home-costs — ต้นทุนแฝงซื้อบ้าน ค่าโอน จดจำนอง ประกัน (Finance)\n5. car-loan-flat-rate — ค่างวดผ่อนรถยนต์ใหม่ Flat Rate (Finance)\n6. car-loan-used-car — ค่างวดผ่อนรถยนต์มือสอง รวม VAT 7% (Finance)\nFollow all rules in your system prompt. Make them beautiful and robust, include 400+ words SEO article.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T17:37:28+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "32": {
+    "conversationId": "330019eb-5205-4e83-a48f-3c38579f48f5",
+    "tools": [
+      {
+        "slug": "rai-to-ngan",
+        "nameTH": "ไร่ ➔ งาน"
+      },
+      {
+        "slug": "rai-to-sqwa",
+        "nameTH": "ไร่ ➔ ตารางวา"
+      },
+      {
+        "slug": "rai-to-sqm",
+        "nameTH": "ไร่ ➔ ตารางเมตร"
+      },
+      {
+        "slug": "rai-to-hectare",
+        "nameTH": "ไร่ ➔ เฮกตาร์"
+      },
+      {
+        "slug": "ngan-to-rai",
+        "nameTH": "งาน ➔ ไร่"
+      },
+      {
+        "slug": "ngan-to-sqwa",
+        "nameTH": "งาน ➔ ตารางวา"
+      },
+      {
+        "slug": "ngan-to-sqm",
+        "nameTH": "งาน ➔ ตารางเมตร"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 32. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 7 calculators (tsx and json):\n1. rai-to-ngan — ไร่ ➔ งาน (Math)\n2. rai-to-sqwa — ไร่ ➔ ตารางวา (Math)\n3. rai-to-sqm — ไร่ ➔ ตารางเมตร (Math)\n4. rai-to-hectare — ไร่ ➔ เฮกตาร์ (Math)\n5. ngan-to-rai — งาน ➔ ไร่ (Math)\n6. ngan-to-sqwa — งาน ➔ ตารางวา (Math)\n7. ngan-to-sqm — งาน ➔ ตารางเมตร (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable and accurate information (e.g. definitions of units, exact conversion rates such as 1 Rai = 1600 sq.m, history of Thai measurement units if applicable).\nFollow all existing rules in your system prompt: robust state, Tailwind styling, Lucide icons, proper JSON metadata format.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:06:10+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "33": {
+    "conversationId": "6f8faf4b-c071-4f13-8d8d-de7837a84677",
+    "tools": [
+      {
+        "slug": "sqwa-to-rai",
+        "nameTH": "ตารางวา ➔ ไร่"
+      },
+      {
+        "slug": "sqwa-to-ngan",
+        "nameTH": "ตารางวา ➔ งาน"
+      },
+      {
+        "slug": "sqwa-to-sqm",
+        "nameTH": "ตารางวา ➔ ตารางเมตร"
+      },
+      {
+        "slug": "sqm-to-rai",
+        "nameTH": "ตารางเมตร ➔ ไร่"
+      },
+      {
+        "slug": "sqm-to-ngan",
+        "nameTH": "ตารางเมตร ➔ งาน"
+      },
+      {
+        "slug": "sqm-to-sqwa",
+        "nameTH": "ตารางเมตร ➔ ตารางวา"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 33. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 6 calculators (tsx and json):\n1. sqwa-to-rai — ตารางวา ➔ ไร่ (Math)\n2. sqwa-to-ngan — ตารางวา ➔ งาน (Math)\n3. sqwa-to-sqm — ตารางวา ➔ ตารางเมตร (Math)\n4. sqm-to-rai — ตารางเมตร ➔ ไร่ (Math)\n5. sqm-to-ngan — ตารางเมตร ➔ งาน (Math)\n6. sqm-to-sqwa — ตารางเมตร ➔ ตารางวา (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable and accurate information (e.g. exact conversion rates such as 1 Sq.Wa = 4 Sq.m, practical applications in real estate).\nFollow all existing rules in your system prompt: robust state, Tailwind styling, Lucide icons, proper JSON metadata format.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:06:10+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "34": {
+    "conversationId": "5a375899-2a78-4da3-8fdd-6ce926684af8",
+    "tools": [
+      {
+        "slug": "sqm-to-sqkm",
+        "nameTH": "ตารางเมตร ➔ ตารางกิโลเมตร"
+      },
+      {
+        "slug": "sqm-to-sqft",
+        "nameTH": "ตารางเมตร ➔ ตารางฟุต"
+      },
+      {
+        "slug": "sqm-to-sqyd",
+        "nameTH": "ตารางเมตร ➔ ตารางหลา"
+      },
+      {
+        "slug": "sqm-to-acre",
+        "nameTH": "ตารางเมตร ➔ เอเคอร์"
+      },
+      {
+        "slug": "sqkm-to-sqm",
+        "nameTH": "ตารางกิโลเมตร ➔ ตารางเมตร"
+      },
+      {
+        "slug": "sqkm-to-rai",
+        "nameTH": "ตารางกิโลเมตร ➔ ไร่"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 34. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 6 calculators (tsx and json):\n1. sqm-to-sqkm — ตารางเมตร ➔ ตารางกิโลเมตร (Math)\n2. sqm-to-sqft — ตารางเมตร ➔ ตารางฟุต (Math)\n3. sqm-to-sqyd — ตารางเมตร ➔ ตารางหลา (Math)\n4. sqm-to-acre — ตารางเมตร ➔ เอเคอร์ (Math)\n5. sqkm-to-sqm — ตารางกิโลเมตร ➔ ตารางเมตร (Math)\n6. sqkm-to-rai — ตารางกิโลเมตร ➔ ไร่ (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable and accurate information (e.g. conversion rates like 1 Sq.km = 625 Rai, 1 Acre = 4046.86 Sq.m).\nFollow all existing rules in your system prompt: robust state, Tailwind styling, Lucide icons, proper JSON metadata format.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:06:10+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "35": {
+    "conversationId": "7c64a1cf-4df0-40e7-9e59-3ed18e251603",
+    "tools": [
+      {
+        "slug": "sqkm-to-acre",
+        "nameTH": "ตารางกิโลเมตร ➔ เอเคอร์"
+      },
+      {
+        "slug": "sqft-to-sqm",
+        "nameTH": "ตารางฟุต ➔ ตารางเมตร"
+      },
+      {
+        "slug": "sqft-to-sqin",
+        "nameTH": "ตารางฟุต ➔ ตารางนิ้ว"
+      },
+      {
+        "slug": "sqyd-to-sqm",
+        "nameTH": "ตารางหลา ➔ ตารางเมตร"
+      },
+      {
+        "slug": "acre-to-hectare",
+        "nameTH": "เอเคอร์ ➔ เฮกตาร์"
+      },
+      {
+        "slug": "acre-to-sqm",
+        "nameTH": "เอเคอร์ ➔ ตารางเมตร"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 35. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 6 calculators (tsx and json):\n1. sqkm-to-acre — ตารางกิโลเมตร ➔ เอเคอร์ (Math)\n2. sqft-to-sqm — ตารางฟุต ➔ ตารางเมตร (Math)\n3. sqft-to-sqin — ตารางฟุต ➔ ตารางนิ้ว (Math)\n4. sqyd-to-sqm — ตารางหลา ➔ ตารางเมตร (Math)\n5. acre-to-hectare — เอเคอร์ ➔ เฮกตาร์ (Math)\n6. acre-to-sqm — เอเคอร์ ➔ ตารางเมตร (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable and accurate information (e.g. formulas for Imperial to Metric conversions).\nFollow all existing rules in your system prompt: robust state, Tailwind styling, Lucide icons, proper JSON metadata format.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:06:10+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "36": {
+    "conversationId": "25745cdc-15af-49c3-841c-fd0ed73de98d",
+    "tools": [
+      {
+        "slug": "acre-to-rai",
+        "nameTH": "เอเคอร์ ➔ ไร่"
+      },
+      {
+        "slug": "hectare-to-acre",
+        "nameTH": "เฮกตาร์ ➔ เอเคอร์"
+      },
+      {
+        "slug": "hectare-to-rai",
+        "nameTH": "เฮกตาร์ ➔ ไร่"
+      },
+      {
+        "slug": "hectare-to-sqm",
+        "nameTH": "เฮกตาร์ ➔ ตารางเมตร"
+      },
+      {
+        "slug": "area-rectangle",
+        "nameTH": "พื้นที่สี่เหลี่ยมผืนผ้า (กว้าง x ยาว)"
+      },
+      {
+        "slug": "area-square",
+        "nameTH": "พื้นที่สี่เหลี่ยมจัตุรัส"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 36. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 6 calculators (tsx and json):\n1. acre-to-rai — เอเคอร์ ➔ ไร่ (Math)\n2. hectare-to-acre — เฮกตาร์ ➔ เอเคอร์ (Math)\n3. hectare-to-rai — เฮกตาร์ ➔ ไร่ (Math)\n4. hectare-to-sqm — เฮกตาร์ ➔ ตารางเมตร (Math)\n5. area-rectangle — พื้นที่สี่เหลี่ยมผืนผ้า (กว้าง x ยาว) (Math)\n6. area-square — พื้นที่สี่เหลี่ยมจัตุรัส (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable and accurate information (e.g. 1 Hectare = 6.25 Rai, geometric formulas for areas).\nFollow all existing rules in your system prompt: robust state, Tailwind styling, Lucide icons, proper JSON metadata format.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:06:10+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "37": {
+    "conversationId": "ff0e1cb1-6f3c-4c67-a3e9-f69d04aeea81",
+    "tools": [
+      {
+        "slug": "area-triangle",
+        "nameTH": "พื้นที่สามเหลี่ยม"
+      },
+      {
+        "slug": "area-circle-radius",
+        "nameTH": "พื้นที่วงกลม (จากรัศมี)"
+      },
+      {
+        "slug": "area-circle-diameter",
+        "nameTH": "พื้นที่วงกลม (จากเส้นผ่านศูนย์กลาง)"
+      },
+      {
+        "slug": "area-ellipse",
+        "nameTH": "พื้นที่วงรี"
+      },
+      {
+        "slug": "area-trapezoid",
+        "nameTH": "พื้นที่สี่เหลี่ยมคางหมู"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 37. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 5 calculators (tsx and json):\n1. area-triangle — พื้นที่สามเหลี่ยม (Math)\n2. area-circle-radius — พื้นที่วงกลม (จากรัศมี) (Math)\n3. area-circle-diameter — พื้นที่วงกลม (จากเส้นผ่านศูนย์กลาง) (Math)\n4. area-ellipse — พื้นที่วงรี (Math)\n5. area-trapezoid — พื้นที่สี่เหลี่ยมคางหมู (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable and accurate information (e.g. exact mathematical formulas like pi*r^2, 1/2*base*height).\nFollow all existing rules in your system prompt: robust state, Tailwind styling, Lucide icons, proper JSON metadata format.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:06:10+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "38": {
+    "conversationId": "4dc91043-70de-4d49-9af0-992a56c22f8d",
+    "tools": [
+      {
+        "slug": "area-rhombus",
+        "nameTH": "พื้นที่สี่เหลี่ยมขนมเปียกปูน"
+      },
+      {
+        "slug": "area-pentagon",
+        "nameTH": "พื้นที่ห้าเหลี่ยมด้านเท่า"
+      },
+      {
+        "slug": "area-hexagon",
+        "nameTH": "พื้นที่หกเหลี่ยมด้านเท่า"
+      },
+      {
+        "slug": "area-irregular-polygon",
+        "nameTH": "พื้นที่รูปทรงอิสระ (แบ่งส่วนสามเหลี่ยม)"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 38. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 4 calculators (tsx and json):\n1. area-rhombus — พื้นที่สี่เหลี่ยมขนมเปียกปูน (Math)\n2. area-pentagon — พื้นที่ห้าเหลี่ยมด้านเท่า (Math)\n3. area-hexagon — พื้นที่หกเหลี่ยมด้านเท่า (Math)\n4. area-irregular-polygon — พื้นที่รูปทรงอิสระ (แบ่งส่วนสามเหลี่ยม) (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable and accurate information (e.g. geometric formulas and theorems).\nFollow all existing rules in your system prompt: robust state, Tailwind styling, Lucide icons, proper JSON metadata format.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:06:10+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "40": {
+    "conversationId": "97fed992-a477-4c54-ad62-a82d68ef6aee",
+    "tools": [
+      {
+        "slug": "matrix-addition-subtraction",
+        "nameTH": "เครื่องมือคำนวณการบวกและลบเมทริกซ์"
+      },
+      {
+        "slug": "matrix-scalar-multiplication",
+        "nameTH": "เครื่องมือคำนวณการคูณเมทริกซ์ด้วยตัวเลข"
+      },
+      {
+        "slug": "mean-calculator",
+        "nameTH": "เครื่องมือคำนวณหาค่าเฉลี่ยเลขคณิต (Mean) จากชุดข้อมูล"
+      },
+      {
+        "slug": "median-calculator",
+        "nameTH": "เครื่องมือคำนวณหาค่าวิตถารหรือมัธยฐาน (Median) จากชุดข้อมูล"
+      },
+      {
+        "slug": "mode-calculator",
+        "nameTH": "เครื่องมือคำนวณหาค่าฐานนิยม (Mode) จากชุดข้อมูล"
+      },
+      {
+        "slug": "population-standard-deviation",
+        "nameTH": "เครื่องมือคำนวณหาส่วนเบี่ยงเบนมาตรฐาน (Standard Deviation - S.D.) ประชากร"
+      },
+      {
+        "slug": "sample-standard-deviation",
+        "nameTH": "เครื่องมือคำนวณหาส่วนเบี่ยงเบนมาตรฐาน (S.D.) กลุ่มตัวอย่าง"
+      },
+      {
+        "slug": "variance-calculator",
+        "nameTH": "เครื่องมือคำนวณหาความแปรปรวน (Variance) จากชุดข้อมูล"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 40. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 8 calculators (tsx and json):\n1. matrix-addition-subtraction — เครื่องมือคำนวณการบวกและลบเมทริกซ์ (Math)\n2. matrix-scalar-multiplication — เครื่องมือคำนวณการคูณเมทริกซ์ด้วยตัวเลข (Math)\n3. mean-calculator — เครื่องมือคำนวณหาค่าเฉลี่ยเลขคณิต (Mean) จากชุดข้อมูล (Math)\n4. median-calculator — เครื่องมือคำนวณหาค่าวิตถารหรือมัธยฐาน (Median) จากชุดข้อมูล (Math)\n5. mode-calculator — เครื่องมือคำนวณหาค่าฐานนิยม (Mode) จากชุดข้อมูล (Math)\n6. population-standard-deviation — เครื่องมือคำนวณหาส่วนเบี่ยงเบนมาตรฐาน (Standard Deviation - S.D.) ประชากร (Math)\n7. sample-standard-deviation — เครื่องมือคำนวณหาส่วนเบี่ยงเบนมาตรฐาน (S.D.) กลุ่มตัวอย่าง (Math)\n8. variance-calculator — เครื่องมือคำนวณหาความแปรปรวน (Variance) จากชุดข้อมูล (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable mathematical formulas and context. Provide clean code, robust state, Tailwind styling, and Lucide icons. Use exactly the English slugs provided for the filenames.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:27:05+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "42": {
+    "conversationId": "7a9dfaca-c3a8-4316-8992-9d3c48b5a887",
+    "tools": [
+      {
+        "slug": "pythagoras-hypotenuse",
+        "nameTH": "เครื่องมือคำนวณทฤษฎีบทพีทาโกรัสหาความยาวด้านตรงข้ามมุมฉาก (C)"
+      },
+      {
+        "slug": "pythagoras-leg",
+        "nameTH": "เครื่องมือคำนวณทฤษฎีบทพีทาโกรัสหาความยาวด้านประกอบมุมฉาก (A หรือ B)"
+      },
+      {
+        "slug": "trig-sin",
+        "nameTH": "เครื่องมือคำนวณตรีโกณมิติหาค่า Sin จากองศา"
+      },
+      {
+        "slug": "trig-cos",
+        "nameTH": "เครื่องมือคำนวณตรีโกณมิติหาค่า Cos จากองศา"
+      },
+      {
+        "slug": "trig-tan",
+        "nameTH": "เครื่องมือคำนวณตรีโกณมิติหาค่า Tan จากองศา"
+      },
+      {
+        "slug": "trig-arcsin",
+        "nameTH": "เครื่องมือคำนวณตรีโกณมิติย้อนกลับ ArcSin"
+      },
+      {
+        "slug": "trig-arccos",
+        "nameTH": "เครื่องมือคำนวณตรีโกณมิติย้อนกลับ ArcCos"
+      },
+      {
+        "slug": "trig-arctan",
+        "nameTH": "เครื่องมือคำนวณตรีโกณมิติย้อนกลับ ArcTan"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 42. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 8 calculators (tsx and json):\n1. pythagoras-hypotenuse — เครื่องมือคำนวณทฤษฎีบทพีทาโกรัสหาความยาวด้านตรงข้ามมุมฉาก (C) (Math)\n2. pythagoras-leg — เครื่องมือคำนวณทฤษฎีบทพีทาโกรัสหาความยาวด้านประกอบมุมฉาก (A หรือ B) (Math)\n3. trig-sin — เครื่องมือคำนวณตรีโกณมิติหาค่า Sin จากองศา (Math)\n4. trig-cos — เครื่องมือคำนวณตรีโกณมิติหาค่า Cos จากองศา (Math)\n5. trig-tan — เครื่องมือคำนวณตรีโกณมิติหาค่า Tan จากองศา (Math)\n6. trig-arcsin — เครื่องมือคำนวณตรีโกณมิติย้อนกลับ ArcSin (Math)\n7. trig-arccos — เครื่องมือคำนวณตรีโกณมิติย้อนกลับ ArcCos (Math)\n8. trig-arctan — เครื่องมือคำนวณตรีโกณมิติย้อนกลับ ArcTan (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable mathematical formulas and context. Provide clean code, robust state, Tailwind styling, and Lucide icons. Use exactly the English slugs provided for the filenames.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:27:05+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "43": {
+    "conversationId": "a1249fa1-a5ea-4afb-9fca-951e733f40ea",
+    "tools": [
+      {
+        "slug": "volume-sphere",
+        "nameTH": "เครื่องมือคำนวณหาปริมาตรทรงกลม"
+      },
+      {
+        "slug": "volume-cylinder",
+        "nameTH": "เครื่องมือคำนวณหาปริมาตรทรงกระบอก"
+      },
+      {
+        "slug": "volume-cone",
+        "nameTH": "เครื่องมือคำนวณหาปริมาตรทรงกรวย"
+      },
+      {
+        "slug": "volume-pyramid",
+        "nameTH": "เครื่องมือคำนวณหาปริมาตรพีระมิดฐานสี่เหลี่ยม"
+      },
+      {
+        "slug": "volume-triangular-prism",
+        "nameTH": "เครื่องมือคำนวณหาปริมาตรรูปทรงปริซึมสามเหลี่ยม"
+      },
+      {
+        "slug": "volume-cube",
+        "nameTH": "เครื่องมือคำนวณหาปริมาตรรูปบาศก์สี่เหลี่ยม"
+      },
+      {
+        "slug": "surface-area-sphere",
+        "nameTH": "เครื่องมือคำนวณหาพื้นที่ผิวของทรงกลม"
+      },
+      {
+        "slug": "surface-area-cylinder",
+        "nameTH": "เครื่องมือคำนวณหาพื้นที่ผิวของทรงกระบอกรวมฝาปิด"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 43. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 8 calculators (tsx and json):\n1. volume-sphere — เครื่องมือคำนวณหาปริมาตรทรงกลม (Math)\n2. volume-cylinder — เครื่องมือคำนวณหาปริมาตรทรงกระบอก (Math)\n3. volume-cone — เครื่องมือคำนวณหาปริมาตรทรงกรวย (Math)\n4. volume-pyramid — เครื่องมือคำนวณหาปริมาตรพีระมิดฐานสี่เหลี่ยม (Math)\n5. volume-triangular-prism — เครื่องมือคำนวณหาปริมาตรรูปทรงปริซึมสามเหลี่ยม (Math)\n6. volume-cube — เครื่องมือคำนวณหาปริมาตรรูปบาศก์สี่เหลี่ยม (Math)\n7. surface-area-sphere — เครื่องมือคำนวณหาพื้นที่ผิวของทรงกลม (Math)\n8. surface-area-cylinder — เครื่องมือคำนวณหาพื้นที่ผิวของทรงกระบอกรวมฝาปิด (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable mathematical formulas and context. Provide clean code, robust state, Tailwind styling, and Lucide icons. Use exactly the English slugs provided for the filenames.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:27:05+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "44": {
+    "conversationId": "6a4a8b11-3d52-4ee1-9904-97e5297f8ff6",
+    "tools": [
+      {
+        "slug": "circumference-calculator",
+        "nameTH": "เครื่องมือคำนวณหาความยาวเส้นรอบวงของวงกลม"
+      },
+      {
+        "slug": "arc-length-calculator",
+        "nameTH": "เครื่องมือคำนวณหาความยาวส่วนโค้งของวงกลม (Arc Length) ตามมุมองศา"
+      },
+      {
+        "slug": "sector-area-calculator",
+        "nameTH": "เครื่องมือคำนวณหาพื้นที่เซกเตอร์ของวงกลม (Sector Area)"
+      },
+      {
+        "slug": "factorial-calculator",
+        "nameTH": "เครื่องมือคำนวณหาแฟกทอเรียล (Factorial: n!) ของตัวเลข"
+      },
+      {
+        "slug": "combination-calculator",
+        "nameTH": "เครื่องมือคำนวณวิธีการจัดหมู่ (Combination: nCr)"
+      },
+      {
+        "slug": "permutation-calculator",
+        "nameTH": "เครื่องมือคำนวณวิธีการจัดลำดับ (Permutation: nPr)"
+      },
+      {
+        "slug": "probability-calculator",
+        "nameTH": "เครื่องมือคำนวณความน่าจะเป็นเบื้องต้น (Probability) เหตุการณ์สำเร็จ/ทั้งหมด"
+      },
+      {
+        "slug": "arithmetic-series-sum",
+        "nameTH": "เครื่องมือคำนวณหาผลรวมของอนุกรมเลขคณิต (Arithmetic Series)"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 44. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 8 calculators (tsx and json):\n1. circumference-calculator — เครื่องมือคำนวณหาความยาวเส้นรอบวงของวงกลม (Math)\n2. arc-length-calculator — เครื่องมือคำนวณหาความยาวส่วนโค้งของวงกลม (Arc Length) ตามมุมองศา (Math)\n3. sector-area-calculator — เครื่องมือคำนวณหาพื้นที่เซกเตอร์ของวงกลม (Sector Area) (Math)\n4. factorial-calculator — เครื่องมือคำนวณหาแฟกทอเรียล (Factorial: n!) ของตัวเลข (Math)\n5. combination-calculator — เครื่องมือคำนวณวิธีการจัดหมู่ (Combination: nCr) (Math)\n6. permutation-calculator — เครื่องมือคำนวณวิธีการจัดลำดับ (Permutation: nPr) (Math)\n7. probability-calculator — เครื่องมือคำนวณความน่าจะเป็นเบื้องต้น (Probability) เหตุการณ์สำเร็จ/ทั้งหมด (Math)\n8. arithmetic-series-sum — เครื่องมือคำนวณหาผลรวมของอนุกรมเลขคณิต (Arithmetic Series) (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable mathematical formulas and context. Provide clean code, robust state, Tailwind styling, and Lucide icons. Use exactly the English slugs provided for the filenames.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:27:05+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "45": {
+    "conversationId": "9fb3a35c-4470-4e96-b78f-21b3e05d3a57",
+    "tools": [
+      {
+        "slug": "geometric-series-sum",
+        "nameTH": "เครื่องมือคำนวณหาผลรวมของอนุกรมเรขาคณิต (Geometric Series)"
+      },
+      {
+        "slug": "log-base-10",
+        "nameTH": "เครื่องมือคำนวณหาค่าลอการิทึมฐาน 10 (Log Base 10)"
+      },
+      {
+        "slug": "natural-log",
+        "nameTH": "เครื่องมือคำนวณหาค่าลอการิทึมธรรมชาติ (Natural Log - Ln)"
+      },
+      {
+        "slug": "log-base-2",
+        "nameTH": "เครื่องมือคำนวณหาค่าลอการิทึมฐาน 2 (Log Base 2)"
+      },
+      {
+        "slug": "exponent-calculator",
+        "nameTH": "เครื่องมือคำนวณเลขยกกำลัง (X ยกกำลัง Y)"
+      },
+      {
+        "slug": "square-root-calculator",
+        "nameTH": "เครื่องมือคำนวณหารากที่สอง (Square Root)"
+      },
+      {
+        "slug": "cube-root-calculator",
+        "nameTH": "เครื่องมือคำนวณหารากที่สาม (Cube Root)"
+      },
+      {
+        "slug": "nth-root-calculator",
+        "nameTH": "เครื่องมือคำนวณหารากที่ N (Nth Root)"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 45. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 8 calculators (tsx and json):\n1. geometric-series-sum — เครื่องมือคำนวณหาผลรวมของอนุกรมเรขาคณิต (Geometric Series) (Math)\n2. log-base-10 — เครื่องมือคำนวณหาค่าลอการิทึมฐาน 10 (Log Base 10) (Math)\n3. natural-log — เครื่องมือคำนวณหาค่าลอการิทึมธรรมชาติ (Natural Log - Ln) (Math)\n4. log-base-2 — เครื่องมือคำนวณหาค่าลอการิทึมฐาน 2 (Log Base 2) (Math)\n5. exponent-calculator — เครื่องมือคำนวณเลขยกกำลัง (X ยกกำลัง Y) (Math)\n6. square-root-calculator — เครื่องมือคำนวณหารากที่สอง (Square Root) (Math)\n7. cube-root-calculator — เครื่องมือคำนวณหารากที่สาม (Cube Root) (Math)\n8. nth-root-calculator — เครื่องมือคำนวณหารากที่ N (Nth Root) (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable mathematical formulas and context. Provide clean code, robust state, Tailwind styling, and Lucide icons. Use exactly the English slugs provided for the filenames.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:27:05+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "46": {
+    "conversationId": "122710ed-381f-4a4f-bfb1-7350ea0ee802",
+    "tools": [
+      {
+        "slug": "fraction-to-decimal",
+        "nameTH": "เครื่องมือคำนวณแปลงเศษส่วนเป็นทศนิยม"
+      },
+      {
+        "slug": "decimal-to-fraction",
+        "nameTH": "เครื่องมือคำนวณแปลงทศนิยมเป็นเศษส่วน"
+      },
+      {
+        "slug": "improper-to-mixed-fraction",
+        "nameTH": "เครื่องมือคำนวณแปลงเศษส่วนเกินเป็นเศษส่วนคละ"
+      },
+      {
+        "slug": "mixed-to-improper-fraction",
+        "nameTH": "เครื่องมือคำนวณแปลงเศษส่วนคละเป็นเศษส่วนเกิน"
+      },
+      {
+        "slug": "direct-proportion",
+        "nameTH": "เครื่องมือคำนวณสัดส่วนหรือบัญญัติไตรยางศ์แบบแปรผันตรง"
+      },
+      {
+        "slug": "inverse-proportion",
+        "nameTH": "เครื่องมือคำนวณสัดส่วนหรือบัญญัติไตรยางศ์แบบแปรผกผัน"
+      },
+      {
+        "slug": "percent-of-value",
+        "nameTH": "เครื่องมือคำนวณหาเปอร์เซ็นต์ของจำนวนเงิน (เช่น 15% ของ 2,500 คือเท่าไหร่)"
+      },
+      {
+        "slug": "value-is-what-percent",
+        "nameTH": "เครื่องมือคำนวณหาว่าตัวเลขนี้เป็นกี่เปอร์เซ็นต์ของอีกตัวเลข (เช่น 50 เป็นกี่ % ของ 200)"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 46. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 8 calculators (tsx and json):\n1. fraction-to-decimal — เครื่องมือคำนวณแปลงเศษส่วนเป็นทศนิยม (Math)\n2. decimal-to-fraction — เครื่องมือคำนวณแปลงทศนิยมเป็นเศษส่วน (Math)\n3. improper-to-mixed-fraction — เครื่องมือคำนวณแปลงเศษส่วนเกินเป็นเศษส่วนคละ (Math)\n4. mixed-to-improper-fraction — เครื่องมือคำนวณแปลงเศษส่วนคละเป็นเศษส่วนเกิน (Math)\n5. direct-proportion — เครื่องมือคำนวณสัดส่วนหรือบัญญัติไตรยางศ์แบบแปรผันตรง (Math)\n6. inverse-proportion — เครื่องมือคำนวณสัดส่วนหรือบัญญัติไตรยางศ์แบบแปรผกผัน (Math)\n7. percent-of-value — เครื่องมือคำนวณหาเปอร์เซ็นต์ของจำนวนเงิน (เช่น 15% ของ 2,500 คือเท่าไหร่) (Math)\n8. value-is-what-percent — เครื่องมือคำนวณหาว่าตัวเลขนี้เป็นกี่เปอร์เซ็นต์ของอีกตัวเลข (เช่น 50 เป็นกี่ % ของ 200) (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable mathematical formulas and context. Provide clean code, robust state, Tailwind styling, and Lucide icons. Use exactly the English slugs provided for the filenames.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:27:05+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "47": {
+    "conversationId": "ec814a6e-2875-4ea2-93d6-037e02010eca",
+    "tools": [
+      {
+        "slug": "percentage-increase",
+        "nameTH": "เครื่องมือคำนวณการเพิ่มขึ้นเป็นเปอร์เซ็นต์จากค่าเดิม (Percentage Increase)"
+      },
+      {
+        "slug": "percentage-decrease",
+        "nameTH": "เครื่องมือคำนวณการลดลงเป็นเปอร์เซ็นต์จากค่าเดิม (Percentage Decrease)"
+      },
+      {
+        "slug": "radian-to-degree",
+        "nameTH": "เครื่องมือคำนวณแปลงมุมเรเดียน (Radian) เป็นองศา (Degree)"
+      },
+      {
+        "slug": "degree-to-radian",
+        "nameTH": "เครื่องมือคำนวณแปลงมุมองศา (Degree) เป็นเรเดียน (Radian)"
+      },
+      {
+        "slug": "prime-number-checker",
+        "nameTH": "เครื่องมือตรวจสอบตัวเลขว่าเป็นจำนวนเฉพาะ (Prime Number) หรือไม่"
+      },
+      {
+        "slug": "factor-generator",
+        "nameTH": "เครื่องมือหาตัวประกอบทั้งหมดของตัวเลข (Factor Generator)"
+      },
+      {
+        "slug": "absolute-value",
+        "nameTH": "เครื่องมือคำนวณหาค่าสัมบูรณ์ (Absolute Value)"
+      },
+      {
+        "slug": "random-number-generator",
+        "nameTH": "เครื่องมือสุ่มตัวเลขตามช่วงที่กำหนด (Random Number Generator)"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 47. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 8 calculators (tsx and json):\n1. percentage-increase — เครื่องมือคำนวณการเพิ่มขึ้นเป็นเปอร์เซ็นต์จากค่าเดิม (Percentage Increase) (Math)\n2. percentage-decrease — เครื่องมือคำนวณการลดลงเป็นเปอร์เซ็นต์จากค่าเดิม (Percentage Decrease) (Math)\n3. radian-to-degree — เครื่องมือคำนวณแปลงมุมเรเดียน (Radian) เป็นองศา (Degree) (Math)\n4. degree-to-radian — เครื่องมือคำนวณแปลงมุมองศา (Degree) เป็นเรเดียน (Radian) (Math)\n5. prime-number-checker — เครื่องมือตรวจสอบตัวเลขว่าเป็นจำนวนเฉพาะ (Prime Number) หรือไม่ (Math)\n6. factor-generator — เครื่องมือหาตัวประกอบทั้งหมดของตัวเลข (Factor Generator) (Math)\n7. absolute-value — เครื่องมือคำนวณหาค่าสัมบูรณ์ (Absolute Value) (Math)\n8. random-number-generator — เครื่องมือสุ่มตัวเลขตามช่วงที่กำหนด (Random Number Generator) (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable mathematical formulas and context. Provide clean code, robust state, Tailwind styling, and Lucide icons. Use exactly the English slugs provided for the filenames.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:27:05+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "48": {
+    "conversationId": "11796d19-462b-429c-811d-8f543ec56b28",
+    "tools": [
+      {
+        "slug": "z-score-calculator",
+        "nameTH": "เครื่องมือคำนวณค่า Z-Score ทางสถิติ"
+      },
+      {
+        "slug": "t-score-calculator",
+        "nameTH": "เครื่องมือคำนวณค่า T-Score ทางสถิติ"
+      },
+      {
+        "slug": "coefficient-of-variation",
+        "nameTH": "เครื่องมือคำนวณสัมประสิทธิ์ความแปรผัน (Coefficient of Variation - CV)"
+      },
+      {
+        "slug": "standard-error-calculator",
+        "nameTH": "เครื่องมือคำนวณหาค่าความคลาดเคลื่อนมาตรฐาน (Standard Error)"
+      },
+      {
+        "slug": "pearson-correlation",
+        "nameTH": "เครื่องมือคำนวณหาค่าสัมประสิทธิ์สหสัมพันธ์ของเพียร์สัน (Pearson's r)"
+      },
+      {
+        "slug": "linear-regression-line",
+        "nameTH": "เครื่องมือคำนวณหาสมการเส้นถดถอยเชิงเส้นอย่างง่าย (Linear Regression Line)"
+      },
+      {
+        "slug": "taro-yamane-sample-size",
+        "nameTH": "เครื่องมือคำนวณขนาดกลุ่มตัวอย่างด้วยสูตรของทาโร่ ยามาเน่ (Taro Yamane)"
+      },
+      {
+        "slug": "krejcie-morgan-sample-size",
+        "nameTH": "เครื่องมือคำนวณขนาดกลุ่มตัวอย่างด้วยสูตรของเครจซีและมอร์แกน (Krejcie & Morgan)"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 48. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 8 calculators (tsx and json):\n1. z-score-calculator — เครื่องมือคำนวณค่า Z-Score ทางสถิติ (Math)\n2. t-score-calculator — เครื่องมือคำนวณค่า T-Score ทางสถิติ (Math)\n3. coefficient-of-variation — เครื่องมือคำนวณสัมประสิทธิ์ความแปรผัน (Coefficient of Variation - CV) (Math)\n4. standard-error-calculator — เครื่องมือคำนวณหาค่าความคลาดเคลื่อนมาตรฐาน (Standard Error) (Math)\n5. pearson-correlation — เครื่องมือคำนวณหาค่าสัมประสิทธิ์สหสัมพันธ์ของเพียร์สัน (Pearson's r) (Math)\n6. linear-regression-line — เครื่องมือคำนวณหาสมการเส้นถดถอยเชิงเส้นอย่างง่าย (Linear Regression Line) (Math)\n7. taro-yamane-sample-size — เครื่องมือคำนวณขนาดกลุ่มตัวอย่างด้วยสูตรของทาโร่ ยามาเน่ (Taro Yamane) (Math)\n8. krejcie-morgan-sample-size — เครื่องมือคำนวณขนาดกลุ่มตัวอย่างด้วยสูตรของเครจซีและมอร์แกน (Krejcie & Morgan) (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable mathematical formulas and context. Provide clean code, robust state, Tailwind styling, and Lucide icons. Use exactly the English slugs provided for the filenames.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:27:06+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "49": {
+    "conversationId": "d3d301f8-f7c1-4585-98e2-b609223efe41",
+    "tools": [
+      {
+        "slug": "cronbach-alpha",
+        "nameTH": "เครื่องมือคำนวณหาความเชื่อมั่นของแบบสอบถามด้วยค่าอัลฟาของครอนบาค (Cronbach's Alpha)"
+      },
+      {
+        "slug": "harmonic-mean",
+        "nameTH": "เครื่องมือคำนวณหาค่ามัธยฐานฮาร์โมนิก (Harmonic Mean)"
+      },
+      {
+        "slug": "geometric-mean",
+        "nameTH": "เครื่องมือคำนวณหาค่าเฉลี่ยเรขาคณิต (Geometric Mean)"
+      },
+      {
+        "slug": "percent-difference",
+        "nameTH": "เครื่องมือคำนวณหาความแตกต่างระหว่างสองทศนิยมเป็นเปอร์เซ็นต์ (Percent Difference)"
+      },
+      {
+        "slug": "midpoint-formula",
+        "nameTH": "เครื่องมือคำนวณหาพิกัดจุดกึ่งกลางระหว่างสองจุดบนกราฟ (Midpoint Formula)"
+      },
+      {
+        "slug": "distance-formula",
+        "nameTH": "เครื่องมือคำนวณหาระยะทางระหว่างสองจุดบนพิกัดฉาก (Distance Formula)"
+      },
+      {
+        "slug": "slope-formula",
+        "nameTH": "เครื่องมือคำนวณหาความชันของเส้นตรงจากจุดสองจุด (Slope Formula)"
+      },
+      {
+        "slug": "slope-intercept-equation",
+        "nameTH": "เครื่องมือคำนวณหาสมการเส้นตรงในรูปแบบความชันและจุดตัดแกน Y"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 49. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 8 calculators (tsx and json):\n1. cronbach-alpha — เครื่องมือคำนวณหาความเชื่อมั่นของแบบสอบถามด้วยค่าอัลฟาของครอนบาค (Cronbach's Alpha) (Math)\n2. harmonic-mean — เครื่องมือคำนวณหาค่ามัธยฐานฮาร์โมนิก (Harmonic Mean) (Math)\n3. geometric-mean — เครื่องมือคำนวณหาค่าเฉลี่ยเรขาคณิต (Geometric Mean) (Math)\n4. percent-difference — เครื่องมือคำนวณหาความแตกต่างระหว่างสองทศนิยมเป็นเปอร์เซ็นต์ (Percent Difference) (Math)\n5. midpoint-formula — เครื่องมือคำนวณหาพิกัดจุดกึ่งกลางระหว่างสองจุดบนกราฟ (Midpoint Formula) (Math)\n6. distance-formula — เครื่องมือคำนวณหาระยะทางระหว่างสองจุดบนพิกัดฉาก (Distance Formula) (Math)\n7. slope-formula — เครื่องมือคำนวณหาความชันของเส้นตรงจากจุดสองจุด (Slope Formula) (Math)\n8. slope-intercept-equation — เครื่องมือคำนวณหาสมการเส้นตรงในรูปแบบความชันและจุดตัดแกน Y (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable mathematical formulas and context. Provide clean code, robust state, Tailwind styling, and Lucide icons. Use exactly the English slugs provided for the filenames.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:27:06+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "50": {
+    "conversationId": "5d2c143a-b3af-4c71-9244-d3e2bc697903",
+    "tools": [
+      {
+        "slug": "dot-product",
+        "nameTH": "เครื่องมือคำนวณหาผลคูณเชิงเวกเตอร์แบบดอท (Dot Product ของ Vector)"
+      },
+      {
+        "slug": "cross-product",
+        "nameTH": "เครื่องมือคำนวณหาผลคูณเชิงเวกเตอร์แบบครอส (Cross Product ของ Vector 3D)"
+      },
+      {
+        "slug": "vector-magnitude",
+        "nameTH": "เครื่องมือคำนวณหาขนาดความยาวของเวกเตอร์ (Vector Magnitude)"
+      },
+      {
+        "slug": "modulo-calculator",
+        "nameTH": "เครื่องมือคำนวณหาเศษของการหาร (Modulo - โอเปอเรเตอร์ %)"
+      },
+      {
+        "slug": "integer-division",
+        "nameTH": "เครื่องมือคำนวณหาผลหารแบบจำนวนเต็ม (Integer Division)"
+      },
+      {
+        "slug": "roman-to-decimal",
+        "nameTH": "เครื่องมือคำนวณแปลงเลขโรมันเป็นเลขฐานสิบ"
+      },
+      {
+        "slug": "decimal-to-roman",
+        "nameTH": "เครื่องมือคำนวณแปลงเลขฐานสิบเป็นเลขโรมัน"
+      },
+      {
+        "slug": "number-to-thai-text",
+        "nameTH": "เครื่องมือคำนวณแปลงตัวเลขเป็นตัวหนังสือภาษาไทย (สำหรับเขียนเช็คเงินสด)"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 50. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 8 calculators (tsx and json):\n1. dot-product — เครื่องมือคำนวณหาผลคูณเชิงเวกเตอร์แบบดอท (Dot Product ของ Vector) (Math)\n2. cross-product — เครื่องมือคำนวณหาผลคูณเชิงเวกเตอร์แบบครอส (Cross Product ของ Vector 3D) (Math)\n3. vector-magnitude — เครื่องมือคำนวณหาขนาดความยาวของเวกเตอร์ (Vector Magnitude) (Math)\n4. modulo-calculator — เครื่องมือคำนวณหาเศษของการหาร (Modulo - โอเปอเรเตอร์ %) (Math)\n5. integer-division — เครื่องมือคำนวณหาผลหารแบบจำนวนเต็ม (Integer Division) (Math)\n6. roman-to-decimal — เครื่องมือคำนวณแปลงเลขโรมันเป็นเลขฐานสิบ (Math)\n7. decimal-to-roman — เครื่องมือคำนวณแปลงเลขฐานสิบเป็นเลขโรมัน (Math)\n8. number-to-thai-text — เครื่องมือคำนวณแปลงตัวเลขเป็นตัวหนังสือภาษาไทย (สำหรับเขียนเช็คเงินสด) (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable mathematical formulas and context. Provide clean code, robust state, Tailwind styling, and Lucide icons. Use exactly the English slugs provided for the filenames.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:27:06+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "53": {
+    "conversationId": "8c39a2ad-7d66-45ff-a942-da2507da4bc1",
+    "tools": [
+      {
+        "slug": "truth-table-3-variables",
+        "nameTH": "เครื่องมือคำนวณตารางสัจนิรันดร์ทางตรรกศาสตร์ (ตารางค่าความจริง 3 ตัวแปร P, Q, R)"
+      },
+      {
+        "slug": "logic-equivalence-checker",
+        "nameTH": "เครื่องมือคำนวณตรวจสอบสมมูลตรรกศาสตร์"
+      },
+      {
+        "slug": "venn-diagram-2-sets",
+        "nameTH": "เครื่องมือคำนวณหาเวนน์ไดอะแกรม (Venn Diagram) ยูเนียนและอินเตอร์เซกชันของ 2 เซต"
+      },
+      {
+        "slug": "venn-diagram-3-sets",
+        "nameTH": "เครื่องมือคำนวณหาเวนน์ไดอะแกรม ยูเนียนและอินเตอร์เซกชันของ 3 เซต"
+      },
+      {
+        "slug": "cartesian-product",
+        "nameTH": "เครื่องมือคำนวณหาผลคูณคาร์ทีเซียนของสองเซต (Cartesian Product)"
+      },
+      {
+        "slug": "power-set-size",
+        "nameTH": "เครื่องมือคำนวณหาจำนวนสับเซตทั้งหมดของเซต (Power Set Size: 2^n)"
+      },
+      {
+        "slug": "bayes-theorem",
+        "nameTH": "เครื่องมือคำนวณหาค่าความน่าจะเป็นแบบมีเงื่อนไข (Bayes' Theorem Calculator)"
+      },
+      {
+        "slug": "expected-value",
+        "nameTH": "เครื่องมือคำนวณหาค่าคาดหมายทางสถิติ (Expected Value)"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 53. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 8 calculators (tsx and json):\n1. truth-table-3-variables — เครื่องมือคำนวณตารางสัจนิรันดร์ทางตรรกศาสตร์ (ตารางค่าความจริง 3 ตัวแปร P, Q, R) (Math)\n2. logic-equivalence-checker — เครื่องมือคำนวณตรวจสอบสมมูลตรรกศาสตร์ (Math)\n3. venn-diagram-2-sets — เครื่องมือคำนวณหาเวนน์ไดอะแกรม (Venn Diagram) ยูเนียนและอินเตอร์เซกชันของ 2 เซต (Math)\n4. venn-diagram-3-sets — เครื่องมือคำนวณหาเวนน์ไดอะแกรม ยูเนียนและอินเตอร์เซกชันของ 3 เซต (Math)\n5. cartesian-product — เครื่องมือคำนวณหาผลคูณคาร์ทีเซียนของสองเซต (Cartesian Product) (Math)\n6. power-set-size — เครื่องมือคำนวณหาจำนวนสับเซตทั้งหมดของเซต (Power Set Size: 2^n) (Math)\n7. bayes-theorem — เครื่องมือคำนวณหาค่าความน่าจะเป็นแบบมีเงื่อนไข (Bayes' Theorem Calculator) (Math)\n8. expected-value — เครื่องมือคำนวณหาค่าคาดหมายทางสถิติ (Expected Value) (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable mathematical formulas and context. Provide clean code, robust state, Tailwind styling, and Lucide icons. Use exactly the English slugs provided for the filenames.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:27:06+07:00.\n</ADDITIONAL_METADATA>"
+  },
+  "57": {
+    "conversationId": "a4459130-5fff-43ee-a673-65e3b9fd014e",
+    "tools": [
+      {
+        "slug": "equilateral-triangle-height",
+        "nameTH": "เครื่องมือคำนวณหาความยาวของส่วนสูงในสามเหลี่ยมด้านเท่า"
+      },
+      {
+        "slug": "binomial-distribution",
+        "nameTH": "เครื่องมือคำนวณกฎการแจกแจงทวินาม (Binomial Distribution Probability)"
+      },
+      {
+        "slug": "poisson-distribution",
+        "nameTH": "เครื่องมือคำนวณกฎการแจกแจงแบบปัวซง (Poisson Distribution Calculator)"
+      },
+      {
+        "slug": "normal-distribution-z-table",
+        "nameTH": "เครื่องมือคำนวณหาพื้นที่ใต้เส้นโค้งปกติ (Normal Distribution Z-Table Lookup Tool)"
+      },
+      {
+        "slug": "simple-moving-average",
+        "nameTH": "เครื่องมือคำนวณสัดส่วนค่ามัธยฐานเคลื่อนที่อย่างง่าย (Simple Moving Average - SMA Data)"
+      },
+      {
+        "slug": "exponential-moving-average",
+        "nameTH": "เครื่องมือคำนวณหาค่าเฉลี่ยเคลื่อนที่แบบถ่วงน้ำหนักเอ็กซ์โพเนนเชียล (EMA Data)"
+      }
+    ],
+    "promptText": "<USER_REQUEST>\nYou are assigned Batch 57. Write files to the EXACT absolute path: `C:\\Users\\zazad\\.gemini\\antigravity\\scratch\\kamnuan-com\\scratch\\missing_calcs`\nCreate the following 6 calculators (tsx and json):\n1. equilateral-triangle-height — เครื่องมือคำนวณหาความยาวของส่วนสูงในสามเหลี่ยมด้านเท่า (Math)\n2. binomial-distribution — เครื่องมือคำนวณกฎการแจกแจงทวินาม (Binomial Distribution Probability) (Math)\n3. poisson-distribution — เครื่องมือคำนวณกฎการแจกแจงแบบปัวซง (Poisson Distribution Calculator) (Math)\n4. normal-distribution-z-table — เครื่องมือคำนวณหาพื้นที่ใต้เส้นโค้งปกติ (Normal Distribution Z-Table Lookup Tool) (Math)\n5. simple-moving-average — เครื่องมือคำนวณสัดส่วนค่ามัธยฐานเคลื่อนที่อย่างง่าย (Simple Moving Average - SMA Data) (Math)\n6. exponential-moving-average — เครื่องมือคำนวณหาค่าเฉลี่ยเคลื่อนที่แบบถ่วงน้ำหนักเอ็กซ์โพเนนเชียล (EMA Data) (Math)\n\nCRITICAL REQUIREMENT: For every calculator, you MUST include a 400+ word SEO-optimized Thai article at the bottom using semantic HTML `<article>`. The article MUST contain reliable mathematical formulas and context. Provide clean code, robust state, Tailwind styling, and Lucide icons. Use exactly the English slugs provided for the filenames.\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-04T18:27:06+07:00.\n</ADDITIONAL_METADATA>"
+  }
+}

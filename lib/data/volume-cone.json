@@ -1,0 +1,14 @@
+{
+  "id": "volume-cone",
+  "slug": "volume-cone",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาปริมาตรทรงกรวย",
+    "EN": "Cone Volume Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณปริมาตรทรงกรวยออนไลน์ เพียงใส่ค่ารัศมีและความสูง พร้อมคำอธิบายสูตรอย่างละเอียด",
+    "EN": "Online cone volume calculator. Enter radius and height to find the volume easily."
+  },
+  "category": "Math",
+  "icon": "Triangle"
+}

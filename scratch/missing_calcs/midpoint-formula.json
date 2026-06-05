@@ -1,0 +1,14 @@
+{
+  "id": "midpoint-formula",
+  "slug": "midpoint-formula",
+  "name": {
+    "TH": "เครื่องมือคำนวณพิกัดจุดกึ่งกลาง",
+    "EN": "Midpoint Formula Calculator"
+  },
+  "desc": {
+    "TH": "หาพิกัดของจุดกึ่งกลางระหว่างจุดสองจุดบนระนาบคาร์ทีเซียนด้วยสูตรคณิตศาสตร์",
+    "EN": "Calculate the coordinates of the midpoint between two points on a Cartesian plane."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

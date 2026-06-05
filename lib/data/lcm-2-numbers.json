@@ -1,0 +1,14 @@
+{
+  "id": "lcm-2-numbers",
+  "slug": "lcm-2-numbers",
+  "name": {
+    "TH": "โปรแกรมหา ค.ร.น. 2 จำนวน",
+    "EN": "LCM of 2 Numbers Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือหาคูณร่วมน้อย (ค.ร.น.) ของตัวเลขสองจำนวน พร้อมแสดงขั้นตอนความสัมพันธ์ระหว่าง ห.ร.ม. และ ค.ร.น.",
+    "EN": "Calculate the Least Common Multiple (LCM) of two numbers."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

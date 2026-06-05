@@ -1,0 +1,14 @@
+{
+  "id": "simple-moving-average",
+  "slug": "simple-moving-average",
+  "name": {
+    "TH": "คำนวณค่าเฉลี่ยเคลื่อนที่อย่างง่าย (SMA)",
+    "EN": "Simple Moving Average Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณค่าเฉลี่ยเคลื่อนที่อย่างง่าย (Simple Moving Average - SMA) จากชุดข้อมูล",
+    "EN": "Calculate the Simple Moving Average (SMA) from a dataset to identify trends."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

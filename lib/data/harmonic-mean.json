@@ -1,0 +1,14 @@
+{
+  "id": "harmonic-mean",
+  "slug": "harmonic-mean",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาค่ามัธยฐานฮาร์โมนิก (Harmonic Mean)",
+    "EN": "Harmonic Mean Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาค่าเฉลี่ยฮาร์โมนิก (Harmonic Mean) จากชุดข้อมูลตัวเลข",
+    "EN": "Calculate the harmonic mean of a dataset of numbers."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

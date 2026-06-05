@@ -1,0 +1,14 @@
+{
+  "id": "poisson-distribution",
+  "slug": "poisson-distribution",
+  "name": {
+    "TH": "คำนวณการแจกแจงแบบปัวซง (Poisson)",
+    "EN": "Poisson Distribution Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณกฎการแจกแจงแบบปัวซง สำหรับหาความน่าจะเป็นของจำนวนเหตุการณ์ที่เกิดขึ้นในขอบเขตที่กำหนด",
+    "EN": "Calculate Poisson Distribution Probability for finding the likelihood of a number of events occurring."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

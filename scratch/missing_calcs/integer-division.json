@@ -1,0 +1,14 @@
+{
+  "id": "integer-division",
+  "slug": "integer-division",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาผลหารแบบจำนวนเต็ม",
+    "EN": "Integer Division Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาผลหารแบบจำนวนเต็ม (Integer Division) และเศษเหลือ พร้อมวิธีการหารเบื้องต้น",
+    "EN": "Calculate the integer division (quotient) and remainder with basic steps."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

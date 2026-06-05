@@ -1,0 +1,14 @@
+{
+  "id": "taro-yamane-sample-size",
+  "slug": "taro-yamane-sample-size",
+  "name": {
+    "TH": "เครื่องมือคำนวณขนาดกลุ่มตัวอย่างของทาโร่ ยามาเน่",
+    "EN": "Taro Yamane Sample Size Calculator"
+  },
+  "desc": {
+    "TH": "หาขนาดกลุ่มตัวอย่างที่เหมาะสมในการวิจัยด้วยสูตร Taro Yamane",
+    "EN": "Calculate the required sample size for research using the Taro Yamane formula."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

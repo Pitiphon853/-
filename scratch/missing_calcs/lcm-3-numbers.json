@@ -1,0 +1,14 @@
+{
+  "id": "lcm-3-numbers",
+  "slug": "lcm-3-numbers",
+  "name": {
+    "TH": "โปรแกรมหา ค.ร.น. 3 จำนวน",
+    "EN": "LCM of 3 Numbers Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือหาคูณร่วมน้อย (ค.ร.น.) ของตัวเลขสามจำนวน พร้อมแสดงขั้นตอนการคำนวณทีละคู่",
+    "EN": "Calculate the Least Common Multiple (LCM) of three numbers."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

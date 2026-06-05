@@ -1,0 +1,14 @@
+{
+  "id": "mean-calculator",
+  "slug": "mean-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาค่าเฉลี่ยเลขคณิต",
+    "EN": "Mean Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาค่าเฉลี่ยเลขคณิต (Mean หรือ Average) จากชุดข้อมูล พร้อมแสดงผลรวมและจำนวนข้อมูล",
+    "EN": "Calculate the arithmetic mean or average from a set of numbers."
+  },
+  "category": "Math",
+  "icon": "Sigma"
+}

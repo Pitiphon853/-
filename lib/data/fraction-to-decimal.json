@@ -1,0 +1,14 @@
+{
+  "id": "fraction-to-decimal",
+  "slug": "fraction-to-decimal",
+  "name": {
+    "TH": "แปลงเศษส่วนเป็นทศนิยม",
+    "EN": "Fraction to Decimal Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณแปลงเศษส่วนเป็นทศนิยม พร้อมอธิบายวิธีทำ",
+    "EN": "Convert fractions to decimals easily with explanations."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "percent-difference",
+  "slug": "percent-difference",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาความแตกต่างเป็นเปอร์เซ็นต์ (Percent Difference)",
+    "EN": "Percent Difference Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาความแตกต่างระหว่างสองค่าหรือสองทศนิยม ให้ออกมาเป็นเปอร์เซ็นต์ (Percent Difference)",
+    "EN": "Calculate the percent difference between two numbers."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

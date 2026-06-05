@@ -1,0 +1,14 @@
+{
+  "id": "geometric-series-sum",
+  "slug": "geometric-series-sum",
+  "name": {
+    "TH": "เครื่องมือคำนวณผลรวมอนุกรมเรขาคณิต",
+    "EN": "Geometric Series Sum Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาผลรวมของอนุกรมเรขาคณิตจำกัดอย่างรวดเร็วและแม่นยำ เพียงระบุพจน์แรก อัตราส่วนร่วม และจำนวนพจน์",
+    "EN": "Quickly calculate the sum of a finite geometric series by providing the first term, common ratio, and number of terms."
+  },
+  "category": "Math",
+  "icon": "Sigma"
+}

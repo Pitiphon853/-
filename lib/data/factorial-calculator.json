@@ -1,0 +1,14 @@
+{
+  "id": "factorial-calculator",
+  "slug": "factorial-calculator",
+  "name": {
+    "TH": "เครื่องคำนวณแฟกทอเรียล",
+    "EN": "Factorial Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณหาค่าแฟกทอเรียล (n!) ของตัวเลขจำนวนเต็มบวก",
+    "EN": "Calculate the factorial (n!) of a non-negative integer."
+  },
+  "category": "Math",
+  "icon": "Hash"
+}

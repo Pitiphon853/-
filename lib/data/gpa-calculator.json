@@ -1,0 +1,14 @@
+{
+  "id": "gpa-calculator",
+  "slug": "gpa-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณเกรดเฉลี่ยประจำเทอม (GPA)",
+    "EN": "GPA Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณเกรดเฉลี่ยสะสมประจำเทอม (GPA) ของแต่ละวิชาเรียน พร้อมระบบเลือกเกรดและหน่วยกิตอย่างง่าย",
+    "EN": "Calculate your Grade Point Average (GPA) for a single semester with custom grades and credit weights."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

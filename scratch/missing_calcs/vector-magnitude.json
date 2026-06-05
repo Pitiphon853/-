@@ -1,0 +1,14 @@
+{
+  "id": "vector-magnitude",
+  "slug": "vector-magnitude",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาขนาดความยาวของเวกเตอร์",
+    "EN": "Vector Magnitude Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาขนาดหรือความยาวของเวกเตอร์ (Vector Magnitude) ในระบบ 2 มิติ และ 3 มิติ",
+    "EN": "Calculate the magnitude or length of a vector in 2D and 3D systems."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

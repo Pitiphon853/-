@@ -1,0 +1,14 @@
+{
+  "id": "even-odd-function-checker",
+  "slug": "even-odd-function-checker",
+  "name": {
+    "TH": "เครื่องมือตรวจสอบฟังก์ชันคู่และฟังก์ชันคี่",
+    "EN": "Even and Odd Function Checker"
+  },
+  "desc": {
+    "TH": "ตรวจสอบฟังก์ชันพหุนามว่าเป็นฟังก์ชันคู่ (Even) ฟังก์ชันคี่ (Odd) หรือไม่ใช่ทั้งสองอย่าง",
+    "EN": "Check if a polynomial function is Even, Odd, or neither."
+  },
+  "category": "Math",
+  "icon": "Sigma"
+}

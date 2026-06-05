@@ -1,0 +1,14 @@
+{
+  "id": "modulo-calculator",
+  "slug": "modulo-calculator",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาเศษของการหาร",
+    "EN": "Modulo Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาเศษที่เหลือจากการหาร (Modulo หรือ มอดุโล โอเปอเรเตอร์ %) พร้อมแสดงวิธีการคำนวณ",
+    "EN": "Calculate the remainder of a division (Modulo operator %) with steps."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

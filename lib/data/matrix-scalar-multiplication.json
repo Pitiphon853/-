@@ -1,0 +1,14 @@
+{
+  "id": "matrix-scalar-multiplication",
+  "slug": "matrix-scalar-multiplication",
+  "name": {
+    "TH": "เครื่องมือคำนวณการคูณเมทริกซ์ด้วยตัวเลข",
+    "EN": "Matrix Scalar Multiplication Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณการคูณเมทริกซ์ด้วยค่าคงตัวหรือสเกลาร์ (Scalar) พร้อมแสดงผลลัพธ์ทีละขั้นตอน",
+    "EN": "Calculate the multiplication of a matrix by a scalar value."
+  },
+  "category": "Math",
+  "icon": "Hash"
+}

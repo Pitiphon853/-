@@ -1,0 +1,14 @@
+{
+  "id": "coefficient-of-variation",
+  "slug": "coefficient-of-variation",
+  "name": {
+    "TH": "เครื่องมือคำนวณสัมประสิทธิ์ความแปรผัน (CV)",
+    "EN": "Coefficient of Variation Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณสัมประสิทธิ์ความแปรผัน (Coefficient of Variation - CV) ทางสถิติ",
+    "EN": "Statistical Coefficient of Variation (CV) Calculator"
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

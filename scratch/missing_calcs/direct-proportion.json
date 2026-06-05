@@ -1,0 +1,14 @@
+{
+  "id": "direct-proportion",
+  "slug": "direct-proportion",
+  "name": {
+    "TH": "คำนวณสัดส่วน/บัญญัติไตรยางศ์ (แปรผันตรง)",
+    "EN": "Direct Proportion Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณสัดส่วนหรือบัญญัติไตรยางศ์แบบแปรผันตรง หาค่าตัวแปรที่ 4",
+    "EN": "Calculate direct proportions easily using the rule of three."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "prime-number-checker",
+  "slug": "prime-number-checker",
+  "name": {
+    "TH": "เครื่องมือตรวจสอบจำนวนเฉพาะ",
+    "EN": "Prime Number Checker"
+  },
+  "desc": {
+    "TH": "ตรวจสอบว่าตัวเลขของคุณเป็นจำนวนเฉพาะ (Prime Number) หรือไม่ พร้อมแสดงเหตุผลและวิธีเช็ค",
+    "EN": "Check if a number is prime and see its divisors and neighboring prime numbers."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "volume-pyramid",
+  "slug": "volume-pyramid",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาปริมาตรพีระมิดฐานสี่เหลี่ยม",
+    "EN": "Rectangular Pyramid Volume Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณปริมาตรพีระมิดฐานสี่เหลี่ยมออนไลน์ ระบุกว้าง ยาว สูง เพื่อหาคำตอบทันที",
+    "EN": "Calculate the volume of a rectangular or square pyramid online."
+  },
+  "category": "Math",
+  "icon": "Triangle"
+}

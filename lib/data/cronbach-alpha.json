@@ -1,0 +1,14 @@
+{
+  "id": "cronbach-alpha",
+  "slug": "cronbach-alpha",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาความเชื่อมั่นด้วยครอนบาคอัลฟา",
+    "EN": "Cronbach's Alpha Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาความเชื่อมั่นของแบบสอบถามหรือเครื่องมือวัดด้วยค่าอัลฟาของครอนบาค (Cronbach's Alpha)",
+    "EN": "Calculate the internal consistency reliability of an instrument using Cronbach's Alpha."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

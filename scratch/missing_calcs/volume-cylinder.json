@@ -1,0 +1,14 @@
+{
+  "id": "volume-cylinder",
+  "slug": "volume-cylinder",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาปริมาตรทรงกระบอก",
+    "EN": "Cylinder Volume Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณปริมาตรทรงกระบอกออนไลน์ แค่ใส่รัศมีและความสูง พร้อมสูตรและคำอธิบาย",
+    "EN": "Online cylinder volume calculator. Enter radius and height to calculate."
+  },
+  "category": "Math",
+  "icon": "Cylinder"
+}

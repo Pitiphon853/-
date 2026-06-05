@@ -1,0 +1,14 @@
+{
+  "id": "geometric-mean",
+  "slug": "geometric-mean",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาค่าเฉลี่ยเรขาคณิต (Geometric Mean)",
+    "EN": "Geometric Mean Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาค่าเฉลี่ยเรขาคณิต (Geometric Mean) จากชุดข้อมูลตัวเลข",
+    "EN": "Calculate the geometric mean of a dataset of numbers."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

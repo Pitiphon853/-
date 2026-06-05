@@ -1,0 +1,14 @@
+{
+  "id": "cartesian-product",
+  "slug": "cartesian-product",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาผลคูณคาร์ทีเซียน",
+    "EN": "Cartesian Product Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาผลคูณคาร์ทีเซียน (A x B) ของสองเซต พร้อมแสดงคู่อันดับและตารางจับคู่อย่างละเอียด",
+    "EN": "Calculate the Cartesian Product (A x B) of two sets, displaying the ordered pairs and matching grid."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

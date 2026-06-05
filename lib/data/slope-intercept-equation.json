@@ -1,0 +1,14 @@
+{
+  "id": "slope-intercept-equation",
+  "slug": "slope-intercept-equation",
+  "name": {
+    "TH": "เครื่องมือหาสมการเส้นตรงในรูปความชันและจุดตัดแกน Y",
+    "EN": "Slope-Intercept Equation Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาสมการเส้นตรง y = mx + b จากจุดสองจุด หรือ ความชันและจุดผ่าน",
+    "EN": "Calculate the linear equation in slope-intercept form (y = mx + b) from points or slope."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

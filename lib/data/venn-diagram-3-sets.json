@@ -1,0 +1,14 @@
+{
+  "id": "venn-diagram-3-sets",
+  "slug": "venn-diagram-3-sets",
+  "name": {
+    "TH": "เครื่องมือคำนวณหาเวนน์ไดอะแกรม (Venn Diagram) 3 เซต",
+    "EN": "3-Set Venn Diagram Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณหาความสัมพันธ์ ยูเนียน อินเตอร์เซกชัน และสมาชิกในแต่ละบริเวณของ 3 เซต (A, B, C) พร้อมรูปภาพประกอบ",
+    "EN": "Calculate the relations, union, intersection, and sizes of 3 overlapping sets (A, B, C) with an interactive SVG."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}

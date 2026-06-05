@@ -1,0 +1,14 @@
+{
+  "id": "inverse-proportion",
+  "slug": "inverse-proportion",
+  "name": {
+    "TH": "คำนวณสัดส่วน/บัญญัติไตรยางศ์ (แปรผกผัน)",
+    "EN": "Inverse Proportion Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือคำนวณสัดส่วนหรือบัญญัติไตรยางศ์แบบแปรผกผัน หาค่าตัวแปรที่ 4",
+    "EN": "Calculate inverse proportions easily using the inverse rule of three."
+  },
+  "category": "Math",
+  "icon": "Calculator"
+}
