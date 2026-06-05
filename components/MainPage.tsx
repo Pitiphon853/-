@@ -81,6 +81,21 @@ export default function MainPage({ activeSlug = null }: { activeSlug?: string | 
   
   const t = dict[lang];
 
+  const currentCalc = activeCalc ? allCalcs.find(c => c.id === activeCalc) : null;
+  const getDeterministicRelated = () => {
+    if (!currentCalc || !activeCalc) return [];
+    const related = allCalcs.filter(c => c.category === currentCalc.category && c.id !== activeCalc);
+    if (related.length <= 4) return related;
+    const hash = activeCalc.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    const startIndex = hash % related.length;
+    const result = [];
+    for (let i = 0; i < 4; i++) {
+      result.push(related[(startIndex + i) % related.length]);
+    }
+    return result;
+  };
+  const relatedCalcs = getDeterministicRelated();
+
   useEffect(() => {
     const savedFavs = localStorage.getItem("fav_calcs");
     if (savedFavs) setFavorites(JSON.parse(savedFavs));
@@ -411,6 +426,59 @@ export default function MainPage({ activeSlug = null }: { activeSlug?: string | 
                 <div className={`glass-card p-8 md:p-12 rounded-3xl border-2 transition-colors shadow-neo dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] bg-white/80 dark:bg-black/50 backdrop-blur-xl ${colorClasses[activeColor as keyof typeof colorClasses]}`}>
                   <Calculators activeCalc={activeCalc} lang={lang} setCalc={setActiveCalc} />
                 </div>
+
+                {relatedCalcs.length > 0 && (
+                  <div className="mt-12">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
+                      {lang === "TH" ? "เครื่องมือคำนวณที่เกี่ยวข้อง" : "Related Calculators"}
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                      {relatedCalcs.map((calc) => {
+                        const color = getCategoryColor(calc.category);
+                        
+                        const cardClasses = {
+                          pink: "hover:border-pink-500 hover:shadow-[4px_4px_0px_0px_#ec4899]",
+                          green: "hover:border-green-500 hover:shadow-[4px_4px_0px_0px_#22c55e]",
+                          blue: "hover:border-blue-500 hover:shadow-[4px_4px_0px_0px_#3b82f6]",
+                          purple: "hover:border-purple-500 hover:shadow-[4px_4px_0px_0px_#a855f7]",
+                          amber: "hover:border-amber-500 hover:shadow-[4px_4px_0px_0px_#f59e0b]",
+                          orange: "hover:border-orange-500 hover:shadow-[4px_4px_0px_0px_#f97316]",
+                          cyan: "hover:border-cyan-500 hover:shadow-[4px_4px_0px_0px_#06b6d4]",
+                          indigo: "hover:border-indigo-500 hover:shadow-[4px_4px_0px_0px_#6366f1]",
+                          yellow: "hover:border-yellow-500 hover:shadow-[4px_4px_0px_0px_#eab308]",
+                          emerald: "hover:border-emerald-500 hover:shadow-[4px_4px_0px_0px_#10b981]"
+                        };
+
+                        const textHoverClasses = {
+                          pink: "group-hover:text-pink-500",
+                          green: "group-hover:text-green-500",
+                          blue: "group-hover:text-blue-500",
+                          purple: "group-hover:text-purple-500",
+                          amber: "group-hover:text-amber-500",
+                          orange: "group-hover:text-orange-500",
+                          cyan: "group-hover:text-cyan-500",
+                          indigo: "group-hover:text-indigo-500",
+                          yellow: "group-hover:text-yellow-500",
+                          emerald: "group-hover:text-emerald-500"
+                        };
+
+                        return (
+                          <Link href={`/${calc.slug || calc.id}`} key={calc.id} legacyBehavior>
+                            <div className={`glass-card group cursor-pointer p-4 rounded-xl hover:-translate-y-0.5 transition-all border border-gray-200 dark:border-white/10 bg-white dark:bg-transparent ${cardClasses[color as keyof typeof cardClasses]}`}>
+                              <div className="flex items-center gap-2 mb-2">
+                                <calc.icon className={`w-5 h-5 text-gray-400 group-hover:scale-105 transition-transform ${textHoverClasses[color as keyof typeof textHoverClasses]}`} />
+                                <h4 className={`text-sm font-bold text-gray-900 dark:text-white line-clamp-1 transition-colors ${textHoverClasses[color as keyof typeof textHoverClasses]}`}>
+                                  {calc.name}
+                                </h4>
+                              </div>
+                              <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2">{calc.desc}</p>
+                            </div>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
               </motion.div>
             )}
           </AnimatePresence>
