@@ -9,6 +9,6 @@
     "TH": "คำนวณค่าเฉลี่ยถ่วงน้ำหนัก (Weighted Average) จากรายการค่าและน้ำหนักความสำคัญ พร้อมอธิบายขั้นตอนและสูตรคำนวณ",
     "EN": "Calculate the weighted average of a set of values with corresponding weights, showing step-by-step calculations."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

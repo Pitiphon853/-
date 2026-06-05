@@ -9,6 +9,6 @@
     "TH": "หาว่าตัวเลขหนึ่งคิดเป็นกี่เปอร์เซ็นต์ของอีกตัวเลขหนึ่ง (เช่น 50 เป็นกี่ % ของ 200)",
     "EN": "Calculate what percentage a number is of another number."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

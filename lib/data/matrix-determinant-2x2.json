@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณหาค่าดีเทอร์มิแนนต์ (Determinant) ของเมทริกซ์ขนาด 2x2 พร้อมแสดงวิธีทำ",
     "EN": "Calculate the determinant of a 2x2 matrix."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

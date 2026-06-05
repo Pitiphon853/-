@@ -9,6 +9,6 @@
     "TH": "คำนวณอัตราความเข้าใจในการอ่าน ความเร็วในการอ่าน (WPM) และประสิทธิภาพโดยรวม",
     "EN": "Calculate reading comprehension rate, reading speed (WPM), and overall efficiency score"
   },
-  "category": "Misc",
+  "category": "General",
   "icon": "BookOpen"
 }

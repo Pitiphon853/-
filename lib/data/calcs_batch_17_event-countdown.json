@@ -9,6 +9,6 @@
     "TH": "นับถอยหลังไปยังวันสำคัญ เช่น ปีใหม่ สงกรานต์ วันเกิด วันแต่งงาน แบบเรียลไทม์",
     "EN": "Real-time countdown timer to important events like New Year, Songkran, birthdays, and weddings"
   },
-  "category": "Misc",
+  "category": "General",
   "icon": "CalendarClock"
 }

@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณหาพื้นที่เซกเตอร์ของวงกลม (ส่วนของวงกลมคล้ายชิ้นพิซซ่า) จากรัศมีและมุม",
     "EN": "Calculate the area of a circular sector using radius and central angle."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "PieChart"
 }

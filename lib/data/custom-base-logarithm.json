@@ -1,8 +1,14 @@
 {
   "id": "custom-base-logarithm",
   "slug": "custom-base-logarithm",
-  "name": { "TH": "คำนวณลอการิทึมฐานใดๆ", "EN": "Custom Base Logarithm Calculator" },
-  "desc": { "TH": "เครื่องมือหาค่าลอการิทึมของตัวเลขโดยกำหนดฐานได้เอง (log base x of y)", "EN": "Calculate the logarithm of a number with a custom base" },
-  "category": "Math",
+  "name": {
+    "TH": "คำนวณลอการิทึมฐานใดๆ",
+    "EN": "Custom Base Logarithm Calculator"
+  },
+  "desc": {
+    "TH": "เครื่องมือหาค่าลอการิทึมของตัวเลขโดยกำหนดฐานได้เอง (log base x of y)",
+    "EN": "Calculate the logarithm of a number with a custom base"
+  },
+  "category": "Science",
   "icon": "Sigma"
 }

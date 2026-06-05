@@ -9,6 +9,6 @@
     "TH": "คำนวณหาขอบเขตบนและล่าง เพื่อค้นหาค่าผิดปกติ (Outliers) ในข้อมูล",
     "EN": "Find upper and lower bounds to identify outliers in a dataset."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "AlertCircle"
 }

@@ -9,6 +9,6 @@
     "TH": "คำนวณหาค่าเฉลี่ยฮาร์โมนิก (Harmonic Mean) จากชุดข้อมูลตัวเลข",
     "EN": "Calculate the harmonic mean of a dataset of numbers."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

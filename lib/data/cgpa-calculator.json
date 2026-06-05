@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณเกรดเฉลี่ยสะสมรวมหลายเทอม (GPAX / CGPA) เพียงกรอกเกรดเฉลี่ยและหน่วยกิตของแต่ละเทอม",
     "EN": "Calculate your cumulative GPA (CGPA or GPAX) across multiple semesters based on semester GPA and credits."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

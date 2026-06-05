@@ -1,8 +1,14 @@
 {
   "id": "hectare-to-rai",
   "slug": "hectare-to-rai",
-  "name": { "TH": "แปลงเฮกตาร์เป็นไร่", "EN": "Hectare to Rai Converter" },
-  "desc": { "TH": "โปรแกรมแปลงหน่วยพื้นที่จากเฮกตาร์เป็นไร่ งาน ตารางวา (1 เฮกตาร์ = 6.25 ไร่)", "EN": "Convert area from hectares to rai, ngan, sq wa" },
-  "category": "Math",
+  "name": {
+    "TH": "แปลงเฮกตาร์เป็นไร่",
+    "EN": "Hectare to Rai Converter"
+  },
+  "desc": {
+    "TH": "โปรแกรมแปลงหน่วยพื้นที่จากเฮกตาร์เป็นไร่ งาน ตารางวา (1 เฮกตาร์ = 6.25 ไร่)",
+    "EN": "Convert area from hectares to rai, ngan, sq wa"
+  },
+  "category": "Science",
   "icon": "Calculator"
 }

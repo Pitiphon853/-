@@ -9,6 +9,6 @@
     "TH": "คำนวณหาค่าความน่าจะเป็นแบบมีเงื่อนไขตามทฤษฎีบทของเบย์ P(A|B) พร้อมขั้นตอนการคำนวณทีละสเต็ป",
     "EN": "Calculate conditional probabilities using Bayes' Theorem P(A|B) with step-by-step formula explanations."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

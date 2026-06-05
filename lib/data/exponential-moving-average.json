@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณหาค่าเฉลี่ยเคลื่อนที่แบบถ่วงน้ำหนักเอ็กซ์โพเนนเชียล (EMA) สำหรับวิเคราะห์แนวโน้มชุดข้อมูลและราคาย้อนหลัง",
     "EN": "Calculate the Exponential Moving Average (EMA) from a dataset to identify price trends."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "TrendingUp"
 }

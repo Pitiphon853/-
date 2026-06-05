@@ -9,6 +9,6 @@
     "TH": "คำนวณเวลาที่สูญเสียไปจากการตอบอีเมลหรือข้อความ และผลกระทบต่อประสิทธิภาพการทำงาน (Productivity)",
     "EN": "Calculate time lost from checking emails and messages, and its impact on productivity."
   },
-  "category": "Misc",
+  "category": "General",
   "icon": "Mail"
 }

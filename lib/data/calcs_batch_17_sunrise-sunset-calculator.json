@@ -9,6 +9,6 @@
     "TH": "คำนวณเวลาพระอาทิตย์ขึ้นและพระอาทิตย์ตกตามจังหวัดหรือพิกัดที่ต้องการ",
     "EN": "Calculate sunrise and sunset times for Thai provinces or custom coordinates"
   },
-  "category": "Misc",
+  "category": "General",
   "icon": "Sun"
 }

@@ -9,6 +9,6 @@
     "TH": "คำนวณหาความแตกต่างระหว่างสองค่าหรือสองทศนิยม ให้ออกมาเป็นเปอร์เซ็นต์ (Percent Difference)",
     "EN": "Calculate the percent difference between two numbers."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

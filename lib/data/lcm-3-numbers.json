@@ -9,6 +9,6 @@
     "TH": "เครื่องมือหาคูณร่วมน้อย (ค.ร.น.) ของตัวเลขสามจำนวน พร้อมแสดงขั้นตอนการคำนวณทีละคู่",
     "EN": "Calculate the Least Common Multiple (LCM) of three numbers."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

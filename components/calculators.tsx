@@ -1,154 +1,38 @@
 "use client";
-
-import { Lang } from "./dictionary";
-import { BMICalculator, SleepCalculator, TDEECalculator, WaterCalculator as HealthWaterCalculator, FoodRandomizer } from "./calcs/HealthCalcs";
-import { ExerciseCaloriesCalculator, ProteinCalculator, BodyFatCalculator, WHRCalculator, HeartRateZoneCalculator, MacroCalculator, BloodSugarConverter, IBWCalculator, StepsCalculator, OneRepMaxCalculator, PaceCalculator } from "./calcs/HealthCalcs2";
-import { ChildHeightCalculator } from "./calcs/FamilyCalcs";
-import { PregnancyDueCalculator, OvulationCalculator, BloodTypePredictor, ZodiacCalculator, PetAgeCalculator, FetalWeightCalculator, ChildCostCalculator, ChildMilestoneCalculator } from "./calcs/FamilyCalcs2";
-import { TimeZoneConverter, TravelBudgetCalculator, FlightTimeCalculator, PackingListGenerator, RoadTripCostCalculator, BaggageWeightChecker } from "./calcs/TravelCalcs";
-import { DiscountCalculator, CarLoanCalculator, MortgageCalculator, CompoundInterest, BillSplitter, CurrencyConverter } from "./calcs/FinanceCalcs";
-import { SavingsGoalCalculator, InflationCalculator, SalaryToHourlyCalculator, NetWorthCalculator, DebtPayoffCalculator, RetirementCalculator, StockProfitCalculator, ROICalculator } from "./calcs/FinanceCalcs2";
-import { DCACalculator, StockFeeCalculator, NetSalaryCalculator, ExpenseTrackerCalculator } from "./calcs/FinanceCalcs3";
-import { PersonalTaxCalculator } from "./calcs/PersonalTaxCalculator";
-import { GoldPriceCalculator } from "./calcs/GoldCalcs";
-import { VO2MaxCalculator, SwimPaceCalculator, CyclingPowerZones } from "./calcs/ExerciseCalcs";
-import { RacePredictor, LiftingPyramid, RowingSplit, CarbEnduranceCalc } from "./calcs/ExerciseCalcs2";
-import { FiberCalculator, VitaminDCalculator, BMIKidsCalculator } from "./calcs/HealthCalcs3";
-import { WeddingBudget, NewbornCost, PetCost, FoodExpiration, RentVsBuyCalc } from "./calcs/FamilyCalcs4";
-import { EOQCalculator, ChurnRetentionCalc, ShrinkageCalc, ImportMarkupCalc, FreelanceRate } from "./calcs/BusinessCalcs4";
-import { EnglishTestConverter, PomodoroTimer, FlashCardTimer } from "./calcs/EducationCalcs";
-import { VatCalculator, MarginCalculator } from "./calcs/BusinessCalcs";
-import { BreakEvenCalculator, MarkupCalculator, DepreciationCalculator, PayrollCalculator, COGSCalculator, LTVCalculator, CACCalculator, ConversionRateCalculator, InventoryTurnoverCalculator } from "./calcs/BusinessCalcs2";
-import { FinancialRatioCalculator, MarketplaceFeeCalculator, SafetyStockCalculator, ShippingCostCalculator, ReturnRateCalculator } from "./calcs/BusinessCalcs3";
-import { BTUCalculator, ElectricCalculator, WaterCalculator as UtilityWaterCalculator, BaseNCalculator, GPACalculator, FuelCostCalculator } from "./calcs/UtilityCalcs";
-import { GradeConverter, TargetGPACalculator, PercentileCalculator, ReadingTimeCalculator } from "./calcs/UtilityCalcs2";
-import { WordCounter, AgeCalculator } from "./calcs/GeneralCalcs";
-import { CookingUnitConverter, TileAreaCalculator } from "./calcs/ConversionCalcs";
-import { DigitalUnitConverter, AngleConverter, ColorConverter, TemperatureConverter, SpeedConverter, AreaUnitConverter, WeightUnitConverter, RomanNumeralConverter, AreaShapeCalculator, VolumeShapeCalculator, WorkingDaysCalculator } from "./calcs/ConversionCalcs2";
-import { PantoneConverter } from "./calcs/ConversionCalcs3";
-import { FoodEnergyCalculator, FertilizerCalculator, IrrigationCalculator, YieldCalculator } from "./calcs/AgricultureCalcs";
-import { HousePaintCalculator, CementCalculator, WallpaperCalculator, RoofAreaCalculator, WaterTankCalculator, PoolVolumeCalculator, InsulationCalculator, RenovationCostCalculator } from "./calcs/ConstructionCalcs";
-import { BandwidthCalculator, ServerCostCalculator, ImageSizeCalculator, IPSubnetCalculator, VideoBitrateCalculator, BatteryLifeCalculator, HashRateCalculator } from "./calcs/TechnologyCalcs";
-import { RaidCalculator, PpiCalculator, ApiCostCalculator, UpsRuntimeCalculator, MorseCodeConverter, AsciiConverter, CacheHitRateCalculator } from "./calcs/TechnologyCalcs2";
-import { DurianCalculator } from "./calcs/AgricultureCalcs2";
-import { SoilPhCalculator, LivestockProfitCalculator, SprayVolumeCalculator, FisheryIncomeCalculator, YieldGapCalculator } from "./calcs/AgricultureCalcs3";
-import { JetLagCalculator, RoamingCostCalculator } from "./calcs/TravelCalcs2";
-import { SolarPanelCalculator, InteriorCostCalculator, AchVentilationCalculator, ConcreteVolumeCalculator, RebarWeightCalculator, AacBlocksCalculator, LaborCostCalculator, PlumbingPipeCalculator, SlopeGradeCalculator } from "./calcs/ConstructionCalcs2";
-import { CarbonFootprintCalculator, WindEnergyCalculator, WaterSavingsCalculator, PlasticFootprintCalculator } from "./calcs/EnvironmentCalcs";
-import { QuadraticCalculator, PHCalculator } from "./calcs/ScienceCalcs";
-import { 
-  CostPerWear, 
-  WardrobeBudget, 
-  SkincareRoutineCost, 
-  HaircutAnnualExpense, 
-  NailCareExpense, 
-  HairTreatmentExpense, 
-  GymSupplementCost, 
-  StreamingSubscriptionsCost, 
-  CoffeeShopAnnualCost, 
-  SmokingVapingCost 
-} from "./calcs/FashionLifestyleCalcs";
-
-import { 
-  RentalYieldNew, 
-  CommercialCapRate, 
-  ValuationIncomeApproach, 
-  ValuationCostApproach, 
-  HouseFlippingROI, 
-  AirbnbProfitEstimator, 
-  PropertyTaxesNew, 
-  LandPriceValuation, 
-  LandSubdivisionCost, 
-  DSCRCalculator 
-} from "./calcs/RealEstateCalcsNew";
-
-import { HoroscopeCalculator } from "./calcs/FamilyCalcs3";
-import {
-  ContinuousCompoundingCalculator,
-  PermutationCombinationCalculator,
-  BayesTheoremCalculator,
-  StandardDeviationCalculator,
-  RegressionLineCalculator,
-  ChiSquareCalculator,
-  TTestCalculator,
-  SampleSizeCalculator,
-  ConfidenceIntervalCalculator,
-  ForceConverter,
-  PressureConverter,
-  EnergyConverterNew,
-  PowerConverter,
-  DensityConverter,
-  ProjectileMotionCalculator,
-  OhmsLawCalculator,
-  CapacitorChargeCalculator,
-  WaveCalculator,
-  PHBufferCalculator,
-  EquilibriumConstantCalculator
-} from "./calcs/MathScienceCalcs";
-
-import { TarotReadingCalculator } from "./calcs/TarotCalcs";
-import RelationshipInvestment from "./calcs/calcs_batch_26_relationship-investment";
-import DIOCalculator from "./calcs/calcs_batch_3_dio";
-import DSOCalculator from "./calcs/calcs_batch_3_dso";
-import EmployeeBonusCalculator from "./calcs/calcs_batch_3_employee-bonus";
-import ExpenseRatioCalculator from "./calcs/calcs_batch_3_expense-ratio";
-import GMVCalculator from "./calcs/calcs_batch_3_gmv-vs-net-revenue";
-import HeadcountToSalesCalculator from "./calcs/calcs_batch_3_headcount-to-sales";
-import InventoryCostingCalculator from "./calcs/calcs_batch_3_inventory-costing";
-import LandedCostCalculator from "./calcs/calcs_batch_3_landed-cost";
-import OfficeVsWfhCalculator from "./calcs/calcs_batch_3_office-vs-wfh";
-import PackagingCostCalculator from "./calcs/calcs_batch_3_packaging-cost";
-import BreakEvenChannelCalculator from "./calcs/calcs_batch_6_break-even-by-channel";
-import CarbonCreditCostCalculator from "./calcs/calcs_batch_6_carbon-credit-cost";
-import EventCostCalculator from "./calcs/calcs_batch_6_event-cost-per-attendee";
-import IsoCertificationCostCalculator from "./calcs/calcs_batch_6_iso-certification-cost";
-import NpvIrrCalculator from "./calcs/calcs_batch_6_npv-irr";
-import PatentCostCalculator from "./calcs/calcs_batch_6_patent-cost";
-import ProjectPaybackPeriodCalculator from "./calcs/calcs_batch_6_project-payback-period";
-import RoyaltyIncomeCalculator from "./calcs/calcs_batch_6_royalty-income";
-import SensitivityAnalysisCalculator from "./calcs/calcs_batch_6_sensitivity-analysis";
-import SpaceRentalDepositCalculator from "./calcs/calcs_batch_6_space-rental-deposit";
-import BreakEvenTime from "./calcs/calcs_batch_1_break-even-time";
-import CapacityUtilizationRate from "./calcs/calcs_batch_1_capacity-utilization-rate";
-import CashFlowProjection from "./calcs/calcs_batch_1_cash-flow-projection";
-import CostPerUnit from "./calcs/calcs_batch_1_cost-per-unit";
-import DoubleDecliningDepreciation from "./calcs/calcs_batch_1_double-declining-depreciation";
-import FreelanceVsFulltimeCost from "./calcs/calcs_batch_1_freelance-vs-fulltime-cost";
-import RetailSpaceRentRoi from "./calcs/calcs_batch_1_retail-space-rent-roi";
-import SimplifiedPL from "./calcs/calcs_batch_1_simplified-p-and-l";
-import WholesaleVsRetailMargin from "./calcs/calcs_batch_1_wholesale-vs-retail-margin";
-import WorkingCapital from "./calcs/calcs_batch_1_working-capital";
-import CompanyRegistrationCost from "./calcs/calcs_batch_2_company-registration-cost";
-import CorporateTaxCalculator from "./calcs/calcs_batch_2_corporate-tax";
-import CreditCardMdrFee from "./calcs/calcs_batch_2_credit-card-mdr-fee";
-import DeRatio from "./calcs/calcs_batch_2_de-ratio";
-import LegalReserveCalculator from "./calcs/calcs_batch_2_legal-reserve";
-import MarkupImportedMaterials from "./calcs/calcs_batch_2_markup-imported-materials";
-import PosSystemComparison from "./calcs/calcs_batch_2_pos-system-comparison";
-import QuickCurrentRatio from "./calcs/calcs_batch_2_quick-current-ratio";
-import RoeRoaRoic from "./calcs/calcs_batch_2_roe-roa-roic";
-import SalesCommissionStructure from "./calcs/calcs_batch_2_sales-commission-structure";
-import AdvertisingBudgetAllocation from "./calcs/calcs_batch_4_advertising-budget-allocation";
-import CacPaybackPeriod from "./calcs/calcs_batch_4_cac-payback-period";
-import EbitdaCalculator from "./calcs/calcs_batch_4_ebitda-calculator";
-import EmployeeOtCalculation from "./calcs/calcs_batch_4_employee-ot-calculation";
-import EmployerSocialSecurity from "./calcs/calcs_batch_4_employer-social-security";
-import FxForwardRateRisk from "./calcs/calcs_batch_4_fx-forward-rate-risk";
-import InternationalShippingCost from "./calcs/calcs_batch_4_international-shipping-cost";
-import MinimumWageProvince from "./calcs/calcs_batch_4_minimum-wage-province";
-import SeverancePayCalculation from "./calcs/calcs_batch_4_severance-pay-calculation";
-import WarehouseRentVsBuy from "./calcs/calcs_batch_4_warehouse-rent-vs-buy";
-import AcceptableCPCCalculator from "./calcs/calcs_batch_5_acceptable-cpc";
-import CAGRCalculator from "./calcs/calcs_batch_5_cagr";
-import FactoryElectricityCalculator from "./calcs/calcs_batch_5_factory-electricity";
-import FranchiseCostCalculator from "./calcs/calcs_batch_5_franchise-cost";
-import GrossMarginSkuCalculator from "./calcs/calcs_batch_5_gross-margin-sku";
-import NPSCalculator from "./calcs/calcs_batch_5_nps";
-import RealEstateBrokerFeeCalculator from "./calcs/calcs_batch_5_real-estate-broker-fee";
-import ReturnRateImpactCalculator from "./calcs/calcs_batch_5_return-rate-impact";
-import ROASCalculator from "./calcs/calcs_batch_5_roas";
-import SaasMrrArrCalculator from "./calcs/calcs_batch_5_saas-mrr-arr";
-import { LenormandCalculator, OracleCalculator, PlayingCardCalculator, KipperCalculator } from "./calcs/CardReadingCalcs";
+import { useTheme } from "./ThemeProvider";
+import AbsoluteValue from "./calcs/absolute-value";
+import AcreToHectare from "./calcs/acre-to-hectare";
+import AcreToRai from "./calcs/acre-to-rai";
+import AcreToSqM from "./calcs/acre-to-sqm";
+import AdmissionScorePercentageCalculator from "./calcs/admission-score-percentage";
+import AgileVelocityCalculator from "./calcs/agile-velocity";
+import ArcLengthCalculator from "./calcs/arc-length-calculator";
+import AreaCircleDiameter from "./calcs/area-circle-diameter";
+import AreaCircleRadius from "./calcs/area-circle-radius";
+import AreaEllipse from "./calcs/area-ellipse";
+import AreaHexagonCalculator from "./calcs/area-hexagon";
+import AreaIrregularPolygonCalculator from "./calcs/area-irregular-polygon";
+import AreaPentagonCalculator from "./calcs/area-pentagon";
+import AreaRectangle from "./calcs/area-rectangle";
+import AreaRhombusCalculator from "./calcs/area-rhombus";
+import AreaSquare from "./calcs/area-square";
+import AreaTrapezoid from "./calcs/area-trapezoid";
+import AreaTriangle from "./calcs/area-triangle";
+import ArithmeticSeriesSum from "./calcs/arithmetic-series-sum";
+import Base10To16 from "./calcs/base-10-to-16";
+import Base10To2 from "./calcs/base-10-to-2";
+import Base10To8 from "./calcs/base-10-to-8";
+import Base16To10 from "./calcs/base-16-to-10";
+import Base16To2 from "./calcs/base-16-to-2";
+import Base2To10 from "./calcs/base-2-to-10";
+import Base2To16 from "./calcs/base-2-to-16";
+import BayesTheorem from "./calcs/bayes-theorem";
+import BehavioralLife from "./calcs/behavioral-life";
+import BinaryArithmetic from "./calcs/binary-addition-subtraction";
+import BinomialDistribution from "./calcs/binomial-distribution";
+import BlueLightExposure from "./calcs/blue-light-exposure";
+import BtsMrtVsCar from "./calcs/bts-mrt-vs-car";
+import BusFactorCalculator from "./calcs/bus-factor";
 import EWasteWaterFootprint from "./calcs/calcs_batch_10_e-waste-water-footprint";
 import EVChargerInstallationCost from "./calcs/calcs_batch_10_ev-charger-installation-cost";
 import EVChargingCost from "./calcs/calcs_batch_10_ev-charging-cost";
@@ -214,46 +98,72 @@ import CarPoolCalculator from "./calcs/calcs_batch_16_car-pool-savings-calculato
 import MonthlyParkingCalculator from "./calcs/calcs_batch_16_monthly-parking-cost-calculator";
 import TollFeeCalculator from "./calcs/calcs_batch_16_monthly-toll-fee-calculator";
 import RideHailingVsOwnCarCalculator from "./calcs/calcs_batch_16_ride-hailing-vs-own-car-cost-calculator";
-import BreakEvenTime1 from "./calcs/calcs_batch_1_break-even-time";
-import CapacityUtilizationRate1 from "./calcs/calcs_batch_1_capacity-utilization-rate";
-import CashFlowProjection1 from "./calcs/calcs_batch_1_cash-flow-projection";
-import CostPerUnit1 from "./calcs/calcs_batch_1_cost-per-unit";
-import DoubleDecliningDepreciation1 from "./calcs/calcs_batch_1_double-declining-depreciation";
-import WorkingCapital1 from "./calcs/calcs_batch_1_working-capital";
-import WholesaleVsRetailMargin1 from "./calcs/calcs_batch_1_wholesale-vs-retail-margin";
-import RetailSpaceRentRoi1 from "./calcs/calcs_batch_1_retail-space-rent-roi";
-import SimplifiedPL1 from "./calcs/calcs_batch_1_simplified-p-and-l";
-import FreelanceVsFulltimeCost1 from "./calcs/calcs_batch_1_freelance-vs-fulltime-cost";
-import CompanyRegistrationCost1 from "./calcs/calcs_batch_2_company-registration-cost";
-import CorporateTaxCalculator1 from "./calcs/calcs_batch_2_corporate-tax";
-import CreditCardMdrFee1 from "./calcs/calcs_batch_2_credit-card-mdr-fee";
-import DeRatio1 from "./calcs/calcs_batch_2_de-ratio";
-import LegalReserveCalculator1 from "./calcs/calcs_batch_2_legal-reserve";
-import MarkupImportedMaterials1 from "./calcs/calcs_batch_2_markup-imported-materials";
-import PosSystemComparison1 from "./calcs/calcs_batch_2_pos-system-comparison";
-import QuickCurrentRatio1 from "./calcs/calcs_batch_2_quick-current-ratio";
-import RoeRoaRoic1 from "./calcs/calcs_batch_2_roe-roa-roic";
-import SalesCommissionStructure1 from "./calcs/calcs_batch_2_sales-commission-structure";
-import AdvertisingBudgetAllocation1 from "./calcs/calcs_batch_4_advertising-budget-allocation";
-import CacPaybackPeriod1 from "./calcs/calcs_batch_4_cac-payback-period";
-import EbitdaCalculator1 from "./calcs/calcs_batch_4_ebitda-calculator";
-import EmployeeOtCalculation1 from "./calcs/calcs_batch_4_employee-ot-calculation";
-import EmployerSocialSecurity1 from "./calcs/calcs_batch_4_employer-social-security";
-import FxForwardRateRisk1 from "./calcs/calcs_batch_4_fx-forward-rate-risk";
-import InternationalShippingCost1 from "./calcs/calcs_batch_4_international-shipping-cost";
-import MinimumWageProvince1 from "./calcs/calcs_batch_4_minimum-wage-province";
-import SeverancePayCalculation1 from "./calcs/calcs_batch_4_severance-pay-calculation";
-import WarehouseRentVsBuy1 from "./calcs/calcs_batch_4_warehouse-rent-vs-buy";
-import AcceptableCPCCalculator1 from "./calcs/calcs_batch_5_acceptable-cpc";
-import CAGRCalculator1 from "./calcs/calcs_batch_5_cagr";
-import FactoryElectricityCalculator1 from "./calcs/calcs_batch_5_factory-electricity";
-import FranchiseCostCalculator1 from "./calcs/calcs_batch_5_franchise-cost";
-import GrossMarginSkuCalculator1 from "./calcs/calcs_batch_5_gross-margin-sku";
-import NPSCalculator1 from "./calcs/calcs_batch_5_nps";
-import RealEstateBrokerFeeCalculator1 from "./calcs/calcs_batch_5_real-estate-broker-fee";
-import ReturnRateImpactCalculator1 from "./calcs/calcs_batch_5_return-rate-impact";
-import ROASCalculator1 from "./calcs/calcs_batch_5_roas";
-import SaasMrrArrCalculator1 from "./calcs/calcs_batch_5_saas-mrr-arr";
+import AnniversaryCountdown from "./calcs/calcs_batch_17_anniversary-countdown";
+import EventCountdown from "./calcs/calcs_batch_17_event-countdown";
+import ExactAgeCalculator from "./calcs/calcs_batch_17_exact-age-calculator";
+import RetirementCountdown from "./calcs/calcs_batch_17_retirement-countdown";
+import SunriseSunsetCalculator from "./calcs/calcs_batch_17_sunrise-sunset-calculator";
+import ThaiLunarPhase from "./calcs/calcs_batch_17_thai-lunar-phase";
+import FontSizeReadingDistance from "./calcs/calcs_batch_18_font-size-reading-distance";
+import RemainingAnnualLeave from "./calcs/calcs_batch_18_remaining-annual-leave";
+import ShiftWorkStaffing from "./calcs/calcs_batch_18_shift-work-staffing";
+import SocialMediaImageSize from "./calcs/calcs_batch_18_social-media-image-size";
+import CustomsBrokerFeeCalculator from "./calcs/calcs_batch_19_customs-broker-fee";
+import HsCodeImportTaxCalculator from "./calcs/calcs_batch_19_hs-code-import-tax";
+import ImportCustomsDutyCalculator from "./calcs/calcs_batch_19_import-customs-duty";
+import BreakEvenTime from "./calcs/calcs_batch_1_break-even-time";
+import CapacityUtilizationRate from "./calcs/calcs_batch_1_capacity-utilization-rate";
+import CashFlowProjection from "./calcs/calcs_batch_1_cash-flow-projection";
+import CostPerUnit from "./calcs/calcs_batch_1_cost-per-unit";
+import DoubleDecliningDepreciation from "./calcs/calcs_batch_1_double-declining-depreciation";
+import WorkingCapital from "./calcs/calcs_batch_1_working-capital";
+import WholesaleVsRetailMargin from "./calcs/calcs_batch_1_wholesale-vs-retail-margin";
+import RetailSpaceRentRoi from "./calcs/calcs_batch_1_retail-space-rent-roi";
+import SimplifiedPL from "./calcs/calcs_batch_1_simplified-p-and-l";
+import FreelanceVsFulltimeCost from "./calcs/calcs_batch_1_freelance-vs-fulltime-cost";
+import SolarBatterySizing from "./calcs/calcs_batch_20_solar-battery-sizing";
+import SolarInverterSizing from "./calcs/calcs_batch_20_solar-inverter-sizing";
+import TouElectricityCost from "./calcs/calcs_batch_20_tou-electricity-cost";
+import CostOfLivingComparison from "./calcs/calcs_batch_21_cost-of-living-comparison";
+import QalyCalculator from "./calcs/calcs_batch_21_qaly-calculator";
+import MetcalfeNetworkValue from "./calcs/calcs_batch_22_metcalfe-network-value";
+import OnlineCourseRoi from "./calcs/calcs_batch_22_online-course-roi";
+import ViralCoefficient from "./calcs/calcs_batch_22_viral-coefficient";
+import AutomationROI from "./calcs/calcs_batch_23_automation-roi";
+import BrooksLawTeamSize from "./calcs/calcs_batch_23_brooks-law-team-size";
+import NoiseLevelDb from "./calcs/calcs_batch_24_noise-level-db";
+import SoundInsulation from "./calcs/calcs_batch_24_sound-insulation";
+import FlowStateFrequency from "./calcs/calcs_batch_25_flow-state-frequency";
+import CompanyRegistrationCost from "./calcs/calcs_batch_2_company-registration-cost";
+import CorporateTaxCalculator from "./calcs/calcs_batch_2_corporate-tax";
+import CreditCardMdrFee from "./calcs/calcs_batch_2_credit-card-mdr-fee";
+import DeRatio from "./calcs/calcs_batch_2_de-ratio";
+import LegalReserveCalculator from "./calcs/calcs_batch_2_legal-reserve";
+import MarkupImportedMaterials from "./calcs/calcs_batch_2_markup-imported-materials";
+import PosSystemComparison from "./calcs/calcs_batch_2_pos-system-comparison";
+import QuickCurrentRatio from "./calcs/calcs_batch_2_quick-current-ratio";
+import RoeRoaRoic from "./calcs/calcs_batch_2_roe-roa-roic";
+import SalesCommissionStructure from "./calcs/calcs_batch_2_sales-commission-structure";
+import AdvertisingBudgetAllocation from "./calcs/calcs_batch_4_advertising-budget-allocation";
+import CacPaybackPeriod from "./calcs/calcs_batch_4_cac-payback-period";
+import EbitdaCalculator from "./calcs/calcs_batch_4_ebitda-calculator";
+import EmployeeOtCalculation from "./calcs/calcs_batch_4_employee-ot-calculation";
+import EmployerSocialSecurity from "./calcs/calcs_batch_4_employer-social-security";
+import FxForwardRateRisk from "./calcs/calcs_batch_4_fx-forward-rate-risk";
+import InternationalShippingCost from "./calcs/calcs_batch_4_international-shipping-cost";
+import MinimumWageProvince from "./calcs/calcs_batch_4_minimum-wage-province";
+import SeverancePayCalculation from "./calcs/calcs_batch_4_severance-pay-calculation";
+import WarehouseRentVsBuy from "./calcs/calcs_batch_4_warehouse-rent-vs-buy";
+import AcceptableCPCCalculator from "./calcs/calcs_batch_5_acceptable-cpc";
+import CAGRCalculator from "./calcs/calcs_batch_5_cagr";
+import FactoryElectricityCalculator from "./calcs/calcs_batch_5_factory-electricity";
+import FranchiseCostCalculator from "./calcs/calcs_batch_5_franchise-cost";
+import GrossMarginSkuCalculator from "./calcs/calcs_batch_5_gross-margin-sku";
+import NPSCalculator from "./calcs/calcs_batch_5_nps";
+import RealEstateBrokerFeeCalculator from "./calcs/calcs_batch_5_real-estate-broker-fee";
+import ReturnRateImpactCalculator from "./calcs/calcs_batch_5_return-rate-impact";
+import ROASCalculator from "./calcs/calcs_batch_5_roas";
+import SaasMrrArrCalculator from "./calcs/calcs_batch_5_saas-mrr-arr";
 import BananaFarmingCalculator from "./calcs/calcs_batch_7_banana-farming-calculator";
 import BroilerChickenFarmCalculator from "./calcs/calcs_batch_7_broiler-chicken-farm-calculator";
 import CassavaFarmingCalculator from "./calcs/calcs_batch_7_cassava-farming-calculator";
@@ -284,253 +194,200 @@ import ProductWaterFootprint from "./calcs/calcs_batch_9_product-water-footprint
 import RecycledWasteImpact from "./calcs/calcs_batch_9_recycled-waste-impact";
 import TravelCarbonFootprint from "./calcs/calcs_batch_9_travel-carbon-footprint";
 import WaterSavingImpact from "./calcs/calcs_batch_9_water-saving-impact";
-import EWasteWaterFootprintBatch10 from "./calcs/calcs_batch_10_e-waste-water-footprint";
-import EVChargerInstallationCostBatch10 from "./calcs/calcs_batch_10_ev-charger-installation-cost";
-import EVChargingCostBatch10 from "./calcs/calcs_batch_10_ev-charging-cost";
-import GreenBuildingScoreBatch10 from "./calcs/calcs_batch_10_green-building-score";
-import LEDSavingsCalculatorBatch10 from "./calcs/calcs_batch_10_led-savings";
-import LivestockMethaneEmissionsBatch10 from "./calcs/calcs_batch_10_livestock-methane-emissions";
-import PersonalEcologicalFootprintBatch10 from "./calcs/calcs_batch_10_personal-ecological-footprint";
-import RenewableVsGridElectricityBatch10 from "./calcs/calcs_batch_10_renewable-vs-grid-electricity";
-import SolarPaybackPeriodCalculatorBatch10 from "./calcs/calcs_batch_10_solar-payback-period";
-import TreeCO2OffsetCalculatorBatch10 from "./calcs/calcs_batch_10_tree-co2-offset";
-import AppDevCostCalculatorBatch11 from "./calcs/calcs_batch_11_app-dev-cost";
-import AppStoreRevenueCalculatorBatch11 from "./calcs/calcs_batch_11_app-store-revenue";
-import CdnCostCalculatorBatch11 from "./calcs/calcs_batch_11_cdn-cost-calculator";
-import CloudStorageCostCalculatorBatch11 from "./calcs/calcs_batch_11_cloud-storage-cost";
-import DatabaseCostCalculatorBatch11 from "./calcs/calcs_batch_11_database-cost";
-import FacebookAdsRoiCalculatorBatch11 from "./calcs/calcs_batch_11_facebook-ads-roi-cpa";
-import GoogleAdsRoiCalculatorBatch11 from "./calcs/calcs_batch_11_google-ads-roi-roas";
-import LtvCacRatioCalculatorBatch11 from "./calcs/calcs_batch_11_ltv-to-cac-ratio";
-import SmsEmailCostCalculatorBatch11 from "./calcs/calcs_batch_11_sms-email-marketing-cost";
-import VpsDedicatedCostCalculatorBatch11 from "./calcs/calcs_batch_11_vps-dedicated-cost";
-import CroRevenueImpactCalculatorBatch12 from "./calcs/calcs_batch_12_cro-revenue-impact-calculator";
-import DomainHostingCostCalculatorBatch12 from "./calcs/calcs_batch_12_domain-hosting-cost-calculator";
-import EmailDeliverabilityScoreCalculatorBatch12 from "./calcs/calcs_batch_12_email-deliverability-score-calculator";
-import EmailRevenueCalculatorBatch12 from "./calcs/calcs_batch_12_email-revenue-calculator";
-import PwaVsNativeAppCostCalculatorBatch12 from "./calcs/calcs_batch_12_pwa-vs-native-app-cost-calculator";
-import SaasStackTotalCostCalculatorBatch12 from "./calcs/calcs_batch_12_saas-stack-total-cost-calculator";
-import SeoValueCalculatorBatch12 from "./calcs/calcs_batch_12_seo-value-calculator";
-import SmeCybersecurityCostCalculatorBatch12 from "./calcs/calcs_batch_12_sme-cybersecurity-cost-calculator";
-import SslCertificateCostCalculatorBatch12 from "./calcs/calcs_batch_12_ssl-certificate-cost-calculator";
-import TechnicalDebtCostCalculatorBatch12 from "./calcs/calcs_batch_12_technical-debt-cost-calculator";
-import ACElectricityCostBatch13 from "./calcs/calcs_batch_13_ac-electricity-cost";
-import BuiltInKitchenCostBatch13 from "./calcs/calcs_batch_13_built-in-kitchen-cost";
-import CondoMaintenanceFeeTotalBatch13 from "./calcs/calcs_batch_13_condo-maintenance-fee-total";
-import CondoPurchaseCostBatch13 from "./calcs/calcs_batch_13_condo-purchase-cost";
-import CondoRentVsBuyToLetROIBatch13 from "./calcs/calcs_batch_13_condo-rent-vs-buy-to-let-roi";
-import FullHouseFurnitureCostBatch13 from "./calcs/calcs_batch_13_full-house-furniture-cost";
-import MovingHouseCostBatch13 from "./calcs/calcs_batch_13_moving-house-cost";
-import NewHousePurchaseCostBatch13 from "./calcs/calcs_batch_13_new-house-purchase-cost";
-import PropertyTaxCalculatorBatch13 from "./calcs/calcs_batch_13_property-tax-calculator";
-import RentalYieldCalculatorBatch13 from "./calcs/calcs_batch_13_rental-yield-calculator";
-import AcBtuSizeCalculatorBatch14 from "./calcs/calcs_batch_14_ac-btu-size-calculator";
-import ApplianceElectricityCostBatch14 from "./calcs/calcs_batch_14_appliance-electricity-cost";
-import GardenMaintenanceCostBatch14 from "./calcs/calcs_batch_14_garden-maintenance-cost";
-import HomeInternetCostBatch14 from "./calcs/calcs_batch_14_home-internet-cost";
-import HomeSecurityCostBatch14 from "./calcs/calcs_batch_14_home-security-cost";
-import HomeSolarInstallationCostBatch14 from "./calcs/calcs_batch_14_home-solar-installation-cost";
-import HousePaintingCostBatch14 from "./calcs/calcs_batch_14_house-painting-cost";
-import HouseholdWaterUsageCostBatch14 from "./calcs/calcs_batch_14_household-water-usage-cost";
-import PoolMaintenanceCostBatch14 from "./calcs/calcs_batch_14_pool-maintenance-cost";
-import RoofReplacementCostBatch14 from "./calcs/calcs_batch_14_roof-replacement-cost";
-import CarComparisonCalculatorBatch15 from "./calcs/calcs_batch_15_car-comparison";
-import CarDepreciationCalculatorBatch15 from "./calcs/calcs_batch_15_car-depreciation";
-import CarInsuranceCalculatorBatch15 from "./calcs/calcs_batch_15_car-insurance";
-import CarMaintenanceCalculatorBatch15 from "./calcs/calcs_batch_15_car-maintenance";
-import CarTcoCalculatorBatch15 from "./calcs/calcs_batch_15_car-tco";
-import EvCostPerKmCalculatorBatch15 from "./calcs/calcs_batch_15_ev-cost-per-km";
-import EvIceBreakevenCalculatorBatch15 from "./calcs/calcs_batch_15_ev-ice-breakeven";
-import MotorcycleLoanCalculatorBatch15 from "./calcs/calcs_batch_15_motorcycle-loan";
-import RiderRoiCalculatorBatch15 from "./calcs/calcs_batch_15_rider-roi";
-import TruckCostCalculatorBatch15 from "./calcs/calcs_batch_15_truck-cost";
-import AnnualCommuteCalculatorBatch16 from "./calcs/calcs_batch_16_annual-commute-cost-calculator";
-import CarPoolCalculatorBatch16 from "./calcs/calcs_batch_16_car-pool-savings-calculator";
-import MonthlyParkingCalculatorBatch16 from "./calcs/calcs_batch_16_monthly-parking-cost-calculator";
-import TollFeeCalculatorBatch16 from "./calcs/calcs_batch_16_monthly-toll-fee-calculator";
-import RideHailingVsOwnCarCalculatorBatch16 from "./calcs/calcs_batch_16_ride-hailing-vs-own-car-cost-calculator";
-import AnniversaryCountdown from "./calcs/calcs_batch_17_anniversary-countdown";
-import EventCountdown from "./calcs/calcs_batch_17_event-countdown";
-import ExactAgeCalculator from "./calcs/calcs_batch_17_exact-age-calculator";
-import RetirementCountdown from "./calcs/calcs_batch_17_retirement-countdown";
-import SunriseSunsetCalculator from "./calcs/calcs_batch_17_sunrise-sunset-calculator";
-import ThaiLunarPhase from "./calcs/calcs_batch_17_thai-lunar-phase";
-import FontSizeReadingDistance from "./calcs/calcs_batch_18_font-size-reading-distance";
-import RemainingAnnualLeave from "./calcs/calcs_batch_18_remaining-annual-leave";
-import ShiftWorkStaffing from "./calcs/calcs_batch_18_shift-work-staffing";
-import SocialMediaImageSize from "./calcs/calcs_batch_18_social-media-image-size";
-import CustomsBrokerFeeCalculator from "./calcs/calcs_batch_19_customs-broker-fee";
-import HsCodeImportTaxCalculator from "./calcs/calcs_batch_19_hs-code-import-tax";
-import ImportCustomsDutyCalculator from "./calcs/calcs_batch_19_import-customs-duty";
-import SolarBatterySizing from "./calcs/calcs_batch_20_solar-battery-sizing";
-import SolarInverterSizing from "./calcs/calcs_batch_20_solar-inverter-sizing";
-import TouElectricityCost from "./calcs/calcs_batch_20_tou-electricity-cost";
-import CostOfLivingComparison from "./calcs/calcs_batch_21_cost-of-living-comparison";
-import QalyCalculator from "./calcs/calcs_batch_21_qaly-calculator";
-import MetcalfeNetworkValue from "./calcs/calcs_batch_22_metcalfe-network-value";
-import OnlineCourseRoi from "./calcs/calcs_batch_22_online-course-roi";
-import ViralCoefficient from "./calcs/calcs_batch_22_viral-coefficient";
-import AutomationROI from "./calcs/calcs_batch_23_automation-roi";
-import BrooksLawTeamSize from "./calcs/calcs_batch_23_brooks-law-team-size";
-import NoiseLevelDb from "./calcs/calcs_batch_24_noise-level-db";
-import SoundInsulation from "./calcs/calcs_batch_24_sound-insulation";
-import FlowStateFrequency from "./calcs/calcs_batch_25_flow-state-frequency";
-import BananaFarmingCalculatorBatch7 from "./calcs/calcs_batch_7_banana-farming-calculator";
-import BroilerChickenFarmCalculatorBatch7 from "./calcs/calcs_batch_7_broiler-chicken-farm-calculator";
-import CassavaFarmingCalculatorBatch7 from "./calcs/calcs_batch_7_cassava-farming-calculator";
-import CoconutFarmingCalculatorBatch7 from "./calcs/calcs_batch_7_coconut-farming-calculator";
-import CornFarmingCalculatorBatch7 from "./calcs/calcs_batch_7_corn-farming-calculator";
-import MangoFarmingCalculatorBatch7 from "./calcs/calcs_batch_7_mango-farming-calculator";
-import OilPalmFarmingCalculatorBatch7 from "./calcs/calcs_batch_7_oil-palm-farming-calculator";
-import RubberTreeFarmingCalculatorBatch7 from "./calcs/calcs_batch_7_rubber-tree-farming-calculator";
-import SugarcaneFarmingCalculatorBatch7 from "./calcs/calcs_batch_7_sugarcane-farming-calculator";
-import WhiteShrimpFarmCalculatorBatch7 from "./calcs/calcs_batch_7_white-shrimp-farm-calculator";
-import AgriChemicalMixRatioBatch8 from "./calcs/calcs_batch_8_agri-chemical-mix-ratio";
-import BeefCattleFarmProfitCostBatch8 from "./calcs/calcs_batch_8_beef-cattle-farm-profit-cost";
-import DripIrrigationCostBatch8 from "./calcs/calcs_batch_8_drip-irrigation-cost";
-import FarmAreaFromGpsBatch8 from "./calcs/calcs_batch_8_farm-area-from-gps";
-import FarmBreakEvenYieldBatch8 from "./calcs/calcs_batch_8_farm-break-even-yield";
-import FarmLaborCostPerRaiBatch8 from "./calcs/calcs_batch_8_farm-labor-cost-per-rai";
-import LayerChickenFarmProfitCostBatch8 from "./calcs/calcs_batch_8_layer-chicken-farm-profit-cost";
-import PigFarmProfitCostBatch8 from "./calcs/calcs_batch_8_pig-farm-profit-cost";
-import SeedsPerRaiCalculatorBatch8 from "./calcs/calcs_batch_8_seeds-per-rai-calculator";
-import TractorRentVsBuyBatch8 from "./calcs/calcs_batch_8_tractor-rent-vs-buy";
-import FarmLandRentRoiBatch9 from "./calcs/calcs_batch_9_farm-land-rent-roi";
-import FoodCarbonFootprintBatch9 from "./calcs/calcs_batch_9_food-carbon-footprint";
-import FreshToDryWeightBatch9 from "./calcs/calcs_batch_9_fresh-to-dry-weight";
-import GerminationRateBatch9 from "./calcs/calcs_batch_9_germination-rate";
-import HarvestTimeBatch9 from "./calcs/calcs_batch_9_harvest-time";
-import MillStorageElectricityBatch9 from "./calcs/calcs_batch_9_mill-storage-electricity";
-import ProductWaterFootprintBatch9 from "./calcs/calcs_batch_9_product-water-footprint";
-import RecycledWasteImpactBatch9 from "./calcs/calcs_batch_9_recycled-waste-impact";
-import TravelCarbonFootprintBatch9 from "./calcs/calcs_batch_9_travel-carbon-footprint";
-import WaterSavingImpactBatch9 from "./calcs/calcs_batch_9_water-saving-impact";
-import AgileVelocityCalculator from "./calcs/agile-velocity";
-import BehavioralLife from "./calcs/behavioral-life";
-import BlueLightExposure from "./calcs/blue-light-exposure";
-import BtsMrtVsCar from "./calcs/bts-mrt-vs-car";
-import BusFactorCalculator from "./calcs/bus-factor";
+import CarLoanFlatRate from "./calcs/car-loan-flat-rate";
+import CarLoanUsedCar from "./calcs/car-loan-used-car";
+import CartesianProduct from "./calcs/cartesian-product";
+import CartesianToPolar from "./calcs/cartesian-to-polar";
 import CbmCalculator from "./calcs/cbm-calculator";
+import CgpaCalculator from "./calcs/cgpa-calculator";
 import ChinaImportLeadTime from "./calcs/china-import-lead-time";
 import CircadianRhythm from "./calcs/circadian-rhythm";
+import CircumferenceCalculator from "./calcs/circumference-calculator";
 import CodeCoverageCalculator from "./calcs/code-coverage";
+import CoefficientOfVariation from "./calcs/coefficient-of-variation";
 import CognitiveLoad from "./calcs/cognitive-load";
+import CombinationCalculator from "./calcs/combination-calculator";
 import CompoundLearning from "./calcs/compound-learning-roi";
 import ContainerCapacity from "./calcs/container-weight-capacity";
 import CreativityScore from "./calcs/creativity-score";
+import CreditCardMinimumPayment from "./calcs/credit-card-minimum-payment";
+import CronbachAlphaCalculator from "./calcs/cronbach-alpha";
+import CrossProductCalculator from "./calcs/cross-product";
+import CubeRootCalculator from "./calcs/cube-root-calculator";
 import CumulativeNoise from "./calcs/cumulative-noise";
+import CustomBaseLogarithm from "./calcs/custom-base-logarithm";
+import DecileCalculator from "./calcs/decile-calculator";
+import DecimalToFraction from "./calcs/decimal-to-fraction";
+import DecimalToRoman from "./calcs/decimal-to-roman";
+import DecimalToScientificNotation from "./calcs/decimal-to-scientific-notation";
 import DecisionFatigue from "./calcs/decision-fatigue";
 import DeepWorkCalculator from "./calcs/deep-work-calculator";
+import DefiniteIntegralPolynomial from "./calcs/definite-integral-polynomial";
+import DegreeToRadian from "./calcs/degree-to-radian";
 import DietEnvironment from "./calcs/diet-environment";
+import DifferenceOfSquares from "./calcs/difference-of-squares";
 import DigitalDetoxTime from "./calcs/digital-detox-time";
+import DigitalSavingsTierRate from "./calcs/digital-savings-tier-rate";
+import DirectProportion from "./calcs/direct-proportion";
 import DisasterRecoveryCalculator from "./calcs/disaster-recovery";
+import DistanceFormula from "./calcs/distance-formula";
 import DistractionCostCalculator from "./calcs/distraction-cost";
+import DotProductCalculator from "./calcs/dot-product";
 import DunbarNumber from "./calcs/dunbar-number";
 import EmailResponseTimeCalculator from "./calcs/email-response-time";
+import EquilateralTriangleHeight from "./calcs/equilateral-triangle-height";
 import ErgonomicScore from "./calcs/ergonomic-score";
+import EvenOddFunctionChecker from "./calcs/even-odd-function-checker";
+import ExpectedValue from "./calcs/expected-value";
+import ExponentCalculator from "./calcs/exponent-calculator";
+import ExponentialMovingAverage from "./calcs/exponential-moving-average";
+import FactorGenerator from "./calcs/factor-generator";
+import FactorialCalculator from "./calcs/factorial-calculator";
+import FibonacciNumber from "./calcs/fibonacci-number";
+import FiveNumberSummary from "./calcs/five-number-summary";
+import FixedDepositCalculator from "./calcs/fixed-deposit-tax-deducted";
 import FleschKincaidCalculator from "./calcs/flesch-kincaid-reading-level";
 import FomoCost from "./calcs/fomo-cost";
 import FoodDeliveryVsCooking from "./calcs/food-delivery-vs-cooking";
 import ForgettingCurve from "./calcs/forgetting-curve";
+import FractionToDecimal from "./calcs/fraction-to-decimal";
+import FutureValueCalculator from "./calcs/future-value-fv";
+import Gcd2Numbers from "./calcs/gcd-2-numbers";
+import Gcd3Numbers from "./calcs/gcd-3-numbers";
+import GeometricMeanCalculator from "./calcs/geometric-mean";
+import GeometricSeriesSum from "./calcs/geometric-series-sum";
 import GNHCalculator from "./calcs/gnh-calculator";
+import GoldenRatioCalculator from "./calcs/golden-ratio-calculator";
+import GovPensionGpf from "./calcs/gov-pension-gpf";
+import GovPensionOld from "./calcs/gov-pension-old";
+import GpaCalculator from "./calcs/gpa-calculator";
 import GratitudeJournal from "./calcs/gratitude-journal";
 import HabitStreakCalculator from "./calcs/habit-streak-calculator";
 import HaleCalculator from "./calcs/hale-calculator";
 import HappinessRoi from "./calcs/happiness-roi";
+import HarmonicMeanCalculator from "./calcs/harmonic-mean";
+import HectareToAcre from "./calcs/hectare-to-acre";
+import HectareToRai from "./calcs/hectare-to-rai";
+import HectareToSqm from "./calcs/hectare-to-sqm";
+import HeronsFormula from "./calcs/herons-formula";
+import HexAdditionSubtraction from "./calcs/hex-addition-subtraction";
+import HiddenHomeCosts from "./calcs/hidden-home-costs";
+import HomeExtraPayment from "./calcs/home-extra-payment";
+import HomeRefinanceSavings from "./calcs/home-refinance-savings";
+import ImproperToMixedFraction from "./calcs/improper-to-mixed-fraction";
 import InflationImpactSavings from "./calcs/inflation-impact-savings";
+import IntegerDivision from "./calcs/integer-division";
+import InverseMatrix from "./calcs/inverse-matrix";
+import InverseProportion from "./calcs/inverse-proportion";
+import KrejcieMorganSampleSize from "./calcs/krejcie-morgan-sample-size";
+import KurtosisCalculator from "./calcs/kurtosis-calculator";
+import LawOfCosines from "./calcs/law-of-cosines";
+import LawOfSines from "./calcs/law-of-sines";
+import Lcm2Numbers from "./calcs/lcm-2-numbers";
+import Lcm3Numbers from "./calcs/lcm-3-numbers";
 import LearningRate from "./calcs/learning-rate";
 import LegacyScore from "./calcs/legacy-score";
 import LifeSatisfaction from "./calcs/life-satisfaction";
 import LifetimeHealthcareCost from "./calcs/lifetime-healthcare-cost";
+import LimitCalculator from "./calcs/limit-calculator";
+import LinearRegressionLine from "./calcs/linear-regression-line";
+import LogBase10 from "./calcs/log-base-10";
+import LogBase2 from "./calcs/log-base-2";
+import LogicEquivalenceChecker from "./calcs/logic-equivalence-checker";
 import LuxLighting from "./calcs/lux-lighting";
+import MatrixAdditionSubtraction from "./calcs/matrix-addition-subtraction";
+import MatrixDeterminant2x2 from "./calcs/matrix-determinant-2x2";
+import MatrixDeterminant3x3 from "./calcs/matrix-determinant-3x3";
+import MatrixScalarMultiplication from "./calcs/matrix-scalar-multiplication";
+import MatrixTransposeCalculator from "./calcs/matrix-transpose";
+import MeanCalculator from "./calcs/mean-calculator";
+import MeanDeviationCalculator from "./calcs/mean-deviation";
+import MedianCalculator from "./calcs/median-calculator";
 import MeetingCostCalculator from "./calcs/meeting-cost-calculator";
 import MeetingRoiCalculator from "./calcs/meeting-roi";
+import MidpointFormula from "./calcs/midpoint-formula";
 import MinimalismScore from "./calcs/minimalism-score";
+import MixedToImproperFraction from "./calcs/mixed-to-improper-fraction";
+import ModeCalculator from "./calcs/mode-calculator";
+import ModuloCalculator from "./calcs/modulo-calculator";
 import MoqVsPrice from "./calcs/moq-vs-price";
 import MTBFCalculator from "./calcs/mtbf";
 import MTTRCalculator from "./calcs/mttr";
 import MultiRateOT from "./calcs/multi-rate-ot";
-import NetMeteringRevenue from "./calcs/net-metering-revenue";
-import NoteTaking from "./calcs/note-taking";
-import OnGridSolarPayback from "./calcs/on-grid-solar-payback";
-import ParkinsonsLawCalculator from "./calcs/parkinsons-law-calculator";
-import PrintCostPerPageCalculator from "./calcs/print-cost-per-page";
-import ProrateSalary from "./calcs/prorate-salary";
-import ReadingComprehension from "./calcs/reading-comprehension";
-import ReorderPointCalculator from "./calcs/reorder-point-calculator";
-import RtoRpoCalculator from "./calcs/rto-rpo";
-import SafetyStockCalculatorNew from "./calcs/safety-stock-calculator";
-import SkillHalfLife from "./calcs/skill-half-life";
-import SLAUptimeCalculator from "./calcs/sla-uptime";
-import SleepDebtCalculator from "./calcs/sleep-debt-calculator";
-import SocialMediaROI from "./calcs/social-media-roi";
-import SpacedRepetition from "./calcs/spaced-repetition";
-import StandingDeskRatio from "./calcs/standing-desk-ratio";
-import TaskBatchingCalculator from "./calcs/task-batching";
-import TenThousandHours from "./calcs/ten-thousand-hours";
-import ThaiPostEmsCost from "./calcs/thai-post-ems-cost";
-import ThaiPublicHolidays from "./calcs/thai-public-holidays";
-import TimeAffluence from "./calcs/time-affluence";
-import VolumetricWeightCalculator from "./calcs/volumetric-weight";
-import WarehousingCost from "./calcs/warehousing-cost";
-import WillpowerDepletion from "./calcs/willpower-depletion";
-import WorkLifeBalanceScore from "./calcs/work-life-balance-score";
-import WorkingDaysCalculatorNew from "./calcs/working-days-calculator";
-import WpmProductivityCalculator from "./calcs/wpm-productivity";
-import CarLoanFlatRate from "./calcs/car-loan-flat-rate";
-import CarLoanUsedCar from "./calcs/car-loan-used-car";
-import CreditCardMinimumPayment from "./calcs/credit-card-minimum-payment";
-import DigitalSavingsTierRate from "./calcs/digital-savings-tier-rate";
-import FixedDepositCalculator from "./calcs/fixed-deposit-tax-deducted";
-import FutureValueCalculator from "./calcs/future-value-fv";
-import GovPensionGpf from "./calcs/gov-pension-gpf";
-import GovPensionOld from "./calcs/gov-pension-old";
-import HiddenHomeCosts from "./calcs/hidden-home-costs";
-import HomeExtraPayment from "./calcs/home-extra-payment";
-import HomeRefinanceSavings from "./calcs/home-refinance-savings";
+import NaturalLog from "./calcs/natural-log";
 import NetIncomeAfterTaxCalculator from "./calcs/net-income-after-tax";
-import NsfSavingsCalculator from "./calcs/nsf-savings-calculator";
-import PresentValueCalculator from "./calcs/present-value-pv";
-import PvdRetirementCalculator from "./calcs/pvd-retirement-calculator";
-import SeverancePayCalculator from "./calcs/severance-pay-calculator";
-import SixJarsCalculator from "./calcs/six-jars-money-management";
-import SocialSecurityLumpSum from "./calcs/social-security-lump-sum";
-import SocialSecurityM33M39 from "./calcs/social-security-m33-m39";
-import SocialSecurityM40 from "./calcs/social-security-m40";
-import SocialSecurityPension from "./calcs/social-security-pension";
-import TaxDeductionDonationCalculator from "./calcs/tax-deduction-donation";
-import TaxDeductionInsurance from "./calcs/tax-deduction-insurance";
-import TaxDeductionRMF from "./calcs/tax-deduction-rmf";
-import TaxDeductionSSF from "./calcs/tax-deduction-ssf";
-import TaxDeductionThaiESG from "./calcs/tax-deduction-thaiesg";
-import WHT1PercentCalculator from "./calcs/wht-1-percent";
-import WHT2PercentCalculator from "./calcs/wht-2-percent";
-import WHT3PercentCalculator from "./calcs/wht-3-percent";
-import WHT5PercentCalculator from "./calcs/wht-5-percent";
-import AcreToHectare from "./calcs/acre-to-hectare";
-import AcreToRai from "./calcs/acre-to-rai";
-import AcreToSqM from "./calcs/acre-to-sqm";
-import AreaCircleDiameter from "./calcs/area-circle-diameter";
-import AreaCircleRadius from "./calcs/area-circle-radius";
-import AreaEllipse from "./calcs/area-ellipse";
-import AreaHexagonCalculator from "./calcs/area-hexagon";
-import AreaIrregularPolygonCalculator from "./calcs/area-irregular-polygon";
-import AreaPentagonCalculator from "./calcs/area-pentagon";
-import AreaRectangle from "./calcs/area-rectangle";
-import AreaRhombusCalculator from "./calcs/area-rhombus";
-import AreaSquare from "./calcs/area-square";
-import AreaTrapezoid from "./calcs/area-trapezoid";
-import AreaTriangle from "./calcs/area-triangle";
-import HectareToAcre from "./calcs/hectare-to-acre";
-import HectareToRai from "./calcs/hectare-to-rai";
-import HectareToSqm from "./calcs/hectare-to-sqm";
+import NetMeteringRevenue from "./calcs/net-metering-revenue";
 import NganToRai from "./calcs/ngan-to-rai";
 import NganToSqm from "./calcs/ngan-to-sqm";
 import NganToSqwa from "./calcs/ngan-to-sqwa";
+import NormalDistributionZTable from "./calcs/normal-distribution-z-table";
+import NoteTaking from "./calcs/note-taking";
+import NsfSavingsCalculator from "./calcs/nsf-savings-calculator";
+import NthRootCalculator from "./calcs/nth-root-calculator";
+import NumberToEnglishText from "./calcs/number-to-english-text";
+import NumberToThaiText from "./calcs/number-to-thai-text";
+import OnGridSolarPayback from "./calcs/on-grid-solar-payback";
+import OutliersCalculator from "./calcs/outliers-calculator";
+import ParkinsonsLawCalculator from "./calcs/parkinsons-law-calculator";
+import PearsonCorrelation from "./calcs/pearson-correlation";
+import PercentDifferenceCalculator from "./calcs/percent-difference";
+import PercentOfValue from "./calcs/percent-of-value";
+import PercentageDecrease from "./calcs/percentage-decrease";
+import PercentageIncrease from "./calcs/percentage-increase";
+import PercentileCalculator from "./calcs/percentile-calculator";
+import PermutationCalculator from "./calcs/permutation-calculator";
+import PoissonDistribution from "./calcs/poisson-distribution";
+import PolygonDiagonals from "./calcs/polygon-diagonals";
+import PolygonExteriorAngle from "./calcs/polygon-exterior-angle";
+import PolygonInteriorAngleSum from "./calcs/polygon-interior-angle-sum";
+import PolynomialDerivative from "./calcs/polynomial-derivative";
+import PopulationStandardDeviation from "./calcs/population-standard-deviation";
+import PowerSetSize from "./calcs/power-set-size";
+import PresentValueCalculator from "./calcs/present-value-pv";
+import PrimeNumberChecker from "./calcs/prime-number-checker";
+import PrintCostPerPageCalculator from "./calcs/print-cost-per-page";
+import ProbabilityCalculator from "./calcs/probability-calculator";
+import ProrateSalary from "./calcs/prorate-salary";
+import PvdRetirementCalculator from "./calcs/pvd-retirement-calculator";
+import PythagorasHypotenuse from "./calcs/pythagoras-hypotenuse";
+import PythagorasLeg from "./calcs/pythagoras-leg";
+import QuadraticEquation from "./calcs/quadratic-equation";
+import QuartileCalculator from "./calcs/quartile-calculator";
+import QuartileDeviationCalculator from "./calcs/quartile-deviation";
+import RadianToDegree from "./calcs/radian-to-degree";
 import RaiToHectare from "./calcs/rai-to-hectare";
 import RaiToNgan from "./calcs/rai-to-ngan";
 import RaiToSqm from "./calcs/rai-to-sqm";
 import RaiToSqwa from "./calcs/rai-to-sqwa";
+import RandomNumberGenerator from "./calcs/random-number-generator";
+import RangeCalculator from "./calcs/range-calculator";
+import ReadingComprehension from "./calcs/reading-comprehension";
+import LinearRegressionLine1 from "./calcs/linear-regression-line";
+import RelationshipInvestment from "./calcs/calcs_batch_26_relationship-investment";
+import ReorderPointCalculator from "./calcs/reorder-point-calculator";
+import RomanToDecimal from "./calcs/roman-to-decimal";
+import RtoRpoCalculator from "./calcs/rto-rpo";
+import SafetyStockCalculator from "./calcs/safety-stock-calculator";
+import KrejcieMorganSampleSize1 from "./calcs/krejcie-morgan-sample-size";
+import SampleStandardDeviation from "./calcs/sample-standard-deviation";
+import ScientificNotationToDecimal from "./calcs/scientific-notation-to-decimal";
+import SectorAreaCalculator from "./calcs/sector-area-calculator";
+import SeverancePayCalculator from "./calcs/severance-pay-calculator";
+import SimpleMovingAverage from "./calcs/simple-moving-average";
+import SixJarsCalculator from "./calcs/six-jars-money-management";
+import SkewnessCalculator from "./calcs/skewness-calculator";
+import SkillHalfLife from "./calcs/skill-half-life";
+import SLAUptimeCalculator from "./calcs/sla-uptime";
+import SleepDebtCalculator from "./calcs/sleep-debt-calculator";
+import SlopeFormula from "./calcs/slope-formula";
+import SlopeInterceptEquation from "./calcs/slope-intercept-equation";
+import SocialMediaROI from "./calcs/social-media-roi";
+import SocialSecurityLumpSum from "./calcs/social-security-lump-sum";
+import SocialSecurityM33M39 from "./calcs/social-security-m33-m39";
+import SocialSecurityM40 from "./calcs/social-security-m40";
+import SocialSecurityPension from "./calcs/social-security-pension";
+import SpacedRepetition from "./calcs/spaced-repetition";
+import SphericalToCartesian from "./calcs/spherical-to-cartesian";
 import SqFtToSqIn from "./calcs/sqft-to-sqin";
 import SqFtToSqM from "./calcs/sqft-to-sqm";
 import SqKmToAcre from "./calcs/sqkm-to-acre";
@@ -543,142 +400,14 @@ import SqmToSqft from "./calcs/sqm-to-sqft";
 import SqmToSqkm from "./calcs/sqm-to-sqkm";
 import SqmToSqwa from "./calcs/sqm-to-sqwa";
 import SqmToSqyd from "./calcs/sqm-to-sqyd";
+import SquareRootCalculator from "./calcs/square-root-calculator";
 import SqwaToNgan from "./calcs/sqwa-to-ngan";
 import SqwaToRai from "./calcs/sqwa-to-rai";
 import SqwaToSqm from "./calcs/sqwa-to-sqm";
 import SqYdToSqM from "./calcs/sqyd-to-sqm";
-import {
-  WireGaugeSizing,
-  FuseBreakerSizing,
-  LpgPipeSizing,
-  DiyVsShopCarRepair,
-  CarPaintingCost,
-  HomeAdditionCost,
-  WaterFilterSizing,
-  GasCylinderDuration,
-  AcRepairCost,
-  AntennaLengthFrequency
-} from "./calcs/DiyHandymanCalcs";
-import AbsoluteValue from "./calcs/absolute-value";
-import AdmissionScorePercentageCalculator from "./calcs/admission-score-percentage";
-import ArcLengthCalculator from "./calcs/arc-length-calculator";
-import ArithmeticSeriesSum from "./calcs/arithmetic-series-sum";
-import Base10To16 from "./calcs/base-10-to-16";
-import Base10To2 from "./calcs/base-10-to-2";
-import Base10To8 from "./calcs/base-10-to-8";
-import Base16To10 from "./calcs/base-16-to-10";
-import Base16To2 from "./calcs/base-16-to-2";
-import Base2To10 from "./calcs/base-2-to-10";
-import Base2To16 from "./calcs/base-2-to-16";
-import BinaryArithmetic from "./calcs/binary-addition-subtraction";
-import BinomialDistribution from "./calcs/binomial-distribution";
-import CartesianProduct from "./calcs/cartesian-product";
-import CartesianToPolar from "./calcs/cartesian-to-polar";
-import CgpaCalculator from "./calcs/cgpa-calculator";
-import CircumferenceCalculator from "./calcs/circumference-calculator";
-import CoefficientOfVariation from "./calcs/coefficient-of-variation";
-import CombinationCalculator from "./calcs/combination-calculator";
-import CronbachAlphaCalculator from "./calcs/cronbach-alpha";
-import CrossProductCalculator from "./calcs/cross-product";
-import CubeRootCalculator from "./calcs/cube-root-calculator";
-import CustomBaseLogarithm from "./calcs/custom-base-logarithm";
-import DecileCalculator from "./calcs/decile-calculator";
-import DecimalToFraction from "./calcs/decimal-to-fraction";
-import DecimalToRoman from "./calcs/decimal-to-roman";
-import DecimalToScientificNotation from "./calcs/decimal-to-scientific-notation";
-import DefiniteIntegralPolynomial from "./calcs/definite-integral-polynomial";
-import DegreeToRadian from "./calcs/degree-to-radian";
-import DifferenceOfSquares from "./calcs/difference-of-squares";
-import DirectProportion from "./calcs/direct-proportion";
-import DistanceFormula from "./calcs/distance-formula";
-import DotProductCalculator from "./calcs/dot-product";
-import EquilateralTriangleHeight from "./calcs/equilateral-triangle-height";
-import EvenOddFunctionChecker from "./calcs/even-odd-function-checker";
-import ExpectedValue from "./calcs/expected-value";
-import ExponentCalculator from "./calcs/exponent-calculator";
-import ExponentialMovingAverage from "./calcs/exponential-moving-average";
-import FactorGenerator from "./calcs/factor-generator";
-import FactorialCalculator from "./calcs/factorial-calculator";
-import FibonacciNumber from "./calcs/fibonacci-number";
-import FiveNumberSummary from "./calcs/five-number-summary";
-import FractionToDecimal from "./calcs/fraction-to-decimal";
-import Gcd2Numbers from "./calcs/gcd-2-numbers";
-import Gcd3Numbers from "./calcs/gcd-3-numbers";
-import GeometricMeanCalculator from "./calcs/geometric-mean";
-import GeometricSeriesSum from "./calcs/geometric-series-sum";
-import GoldenRatioCalculator from "./calcs/golden-ratio-calculator";
-import CgpaCalculatorBatchNew from "./calcs/cgpa-calculator";
-import HarmonicMeanCalculator from "./calcs/harmonic-mean";
-import HeronsFormula from "./calcs/herons-formula";
-import HexAdditionSubtraction from "./calcs/hex-addition-subtraction";
-import ImproperToMixedFraction from "./calcs/improper-to-mixed-fraction";
-import IntegerDivision from "./calcs/integer-division";
-import InverseMatrix from "./calcs/inverse-matrix";
-import InverseProportion from "./calcs/inverse-proportion";
-import KrejcieMorganSampleSize from "./calcs/krejcie-morgan-sample-size";
-import KurtosisCalculator from "./calcs/kurtosis-calculator";
-import LawOfCosines from "./calcs/law-of-cosines";
-import LawOfSines from "./calcs/law-of-sines";
-import Lcm2Numbers from "./calcs/lcm-2-numbers";
-import Lcm3Numbers from "./calcs/lcm-3-numbers";
-import LimitCalculator from "./calcs/limit-calculator";
-import LinearRegressionLine from "./calcs/linear-regression-line";
-import LogBase10 from "./calcs/log-base-10";
-import LogBase2 from "./calcs/log-base-2";
-import LogicEquivalenceChecker from "./calcs/logic-equivalence-checker";
-import MatrixAdditionSubtraction from "./calcs/matrix-addition-subtraction";
-import MatrixDeterminant2x2 from "./calcs/matrix-determinant-2x2";
-import MatrixDeterminant3x3 from "./calcs/matrix-determinant-3x3";
-import MatrixScalarMultiplication from "./calcs/matrix-scalar-multiplication";
-import MatrixTransposeCalculator from "./calcs/matrix-transpose";
-import MeanCalculator from "./calcs/mean-calculator";
-import MeanDeviationCalculator from "./calcs/mean-deviation";
-import MedianCalculator from "./calcs/median-calculator";
-import MidpointFormula from "./calcs/midpoint-formula";
-import MixedToImproperFraction from "./calcs/mixed-to-improper-fraction";
-import ModeCalculator from "./calcs/mode-calculator";
-import ModuloCalculator from "./calcs/modulo-calculator";
-import NaturalLog from "./calcs/natural-log";
-import NormalDistributionZTable from "./calcs/normal-distribution-z-table";
-import NthRootCalculator from "./calcs/nth-root-calculator";
-import NumberToEnglishText from "./calcs/number-to-english-text";
-import NumberToThaiText from "./calcs/number-to-thai-text";
-import OutliersCalculator from "./calcs/outliers-calculator";
-import PearsonCorrelation from "./calcs/pearson-correlation";
-import PercentDifferenceCalculator from "./calcs/percent-difference";
-import PercentOfValue from "./calcs/percent-of-value";
-import PercentageDecrease from "./calcs/percentage-decrease";
-import PercentageIncrease from "./calcs/percentage-increase";
-import PercentileCalculatorNew from "./calcs/percentile-calculator";
-import PermutationCalculator from "./calcs/permutation-calculator";
-import PoissonDistribution from "./calcs/poisson-distribution";
-import PolygonDiagonals from "./calcs/polygon-diagonals";
-import PolygonExteriorAngle from "./calcs/polygon-exterior-angle";
-import PolygonInteriorAngleSum from "./calcs/polygon-interior-angle-sum";
-import PolynomialDerivative from "./calcs/polynomial-derivative";
-import PopulationStandardDeviation from "./calcs/population-standard-deviation";
-import PowerSetSize from "./calcs/power-set-size";
-import PrimeNumberChecker from "./calcs/prime-number-checker";
-import ProbabilityCalculator from "./calcs/probability-calculator";
-import PythagorasHypotenuse from "./calcs/pythagoras-hypotenuse";
-import PythagorasLeg from "./calcs/pythagoras-leg";
-import QuadraticEquation from "./calcs/quadratic-equation";
-import QuartileCalculator from "./calcs/quartile-calculator";
-import QuartileDeviationCalculator from "./calcs/quartile-deviation";
-import RadianToDegree from "./calcs/radian-to-degree";
-import RandomNumberGenerator from "./calcs/random-number-generator";
-import RangeCalculator from "./calcs/range-calculator";
-import RomanToDecimal from "./calcs/roman-to-decimal";
-import SampleStandardDeviation from "./calcs/sample-standard-deviation";
-import ScientificNotationToDecimal from "./calcs/scientific-notation-to-decimal";
-import SectorAreaCalculator from "./calcs/sector-area-calculator";
-import SimpleMovingAverage from "./calcs/simple-moving-average";
-import SkewnessCalculator from "./calcs/skewness-calculator";
-import SlopeFormula from "./calcs/slope-formula";
-import SlopeInterceptEquation from "./calcs/slope-intercept-equation";
-import SphericalToCartesian from "./calcs/spherical-to-cartesian";
-import SquareRootCalculator from "./calcs/square-root-calculator";
+import PopulationStandardDeviation1 from "./calcs/population-standard-deviation";
 import StandardErrorCalculator from "./calcs/standard-error-calculator";
+import StandingDeskRatio from "./calcs/standing-desk-ratio";
 import SumDifferenceOfCubes from "./calcs/sum-difference-of-cubes";
 import SurfaceAreaCylinder from "./calcs/surface-area-cylinder";
 import SurfaceAreaSphere from "./calcs/surface-area-sphere";
@@ -686,6 +415,16 @@ import SystemOfEquations2Variables from "./calcs/system-of-equations-2-variables
 import SystemOfEquations3Variables from "./calcs/system-of-equations-3-variables";
 import TScoreCalculator from "./calcs/t-score-calculator";
 import TaroYamaneSampleSize from "./calcs/taro-yamane-sample-size";
+import TaskBatchingCalculator from "./calcs/task-batching";
+import TaxDeductionDonationCalculator from "./calcs/tax-deduction-donation";
+import TaxDeductionInsurance from "./calcs/tax-deduction-insurance";
+import TaxDeductionRMF from "./calcs/tax-deduction-rmf";
+import TaxDeductionSSF from "./calcs/tax-deduction-ssf";
+import TaxDeductionThaiESG from "./calcs/tax-deduction-thaiesg";
+import TenThousandHours from "./calcs/ten-thousand-hours";
+import ThaiPostEmsCost from "./calcs/thai-post-ems-cost";
+import ThaiPublicHolidays from "./calcs/thai-public-holidays";
+import TimeAffluence from "./calcs/time-affluence";
 import TriangleCentroid from "./calcs/triangle-centroid";
 import TrigArcCos from "./calcs/trig-arccos";
 import TrigArcSin from "./calcs/trig-arcsin";
@@ -706,751 +445,937 @@ import VolumeCylinder from "./calcs/volume-cylinder";
 import VolumePyramid from "./calcs/volume-pyramid";
 import VolumeSphere from "./calcs/volume-sphere";
 import VolumeTriangularPrism from "./calcs/volume-triangular-prism";
+import VolumetricWeightCalculator from "./calcs/volumetric-weight";
+import WarehousingCost from "./calcs/warehousing-cost";
 import WeightedAverageCalculator from "./calcs/weighted-average";
+import WHT1PercentCalculator from "./calcs/wht-1-percent";
+import WHT2PercentCalculator from "./calcs/wht-2-percent";
+import WHT3PercentCalculator from "./calcs/wht-3-percent";
+import WHT5PercentCalculator from "./calcs/wht-5-percent";
+import WillpowerDepletion from "./calcs/willpower-depletion";
+import WorkLifeBalanceScore from "./calcs/work-life-balance-score";
+import WorkingDaysCalculator from "./calcs/working-days-calculator";
+import WpmProductivityCalculator from "./calcs/wpm-productivity";
 import ZScoreCalculator from "./calcs/z-score-calculator";
 
-export function Calculators({ activeCalc, lang: langProp, setCalc }: { activeCalc: string, lang: Lang, setCalc: (id: string) => void }) {
-  const lang = langProp as any;
-  if (activeCalc === "relationship-investment") return <RelationshipInvestment lang={lang} />;
-  if (activeCalc === "wire-gauge-sizing") return <WireGaugeSizing lang={lang} />;
-  if (activeCalc === "fuse-breaker-sizing") return <FuseBreakerSizing lang={lang} />;
-  if (activeCalc === "lpg-pipe-sizing") return <LpgPipeSizing lang={lang} />;
-  if (activeCalc === "diy-vs-shop-car-repair") return <DiyVsShopCarRepair lang={lang} />;
-  if (activeCalc === "car-painting-cost") return <CarPaintingCost lang={lang} />;
-  if (activeCalc === "home-addition-cost") return <HomeAdditionCost lang={lang} />;
-  if (activeCalc === "water-filter-sizing") return <WaterFilterSizing lang={lang} />;
-  if (activeCalc === "gas-cylinder-duration") return <GasCylinderDuration lang={lang} />;
-  if (activeCalc === "ac-repair-cost") return <AcRepairCost lang={lang} />;
-  if (activeCalc === "antenna-length-frequency") return <AntennaLengthFrequency lang={lang} />;
-  if (activeCalc === "dio") return <DIOCalculator lang={lang} />;
-  if (activeCalc === "dso") return <DSOCalculator lang={lang} />;
-  if (activeCalc === "employee-bonus") return <EmployeeBonusCalculator lang={lang} />;
-  if (activeCalc === "expense-ratio") return <ExpenseRatioCalculator lang={lang} />;
-  if (activeCalc === "gmv-vs-net-revenue") return <GMVCalculator lang={lang} />;
-  if (activeCalc === "headcount-to-sales") return <HeadcountToSalesCalculator lang={lang} />;
-  if (activeCalc === "inventory-costing") return <InventoryCostingCalculator lang={lang} />;
-  if (activeCalc === "landed-cost") return <LandedCostCalculator lang={lang} />;
-  if (activeCalc === "office-vs-wfh") return <OfficeVsWfhCalculator lang={lang} />;
-  if (activeCalc === "packaging-cost") return <PackagingCostCalculator lang={lang} />;
-  if (activeCalc === "break-even-by-channel") return <BreakEvenChannelCalculator lang={lang} />;
-  if (activeCalc === "carbon-credit-cost") return <CarbonCreditCostCalculator lang={lang} />;
-  if (activeCalc === "event-cost-per-attendee") return <EventCostCalculator lang={lang} />;
-  if (activeCalc === "iso-certification-cost") return <IsoCertificationCostCalculator lang={lang} />;
-  if (activeCalc === "npv-irr") return <NpvIrrCalculator lang={lang} />;
-  if (activeCalc === "patent-cost") return <PatentCostCalculator lang={lang} />;
-  if (activeCalc === "project-payback-period") return <ProjectPaybackPeriodCalculator lang={lang} />;
-  if (activeCalc === "royalty-income") return <RoyaltyIncomeCalculator lang={lang} />;
-  if (activeCalc === "sensitivity-analysis") return <SensitivityAnalysisCalculator lang={lang} />;
-  if (activeCalc === "space-rental-deposit") return <SpaceRentalDepositCalculator lang={lang} />;
-  if (activeCalc === "break-even-time") return <BreakEvenTime lang={lang} />;
-  if (activeCalc === "capacity-utilization-rate") return <CapacityUtilizationRate lang={lang} />;
-  if (activeCalc === "cash-flow-projection") return <CashFlowProjection lang={lang} />;
-  if (activeCalc === "cost-per-unit") return <CostPerUnit lang={lang} />;
-  if (activeCalc === "double-declining-depreciation") return <DoubleDecliningDepreciation lang={lang} />;
-  if (activeCalc === "freelance-vs-fulltime-cost") return <FreelanceVsFulltimeCost lang={lang} />;
-  if (activeCalc === "retail-space-rent-roi") return <RetailSpaceRentRoi lang={lang} />;
-  if (activeCalc === "simplified-p-and-l") return <SimplifiedPL lang={lang} />;
-  if (activeCalc === "wholesale-vs-retail-margin") return <WholesaleVsRetailMargin lang={lang} />;
-  if (activeCalc === "working-capital") return <WorkingCapital lang={lang} />;
-  if (activeCalc === "company-registration-cost") return <CompanyRegistrationCost lang={lang} />;
-  if (activeCalc === "corporate-tax") return <CorporateTaxCalculator lang={lang} />;
-  if (activeCalc === "credit-card-mdr-fee") return <CreditCardMdrFee lang={lang} />;
-  if (activeCalc === "de-ratio") return <DeRatio lang={lang} />;
-  if (activeCalc === "legal-reserve") return <LegalReserveCalculator lang={lang} />;
-  if (activeCalc === "markup-imported-materials") return <MarkupImportedMaterials lang={lang} />;
-  if (activeCalc === "pos-system-comparison") return <PosSystemComparison lang={lang} />;
-  if (activeCalc === "quick-current-ratio") return <QuickCurrentRatio lang={lang} />;
-  if (activeCalc === "roe-roa-roic") return <RoeRoaRoic lang={lang} />;
-  if (activeCalc === "sales-commission-structure") return <SalesCommissionStructure lang={lang} />;
-  if (activeCalc === "advertising-budget-allocation") return <AdvertisingBudgetAllocation lang={lang} />;
-  if (activeCalc === "cac-payback-period") return <CacPaybackPeriod lang={lang} />;
-  if (activeCalc === "ebitda-calculator") return <EbitdaCalculator lang={lang} />;
-  if (activeCalc === "employee-ot-calculation") return <EmployeeOtCalculation lang={lang} />;
-  if (activeCalc === "employer-social-security") return <EmployerSocialSecurity lang={lang} />;
-  if (activeCalc === "fx-forward-rate-risk") return <FxForwardRateRisk lang={lang} />;
-  if (activeCalc === "international-shipping-cost") return <InternationalShippingCost lang={lang} />;
-  if (activeCalc === "minimum-wage-province") return <MinimumWageProvince lang={lang} />;
-  if (activeCalc === "severance-pay-calculation") return <SeverancePayCalculation lang={lang} />;
-  if (activeCalc === "warehouse-rent-vs-buy") return <WarehouseRentVsBuy lang={lang} />;
-  if (activeCalc === "acceptable-cpc") return <AcceptableCPCCalculator lang={lang} />;
-  if (activeCalc === "cagr") return <CAGRCalculator lang={lang} />;
-  if (activeCalc === "factory-electricity") return <FactoryElectricityCalculator lang={lang} />;
-  if (activeCalc === "franchise-cost") return <FranchiseCostCalculator lang={lang} />;
-  if (activeCalc === "gross-margin-sku") return <GrossMarginSkuCalculator lang={lang} />;
-  if (activeCalc === "nps") return <NPSCalculator lang={lang} />;
-  if (activeCalc === "real-estate-broker-fee") return <RealEstateBrokerFeeCalculator lang={lang} />;
-  if (activeCalc === "return-rate-impact") return <ReturnRateImpactCalculator lang={lang} />;
-  if (activeCalc === "roas") return <ROASCalculator lang={lang} />;
-  if (activeCalc === "saas-mrr-arr") return <SaasMrrArrCalculator lang={lang} />;
-  // Health & Diet
-  if (activeCalc === "bmi") return <BMICalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "sleep") return <SleepCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "tdee") return <TDEECalculator lang={lang} />;
-  if (activeCalc === "water-intake") return <HealthWaterCalculator lang={lang} />;
-  if (activeCalc === "food-random") return <FoodRandomizer lang={lang} />;
-  if (activeCalc === "exercise-calories") return <ExerciseCaloriesCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "protein-daily") return <ProteinCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "body-fat") return <BodyFatCalculator lang={lang} />;
-  if (activeCalc === "whr") return <WHRCalculator lang={lang} />;
-  if (activeCalc === "heart-rate-zone") return <HeartRateZoneCalculator lang={lang} />;
-  if (activeCalc === "macro") return <MacroCalculator lang={lang} />;
-  if (activeCalc === "blood-sugar") return <BloodSugarConverter lang={lang} />;
-  if (activeCalc === "ibw") return <IBWCalculator lang={lang} />;
-  if (activeCalc === "steps-converter") return <StepsCalculator lang={lang} />;
-  if (activeCalc === "1rm") return <OneRepMaxCalculator lang={lang} />;
-  if (activeCalc === "pace") return <PaceCalculator lang={lang} />;
-  if (activeCalc === "vo2-max") return <VO2MaxCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "swim-pace") return <SwimPaceCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "cycling-power") return <CyclingPowerZones lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "race-predictor") return <RacePredictor lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "lifting-pyramid") return <LiftingPyramid lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "rowing-split") return <RowingSplit lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "carb-endurance") return <CarbEnduranceCalc lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "fiber-intake") return <FiberCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "vitamin-d") return <VitaminDCalculator lang={lang} setCalc={setCalc} />;
+export const Calculators = ({ activeCalc, lang, setCalc }: { activeCalc: string; lang: any; setCalc: any }) => {
+    switch (activeCalc) {
+      case "absolute-value":
+        return <AbsoluteValue lang={lang} />;
+      case "acre-to-hectare":
+        return <AcreToHectare lang={lang} />;
+      case "acre-to-rai":
+        return <AcreToRai lang={lang} />;
+      case "acre-to-sqm":
+        return <AcreToSqM lang={lang} />;
+      case "admission-score-percentage":
+        return <AdmissionScorePercentageCalculator lang={lang} />;
+      case "agile-velocity":
+        return <AgileVelocityCalculator lang={lang} />;
+      case "arc-length-calculator":
+        return <ArcLengthCalculator lang={lang} />;
+      case "area-circle-diameter":
+        return <AreaCircleDiameter lang={lang} />;
+      case "area-circle-radius":
+        return <AreaCircleRadius lang={lang} />;
+      case "area-ellipse":
+        return <AreaEllipse lang={lang} />;
+      case "area-hexagon":
+        return <AreaHexagonCalculator lang={lang} />;
+      case "area-irregular-polygon":
+        return <AreaIrregularPolygonCalculator lang={lang} />;
+      case "area-pentagon":
+        return <AreaPentagonCalculator lang={lang} />;
+      case "area-rectangle":
+        return <AreaRectangle lang={lang} />;
+      case "area-rhombus":
+        return <AreaRhombusCalculator lang={lang} />;
+      case "area-square":
+        return <AreaSquare lang={lang} />;
+      case "area-trapezoid":
+        return <AreaTrapezoid lang={lang} />;
+      case "area-triangle":
+        return <AreaTriangle lang={lang} />;
+      case "arithmetic-series-sum":
+        return <ArithmeticSeriesSum lang={lang} />;
+      case "base-10-to-16":
+        return <Base10To16 lang={lang} />;
+      case "base-10-to-2":
+        return <Base10To2 lang={lang} />;
+      case "base-10-to-8":
+        return <Base10To8 lang={lang} />;
+      case "base-16-to-10":
+        return <Base16To10 lang={lang} />;
+      case "base-16-to-2":
+        return <Base16To2 lang={lang} />;
+      case "base-2-to-10":
+        return <Base2To10 lang={lang} />;
+      case "base-2-to-16":
+        return <Base2To16 lang={lang} />;
+      case "bayes-theorem":
+        return <BayesTheorem lang={lang} />;
+      case "behavioral-life":
+        return <BehavioralLife lang={lang} />;
+      case "binary-addition-subtraction":
+        return <BinaryArithmetic lang={lang} />;
+      case "binomial-distribution":
+        return <BinomialDistribution lang={lang} />;
+      case "blue-light-exposure":
+        return <BlueLightExposure lang={lang} />;
+      case "bts-mrt-vs-car":
+        return <BtsMrtVsCar lang={lang} />;
+      case "bus-factor":
+        return <BusFactorCalculator lang={lang} />;
+      case "e-waste-water-footprint":
+        return <EWasteWaterFootprint lang={lang} />;
+      case "ev-charger-installation-cost":
+        return <EVChargerInstallationCost lang={lang} />;
+      case "ev-charging-cost":
+        return <EVChargingCost lang={lang} />;
+      case "green-building-score":
+        return <GreenBuildingScore lang={lang} />;
+      case "led-savings":
+        return <LEDSavingsCalculator lang={lang} />;
+      case "livestock-methane-emissions":
+        return <LivestockMethaneEmissions lang={lang} />;
+      case "personal-ecological-footprint":
+        return <PersonalEcologicalFootprint lang={lang} />;
+      case "renewable-vs-grid-electricity":
+        return <RenewableVsGridElectricity lang={lang} />;
+      case "solar-payback-period":
+        return <SolarPaybackPeriodCalculator lang={lang} />;
+      case "tree-co2-offset":
+        return <TreeCO2OffsetCalculator lang={lang} />;
+      case "app-dev-cost":
+        return <AppDevCostCalculator lang={lang} />;
+      case "app-store-revenue":
+        return <AppStoreRevenueCalculator lang={lang} />;
+      case "cdn-cost-calculator":
+        return <CdnCostCalculator lang={lang} />;
+      case "cloud-storage-cost":
+        return <CloudStorageCostCalculator lang={lang} />;
+      case "database-cost":
+        return <DatabaseCostCalculator lang={lang} />;
+      case "facebook-ads-roi-cpa":
+        return <FacebookAdsRoiCalculator lang={lang} />;
+      case "google-ads-roi-roas":
+        return <GoogleAdsRoiCalculator lang={lang} />;
+      case "ltv-to-cac-ratio":
+        return <LtvCacRatioCalculator lang={lang} />;
+      case "sms-email-marketing-cost":
+        return <SmsEmailCostCalculator lang={lang} />;
+      case "vps-dedicated-cost":
+        return <VpsDedicatedCostCalculator lang={lang} />;
+      case "cro-revenue-impact-calculator":
+        return <CroRevenueImpactCalculator lang={lang} />;
+      case "domain-hosting-cost-calculator":
+        return <DomainHostingCostCalculator lang={lang} />;
+      case "email-deliverability-score-calculator":
+        return <EmailDeliverabilityScoreCalculator lang={lang} />;
+      case "email-revenue-calculator":
+        return <EmailRevenueCalculator lang={lang} />;
+      case "pwa-vs-native-app-cost-calculator":
+        return <PwaVsNativeAppCostCalculator lang={lang} />;
+      case "saas-stack-total-cost-calculator":
+        return <SaasStackTotalCostCalculator lang={lang} />;
+      case "seo-value-calculator":
+        return <SeoValueCalculator lang={lang} />;
+      case "sme-cybersecurity-cost-calculator":
+        return <SmeCybersecurityCostCalculator lang={lang} />;
+      case "ssl-certificate-cost-calculator":
+        return <SslCertificateCostCalculator lang={lang} />;
+      case "technical-debt-cost-calculator":
+        return <TechnicalDebtCostCalculator lang={lang} />;
+      case "ac-electricity-cost":
+        return <ACElectricityCost lang={lang} />;
+      case "built-in-kitchen-cost":
+        return <BuiltInKitchenCost lang={lang} />;
+      case "condo-maintenance-fee-total":
+        return <CondoMaintenanceFeeTotal lang={lang} />;
+      case "condo-purchase-cost":
+        return <CondoPurchaseCost lang={lang} />;
+      case "condo-rent-vs-buy-to-let-roi":
+        return <CondoRentVsBuyToLetROI lang={lang} />;
+      case "full-house-furniture-cost":
+        return <FullHouseFurnitureCost lang={lang} />;
+      case "moving-house-cost":
+        return <MovingHouseCost lang={lang} />;
+      case "new-house-purchase-cost":
+        return <NewHousePurchaseCost lang={lang} />;
+      case "property-tax-calculator":
+        return <PropertyTaxCalculator lang={lang} />;
+      case "rental-yield-calculator":
+        return <RentalYieldCalculator lang={lang} />;
+      case "ac-btu-size-calculator":
+        return <AcBtuSizeCalculator lang={lang} />;
+      case "appliance-electricity-cost":
+        return <ApplianceElectricityCost lang={lang} />;
+      case "garden-maintenance-cost":
+        return <GardenMaintenanceCost lang={lang} />;
+      case "home-internet-cost":
+        return <HomeInternetCost lang={lang} />;
+      case "home-security-cost":
+        return <HomeSecurityCost lang={lang} />;
+      case "home-solar-installation-cost":
+        return <HomeSolarInstallationCost lang={lang} />;
+      case "house-painting-cost":
+        return <HousePaintingCost lang={lang} />;
+      case "household-water-usage-cost":
+        return <HouseholdWaterUsageCost lang={lang} />;
+      case "pool-maintenance-cost":
+        return <PoolMaintenanceCost lang={lang} />;
+      case "roof-replacement-cost":
+        return <RoofReplacementCost lang={lang} />;
+      case "car-comparison":
+        return <CarComparisonCalculator lang={lang} />;
+      case "car-depreciation":
+        return <CarDepreciationCalculator lang={lang} />;
+      case "car-insurance":
+        return <CarInsuranceCalculator lang={lang} />;
+      case "car-maintenance":
+        return <CarMaintenanceCalculator lang={lang} />;
+      case "car-tco":
+        return <CarTcoCalculator lang={lang} />;
+      case "ev-cost-per-km":
+        return <EvCostPerKmCalculator lang={lang} />;
+      case "ev-ice-breakeven":
+        return <EvIceBreakevenCalculator lang={lang} />;
+      case "motorcycle-loan":
+        return <MotorcycleLoanCalculator lang={lang} />;
+      case "rider-roi":
+        return <RiderRoiCalculator lang={lang} />;
+      case "truck-cost":
+        return <TruckCostCalculator lang={lang} />;
+      case "annual-commute-cost-calculator":
+        return <AnnualCommuteCalculator lang={lang} />;
+      case "car-pool-savings-calculator":
+        return <CarPoolCalculator lang={lang} />;
+      case "monthly-parking-cost-calculator":
+        return <MonthlyParkingCalculator lang={lang} />;
+      case "monthly-toll-fee-calculator":
+        return <TollFeeCalculator lang={lang} />;
+      case "ride-hailing-vs-own-car-cost-calculator":
+        return <RideHailingVsOwnCarCalculator lang={lang} />;
+      case "anniversary-countdown":
+        return <AnniversaryCountdown lang={lang} />;
+      case "event-countdown":
+        return <EventCountdown lang={lang} />;
+      case "exact-age-calculator":
+        return <ExactAgeCalculator lang={lang} />;
+      case "retirement-countdown":
+        return <RetirementCountdown lang={lang} />;
+      case "sunrise-sunset-calculator":
+        return <SunriseSunsetCalculator lang={lang} />;
+      case "thai-lunar-phase":
+        return <ThaiLunarPhase lang={lang} />;
+      case "font-size-reading-distance":
+        return <FontSizeReadingDistance lang={lang} />;
+      case "remaining-annual-leave":
+        return <RemainingAnnualLeave lang={lang} />;
+      case "shift-work-staffing":
+        return <ShiftWorkStaffing lang={lang} />;
+      case "social-media-image-size":
+        return <SocialMediaImageSize lang={lang} />;
+      case "customs-broker-fee":
+        return <CustomsBrokerFeeCalculator lang={lang} />;
+      case "hs-code-import-tax":
+        return <HsCodeImportTaxCalculator lang={lang} />;
+      case "import-customs-duty":
+        return <ImportCustomsDutyCalculator lang={lang} />;
+      case "break-even-time":
+        return <BreakEvenTime lang={lang} />;
+      case "capacity-utilization-rate":
+        return <CapacityUtilizationRate lang={lang} />;
+      case "cash-flow-projection":
+        return <CashFlowProjection lang={lang} />;
+      case "cost-per-unit":
+        return <CostPerUnit lang={lang} />;
+      case "double-declining-depreciation":
+        return <DoubleDecliningDepreciation lang={lang} />;
+      case "working-capital":
+        return <WorkingCapital lang={lang} />;
+      case "wholesale-vs-retail-margin":
+        return <WholesaleVsRetailMargin lang={lang} />;
+      case "retail-space-rent-roi":
+        return <RetailSpaceRentRoi lang={lang} />;
+      case "simplified-p-and-l":
+        return <SimplifiedPL lang={lang} />;
+      case "freelance-vs-fulltime-cost":
+        return <FreelanceVsFulltimeCost lang={lang} />;
+      case "solar-battery-sizing":
+        return <SolarBatterySizing lang={lang} />;
+      case "solar-inverter-sizing":
+        return <SolarInverterSizing lang={lang} />;
+      case "tou-electricity-cost":
+        return <TouElectricityCost lang={lang} />;
+      case "cost-of-living-comparison":
+        return <CostOfLivingComparison lang={lang} />;
+      case "qaly-calculator":
+        return <QalyCalculator lang={lang} />;
+      case "metcalfe-network-value":
+        return <MetcalfeNetworkValue lang={lang} />;
+      case "online-course-roi":
+        return <OnlineCourseRoi lang={lang} />;
+      case "viral-coefficient":
+        return <ViralCoefficient lang={lang} />;
+      case "automation-roi":
+        return <AutomationROI lang={lang} />;
+      case "brooks-law-team-size":
+        return <BrooksLawTeamSize lang={lang} />;
+      case "noise-level-db":
+        return <NoiseLevelDb lang={lang} />;
+      case "sound-insulation":
+        return <SoundInsulation lang={lang} />;
+      case "flow-state-frequency":
+        return <FlowStateFrequency lang={lang} />;
+      case "company-registration-cost":
+        return <CompanyRegistrationCost lang={lang} />;
+      case "corporate-tax":
+        return <CorporateTaxCalculator lang={lang} />;
+      case "credit-card-mdr-fee":
+        return <CreditCardMdrFee lang={lang} />;
+      case "de-ratio":
+        return <DeRatio lang={lang} />;
+      case "legal-reserve":
+        return <LegalReserveCalculator lang={lang} />;
+      case "markup-imported-materials":
+        return <MarkupImportedMaterials lang={lang} />;
+      case "pos-system-comparison":
+        return <PosSystemComparison lang={lang} />;
+      case "quick-current-ratio":
+        return <QuickCurrentRatio lang={lang} />;
+      case "roe-roa-roic":
+        return <RoeRoaRoic lang={lang} />;
+      case "sales-commission-structure":
+        return <SalesCommissionStructure lang={lang} />;
+      case "advertising-budget-allocation":
+        return <AdvertisingBudgetAllocation lang={lang} />;
+      case "cac-payback-period":
+        return <CacPaybackPeriod lang={lang} />;
+      case "ebitda-calculator":
+        return <EbitdaCalculator lang={lang} />;
+      case "employee-ot-calculation":
+        return <EmployeeOtCalculation lang={lang} />;
+      case "employer-social-security":
+        return <EmployerSocialSecurity lang={lang} />;
+      case "fx-forward-rate-risk":
+        return <FxForwardRateRisk lang={lang} />;
+      case "international-shipping-cost":
+        return <InternationalShippingCost lang={lang} />;
+      case "minimum-wage-province":
+        return <MinimumWageProvince lang={lang} />;
+      case "severance-pay-calculation":
+        return <SeverancePayCalculation lang={lang} />;
+      case "warehouse-rent-vs-buy":
+        return <WarehouseRentVsBuy lang={lang} />;
+      case "acceptable-cpc":
+        return <AcceptableCPCCalculator lang={lang} />;
+      case "cagr":
+        return <CAGRCalculator lang={lang} />;
+      case "factory-electricity":
+        return <FactoryElectricityCalculator lang={lang} />;
+      case "franchise-cost":
+        return <FranchiseCostCalculator lang={lang} />;
+      case "gross-margin-sku":
+        return <GrossMarginSkuCalculator lang={lang} />;
+      case "nps":
+        return <NPSCalculator lang={lang} />;
+      case "real-estate-broker-fee":
+        return <RealEstateBrokerFeeCalculator lang={lang} />;
+      case "return-rate-impact":
+        return <ReturnRateImpactCalculator lang={lang} />;
+      case "roas":
+        return <ROASCalculator lang={lang} />;
+      case "saas-mrr-arr":
+        return <SaasMrrArrCalculator lang={lang} />;
+      case "banana-farming-calculator":
+        return <BananaFarmingCalculator lang={lang} />;
+      case "broiler-chicken-farm-calculator":
+        return <BroilerChickenFarmCalculator lang={lang} />;
+      case "cassava-farming-calculator":
+        return <CassavaFarmingCalculator lang={lang} />;
+      case "coconut-farming-calculator":
+        return <CoconutFarmingCalculator lang={lang} />;
+      case "corn-farming-calculator":
+        return <CornFarmingCalculator lang={lang} />;
+      case "mango-farming-calculator":
+        return <MangoFarmingCalculator lang={lang} />;
+      case "oil-palm-farming-calculator":
+        return <OilPalmFarmingCalculator lang={lang} />;
+      case "rubber-tree-farming-calculator":
+        return <RubberTreeFarmingCalculator lang={lang} />;
+      case "sugarcane-farming-calculator":
+        return <SugarcaneFarmingCalculator lang={lang} />;
+      case "white-shrimp-farm-calculator":
+        return <WhiteShrimpFarmCalculator lang={lang} />;
+      case "agri-chemical-mix-ratio":
+        return <AgriChemicalMixRatio lang={lang} />;
+      case "beef-cattle-farm-profit-cost":
+        return <BeefCattleFarmProfitCost lang={lang} />;
+      case "drip-irrigation-cost":
+        return <DripIrrigationCost lang={lang} />;
+      case "farm-area-from-gps":
+        return <FarmAreaFromGps lang={lang} />;
+      case "farm-break-even-yield":
+        return <FarmBreakEvenYield lang={lang} />;
+      case "farm-labor-cost-per-rai":
+        return <FarmLaborCostPerRai lang={lang} />;
+      case "layer-chicken-farm-profit-cost":
+        return <LayerChickenFarmProfitCost lang={lang} />;
+      case "pig-farm-profit-cost":
+        return <PigFarmProfitCost lang={lang} />;
+      case "seeds-per-rai-calculator":
+        return <SeedsPerRaiCalculator lang={lang} />;
+      case "tractor-rent-vs-buy":
+        return <TractorRentVsBuy lang={lang} />;
+      case "farm-land-rent-roi":
+        return <FarmLandRentRoi lang={lang} />;
+      case "food-carbon-footprint":
+        return <FoodCarbonFootprint lang={lang} />;
+      case "fresh-to-dry-weight":
+        return <FreshToDryWeight lang={lang} />;
+      case "germination-rate":
+        return <GerminationRate lang={lang} />;
+      case "harvest-time":
+        return <HarvestTime lang={lang} />;
+      case "mill-storage-electricity":
+        return <MillStorageElectricity lang={lang} />;
+      case "product-water-footprint":
+        return <ProductWaterFootprint lang={lang} />;
+      case "recycled-waste-impact":
+        return <RecycledWasteImpact lang={lang} />;
+      case "travel-carbon-footprint":
+        return <TravelCarbonFootprint lang={lang} />;
+      case "water-saving-impact":
+        return <WaterSavingImpact lang={lang} />;
+      case "car-loan-flat-rate":
+        return <CarLoanFlatRate lang={lang} />;
+      case "car-loan-used-car":
+        return <CarLoanUsedCar lang={lang} />;
+      case "cartesian-product":
+        return <CartesianProduct lang={lang} />;
+      case "cartesian-to-polar":
+        return <CartesianToPolar lang={lang} />;
+      case "cbm-calculator":
+        return <CbmCalculator lang={lang} />;
+      case "cgpa-calculator":
+        return <CgpaCalculator lang={lang} />;
+      case "china-import-lead-time":
+        return <ChinaImportLeadTime lang={lang} />;
+      case "circadian-rhythm":
+        return <CircadianRhythm lang={lang} />;
+      case "circumference-calculator":
+        return <CircumferenceCalculator lang={lang} />;
+      case "code-coverage":
+        return <CodeCoverageCalculator lang={lang} />;
+      case "coefficient-of-variation":
+        return <CoefficientOfVariation lang={lang} />;
+      case "cognitive-load":
+        return <CognitiveLoad lang={lang} />;
+      case "combination-calculator":
+        return <CombinationCalculator lang={lang} />;
+      case "compound-learning-roi":
+        return <CompoundLearning lang={lang} />;
+      case "container-weight-capacity":
+        return <ContainerCapacity lang={lang} />;
+      case "creativity-score":
+        return <CreativityScore lang={lang} />;
+      case "credit-card-minimum-payment":
+        return <CreditCardMinimumPayment lang={lang} />;
+      case "cronbach-alpha":
+        return <CronbachAlphaCalculator lang={lang} />;
+      case "cross-product":
+        return <CrossProductCalculator lang={lang} />;
+      case "cube-root-calculator":
+        return <CubeRootCalculator lang={lang} />;
+      case "cumulative-noise":
+        return <CumulativeNoise lang={lang} />;
+      case "custom-base-logarithm":
+        return <CustomBaseLogarithm lang={lang} />;
+      case "decile-calculator":
+        return <DecileCalculator lang={lang} />;
+      case "decimal-to-fraction":
+        return <DecimalToFraction lang={lang} />;
+      case "decimal-to-roman":
+        return <DecimalToRoman lang={lang} />;
+      case "decimal-to-scientific-notation":
+        return <DecimalToScientificNotation lang={lang} />;
+      case "decision-fatigue":
+        return <DecisionFatigue lang={lang} />;
+      case "deep-work-calculator":
+        return <DeepWorkCalculator lang={lang} />;
+      case "definite-integral-polynomial":
+        return <DefiniteIntegralPolynomial lang={lang} />;
+      case "degree-to-radian":
+        return <DegreeToRadian lang={lang} />;
+      case "diet-environment":
+        return <DietEnvironment lang={lang} />;
+      case "difference-of-squares":
+        return <DifferenceOfSquares lang={lang} />;
+      case "digital-detox-time":
+        return <DigitalDetoxTime lang={lang} />;
+      case "digital-savings-tier-rate":
+        return <DigitalSavingsTierRate lang={lang} />;
+      case "direct-proportion":
+        return <DirectProportion lang={lang} />;
+      case "disaster-recovery":
+        return <DisasterRecoveryCalculator lang={lang} />;
+      case "distance-formula":
+        return <DistanceFormula lang={lang} />;
+      case "distraction-cost":
+        return <DistractionCostCalculator lang={lang} />;
+      case "dot-product":
+        return <DotProductCalculator lang={lang} />;
+      case "dunbar-number":
+        return <DunbarNumber lang={lang} />;
+      case "email-response-time":
+        return <EmailResponseTimeCalculator lang={lang} />;
+      case "equilateral-triangle-height":
+        return <EquilateralTriangleHeight lang={lang} />;
+      case "ergonomic-score":
+        return <ErgonomicScore lang={lang} />;
+      case "even-odd-function-checker":
+        return <EvenOddFunctionChecker lang={lang} />;
+      case "expected-value":
+        return <ExpectedValue lang={lang} />;
+      case "exponent-calculator":
+        return <ExponentCalculator lang={lang} />;
+      case "exponential-moving-average":
+        return <ExponentialMovingAverage lang={lang} />;
+      case "factor-generator":
+        return <FactorGenerator lang={lang} />;
+      case "factorial-calculator":
+        return <FactorialCalculator lang={lang} />;
+      case "fibonacci-number":
+        return <FibonacciNumber lang={lang} />;
+      case "five-number-summary":
+        return <FiveNumberSummary lang={lang} />;
+      case "fixed-deposit-tax-deducted":
+        return <FixedDepositCalculator lang={lang} />;
+      case "flesch-kincaid-reading-level":
+        return <FleschKincaidCalculator lang={lang} />;
+      case "fomo-cost":
+        return <FomoCost lang={lang} />;
+      case "food-delivery-vs-cooking":
+        return <FoodDeliveryVsCooking lang={lang} />;
+      case "forgetting-curve":
+        return <ForgettingCurve lang={lang} />;
+      case "fraction-to-decimal":
+        return <FractionToDecimal lang={lang} />;
+      case "future-value-fv":
+        return <FutureValueCalculator lang={lang} />;
+      case "gcd-2-numbers":
+        return <Gcd2Numbers lang={lang} />;
+      case "gcd-3-numbers":
+        return <Gcd3Numbers lang={lang} />;
+      case "geometric-mean":
+        return <GeometricMeanCalculator lang={lang} />;
+      case "geometric-series-sum":
+        return <GeometricSeriesSum lang={lang} />;
+      case "gnh-calculator":
+        return <GNHCalculator lang={lang} />;
+      case "golden-ratio-calculator":
+        return <GoldenRatioCalculator lang={lang} />;
+      case "gov-pension-gpf":
+        return <GovPensionGpf lang={lang} />;
+      case "gov-pension-old":
+        return <GovPensionOld lang={lang} />;
+      case "gpa-calculator":
+        return <GpaCalculator lang={lang} />;
+      case "gratitude-journal":
+        return <GratitudeJournal lang={lang} />;
+      case "habit-streak-calculator":
+        return <HabitStreakCalculator lang={lang} />;
+      case "hale-calculator":
+        return <HaleCalculator lang={lang} />;
+      case "happiness-roi":
+        return <HappinessRoi lang={lang} />;
+      case "harmonic-mean":
+        return <HarmonicMeanCalculator lang={lang} />;
+      case "hectare-to-acre":
+        return <HectareToAcre lang={lang} />;
+      case "hectare-to-rai":
+        return <HectareToRai lang={lang} />;
+      case "hectare-to-sqm":
+        return <HectareToSqm lang={lang} />;
+      case "herons-formula":
+        return <HeronsFormula lang={lang} />;
+      case "hex-addition-subtraction":
+        return <HexAdditionSubtraction lang={lang} />;
+      case "hidden-home-costs":
+        return <HiddenHomeCosts lang={lang} />;
+      case "home-extra-payment":
+        return <HomeExtraPayment lang={lang} />;
+      case "home-refinance-savings":
+        return <HomeRefinanceSavings lang={lang} />;
+      case "improper-to-mixed-fraction":
+        return <ImproperToMixedFraction lang={lang} />;
+      case "inflation-impact-savings":
+        return <InflationImpactSavings lang={lang} />;
+      case "integer-division":
+        return <IntegerDivision lang={lang} />;
+      case "inverse-matrix":
+        return <InverseMatrix lang={lang} />;
+      case "inverse-proportion":
+        return <InverseProportion lang={lang} />;
+      case "krejcie-morgan-sample-size":
+        return <KrejcieMorganSampleSize lang={lang} />;
+      case "kurtosis-calculator":
+        return <KurtosisCalculator lang={lang} />;
+      case "law-of-cosines":
+        return <LawOfCosines lang={lang} />;
+      case "law-of-sines":
+        return <LawOfSines lang={lang} />;
+      case "lcm-2-numbers":
+        return <Lcm2Numbers lang={lang} />;
+      case "lcm-3-numbers":
+        return <Lcm3Numbers lang={lang} />;
+      case "learning-rate":
+        return <LearningRate lang={lang} />;
+      case "legacy-score":
+        return <LegacyScore lang={lang} />;
+      case "life-satisfaction":
+        return <LifeSatisfaction lang={lang} />;
+      case "lifetime-healthcare-cost":
+        return <LifetimeHealthcareCost lang={lang} />;
+      case "limit-calculator":
+        return <LimitCalculator lang={lang} />;
+      case "linear-regression-line":
+        return <LinearRegressionLine lang={lang} />;
+      case "log-base-10":
+        return <LogBase10 lang={lang} />;
+      case "log-base-2":
+        return <LogBase2 lang={lang} />;
+      case "logic-equivalence-checker":
+        return <LogicEquivalenceChecker lang={lang} />;
+      case "lux-lighting":
+        return <LuxLighting lang={lang} />;
+      case "matrix-addition-subtraction":
+        return <MatrixAdditionSubtraction lang={lang} />;
+      case "matrix-determinant-2x2":
+        return <MatrixDeterminant2x2 lang={lang} />;
+      case "matrix-determinant-3x3":
+        return <MatrixDeterminant3x3 lang={lang} />;
+      case "matrix-scalar-multiplication":
+        return <MatrixScalarMultiplication lang={lang} />;
+      case "matrix-transpose":
+        return <MatrixTransposeCalculator lang={lang} />;
+      case "mean-calculator":
+        return <MeanCalculator lang={lang} />;
+      case "mean-deviation":
+        return <MeanDeviationCalculator lang={lang} />;
+      case "median-calculator":
+        return <MedianCalculator lang={lang} />;
+      case "meeting-cost-calculator":
+        return <MeetingCostCalculator lang={lang} />;
+      case "meeting-roi":
+        return <MeetingRoiCalculator lang={lang} />;
+      case "midpoint-formula":
+        return <MidpointFormula lang={lang} />;
+      case "minimalism-score":
+        return <MinimalismScore lang={lang} />;
+      case "mixed-to-improper-fraction":
+        return <MixedToImproperFraction lang={lang} />;
+      case "mode-calculator":
+        return <ModeCalculator lang={lang} />;
+      case "modulo-calculator":
+        return <ModuloCalculator lang={lang} />;
+      case "moq-vs-price":
+        return <MoqVsPrice lang={lang} />;
+      case "mtbf":
+        return <MTBFCalculator lang={lang} />;
+      case "mttr":
+        return <MTTRCalculator lang={lang} />;
+      case "multi-rate-ot":
+        return <MultiRateOT lang={lang} />;
+      case "natural-log":
+        return <NaturalLog lang={lang} />;
+      case "net-income-after-tax":
+        return <NetIncomeAfterTaxCalculator lang={lang} />;
+      case "net-metering-revenue":
+        return <NetMeteringRevenue lang={lang} />;
+      case "ngan-to-rai":
+        return <NganToRai lang={lang} />;
+      case "ngan-to-sqm":
+        return <NganToSqm lang={lang} />;
+      case "ngan-to-sqwa":
+        return <NganToSqwa lang={lang} />;
+      case "normal-distribution-z-table":
+        return <NormalDistributionZTable lang={lang} />;
+      case "note-taking":
+        return <NoteTaking lang={lang} />;
+      case "nsf-savings-calculator":
+        return <NsfSavingsCalculator lang={lang} />;
+      case "nth-root-calculator":
+        return <NthRootCalculator lang={lang} />;
+      case "number-to-english-text":
+        return <NumberToEnglishText lang={lang} />;
+      case "number-to-thai-text":
+        return <NumberToThaiText lang={lang} />;
+      case "on-grid-solar-payback":
+        return <OnGridSolarPayback lang={lang} />;
+      case "outliers-calculator":
+        return <OutliersCalculator lang={lang} />;
+      case "parkinsons-law-calculator":
+        return <ParkinsonsLawCalculator lang={lang} />;
+      case "pearson-correlation":
+        return <PearsonCorrelation lang={lang} />;
+      case "percent-difference":
+        return <PercentDifferenceCalculator lang={lang} />;
+      case "percent-of-value":
+        return <PercentOfValue lang={lang} />;
+      case "percentage-decrease":
+        return <PercentageDecrease lang={lang} />;
+      case "percentage-increase":
+        return <PercentageIncrease lang={lang} />;
+      case "percentile-calculator":
+        return <PercentileCalculator lang={lang} />;
+      case "permutation-calculator":
+        return <PermutationCalculator lang={lang} />;
+      case "poisson-distribution":
+        return <PoissonDistribution lang={lang} />;
+      case "polygon-diagonals":
+        return <PolygonDiagonals lang={lang} />;
+      case "polygon-exterior-angle":
+        return <PolygonExteriorAngle lang={lang} />;
+      case "polygon-interior-angle-sum":
+        return <PolygonInteriorAngleSum lang={lang} />;
+      case "polynomial-derivative":
+        return <PolynomialDerivative lang={lang} />;
+      case "population-standard-deviation":
+        return <PopulationStandardDeviation lang={lang} />;
+      case "power-set-size":
+        return <PowerSetSize lang={lang} />;
+      case "present-value-pv":
+        return <PresentValueCalculator lang={lang} />;
+      case "prime-number-checker":
+        return <PrimeNumberChecker lang={lang} />;
+      case "print-cost-per-page":
+        return <PrintCostPerPageCalculator lang={lang} />;
+      case "probability-calculator":
+        return <ProbabilityCalculator lang={lang} />;
+      case "prorate-salary":
+        return <ProrateSalary lang={lang} />;
+      case "pvd-retirement-calculator":
+        return <PvdRetirementCalculator lang={lang} />;
+      case "pythagoras-hypotenuse":
+        return <PythagorasHypotenuse lang={lang} />;
+      case "pythagoras-leg":
+        return <PythagorasLeg lang={lang} />;
+      case "quadratic-equation":
+        return <QuadraticEquation lang={lang} />;
+      case "quartile-calculator":
+        return <QuartileCalculator lang={lang} />;
+      case "quartile-deviation":
+        return <QuartileDeviationCalculator lang={lang} />;
+      case "radian-to-degree":
+        return <RadianToDegree lang={lang} />;
+      case "rai-to-hectare":
+        return <RaiToHectare lang={lang} />;
+      case "rai-to-ngan":
+        return <RaiToNgan lang={lang} />;
+      case "rai-to-sqm":
+        return <RaiToSqm lang={lang} />;
+      case "rai-to-sqwa":
+        return <RaiToSqwa lang={lang} />;
+      case "random-number-generator":
+        return <RandomNumberGenerator lang={lang} />;
+      case "range-calculator":
+        return <RangeCalculator lang={lang} />;
+      case "reading-comprehension":
+        return <ReadingComprehension lang={lang} />;
+      case "regression-line":
+        return <LinearRegressionLine1 lang={lang} />;
+      case "relationship-investment":
+        return <RelationshipInvestment lang={lang} />;
+      case "reorder-point-calculator":
+        return <ReorderPointCalculator lang={lang} />;
+      case "roman-to-decimal":
+        return <RomanToDecimal lang={lang} />;
+      case "rto-rpo":
+        return <RtoRpoCalculator lang={lang} />;
+      case "safety-stock-calculator":
+        return <SafetyStockCalculator lang={lang} />;
+      case "sample-size":
+        return <KrejcieMorganSampleSize1 lang={lang} />;
+      case "sample-standard-deviation":
+        return <SampleStandardDeviation lang={lang} />;
+      case "scientific-notation-to-decimal":
+        return <ScientificNotationToDecimal lang={lang} />;
+      case "sector-area-calculator":
+        return <SectorAreaCalculator lang={lang} />;
+      case "severance-pay-calculator":
+        return <SeverancePayCalculator lang={lang} />;
+      case "simple-moving-average":
+        return <SimpleMovingAverage lang={lang} />;
+      case "six-jars-money-management":
+        return <SixJarsCalculator lang={lang} />;
+      case "skewness-calculator":
+        return <SkewnessCalculator lang={lang} />;
+      case "skill-half-life":
+        return <SkillHalfLife lang={lang} />;
+      case "sla-uptime":
+        return <SLAUptimeCalculator lang={lang} />;
+      case "sleep-debt-calculator":
+        return <SleepDebtCalculator lang={lang} />;
+      case "slope-formula":
+        return <SlopeFormula lang={lang} />;
+      case "slope-intercept-equation":
+        return <SlopeInterceptEquation lang={lang} />;
+      case "social-media-roi":
+        return <SocialMediaROI lang={lang} />;
+      case "social-security-lump-sum":
+        return <SocialSecurityLumpSum lang={lang} />;
+      case "social-security-m33-m39":
+        return <SocialSecurityM33M39 lang={lang} />;
+      case "social-security-m40":
+        return <SocialSecurityM40 lang={lang} />;
+      case "social-security-pension":
+        return <SocialSecurityPension lang={lang} />;
+      case "spaced-repetition":
+        return <SpacedRepetition lang={lang} />;
+      case "spherical-to-cartesian":
+        return <SphericalToCartesian lang={lang} />;
+      case "sqft-to-sqin":
+        return <SqFtToSqIn lang={lang} />;
+      case "sqft-to-sqm":
+        return <SqFtToSqM lang={lang} />;
+      case "sqkm-to-acre":
+        return <SqKmToAcre lang={lang} />;
+      case "sqkm-to-rai":
+        return <SqkmToRai lang={lang} />;
+      case "sqkm-to-sqm":
+        return <SqkmToSqm lang={lang} />;
+      case "sqm-to-acre":
+        return <SqmToAcre lang={lang} />;
+      case "sqm-to-ngan":
+        return <SqmToNgan lang={lang} />;
+      case "sqm-to-rai":
+        return <SqmToRai lang={lang} />;
+      case "sqm-to-sqft":
+        return <SqmToSqft lang={lang} />;
+      case "sqm-to-sqkm":
+        return <SqmToSqkm lang={lang} />;
+      case "sqm-to-sqwa":
+        return <SqmToSqwa lang={lang} />;
+      case "sqm-to-sqyd":
+        return <SqmToSqyd lang={lang} />;
+      case "square-root-calculator":
+        return <SquareRootCalculator lang={lang} />;
+      case "sqwa-to-ngan":
+        return <SqwaToNgan lang={lang} />;
+      case "sqwa-to-rai":
+        return <SqwaToRai lang={lang} />;
+      case "sqwa-to-sqm":
+        return <SqwaToSqm lang={lang} />;
+      case "sqyd-to-sqm":
+        return <SqYdToSqM lang={lang} />;
+      case "standard-deviation":
+        return <PopulationStandardDeviation1 lang={lang} />;
+      case "standard-error-calculator":
+        return <StandardErrorCalculator lang={lang} />;
+      case "standing-desk-ratio":
+        return <StandingDeskRatio lang={lang} />;
+      case "sum-difference-of-cubes":
+        return <SumDifferenceOfCubes lang={lang} />;
+      case "surface-area-cylinder":
+        return <SurfaceAreaCylinder lang={lang} />;
+      case "surface-area-sphere":
+        return <SurfaceAreaSphere lang={lang} />;
+      case "system-of-equations-2-variables":
+        return <SystemOfEquations2Variables lang={lang} />;
+      case "system-of-equations-3-variables":
+        return <SystemOfEquations3Variables lang={lang} />;
+      case "t-score-calculator":
+        return <TScoreCalculator lang={lang} />;
+      case "taro-yamane-sample-size":
+        return <TaroYamaneSampleSize lang={lang} />;
+      case "task-batching":
+        return <TaskBatchingCalculator lang={lang} />;
+      case "tax-deduction-donation":
+        return <TaxDeductionDonationCalculator lang={lang} />;
+      case "tax-deduction-insurance":
+        return <TaxDeductionInsurance lang={lang} />;
+      case "tax-deduction-rmf":
+        return <TaxDeductionRMF lang={lang} />;
+      case "tax-deduction-ssf":
+        return <TaxDeductionSSF lang={lang} />;
+      case "tax-deduction-thaiesg":
+        return <TaxDeductionThaiESG lang={lang} />;
+      case "ten-thousand-hours":
+        return <TenThousandHours lang={lang} />;
+      case "thai-post-ems-cost":
+        return <ThaiPostEmsCost lang={lang} />;
+      case "thai-public-holidays":
+        return <ThaiPublicHolidays lang={lang} />;
+      case "time-affluence":
+        return <TimeAffluence lang={lang} />;
+      case "triangle-centroid":
+        return <TriangleCentroid lang={lang} />;
+      case "trig-arccos":
+        return <TrigArcCos lang={lang} />;
+      case "trig-arcsin":
+        return <TrigArcSin lang={lang} />;
+      case "trig-arctan":
+        return <TrigArcTan lang={lang} />;
+      case "trig-cos":
+        return <TrigCos lang={lang} />;
+      case "trig-sin":
+        return <TrigSin lang={lang} />;
+      case "trig-tan":
+        return <TrigTan lang={lang} />;
+      case "truth-table-2-variables":
+        return <TruthTable2Variables lang={lang} />;
+      case "truth-table-3-variables":
+        return <TruthTable3Variables lang={lang} />;
+      case "value-is-what-percent":
+        return <ValueIsWhatPercent lang={lang} />;
+      case "variance-calculator":
+        return <VarianceCalculator lang={lang} />;
+      case "vector-magnitude":
+        return <VectorMagnitudeCalculator lang={lang} />;
+      case "venn-diagram-2-sets":
+        return <VennDiagram2Sets lang={lang} />;
+      case "venn-diagram-3-sets":
+        return <VennDiagram3Sets lang={lang} />;
+      case "volume-cone":
+        return <VolumeCone lang={lang} />;
+      case "volume-cube":
+        return <VolumeCube lang={lang} />;
+      case "volume-cylinder":
+        return <VolumeCylinder lang={lang} />;
+      case "volume-pyramid":
+        return <VolumePyramid lang={lang} />;
+      case "volume-sphere":
+        return <VolumeSphere lang={lang} />;
+      case "volume-triangular-prism":
+        return <VolumeTriangularPrism lang={lang} />;
+      case "volumetric-weight":
+        return <VolumetricWeightCalculator lang={lang} />;
+      case "warehousing-cost":
+        return <WarehousingCost lang={lang} />;
+      case "weighted-average":
+        return <WeightedAverageCalculator lang={lang} />;
+      case "wht-1-percent":
+        return <WHT1PercentCalculator lang={lang} />;
+      case "wht-2-percent":
+        return <WHT2PercentCalculator lang={lang} />;
+      case "wht-3-percent":
+        return <WHT3PercentCalculator lang={lang} />;
+      case "wht-5-percent":
+        return <WHT5PercentCalculator lang={lang} />;
+      case "willpower-depletion":
+        return <WillpowerDepletion lang={lang} />;
+      case "work-life-balance-score":
+        return <WorkLifeBalanceScore lang={lang} />;
+      case "working-days-calculator":
+        return <WorkingDaysCalculator lang={lang} />;
+      case "wpm-productivity":
+        return <WpmProductivityCalculator lang={lang} />;
+      case "z-score-calculator":
+        return <ZScoreCalculator lang={lang} />;
 
-  if (activeCalc === "bmi-kids") return <BMIKidsCalculator lang={lang} setCalc={setCalc} />;
-
-  // Family
-  if (activeCalc === "child-height") return <ChildHeightCalculator lang={lang} />;
-  if (activeCalc === "pregnancy-due") return <PregnancyDueCalculator lang={lang} />;
-  if (activeCalc === "ovulation") return <OvulationCalculator lang={lang} />;
-  if (activeCalc === "blood-type") return <BloodTypePredictor lang={lang} />;
-  if (activeCalc === "zodiac") return <ZodiacCalculator lang={lang} />;
-  if (activeCalc === "pet-age") return <PetAgeCalculator lang={lang} />;
-  if (activeCalc === "fetal-weight") return <FetalWeightCalculator lang={lang} />;
-  if (activeCalc === "child-cost") return <ChildCostCalculator lang={lang} />;
-  if (activeCalc === "child-milestone") return <ChildMilestoneCalculator lang={lang} />;
-  if (activeCalc === "horoscope") return <HoroscopeCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "tarot") return <TarotReadingCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "lenormand") return <LenormandCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "oracle") return <OracleCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "playing-card") return <PlayingCardCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "kipper") return <KipperCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "gold-price") return <GoldPriceCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "wedding-budget") return <WeddingBudget lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "newborn-cost") return <NewbornCost lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "pet-cost") return <PetCost lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "food-expiration") return <FoodExpiration lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "rent-vs-buy") return <RentVsBuyCalc lang={lang} setCalc={setCalc} />;
-  
-  // Travel
-  if (activeCalc === "time-zone") return <TimeZoneConverter lang={lang} />;
-  if (activeCalc === "travel-budget") return <TravelBudgetCalculator lang={lang} />;
-  if (activeCalc === "flight-time") return <FlightTimeCalculator lang={lang} />;
-  if (activeCalc === "packing-list") return <PackingListGenerator lang={lang} />;
-  if (activeCalc === "road-trip") return <RoadTripCostCalculator lang={lang} />;
-  if (activeCalc === "baggage-weight") return <BaggageWeightChecker lang={lang} />;
-
-  // Finance
-  if (activeCalc === "discount") return <DiscountCalculator lang={lang} />;
-  if (activeCalc === "car-loan") return <CarLoanCalculator lang={lang} />;
-  if (activeCalc === "mortgage") return <MortgageCalculator lang={lang} />;
-  if (activeCalc === "compound-interest") return <CompoundInterest lang={lang} />;
-  if (activeCalc === "bill-splitter") return <BillSplitter lang={lang} />;
-  if (activeCalc === "currency-converter") return <CurrencyConverter lang={lang} />;
-  if (activeCalc === "savings-goal") return <SavingsGoalCalculator lang={lang} />;
-  if (activeCalc === "inflation") return <InflationCalculator lang={lang} />;
-  if (activeCalc === "salary-hourly") return <SalaryToHourlyCalculator lang={lang} />;
-  if (activeCalc === "net-worth") return <NetWorthCalculator lang={lang} />;
-  if (activeCalc === "debt-payoff") return <DebtPayoffCalculator lang={lang} />;
-  if (activeCalc === "retirement") return <RetirementCalculator lang={lang} />;
-  if (activeCalc === "stock-profit") return <StockProfitCalculator lang={lang} />;
-  if (activeCalc === "roi") return <ROICalculator lang={lang} />;
-  if (activeCalc === "dca") return <DCACalculator lang={lang} />;
-  if (activeCalc === "stock-fee") return <StockFeeCalculator lang={lang} />;
-  if (activeCalc === "net-salary") return <NetSalaryCalculator lang={lang} />;
-  if (activeCalc === "personal-tax") return <PersonalTaxCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "expense-tracker") return <ExpenseTrackerCalculator lang={lang} />;
-
-  // Business
-  if (activeCalc === "vat") return <VatCalculator lang={lang} />;
-  if (activeCalc === "margin") return <MarginCalculator lang={lang} />;
-  if (activeCalc === "break-even") return <BreakEvenCalculator lang={lang} />;
-  if (activeCalc === "markup") return <MarkupCalculator lang={lang} />;
-  if (activeCalc === "depreciation") return <DepreciationCalculator lang={lang} />;
-  if (activeCalc === "payroll") return <PayrollCalculator lang={lang} />;
-  if (activeCalc === "cogs") return <COGSCalculator lang={lang} />;
-  if (activeCalc === "ltv") return <LTVCalculator lang={lang} />;
-  if (activeCalc === "cac") return <CACCalculator lang={lang} />;
-  if (activeCalc === "conversion-rate") return <ConversionRateCalculator lang={lang} />;
-  if (activeCalc === "inventory-turnover") return <InventoryTurnoverCalculator lang={lang} />;
-  if (activeCalc === "financial-ratio") return <FinancialRatioCalculator lang={lang} />;
-  if (activeCalc === "marketplace-fee") return <MarketplaceFeeCalculator lang={lang} />;
-  if (activeCalc === "safety-stock") return <SafetyStockCalculator lang={lang} />;
-  if (activeCalc === "shipping-cost") return <ShippingCostCalculator lang={lang} />;
-  if (activeCalc === "return-rate") return <ReturnRateCalculator lang={lang} />;
-  if (activeCalc === "eoq") return <EOQCalculator lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "churn-retention") return <ChurnRetentionCalc lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "shrinkage") return <ShrinkageCalc lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "import-markup") return <ImportMarkupCalc lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "freelance-rate") return <FreelanceRate lang={lang} setCalc={setCalc} />;
-
-  // Utility
-  if (activeCalc === "btu") return <BTUCalculator lang={lang} />;
-  if (activeCalc === "electric") return <ElectricCalculator lang={lang} />;
-  if (activeCalc === "water-bill") return <UtilityWaterCalculator lang={lang} />;
-  if (activeCalc === "basen") return <BaseNCalculator lang={lang} />;
-  if (activeCalc === "gpa") return <GPACalculator lang={lang} />;
-  if (activeCalc === "fuel-cost") return <FuelCostCalculator lang={lang} />;
-  if (activeCalc === "grade-converter") return <GradeConverter lang={lang} />;
-  if (activeCalc === "target-gpa") return <TargetGPACalculator lang={lang} />;
-  if (activeCalc === "percentile") return <PercentileCalculatorNew lang={lang} />;
-  if (activeCalc === "reading-time") return <ReadingTimeCalculator lang={lang} />;
-
-  if (activeCalc === "english-test") return <EnglishTestConverter lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "pomodoro") return <PomodoroTimer lang={lang} />;
-  if (activeCalc === "flashcard-timer") return <FlashCardTimer lang={lang} />;
-
-  // Conversion
-  if (activeCalc === "cooking-unit") return <CookingUnitConverter lang={lang} />;
-  if (activeCalc === "tile-area") return <TileAreaCalculator lang={lang} />;
-  if (activeCalc === "digital-unit") return <DigitalUnitConverter lang={lang} />;
-  if (activeCalc === "angle") return <AngleConverter lang={lang} />;
-  if (activeCalc === "color") return <ColorConverter lang={lang} />;
-  if (activeCalc === "temperature") return <TemperatureConverter lang={lang} />;
-  if (activeCalc === "speed") return <SpeedConverter lang={lang} />;
-  if (activeCalc === "area-unit") return <AreaUnitConverter lang={lang} />;
-  if (activeCalc === "weight-unit") return <WeightUnitConverter lang={lang} />;
-  if (activeCalc === "roman") return <RomanNumeralConverter lang={lang} />;
-  if (activeCalc === "area-shape") return <AreaShapeCalculator lang={lang} />;
-  if (activeCalc === "volume-shape") return <VolumeShapeCalculator lang={lang} />;
-  if (activeCalc === "working-days") return <WorkingDaysCalculator lang={lang} />;
-  if (activeCalc === "pantone") return <PantoneConverter lang={lang} />;
-
-  // Agriculture
-
-  if (activeCalc === "food-energy") return <FoodEnergyCalculator lang={lang} />;
-  if (activeCalc === "fertilizer") return <FertilizerCalculator lang={lang} />;
-  if (activeCalc === "irrigation") return <IrrigationCalculator lang={lang} />;
-  if (activeCalc === "yield") return <YieldCalculator lang={lang} />;
-  if (activeCalc === "durian") return <DurianCalculator lang={lang} setCalc={setCalc} />;
-
-  // Construction
-  if (activeCalc === "house-paint") return <HousePaintCalculator lang={lang} />;
-  if (activeCalc === "cement") return <CementCalculator lang={lang} />;
-  if (activeCalc === "wallpaper") return <WallpaperCalculator lang={lang} />;
-  if (activeCalc === "roof-area") return <RoofAreaCalculator lang={lang} />;
-  if (activeCalc === "water-tank") return <WaterTankCalculator lang={lang} />;
-  if (activeCalc === "pool-vol") return <PoolVolumeCalculator lang={lang} />;
-  if (activeCalc === "insulation") return <InsulationCalculator lang={lang} />;
-  if (activeCalc === "reno-cost") return <RenovationCostCalculator lang={lang} />;
-
-  // General
-
-  if (activeCalc === "word-counter") return <WordCounter lang={lang} />;
-  if (activeCalc === "age") return <AgeCalculator lang={lang} />;
-  
-  // Technology
-  if (activeCalc === "bandwidth") return <BandwidthCalculator lang={lang} />;
-  if (activeCalc === "server-cost") return <ServerCostCalculator lang={lang} />;
-  if (activeCalc === "image-size") return <ImageSizeCalculator lang={lang} />;
-  if (activeCalc === "ip-subnet") return <IPSubnetCalculator lang={lang} />;
-  if (activeCalc === "video-bitrate") return <VideoBitrateCalculator lang={lang} />;
-  if (activeCalc === "battery-life") return <BatteryLifeCalculator lang={lang} />;
-  if (activeCalc === "hash-rate") return <HashRateCalculator lang={lang} />;
-  if (activeCalc === "raid-calc") return <RaidCalculator lang={lang} />;
-  if (activeCalc === "ppi-calc") return <PpiCalculator lang={lang} />;
-  if (activeCalc === "api-cost") return <ApiCostCalculator lang={lang} />;
-  if (activeCalc === "ups-runtime") return <UpsRuntimeCalculator lang={lang} />;
-  if (activeCalc === "morse-code") return <MorseCodeConverter lang={lang} />;
-  if (activeCalc === "ascii-converter") return <AsciiConverter lang={lang} />;
-  if (activeCalc === "cache-hit-rate") return <CacheHitRateCalculator lang={lang} />;
-
-  // Agriculture 3
-  if (activeCalc === "soil-ph") return <SoilPhCalculator lang={lang} />;
-  if (activeCalc === "livestock-profit") return <LivestockProfitCalculator lang={lang} />;
-  if (activeCalc === "spray-volume") return <SprayVolumeCalculator lang={lang} />;
-  if (activeCalc === "fishery-income") return <FisheryIncomeCalculator lang={lang} />;
-  if (activeCalc === "yield-gap") return <YieldGapCalculator lang={lang} />;
-
-  // Travel 2
-  if (activeCalc === "jet-lag") return <JetLagCalculator lang={lang} />;
-  if (activeCalc === "roaming-cost") return <RoamingCostCalculator lang={lang} />;
-
-  // Construction 2
-  if (activeCalc === "solar-panel") return <SolarPanelCalculator lang={lang} />;
-  if (activeCalc === "interior-cost") return <InteriorCostCalculator lang={lang} />;
-  if (activeCalc === "ach-calc") return <AchVentilationCalculator lang={lang} />;
-  if (activeCalc === "concrete-vol") return <ConcreteVolumeCalculator lang={lang} />;
-  if (activeCalc === "rebar-weight") return <RebarWeightCalculator lang={lang} />;
-  if (activeCalc === "aac-blocks") return <AacBlocksCalculator lang={lang} />;
-  if (activeCalc === "labor-cost-sqm") return <LaborCostCalculator lang={lang} />;
-  if (activeCalc === "plumbing-pipe") return <PlumbingPipeCalculator lang={lang} />;
-  if (activeCalc === "slope-grade") return <SlopeGradeCalculator lang={lang} />;
-
-  // Environment
-  if (activeCalc === "carbon-footprint") return <CarbonFootprintCalculator lang={lang} />;
-  if (activeCalc === "wind-energy") return <WindEnergyCalculator lang={lang} />;
-  if (activeCalc === "water-savings") return <WaterSavingsCalculator lang={lang} />;
-  if (activeCalc === "plastic-footprint") return <PlasticFootprintCalculator lang={lang} />;
-
-  // Science
-  if (activeCalc === "quadratic-eq") return <QuadraticCalculator lang={lang} />;
-  if (activeCalc === "ph-poh") return <PHCalculator lang={lang} />;
-  if (activeCalc === "continuous-compounding") return <ContinuousCompoundingCalculator lang={lang} />;
-  if (activeCalc === "permutation-combination") return <PermutationCombinationCalculator lang={lang} />;
-  if (activeCalc === "bayes-theorem") return <BayesTheoremCalculator lang={lang} />;
-  if (activeCalc === "standard-deviation") return <StandardDeviationCalculator lang={lang} />;
-  if (activeCalc === "regression-line") return <RegressionLineCalculator lang={lang} />;
-  if (activeCalc === "chi-square") return <ChiSquareCalculator lang={lang} />;
-  if (activeCalc === "t-test") return <TTestCalculator lang={lang} />;
-  if (activeCalc === "sample-size") return <SampleSizeCalculator lang={lang} />;
-  if (activeCalc === "confidence-interval") return <ConfidenceIntervalCalculator lang={lang} />;
-  if (activeCalc === "force-converter") return <ForceConverter lang={lang} />;
-  if (activeCalc === "pressure-converter") return <PressureConverter lang={lang} />;
-  if (activeCalc === "energy-converter") return <EnergyConverterNew lang={lang} />;
-  if (activeCalc === "power-converter") return <PowerConverter lang={lang} />;
-  if (activeCalc === "density-converter") return <DensityConverter lang={lang} />;
-  if (activeCalc === "projectile-motion") return <ProjectileMotionCalculator lang={lang} />;
-  if (activeCalc === "ohms-law") return <OhmsLawCalculator lang={lang} />;
-  if (activeCalc === "capacitor-charge") return <CapacitorChargeCalculator lang={lang} />;
-  if (activeCalc === "wave-calculator") return <WaveCalculator lang={lang} />;
-  if (activeCalc === "ph-buffer") return <PHBufferCalculator lang={lang} />;
-  if (activeCalc === "equilibrium-constant") return <EquilibriumConstantCalculator lang={lang} />;
-
-    if (activeCalc === "e-waste-water-footprint") return <EWasteWaterFootprintBatch10 lang={lang} />;
-  if (activeCalc === "ev-charger-installation-cost") return <EVChargerInstallationCostBatch10 lang={lang} />;
-  if (activeCalc === "ev-charging-cost") return <EVChargingCostBatch10 lang={lang} />;
-  if (activeCalc === "green-building-score") return <GreenBuildingScoreBatch10 lang={lang} />;
-  if (activeCalc === "led-savings") return <LEDSavingsCalculatorBatch10 lang={lang} />;
-  if (activeCalc === "livestock-methane-emissions") return <LivestockMethaneEmissionsBatch10 lang={lang} />;
-  if (activeCalc === "personal-ecological-footprint") return <PersonalEcologicalFootprintBatch10 lang={lang} />;
-  if (activeCalc === "renewable-vs-grid-electricity") return <RenewableVsGridElectricityBatch10 lang={lang} />;
-  if (activeCalc === "solar-payback-period") return <SolarPaybackPeriodCalculatorBatch10 lang={lang} />;
-  if (activeCalc === "tree-co2-offset") return <TreeCO2OffsetCalculatorBatch10 lang={lang} />;
-  if (activeCalc === "app-dev-cost") return <AppDevCostCalculatorBatch11 lang={lang} />;
-  if (activeCalc === "app-store-revenue") return <AppStoreRevenueCalculatorBatch11 lang={lang} />;
-  if (activeCalc === "cdn-cost-calculator") return <CdnCostCalculatorBatch11 lang={lang} />;
-  if (activeCalc === "cloud-storage-cost") return <CloudStorageCostCalculatorBatch11 lang={lang} />;
-  if (activeCalc === "database-cost") return <DatabaseCostCalculatorBatch11 lang={lang} />;
-  if (activeCalc === "facebook-ads-roi-cpa") return <FacebookAdsRoiCalculatorBatch11 lang={lang} />;
-  if (activeCalc === "google-ads-roi-roas") return <GoogleAdsRoiCalculatorBatch11 lang={lang} />;
-  if (activeCalc === "ltv-to-cac-ratio") return <LtvCacRatioCalculatorBatch11 lang={lang} />;
-  if (activeCalc === "sms-email-marketing-cost") return <SmsEmailCostCalculatorBatch11 lang={lang} />;
-  if (activeCalc === "vps-dedicated-cost") return <VpsDedicatedCostCalculatorBatch11 lang={lang} />;
-  if (activeCalc === "cro-revenue-impact-calculator") return <CroRevenueImpactCalculatorBatch12 lang={lang} />;
-  if (activeCalc === "domain-hosting-cost-calculator") return <DomainHostingCostCalculatorBatch12 lang={lang} />;
-  if (activeCalc === "email-deliverability-score-calculator") return <EmailDeliverabilityScoreCalculatorBatch12 lang={lang} />;
-  if (activeCalc === "email-revenue-calculator") return <EmailRevenueCalculatorBatch12 lang={lang} />;
-  if (activeCalc === "pwa-vs-native-app-cost-calculator") return <PwaVsNativeAppCostCalculatorBatch12 lang={lang} />;
-  if (activeCalc === "saas-stack-total-cost-calculator") return <SaasStackTotalCostCalculatorBatch12 lang={lang} />;
-  if (activeCalc === "seo-value-calculator") return <SeoValueCalculatorBatch12 lang={lang} />;
-  if (activeCalc === "sme-cybersecurity-cost-calculator") return <SmeCybersecurityCostCalculatorBatch12 lang={lang} />;
-  if (activeCalc === "ssl-certificate-cost-calculator") return <SslCertificateCostCalculatorBatch12 lang={lang} />;
-  if (activeCalc === "technical-debt-cost-calculator") return <TechnicalDebtCostCalculatorBatch12 lang={lang} />;
-  if (activeCalc === "ac-electricity-cost") return <ACElectricityCostBatch13 lang={lang} />;
-  if (activeCalc === "built-in-kitchen-cost") return <BuiltInKitchenCostBatch13 lang={lang} />;
-  if (activeCalc === "condo-maintenance-fee-total") return <CondoMaintenanceFeeTotalBatch13 lang={lang} />;
-  if (activeCalc === "condo-purchase-cost") return <CondoPurchaseCostBatch13 lang={lang} />;
-  if (activeCalc === "condo-rent-vs-buy-to-let-roi") return <CondoRentVsBuyToLetROIBatch13 lang={lang} />;
-  if (activeCalc === "full-house-furniture-cost") return <FullHouseFurnitureCostBatch13 lang={lang} />;
-  if (activeCalc === "moving-house-cost") return <MovingHouseCostBatch13 lang={lang} />;
-  if (activeCalc === "new-house-purchase-cost") return <NewHousePurchaseCostBatch13 lang={lang} />;
-  if (activeCalc === "property-tax-calculator") return <PropertyTaxCalculatorBatch13 lang={lang} />;
-  if (activeCalc === "rental-yield-calculator") return <RentalYieldCalculatorBatch13 lang={lang} />;
-  if (activeCalc === "ac-btu-size-calculator") return <AcBtuSizeCalculatorBatch14 lang={lang} />;
-  if (activeCalc === "appliance-electricity-cost") return <ApplianceElectricityCostBatch14 lang={lang} />;
-  if (activeCalc === "garden-maintenance-cost") return <GardenMaintenanceCostBatch14 lang={lang} />;
-  if (activeCalc === "home-internet-cost") return <HomeInternetCostBatch14 lang={lang} />;
-  if (activeCalc === "home-security-cost") return <HomeSecurityCostBatch14 lang={lang} />;
-  if (activeCalc === "home-solar-installation-cost") return <HomeSolarInstallationCostBatch14 lang={lang} />;
-  if (activeCalc === "house-painting-cost") return <HousePaintingCostBatch14 lang={lang} />;
-  if (activeCalc === "household-water-usage-cost") return <HouseholdWaterUsageCostBatch14 lang={lang} />;
-  if (activeCalc === "pool-maintenance-cost") return <PoolMaintenanceCostBatch14 lang={lang} />;
-  if (activeCalc === "roof-replacement-cost") return <RoofReplacementCostBatch14 lang={lang} />;
-  if (activeCalc === "car-comparison") return <CarComparisonCalculatorBatch15 lang={lang} />;
-  if (activeCalc === "car-depreciation") return <CarDepreciationCalculatorBatch15 lang={lang} />;
-  if (activeCalc === "car-insurance") return <CarInsuranceCalculatorBatch15 lang={lang} />;
-  if (activeCalc === "car-maintenance") return <CarMaintenanceCalculatorBatch15 lang={lang} />;
-  if (activeCalc === "car-tco") return <CarTcoCalculatorBatch15 lang={lang} />;
-  if (activeCalc === "ev-cost-per-km") return <EvCostPerKmCalculatorBatch15 lang={lang} />;
-  if (activeCalc === "ev-ice-breakeven") return <EvIceBreakevenCalculatorBatch15 lang={lang} />;
-  if (activeCalc === "motorcycle-loan") return <MotorcycleLoanCalculatorBatch15 lang={lang} />;
-  if (activeCalc === "rider-roi") return <RiderRoiCalculatorBatch15 lang={lang} />;
-  if (activeCalc === "truck-cost") return <TruckCostCalculatorBatch15 lang={lang} />;
-  if (activeCalc === "annual-commute-cost-calculator") return <AnnualCommuteCalculatorBatch16 lang={lang} />;
-  if (activeCalc === "car-pool-savings-calculator") return <CarPoolCalculatorBatch16 lang={lang} />;
-  if (activeCalc === "monthly-parking-cost-calculator") return <MonthlyParkingCalculatorBatch16 lang={lang} />;
-  if (activeCalc === "monthly-toll-fee-calculator") return <TollFeeCalculatorBatch16 lang={lang} />;
-  if (activeCalc === "ride-hailing-vs-own-car-cost-calculator") return <RideHailingVsOwnCarCalculatorBatch16 lang={lang} />;
-  if (activeCalc === "anniversary-countdown") return <AnniversaryCountdown lang={lang} />;
-  if (activeCalc === "event-countdown") return <EventCountdown lang={lang} />;
-  if (activeCalc === "exact-age-calculator") return <ExactAgeCalculator lang={lang} />;
-  if (activeCalc === "retirement-countdown") return <RetirementCountdown lang={lang} />;
-  if (activeCalc === "sunrise-sunset-calculator") return <SunriseSunsetCalculator lang={lang} />;
-  if (activeCalc === "thai-lunar-phase") return <ThaiLunarPhase lang={lang} />;
-  if (activeCalc === "font-size-reading-distance") return <FontSizeReadingDistance lang={lang} />;
-  if (activeCalc === "remaining-annual-leave") return <RemainingAnnualLeave lang={lang} />;
-  if (activeCalc === "shift-work-staffing") return <ShiftWorkStaffing lang={lang} />;
-  if (activeCalc === "social-media-image-size") return <SocialMediaImageSize lang={lang} />;
-  if (activeCalc === "customs-broker-fee") return <CustomsBrokerFeeCalculator lang={lang} />;
-  if (activeCalc === "hs-code-import-tax") return <HsCodeImportTaxCalculator lang={lang} />;
-  if (activeCalc === "import-customs-duty") return <ImportCustomsDutyCalculator lang={lang} />;
-  if (activeCalc === "solar-battery-sizing") return <SolarBatterySizing lang={lang} />;
-  if (activeCalc === "solar-inverter-sizing") return <SolarInverterSizing lang={lang} />;
-  if (activeCalc === "tou-electricity-cost") return <TouElectricityCost lang={lang} />;
-  if (activeCalc === "cost-of-living-comparison") return <CostOfLivingComparison lang={lang} />;
-  if (activeCalc === "qaly-calculator") return <QalyCalculator lang={lang} />;
-  if (activeCalc === "metcalfe-network-value") return <MetcalfeNetworkValue lang={lang} />;
-  if (activeCalc === "online-course-roi") return <OnlineCourseRoi lang={lang} />;
-  if (activeCalc === "viral-coefficient") return <ViralCoefficient lang={lang} />;
-  if (activeCalc === "automation-roi") return <AutomationROI lang={lang} />;
-  if (activeCalc === "brooks-law-team-size") return <BrooksLawTeamSize lang={lang} />;
-  if (activeCalc === "noise-level-db") return <NoiseLevelDb lang={lang} />;
-  if (activeCalc === "sound-insulation") return <SoundInsulation lang={lang} />;
-  if (activeCalc === "flow-state-frequency") return <FlowStateFrequency lang={lang} />;
-  if (activeCalc === "banana-farming-calculator") return <BananaFarmingCalculatorBatch7 lang={lang} />;
-  if (activeCalc === "broiler-chicken-farm-calculator") return <BroilerChickenFarmCalculatorBatch7 lang={lang} />;
-  if (activeCalc === "cassava-farming-calculator") return <CassavaFarmingCalculatorBatch7 lang={lang} />;
-  if (activeCalc === "coconut-farming-calculator") return <CoconutFarmingCalculatorBatch7 lang={lang} />;
-  if (activeCalc === "corn-farming-calculator") return <CornFarmingCalculatorBatch7 lang={lang} />;
-  if (activeCalc === "mango-farming-calculator") return <MangoFarmingCalculatorBatch7 lang={lang} />;
-  if (activeCalc === "oil-palm-farming-calculator") return <OilPalmFarmingCalculatorBatch7 lang={lang} />;
-  if (activeCalc === "rubber-tree-farming-calculator") return <RubberTreeFarmingCalculatorBatch7 lang={lang} />;
-  if (activeCalc === "sugarcane-farming-calculator") return <SugarcaneFarmingCalculatorBatch7 lang={lang} />;
-  if (activeCalc === "white-shrimp-farm-calculator") return <WhiteShrimpFarmCalculatorBatch7 lang={lang} />;
-  if (activeCalc === "agri-chemical-mix-ratio") return <AgriChemicalMixRatioBatch8 lang={lang} />;
-  if (activeCalc === "beef-cattle-farm-profit-cost") return <BeefCattleFarmProfitCostBatch8 lang={lang} />;
-  if (activeCalc === "drip-irrigation-cost") return <DripIrrigationCostBatch8 lang={lang} />;
-  if (activeCalc === "farm-area-from-gps") return <FarmAreaFromGpsBatch8 lang={lang} />;
-  if (activeCalc === "farm-break-even-yield") return <FarmBreakEvenYieldBatch8 lang={lang} />;
-  if (activeCalc === "farm-labor-cost-per-rai") return <FarmLaborCostPerRaiBatch8 lang={lang} />;
-  if (activeCalc === "layer-chicken-farm-profit-cost") return <LayerChickenFarmProfitCostBatch8 lang={lang} />;
-  if (activeCalc === "pig-farm-profit-cost") return <PigFarmProfitCostBatch8 lang={lang} />;
-  if (activeCalc === "seeds-per-rai-calculator") return <SeedsPerRaiCalculatorBatch8 lang={lang} />;
-  if (activeCalc === "tractor-rent-vs-buy") return <TractorRentVsBuyBatch8 lang={lang} />;
-  if (activeCalc === "farm-land-rent-roi") return <FarmLandRentRoiBatch9 lang={lang} />;
-  if (activeCalc === "food-carbon-footprint") return <FoodCarbonFootprintBatch9 lang={lang} />;
-  if (activeCalc === "fresh-to-dry-weight") return <FreshToDryWeightBatch9 lang={lang} />;
-  if (activeCalc === "germination-rate") return <GerminationRateBatch9 lang={lang} />;
-  if (activeCalc === "harvest-time") return <HarvestTimeBatch9 lang={lang} />;
-  if (activeCalc === "mill-storage-electricity") return <MillStorageElectricityBatch9 lang={lang} />;
-  if (activeCalc === "product-water-footprint") return <ProductWaterFootprintBatch9 lang={lang} />;
-  if (activeCalc === "recycled-waste-impact") return <RecycledWasteImpactBatch9 lang={lang} />;
-  if (activeCalc === "travel-carbon-footprint") return <TravelCarbonFootprintBatch9 lang={lang} />;
-  if (activeCalc === "water-saving-impact") return <WaterSavingImpactBatch9 lang={lang} />;
-
-  if (activeCalc === "rental-yield-new") return <RentalYieldNew lang={lang} />;
-  if (activeCalc === "commercial-cap-rate") return <CommercialCapRate lang={lang} />;
-  if (activeCalc === "valuation-income-approach") return <ValuationIncomeApproach lang={lang} />;
-  if (activeCalc === "valuation-cost-approach") return <ValuationCostApproach lang={lang} />;
-  if (activeCalc === "house-flipping-roi") return <HouseFlippingROI lang={lang} />;
-  if (activeCalc === "airbnb-profit-estimator") return <AirbnbProfitEstimator lang={lang} />;
-  if (activeCalc === "property-taxes-new") return <PropertyTaxesNew lang={lang} />;
-  if (activeCalc === "land-price-valuation") return <LandPriceValuation lang={lang} />;
-  if (activeCalc === "land-subdivision-cost") return <LandSubdivisionCost lang={lang} />;
-  if (activeCalc === "dscr-calculator") return <DSCRCalculator lang={lang} />;
-
-  if (activeCalc === "cost-per-wear") return <CostPerWear lang={lang} setCalc={setCalc} />;
-  if (activeCalc === "wardrobe-budget") return <WardrobeBudget lang={lang} />;
-  if (activeCalc === "skincare-routine-cost") return <SkincareRoutineCost lang={lang} />;
-  if (activeCalc === "haircut-annual-expense") return <HaircutAnnualExpense lang={lang} />;
-  if (activeCalc === "nail-care-expense") return <NailCareExpense lang={lang} />;
-  if (activeCalc === "hair-treatment-expense") return <HairTreatmentExpense lang={lang} />;
-  if (activeCalc === "gym-supplement-cost") return <GymSupplementCost lang={lang} />;
-  if (activeCalc === "streaming-subscriptions-cost") return <StreamingSubscriptionsCost lang={lang} />;
-  if (activeCalc === "coffee-shop-annual-cost") return <CoffeeShopAnnualCost lang={lang} />;
-  if (activeCalc === "smoking-vaping-cost") return <SmokingVapingCost lang={lang} />;
-
-    if (activeCalc === "agile-velocity") return <AgileVelocityCalculator lang={lang} />;
-  if (activeCalc === "behavioral-life") return <BehavioralLife lang={lang} />;
-  if (activeCalc === "blue-light-exposure") return <BlueLightExposure lang={lang} />;
-  if (activeCalc === "bts-mrt-vs-car") return <BtsMrtVsCar lang={lang} />;
-  if (activeCalc === "bus-factor") return <BusFactorCalculator lang={lang} />;
-  if (activeCalc === "cbm-calculator") return <CbmCalculator lang={lang} />;
-  if (activeCalc === "china-import-lead-time") return <ChinaImportLeadTime lang={lang} />;
-  if (activeCalc === "circadian-rhythm") return <CircadianRhythm lang={lang} />;
-  if (activeCalc === "code-coverage") return <CodeCoverageCalculator lang={lang} />;
-  if (activeCalc === "cognitive-load") return <CognitiveLoad lang={lang} />;
-  if (activeCalc === "compound-learning-roi") return <CompoundLearning lang={lang} />;
-  if (activeCalc === "container-weight-capacity") return <ContainerCapacity lang={lang} />;
-  if (activeCalc === "creativity-score") return <CreativityScore lang={lang} />;
-  if (activeCalc === "cumulative-noise") return <CumulativeNoise lang={lang} />;
-  if (activeCalc === "decision-fatigue") return <DecisionFatigue lang={lang} />;
-  if (activeCalc === "deep-work-calculator") return <DeepWorkCalculator lang={lang} />;
-  if (activeCalc === "diet-environment") return <DietEnvironment lang={lang} />;
-  if (activeCalc === "digital-detox-time") return <DigitalDetoxTime lang={lang} />;
-  if (activeCalc === "disaster-recovery") return <DisasterRecoveryCalculator lang={lang} />;
-  if (activeCalc === "distraction-cost") return <DistractionCostCalculator lang={lang} />;
-  if (activeCalc === "dunbar-number") return <DunbarNumber lang={lang} />;
-  if (activeCalc === "email-response-time") return <EmailResponseTimeCalculator lang={lang} />;
-  if (activeCalc === "ergonomic-score") return <ErgonomicScore lang={lang} />;
-  if (activeCalc === "flesch-kincaid-reading-level") return <FleschKincaidCalculator lang={lang} />;
-  if (activeCalc === "fomo-cost") return <FomoCost lang={lang} />;
-  if (activeCalc === "food-delivery-vs-cooking") return <FoodDeliveryVsCooking lang={lang} />;
-  if (activeCalc === "forgetting-curve") return <ForgettingCurve lang={lang} />;
-  if (activeCalc === "gnh-calculator") return <GNHCalculator lang={lang} />;
-  if (activeCalc === "gratitude-journal") return <GratitudeJournal lang={lang} />;
-  if (activeCalc === "habit-streak-calculator") return <HabitStreakCalculator lang={lang} />;
-  if (activeCalc === "hale-calculator") return <HaleCalculator lang={lang} />;
-  if (activeCalc === "happiness-roi") return <HappinessRoi lang={lang} />;
-  if (activeCalc === "inflation-impact-savings") return <InflationImpactSavings lang={lang} />;
-  if (activeCalc === "learning-rate") return <LearningRate lang={lang} />;
-  if (activeCalc === "legacy-score") return <LegacyScore lang={lang} />;
-  if (activeCalc === "life-satisfaction") return <LifeSatisfaction lang={lang} />;
-  if (activeCalc === "lifetime-healthcare-cost") return <LifetimeHealthcareCost lang={lang} />;
-  if (activeCalc === "lux-lighting") return <LuxLighting lang={lang} />;
-  if (activeCalc === "meeting-cost-calculator") return <MeetingCostCalculator lang={lang} />;
-  if (activeCalc === "meeting-roi") return <MeetingRoiCalculator lang={lang} />;
-  if (activeCalc === "minimalism-score") return <MinimalismScore lang={lang} />;
-  if (activeCalc === "moq-vs-price") return <MoqVsPrice lang={lang} />;
-  if (activeCalc === "mtbf") return <MTBFCalculator lang={lang} />;
-  if (activeCalc === "mttr") return <MTTRCalculator lang={lang} />;
-  if (activeCalc === "multi-rate-ot") return <MultiRateOT lang={lang} />;
-  if (activeCalc === "net-metering-revenue") return <NetMeteringRevenue lang={lang} />;
-  if (activeCalc === "note-taking") return <NoteTaking lang={lang} />;
-  if (activeCalc === "on-grid-solar-payback") return <OnGridSolarPayback lang={lang} />;
-  if (activeCalc === "parkinsons-law-calculator") return <ParkinsonsLawCalculator lang={lang} />;
-  if (activeCalc === "print-cost-per-page") return <PrintCostPerPageCalculator lang={lang} />;
-  if (activeCalc === "prorate-salary") return <ProrateSalary lang={lang} />;
-  if (activeCalc === "reading-comprehension") return <ReadingComprehension lang={lang} />;
-  if (activeCalc === "reorder-point-calculator") return <ReorderPointCalculator lang={lang} />;
-  if (activeCalc === "rto-rpo") return <RtoRpoCalculator lang={lang} />;
-  if (activeCalc === "safety-stock-calculator") return <SafetyStockCalculatorNew lang={lang} />;
-  if (activeCalc === "skill-half-life") return <SkillHalfLife lang={lang} />;
-  if (activeCalc === "sla-uptime") return <SLAUptimeCalculator lang={lang} />;
-  if (activeCalc === "sleep-debt-calculator") return <SleepDebtCalculator lang={lang} />;
-  if (activeCalc === "social-media-roi") return <SocialMediaROI lang={lang} />;
-  if (activeCalc === "spaced-repetition") return <SpacedRepetition lang={lang} />;
-  if (activeCalc === "standing-desk-ratio") return <StandingDeskRatio lang={lang} />;
-  if (activeCalc === "task-batching") return <TaskBatchingCalculator lang={lang} />;
-  if (activeCalc === "ten-thousand-hours") return <TenThousandHours lang={lang} />;
-  if (activeCalc === "thai-post-ems-cost") return <ThaiPostEmsCost lang={lang} />;
-  if (activeCalc === "thai-public-holidays") return <ThaiPublicHolidays lang={lang} />;
-  if (activeCalc === "time-affluence") return <TimeAffluence lang={lang} />;
-  if (activeCalc === "volumetric-weight") return <VolumetricWeightCalculator lang={lang} />;
-  if (activeCalc === "warehousing-cost") return <WarehousingCost lang={lang} />;
-  if (activeCalc === "willpower-depletion") return <WillpowerDepletion lang={lang} />;
-  if (activeCalc === "work-life-balance-score") return <WorkLifeBalanceScore lang={lang} />;
-  if (activeCalc === "working-days-calculator") return <WorkingDaysCalculatorNew lang={lang} />;
-  if (activeCalc === "wpm-productivity") return <WpmProductivityCalculator lang={lang} />;
-
-    if (activeCalc === "car-loan-flat-rate") return <CarLoanFlatRate lang={lang} />;
-  if (activeCalc === "car-loan-used-car") return <CarLoanUsedCar lang={lang} />;
-  if (activeCalc === "credit-card-minimum-payment") return <CreditCardMinimumPayment lang={lang} />;
-  if (activeCalc === "digital-savings-tier-rate") return <DigitalSavingsTierRate lang={lang} />;
-  if (activeCalc === "fixed-deposit-tax-deducted") return <FixedDepositCalculator lang={lang} />;
-  if (activeCalc === "future-value-fv") return <FutureValueCalculator lang={lang} />;
-  if (activeCalc === "gov-pension-gpf") return <GovPensionGpf lang={lang} />;
-  if (activeCalc === "gov-pension-old") return <GovPensionOld lang={lang} />;
-  if (activeCalc === "hidden-home-costs") return <HiddenHomeCosts lang={lang} />;
-  if (activeCalc === "home-extra-payment") return <HomeExtraPayment lang={lang} />;
-  if (activeCalc === "home-refinance-savings") return <HomeRefinanceSavings lang={lang} />;
-  if (activeCalc === "net-income-after-tax") return <NetIncomeAfterTaxCalculator lang={lang} />;
-  if (activeCalc === "nsf-savings-calculator") return <NsfSavingsCalculator lang={lang} />;
-  if (activeCalc === "present-value-pv") return <PresentValueCalculator lang={lang} />;
-  if (activeCalc === "pvd-retirement-calculator") return <PvdRetirementCalculator lang={lang} />;
-  if (activeCalc === "severance-pay-calculator") return <SeverancePayCalculator lang={lang} />;
-  if (activeCalc === "six-jars-money-management") return <SixJarsCalculator lang={lang} />;
-  if (activeCalc === "social-security-lump-sum") return <SocialSecurityLumpSum lang={lang} />;
-  if (activeCalc === "social-security-m33-m39") return <SocialSecurityM33M39 lang={lang} />;
-  if (activeCalc === "social-security-m40") return <SocialSecurityM40 lang={lang} />;
-  if (activeCalc === "social-security-pension") return <SocialSecurityPension lang={lang} />;
-  if (activeCalc === "tax-deduction-donation") return <TaxDeductionDonationCalculator lang={lang} />;
-  if (activeCalc === "tax-deduction-insurance") return <TaxDeductionInsurance lang={lang} />;
-  if (activeCalc === "tax-deduction-rmf") return <TaxDeductionRMF lang={lang} />;
-  if (activeCalc === "tax-deduction-ssf") return <TaxDeductionSSF lang={lang} />;
-  if (activeCalc === "tax-deduction-thaiesg") return <TaxDeductionThaiESG lang={lang} />;
-  if (activeCalc === "wht-1-percent") return <WHT1PercentCalculator lang={lang} />;
-  if (activeCalc === "wht-2-percent") return <WHT2PercentCalculator lang={lang} />;
-  if (activeCalc === "wht-3-percent") return <WHT3PercentCalculator lang={lang} />;
-  if (activeCalc === "wht-5-percent") return <WHT5PercentCalculator lang={lang} />;
-
-    if (activeCalc === "acre-to-hectare") return <AcreToHectare lang={lang} />;
-  if (activeCalc === "acre-to-rai") return <AcreToRai lang={lang} />;
-  if (activeCalc === "acre-to-sqm") return <AcreToSqM lang={lang} />;
-  if (activeCalc === "area-circle-diameter") return <AreaCircleDiameter lang={lang} />;
-  if (activeCalc === "area-circle-radius") return <AreaCircleRadius lang={lang} />;
-  if (activeCalc === "area-ellipse") return <AreaEllipse lang={lang} />;
-  if (activeCalc === "area-hexagon") return <AreaHexagonCalculator lang={lang} />;
-  if (activeCalc === "area-irregular-polygon") return <AreaIrregularPolygonCalculator lang={lang} />;
-  if (activeCalc === "area-pentagon") return <AreaPentagonCalculator lang={lang} />;
-  if (activeCalc === "area-rectangle") return <AreaRectangle lang={lang} />;
-  if (activeCalc === "area-rhombus") return <AreaRhombusCalculator lang={lang} />;
-  if (activeCalc === "area-square") return <AreaSquare lang={lang} />;
-  if (activeCalc === "area-trapezoid") return <AreaTrapezoid lang={lang} />;
-  if (activeCalc === "area-triangle") return <AreaTriangle lang={lang} />;
-  if (activeCalc === "hectare-to-acre") return <HectareToAcre lang={lang} />;
-  if (activeCalc === "hectare-to-rai") return <HectareToRai lang={lang} />;
-  if (activeCalc === "hectare-to-sqm") return <HectareToSqm lang={lang} />;
-  if (activeCalc === "ngan-to-rai") return <NganToRai lang={lang} />;
-  if (activeCalc === "ngan-to-sqm") return <NganToSqm lang={lang} />;
-  if (activeCalc === "ngan-to-sqwa") return <NganToSqwa lang={lang} />;
-  if (activeCalc === "rai-to-hectare") return <RaiToHectare lang={lang} />;
-  if (activeCalc === "rai-to-ngan") return <RaiToNgan lang={lang} />;
-  if (activeCalc === "rai-to-sqm") return <RaiToSqm lang={lang} />;
-  if (activeCalc === "rai-to-sqwa") return <RaiToSqwa lang={lang} />;
-  if (activeCalc === "sqft-to-sqin") return <SqFtToSqIn lang={lang} />;
-  if (activeCalc === "sqft-to-sqm") return <SqFtToSqM lang={lang} />;
-  if (activeCalc === "sqkm-to-acre") return <SqKmToAcre lang={lang} />;
-  if (activeCalc === "sqkm-to-rai") return <SqkmToRai lang={lang} />;
-  if (activeCalc === "sqkm-to-sqm") return <SqkmToSqm lang={lang} />;
-  if (activeCalc === "sqm-to-acre") return <SqmToAcre lang={lang} />;
-  if (activeCalc === "sqm-to-ngan") return <SqmToNgan lang={lang} />;
-  if (activeCalc === "sqm-to-rai") return <SqmToRai lang={lang} />;
-  if (activeCalc === "sqm-to-sqft") return <SqmToSqft lang={lang} />;
-  if (activeCalc === "sqm-to-sqkm") return <SqmToSqkm lang={lang} />;
-  if (activeCalc === "sqm-to-sqwa") return <SqmToSqwa lang={lang} />;
-  if (activeCalc === "sqm-to-sqyd") return <SqmToSqyd lang={lang} />;
-  if (activeCalc === "sqwa-to-ngan") return <SqwaToNgan lang={lang} />;
-  if (activeCalc === "sqwa-to-rai") return <SqwaToRai lang={lang} />;
-  if (activeCalc === "sqwa-to-sqm") return <SqwaToSqm lang={lang} />;
-  if (activeCalc === "sqyd-to-sqm") return <SqYdToSqM lang={lang} />;
-
-    if (activeCalc === "absolute-value") return <AbsoluteValue lang={lang} />;
-  if (activeCalc === "admission-score-percentage") return <AdmissionScorePercentageCalculator lang={lang} />;
-  if (activeCalc === "arc-length-calculator") return <ArcLengthCalculator lang={lang} />;
-  if (activeCalc === "arithmetic-series-sum") return <ArithmeticSeriesSum lang={lang} />;
-  if (activeCalc === "base-10-to-16") return <Base10To16 lang={lang} />;
-  if (activeCalc === "base-10-to-2") return <Base10To2 lang={lang} />;
-  if (activeCalc === "base-10-to-8") return <Base10To8 lang={lang} />;
-  if (activeCalc === "base-16-to-10") return <Base16To10 lang={lang} />;
-  if (activeCalc === "base-16-to-2") return <Base16To2 lang={lang} />;
-  if (activeCalc === "base-2-to-10") return <Base2To10 lang={lang} />;
-  if (activeCalc === "base-2-to-16") return <Base2To16 lang={lang} />;
-  if (activeCalc === "binary-addition-subtraction") return <BinaryArithmetic lang={lang} />;
-  if (activeCalc === "binomial-distribution") return <BinomialDistribution lang={lang} />;
-  if (activeCalc === "cartesian-product") return <CartesianProduct lang={lang} />;
-  if (activeCalc === "cartesian-to-polar") return <CartesianToPolar lang={lang} />;
-  if (activeCalc === "cgpa-calculator") return <CgpaCalculator lang={lang} />;
-  if (activeCalc === "circumference-calculator") return <CircumferenceCalculator lang={lang} />;
-  if (activeCalc === "coefficient-of-variation") return <CoefficientOfVariation lang={lang} />;
-  if (activeCalc === "combination-calculator") return <CombinationCalculator lang={lang} />;
-  if (activeCalc === "cronbach-alpha") return <CronbachAlphaCalculator lang={lang} />;
-  if (activeCalc === "cross-product") return <CrossProductCalculator lang={lang} />;
-  if (activeCalc === "cube-root-calculator") return <CubeRootCalculator lang={lang} />;
-  if (activeCalc === "custom-base-logarithm") return <CustomBaseLogarithm lang={lang} />;
-  if (activeCalc === "decile-calculator") return <DecileCalculator lang={lang} />;
-  if (activeCalc === "decimal-to-fraction") return <DecimalToFraction lang={lang} />;
-  if (activeCalc === "decimal-to-roman") return <DecimalToRoman lang={lang} />;
-  if (activeCalc === "decimal-to-scientific-notation") return <DecimalToScientificNotation lang={lang} />;
-  if (activeCalc === "definite-integral-polynomial") return <DefiniteIntegralPolynomial lang={lang} />;
-  if (activeCalc === "degree-to-radian") return <DegreeToRadian lang={lang} />;
-  if (activeCalc === "difference-of-squares") return <DifferenceOfSquares lang={lang} />;
-  if (activeCalc === "direct-proportion") return <DirectProportion lang={lang} />;
-  if (activeCalc === "distance-formula") return <DistanceFormula lang={lang} />;
-  if (activeCalc === "dot-product") return <DotProductCalculator lang={lang} />;
-  if (activeCalc === "equilateral-triangle-height") return <EquilateralTriangleHeight lang={lang} />;
-  if (activeCalc === "even-odd-function-checker") return <EvenOddFunctionChecker lang={lang} />;
-  if (activeCalc === "expected-value") return <ExpectedValue lang={lang} />;
-  if (activeCalc === "exponent-calculator") return <ExponentCalculator lang={lang} />;
-  if (activeCalc === "exponential-moving-average") return <ExponentialMovingAverage lang={lang} />;
-  if (activeCalc === "factor-generator") return <FactorGenerator lang={lang} />;
-  if (activeCalc === "factorial-calculator") return <FactorialCalculator lang={lang} />;
-  if (activeCalc === "fibonacci-number") return <FibonacciNumber lang={lang} />;
-  if (activeCalc === "five-number-summary") return <FiveNumberSummary lang={lang} />;
-  if (activeCalc === "fraction-to-decimal") return <FractionToDecimal lang={lang} />;
-  if (activeCalc === "gcd-2-numbers") return <Gcd2Numbers lang={lang} />;
-  if (activeCalc === "gcd-3-numbers") return <Gcd3Numbers lang={lang} />;
-  if (activeCalc === "geometric-mean") return <GeometricMeanCalculator lang={lang} />;
-  if (activeCalc === "geometric-series-sum") return <GeometricSeriesSum lang={lang} />;
-  if (activeCalc === "golden-ratio-calculator") return <GoldenRatioCalculator lang={lang} />;
-  if (activeCalc === "gpa-calculator") return <CgpaCalculatorBatchNew lang={lang} />;
-  if (activeCalc === "harmonic-mean") return <HarmonicMeanCalculator lang={lang} />;
-  if (activeCalc === "herons-formula") return <HeronsFormula lang={lang} />;
-  if (activeCalc === "hex-addition-subtraction") return <HexAdditionSubtraction lang={lang} />;
-  if (activeCalc === "improper-to-mixed-fraction") return <ImproperToMixedFraction lang={lang} />;
-  if (activeCalc === "integer-division") return <IntegerDivision lang={lang} />;
-  if (activeCalc === "inverse-matrix") return <InverseMatrix lang={lang} />;
-  if (activeCalc === "inverse-proportion") return <InverseProportion lang={lang} />;
-  if (activeCalc === "krejcie-morgan-sample-size") return <KrejcieMorganSampleSize lang={lang} />;
-  if (activeCalc === "kurtosis-calculator") return <KurtosisCalculator lang={lang} />;
-  if (activeCalc === "law-of-cosines") return <LawOfCosines lang={lang} />;
-  if (activeCalc === "law-of-sines") return <LawOfSines lang={lang} />;
-  if (activeCalc === "lcm-2-numbers") return <Lcm2Numbers lang={lang} />;
-  if (activeCalc === "lcm-3-numbers") return <Lcm3Numbers lang={lang} />;
-  if (activeCalc === "limit-calculator") return <LimitCalculator lang={lang} />;
-  if (activeCalc === "linear-regression-line") return <LinearRegressionLine lang={lang} />;
-  if (activeCalc === "log-base-10") return <LogBase10 lang={lang} />;
-  if (activeCalc === "log-base-2") return <LogBase2 lang={lang} />;
-  if (activeCalc === "logic-equivalence-checker") return <LogicEquivalenceChecker lang={lang} />;
-  if (activeCalc === "matrix-addition-subtraction") return <MatrixAdditionSubtraction lang={lang} />;
-  if (activeCalc === "matrix-determinant-2x2") return <MatrixDeterminant2x2 lang={lang} />;
-  if (activeCalc === "matrix-determinant-3x3") return <MatrixDeterminant3x3 lang={lang} />;
-  if (activeCalc === "matrix-scalar-multiplication") return <MatrixScalarMultiplication lang={lang} />;
-  if (activeCalc === "matrix-transpose") return <MatrixTransposeCalculator lang={lang} />;
-  if (activeCalc === "mean-calculator") return <MeanCalculator lang={lang} />;
-  if (activeCalc === "mean-deviation") return <MeanDeviationCalculator lang={lang} />;
-  if (activeCalc === "median-calculator") return <MedianCalculator lang={lang} />;
-  if (activeCalc === "midpoint-formula") return <MidpointFormula lang={lang} />;
-  if (activeCalc === "mixed-to-improper-fraction") return <MixedToImproperFraction lang={lang} />;
-  if (activeCalc === "mode-calculator") return <ModeCalculator lang={lang} />;
-  if (activeCalc === "modulo-calculator") return <ModuloCalculator lang={lang} />;
-  if (activeCalc === "natural-log") return <NaturalLog lang={lang} />;
-  if (activeCalc === "normal-distribution-z-table") return <NormalDistributionZTable lang={lang} />;
-  if (activeCalc === "nth-root-calculator") return <NthRootCalculator lang={lang} />;
-  if (activeCalc === "number-to-english-text") return <NumberToEnglishText lang={lang} />;
-  if (activeCalc === "number-to-thai-text") return <NumberToThaiText lang={lang} />;
-  if (activeCalc === "outliers-calculator") return <OutliersCalculator lang={lang} />;
-  if (activeCalc === "pearson-correlation") return <PearsonCorrelation lang={lang} />;
-  if (activeCalc === "percent-difference") return <PercentDifferenceCalculator lang={lang} />;
-  if (activeCalc === "percent-of-value") return <PercentOfValue lang={lang} />;
-  if (activeCalc === "percentage-decrease") return <PercentageDecrease lang={lang} />;
-  if (activeCalc === "percentage-increase") return <PercentageIncrease lang={lang} />;
-  if (activeCalc === "percentile-calculator") return <PercentileCalculatorNew lang={lang} />;
-  if (activeCalc === "permutation-calculator") return <PermutationCalculator lang={lang} />;
-  if (activeCalc === "poisson-distribution") return <PoissonDistribution lang={lang} />;
-  if (activeCalc === "polygon-diagonals") return <PolygonDiagonals lang={lang} />;
-  if (activeCalc === "polygon-exterior-angle") return <PolygonExteriorAngle lang={lang} />;
-  if (activeCalc === "polygon-interior-angle-sum") return <PolygonInteriorAngleSum lang={lang} />;
-  if (activeCalc === "polynomial-derivative") return <PolynomialDerivative lang={lang} />;
-  if (activeCalc === "population-standard-deviation") return <PopulationStandardDeviation lang={lang} />;
-  if (activeCalc === "power-set-size") return <PowerSetSize lang={lang} />;
-  if (activeCalc === "prime-number-checker") return <PrimeNumberChecker lang={lang} />;
-  if (activeCalc === "probability-calculator") return <ProbabilityCalculator lang={lang} />;
-  if (activeCalc === "pythagoras-hypotenuse") return <PythagorasHypotenuse lang={lang} />;
-  if (activeCalc === "pythagoras-leg") return <PythagorasLeg lang={lang} />;
-  if (activeCalc === "quadratic-equation") return <QuadraticEquation lang={lang} />;
-  if (activeCalc === "quartile-calculator") return <QuartileCalculator lang={lang} />;
-  if (activeCalc === "quartile-deviation") return <QuartileDeviationCalculator lang={lang} />;
-  if (activeCalc === "radian-to-degree") return <RadianToDegree lang={lang} />;
-  if (activeCalc === "random-number-generator") return <RandomNumberGenerator lang={lang} />;
-  if (activeCalc === "range-calculator") return <RangeCalculator lang={lang} />;
-  if (activeCalc === "roman-to-decimal") return <RomanToDecimal lang={lang} />;
-  if (activeCalc === "sample-standard-deviation") return <SampleStandardDeviation lang={lang} />;
-  if (activeCalc === "scientific-notation-to-decimal") return <ScientificNotationToDecimal lang={lang} />;
-  if (activeCalc === "sector-area-calculator") return <SectorAreaCalculator lang={lang} />;
-  if (activeCalc === "simple-moving-average") return <SimpleMovingAverage lang={lang} />;
-  if (activeCalc === "skewness-calculator") return <SkewnessCalculator lang={lang} />;
-  if (activeCalc === "slope-formula") return <SlopeFormula lang={lang} />;
-  if (activeCalc === "slope-intercept-equation") return <SlopeInterceptEquation lang={lang} />;
-  if (activeCalc === "spherical-to-cartesian") return <SphericalToCartesian lang={lang} />;
-  if (activeCalc === "square-root-calculator") return <SquareRootCalculator lang={lang} />;
-  if (activeCalc === "standard-error-calculator") return <StandardErrorCalculator lang={lang} />;
-  if (activeCalc === "sum-difference-of-cubes") return <SumDifferenceOfCubes lang={lang} />;
-  if (activeCalc === "surface-area-cylinder") return <SurfaceAreaCylinder lang={lang} />;
-  if (activeCalc === "surface-area-sphere") return <SurfaceAreaSphere lang={lang} />;
-  if (activeCalc === "system-of-equations-2-variables") return <SystemOfEquations2Variables lang={lang} />;
-  if (activeCalc === "system-of-equations-3-variables") return <SystemOfEquations3Variables lang={lang} />;
-  if (activeCalc === "t-score-calculator") return <TScoreCalculator lang={lang} />;
-  if (activeCalc === "taro-yamane-sample-size") return <TaroYamaneSampleSize lang={lang} />;
-  if (activeCalc === "triangle-centroid") return <TriangleCentroid lang={lang} />;
-  if (activeCalc === "trig-arccos") return <TrigArcCos lang={lang} />;
-  if (activeCalc === "trig-arcsin") return <TrigArcSin lang={lang} />;
-  if (activeCalc === "trig-arctan") return <TrigArcTan lang={lang} />;
-  if (activeCalc === "trig-cos") return <TrigCos lang={lang} />;
-  if (activeCalc === "trig-sin") return <TrigSin lang={lang} />;
-  if (activeCalc === "trig-tan") return <TrigTan lang={lang} />;
-  if (activeCalc === "truth-table-2-variables") return <TruthTable2Variables lang={lang} />;
-  if (activeCalc === "truth-table-3-variables") return <TruthTable3Variables lang={lang} />;
-  if (activeCalc === "value-is-what-percent") return <ValueIsWhatPercent lang={lang} />;
-  if (activeCalc === "variance-calculator") return <VarianceCalculator lang={lang} />;
-  if (activeCalc === "vector-magnitude") return <VectorMagnitudeCalculator lang={lang} />;
-  if (activeCalc === "venn-diagram-2-sets") return <VennDiagram2Sets lang={lang} />;
-  if (activeCalc === "venn-diagram-3-sets") return <VennDiagram3Sets lang={lang} />;
-  if (activeCalc === "volume-cone") return <VolumeCone lang={lang} />;
-  if (activeCalc === "volume-cube") return <VolumeCube lang={lang} />;
-  if (activeCalc === "volume-cylinder") return <VolumeCylinder lang={lang} />;
-  if (activeCalc === "volume-pyramid") return <VolumePyramid lang={lang} />;
-  if (activeCalc === "volume-sphere") return <VolumeSphere lang={lang} />;
-  if (activeCalc === "volume-triangular-prism") return <VolumeTriangularPrism lang={lang} />;
-  if (activeCalc === "weighted-average") return <WeightedAverageCalculator lang={lang} />;
-  if (activeCalc === "z-score-calculator") return <ZScoreCalculator lang={lang} />;
-
-  return (
-    <div className="text-center p-12 text-gray-500">
-      {lang === "TH" ? "กรุณาเลือกเครื่องมือคำนวณจากเมนูด้านซ้าย" : "Please select a calculator from the menu"}
-    </div>
-  );
+      default:
+        return <div className="text-center p-10 text-gray-500">Calculator not found.</div>;
+    }
 }

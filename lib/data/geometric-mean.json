@@ -9,6 +9,6 @@
     "TH": "คำนวณหาค่าเฉลี่ยเรขาคณิต (Geometric Mean) จากชุดข้อมูลตัวเลข",
     "EN": "Calculate the geometric mean of a dataset of numbers."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

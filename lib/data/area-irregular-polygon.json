@@ -9,6 +9,6 @@
     "TH": "คำนวณพื้นที่รูปหลายเหลี่ยมด้านไม่เท่า รูปทรงอิสระ หรือที่ดินบิดเบี้ยว ด้วยเทคนิคการแบ่งพื้นที่เป็นรูปสามเหลี่ยม (Triangulation) รองรับสูตรของ Heron",
     "EN": "Calculate the area of irregular polygons by dividing them into triangles and summing their areas."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Shapes"
 }

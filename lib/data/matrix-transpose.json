@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณหาทรานสโพส (Transpose) ของเมทริกซ์ขนาดต่าง ๆ (ตั้งแต่ 2x2 ถึง 4x4) พร้อมอธิบายวิธีทำและเปรียบเทียบสีแถวต่อคอลัมน์",
     "EN": "Calculate the transpose of a matrix with dynamic dimensions (from 2x2 to 4x4) and color-coded row-to-column visualization."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

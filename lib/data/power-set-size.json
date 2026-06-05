@@ -9,6 +9,6 @@
     "TH": "คำนวณหาจำนวนสับเซตทั้งหมด (2^n) และลิสต์รายการพาวเวอร์เซตของเซตอินพุต พร้อมอธิบายความสัมพันธ์",
     "EN": "Calculate the total number of subsets (2^n) and generate the power set with step-by-step explanations."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

@@ -9,6 +9,6 @@
     "TH": "คำนวณแก้ระบบสมการเชิงเส้น 2 ตัวแปร หาคำตอบค่า x และ y พร้อมการแสดงขั้นตอนการหาดีเทอร์มิแนนต์ตามกฎของคราเมอร์",
     "EN": "Solve a system of two linear equations in two variables (x and y) using Cramer's Rule with complete steps."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Grid"
 }

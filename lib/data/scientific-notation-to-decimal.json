@@ -1,8 +1,14 @@
 {
   "id": "scientific-notation-to-decimal",
   "slug": "scientific-notation-to-decimal",
-  "name": { "TH": "แปลงสัญกรณ์วิทยาศาสตร์เป็นทศนิยม", "EN": "Scientific Notation to Decimal Converter" },
-  "desc": { "TH": "แปลงตัวเลขในรูปสัญกรณ์วิทยาศาสตร์ (a x 10^n) ให้เป็นตัวเลขปกติ", "EN": "Convert scientific notation (a x 10^n) to decimal" },
-  "category": "Math",
+  "name": {
+    "TH": "แปลงสัญกรณ์วิทยาศาสตร์เป็นทศนิยม",
+    "EN": "Scientific Notation to Decimal Converter"
+  },
+  "desc": {
+    "TH": "แปลงตัวเลขในรูปสัญกรณ์วิทยาศาสตร์ (a x 10^n) ให้เป็นตัวเลขปกติ",
+    "EN": "Convert scientific notation (a x 10^n) to decimal"
+  },
+  "category": "Science",
   "icon": "Calculator"
 }

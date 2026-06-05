@@ -9,6 +9,6 @@
     "TH": "คำนวณหาอนุพันธ์ (Derivative) ของฟังก์ชันพหุนามพื้นฐาน ตามกฎการหาอนุพันธ์ (Power Rule)",
     "EN": "Calculate the derivative of a basic polynomial function."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "MoveDownRight"
 }

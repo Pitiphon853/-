@@ -9,6 +9,6 @@
     "TH": "คำนวณค่ามุมจากอัตราส่วนโคไซน์ (Cosine) ในฟังก์ชันตรีโกณมิติย้อนกลับ (Arccosine) ได้ทั้งองศาและเรเดียน พร้อมคำอธิบายและสูตรประกอบ",
     "EN": "Calculate the angle in degrees and radians from a cosine value using the inverse cosine (arccosine) function."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Compass"
 }

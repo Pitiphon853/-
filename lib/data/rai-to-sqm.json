@@ -1,8 +1,14 @@
 {
   "id": "rai-to-sqm",
   "slug": "rai-to-sqm",
-  "name": { "TH": "แปลงไร่เป็นตารางเมตร", "EN": "Rai to Square Meters Converter" },
-  "desc": { "TH": "เครื่องมือแปลงพื้นที่จากไร่เป็นตารางเมตร (1 ไร่ = 1,600 ตารางเมตร)", "EN": "Convert area from Rai to Square Meters (1 Rai = 1600 Sq m)" },
-  "category": "Math",
+  "name": {
+    "TH": "แปลงไร่เป็นตารางเมตร",
+    "EN": "Rai to Square Meters Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือแปลงพื้นที่จากไร่เป็นตารางเมตร (1 ไร่ = 1,600 ตารางเมตร)",
+    "EN": "Convert area from Rai to Square Meters (1 Rai = 1600 Sq m)"
+  },
+  "category": "Science",
   "icon": "Calculator"
 }

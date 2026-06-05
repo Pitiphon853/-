@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณตรีโกณมิติย้อนกลับเพื่อหามุม (องศา/เรเดียน) จากค่า ArcSine (arcsin หรือ sin⁻¹)",
     "EN": "Calculate the angle from the ArcSine value (Inverse Sine, sin⁻¹)"
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "ActivitySquare"
 }

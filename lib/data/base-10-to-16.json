@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณแปลงเลขฐาน 10 (Decimal) เป็นเลขฐาน 16 (Hexadecimal)",
     "EN": "Convert decimal (Base 10) numbers to hexadecimal (Base 16) numbers."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Hash"
 }

@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณหาความยาวเส้นรอบวงของวงกลม จากรัศมีหรือเส้นผ่านศูนย์กลาง",
     "EN": "Calculate the circumference of a circle from its radius or diameter."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Circle"
 }

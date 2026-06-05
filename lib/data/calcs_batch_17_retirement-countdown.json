@@ -9,6 +9,6 @@
     "TH": "คำนวณจำนวนวัน เดือน ปี ที่เหลือก่อนถึงวันเกษียณอายุ พร้อมกราฟความคืบหน้าอาชีพ",
     "EN": "Calculate days, months, and years remaining until retirement with career progress tracking"
   },
-  "category": "Misc",
+  "category": "General",
   "icon": "Briefcase"
 }

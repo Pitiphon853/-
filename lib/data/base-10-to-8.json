@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณแปลงเลขฐาน 10 (Decimal) เป็นเลขฐาน 8 (Octal)",
     "EN": "Convert decimal (Base 10) numbers to octal (Base 8) numbers."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Hash"
 }

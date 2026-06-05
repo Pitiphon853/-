@@ -9,6 +9,6 @@
     "TH": "คำนวณหาความชัน (m) ของเส้นตรงระหว่างจุดสองจุดพร้อมหามุมเอียงและทิศทาง",
     "EN": "Calculate the slope (m) of a line passing through two coordinates and find its angle."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

@@ -9,6 +9,6 @@
     "TH": "คำนวณค่าความน่าจะเป็นของเหตุการณ์ต่างๆ จากจำนวนเหตุการณ์ที่สนใจและจำนวนเหตุการณ์ทั้งหมดในสเปซตัวอย่าง",
     "EN": "Calculate the basic probability of an event from the number of favorable outcomes and total possible outcomes."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

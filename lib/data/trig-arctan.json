@@ -9,6 +9,6 @@
     "TH": "คำนวณค่ามุมจากอัตราส่วนแทนเจนต์ (Tangent) ในฟังก์ชันตรีโกณมิติย้อนกลับ (Arctangent) ได้ทั้งองศาและเรเดียน พร้อมคำอธิบายและสูตรประกอบ",
     "EN": "Calculate the angle in degrees and radians from a tangent value using the inverse tangent (arctangent) function."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Compass"
 }

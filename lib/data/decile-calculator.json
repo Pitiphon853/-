@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณเดไซล์ (Decile) ของคะแนนชุดข้อมูล แบ่งข้อมูลเรียงลำดับออกเป็น 10 ส่วนเท่าๆ กัน พร้อมอธิบายวิธีคำนวณแต่ละขั้นตอน",
     "EN": "Calculate the decile (D1 to D9) of a dataset, with both Thai school curriculum and standard statistical options."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

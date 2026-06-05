@@ -9,6 +9,6 @@
     "TH": "คำนวณหาค่าลอการิทึมธรรมชาติ หรือ ln (log ฐาน e) ช่วยให้การแก้สมการการเติบโตหรือการสลายตัวเป็นเรื่องง่าย",
     "EN": "Calculate the natural logarithm (ln or log base e) useful for continuous growth and decay problems."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Orbit"
 }

@@ -1,8 +1,14 @@
 {
   "id": "habit-streak-calculator",
   "slug": "habit-streak-calculator",
-  "name": { "TH": "คำนวณ Habit Streak (การสร้างนิสัย)", "EN": "Habit Streak Calculator" },
-  "desc": { "TH": "คำนวณเวลาที่ต้องใช้ในการสร้างนิสัยใหม่และโอกาสสำเร็จ", "EN": "Calculate time needed to build a new habit and success rate" },
-  "category": "Misc",
+  "name": {
+    "TH": "คำนวณ Habit Streak (การสร้างนิสัย)",
+    "EN": "Habit Streak Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณเวลาที่ต้องใช้ในการสร้างนิสัยใหม่และโอกาสสำเร็จ",
+    "EN": "Calculate time needed to build a new habit and success rate"
+  },
+  "category": "General",
   "icon": "Target"
 }

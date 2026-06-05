@@ -70,7 +70,7 @@ const calcsString = allCalcs.map(c => {
              if (importAlias === componentName) {
                  newImports.push(`import ${componentName} from "./calcs/${matchedFile.replace('.tsx', '')}";`);
              } else {
-                 newImports.push(`import  from "./calcs/${matchedFile.replace('.tsx', '')}";`);
+                 newImports.push(`import ${importAlias} from "./calcs/${matchedFile.replace('.tsx', '')}";`);
              }
              newCases.push(`      case "${c.id}":\n        return <${importAlias} lang={lang} />;\n`);
         }
@@ -107,7 +107,7 @@ ${calcsString}
 export const categories = [
   "Finance",
   "Health",
-  "Math",
+  "Science",
   "Conversion",
   "Technology",
   "Construction",
@@ -116,7 +116,7 @@ export const categories = [
   "Agriculture",
   "Environment",
   "Business",
-  "Misc"
+  "General"
 ];
 `;
 fs.writeFileSync(toolsDataFile, toolsDataTemplate);
@@ -126,7 +126,7 @@ const calcTsxTemplate = `"use client";
 import { useTheme } from "./ThemeProvider";
 ${newImports.join('\n')}
 
-export const Calculators = ({ activeCalc, lang }: { activeCalc: string; lang: any }) => {
+export const Calculators = ({ activeCalc, lang, setCalc }: { activeCalc: string; lang: any; setCalc: any }) => {
     switch (activeCalc) {
 ${newCases.join('')}
       default:

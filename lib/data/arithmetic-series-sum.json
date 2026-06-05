@@ -9,6 +9,6 @@
     "TH": "คำนวณผลรวมของอนุกรมเลขคณิต หาผลบวก N พจน์แรก แสดงสูตรคำนวณและวิธีหาคำตอบแบบทีละขั้นตอนอย่างละเอียด",
     "EN": "Calculate the sum of an arithmetic series given the initial term, common difference/last term, and number of terms."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

@@ -9,6 +9,6 @@
     "TH": "สุ่มตัวเลขตามช่วงที่ต้องการ สามารถเลือกจำนวนตัวเลขที่สุ่ม กำหนดให้ไม่ซ้ำ และเรียงลำดับผลลัพธ์ได้",
     "EN": "Generate random numbers within a specific range with options for unique values and sorting."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

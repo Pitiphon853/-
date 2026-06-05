@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณกฎการแจกแจงทวินาม หาความน่าจะเป็นของเหตุการณ์ที่สนใจจากการทดลองแบบอิสระ",
     "EN": "Calculate Binomial Distribution Probability for a given number of trials and successes."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

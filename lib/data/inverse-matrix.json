@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณหาอินเวอร์สการคูณของเมทริกซ์ขนาด 2x2 (Inverse Matrix) พร้อมแสดงดีเทอร์มิแนนต์และวิธีทำอย่างละเอียด",
     "EN": "Calculate the inverse of a 2x2 matrix step-by-step, including determinant calculation and validation."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Grid"
 }

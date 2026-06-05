@@ -1,8 +1,14 @@
 {
   "id": "parkinsons-law-calculator",
   "slug": "parkinsons-law-calculator",
-  "name": { "TH": "คำนวณกฎของพาร์กินสัน (Parkinson's Law)", "EN": "Parkinson's Law Calculator" },
-  "desc": { "TH": "วิเคราะห์เวลาทำงานตามกฎของพาร์กินสันว่าคุณขยายงานตามเวลาที่ได้รับหรือไม่", "EN": "Analyze your task time based on Parkinson's Law" },
-  "category": "Misc",
+  "name": {
+    "TH": "คำนวณกฎของพาร์กินสัน (Parkinson's Law)",
+    "EN": "Parkinson's Law Calculator"
+  },
+  "desc": {
+    "TH": "วิเคราะห์เวลาทำงานตามกฎของพาร์กินสันว่าคุณขยายงานตามเวลาที่ได้รับหรือไม่",
+    "EN": "Analyze your task time based on Parkinson's Law"
+  },
+  "category": "General",
   "icon": "Hourglass"
 }

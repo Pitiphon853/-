@@ -9,6 +9,6 @@
     "TH": "คำนวณหาขนาดกลุ่มตัวอย่างขั้นต่ำตามตาราง Krejcie & Morgan ด้วยสูตรทางสถิติ",
     "EN": "Calculate the minimum required sample size using the Krejcie & Morgan formula."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

@@ -9,6 +9,6 @@
     "TH": "หาระยะห่างของจุดสองจุดบนระนาบคาร์ทีเซียนโดยอ้างอิงทฤษฎีบทพีทาโกรัส",
     "EN": "Calculate the Euclidean distance between two points on a 2D plane."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

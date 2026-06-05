@@ -9,6 +9,6 @@
     "TH": "คำนวณหาค่าลิมิตเบื้องต้นของฟังก์ชันพหุนามเมื่อ x เข้าใกล้ค่า a",
     "EN": "Calculate the basic limit of a polynomial function as x approaches a."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Sigma"
 }

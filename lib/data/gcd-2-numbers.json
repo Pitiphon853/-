@@ -9,6 +9,6 @@
     "TH": "เครื่องมือหาตัวหารร่วมมาก (ห.ร.ม.) ของตัวเลขสองจำนวน พร้อมแสดงขั้นตอนวิธีแบบยุคลิด",
     "EN": "Calculate the Greatest Common Divisor (GCD) of two numbers with Euclidean algorithm steps."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

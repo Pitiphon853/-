@@ -9,6 +9,6 @@
     "TH": "คำนวณพื้นที่ผิวของทรงกลมจากรัศมี เส้นผ่านศูนย์กลาง หรือปริมาตร พร้อมสูตรคำนวณและวิธีคำนวณย้อนกลับอย่างละเอียด",
     "EN": "Calculate the surface area of a sphere from radius, diameter, or volume. Includes reverse calculations and formulas."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

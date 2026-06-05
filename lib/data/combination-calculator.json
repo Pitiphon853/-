@@ -9,6 +9,6 @@
     "TH": "คำนวณจำนวนวิธีการจัดหมู่ของสิ่งของต่างๆ (nCr) แสดงสูตรและวิธีคำนวณอย่างละเอียด พร้อมคำอธิบาย",
     "EN": "Calculate the number of combinations (nCr) for choosing r items from n, with step-by-step calculation details."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

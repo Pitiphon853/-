@@ -1,8 +1,14 @@
 {
   "id": "exact-age-calculator",
   "slug": "exact-age-calculator",
-  "name": { "TH": "คำนวณอายุเป็นวัน/ชั่วโมง/นาที/วินาที", "EN": "Exact Age Calculator" },
-  "desc": { "TH": "คำนวณอายุอย่างละเอียดเป็นวัน ชั่วโมง นาที และวินาที พร้อมนับถอยหลังวันเกิดถัดไป", "EN": "Calculate your exact age in days, hours, minutes and seconds with next birthday countdown" },
-  "category": "Misc",
+  "name": {
+    "TH": "คำนวณอายุเป็นวัน/ชั่วโมง/นาที/วินาที",
+    "EN": "Exact Age Calculator"
+  },
+  "desc": {
+    "TH": "คำนวณอายุอย่างละเอียดเป็นวัน ชั่วโมง นาที และวินาที พร้อมนับถอยหลังวันเกิดถัดไป",
+    "EN": "Calculate your exact age in days, hours, minutes and seconds with next birthday countdown"
+  },
+  "category": "General",
   "icon": "Calendar"
 }

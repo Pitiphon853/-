@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณหาพื้นที่ใต้เส้นโค้งปกติ (Normal Distribution) โดยใช้ค่า Z-Score",
     "EN": "Calculate the area under the normal distribution curve using a Z-score lookup."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

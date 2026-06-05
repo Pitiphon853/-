@@ -9,6 +9,6 @@
     "TH": "เครื่องคำนวณหาค่าฐานนิยม (Mode) จากชุดข้อมูล ค้นหาข้อมูลที่ซ้ำกันมากที่สุดพร้อมแสดงความถี่แบบละเอียด",
     "EN": "Calculate the mode of a dataset, finding the most frequent values and their frequencies."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

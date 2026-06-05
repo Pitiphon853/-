@@ -9,6 +9,6 @@
     "TH": "คำนวณหาค่าลอการิทึมฐาน 10 (Common Logarithm) อย่างง่ายดายและรวดเร็ว รองรับตัวเลขทศนิยม",
     "EN": "Easily calculate the common logarithm (base 10) of any positive number."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "FunctionSquare"
 }

@@ -9,6 +9,6 @@
     "TH": "หาพิกัดของจุดกึ่งกลางระหว่างจุดสองจุดบนระนาบคาร์ทีเซียนด้วยสูตรคณิตศาสตร์",
     "EN": "Calculate the coordinates of the midpoint between two points on a Cartesian plane."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

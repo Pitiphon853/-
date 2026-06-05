@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณการคูณเมทริกซ์ด้วยค่าคงตัวหรือสเกลาร์ (Scalar) พร้อมแสดงผลลัพธ์ทีละขั้นตอน",
     "EN": "Calculate the multiplication of a matrix by a scalar value."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Hash"
 }

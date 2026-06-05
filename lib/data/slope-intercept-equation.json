@@ -9,6 +9,6 @@
     "TH": "คำนวณหาสมการเส้นตรง y = mx + b จากจุดสองจุด หรือ ความชันและจุดผ่าน",
     "EN": "Calculate the linear equation in slope-intercept form (y = mx + b) from points or slope."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

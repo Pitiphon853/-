@@ -9,6 +9,6 @@
     "TH": "คำนวณพื้นที่ผิวทั้งหมดของทรงกระบอก (พื้นที่ผิวข้างและพื้นที่ฝาปิดหัวท้าย) พร้อมปริมาตรอย่างละเอียดจากรัศมีและความสูง",
     "EN": "Calculate the total surface area (including lateral area and two bases) and volume of a cylinder given its radius and height."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

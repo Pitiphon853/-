@@ -1,8 +1,14 @@
 {
   "id": "area-square",
   "slug": "area-square",
-  "name": { "TH": "คำนวณพื้นที่สี่เหลี่ยมจัตุรัส", "EN": "Square Area Calculator" },
-  "desc": { "TH": "โปรแกรมคำนวณพื้นที่สี่เหลี่ยมจัตุรัสจากความยาวด้าน", "EN": "Calculate the area of a square from side length" },
-  "category": "Math",
+  "name": {
+    "TH": "คำนวณพื้นที่สี่เหลี่ยมจัตุรัส",
+    "EN": "Square Area Calculator"
+  },
+  "desc": {
+    "TH": "โปรแกรมคำนวณพื้นที่สี่เหลี่ยมจัตุรัสจากความยาวด้าน",
+    "EN": "Calculate the area of a square from side length"
+  },
+  "category": "Science",
   "icon": "Calculator"
 }

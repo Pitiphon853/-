@@ -1,8 +1,14 @@
 {
   "id": "acre-to-rai",
   "slug": "acre-to-rai",
-  "name": { "TH": "แปลงเอเคอร์เป็นไร่", "EN": "Acre to Rai Converter" },
-  "desc": { "TH": "โปรแกรมแปลงหน่วยพื้นที่จากเอเคอร์เป็นไร่ งาน และตารางวา", "EN": "Convert area from acres to rai, ngan, and square wa" },
-  "category": "Math",
+  "name": {
+    "TH": "แปลงเอเคอร์เป็นไร่",
+    "EN": "Acre to Rai Converter"
+  },
+  "desc": {
+    "TH": "โปรแกรมแปลงหน่วยพื้นที่จากเอเคอร์เป็นไร่ งาน และตารางวา",
+    "EN": "Convert area from acres to rai, ngan, and square wa"
+  },
+  "category": "Science",
   "icon": "Calculator"
 }

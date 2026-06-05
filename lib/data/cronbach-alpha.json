@@ -9,6 +9,6 @@
     "TH": "คำนวณหาความเชื่อมั่นของแบบสอบถามหรือเครื่องมือวัดด้วยค่าอัลฟาของครอนบาค (Cronbach's Alpha)",
     "EN": "Calculate the internal consistency reliability of an instrument using Cronbach's Alpha."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

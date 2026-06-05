@@ -9,6 +9,6 @@
     "TH": "คำนวณระยะเวลาที่เหมาะสมในการทบทวนเนื้อหาตามหลัก Spaced Repetition (SM-2)",
     "EN": "Calculate the optimal interval for reviewing content using Spaced Repetition (SM-2 algorithm)"
   },
-  "category": "Misc",
+  "category": "General",
   "icon": "Brain"
 }

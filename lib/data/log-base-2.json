@@ -9,6 +9,6 @@
     "TH": "คำนวณหาค่าลอการิทึมฐาน 2 สำหรับใช้ในงานคณิตศาสตร์ วิทยาการคอมพิวเตอร์ และทฤษฎีสารสนเทศ",
     "EN": "Calculate the binary logarithm (base 2) used extensively in computer science and information theory."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Binary"
 }

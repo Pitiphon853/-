@@ -9,6 +9,6 @@
     "TH": "แปลงตัวเลขโรมัน (I, V, X, L, C, D, M) เป็นตัวเลขฐานสิบปกติ พร้อมวิเคราะห์ขั้นตอนวิธีบวกลบ",
     "EN": "Convert Roman numerals (I, V, X, L, C, D, M) to decimal integers with breakdown steps."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Hash"
 }

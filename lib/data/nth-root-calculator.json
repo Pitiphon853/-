@@ -9,6 +9,6 @@
     "TH": "คำนวณหารากที่ N ของตัวเลข X รองรับทศนิยมและแสดงขั้นตอนการคำนวณอย่างละเอียดพร้อมแนวคิด",
     "EN": "Calculate the Nth root of a number X, with validation for odd/even roots and step-by-step mathematical reasoning."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

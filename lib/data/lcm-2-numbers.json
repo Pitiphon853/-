@@ -9,6 +9,6 @@
     "TH": "เครื่องมือหาคูณร่วมน้อย (ค.ร.น.) ของตัวเลขสองจำนวน พร้อมแสดงขั้นตอนความสัมพันธ์ระหว่าง ห.ร.ม. และ ค.ร.น.",
     "EN": "Calculate the Least Common Multiple (LCM) of two numbers."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

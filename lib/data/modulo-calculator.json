@@ -9,6 +9,6 @@
     "TH": "คำนวณหาเศษที่เหลือจากการหาร (Modulo หรือ มอดุโล โอเปอเรเตอร์ %) พร้อมแสดงวิธีการคำนวณ",
     "EN": "Calculate the remainder of a division (Modulo operator %) with steps."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

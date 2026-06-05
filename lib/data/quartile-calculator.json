@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณหาค่าควอไทล์ (Q1, Q2, Q3) ของชุดข้อมูล แบบแสดงวิธีทำและการแบ่งทศนิยมอย่างละเอียด",
     "EN": "Calculate the quartiles (Q1, Q2, Q3) of a dataset, with both Thai school curriculum and standard statistical options."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

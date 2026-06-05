@@ -9,6 +9,6 @@
     "TH": "คำนวณหาค่าความเบ้ของชุดข้อมูล (Skewness) อย่างแม่นยำ พร้อมอธิบายวิธีคิด",
     "EN": "Calculate the skewness of a dataset to measure its asymmetry."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "TrendingUp"
 }

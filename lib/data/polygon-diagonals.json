@@ -1,8 +1,14 @@
 {
   "id": "polygon-diagonals",
   "slug": "polygon-diagonals",
-  "name": { "TH": "คำนวณเส้นทแยงมุมรูปหลายเหลี่ยม", "EN": "Polygon Diagonals Calculator" },
-  "desc": { "TH": "หาจำนวนเส้นทแยงมุมทั้งหมดของรูป n เหลี่ยม (Polygon)", "EN": "Calculate the total number of diagonals in an n-sided polygon" },
-  "category": "Math",
+  "name": {
+    "TH": "คำนวณเส้นทแยงมุมรูปหลายเหลี่ยม",
+    "EN": "Polygon Diagonals Calculator"
+  },
+  "desc": {
+    "TH": "หาจำนวนเส้นทแยงมุมทั้งหมดของรูป n เหลี่ยม (Polygon)",
+    "EN": "Calculate the total number of diagonals in an n-sided polygon"
+  },
+  "category": "Science",
   "icon": "Hexagon"
 }

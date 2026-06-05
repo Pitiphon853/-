@@ -9,6 +9,6 @@
     "TH": "คำนวณระยะเวลาในการไปถึง 10,000 ชั่วโมง เพื่อเป็นผู้เชี่ยวชาญตามทฤษฎี",
     "EN": "Calculate the time to reach 10,000 hours for mastery"
   },
-  "category": "Misc",
+  "category": "General",
   "icon": "Clock"
 }

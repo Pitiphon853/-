@@ -1,8 +1,14 @@
 {
   "id": "sqwa-to-rai",
   "slug": "sqwa-to-rai",
-  "name": { "TH": "แปลงตารางวาเป็นไร่", "EN": "Sq.Wa to Rai" },
-  "desc": { "TH": "โปรแกรมแปลงพื้นที่จากตารางวา (Sq.Wa) เป็นไร่ (Rai)", "EN": "Convert Square Wa to Rai easily." },
-  "category": "Math",
+  "name": {
+    "TH": "แปลงตารางวาเป็นไร่",
+    "EN": "Sq.Wa to Rai"
+  },
+  "desc": {
+    "TH": "โปรแกรมแปลงพื้นที่จากตารางวา (Sq.Wa) เป็นไร่ (Rai)",
+    "EN": "Convert Square Wa to Rai easily."
+  },
+  "category": "Science",
   "icon": "Map"
 }

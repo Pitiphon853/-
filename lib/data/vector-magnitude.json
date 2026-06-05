@@ -9,6 +9,6 @@
     "TH": "คำนวณหาขนาดหรือความยาวของเวกเตอร์ (Vector Magnitude) ในระบบ 2 มิติ และ 3 มิติ",
     "EN": "Calculate the magnitude or length of a vector in 2D and 3D systems."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

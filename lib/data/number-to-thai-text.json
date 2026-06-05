@@ -9,6 +9,6 @@
     "TH": "แปลงตัวเลขทั่วไปและจำนวนเงินป้อนเข้า ให้กลายเป็นตัวอักษรเขียนภาษาไทยอย่างถูกต้อง (สำหรับเขียนเช็คเงินสดและงานเอกสารการเงิน)",
     "EN": "Convert numerical values and currency figures to formal Thai text representation."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "FileText"
 }

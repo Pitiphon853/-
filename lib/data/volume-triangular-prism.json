@@ -9,6 +9,6 @@
     "TH": "คำนวณปริมาตรของปริซึมสามเหลี่ยมด้วยวิธีที่หลากหลาย เช่น จากขนาดฐานและส่วนสูง หรือจากด้านทั้งสามของฐานตามสูตรเฮรอน พร้อมสูตรคำนวณอย่างละเอียด",
     "EN": "Calculate the volume of a triangular prism using base dimensions, direct base area, or three side lengths (Heron's formula)."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

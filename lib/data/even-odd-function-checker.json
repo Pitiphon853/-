@@ -9,6 +9,6 @@
     "TH": "ตรวจสอบฟังก์ชันพหุนามว่าเป็นฟังก์ชันคู่ (Even) ฟังก์ชันคี่ (Odd) หรือไม่ใช่ทั้งสองอย่าง",
     "EN": "Check if a polynomial function is Even, Odd, or neither."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Sigma"
 }

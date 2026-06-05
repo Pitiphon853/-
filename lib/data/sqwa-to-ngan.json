@@ -1,8 +1,14 @@
 {
   "id": "sqwa-to-ngan",
   "slug": "sqwa-to-ngan",
-  "name": { "TH": "แปลงตารางวาเป็นงาน", "EN": "Sq.Wa to Ngan" },
-  "desc": { "TH": "โปรแกรมแปลงพื้นที่จากตารางวา (Sq.Wa) เป็นงาน (Ngan)", "EN": "Convert Square Wa to Ngan easily." },
-  "category": "Math",
+  "name": {
+    "TH": "แปลงตารางวาเป็นงาน",
+    "EN": "Sq.Wa to Ngan"
+  },
+  "desc": {
+    "TH": "โปรแกรมแปลงพื้นที่จากตารางวา (Sq.Wa) เป็นงาน (Ngan)",
+    "EN": "Convert Square Wa to Ngan easily."
+  },
+  "category": "Science",
   "icon": "Map"
 }

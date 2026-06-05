@@ -9,6 +9,6 @@
     "TH": "คำนวณเวลาที่คุณจะประหยัดได้จากการจัดกลุ่มงานที่เหมือนกันไว้ทำพร้อมกัน (Task Batching)",
     "EN": "Calculate the time saved by grouping similar tasks together (Task Batching)."
   },
-  "category": "Misc",
+  "category": "General",
   "icon": "Layers"
 }

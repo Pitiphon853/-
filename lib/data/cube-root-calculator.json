@@ -9,6 +9,6 @@
     "TH": "คำนวณรากที่สามของตัวเลข รองรับจำนวนบวกและลบ แสดงคำตอบเป็นทศนิยมและรูปอย่างง่าย พร้อมวิธีคิดอย่างละเอียด",
     "EN": "Calculate the cube root of a number, simplify, and display step-by-step explanations. Supports both positive and negative values."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

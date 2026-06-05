@@ -9,6 +9,6 @@
     "TH": "คำนวณหาส่วนเบี่ยงเบนเฉลี่ย (Mean Deviation) จากชุดข้อมูล",
     "EN": "Calculate the mean absolute deviation of a dataset."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "MinusCircle"
 }

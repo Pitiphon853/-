@@ -1,8 +1,14 @@
 {
   "id": "rai-to-hectare",
   "slug": "rai-to-hectare",
-  "name": { "TH": "แปลงไร่เป็นเฮกตาร์", "EN": "Rai to Hectare Converter" },
-  "desc": { "TH": "เครื่องมือแปลงพื้นที่จากไร่เป็นเฮกตาร์ (1 ไร่ = 0.16 เฮกตาร์)", "EN": "Convert area from Rai to Hectare (1 Rai = 0.16 Hectares)" },
-  "category": "Math",
+  "name": {
+    "TH": "แปลงไร่เป็นเฮกตาร์",
+    "EN": "Rai to Hectare Converter"
+  },
+  "desc": {
+    "TH": "เครื่องมือแปลงพื้นที่จากไร่เป็นเฮกตาร์ (1 ไร่ = 0.16 เฮกตาร์)",
+    "EN": "Convert area from Rai to Hectare (1 Rai = 0.16 Hectares)"
+  },
+  "category": "Science",
   "icon": "Calculator"
 }

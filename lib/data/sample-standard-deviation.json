@@ -9,6 +9,6 @@
     "TH": "คำนวณหาส่วนเบี่ยงเบนมาตรฐาน (S.D.) และความแปรปรวน (Variance) ของกลุ่มตัวอย่างด้วยตัวหาร (n - 1) พร้อมรายละเอียดวิธีทำ",
     "EN": "Calculate the sample standard deviation (S.D.) and sample variance with degrees of freedom (n - 1)."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

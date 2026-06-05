@@ -9,6 +9,6 @@
     "TH": "คำนวณคะแนนรวมและเปอร์เซ็นต์คะแนนสอบคัดเลือกแบบทั่วไป (TCAS / Admission) ถ่วงน้ำหนักความสำคัญ พร้อมเปรียบเทียบคะแนนย้อนหลัง",
     "EN": "Calculate and compare your weighted admission score and percentage with previous year cutoffs."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }

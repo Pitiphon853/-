@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณแปลงพิกัดทรงกลม (r, θ, φ) เป็นพิกัดฉาก (x, y, z) ในระบบ 3 มิติ",
     "EN": "Convert spherical coordinates (r, theta, phi) to 3D Cartesian coordinates (x, y, z)."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Globe"
 }

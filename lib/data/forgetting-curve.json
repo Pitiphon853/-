@@ -9,6 +9,6 @@
     "TH": "คำนวณอัตราการลืมเนื้อหาและวางแผนการทบทวนเพื่อเปลี่ยนเป็นความจำระยะยาว",
     "EN": "Estimate memory retention and plan spaced repetition sessions."
   },
-  "category": "Misc",
+  "category": "General",
   "icon": "Brain"
 }

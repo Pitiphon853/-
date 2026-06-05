@@ -9,6 +9,6 @@
     "TH": "คำนวณหาอินทิกรัลแบบจำกัดเขต (Definite Integral) ของฟังก์ชันพหุนามในช่วง [a, b]",
     "EN": "Calculate the definite integral of a polynomial function over the interval [a, b]."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "FunctionSquare"
 }

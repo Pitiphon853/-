@@ -9,6 +9,6 @@
     "TH": "เครื่องมือคำนวณหาจุดศูนย์ถ่วง (Centroid) ของรูปสามเหลี่ยมจากพิกัด 3 จุด",
     "EN": "Tool to find the centroid coordinates of a triangle from its 3 vertices"
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Crosshair"
 }

@@ -1,8 +1,14 @@
 {
   "id": "sqm-to-ngan",
   "slug": "sqm-to-ngan",
-  "name": { "TH": "แปลงตารางเมตรเป็นงาน", "EN": "Sq.m to Ngan" },
-  "desc": { "TH": "โปรแกรมแปลงพื้นที่ตารางเมตรเป็นงาน", "EN": "Convert Square Meters to Ngan." },
-  "category": "Math",
+  "name": {
+    "TH": "แปลงตารางเมตรเป็นงาน",
+    "EN": "Sq.m to Ngan"
+  },
+  "desc": {
+    "TH": "โปรแกรมแปลงพื้นที่ตารางเมตรเป็นงาน",
+    "EN": "Convert Square Meters to Ngan."
+  },
+  "category": "Science",
   "icon": "Map"
 }

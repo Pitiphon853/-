@@ -9,6 +9,6 @@
     "TH": "คำนวณหาค่าความแปรปรวน (Variance) ทั้งแบบประชากรและกลุ่มตัวอย่าง พร้อมอธิบายสูตรและขั้นตอนอย่างละเอียด",
     "EN": "Calculate both population and sample variance from a dataset with step-by-step math and formulas."
   },
-  "category": "Math",
+  "category": "Science",
   "icon": "Calculator"
 }
